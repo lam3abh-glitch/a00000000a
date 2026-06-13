@@ -1,8 +1,9 @@
 import { lazy, Suspense, useEffect, useRef, useState, useMemo } from "react";
+import type { ComponentType } from "react";
 
 type Pt = { lat: number; lng: number; name: string; slug: string };
 
-const Globe = lazy(() => import("react-globe.gl").then((m: any) => ({ default: m.default })));
+const Globe = lazy(() => import("react-globe.gl").then((m: any) => ({ default: m.default }))) as unknown as ComponentType<any>;
 
 export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" }) {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -55,7 +56,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
       {mounted && size.w > 0 && (
         <Suspense fallback={null}>
           <Globe
-            ref={globeRef as any}
+            ref={globeRef}
             width={size.w}
             height={size.h}
             backgroundColor="rgba(0,0,0,0)"
