@@ -1,18 +1,21 @@
-import { lazy, Suspense, useEffect, useRef, useState, useMemo } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import type { ComponentType } from "react";
 
 type Pt = { lat: number; lng: number; name: string; slug: string };
-
-const Globe = lazy(() => import("react-globe.gl").then((m: any) => ({ default: m.default }))) as unknown as ComponentType<any>;
 
 export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<any>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
-  const [mounted, setMounted] = useState(false);
+  const [GlobeComp, setGlobeComp] = useState<ComponentType<any> | null>(null);
 
   useEffect(() => {
-    setMounted(true);
+    let alive = true;
+    import("react-globe.gl").then((m: any) => {
+      if (!alive) return;
+      const Comp = m.default ?? m.Globe ?? m;
+      setGlobeComp(() => Comp as ComponentType<any>);
+    }).catch((e) => console.error("globe import failed", e));
     if (!wrapRef.current) return;
     const update = () => {
       if (!wrapRef.current) return;
@@ -21,7 +24,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
     update();
     const ro = new ResizeObserver(update);
     ro.observe(wrapRef.current);
-    return () => ro.disconnect();
+    return () => { alive = false; ro.disconnect(); };
   }, []);
 
   useEffect(() => {
@@ -34,7 +37,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
       ctrl.enableZoom = false;
       g.pointOfView({ lat: 26, lng: 50, altitude: 2.5 }, 0);
     } catch {}
-  }, [size.w, size.h, mounted]);
+  }, [size.w, size.h, GlobeComp]);
 
   const bahrain = { lat: 26.07, lng: 50.55 };
   const arcs = useMemo(
@@ -53,9 +56,8 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
 
   return (
     <div ref={wrapRef} className="absolute inset-0">
-      {mounted && size.w > 0 && (
-        <Suspense fallback={null}>
-          <Globe
+      {GlobeComp && size.w > 0 && (
+        <GlobeComp
             ref={globeRef}
             width={size.w}
             height={size.h}
@@ -83,8 +85,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
             onPointClick={(d: any) => {
               if (d?.slug) window.location.href = `/${lang}/countries/${d.slug}`;
             }}
-          />
-        </Suspense>
+        />
       )}
     </div>
   );
