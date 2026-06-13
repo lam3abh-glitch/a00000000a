@@ -117,24 +117,20 @@ function Home() {
                 key={c.slug}
                 to="/$lang/continents/$slug"
                 params={{ lang, slug: c.slug }}
-                className="group relative aspect-[16/10] overflow-hidden"
+                className="group relative aspect-[16/10] overflow-hidden bg-midnight border border-cream/10"
               >
-                <img src={continentImages[c.slug] ?? c.hero_image} alt={c.name_en} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/30 to-transparent" />
-                <div className="absolute bottom-0 inset-x-0 p-8">
-                  <div className="flex items-center gap-4">
-                    {continentShapes[c.slug] && (
-                      <img
-                        src={continentShapes[c.slug]}
-                        alt=""
-                        loading="lazy"
-                        aria-hidden="true"
-                      className="h-20 md:h-28 w-auto opacity-95 drop-shadow-lg"
-                      style={{ filter: "brightness(0) invert(1)" }}
-                      />
-                    )}
-                    <div className="font-display text-3xl md:text-4xl text-cream">{lang === "ar" ? c.name_ar : c.name_en}</div>
-                  </div>
+                {continentShapes[c.slug] && (
+                  <img
+                    src={continentShapes[c.slug]}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-contain p-8 opacity-90 transition duration-700 group-hover:scale-105"
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
+                )}
+                <div className="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-midnight via-midnight/60 to-transparent">
+                  <div className="font-display text-3xl md:text-4xl text-cream">{lang === "ar" ? c.name_ar : c.name_en}</div>
                   <div className="mt-2 text-xs uppercase tracking-[0.3em] text-gold/80 opacity-0 group-hover:opacity-100 transition">{tr.sections.discover} →</div>
                 </div>
               </Link>
