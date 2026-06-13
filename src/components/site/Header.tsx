@@ -1,15 +1,18 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { type Lang, t } from "@/lib/i18n";
+import { Menu, X } from "lucide-react";
 
 export function Header({ lang }: { lang: Lang }) {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   const loc = useLocation();
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  useEffect(() => { setOpen(false); }, [loc.pathname]);
 
   const tr = t[lang].nav;
   const otherLang: Lang = lang === "ar" ? "en" : "ar";
@@ -56,8 +59,35 @@ export function Header({ lang }: { lang: Lang }) {
           >
             {otherLang === "ar" ? "العربية" : "English"}
           </Link>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-cream/20 text-cream/90 hover:border-gold hover:text-gold transition"
+          >
+            {open ? <X size={16} /> : <Menu size={16} />}
+          </button>
         </div>
       </div>
+      {open && (
+        <nav className="md:hidden bg-midnight/95 backdrop-blur-md border-t border-white/5">
+          <div className="mx-auto max-w-7xl px-6 py-4 flex flex-col gap-3 text-sm">
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-cream/85 hover:text-gold transition-colors py-1"
+                activeProps={{ className: "text-gold" }}
+                activeOptions={{ exact: l.exact }}
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
