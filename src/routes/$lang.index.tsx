@@ -31,9 +31,10 @@ function Home() {
       {/* HERO + GLOBE */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden bg-midnight">
         <GlobeHero points={points} lang={lang} />
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight/40 via-transparent to-midnight pointer-events-none" />
-        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 text-cream">
-          <div className="max-w-2xl fade-up">
+        <div className="absolute inset-0 bg-gradient-to-b from-midnight/60 via-midnight/10 to-midnight pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-midnight/80 via-transparent to-midnight/40 pointer-events-none" />
+        <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-cols-1 md:grid-cols-12 items-end md:items-center gap-8 px-6 pb-16 md:pb-0 text-cream pointer-events-none">
+          <div className="md:col-span-7 max-w-2xl fade-up pointer-events-auto">
             <div className="text-[11px] uppercase tracking-[0.4em] text-gold/80 mb-4">
               {lang === "ar" ? "بحرين • العالم" : "Bahrain • World"}
             </div>
@@ -50,6 +51,27 @@ function Home() {
               <Link to="/$lang/about" params={{ lang }} className="border border-cream/30 text-cream px-7 py-3 text-sm tracking-wide hover:border-gold hover:text-gold transition">
                 {tr.hero.cta2}
               </Link>
+            </div>
+          </div>
+          <div className="hidden md:flex md:col-span-5 justify-end items-center pointer-events-auto">
+            <div className="relative">
+              <div className="absolute -inset-3 bg-gradient-to-br from-gold/40 to-transparent blur-2xl" />
+              <div className="relative w-[280px] h-[360px] overflow-hidden border border-gold/40 shadow-2xl bg-midnight">
+                <img
+                  src="https://i0.wp.com/100region.com/wp-content/uploads/2022/01/img_1371.jpg"
+                  alt="Ahmad"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 inset-x-0 p-5 text-cream">
+                  <div className="text-[10px] uppercase tracking-[0.4em] text-gold/80 mb-1">
+                    {lang === "ar" ? "سفير المحبة" : "Ambassador of Love"}
+                  </div>
+                  <div className="font-display text-2xl">
+                    {lang === "ar" ? "أحمد عبدالرحمن" : "Ahmad Abdulrahman"}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
