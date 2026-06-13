@@ -29,26 +29,26 @@ function Home() {
   return (
     <>
       {/* HERO + GLOBE */}
-      <section className="relative h-screen min-h-[680px] w-full overflow-hidden bg-[#F5F0E8]">
+      <section className="relative h-screen min-h-[680px] w-full overflow-hidden bg-[#3d4a5f]">
         <GlobeHero points={points} lang={lang} />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F5F0E8]/60 via-transparent to-[#F5F0E8] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F5F0E8]/80 via-transparent to-[#F5F0E8]/40 pointer-events-none" />
-        <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-cols-1 md:grid-cols-12 items-end md:items-center gap-8 px-6 pb-16 md:pb-0 text-[#2C1810] pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#3d4a5f]/40 via-transparent to-[#3d4a5f] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3d4a5f]/70 via-transparent to-[#3d4a5f]/30 pointer-events-none" />
+        <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-cols-1 md:grid-cols-12 items-end md:items-center gap-8 px-6 pb-16 md:pb-0 text-cream pointer-events-none">
           <div className="md:col-span-7 max-w-2xl fade-up pointer-events-auto">
-            <div className="text-[11px] uppercase tracking-[0.4em] text-[#8B6914] mb-4">
+            <div className="text-[11px] uppercase tracking-[0.4em] text-[#d4aa5a] mb-4">
               {lang === "ar" ? "بحرين • العالم" : "Bahrain • World"}
             </div>
-            <h1 className="font-display text-5xl md:text-7xl leading-[1.05] text-[#2C1810]">
+            <h1 className="font-display text-5xl md:text-7xl leading-[1.05] text-cream">
               {tr.hero.title}
             </h1>
-            <p className="mt-6 max-w-xl text-base md:text-lg text-[#2C1810]/70 leading-relaxed">
+            <p className="mt-6 max-w-xl text-base md:text-lg text-cream/80 leading-relaxed">
               {tr.hero.sub}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/$lang/countries" params={{ lang }} className="bg-[#8B6914] text-white px-7 py-3 text-sm tracking-wide hover:bg-[#6b520f] transition">
+              <Link to="/$lang/countries" params={{ lang }} className="bg-[#d4aa5a] text-[#2a3344] px-7 py-3 text-sm tracking-wide hover:bg-[#c49a4a] transition">
                 {tr.hero.cta1}
               </Link>
-              <Link to="/$lang/about" params={{ lang }} className="border border-[#2C1810]/30 text-[#2C1810] px-7 py-3 text-sm tracking-wide hover:border-[#8B6914] hover:text-[#8B6914] transition">
+              <Link to="/$lang/about" params={{ lang }} className="border border-cream/40 text-cream px-7 py-3 text-sm tracking-wide hover:border-[#d4aa5a] hover:text-[#d4aa5a] transition">
                 {tr.hero.cta2}
               </Link>
             </div>
@@ -56,7 +56,7 @@ function Home() {
           <div className="hidden md:flex md:col-span-5 justify-end items-center pointer-events-auto">
             <div className="relative">
               <div className="absolute -inset-3 bg-gradient-to-br from-[#d4aa5a]/40 to-transparent blur-2xl" />
-              <div className="relative w-[280px] h-[360px] overflow-hidden border border-[#d4aa5a]/40 shadow-2xl bg-[#F5F0E8]">
+              <div className="relative w-[280px] h-[360px] overflow-hidden border border-[#d4aa5a]/40 shadow-2xl bg-[#3d4a5f]">
                 <img
                   src="https://i0.wp.com/100region.com/wp-content/uploads/2022/01/img_1371.jpg"
                   alt="Ahmad"
