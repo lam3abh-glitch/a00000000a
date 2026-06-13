@@ -14,7 +14,269 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      articles: {
+        Row: {
+          content_ar: string | null
+          content_en: string | null
+          country_id: string | null
+          created_at: string
+          excerpt_ar: string | null
+          excerpt_en: string | null
+          hero_image: string | null
+          id: string
+          is_featured: boolean | null
+          kind: string
+          slug: string
+          source_url: string | null
+          title_ar: string
+          title_en: string
+        }
+        Insert: {
+          content_ar?: string | null
+          content_en?: string | null
+          country_id?: string | null
+          created_at?: string
+          excerpt_ar?: string | null
+          excerpt_en?: string | null
+          hero_image?: string | null
+          id?: string
+          is_featured?: boolean | null
+          kind: string
+          slug: string
+          source_url?: string | null
+          title_ar: string
+          title_en: string
+        }
+        Update: {
+          content_ar?: string | null
+          content_en?: string | null
+          country_id?: string | null
+          created_at?: string
+          excerpt_ar?: string | null
+          excerpt_en?: string | null
+          hero_image?: string | null
+          id?: string
+          is_featured?: boolean | null
+          kind?: string
+          slug?: string
+          source_url?: string | null
+          title_ar?: string
+          title_en?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "articles_country_id_fkey"
+            columns: ["country_id"]
+            isOneToOne: false
+            referencedRelation: "countries"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      cities: {
+        Row: {
+          content_ar: string | null
+          content_en: string | null
+          country_id: string
+          created_at: string
+          hero_image: string | null
+          id: string
+          name_ar: string
+          name_en: string
+          slug: string
+        }
+        Insert: {
+          content_ar?: string | null
+          content_en?: string | null
+          country_id: string
+          created_at?: string
+          hero_image?: string | null
+          id?: string
+          name_ar: string
+          name_en: string
+          slug: string
+        }
+        Update: {
+          content_ar?: string | null
+          content_en?: string | null
+          country_id?: string
+          created_at?: string
+          hero_image?: string | null
+          id?: string
+          name_ar?: string
+          name_en?: string
+          slug?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cities_country_id_fkey"
+            columns: ["country_id"]
+            isOneToOne: false
+            referencedRelation: "countries"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      continents: {
+        Row: {
+          created_at: string
+          description_ar: string | null
+          description_en: string | null
+          hero_image: string | null
+          id: string
+          name_ar: string
+          name_en: string
+          slug: string
+          sort_order: number | null
+        }
+        Insert: {
+          created_at?: string
+          description_ar?: string | null
+          description_en?: string | null
+          hero_image?: string | null
+          id?: string
+          name_ar: string
+          name_en: string
+          slug: string
+          sort_order?: number | null
+        }
+        Update: {
+          created_at?: string
+          description_ar?: string | null
+          description_en?: string | null
+          hero_image?: string | null
+          id?: string
+          name_ar?: string
+          name_en?: string
+          slug?: string
+          sort_order?: number | null
+        }
+        Relationships: []
+      }
+      countries: {
+        Row: {
+          capital_ar: string | null
+          capital_en: string | null
+          continent_id: string
+          created_at: string
+          currency: string | null
+          flag_emoji: string | null
+          hero_image: string | null
+          id: string
+          intro_ar: string | null
+          intro_en: string | null
+          is_featured: boolean | null
+          iso2: string | null
+          latitude: number | null
+          longitude: number | null
+          name_ar: string
+          name_en: string
+          slug: string
+          source_url: string | null
+        }
+        Insert: {
+          capital_ar?: string | null
+          capital_en?: string | null
+          continent_id: string
+          created_at?: string
+          currency?: string | null
+          flag_emoji?: string | null
+          hero_image?: string | null
+          id?: string
+          intro_ar?: string | null
+          intro_en?: string | null
+          is_featured?: boolean | null
+          iso2?: string | null
+          latitude?: number | null
+          longitude?: number | null
+          name_ar: string
+          name_en: string
+          slug: string
+          source_url?: string | null
+        }
+        Update: {
+          capital_ar?: string | null
+          capital_en?: string | null
+          continent_id?: string
+          created_at?: string
+          currency?: string | null
+          flag_emoji?: string | null
+          hero_image?: string | null
+          id?: string
+          intro_ar?: string | null
+          intro_en?: string | null
+          is_featured?: boolean | null
+          iso2?: string | null
+          latitude?: number | null
+          longitude?: number | null
+          name_ar?: string
+          name_en?: string
+          slug?: string
+          source_url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "countries_continent_id_fkey"
+            columns: ["continent_id"]
+            isOneToOne: false
+            referencedRelation: "continents"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      itineraries: {
+        Row: {
+          country_id: string | null
+          created_at: string
+          days: Json | null
+          duration_days: number | null
+          hero_image: string | null
+          id: string
+          slug: string
+          source_url: string | null
+          summary_ar: string | null
+          summary_en: string | null
+          title_ar: string
+          title_en: string
+        }
+        Insert: {
+          country_id?: string | null
+          created_at?: string
+          days?: Json | null
+          duration_days?: number | null
+          hero_image?: string | null
+          id?: string
+          slug: string
+          source_url?: string | null
+          summary_ar?: string | null
+          summary_en?: string | null
+          title_ar: string
+          title_en: string
+        }
+        Update: {
+          country_id?: string | null
+          created_at?: string
+          days?: Json | null
+          duration_days?: number | null
+          hero_image?: string | null
+          id?: string
+          slug?: string
+          source_url?: string | null
+          summary_ar?: string | null
+          summary_en?: string | null
+          title_ar?: string
+          title_en?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "itineraries_country_id_fkey"
+            columns: ["country_id"]
+            isOneToOne: false
+            referencedRelation: "countries"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
