@@ -152,17 +152,19 @@ function Home() {
                 params={{ lang, slug: c.slug }}
                 className="group text-center"
               >
-                <div className="aspect-square rounded-full bg-sand/40 border border-sand overflow-hidden grid place-items-center group-hover:border-gold group-hover:bg-cream transition shadow-sm">
+                <div className="aspect-square rounded-full overflow-hidden group-hover:scale-105 transition shadow-sm border border-sand group-hover:border-gold">
                   {c.iso2 ? (
                     <img
-                      src={`https://flagcdn.com/w80/${c.iso2.toLowerCase()}.png`}
-                      srcSet={`https://flagcdn.com/w80/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w160/${c.iso2.toLowerCase()}.png 2x`}
+                      src={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png`}
+                      srcSet={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w640/${c.iso2.toLowerCase()}.png 2x`}
                       alt={lang === "ar" ? c.name_ar : c.name_en}
                       loading="lazy"
-                      className="w-8 h-6 object-cover rounded-sm"
+                      className="w-full h-full object-cover"
                     />
                   ) : (
-                    <span className="text-3xl md:text-4xl">{c.flag_emoji}</span>
+                    <div className="w-full h-full bg-sand/40 grid place-items-center">
+                      <span className="text-3xl md:text-4xl">{c.flag_emoji}</span>
+                    </div>
                   )}
                 </div>
                 <div className="mt-3 text-xs md:text-sm text-midnight group-hover:text-gold transition truncate">
