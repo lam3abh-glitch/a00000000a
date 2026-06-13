@@ -81,9 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "أرشيف رحلات أحمد عبد الرحمن من البحرين إلى العالم — قارات ودول ومدن وقصص وبرامج سياحية." },
       { name: "author", content: "Ahmad — سفير المحبة" },
       { property: "og:title", content: "سفير المحبة — رحلة أحمد حول العالم" },
-      { property: "og:description", content: "أرشيف رحلات أحمد من البحرين إلى العالم." },
+      { property: "og:description", content: "أرشيف رحلات أحمد عبد الرحمن من البحرين إلى العالم — قارات ودول ومدن وقصص وبرامج سياحية." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "سفير المحبة — رحلة أحمد حول العالم" },
+      { name: "twitter:description", content: "أرشيف رحلات أحمد عبد الرحمن من البحرين إلى العالم — قارات ودول ومدن وقصص وبرامج سياحية." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/38bb3b74-66ab-4d22-b370-3f4c8e303d26/id-preview-85cf9004--d3011e06-a4b1-4ffe-9d7f-bccafea1f749.lovable.app-1781390305106.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/38bb3b74-66ab-4d22-b370-3f4c8e303d26/id-preview-85cf9004--d3011e06-a4b1-4ffe-9d7f-bccafea1f749.lovable.app-1781390305106.png" },
     ],
     links: [
       {
