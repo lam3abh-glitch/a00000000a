@@ -64,8 +64,8 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
             backgroundColor="rgba(0,0,0,0)"
             globeImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg"
             bumpImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png"
-            atmosphereColor="#4a90a4"
-            atmosphereAltitude={0.2}
+            atmosphereColor="#3b82f6"
+            atmosphereAltitude={0.25}
             pointsData={points}
             pointLat="lat"
             pointLng="lng"
@@ -73,7 +73,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
             pointAltitude={0.01}
             pointRadius={0.35}
             pointLabel={(d: any) =>
-              `<div style="background:#10172a;color:#f3ead6;padding:6px 10px;border:1px solid #d4aa5a;border-radius:2px;font-family:Tajawal,Inter,sans-serif;font-size:12px">${d.name}</div>`
+              `<div style="background:#F5F0E8;color:#2C1810;padding:6px 10px;border:1px solid #d4aa5a;border-radius:2px;font-family:Tajawal,Inter,sans-serif;font-size:12px">${d.name}</div>`
             }
             arcsData={arcs}
             arcColor={"color" as any}
