@@ -3,6 +3,10 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { GlobeHero } from "@/components/site/GlobeHero";
 import { getHomeData } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import shapeAsia from "@/assets/continent-asia-australia.png";
+import shapeEurope from "@/assets/continent-europe.png";
+import shapeAfrica from "@/assets/continent-africa.png";
+import shapeAmericas from "@/assets/continent-americas.png";
 
 const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() });
 
@@ -26,10 +30,10 @@ function Home() {
     "americas": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3579.jpg",
   };
   const continentShapes: Record<string, string> = {
-    "asia-australia": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/BlankMap-Asia.svg/640px-BlankMap-Asia.svg.png",
-    "europe": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Blank_map_of_Europe_%28with_disputed_regions%29.svg/640px-Blank_map_of_Europe_%28with_disputed_regions%29.svg.png",
-    "africa": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/BlankMap-Africa.svg/480px-BlankMap-Africa.svg.png",
-    "americas": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/BlankMap-NorthandSouthAmerica.png/480px-BlankMap-NorthandSouthAmerica.png",
+    "asia-australia": shapeAsia,
+    "europe": shapeEurope,
+    "africa": shapeAfrica,
+    "americas": shapeAmericas,
   };
 
   return (
@@ -125,8 +129,8 @@ function Home() {
                         alt=""
                         loading="lazy"
                         aria-hidden="true"
-                        className="h-16 md:h-20 w-auto opacity-90 drop-shadow-lg"
-                        style={{ filter: "brightness(0) invert(1)" }}
+                      className="h-20 md:h-28 w-auto opacity-95 drop-shadow-lg"
+                      style={{ filter: "brightness(0) invert(1)" }}
                       />
                     )}
                     <div className="font-display text-3xl md:text-4xl text-cream">{lang === "ar" ? c.name_ar : c.name_en}</div>
