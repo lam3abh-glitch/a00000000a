@@ -30,9 +30,17 @@ function Home() {
     <>
       {/* HERO + GLOBE */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden bg-[#3d4a5f]">
-        <GlobeHero points={points} lang={lang} />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3d4a5f]/40 via-transparent to-[#3d4a5f] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3d4a5f]/70 via-transparent to-[#3d4a5f]/30 pointer-events-none" />
+        <img
+          src="https://i0.wp.com/100region.com/wp-content/uploads/2022/01/img_1371.jpg"
+          alt="Ahmad"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#3d4a5f]/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3d4a5f]/90 via-[#3d4a5f]/50 to-[#3d4a5f]/80 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#3d4a5f]/30 via-transparent to-[#3d4a5f] pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-full md:w-[55%] lg:w-[50%] opacity-90">
+          <GlobeHero points={points} lang={lang} />
+        </div>
         <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-cols-1 md:grid-cols-12 items-end md:items-center gap-8 px-6 pb-16 md:pb-0 text-cream pointer-events-none">
           <div className="md:col-span-7 max-w-2xl fade-up pointer-events-auto">
             <div className="text-[11px] uppercase tracking-[0.4em] text-[#d4aa5a] mb-4">
@@ -53,27 +61,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="hidden md:flex md:col-span-5 justify-end items-center pointer-events-auto">
-            <div className="relative">
-              <div className="absolute -inset-3 bg-gradient-to-br from-[#d4aa5a]/40 to-transparent blur-2xl" />
-              <div className="relative w-[280px] h-[360px] overflow-hidden border border-[#d4aa5a]/40 shadow-2xl bg-[#3d4a5f]">
-                <img
-                  src="https://i0.wp.com/100region.com/wp-content/uploads/2022/01/img_1371.jpg"
-                  alt="Ahmad"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/70 via-transparent to-transparent" />
-                <div className="absolute bottom-0 inset-x-0 p-5 text-white">
-                  <div className="text-[10px] uppercase tracking-[0.4em] text-[#d4aa5a]/90 mb-1">
-                    {lang === "ar" ? "سفير المحبة" : "Ambassador of Love"}
-                  </div>
-                  <div className="font-display text-2xl">
-                    {lang === "ar" ? "أحمد عبدالرحمن" : "Ahmad Abdulrahman"}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="hidden md:block md:col-span-5" />
         </div>
       </section>
 
