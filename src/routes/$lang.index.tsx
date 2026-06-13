@@ -25,6 +25,12 @@ function Home() {
     "africa": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3566.jpg",
     "americas": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3579.jpg",
   };
+  const continentShapes: Record<string, string> = {
+    "asia-australia": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/BlankMap-Asia.svg/640px-BlankMap-Asia.svg.png",
+    "europe": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Blank_map_of_Europe_%28with_disputed_regions%29.svg/640px-Blank_map_of_Europe_%28with_disputed_regions%29.svg.png",
+    "africa": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/BlankMap-Africa.svg/480px-BlankMap-Africa.svg.png",
+    "americas": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/BlankMap-NorthandSouthAmerica.png/480px-BlankMap-NorthandSouthAmerica.png",
+  };
 
   return (
     <>
@@ -112,7 +118,19 @@ function Home() {
                 <img src={continentImages[c.slug] ?? c.hero_image} alt={c.name_en} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/30 to-transparent" />
                 <div className="absolute bottom-0 inset-x-0 p-8">
-                  <div className="font-display text-3xl md:text-4xl text-cream">{lang === "ar" ? c.name_ar : c.name_en}</div>
+                  <div className="flex items-center gap-4">
+                    {continentShapes[c.slug] && (
+                      <img
+                        src={continentShapes[c.slug]}
+                        alt=""
+                        loading="lazy"
+                        aria-hidden="true"
+                        className="h-16 md:h-20 w-auto opacity-90 drop-shadow-lg"
+                        style={{ filter: "brightness(0) invert(1)" }}
+                      />
+                    )}
+                    <div className="font-display text-3xl md:text-4xl text-cream">{lang === "ar" ? c.name_ar : c.name_en}</div>
+                  </div>
                   <div className="mt-2 text-xs uppercase tracking-[0.3em] text-gold/80 opacity-0 group-hover:opacity-100 transition">{tr.sections.discover} →</div>
                 </div>
               </Link>
