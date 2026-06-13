@@ -9,38 +9,169 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangAboutRouteImport } from './routes/$lang.about'
+import { Route as LangCountriesIndexRouteImport } from './routes/$lang.countries.index'
+import { Route as LangStoriesSlugRouteImport } from './routes/$lang.stories.$slug'
+import { Route as LangItinerariesSlugRouteImport } from './routes/$lang.itineraries.$slug'
+import { Route as LangCulturesSlugRouteImport } from './routes/$lang.cultures.$slug'
+import { Route as LangCountriesSlugRouteImport } from './routes/$lang.countries.$slug'
+import { Route as LangContinentsSlugRouteImport } from './routes/$lang.continents.$slug'
+import { Route as LangCountriesCountryCityRouteImport } from './routes/$lang.countries.$country.$city'
 
+const LangRoute = LangRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAboutRoute = LangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCountriesIndexRoute = LangCountriesIndexRouteImport.update({
+  id: '/countries/',
+  path: '/countries/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangStoriesSlugRoute = LangStoriesSlugRouteImport.update({
+  id: '/stories/$slug',
+  path: '/stories/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangItinerariesSlugRoute = LangItinerariesSlugRouteImport.update({
+  id: '/itineraries/$slug',
+  path: '/itineraries/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCulturesSlugRoute = LangCulturesSlugRouteImport.update({
+  id: '/cultures/$slug',
+  path: '/cultures/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCountriesSlugRoute = LangCountriesSlugRouteImport.update({
+  id: '/countries/$slug',
+  path: '/countries/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangContinentsSlugRoute = LangContinentsSlugRouteImport.update({
+  id: '/continents/$slug',
+  path: '/continents/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCountriesCountryCityRoute =
+  LangCountriesCountryCityRouteImport.update({
+    id: '/countries/$country/$city',
+    path: '/countries/$country/$city',
+    getParentRoute: () => LangRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/continents/$slug': typeof LangContinentsSlugRoute
+  '/$lang/countries/$slug': typeof LangCountriesSlugRoute
+  '/$lang/cultures/$slug': typeof LangCulturesSlugRoute
+  '/$lang/itineraries/$slug': typeof LangItinerariesSlugRoute
+  '/$lang/stories/$slug': typeof LangStoriesSlugRoute
+  '/$lang/countries/': typeof LangCountriesIndexRoute
+  '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang': typeof LangIndexRoute
+  '/$lang/continents/$slug': typeof LangContinentsSlugRoute
+  '/$lang/countries/$slug': typeof LangCountriesSlugRoute
+  '/$lang/cultures/$slug': typeof LangCulturesSlugRoute
+  '/$lang/itineraries/$slug': typeof LangItinerariesSlugRoute
+  '/$lang/stories/$slug': typeof LangStoriesSlugRoute
+  '/$lang/countries': typeof LangCountriesIndexRoute
+  '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/continents/$slug': typeof LangContinentsSlugRoute
+  '/$lang/countries/$slug': typeof LangCountriesSlugRoute
+  '/$lang/cultures/$slug': typeof LangCulturesSlugRoute
+  '/$lang/itineraries/$slug': typeof LangItinerariesSlugRoute
+  '/$lang/stories/$slug': typeof LangStoriesSlugRoute
+  '/$lang/countries/': typeof LangCountriesIndexRoute
+  '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/$lang/about'
+    | '/$lang/'
+    | '/$lang/continents/$slug'
+    | '/$lang/countries/$slug'
+    | '/$lang/cultures/$slug'
+    | '/$lang/itineraries/$slug'
+    | '/$lang/stories/$slug'
+    | '/$lang/countries/'
+    | '/$lang/countries/$country/$city'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/$lang/about'
+    | '/$lang'
+    | '/$lang/continents/$slug'
+    | '/$lang/countries/$slug'
+    | '/$lang/cultures/$slug'
+    | '/$lang/itineraries/$slug'
+    | '/$lang/stories/$slug'
+    | '/$lang/countries'
+    | '/$lang/countries/$country/$city'
+  id:
+    | '__root__'
+    | '/'
+    | '/$lang'
+    | '/$lang/about'
+    | '/$lang/'
+    | '/$lang/continents/$slug'
+    | '/$lang/countries/$slug'
+    | '/$lang/cultures/$slug'
+    | '/$lang/itineraries/$slug'
+    | '/$lang/stories/$slug'
+    | '/$lang/countries/'
+    | '/$lang/countries/$country/$city'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LangRoute: typeof LangRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +179,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/about': {
+      id: '/$lang/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/countries/': {
+      id: '/$lang/countries/'
+      path: '/countries'
+      fullPath: '/$lang/countries/'
+      preLoaderRoute: typeof LangCountriesIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/stories/$slug': {
+      id: '/$lang/stories/$slug'
+      path: '/stories/$slug'
+      fullPath: '/$lang/stories/$slug'
+      preLoaderRoute: typeof LangStoriesSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/itineraries/$slug': {
+      id: '/$lang/itineraries/$slug'
+      path: '/itineraries/$slug'
+      fullPath: '/$lang/itineraries/$slug'
+      preLoaderRoute: typeof LangItinerariesSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/cultures/$slug': {
+      id: '/$lang/cultures/$slug'
+      path: '/cultures/$slug'
+      fullPath: '/$lang/cultures/$slug'
+      preLoaderRoute: typeof LangCulturesSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/countries/$slug': {
+      id: '/$lang/countries/$slug'
+      path: '/countries/$slug'
+      fullPath: '/$lang/countries/$slug'
+      preLoaderRoute: typeof LangCountriesSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/continents/$slug': {
+      id: '/$lang/continents/$slug'
+      path: '/continents/$slug'
+      fullPath: '/$lang/continents/$slug'
+      preLoaderRoute: typeof LangContinentsSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/countries/$country/$city': {
+      id: '/$lang/countries/$country/$city'
+      path: '/countries/$country/$city'
+      fullPath: '/$lang/countries/$country/$city'
+      preLoaderRoute: typeof LangCountriesCountryCityRouteImport
+      parentRoute: typeof LangRoute
+    }
   }
 }
 
+interface LangRouteChildren {
+  LangAboutRoute: typeof LangAboutRoute
+  LangIndexRoute: typeof LangIndexRoute
+  LangContinentsSlugRoute: typeof LangContinentsSlugRoute
+  LangCountriesSlugRoute: typeof LangCountriesSlugRoute
+  LangCulturesSlugRoute: typeof LangCulturesSlugRoute
+  LangItinerariesSlugRoute: typeof LangItinerariesSlugRoute
+  LangStoriesSlugRoute: typeof LangStoriesSlugRoute
+  LangCountriesIndexRoute: typeof LangCountriesIndexRoute
+  LangCountriesCountryCityRoute: typeof LangCountriesCountryCityRoute
+}
+
+const LangRouteChildren: LangRouteChildren = {
+  LangAboutRoute: LangAboutRoute,
+  LangIndexRoute: LangIndexRoute,
+  LangContinentsSlugRoute: LangContinentsSlugRoute,
+  LangCountriesSlugRoute: LangCountriesSlugRoute,
+  LangCulturesSlugRoute: LangCulturesSlugRoute,
+  LangItinerariesSlugRoute: LangItinerariesSlugRoute,
+  LangStoriesSlugRoute: LangStoriesSlugRoute,
+  LangCountriesIndexRoute: LangCountriesIndexRoute,
+  LangCountriesCountryCityRoute: LangCountriesCountryCityRoute,
+}
+
+const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LangRoute: LangRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
