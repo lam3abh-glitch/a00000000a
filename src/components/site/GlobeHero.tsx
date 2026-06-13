@@ -62,9 +62,9 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
             width={size.w}
             height={size.h}
             backgroundColor="rgba(0,0,0,0)"
-            globeImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg"
+            globeImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg"
             bumpImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png"
-            atmosphereColor="#d4aa5a"
+            atmosphereColor="#4a90a4"
             atmosphereAltitude={0.2}
             pointsData={points}
             pointLat="lat"
