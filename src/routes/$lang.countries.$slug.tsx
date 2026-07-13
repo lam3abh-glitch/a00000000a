@@ -2,6 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getCountry } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import { WeatherByMonth } from "@/components/site/WeatherByMonth";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -83,6 +84,7 @@ function Country() {
       )}
 
       {/* RELATED */}
+      {c.slug === "uae" && <WeatherByMonth lang={lang} />}
       {(data.articles.length > 0 || data.itineraries.length > 0) && (
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
