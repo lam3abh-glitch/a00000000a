@@ -176,6 +176,29 @@ function Country() {
             </div>
           </div>
 
+          {/* Video */}
+          <div className="relative z-10 mt-16 mx-auto max-w-4xl px-6">
+            <div className={`mb-4 flex items-center gap-3 ${lang === "ar" ? "justify-end" : "justify-start"}`}>
+              <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-mono">
+                {lang === "ar" ? "٠٣ · مشاهدة" : "03 · Watch"}
+              </span>
+              <span className="h-px flex-1 bg-midnight/10" />
+            </div>
+            <div className="relative overflow-hidden shadow-xl border border-midnight/10 bg-midnight" style={{ aspectRatio: "16 / 9" }}>
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/sEfJHnXY1Cg"
+                title="France"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+            <div className={`mt-3 text-xs text-charcoal/60 ${lang === "ar" ? "text-right" : "text-left"}`}>
+              {lang === "ar" ? "لمحة عن فرنسا" : "A glimpse of France"}
+            </div>
+          </div>
+
           <style>{`@keyframes twinkle { 0%,100% { opacity: 0.35; transform: scale(0.8);} 50% { opacity: 1; transform: scale(1.3);} }`}</style>
         </section>
       ) : (
