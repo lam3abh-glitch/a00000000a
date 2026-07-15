@@ -154,21 +154,19 @@ function Country() {
             </div>
           </div>
 
-          {/* About France — fact sheet */}
-          <div className="relative z-10 mt-20 mx-auto max-w-4xl px-6">
-            <div className="bg-white border border-midnight/10 shadow-md hover:shadow-xl transition-shadow p-8 md:p-12">
-              <div className={`flex items-center gap-4 mb-6 ${lang === "ar" ? "flex-row-reverse" : "flex-row"}`}>
-                <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-mono">
-                  {lang === "ar" ? "٠٠ · نبذة" : "00 · About"}
-                </span>
-                <span className="h-px flex-1 bg-midnight/10" />
-              </div>
-              <p className={`font-body text-lg md:text-xl text-midnight/90 leading-relaxed ${lang === "ar" ? "text-right" : "text-left"}`}>
-                {lang === "ar"
-                  ? "فرنسا هي جمهورية دستورية ذات نظام مركزي وبرلماني ذي نزعة رئاسية، وتقع في أوروبا الغربية، ولها عدة مناطق وأقاليم منتشرة في جميع أنحاء العالم، شعارها حرية ومساواة وأخوة، فرنسا بلد قديم يعود تكوينه للعصور الوسطى، وتعتبر إحدى المناطق المهمة في أوروبا، وقد وصلت إلى أوج قوتها خلال القرن 19 وأوائل القرن 20، إذ امتلكت ثاني أكبر امبراطورية استعمارية في عام 1950 بعد الامبراطورية البريطانية العظمى، وفرنسا هي إحدى الدول المؤسسة للاتحاد الأوروبي، وأحد الأعضاء الدائمين في مجلس الأمن الدولي، كما أنها عضو في العديد من المؤسسات الدولية."
-                  : "France is a constitutional republic with a centralized and parliamentary system with presidential tendencies. It is located in Western Europe and has several regions and territories spread across the world. Its motto is Liberty, Equality, and Fraternity. France is an ancient country whose formation dates back to the Middle Ages and is considered one of the important regions in Europe. It reached the peak of its power during the 19th century and early 20th century, possessing the second largest colonial empire in 1950 after the British Empire. France is one of the founding countries of the European Union and a permanent member of the UN Security Council, as well as a member of many international institutions."}
-              </p>
+          {/* About France — compact text block */}
+          <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
+            <div className={`flex items-center gap-3 mb-4 ${lang === "ar" ? "flex-row-reverse" : "flex-row"}`}>
+              <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-mono">
+                {lang === "ar" ? "٠٠ · نبذة" : "00 · About"}
+              </span>
+              <span className="h-px flex-1 bg-midnight/10" />
             </div>
+            <p className={`font-body text-base md:text-lg text-midnight/85 leading-relaxed ${lang === "ar" ? "text-right" : "text-left"}`}>
+              {lang === "ar"
+                ? "فرنسا جمهورية دستورية في غرب أوروبا، شعارها حرية ومساواة وأخوة. بلد قديم يعود تكوينه للعصور الوسطى، وصل إلى أوج قوته في القرن 19 والقرن 20، وامتلك ثاني أكبر إمبراطورية استعمارية عام 1950. وهي من مؤسسي الاتحاد الأوروبي وأحد الأعضاء الدائمين في مجلس الأمن الدولي."
+                : "France is a constitutional republic in Western Europe. Its motto is Liberty, Equality, and Fraternity. An ancient country formed in the Middle Ages, it reached its peak in the 19th and 20th centuries and held the second-largest colonial empire in 1950. It is a founding member of the European Union and a permanent member of the UN Security Council."}
+            </p>
           </div>
 
           {/* National Anthem */}
