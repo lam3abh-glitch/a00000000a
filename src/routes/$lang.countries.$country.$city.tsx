@@ -126,7 +126,7 @@ const PARIS_ATTRACTIONS: Attraction[] = [
     name_en: "Élysée Palace",
     desc_ar: "قصر الإليزيه من أشهر قصور باريس، ويُعدّ المقر الرسمي لرئاسة الجمهورية الفرنسية، حيث يضمّ مكتب رئيس الدولة ومكان اجتماع مجلس الوزراء. يقع بالقرب من شارع الشانزليزيه، وبُني في القرن الثامن عشر مع الحفاظ على تصميمه الكلاسيكي عبر القرون.",
     desc_en: "The Élysée Palace is one of the most renowned palaces in Paris and the official residence of the President of the French Republic, hosting the head of state's office and Cabinet meetings. Located near the Champs-Élysées, it was built in the 18th century and has kept its classical design intact through the centuries.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Palais_de_l%27Elys%C3%A9e_-_Vue_g%C3%A9n%C3%A9rale.jpg/1280px-Palais_de_l%27Elys%C3%A9e_-_Vue_g%C3%A9n%C3%A9rale.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Secretary_Pompeo_Arrives_to_Meet_with_French_Foreign_Minister_Le_Drian_in_Paris_%2850610423656%29_%28cropped%29.jpg/1280px-Secretary_Pompeo_Arrives_to_Meet_with_French_Foreign_Minister_Le_Drian_in_Paris_%2850610423656%29_%28cropped%29.jpg",
   },
 ];
 
