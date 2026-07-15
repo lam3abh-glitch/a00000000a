@@ -127,6 +127,15 @@ function Country() {
             </div>
           </div>
 
+          {/* National Anthem */}
+          <div className="relative z-10 mt-16">
+            <AnthemPlayer
+              src={franceAnthem.url}
+              lang={lang}
+              title={lang === "ar" ? "لا مارسييز" : "La Marseillaise"}
+            />
+          </div>
+
           <style>{`@keyframes twinkle { 0%,100% { opacity: 0.35; transform: scale(0.8);} 50% { opacity: 1; transform: scale(1.3);} }`}</style>
         </section>
       ) : (
