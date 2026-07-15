@@ -28,7 +28,7 @@ const PARIS_ATTRACTIONS: Attraction[] = [
     name_en: "Eiffel Tower",
     desc_ar: "برج إيفل من أبرز معالم باريس السياحية، إن لم يكن فرنسا كلها. بُني عام 1889م على يد المهندس غوستاف إيفل، ويبلغ ارتفاعه 324 متراً، ويُعدّ أطول مباني العاصمة باريس على الإطلاق، وأحد أكثر الأماكن السياحية زيارةً في المدينة.",
     desc_en: "The Eiffel Tower is one of the most iconic landmarks of Paris — if not all of France. Built in 1889 by engineer Gustave Eiffel, it rises 324 metres, making it the tallest building in the capital and one of the most visited attractions in the city.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/1024px-Tour_Eiffel_Wikimedia_Commons.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
     tall: true,
   },
   {
