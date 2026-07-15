@@ -7,6 +7,8 @@ import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
+import franceEmblem from "@/assets/france-emblem.png.asset.json";
+import franceMap from "@/assets/france-map.png.asset.json";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -134,6 +136,44 @@ function Country() {
               lang={lang}
               title={lang === "ar" ? "لا مارسييز" : "La Marseillaise"}
             />
+          </div>
+
+          {/* Fact cards: Emblem + Map */}
+          <div className="relative z-10 mt-20 mx-auto max-w-5xl px-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="group relative bg-white border border-midnight/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-gold font-mono z-10">
+                  {lang === "ar" ? "٠١ · حقيقة" : "01 · Fact"}
+                </div>
+                <div className="pt-16 pb-8 px-8 flex items-center justify-center bg-gradient-to-b from-cream to-white min-h-[280px]">
+                  <img src={franceEmblem.url} alt="France emblem" loading="lazy" className="max-h-56 w-auto object-contain drop-shadow-md" />
+                </div>
+                <div className={`border-t border-midnight/10 px-6 py-4 ${lang === "ar" ? "text-right" : "text-left"}`}>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50 mb-1">
+                    {lang === "ar" ? "الشعار الوطني" : "National Emblem"}
+                  </div>
+                  <div className="font-display text-xl text-midnight">
+                    {lang === "ar" ? "شعار الجمهورية الفرنسية" : "Emblem of the French Republic"}
+                  </div>
+                </div>
+              </div>
+              <div className="group relative bg-white border border-midnight/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-gold font-mono z-10">
+                  {lang === "ar" ? "٠٢ · حقيقة" : "02 · Fact"}
+                </div>
+                <div className="pt-12 pb-4 px-4 flex items-center justify-center bg-gradient-to-b from-cream to-white min-h-[280px]">
+                  <img src={franceMap.url} alt="France map" loading="lazy" className="max-h-64 w-auto object-contain" />
+                </div>
+                <div className={`border-t border-midnight/10 px-6 py-4 ${lang === "ar" ? "text-right" : "text-left"}`}>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50 mb-1">
+                    {lang === "ar" ? "الموقع الجغرافي" : "Geography"}
+                  </div>
+                  <div className="font-display text-xl text-midnight">
+                    {lang === "ar" ? "فرنسا على الخريطة · العاصمة باريس" : "France on the map · Capital Paris"}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <style>{`@keyframes twinkle { 0%,100% { opacity: 0.35; transform: scale(0.8);} 50% { opacity: 1; transform: scale(1.3);} }`}</style>
