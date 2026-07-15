@@ -149,7 +149,7 @@ function Country() {
                 {lang === "ar" ? "★ مقدّمة" : "★ Introduction"}
               </span>
               <p className="font-display text-3xl md:text-4xl text-midnight leading-snug whitespace-pre-line">
-                {lang === "arithmetic" ? c.intro_ar : c.intro_en}
+                {lang === "ar" ? c.intro_ar : c.intro_en}
               </p>
             </div>
           </div>
