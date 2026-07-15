@@ -5,6 +5,8 @@ import { type Lang, t } from "@/lib/i18n";
 import { WeatherByMonth } from "@/components/site/WeatherByMonth";
 import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
+import { AnthemPlayer } from "@/components/site/AnthemPlayer";
+import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
