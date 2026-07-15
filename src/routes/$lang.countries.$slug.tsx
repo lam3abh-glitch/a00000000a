@@ -4,6 +4,12 @@ import { getCountry } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
 import { WeatherByMonth } from "@/components/site/WeatherByMonth";
 import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
+import stickerEiffel from "@/assets/sticker-eiffel.png";
+import stickerCroissant from "@/assets/sticker-croissant.png";
+import stickerWine from "@/assets/sticker-wine.png";
+import stickerCheese from "@/assets/sticker-cheese.png";
+import stickerBeret from "@/assets/sticker-beret.png";
+import stickerBaguette from "@/assets/sticker-baguette.png";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -57,17 +63,12 @@ function Country() {
             className="absolute inset-0 opacity-[0.15] pointer-events-none"
             style={{ backgroundImage: "radial-gradient(circle, #1a1a2e 1px, transparent 1.5px)", backgroundSize: "22px 22px" }}
           />
-          {/* floating sticker: Eiffel */}
-          <div className="absolute top-10 left-6 md:left-16 text-6xl md:text-7xl select-none rotate-[-8deg] drop-shadow-md animate-[bounce_4s_ease-in-out_infinite]">🗼</div>
-          {/* floating sticker: croissant */}
-          <div className="absolute top-24 right-10 md:right-24 text-5xl md:text-6xl select-none rotate-[14deg] drop-shadow-md">🥐</div>
-          {/* floating sticker: wine */}
-          <div className="absolute bottom-20 left-10 md:left-32 text-5xl md:text-6xl select-none rotate-[-12deg] drop-shadow-md">🍷</div>
-          {/* floating sticker: cheese */}
-          <div className="absolute bottom-10 right-6 md:right-20 text-5xl md:text-6xl select-none rotate-[9deg] drop-shadow-md">🧀</div>
-          {/* floating sticker: beret / art */}
-          <div className="absolute top-1/2 left-4 hidden md:block text-4xl select-none rotate-[-20deg]">🎨</div>
-          <div className="absolute top-1/3 right-4 hidden md:block text-4xl select-none rotate-[18deg]">❤️</div>
+          <img src={stickerEiffel} alt="" aria-hidden loading="lazy" className="absolute top-8 left-4 md:left-16 w-24 md:w-32 select-none rotate-[-8deg] drop-shadow-xl pointer-events-none" />
+          <img src={stickerCroissant} alt="" aria-hidden loading="lazy" className="absolute top-16 right-6 md:right-24 w-20 md:w-28 select-none rotate-[14deg] drop-shadow-xl pointer-events-none" />
+          <img src={stickerWine} alt="" aria-hidden loading="lazy" className="absolute bottom-16 left-6 md:left-28 w-20 md:w-28 select-none rotate-[-10deg] drop-shadow-xl pointer-events-none" />
+          <img src={stickerCheese} alt="" aria-hidden loading="lazy" className="absolute bottom-8 right-4 md:right-16 w-20 md:w-28 select-none rotate-[9deg] drop-shadow-xl pointer-events-none" />
+          <img src={stickerBeret} alt="" aria-hidden loading="lazy" className="absolute top-1/2 left-2 hidden md:block w-20 select-none rotate-[-18deg] drop-shadow-xl pointer-events-none" />
+          <img src={stickerBaguette} alt="" aria-hidden loading="lazy" className="absolute top-1/3 right-2 hidden md:block w-24 select-none rotate-[24deg] drop-shadow-xl pointer-events-none" />
 
           <div className="relative z-10 mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Polaroid photo */}
@@ -83,8 +84,7 @@ function Country() {
                   </div>
                 </div>
                 {/* sticker on polaroid */}
-                <div className="absolute -top-6 -right-6 text-5xl rotate-[15deg] z-30 select-none drop-shadow-lg">✨</div>
-                <div className="absolute -bottom-6 -left-6 text-5xl rotate-[-20deg] z-30 select-none drop-shadow-lg">🇫🇷</div>
+                <img src={stickerCroissant} alt="" aria-hidden loading="lazy" className="absolute -top-8 -right-8 w-20 rotate-[18deg] z-30 select-none drop-shadow-xl" />
               </div>
             </div>
 
@@ -96,18 +96,6 @@ function Country() {
               <p className="font-display text-3xl md:text-4xl text-midnight leading-snug whitespace-pre-line">
                 {lang === "ar" ? c.intro_ar : c.intro_en}
               </p>
-              <div className="mt-8 flex flex-wrap gap-3 items-center">
-                <span className="px-3 py-1 bg-terracotta/20 text-terracotta rounded-full text-sm font-medium rotate-[-2deg]">#موضة</span>
-                <span className="px-3 py-1 bg-gold/25 text-midnight rounded-full text-sm font-medium rotate-[1deg]">#عطور</span>
-                <span className="px-3 py-1 bg-midnight text-cream rounded-full text-sm font-medium rotate-[-1deg]">#طبيعة</span>
-                <span className="px-3 py-1 bg-sand text-midnight rounded-full text-sm font-medium rotate-[2deg]">#تاريخ</span>
-              </div>
-              <div className="mt-8 flex items-center gap-4 text-4xl">
-                <span className="rotate-[-8deg]">🥖</span>
-                <span className="rotate-[6deg]">☕</span>
-                <span className="rotate-[-4deg]">💐</span>
-                <span className="rotate-[10deg]">🎭</span>
-              </div>
             </div>
           </div>
         </section>
