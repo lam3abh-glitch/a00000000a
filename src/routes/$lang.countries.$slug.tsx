@@ -66,14 +66,33 @@ function Country() {
               <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{lang === "ar" ? "المدن" : "Cities"}</div>
               <h2 className="font-display text-4xl text-midnight">{tr.sections.cities}</h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {data.cities.map((city: any) => (
-                <Link key={city.slug} to="/$lang/countries/$country/$city" params={{ lang, country: c.slug, city: city.slug }} className="group block">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img src={city.hero_image} alt={city.name_en} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-midnight/70 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 p-5 text-cream">
-                      <div className="font-display text-2xl">{lang === "ar" ? city.name_ar : city.name_en}</div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {data.cities.map((city: any, i: number) => (
+                <Link
+                  key={city.slug}
+                  to="/$lang/countries/$country/$city"
+                  params={{ lang, country: c.slug, city: city.slug }}
+                  className="group relative flex flex-col items-center justify-end overflow-hidden rounded-2xl bg-midnight aspect-[3/4] border border-midnight/10 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+                >
+                  {city.hero_image && (
+                    <img
+                      src={city.hero_image}
+                      alt={city.name_en}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-110 transition-all duration-700"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent" />
+                  <div className="absolute top-3 left-3 text-[10px] tracking-[0.3em] text-gold/90 font-mono">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className="relative z-10 w-full p-4 text-center">
+                    <div className="font-display text-xl md:text-2xl text-cream leading-tight">
+                      {lang === "ar" ? city.name_ar : city.name_en}
+                    </div>
+                    <div className="mt-2 mx-auto h-px w-8 bg-gold/70 group-hover:w-16 transition-all duration-500" />
+                    <div className="mt-2 text-[10px] uppercase tracking-[0.3em] text-cream/60 group-hover:text-gold transition-colors">
+                      {lang === "ar" ? "اكتشف ←" : "Explore →"}
                     </div>
                   </div>
                 </Link>
