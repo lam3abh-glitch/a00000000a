@@ -5,6 +5,8 @@ import { type Lang, t } from "@/lib/i18n";
 import { WeatherByMonth } from "@/components/site/WeatherByMonth";
 import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
+import { AnthemPlayer } from "@/components/site/AnthemPlayer";
+import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -123,6 +125,15 @@ function Country() {
                 {lang === "ar" ? c.intro_ar : c.intro_en}
               </p>
             </div>
+          </div>
+
+          {/* National Anthem */}
+          <div className="relative z-10 mt-16">
+            <AnthemPlayer
+              src={franceAnthem.url}
+              lang={lang}
+              title={lang === "ar" ? "لا مارسييز" : "La Marseillaise"}
+            />
           </div>
 
           <style>{`@keyframes twinkle { 0%,100% { opacity: 0.35; transform: scale(0.8);} 50% { opacity: 1; transform: scale(1.3);} }`}</style>
