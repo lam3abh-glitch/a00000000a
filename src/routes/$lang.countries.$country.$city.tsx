@@ -187,34 +187,35 @@ function City() {
               {PARIS_ATTRACTIONS.map((a, i) => {
                 const reverse = i % 2 === 1;
                 return (
-                  <article
-                    key={a.num}
-                    className={`grid md:grid-cols-12 gap-8 md:gap-12 items-center ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}
-                  >
-                    <div className="md:col-span-6">
-                      <div className="relative overflow-hidden shadow-xl bg-midnight/5 group">
+                  <article key={a.num} className="grid md:grid-cols-12 gap-6 md:gap-12 items-center">
+                    {/* TEXT — always first on mobile, alternates on desktop */}
+                    <div
+                      className={`md:col-span-6 ${lang === "ar" ? "text-right" : "text-left"} ${reverse ? "md:order-2" : ""}`}
+                    >
+                      <div className="text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-mono">
+                        {lang === "ar" ? `معلم · ${a.num}` : `Landmark · ${a.num}`}
+                      </div>
+                      <h2 className="font-display text-2xl md:text-4xl text-midnight mb-4 leading-tight">
+                        {lang === "ar" ? a.name_ar : a.name_en}
+                      </h2>
+                      <div className={`h-px w-16 bg-gold mb-4 ${lang === "ar" ? "ml-auto" : ""}`} />
+                      <p className="text-sm md:text-lg text-charcoal/80 leading-loose">
+                        {lang === "ar" ? a.desc_ar : a.desc_en}
+                      </p>
+                    </div>
+                    {/* IMAGE — mobile-friendly size */}
+                    <div className={`md:col-span-6 ${reverse ? "md:order-1" : ""}`}>
+                      <div className="relative overflow-hidden shadow-xl bg-midnight/5 group mx-auto max-w-sm md:max-w-none">
                         <img
                           src={a.image}
                           alt={lang === "ar" ? a.name_ar : a.name_en}
                           loading="lazy"
-                          className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 ${a.tall ? "aspect-[4/5]" : "aspect-[4/3]"}`}
+                          className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 ${a.tall ? "aspect-[4/5] md:aspect-[4/5]" : "aspect-[4/3]"}`}
                         />
-                        <div className="absolute top-0 left-0 bg-midnight text-cream px-4 py-2 text-[10px] tracking-[0.4em] font-mono">
+                        <div className="absolute top-0 left-0 bg-midnight text-cream px-3 py-1.5 text-[10px] tracking-[0.4em] font-mono">
                           {a.num}
                         </div>
                       </div>
-                    </div>
-                    <div className={`md:col-span-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
-                      <div className="text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-mono">
-                        {lang === "ar" ? `معلم · ${a.num}` : `Landmark · ${a.num}`}
-                      </div>
-                      <h2 className="font-display text-3xl md:text-4xl text-midnight mb-5 leading-tight">
-                        {lang === "ar" ? a.name_ar : a.name_en}
-                      </h2>
-                      <div className={`h-px w-16 bg-gold mb-5 ${lang === "ar" ? "ml-auto" : ""}`} />
-                      <p className="text-base md:text-lg text-charcoal/80 leading-loose">
-                        {lang === "ar" ? a.desc_ar : a.desc_en}
-                      </p>
                     </div>
                   </article>
                 );
