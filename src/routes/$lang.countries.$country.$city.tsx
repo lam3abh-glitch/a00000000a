@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getCity } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
-import { CITY_FEATURES, type Attraction } from "@/lib/city-attractions";
+import { CITY_ARTICLES, type ArticleLine } from "@/lib/city-articles";
 
 const qo = (country: string, city: string) =>
   queryOptions({ queryKey: ["city", country, city], queryFn: () => getCity({ data: { country, city } }) });
@@ -13,19 +13,69 @@ export const Route = createFileRoute("/$lang/countries/$country/$city")({
 });
 
 function City() {
-  const { lang, country: countrySlug } = useParams({ from: "/$lang/countries/$country/$city" }) as { lang: Lang; country: string; city: string };
-  const { data } = useSuspenseQuery(qo(countrySlug, useParams({ from: "/$lang/countries/$country/$city" }).city));
+  const { lang, country: countrySlug, city: citySlug } = useParams({ from: "/$lang/countries/$country/$city" }) as { lang: Lang; country: string; city: string };
+  const { data } = useSuspenseQuery(qo(countrySlug, citySlug));
   if (!data.city || !data.country) throw notFound();
   const city: any = data.city;
   const country: any = data.country;
   const tr = t[lang];
   const name = lang === "ar" ? city.name_ar : city.name_en;
-  const feature = country.slug === "france" ? CITY_FEATURES[city.slug] : undefined;
+  const article = country.slug === "france" ? CITY_ARTICLES[city.slug] : undefined;
+  const heroImage = article?.heroImage ?? city.hero_image;
+
+  const renderLine = (line: ArticleLine, index: number) => {
+    if (line.kind === "IMG") {
+      return (
+        <figure key={index} className="my-8 md:my-10 overflow-hidden bg-midnight/5 shadow-xl">
+          <img src={line.value} alt={article?.title ?? name} loading="lazy" className="w-full max-h-[520px] object-cover" />
+        </figure>
+      );
+    }
+
+    if (line.kind === "H3") {
+      return (
+        <h2 key={index} className="pt-10 font-display text-3xl md:text-4xl text-midnight leading-tight">
+          {line.value}
+        </h2>
+      );
+    }
+
+    if (line.kind === "H4") {
+      return (
+        <h3 key={index} className="font-display text-2xl md:text-3xl text-midnight/90 leading-tight">
+          {line.value}
+        </h3>
+      );
+    }
+
+    if (line.kind === "H5") {
+      return (
+        <h3 key={index} className="pt-8 font-display text-2xl md:text-3xl text-midnight leading-tight border-t border-sand">
+          <span className="text-gold ml-3">◆</span>
+          {line.value}
+        </h3>
+      );
+    }
+
+    if (line.kind === "LI") {
+      return (
+        <li key={index} className="mr-6 list-disc text-base md:text-lg text-charcoal/80 leading-loose">
+          {line.value}
+        </li>
+      );
+    }
+
+    return (
+      <p key={index} className="text-base md:text-lg text-charcoal/85 leading-loose">
+        {line.value}
+      </p>
+    );
+  };
 
   return (
     <div className="bg-cream">
       <section className="relative h-[60vh] min-h-[420px] bg-midnight">
-        <img src={city.hero_image} alt={name} className="absolute inset-0 h-full w-full object-cover opacity-70" />
+        <img src={heroImage} alt={name} className="absolute inset-0 h-full w-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight to-transparent" />
         <div className="relative z-10 mx-auto max-w-7xl h-full flex flex-col justify-end px-6 pb-16 text-cream">
           <div className="text-xs text-cream/60 mb-3">
@@ -38,94 +88,22 @@ function City() {
             <span className="text-gold">{name}</span>
           </div>
           <h1 className="font-display text-6xl md:text-7xl">{name}</h1>
-          {feature && (
+          {article && (
             <div className={`mt-4 max-w-2xl text-cream/80 text-sm md:text-base ${lang === "ar" ? "text-right ml-auto" : "text-left"}`}>
-              {lang === "ar" ? feature.tagline_ar : feature.tagline_en}
+              {article.title}
             </div>
           )}
         </div>
       </section>
 
-      {feature ? (
+      {article ? (
         <>
-          {/* INTRO */}
+          {/* SOURCE ARTICLE */}
           <section className="py-20 md:py-24">
-            <div className="mx-auto max-w-3xl px-6 text-center">
-              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">
-                {lang === "ar" ? feature.section_title_ar : feature.section_title_en}
-              </div>
-              <div className={`space-y-6 ${lang === "ar" ? "text-right" : "text-left"} md:text-center`}>
-                {(lang === "ar" ? feature.intro_ar : feature.intro_en).map((p, i) => (
-                  <p key={i} className={i === 0 ? "font-display text-2xl md:text-3xl text-midnight leading-relaxed" : "text-base md:text-lg text-charcoal/80 leading-loose"}>
-                    {p}
-                  </p>
-                ))}
-              </div>
-              <div className="gold-divider w-24 mx-auto mt-10" />
-            </div>
-          </section>
-
-          {/* ATTRACTIONS — alternating layout */}
-          <section className="pb-24">
-            <div className="mx-auto max-w-6xl px-6 space-y-20 md:space-y-28">
-              {feature.attractions.map((a: Attraction, i: number) => {
-                const reverse = i % 2 === 1;
-                const missingImage = a.image === "__missing__";
-                return (
-                  <article key={a.num} className="grid md:grid-cols-12 gap-6 md:gap-12 items-center">
-                    {/* TEXT — always first on mobile, alternates on desktop */}
-                    <div
-                      className={`md:col-span-6 ${lang === "ar" ? "text-right" : "text-left"} ${reverse ? "md:order-2" : ""}`}
-                    >
-                      <div className="text-[10px] uppercase tracking-[0.4em] text-gold mb-3 font-mono">
-                        {lang === "ar" ? `معلم · ${a.num}` : `Landmark · ${a.num}`}
-                      </div>
-                      <h2 className="font-display text-2xl md:text-4xl text-midnight mb-4 leading-tight">
-                        {lang === "ar" ? a.name_ar : a.name_en}
-                      </h2>
-                      <div className={`h-px w-16 bg-gold mb-4 ${lang === "ar" ? "ml-auto" : ""}`} />
-                      <p className="text-sm md:text-lg text-charcoal/80 leading-loose">
-                        {lang === "ar" ? a.desc_ar : a.desc_en}
-                      </p>
-                    </div>
-                    {/* IMAGE — mobile-friendly size */}
-                    <div className={`md:col-span-6 ${reverse ? "md:order-1" : ""}`}>
-                      {missingImage ? (
-                        <div className={`relative border border-dashed border-midnight/30 bg-cream/60 flex flex-col items-center justify-center text-center p-6 mx-auto max-w-sm md:max-w-none ${a.tall ? "aspect-[4/5]" : "aspect-[4/3]"}`}>
-                          <div className="text-[10px] uppercase tracking-[0.3em] text-midnight/60 mb-2">
-                            {lang === "ar" ? "الصورة الأصلية غير متاحة" : "Original image missing from old source"}
-                          </div>
-                          <a href={feature.source_url} target="_blank" rel="noreferrer" className="text-xs text-gold underline break-all">
-                            {feature.source_url}
-                          </a>
-                        </div>
-                      ) : (
-                        <div className="relative overflow-hidden shadow-xl bg-midnight/5 group mx-auto max-w-sm md:max-w-none">
-                          <img
-                            src={a.image}
-                            alt={lang === "ar" ? a.name_ar : a.name_en}
-                            loading="lazy"
-                            className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 ${a.tall ? "aspect-[4/5] md:aspect-[4/5]" : "aspect-[4/3]"}`}
-                          />
-                          <div className="absolute top-0 left-0 bg-midnight text-cream px-3 py-1.5 text-[10px] tracking-[0.4em] font-mono">
-                            {a.num}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </section>
-
-          {/* CLOSING */}
-          <section className="pb-24">
-            <div className="mx-auto max-w-3xl px-6 text-center">
-              <div className="gold-divider w-24 mx-auto mb-8" />
-              <p className="font-display text-xl md:text-2xl text-midnight/80 italic">
-                {lang === "ar" ? feature.closing_ar : feature.closing_en}
-              </p>
+            <div className={`mx-auto max-w-4xl px-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
+              <article className="space-y-5">
+                {article.lines.map(renderLine)}
+              </article>
             </div>
           </section>
         </>
@@ -155,6 +133,18 @@ function City() {
           </div>
         </section>
       )}
+
+      <section className="pb-24">
+        <div className={`mx-auto max-w-7xl px-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
+          <Link
+            to="/$lang/countries/$slug"
+            params={{ lang, slug: country.slug }}
+            className="inline-flex items-center justify-center border border-midnight/20 px-5 py-3 text-sm text-midnight hover:border-gold hover:text-gold transition"
+          >
+            {lang === "ar" ? "العودة إلى فرنسا" : "Back to France"}
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
