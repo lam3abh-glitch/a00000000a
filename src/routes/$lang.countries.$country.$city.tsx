@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getCity } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
-import { CITY_FEATURES } from "@/lib/city-attractions";
+import { CITY_FEATURES, type Attraction } from "@/lib/city-attractions";
 
 const qo = (country: string, city: string) =>
   queryOptions({ queryKey: ["city", country, city], queryFn: () => getCity({ data: { country, city } }) });
@@ -54,9 +54,13 @@ function City() {
               <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">
                 {lang === "ar" ? feature.section_title_ar : feature.section_title_en}
               </div>
-              <p className="font-display text-2xl md:text-3xl text-midnight leading-relaxed">
-                {lang === "ar" ? feature.intro_ar : feature.intro_en}
-              </p>
+              <div className={`space-y-6 ${lang === "ar" ? "text-right" : "text-left"} md:text-center`}>
+                {(lang === "ar" ? feature.intro_ar : feature.intro_en).map((p, i) => (
+                  <p key={i} className={i === 0 ? "font-display text-2xl md:text-3xl text-midnight leading-relaxed" : "text-base md:text-lg text-charcoal/80 leading-loose"}>
+                    {p}
+                  </p>
+                ))}
+              </div>
               <div className="gold-divider w-24 mx-auto mt-10" />
             </div>
           </section>
@@ -64,8 +68,9 @@ function City() {
           {/* ATTRACTIONS — alternating layout */}
           <section className="pb-24">
             <div className="mx-auto max-w-6xl px-6 space-y-20 md:space-y-28">
-              {feature.attractions.map((a, i) => {
+              {feature.attractions.map((a: Attraction, i: number) => {
                 const reverse = i % 2 === 1;
+                const missingImage = a.image === "__missing__";
                 return (
                   <article key={a.num} className="grid md:grid-cols-12 gap-6 md:gap-12 items-center">
                     {/* TEXT — always first on mobile, alternates on desktop */}
@@ -85,17 +90,28 @@ function City() {
                     </div>
                     {/* IMAGE — mobile-friendly size */}
                     <div className={`md:col-span-6 ${reverse ? "md:order-1" : ""}`}>
-                      <div className="relative overflow-hidden shadow-xl bg-midnight/5 group mx-auto max-w-sm md:max-w-none">
-                        <img
-                          src={a.image}
-                          alt={lang === "ar" ? a.name_ar : a.name_en}
-                          loading="lazy"
-                          className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 ${a.tall ? "aspect-[4/5] md:aspect-[4/5]" : "aspect-[4/3]"}`}
-                        />
-                        <div className="absolute top-0 left-0 bg-midnight text-cream px-3 py-1.5 text-[10px] tracking-[0.4em] font-mono">
-                          {a.num}
+                      {missingImage ? (
+                        <div className={`relative border border-dashed border-midnight/30 bg-cream/60 flex flex-col items-center justify-center text-center p-6 mx-auto max-w-sm md:max-w-none ${a.tall ? "aspect-[4/5]" : "aspect-[4/3]"}`}>
+                          <div className="text-[10px] uppercase tracking-[0.3em] text-midnight/60 mb-2">
+                            {lang === "ar" ? "الصورة الأصلية غير متاحة" : "Original image missing from old source"}
+                          </div>
+                          <a href={feature.source_url} target="_blank" rel="noreferrer" className="text-xs text-gold underline break-all">
+                            {feature.source_url}
+                          </a>
                         </div>
-                      </div>
+                      ) : (
+                        <div className="relative overflow-hidden shadow-xl bg-midnight/5 group mx-auto max-w-sm md:max-w-none">
+                          <img
+                            src={a.image}
+                            alt={lang === "ar" ? a.name_ar : a.name_en}
+                            loading="lazy"
+                            className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 ${a.tall ? "aspect-[4/5] md:aspect-[4/5]" : "aspect-[4/3]"}`}
+                          />
+                          <div className="absolute top-0 left-0 bg-midnight text-cream px-3 py-1.5 text-[10px] tracking-[0.4em] font-mono">
+                            {a.num}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </article>
                 );
