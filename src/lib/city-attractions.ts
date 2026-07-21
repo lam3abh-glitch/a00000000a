@@ -185,7 +185,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "04", name_ar: "فيلا دومرج", name_en: "Villa Domergue",
         desc_ar: "شاهدٌ على تاريخ فن الآرت ديكو الحديث، من تصميم وتنفيذ الرسام جان غابرييل دومرغي عام 1926م. أُدرجت مكاناً تاريخياً عام 1990م، وتضم حديقتها تماثيل نصفية عتيقة وأعمالاً فنية لزوجة الرسام. تُقام فيها معارض فنية وأحداث ثقافية، وكانت مقرّاً للجنة تحكيم مهرجان كان السينمائي.",
         desc_en: "A living record of Art Deco design, built in 1926 by the painter Jean-Gabriel Domergue and listed as a historic site in 1990. Its garden holds antique busts and works by the painter's wife, and hosts art exhibitions and cultural events — it was once the meeting place of the Cannes Festival jury.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Cannes_Palais_des_Festivals_et_des_Congr%C3%A8s.jpg" },
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Cannes_Palais_des_Festivals_et_des_Congr%C3%A8s.jpg" },
     ],
   },
 
