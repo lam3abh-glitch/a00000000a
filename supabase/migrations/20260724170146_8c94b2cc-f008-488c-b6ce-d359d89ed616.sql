@@ -1,0 +1,2 @@
+UPDATE public.cities SET hero_image = 'https://images.weserv.nl/?url=' || regexp_replace(hero_image, '^https?://', '') WHERE hero_image LIKE 'https://upload.wikimedia.org/%';
+UPDATE public.countries SET hero_image = 'https://images.weserv.nl/?url=' || regexp_replace(hero_image, '^https?://', '') WHERE hero_image LIKE 'https://upload.wikimedia.org/%';
