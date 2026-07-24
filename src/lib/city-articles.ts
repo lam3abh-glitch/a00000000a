@@ -59,13 +59,13 @@ H5|متحف اللوفر
 IMG|https://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg
 P|متحف اللوفر هو واحد من اكبر المتاحف الكبيرة في العالم كما انه يعد اشهر متحف في باريس . حيث يشكل معلما مهما وسط مدينة باريس في فرنسا . يتم عرض إلى ما يقرب 35 الف من الكائنات من عصور ما قبل التاريخ إلى القرن الحادي والعشرين على مساحة 60,600 متر مربع .. اقرأ المزيد
 H5|متحف بيكاسو
-IMG|https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Hotel_Sale_04.jpg/1280px-Hotel_Sale_04.jpg
+IMG|https://upload.wikimedia.org/wikipedia/commons/6/62/Hotel_Sale_04.jpg
 P|متحف بيكاسو في باريس هو ثاني أكبر متحف للفنان العالمي بيكاسو بعد متحف بيكاسو بمدينة برشلونة في إسبانيا . مبنى متحف بيكاسو في باريس بني عام 1659 اي ان مبنى المتحف يعود إلى القرن السابع عشر الميلادي وكان عبارة عن قصر وتغير لمدرسة وانتقلت ملكيته للعديد من الأشخاص ثم سيطرت عليه حكومة الثورة الفرنسية ، يعتبر من اشهر متاحف باريس .. اقرأ المزيد
 H5|حدائق لوكسمبورغ
 IMG|https://upload.wikimedia.org/wikipedia/commons/9/92/LuxembourgMontparnasse.JPG
 P|جاردان دو لوكسمبورغ ، أو حدائق لوكسمبورغ ، هي ثاني أكبر الحدائق في باريس العامة . تحتوي الحديقة على مساحة 224500 متر مربع , تشتهر الحديقة بالجو الهادئ مع الأحواض المحيطة في المدرجات بالوستراديد التي أثيرت سلسلة من تماثيل الملكات الفرنسي السابق والقديسين ونسخ بعد القديمة
 H5|حديقة النباتات
-IMG|https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Grande_galerie_de_l%27%C3%A9volution_-_Paris_-_France.jpg/1280px-Grande_galerie_de_l%27%C3%A9volution_-_Paris_-_France.jpg
+IMG|https://upload.wikimedia.org/wikipedia/commons/f/fa/Grande_galerie_de_l%27%C3%A9volution_-_Paris_-_France.jpg
 P|حديقة النباتات في باريس من اهم حدائق باريس وهي حديقة تقع غير بعيد عن معلمين هامين بالنسبة للسائح العربي هما : المعهد الإسلامي ( وفيه أكبر مساجد باريس ) ، ومعهد العالم العربي
 H5|قصر فرساي
 IMG|https://upload.wikimedia.org/wikipedia/commons/9/95/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_%28cropped%29.jpg
