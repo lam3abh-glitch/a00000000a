@@ -69,6 +69,34 @@ function City() {
     touchStartX.current = null;
   };
 
+  // Split article lines into pre-attractions prelude (intro, history, geography, etc.)
+  // and a list of attraction blocks (each starting at an H5).
+  type Attraction = { title: string; paragraphs: string[]; images: string[] };
+  const { prelude, attractions } = useMemo(() => {
+    const pre: ArticleLine[] = [];
+    const list: Attraction[] = [];
+    let current: Attraction | null = null;
+    for (const line of article?.lines ?? []) {
+      if (line.kind === "H5") {
+        current = { title: line.value, paragraphs: [], images: [] };
+        list.push(current);
+        continue;
+      }
+      if (current) {
+        if (line.kind === "IMG") current.images.push(line.value);
+        else if (line.kind === "P" || line.kind === "LI") current.paragraphs.push(line.value);
+        else {
+          // H3/H4 after attractions started — end attraction grouping
+          current = null;
+          pre.push(line);
+        }
+      } else {
+        pre.push(line);
+      }
+    }
+    return { prelude: pre, attractions: list };
+  }, [article]);
+
   const renderLine = (line: ArticleLine, index: number) => {
     if (line.kind === "IMG") {
       return (
@@ -130,6 +158,130 @@ function City() {
     );
   };
 
+  const AttractionImage = ({
+    src,
+    className,
+    heightClass,
+  }: {
+    src: string;
+    className?: string;
+    heightClass?: string;
+  }) => (
+    <button
+      type="button"
+      onClick={() => openLightbox(src)}
+      className={`group relative block w-full overflow-hidden rounded-2xl bg-midnight/5 shadow-lg cursor-zoom-in ${className ?? ""}`}
+      aria-label={lang === "ar" ? "فتح الصورة" : "Open image"}
+    >
+      <img
+        src={src}
+        alt={name}
+        loading="lazy"
+        className={`w-full object-cover transition duration-700 group-hover:scale-[1.04] ${heightClass ?? "h-full"}`}
+      />
+      <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-midnight/10 to-transparent opacity-0 group-hover:opacity-100 transition" />
+    </button>
+  );
+
+  const AttractionNumber = ({ n }: { n: number }) => (
+    <div className="inline-flex items-baseline gap-2 text-gold">
+      <span className="font-display text-5xl sm:text-6xl leading-none">
+        {String(n).padStart(2, "0")}
+      </span>
+      <span className="h-px w-10 bg-gold/60 translate-y-[-0.6em]" />
+    </div>
+  );
+
+  const AttractionText = ({ a, n }: { a: Attraction; n: number }) => (
+    <div className="space-y-4">
+      <AttractionNumber n={n} />
+      <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-midnight leading-tight">
+        {a.title}
+      </h3>
+      {a.paragraphs.map((p, i) => (
+        <p key={i} className="text-[15px] sm:text-base md:text-lg text-charcoal/85 leading-[1.9]">
+          {p}
+        </p>
+      ))}
+    </div>
+  );
+
+  const renderAttraction = (a: Attraction, i: number) => {
+    const n = i + 1;
+    const imgs = a.images;
+
+    // First attraction: large feature block
+    if (i === 0) {
+      return (
+        <section key={i} className="pt-6">
+          {imgs[0] && (
+            <AttractionImage
+              src={imgs[0]}
+              heightClass="h-[260px] sm:h-[400px] md:h-[520px]"
+              className="mb-6 sm:mb-8"
+            />
+          )}
+          <div className="max-w-3xl">
+            <AttractionText a={a} n={n} />
+          </div>
+          {imgs.length > 1 && (
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
+              {imgs.slice(1, 3).map((src) => (
+                <AttractionImage key={src} src={src} heightClass="h-40 sm:h-56 md:h-72" />
+              ))}
+            </div>
+          )}
+        </section>
+      );
+    }
+
+    // No image → clean editorial text block
+    if (imgs.length === 0) {
+      return (
+        <section key={i} className="border-t border-sand pt-8 sm:pt-10">
+          <div className="max-w-3xl">
+            <AttractionText a={a} n={n} />
+          </div>
+        </section>
+      );
+    }
+
+    // Two images → cluster layout
+    if (imgs.length >= 2) {
+      const reverse = i % 2 === 0;
+      return (
+        <section key={i} className="border-t border-sand pt-8 sm:pt-10">
+          <div className={`grid gap-5 sm:gap-6 md:gap-8 md:grid-cols-12 ${reverse ? "" : "md:[direction:ltr]"}`}>
+            <div className={`md:col-span-5 ${lang === "ar" ? "md:[direction:rtl]" : ""}`}>
+              <AttractionText a={a} n={n} />
+            </div>
+            <div className="md:col-span-7 grid grid-cols-2 gap-3 sm:gap-4">
+              <AttractionImage src={imgs[0]} heightClass="h-48 sm:h-64 md:h-80" className="col-span-2" />
+              {imgs.slice(1, 3).map((src) => (
+                <AttractionImage key={src} src={src} heightClass="h-32 sm:h-44 md:h-52" />
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Single image → alternating side-by-side (odd = image start, even = image end)
+    const imageFirst = i % 2 === 1;
+    return (
+      <section key={i} className="border-t border-sand pt-8 sm:pt-10">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-12 md:items-center">
+          <div className={`md:col-span-6 ${imageFirst ? "md:order-1" : "md:order-2"}`}>
+            <AttractionImage src={imgs[0]} heightClass="h-56 sm:h-72 md:h-96" />
+          </div>
+          <div className={`md:col-span-6 ${imageFirst ? "md:order-2" : "md:order-1"}`}>
+            <AttractionText a={a} n={n} />
+          </div>
+        </div>
+      </section>
+    );
+  };
+
   return (
     <div className="bg-cream">
       <section className="relative h-[52vh] min-h-[340px] sm:h-[60vh] sm:min-h-[420px] bg-midnight">
@@ -160,9 +312,22 @@ function City() {
           <section className="py-12 sm:py-16 md:py-24">
             <div className={`mx-auto max-w-4xl px-4 sm:px-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
               <article className="space-y-5">
-                {article.lines.map(renderLine)}
+                {prelude.map(renderLine)}
               </article>
             </div>
+            {attractions.length > 0 && (
+              <div className={`mx-auto max-w-6xl px-4 sm:px-6 mt-10 sm:mt-14 md:mt-20 ${lang === "ar" ? "text-right" : "text-left"}`}>
+                <div className="mb-8 sm:mb-10">
+                  <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
+                    {lang === "ar" ? "أبرز المعالم" : "Highlights"}
+                  </div>
+                  <div className="gold-divider" />
+                </div>
+                <div className="space-y-12 sm:space-y-16 md:space-y-24">
+                  {attractions.map(renderAttraction)}
+                </div>
+              </div>
+            )}
           </section>
         </>
       ) : (
