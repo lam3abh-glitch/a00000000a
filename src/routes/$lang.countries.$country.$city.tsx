@@ -123,7 +123,7 @@ function City() {
       if (!text) return null;
       return (
         <h2 key={index} className="pt-8 sm:pt-10 font-display text-2xl sm:text-3xl md:text-4xl text-midnight leading-tight">
-          {line.value}
+          {text}
         </h2>
       );
     }
