@@ -72,7 +72,7 @@ IMG|https://upload.wikimedia.org/wikipedia/commons/9/95/Vue_a%C3%A9rienne_du_dom
 P|يعد قصر فرساي في باريس من اجمل قصور باريس وفرنسا عامةً، بني هذا القصر عام 1624 ويقع على بعد 20 كيلومتراً جنوب باريس . يتميز قصر فرساي بوجود قاعة المرايا الشهيرة كما انه يحوي آلاف اللوحات والاعمال الفنية المذهلة . يعد القصر مثالاً عن الفن المعماري في فرنسا .. اقرأ المزيد
 P|مفتوح بشكل يومي من الساعة 09:00 صباحا وحتى الساعة 06:30 مساءً ، سعر التذكرة 80 يورو أي ما يعادل 96.85 دولار أمريكي
 H5|قصر غارنييه
-IMG|https://upload.wikimedia.org/wikipedia/commons/d/dc/Paris_Opera_full_frontal_architecture%2C_May_2009.jpg
+IMG|/__l5e/assets-v1/2edcf21d-1f2d-4503-b913-bee174d4be06/palais-garnier-paris.avif
 P|يقع قصر غارنييه والمعروف باسم اوبرا باريس في مبنى فخم وغاية في الروعة كان قد قام بتأسيسه لويس الرابع عشر سنة 1669 م بطلب من نابليون الثالث ضمن الحملة التي اقيمت لإعادة إعمار باريس ، يعد دار الاوبرا في بارس الاكبر من بين دور الأوبرا في العالم .. اقرأ المزيد
 H5|قصر الاليزية
 IMG|https://upload.wikimedia.org/wikipedia/commons/5/58/Secretary_Pompeo_Arrives_to_Meet_with_French_Foreign_Minister_Le_Drian_in_Paris_%2850610423656%29_%28cropped%29.jpg
