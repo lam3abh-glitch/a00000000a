@@ -14,6 +14,7 @@ import niceParcPhoenixAsset from "@/assets/nice-parc-phoenix.jpg.asset.json";
 import niceJardinAlbert1erAsset from "@/assets/nice-jardin-albert-1er.jpg.asset.json";
 import niceLeGaletBeachAsset from "@/assets/nice-le-galet-beach.jpg.asset.json";
 import niceOperaBeachAsset from "@/assets/nice-opera-beach.jpg.asset.json";
+import niceVesubiaParkAsset from "@/assets/nice-vesubia-park.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -428,7 +429,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "12", name_ar: "حديقة جبل فسيوبيا", name_en: "Vésubia Mountain Park",
         desc_ar: "واحدة من أفضل ملاهي نيس، ليست كمدن الملاهي التقليدية، بل هي مدينة ملاهي مغلقة تعتمد المتعة والإثارة بها على الأنشطة الجبلية. تشمل الأنشطة والألعاب هناك كلاً من التسلق وركوب الزوارق والسباحة والتنزّه ضمن الكهوف. بالنسبة لركوب القوارب فهناك مجموعة من الدورات وورش العمل، وشلال خاص وممرات تصل ارتفاعها إلى ثلاثة أمتار. للتجوّل في الكهوف يوجد خمس مستويات مع ممرات تمتد لثمانين متراً، أما التسلق فهناك مستويات مختلفة للمبتدئين والمحترفين من مختلف الأعمار. وللسباحة برك خاصة بالأطفال الصغار وأخرى للكبار وأخرى ضخمة للأطفال الأكبر سناً والبالغين.",
         desc_en: "One of Nice's best leisure venues, and unlike ordinary amusement parks: a covered mountain-activity centre offering climbing, canoeing, swimming and cave walks. Boating includes courses and workshops with a dedicated waterfall and slides up to three metres, cave walks cross five levels along 80 metres of passages, and climbing has beginner-to-advanced routes for all ages. Pools include a toddler basin, a relaxation pool and a large pool for older children and adults.",
-        image: MISSING_IMAGE },
+        image: niceVesubiaParkAsset.url },
       { num: "13", name_ar: "ملاهي غابة بيتشاون", name_en: "Pitchoun Forest Adventure Park",
         desc_ar: "واحدة من أفضل ملاهي نيس للأطفال، حيث تسمح لهم باستكشاف الطبيعة في جو من المرح والمتعة. تبدأ زيارتك بجولة حول الغابة للتعرّف على الأشجار والحيوانات الموجودة، من خلال مرشدين محترفين يوفّرون كورسات تعليمية. بعد ذلك يتم التوجّه إلى الألعاب الجبلية وما تتضمن من مزالق، ومزالج تناسب مختلف الأعمار للمبتدئين والمحترفين كذلك.",
         desc_en: "One of Nice's best parks for children, letting them explore nature in a fun setting. Your visit begins with a guided tour of the forest to learn about the trees and animals, followed by mountain games and slides suited to different ages and skill levels.",
