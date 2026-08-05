@@ -1,4 +1,5 @@
 import bordeauxRiverCruisesAsset from "@/assets/bordeaux-river-cruises.avif.asset.json";
+import museeBeauxArtsBordeauxAsset from "@/assets/musee-beaux-arts-bordeaux.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -465,7 +466,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "06", name_ar: "متحف Musée des Beaux-Arts", name_en: "Musée des Beaux-Arts",
         desc_ar: "يقع متحف Beaux-Arts في حديقة Jardin de la Mairie العامة الجميلة، ويحتلّ جزءاً من Hôtel de Ville قاعة المدينة. يُقدّم المتحف فكرة رائعة عن تاريخ الفن الأوروبي، مع مجموعة من الفنون تمتد من القرن الخامس عشر إلى القرن العشرين، ويتم تنظيم اللوحات في المتحف بطريقة موضوعية مجمّعة حسب العصر والبلد، مثل عصر النهضة واللوحات الهولندية من القرن السابع عشر واللوحات الفرنسية من القرن 17 إلى القرن 18.",
         desc_en: "Set in the lovely Jardin de la Mairie and occupying part of the Hôtel de Ville, the Musée des Beaux-Arts offers a beautiful overview of European art history — a collection running from the 15th to the 20th century, its paintings arranged by period and country: Renaissance, 17th-century Dutch works, and 17th–18th-century French painting.",
-        image: MISSING_IMAGE },
+        image: museeBeauxArtsBordeauxAsset.url },
       { num: "07", name_ar: "متحف Musée d'Aquitaine", name_en: "Musée d'Aquitaine",
         desc_ar: "يوضّح متحف آكيتاين بوضوح تاريخ بوردو ومنطقة أكيتان من عصور ما قبل التاريخ وحتى يومنا هذا. يحتوي المتحف على قطع استثنائية من العصور القديمة بما في ذلك القطعة الأثرية المسماة Laussel Venus، وهي قطعة أثرية من 25000 ق.م، كذلك يوجد عملات ذهبية غالية من القرن الثاني قبل الميلاد، وتمثال لهرقل يعود إلى القرن الثالث.",
         desc_en: "The Musée d'Aquitaine traces the story of Bordeaux and the Aquitaine region from prehistory to the present. Its treasures include the Venus of Laussel (25,000 BCE), rare 2nd-century BCE gold coins, and a 3rd-century statue of Hercules.",
