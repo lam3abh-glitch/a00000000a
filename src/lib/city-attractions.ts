@@ -418,7 +418,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "10", name_ar: "شاطئ لو غاليه", name_en: "Le Galet Beach",
         desc_ar: "قدّم شاطئ لو غاليه أكبر مثال على أناقة الريفييرا الفرنسية، يفتح هذا الشاطئ أبوابه رسمياً ما بين أشهر أبريل وأكتوبر. أما موقعه مقابل المدينة القديمة وحدائق ألبرت الأول، فهو يوفّر أفضل الإطلالات على المواكب خلال موسم الكرنفال في شهر فبراير.",
         desc_en: "Le Galet sets the standard for French Riviera elegance. Open officially from April to October, its position opposite the Old Town and the Jardin Albert Ier gives it some of the best views of the Carnival parades each February.",
-        image: MISSING_IMAGE },
+        image: niceLeGaletBeachAsset.url },
       { num: "11", name_ar: "شاطئ أوبرا", name_en: "Opéra Beach",
         desc_ar: "يُعرف سابقاً باسم أوبرا بافيليون، إنه أقدم شاطئ خاص في نيس وأكثرها شعبية. هناك الموظفون مستعدون لتلبية جميع احتياجاتك حتى الصعبة منها، فإذا نسيت ملابس السباحة الخاصة بك فلا داعي للقلق، إذ تُقدّم لك مساعدة المبيعات مجموعتها لتختار من بينها الأنسب لك، وإذا كنت تحلم بالتدليك على الشاطئ فيمكن إرسال خبير تدليك مباشرة إلى كرسيك.",
         desc_en: "Formerly Opéra Pavillon, this is Nice's oldest and most popular private beach. Staff will meet almost any request — forget your swimwear and sales assistants bring options to choose from; dream of a beach massage and a therapist can come straight to your lounger.",
