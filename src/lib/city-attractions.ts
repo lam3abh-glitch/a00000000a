@@ -9,6 +9,7 @@ import colmarQuaiDeLaPoissonnerieAsset from "@/assets/colmar-quai-de-la-poissonn
 import lyonMuseeGadagneAsset from "@/assets/lyon-musee-gadagne.jpg.asset.json";
 import niceEtoileAsset from "@/assets/nice-etoile.jpg.asset.json";
 import niceBoisDesLutinsAsset from "@/assets/nice-bois-des-lutins.webp.asset.json";
+import nicePitchounForestAsset from "@/assets/nice-pitchoun-forest.jpg.asset.json";
 import niceParcPhoenixAsset from "@/assets/nice-parc-phoenix.jpg.asset.json";
 import niceJardinAlbert1erAsset from "@/assets/nice-jardin-albert-1er.jpg.asset.json";
 import niceLeGaletBeachAsset from "@/assets/nice-le-galet-beach.jpg.asset.json";
@@ -431,7 +432,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "13", name_ar: "ملاهي غابة بيتشاون", name_en: "Pitchoun Forest Adventure Park",
         desc_ar: "واحدة من أفضل ملاهي نيس للأطفال، حيث تسمح لهم باستكشاف الطبيعة في جو من المرح والمتعة. تبدأ زيارتك بجولة حول الغابة للتعرّف على الأشجار والحيوانات الموجودة، من خلال مرشدين محترفين يوفّرون كورسات تعليمية. بعد ذلك يتم التوجّه إلى الألعاب الجبلية وما تتضمن من مزالق، ومزالج تناسب مختلف الأعمار للمبتدئين والمحترفين كذلك.",
         desc_en: "One of Nice's best parks for children, letting them explore nature in a fun setting. Your visit begins with a guided tour of the forest to learn about the trees and animals, followed by mountain games and slides suited to different ages and skill levels.",
-        image: MISSING_IMAGE },
+        image: nicePitchounForestAsset.url },
     ],
   },
 
