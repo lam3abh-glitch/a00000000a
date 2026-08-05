@@ -1,5 +1,6 @@
 import bordeauxRiverCruisesAsset from "@/assets/bordeaux-river-cruises.avif.asset.json";
 import museeBeauxArtsBordeauxAsset from "@/assets/musee-beaux-arts-bordeaux.jpg.asset.json";
+import esplanadeQuinconcesBordeauxAsset from "@/assets/esplanade-quinconces-bordeaux.png.asset.json";
 
 export type Attraction = {
   num: string;
@@ -486,7 +487,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "11", name_ar: "ساحة إسبلاناد", name_en: "Esplanade des Quinconces",
         desc_ar: "تُعدّ من أهم الساحات في المدينة، توجد الساحة بوسط المدينة وتُعتبر من أكبر الساحات في أوروبا، تتميّز بوجود نافورة ضخمة بها وتم إنشاؤها في الفترة من عام 1818-1828م بهدف تكريم مجموعة من السياسيين الجمهوريين المعاصرين للثورة الفرنسية. دُمّرت النافورة الأصلية في أحداث الحرب العالمية الثانية وتم إعادة إنشائها مرة أخرى، كما يوجد بجانبها منتزه رائع يُطلّ على مناظر طبيعية ساحرة خاصة الإطلالة البحرية، بالإضافة إلى الحديقة العامة ومتحف التاريخ الطبيعي والحدائق النباتية.",
         desc_en: "One of Bordeaux's most important squares and among Europe's largest. Its huge fountain, built between 1818 and 1828, honours a group of republican politicians of the French Revolution. The original was destroyed in World War II and later rebuilt. Beside it lies a fine park with beautiful views — especially over the water — along with a public garden, the Natural History Museum and Botanical Garden.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Grande_Roue_Bordeaux_%28127782377%29.jpeg" },
+        image: esplanadeQuinconcesBordeauxAsset.url },
       { num: "12", name_ar: "جسر بونت دي بيير", name_en: "Pont de Pierre",
         desc_ar: "يُعتبر هذا الجسر من أهم المعالم السياحية في المدينة، وهو جسر حجري رائع تم إنشاؤه عام 1817م على يد المهندس المعماري الشهير كلود ديكامب، وتم الانتهاء من بنائه عام 1821م. يتميّز الجسر بإطلالته على نهر غارون، كما يوجد به 17 قوساً تم تثبيتها به لتحمّل التيارات القوية، السطح الخارجي للجسر يتميّز بوجود 12 عموداً كورنثياً.",
         desc_en: "One of Bordeaux's most iconic monuments — a majestic stone bridge begun in 1817 by architect Claude Deschamps and completed in 1821. Overlooking the Garonne, it carries 17 arches to withstand the strong currents, with 12 Corinthian columns along its outer face.",
