@@ -81,7 +81,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "10", name_ar: "حديقة النباتات", name_en: "Jardin des Plantes",
         desc_ar: "حديقة النباتات في باريس من أهم حدائق باريس، وهي حديقة تقع غير بعيد عن معلمين هامّين بالنسبة للسائح العربي، هما: المعهد الإسلامي (وفيه أكبر مساجد باريس)، ومعهد العالم العربي.",
         desc_en: "The Jardin des Plantes is one of Paris's most important gardens, near two landmarks of special interest to Arab visitors: the Islamic Institute (home of the largest mosque in Paris) and the Arab World Institute.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg" },
+        image: "/__l5e/assets-v1/6ac13bbd-52f1-4c07-a260-3341aae77e82/jardin-des-plantes-paris.jpg" },
       { num: "11", name_ar: "قصر فرساي", name_en: "Palace of Versailles",
         desc_ar: "يُعدّ قصر فرساي في باريس من أجمل قصور باريس وفرنسا عامة، بُني هذا القصر عام 1624 ويقع على بُعد 20 كيلومتراً جنوب باريس. يتميّز قصر فرساي بوجود قاعة المرايا الشهيرة كما أنه يحوي آلاف اللوحات والأعمال الفنية المذهلة، ويُعدّ القصر مثالاً على الفن المعماري في فرنسا. مفتوح بشكل يومي من الساعة 09:00 صباحاً وحتى 06:30 مساءً، سعر التذكرة 80 يورو أي ما يعادل 96.85 دولار أمريكي.",
         desc_en: "The Palace of Versailles is among the most beautiful palaces of Paris and of France as a whole. Built in 1624, it lies 20 km south of Paris. It is renowned for the Hall of Mirrors and holds thousands of paintings and works of art — a masterpiece of French architecture. Open daily 09:00–18:30; tickets around €80 (approx. USD 96.85).",

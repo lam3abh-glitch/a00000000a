@@ -65,7 +65,7 @@ H5|حدائق لوكسمبورغ
 IMG|https://upload.wikimedia.org/wikipedia/commons/9/92/LuxembourgMontparnasse.JPG
 P|جاردان دو لوكسمبورغ ، أو حدائق لوكسمبورغ ، هي ثاني أكبر الحدائق في باريس العامة . تحتوي الحديقة على مساحة 224500 متر مربع , تشتهر الحديقة بالجو الهادئ مع الأحواض المحيطة في المدرجات بالوستراديد التي أثيرت سلسلة من تماثيل الملكات الفرنسي السابق والقديسين ونسخ بعد القديمة
 H5|حديقة النباتات
-IMG|https://upload.wikimedia.org/wikipedia/commons/f/fa/Grande_galerie_de_l%27%C3%A9volution_-_Paris_-_France.jpg
+IMG|/__l5e/assets-v1/6ac13bbd-52f1-4c07-a260-3341aae77e82/jardin-des-plantes-paris.jpg
 P|حديقة النباتات في باريس من اهم حدائق باريس وهي حديقة تقع غير بعيد عن معلمين هامين بالنسبة للسائح العربي هما : المعهد الإسلامي ( وفيه أكبر مساجد باريس ) ، ومعهد العالم العربي
 H5|قصر فرساي
 IMG|https://upload.wikimedia.org/wikipedia/commons/9/95/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_%28cropped%29.jpg
