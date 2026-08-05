@@ -11,6 +11,7 @@ import niceEtoileAsset from "@/assets/nice-etoile.jpg.asset.json";
 import niceBoisDesLutinsAsset from "@/assets/nice-bois-des-lutins.webp.asset.json";
 import niceParcPhoenixAsset from "@/assets/nice-parc-phoenix.jpg.asset.json";
 import niceJardinAlbert1erAsset from "@/assets/nice-jardin-albert-1er.jpg.asset.json";
+import niceLeGaletBeachAsset from "@/assets/nice-le-galet-beach.jpg.asset.json";
 
 export type Attraction = {
   num: string;
