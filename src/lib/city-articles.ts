@@ -50,7 +50,7 @@ H5|ميدان الكونكورد
 IMG|https://upload.wikimedia.org/wikipedia/commons/f/fa/Place_de_la_Concorde_from_the_Eiffel_Tower%2C_Paris_April_2011.jpg
 P|ميدان الكونكورد احد اكبر ساحات وميادين باريس العاصمة الفرنسية . تقع ساحة الكونكورد في نهاية شارع الشانزلزيه من طرفه الشرقي، يحوي الميدان مسلة مصرية ضخمة اهداها الخديوي إسماعيل إلى لويس فيليب وذلك عام 1831. يعتبر من ابرز اماكن سياحية في باريس
 H5|الحي اللاتيني
-IMG|https://upload.wikimedia.org/wikipedia/commons/4/46/P1300734_Paris_V_place_de_la_Sorbonne_rwk.jpg
+IMG|/__l5e/assets-v1/404a7b7d-f606-41da-8e1a-52befacb1ec2/place-du-terre-paris.jpg
 P|يعتبر الحي اللاتيني من اشهر الاماكن السياحية في باريس ومن اقدمها ايضاً، يقع على الضفة اليسرى لنهر السين حيث يضم عدداً كبيراً من المباني التاريخية كما انه يوفر لزائريه من السياح متعة استكشاف الحياة الباريسية الحقيقية من خلال المطاعم الفرنسية والمقاهي وأشهر علامات الموضة القرنسية والعالمية .. اقرأ المزيد
 H5|باريس ديزني لاند
 IMG|https://upload.wikimedia.org/wikipedia/en/8/88/Sleeping_Beauty_Castle%2C_Disneyland%2C_Paris.jpg

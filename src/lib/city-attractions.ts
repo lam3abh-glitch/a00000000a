@@ -61,7 +61,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "05", name_ar: "الحي اللاتيني", name_en: "Latin Quarter",
         desc_ar: "يُعتبر الحي اللاتيني من أشهر الأماكن السياحية في باريس ومن أقدمها أيضاً، يقع على الضفة اليسرى لنهر السين حيث يضم عدداً كبيراً من المباني التاريخية، كما أنه يوفر لزائريه من السياح متعة استكشاف الحياة الباريسية الحقيقية من خلال المطاعم الفرنسية والمقاهي وأشهر علامات الموضة الفرنسية والعالمية.",
         desc_en: "The Latin Quarter is one of the oldest and most famous neighbourhoods in Paris, on the Left Bank of the Seine. It holds many historic buildings and lets visitors explore authentic Parisian life through French bistros, cafés and the most famous French and international fashion houses.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/4/46/P1300734_Paris_V_place_de_la_Sorbonne_rwk.jpg" },
+        image: "/__l5e/assets-v1/404a7b7d-f606-41da-8e1a-52befacb1ec2/place-du-terre-paris.jpg" },
       { num: "06", name_ar: "باريس ديزني لاند", name_en: "Disneyland Paris",
         desc_ar: "باريس ديزني لاند، وتُدعى أيضاً ديزني لاند ريزورت باريس أو يورو ديزني، تُعتبر من معالم باريس الترفيهية. تقع على بُعد 32 كم من مركز العاصمة الفرنسية باريس، وتضم ديزني لاند مدينتَي ملاهي و7 فنادق، جميعها عائدة لشركة والت ديزني، وتُعدّ ثاني أكبر مدينة ديزني لاند خارج الولايات المتحدة الأمريكية بعد طوكيو ديزني لاند.",
         desc_en: "Disneyland Paris — also called Disneyland Resort Paris or Euro Disney — is the city's flagship entertainment destination, 32 km from central Paris. It contains two theme parks and seven hotels, all owned by Walt Disney, making it the second-largest Disneyland outside the United States after Tokyo Disneyland.",
