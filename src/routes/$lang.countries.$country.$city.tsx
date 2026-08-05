@@ -3,7 +3,7 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getCity } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
-import { CITY_ARTICLES, type ArticleLine } from "@/lib/city-articles";
+import { getCityArticle, type ArticleLine } from "@/lib/city-articles";
 
 const qo = (country: string, city: string) =>
   queryOptions({ queryKey: ["city", country, city], queryFn: () => getCity({ data: { country, city } }) });
@@ -21,7 +21,7 @@ function City() {
   const country: any = data.country;
   const tr = t[lang];
   const name = lang === "ar" ? city.name_ar : city.name_en;
-  const article = country.slug === "france" ? CITY_ARTICLES[city.slug] : undefined;
+  const article = country.slug === "france" ? getCityArticle(city.slug, lang) : undefined;
   const heroImage = article?.heroImage ?? city.hero_image;
 
   // Collect all images from the article for the lightbox gallery.
