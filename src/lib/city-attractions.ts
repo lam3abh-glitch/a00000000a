@@ -10,6 +10,7 @@ import lyonMuseeGadagneAsset from "@/assets/lyon-musee-gadagne.jpg.asset.json";
 import niceEtoileAsset from "@/assets/nice-etoile.jpg.asset.json";
 import niceBoisDesLutinsAsset from "@/assets/nice-bois-des-lutins.webp.asset.json";
 import niceParcPhoenixAsset from "@/assets/nice-parc-phoenix.jpg.asset.json";
+import niceJardinAlbert1erAsset from "@/assets/nice-jardin-albert-1er.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -404,7 +405,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "07", name_ar: "حديقة ألبرت الأول", name_en: "Jardin Albert Ier",
         desc_ar: "هذه الحديقة العامة الرائعة في وسط مدينة نيس بالقرب من ساحة ماسينا، وهي واحدة من أقدم الحدائق العامة في نيس. عند زيارتك سوف تجد نفسك على الفور في وسط أشجار النخيل والورود العطرة، والنباتات المختلفة التي تم جلبها من اليابان والصين والأمريكتين وأستراليا والهيمالايا، بالإضافة إلى المساحات الواسعة المخصّصة للزهور. تنتشر داخل الحديقة العديد من نوافير المياه المذهلة، ولم تُغفَل الأقسام الخاصة بالصغار فأُنشئ عدد من الألعاب مثل الأرجوحات ولعبة الخيول الدوّارة.",
         desc_en: "This wonderful public garden in central Nice, near Place Masséna, is one of the city's oldest. Palms, fragrant roses, plants brought from Japan, China, the Americas, Australia and the Himalayas share space with wide flowerbeds. Stunning fountains dot the park, and there are swings and a carousel for children.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/5/59/Jardin_Albert_1er.jpg" },
+        image: niceJardinAlbert1erAsset.url },
       { num: "08", name_ar: "منتزه أنغليس", name_en: "Promenade des Anglais",
         desc_ar: "يُعدّ منتزه أنغليس أحد أفضل الحدائق المفتوحة في مدينة نيس الفرنسية الساحرة، تتميّز هذه الحديقة بإطلالة ساحرة على مياه البحر المتوسط، بالإضافة إلى تعدّد الأنشطة والخدمات الموجودة بداخلها. الحديقة تمتلئ بالمظلات والمقاعد النظيفة التي توفّر لك وقتك الخاص من الهدوء والاسترخاء، كما أن رمال الشاطئ الذهبية ومياهه الصافية سبب كافٍ لقضاء القليل من الوقت في ممارسة رياضة السباحة.",
         desc_en: "One of Nice's finest open promenades, gazing over the Mediterranean. Umbrellas and clean benches invite quiet reading and relaxation, and the golden sands and clear waters make it perfect for a swim.",
