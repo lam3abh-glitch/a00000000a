@@ -6,6 +6,7 @@ import cannesMuseeDeLaMerAsset from "@/assets/cannes-musee-de-la-mer.jpg.asset.j
 import cannesOldTownAsset from "@/assets/cannes-old-town.jpg.asset.json";
 import cannesVillaDomergueAsset from "@/assets/cannes-villa-domergue.jpg.asset.json";
 import colmarQuaiDeLaPoissonnerieAsset from "@/assets/colmar-quai-de-la-poissonnerie.jpg.asset.json";
+import lyonMuseeGadagneAsset from "@/assets/lyon-musee-gadagne.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -178,7 +179,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "02", name_ar: "متحف التقاليد الشعبية", name_en: "Museum of Popular Traditions",
         desc_ar: "نسمع كثيراً عن المتاحف كمتحف الشوكولاتة، وهو أمر غريب جداً أن تجد متحفاً للشوكولاتة، ولكن الأغرب هو متحف للتقاليد الشعبية، ينبغي وضعه في متحف آخر لأنه بذاته تحفة. يقع هذا المتحف في وسط مدينة ليون، وتُركّز أغلب مقتنياته على الفعاليات والأنشطة الشعبية للناس من الحاضر والماضي.",
         desc_en: "We often hear of unusual museums — even one for chocolate. Stranger still is a Museum of Popular Traditions, itself a work of art. In the heart of Lyon, its collections focus on everyday life and popular activities of people past and present.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Cour-gadagne_Photo_Service-communication-Gadagne_2021_%285%29.jpg" },
+        image: lyonMuseeGadagneAsset.url },
       { num: "03", name_ar: "ساحة بلكور", name_en: "Place Bellecour",
         desc_ar: "ساحة كبيرة تقع في وسط مدينة ليون، وتُعتبر من أكبر المناطق المربعة المفتوحة في فرنسا وأكبر ساحة مشاة فيها، وفي منتصف الحديقة يتربّع تمثال فروسي للملك لويس الرابع عشر. كما يحتوي على جناحين: الجناح الأول يضم مكتب المعلومات السياحية في ليون، والجناح الثاني يضم معرضاً فنياً، أيضاً فقد تم ضم الساحة ضمن لائحة اليونسكو للتراث العالمي.",
         desc_en: "A great square at the centre of Lyon — one of France's largest open squares and its biggest pedestrian plaza. An equestrian statue of Louis XIV stands at its centre. Two pavilions house Lyon's tourist office and an art gallery, and the square is part of Lyon's UNESCO World Heritage listing.",
