@@ -1,0 +1,1 @@
+update public.countries set intro_en = 'Discover France — the land of fashion and perfume, breathtaking nature, and a deep, storied history.' where slug = 'france';
