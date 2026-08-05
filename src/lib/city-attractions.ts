@@ -2,6 +2,7 @@ import bordeauxRiverCruisesAsset from "@/assets/bordeaux-river-cruises.avif.asse
 import museeBeauxArtsBordeauxAsset from "@/assets/musee-beaux-arts-bordeaux.jpg.asset.json";
 import esplanadeQuinconcesBordeauxAsset from "@/assets/esplanade-quinconces-bordeaux.png.asset.json";
 import cannesPalaisFestivalsAsset from "@/assets/cannes-palais-festivals.jpg.asset.json";
+import cannesMuseeDeLaMerAsset from "@/assets/cannes-musee-de-la-mer.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -210,7 +211,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "02", name_ar: "متحف لا مير كان", name_en: "Musée de la Mer",
         desc_ar: "مع الإطلالة التي يتمتّع بها على البحر في مدينة كان الفرنسية والقيمة التاريخية والثقافية التي يضمها بين جدرانه، يصبح متحف لا مير كان فرنسا واحداً من أجمل وأروع المتاحف في فرنسا على الإطلاق. يقع على بُعد كيلومتر واحد من المدينة ويتخصّص في عرض عدد كبير من الكنوز التي عُثر عليها في البحر، بعض هذه الكنوز والتحف يعود إلى عصر الإمبراطورية الرومانية.",
         desc_en: "With its sea view and its walls filled with historic and cultural value, the Musée de la Mer is one of France's most beautiful museums. A kilometre from the city, it specialises in treasures recovered from the sea — some dating back to the Roman Empire.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Des_batiments_2.jpg" },
+        image: cannesMuseeDeLaMerAsset.url },
       { num: "03", name_ar: "المدينة القديمة", name_en: "The Old Town (Le Suquet)",
         desc_ar: "بعيداً عن الصخب والضجيج ومظاهر الحياة الفارهة، فالكثير ممن ينوون السفر إلى فرنسا والسياحة في فرنسا ينوون البعد عن الأماكن الصاخبة، وفي مدينة كان مقصدهم، وخاصة في المدينة القديمة، والتي كانت قرية صيد قديمة، والتي يعود عمر مبانيها إلى ما يقارب 100 سنة. الجزء الأكبر من هذه المدينة هو للمشاة، الذين يحبّون التجوّل في المحلات التجارية الصغيرة، والمرور على المطاعم ذوات الرائحة الذكية، والسلالم القديمة والجو الرومانسي.",
         desc_en: "Away from Cannes' glamour and buzz, many visitors seek out the Old Town — an ancient fishing village whose buildings are around a century old. Mostly pedestrian, it charms with small shops, fragrant restaurants, old staircases and a quietly romantic atmosphere.",
