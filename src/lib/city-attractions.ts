@@ -7,6 +7,7 @@ import cannesOldTownAsset from "@/assets/cannes-old-town.jpg.asset.json";
 import cannesVillaDomergueAsset from "@/assets/cannes-villa-domergue.jpg.asset.json";
 import colmarQuaiDeLaPoissonnerieAsset from "@/assets/colmar-quai-de-la-poissonnerie.jpg.asset.json";
 import lyonMuseeGadagneAsset from "@/assets/lyon-musee-gadagne.jpg.asset.json";
+import niceEtoileAsset from "@/assets/nice-etoile.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -389,7 +390,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "04", name_ar: "نيس إيتوال", name_en: "Nice Étoile",
         desc_ar: "أحد أشهر أماكن التسوق في نيس، ويقع بالقرب من وسط المدينة، ويضم مجموعة كبيرة من الماركات التجارية العالمية والمشهورة، بالإضافة إلى المواد الغذائية وغيرها، والعديد من المقاهي والمطاعم.",
         desc_en: "One of Nice's most famous shopping destinations, close to the city centre. It brings together many international brands, a food hall and a wide choice of cafés and restaurants.",
-        image: MISSING_IMAGE },
+        image: niceEtoileAsset.url },
       { num: "05", name_ar: "ملاهي خشب العفاريت", name_en: "Bois des Lutins Adventure Park",
         desc_ar: "أفضل الملاهي في نيس التي تأخذ الطراز الطبيعي، تمتد لمساحة تصل إلى هكتارين، وتوفّر ألعاباً ممتعة من التسلق على الشباك أو الحبال مع ارتفاع يتراوح من أحد عشر إلى ثلاثة عشر متراً. توفّر كذلك ألعاباً أخرى ممتعة ومسلية كالركوب والتدحرج داخل كرات بلاستيكية ضخمة، والقفز الحر، لذا تُعدّ ضمن أفضل ملاهي نيس للأطفال. تفتح الملاهي أبوابها كل أربعاء وقت الظهيرة، وكذلك في العطلات الأسبوعية والعطلات الوطنية.",
         desc_en: "Nice's finest nature-style adventure park, spread over two hectares. Its games include net and rope climbs 11–13 metres up, giant plastic ball rolls and free jumping — one of the best parks for children in Nice. Open Wednesday afternoons, weekends and public holidays.",
