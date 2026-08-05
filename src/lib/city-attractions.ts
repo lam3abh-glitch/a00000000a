@@ -3,6 +3,7 @@ import museeBeauxArtsBordeauxAsset from "@/assets/musee-beaux-arts-bordeaux.jpg.
 import esplanadeQuinconcesBordeauxAsset from "@/assets/esplanade-quinconces-bordeaux.png.asset.json";
 import cannesPalaisFestivalsAsset from "@/assets/cannes-palais-festivals.jpg.asset.json";
 import cannesMuseeDeLaMerAsset from "@/assets/cannes-musee-de-la-mer.jpg.asset.json";
+import cannesOldTownAsset from "@/assets/cannes-old-town.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -215,7 +216,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "03", name_ar: "المدينة القديمة", name_en: "The Old Town (Le Suquet)",
         desc_ar: "بعيداً عن الصخب والضجيج ومظاهر الحياة الفارهة، فالكثير ممن ينوون السفر إلى فرنسا والسياحة في فرنسا ينوون البعد عن الأماكن الصاخبة، وفي مدينة كان مقصدهم، وخاصة في المدينة القديمة، والتي كانت قرية صيد قديمة، والتي يعود عمر مبانيها إلى ما يقارب 100 سنة. الجزء الأكبر من هذه المدينة هو للمشاة، الذين يحبّون التجوّل في المحلات التجارية الصغيرة، والمرور على المطاعم ذوات الرائحة الذكية، والسلالم القديمة والجو الرومانسي.",
         desc_en: "Away from Cannes' glamour and buzz, many visitors seek out the Old Town — an ancient fishing village whose buildings are around a century old. Mostly pedestrian, it charms with small shops, fragrant restaurants, old staircases and a quietly romantic atmosphere.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Le_Suquet_01.jpg/3840px-Le_Suquet_01.jpg", tall: true },
+        image: cannesOldTownAsset.url, tall: true },
       { num: "04", name_ar: "فيلا دومرج", name_en: "Villa Domergue",
         desc_ar: "تُعدّ فيلا دومرج شاهداً على تاريخ فن الآرت ديكو الحديث، فالمكان من تصميم وتنفيذ الرسام جان جابرييل دوميرغي في 1926م. تم إدراج الفيلا كمكان تاريخي في 1990م، وذلك بسبب روعة وأناقة التصميم والساحة الخارجية للفيلا. يوجد في حديقة الفيلا العديد من التماثيل النصفية العتيقة وبعض الأعمال الفنية الرائعة لزوجة الرسام. يقام بالمكان بعض الأحداث الاجتماعية والرسمية بالمدينة مثل المعارض الفنية، وكانت الفيلا مكان اجتماع للجنة التحكيم الرسمية لمهرجان كان السينمائي، والآن أصبحت ساحة للفن والندوات الثقافية.",
         desc_en: "Villa Domergue is a living record of modern Art Deco, designed and built in 1926 by the painter Jean-Gabriel Domergue and listed as a historic monument in 1990 for its striking design and outdoor grounds. Its garden holds antique busts and works by the painter's wife. It hosts art exhibitions and social events, and once served as the meeting place of the Cannes Film Festival jury.",
