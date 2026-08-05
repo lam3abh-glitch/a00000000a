@@ -89,7 +89,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "12", name_ar: "قصر غارنييه", name_en: "Palais Garnier",
         desc_ar: "يقع قصر غارنييه والمعروف باسم أوبرا باريس في مبنى فخم وغاية في الروعة، كان قد قام بتأسيسه لويس الرابع عشر سنة 1669م بطلب من نابليون الثالث ضمن الحملة التي أُقيمت لإعادة إعمار باريس. يُعدّ دار الأوبرا في باريس الأكبر من بين دور الأوبرا في العالم.",
         desc_en: "The Palais Garnier — known as the Paris Opera — occupies one of the most sumptuous buildings in the city. Founded under Louis XIV in 1669 and later commissioned by Napoleon III as part of the great redevelopment of Paris, it is one of the largest opera houses in the world.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/d/dc/Paris_Opera_full_frontal_architecture%2C_May_2009.jpg" },
+        image: "/__l5e/assets-v1/2edcf21d-1f2d-4503-b913-bee174d4be06/palais-garnier-paris.avif" },
       { num: "13", name_ar: "قصر الإليزيه", name_en: "Élysée Palace",
         desc_ar: "قصر الإليزيه من أشهر قصور باريس ويُعدّ المقر الرسمي لرئاسة الجمهورية الفرنسية حيث يضم مكتب رئيس الدولة ومكان اجتماع مجلس الوزراء. يقع قصر الإليزيه بالقرب من شارع الشانزليزيه الشهير في باريس، بُني القصر في القرن الثامن عشر وقد أُجريت عليه العديد من التعديلات خلال القرون التالية غير أنه حافظ على تصميمه الكلاسيكي.",
         desc_en: "The Élysée Palace is one of the most renowned palaces in Paris and the official residence of the French Republic, holding the office of the head of state and Cabinet meetings. It lies near the Champs-Élysées and dates from the 18th century, keeping its classical design across the centuries.",
