@@ -602,3 +602,25 @@ P|يقع فندق أوبرج دو بوا بران على بعد 500 متر من 
 `
   ),
 };
+
+// English translations of every article line, aligned by index with the Arabic
+// lines above (IMG lines keep their original URLs).
+import EN from "./city-articles-en.json";
+
+const EN_ARTICLES = EN as Record<string, { title: string; values: string[] }>;
+
+export function getCityArticle(slug: string, lang: string): CityArticle | undefined {
+  const base = CITY_ARTICLES[slug];
+  if (!base) return undefined;
+  if (lang === "ar") return base;
+  const en = EN_ARTICLES[slug];
+  if (!en) return base;
+  return {
+    ...base,
+    title: en.title || base.title,
+    lines: base.lines.map((line, i) => ({
+      kind: line.kind,
+      value: line.kind === "IMG" ? line.value : (en.values[i] ?? line.value),
+    })),
+  };
+}
