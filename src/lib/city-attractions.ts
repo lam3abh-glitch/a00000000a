@@ -73,7 +73,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "08", name_ar: "متحف بيكاسو", name_en: "Musée Picasso",
         desc_ar: "متحف بيكاسو في باريس هو ثاني أكبر متحف للفنان العالمي بيكاسو بعد متحف بيكاسو بمدينة برشلونة في إسبانيا. مبنى متحف بيكاسو في باريس بُني عام 1659، وقد كان قصراً ثم تغيّر لمدرسة وانتقلت ملكيته للعديد من الأشخاص ثم سيطرت عليه حكومة الثورة الفرنسية، يُعتبر من أشهر متاحف باريس.",
         desc_en: "The Musée Picasso in Paris is the second-largest museum dedicated to Picasso after the one in Barcelona. Its building, completed in 1659, was originally a mansion, later a school, before being seized by the government of the French Revolution. It stands among Paris's most celebrated museums.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/H%C3%B4tel_Sal%C3%A9.JPG" },
+        image: "/__l5e/assets-v1/960d8683-0c13-4c60-8a0d-2d699e0e6903/musee-picasso-paris.jpg" },
       { num: "09", name_ar: "حدائق لوكسمبورغ", name_en: "Luxembourg Gardens",
         desc_ar: "جاردان دو لوكسمبورغ، أو حدائق لوكسمبورغ، هي ثاني أكبر الحدائق في باريس العامة. تحتوي الحديقة على مساحة 224,500 متر مربع، وتشتهر بالجو الهادئ مع الأحواض المحيطة وسلسلة من التماثيل التي تخلّد ملكات فرنسا السابقات والقديسين.",
         desc_en: "The Jardin du Luxembourg is the second-largest public garden in Paris at 224,500 square metres. It is famed for its peaceful atmosphere, ornamental pools and the long line of statues honouring former queens of France and saints.",
