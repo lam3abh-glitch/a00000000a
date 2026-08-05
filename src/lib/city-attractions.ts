@@ -12,6 +12,7 @@ import niceBoisDesLutinsAsset from "@/assets/nice-bois-des-lutins.webp.asset.jso
 import niceParcPhoenixAsset from "@/assets/nice-parc-phoenix.jpg.asset.json";
 import niceJardinAlbert1erAsset from "@/assets/nice-jardin-albert-1er.jpg.asset.json";
 import niceLeGaletBeachAsset from "@/assets/nice-le-galet-beach.jpg.asset.json";
+import niceOperaBeachAsset from "@/assets/nice-opera-beach.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -422,7 +423,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "11", name_ar: "شاطئ أوبرا", name_en: "Opéra Beach",
         desc_ar: "يُعرف سابقاً باسم أوبرا بافيليون، إنه أقدم شاطئ خاص في نيس وأكثرها شعبية. هناك الموظفون مستعدون لتلبية جميع احتياجاتك حتى الصعبة منها، فإذا نسيت ملابس السباحة الخاصة بك فلا داعي للقلق، إذ تُقدّم لك مساعدة المبيعات مجموعتها لتختار من بينها الأنسب لك، وإذا كنت تحلم بالتدليك على الشاطئ فيمكن إرسال خبير تدليك مباشرة إلى كرسيك.",
         desc_en: "Formerly Opéra Pavillon, this is Nice's oldest and most popular private beach. Staff will meet almost any request — forget your swimwear and sales assistants bring options to choose from; dream of a beach massage and a therapist can come straight to your lounger.",
-        image: MISSING_IMAGE },
+        image: niceOperaBeachAsset.url },
       { num: "12", name_ar: "حديقة جبل فسيوبيا", name_en: "Vésubia Mountain Park",
         desc_ar: "واحدة من أفضل ملاهي نيس، ليست كمدن الملاهي التقليدية، بل هي مدينة ملاهي مغلقة تعتمد المتعة والإثارة بها على الأنشطة الجبلية. تشمل الأنشطة والألعاب هناك كلاً من التسلق وركوب الزوارق والسباحة والتنزّه ضمن الكهوف. بالنسبة لركوب القوارب فهناك مجموعة من الدورات وورش العمل، وشلال خاص وممرات تصل ارتفاعها إلى ثلاثة أمتار. للتجوّل في الكهوف يوجد خمس مستويات مع ممرات تمتد لثمانين متراً، أما التسلق فهناك مستويات مختلفة للمبتدئين والمحترفين من مختلف الأعمار. وللسباحة برك خاصة بالأطفال الصغار وأخرى للكبار وأخرى ضخمة للأطفال الأكبر سناً والبالغين.",
         desc_en: "One of Nice's best leisure venues, and unlike ordinary amusement parks: a covered mountain-activity centre offering climbing, canoeing, swimming and cave walks. Boating includes courses and workshops with a dedicated waterfall and slides up to three metres, cave walks cross five levels along 80 metres of passages, and climbing has beginner-to-advanced routes for all ages. Pools include a toddler basin, a relaxation pool and a large pool for older children and adults.",
