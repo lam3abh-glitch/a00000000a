@@ -4,6 +4,7 @@ import esplanadeQuinconcesBordeauxAsset from "@/assets/esplanade-quinconces-bord
 import cannesPalaisFestivalsAsset from "@/assets/cannes-palais-festivals.jpg.asset.json";
 import cannesMuseeDeLaMerAsset from "@/assets/cannes-musee-de-la-mer.jpg.asset.json";
 import cannesOldTownAsset from "@/assets/cannes-old-town.jpg.asset.json";
+import cannesVillaDomergueAsset from "@/assets/cannes-villa-domergue.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -220,7 +221,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "04", name_ar: "فيلا دومرج", name_en: "Villa Domergue",
         desc_ar: "تُعدّ فيلا دومرج شاهداً على تاريخ فن الآرت ديكو الحديث، فالمكان من تصميم وتنفيذ الرسام جان جابرييل دوميرغي في 1926م. تم إدراج الفيلا كمكان تاريخي في 1990م، وذلك بسبب روعة وأناقة التصميم والساحة الخارجية للفيلا. يوجد في حديقة الفيلا العديد من التماثيل النصفية العتيقة وبعض الأعمال الفنية الرائعة لزوجة الرسام. يقام بالمكان بعض الأحداث الاجتماعية والرسمية بالمدينة مثل المعارض الفنية، وكانت الفيلا مكان اجتماع للجنة التحكيم الرسمية لمهرجان كان السينمائي، والآن أصبحت ساحة للفن والندوات الثقافية.",
         desc_en: "Villa Domergue is a living record of modern Art Deco, designed and built in 1926 by the painter Jean-Gabriel Domergue and listed as a historic monument in 1990 for its striking design and outdoor grounds. Its garden holds antique busts and works by the painter's wife. It hosts art exhibitions and social events, and once served as the meeting place of the Cannes Film Festival jury.",
-        image: MISSING_IMAGE },
+        image: cannesVillaDomergueAsset.url },
     ],
   },
 
