@@ -9,6 +9,7 @@ import colmarQuaiDeLaPoissonnerieAsset from "@/assets/colmar-quai-de-la-poissonn
 import lyonMuseeGadagneAsset from "@/assets/lyon-musee-gadagne.jpg.asset.json";
 import niceEtoileAsset from "@/assets/nice-etoile.jpg.asset.json";
 import niceBoisDesLutinsAsset from "@/assets/nice-bois-des-lutins.webp.asset.json";
+import niceParcPhoenixAsset from "@/assets/nice-parc-phoenix.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -399,7 +400,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "06", name_ar: "حديقة فونيكس", name_en: "Parc Phoenix",
         desc_ar: "تقع حديقة فونيكس في الجهة الجنوبية الغربية لمدينة نيس الفرنسية الساحرة تحديداً في حي أريناس ملاصقة لمنتزه انغليس، وتُعدّ واحدة من أكبر الحدائق والمنتزهات العامة ليس في فرنسا فقط بل في أوروبا بشكل عام، حيث تبلغ مساحتها 7 هكتار. تضم عدداً كبيراً من الأنشطة الترفيهية والثقافية، كما يوجد بها عدد كبير من الحيوانات والطيور، بعضها نادر، من أشهر هذه الحيوانات ثعلب النهر والكنغر والقنفذ وعدد من الطيور. وتضم الحديقة أيضاً نافورة موسيقية ضخمة عند مدخلها الرئيسي، ومتحفاً خاصاً بالفنون الآسيوية.",
         desc_en: "In south-western Nice next to the Promenade des Anglais, Parc Phoenix is one of Europe's biggest urban parks at 7 hectares. It offers cultural and leisure activities, many animals and birds — including river otters, kangaroos, hedgehogs and rare species — a huge musical fountain at the main entrance, and a museum of Asian arts.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Parc_Phoenix_serre_Nice.jpg" },
+        image: niceParcPhoenixAsset.url },
       { num: "07", name_ar: "حديقة ألبرت الأول", name_en: "Jardin Albert Ier",
         desc_ar: "هذه الحديقة العامة الرائعة في وسط مدينة نيس بالقرب من ساحة ماسينا، وهي واحدة من أقدم الحدائق العامة في نيس. عند زيارتك سوف تجد نفسك على الفور في وسط أشجار النخيل والورود العطرة، والنباتات المختلفة التي تم جلبها من اليابان والصين والأمريكتين وأستراليا والهيمالايا، بالإضافة إلى المساحات الواسعة المخصّصة للزهور. تنتشر داخل الحديقة العديد من نوافير المياه المذهلة، ولم تُغفَل الأقسام الخاصة بالصغار فأُنشئ عدد من الألعاب مثل الأرجوحات ولعبة الخيول الدوّارة.",
         desc_en: "This wonderful public garden in central Nice, near Place Masséna, is one of the city's oldest. Palms, fragrant roses, plants brought from Japan, China, the Americas, Australia and the Himalayas share space with wide flowerbeds. Stunning fountains dot the park, and there are swings and a carousel for children.",
