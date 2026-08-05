@@ -1,3 +1,5 @@
+import bordeauxRiverCruisesAsset from "@/assets/bordeaux-river-cruises.avif.asset.json";
+
 export type Attraction = {
   num: string;
   name_ar: string;
@@ -459,7 +461,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "05", name_ar: "رحلات بوردو البحرية", name_en: "Bordeaux River Cruises",
         desc_ar: "الاسترخاء على طول النهر أو وسط كروم العنب، لا حاجة للاختيار مع توفّر العديد من الرحلات النهرية، من بوردو، بلاي أو بوياك. فعند مصبّ نهر الجيروند نبحر بين الجزر، من جزيرة مارغو حيث تزدهر مزارع الكروم على حافة المياه، إلى جزيرة باتيراس التي تُطلّ منارتها على قصور ميدوك. وللاسترخاء وأخذ جرعة من الطاقة والنشاط، حاول أن تجرّب علاج كروم العنب، فهو علاج حصري في ينابيع كودالي، وهو منتجع صحي وسط مزارع الكروم الفريدة التي تجمع بين مزايا الينابيع الساخنة وفوائد الكروم والعنب.",
         desc_en: "Relax by the river or among the vines — with cruises from Bordeaux, Blaye or Pauillac, you don't have to choose. At the mouth of the Gironde, glide between islands: from Île Margaux, where vineyards flourish at the water's edge, to Île de Patiras, whose lighthouse looks over the châteaux of the Médoc. To recharge, try the vine-therapy treatments at Caudalie Vinothérapie, a spa nestled in the vineyards that blends thermal spring benefits with the goodness of grapes.",
-        image: MISSING_IMAGE },
+        image: bordeauxRiverCruisesAsset.url },
       { num: "06", name_ar: "متحف Musée des Beaux-Arts", name_en: "Musée des Beaux-Arts",
         desc_ar: "يقع متحف Beaux-Arts في حديقة Jardin de la Mairie العامة الجميلة، ويحتلّ جزءاً من Hôtel de Ville قاعة المدينة. يُقدّم المتحف فكرة رائعة عن تاريخ الفن الأوروبي، مع مجموعة من الفنون تمتد من القرن الخامس عشر إلى القرن العشرين، ويتم تنظيم اللوحات في المتحف بطريقة موضوعية مجمّعة حسب العصر والبلد، مثل عصر النهضة واللوحات الهولندية من القرن السابع عشر واللوحات الفرنسية من القرن 17 إلى القرن 18.",
         desc_en: "Set in the lovely Jardin de la Mairie and occupying part of the Hôtel de Ville, the Musée des Beaux-Arts offers a beautiful overview of European art history — a collection running from the 15th to the 20th century, its paintings arranged by period and country: Renaissance, 17th-century Dutch works, and 17th–18th-century French painting.",
