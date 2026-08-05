@@ -143,7 +143,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "04", name_ar: "سوق نواي Noailles", name_en: "Noailles Market",
         desc_ar: "سوق نواي مكان رائع ومفعم بالحياة في مدينة مرسيليا الفرنسية. إن كنت من محبّي جولات التسوق فيمكنك التسوق خلاله وشراء الأقمشة متعددة الألوان، ومختلف أنواع الطعام والتوابل الأفريقية والهندية، والأدوات المنزلية والاكسسوارات وغيرها الكثير.",
         desc_en: "Noailles Market is a vibrant place in the heart of Marseille. Shoppers can find colourful fabrics, all kinds of African and Indian foods and spices, household goods, accessories and much more.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Marseille_-_M%C3%A9tro_%26_Tramway_-_Noailles_%287537853682%29.jpg/3840px-Marseille_-_M%C3%A9tro_%26_Tramway_-_Noailles_%287537853682%29.jpg" },
+        image: "/__l5e/assets-v1/f1c88381-eb5d-4795-8e12-42fb0b84e029/marche-de-noailles-marseille.jpg" },
       { num: "05", name_ar: "حي لو بانيير", name_en: "Le Panier District",
         desc_ar: "لو بانيير هو أقدم حي في مدينة مرسيليا، وهو يُعدّ المركز التاريخي والقلب الثقافي للمدينة، كما يقع هذا الحي الملوّن في موقع رائع على أحد التلال فوق الميناء القديم. من أجمل أماكن السياحة في مارسيليا، يمكنك الاستمتاع بالتجوّل في شوارعه القديمة المرصوفة بالحجر والمنحدرة والضيّقة، والتقاط الصور على اللوحات الجدارية على جوانب المباني ذات الألوان الجميلة، واكتشاف متاجر الحرفيين المحليين ومحلات الأطعمة والمعارض الفنية.",
         desc_en: "Le Panier is Marseille's oldest quarter and its historic cultural heart, perched on a hill above the Old Port. Wander its narrow, sloping cobbled streets, photograph the murals on the colourful buildings, and discover artisan workshops, delicatessens and small galleries.",
