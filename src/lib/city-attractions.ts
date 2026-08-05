@@ -5,6 +5,7 @@ import cannesPalaisFestivalsAsset from "@/assets/cannes-palais-festivals.jpg.ass
 import cannesMuseeDeLaMerAsset from "@/assets/cannes-musee-de-la-mer.jpg.asset.json";
 import cannesOldTownAsset from "@/assets/cannes-old-town.jpg.asset.json";
 import cannesVillaDomergueAsset from "@/assets/cannes-villa-domergue.jpg.asset.json";
+import colmarQuaiDeLaPoissonnerieAsset from "@/assets/colmar-quai-de-la-poissonnerie.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -249,7 +250,7 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
       { num: "02", name_ar: "فينيسيا المصغرة", name_en: "Little Venice (Petite Venise)",
         desc_ar: "في كولمار كل شيء معقول، فقد أُحضرت فينيسيا إيطاليا ووُضعت في كولمار، وتمّت تسميتها بـ فينيسيا الصغيرة، فهذه المنطقة تُعتبر إحدى رموز كولمار والتي تجمع بين الثقافتين الفرنسية والألمانية، وتفوح منها النكهة الإيطالية، نكهة فينيسيا إيطاليا خاصة من خلال القنوات المائية الرهيبة والجسور التي تعبر فوق نهر اللاش، والقوارب الصغيرة التي تُبحر بين قنواتها.",
         desc_en: "In Colmar anything seems possible — even a piece of Venice. Little Venice is one of Colmar's icons, blending French and German culture with an Italian flavour: dreamy canals, bridges over the Lauch and small boats drifting between the waterways.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/ColmarFrance.jpg/3840px-ColmarFrance.jpg", tall: true },
+        image: colmarQuaiDeLaPoissonnerieAsset.url, tall: true },
       { num: "03", name_ar: "متحف انترليندن", name_en: "Unterlinden Museum",
         desc_ar: "يقع هذا المتحف في دير الأخوات الدومنيكان، ويتميّز بوجود مجموعة كبيرة ورائعة من الأعمال المحلية الفنية والدولية والمصنوعات اليدوية من عصور ما قبل التاريخ إلى العصور المعاصرة، ويحمل المتحف علامة الجودة الفرنسية، ويُعتبر واحداً من أكثر المتاحف زيارة في فرنسا. وفي عام 2009م تم العمل على تطوير المتحف وزيادة مساحته، وافتُتح المبنى الجديد بحضور الرئيس الفرنسي فرانسوا هولاند في 2016م.",
         desc_en: "Housed in the former Dominican sisters' convent, the Unterlinden Museum holds a remarkable collection of local and international art and craft from prehistory to today. It carries France's official quality label and is one of the country's most visited museums. Its expansion was completed in 2016 and inaugurated by then-President François Hollande.",
