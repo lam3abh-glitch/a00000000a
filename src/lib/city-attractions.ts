@@ -1,6 +1,7 @@
 import bordeauxRiverCruisesAsset from "@/assets/bordeaux-river-cruises.avif.asset.json";
 import museeBeauxArtsBordeauxAsset from "@/assets/musee-beaux-arts-bordeaux.jpg.asset.json";
 import esplanadeQuinconcesBordeauxAsset from "@/assets/esplanade-quinconces-bordeaux.png.asset.json";
+import cannesPalaisFestivalsAsset from "@/assets/cannes-palais-festivals.jpg.asset.json";
 
 export type Attraction = {
   num: string;
@@ -204,8 +205,8 @@ export const CITY_FEATURES: Record<string, CityFeature> = {
     attractions: [
       { num: "01", name_ar: "قصر الاحتفالات وقاعة المؤتمرات", name_en: "Palais des Festivals et des Congrès",
         desc_ar: "أن يجتمع مشاهير العالم وممثّليهم وفنانيهم في مكان واحد أمر شبه مستحيل، لكن هنا في فرنسا أي شيء ممكن. نحن نتحدث عن رمز من رموز فرنسا، وهو قصر الاحتفالات وقاعة المؤتمرات بمدينة كان الفرنسية، الذي يحتضن كل الاحتفالات والمراسم والمهرجانات في المدينة، وعلى الأخص المهرجان السينمائي الدولي أو كما يُسمى مهرجان كان السينمائي. ويُضاف إلى ذلك أيضاً مهرجان كان ليونز الدولي للإبداع، كما يحتضن القصر المؤتمرات الأخرى المختلفة، وتبلغ المساحة المخصّصة للمعارض 25 ألف متر مربع، مع البساط الأحمر الطويل الذي يشتهر به المكان.",
-        desc_en: "That the world's celebrities gather in one place seems impossible — yet in France anything is possible. The Palais des Festivals et des Congrès is a French icon, host to Cannes' every ceremony and festival, above all the Cannes International Film Festival and Cannes Lions International Festival of Creativity. It offers 25,000 m² of exhibition space and, of course, its famous long red carpet.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Cannes_Palais_des_Festivals_et_des_Congr%C3%A8s.jpg" },
+        desc_en: "That the world's celebrities gather in one place seems impossible — yet in France anything is possible. The Palais des Festivals et des Congrès is a French icon, host to Cannes' every ceremony and festival, above all the Cannes International Film Festival and Cannes Lions International Festival of Creativity. It offers 25,000 m² of exhibition space and, of course, its famous long red red carpet.",
+        image: cannesPalaisFestivalsAsset.url },
       { num: "02", name_ar: "متحف لا مير كان", name_en: "Musée de la Mer",
         desc_ar: "مع الإطلالة التي يتمتّع بها على البحر في مدينة كان الفرنسية والقيمة التاريخية والثقافية التي يضمها بين جدرانه، يصبح متحف لا مير كان فرنسا واحداً من أجمل وأروع المتاحف في فرنسا على الإطلاق. يقع على بُعد كيلومتر واحد من المدينة ويتخصّص في عرض عدد كبير من الكنوز التي عُثر عليها في البحر، بعض هذه الكنوز والتحف يعود إلى عصر الإمبراطورية الرومانية.",
         desc_en: "With its sea view and its walls filled with historic and cultural value, the Musée de la Mer is one of France's most beautiful museums. A kilometre from the city, it specialises in treasures recovered from the sea — some dating back to the Roman Empire.",
