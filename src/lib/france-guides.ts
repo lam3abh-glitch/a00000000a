@@ -14,13 +14,6 @@ export type Guide = {
   blocks: GuideBlock[];
 };
 
-const HERO = {
-  program: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80",
-  before: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=1600&q=80",
-  facts: "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=1600&q=80",
-  todo: "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?w=1600&q=80",
-  castles: "https://images.unsplash.com/photo-1591289009723-aef0a1a8a23b?w=1600&q=80",
-};
 
 export const franceGuides: Guide[] = [
   {
