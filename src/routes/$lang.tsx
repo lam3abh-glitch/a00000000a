@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { isLang, type Lang, dir } from "@/lib/i18n";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { TravelAssistant } from "@/components/site/TravelAssistant";
 
 export const Route = createFileRoute("/$lang")({
   beforeLoad: ({ params }) => {
@@ -24,6 +25,7 @@ function LangLayout() {
         <Outlet />
       </main>
       <Footer lang={lang} />
+      <TravelAssistant lang={lang} />
     </div>
   );
 }

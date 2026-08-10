@@ -76,7 +76,7 @@ export function TravelAssistant({ lang }: { lang: Lang }) {
       });
 
       if (!res.ok || !res.body) {
-        let msg = c.error;
+        let msg: string = c.error;
         try {
           const data = (await res.json()) as { error?: string };
           if (data?.error) msg = data.error;
