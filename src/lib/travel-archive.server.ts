@@ -27,12 +27,14 @@ export function buildArchiveContext(): string {
   parts.push("\n## أدلة فرنسا في الأرشيف");
   for (const guide of franceGuides) {
     const headings = guide.blocks
-      .filter((b) => b.kind === "H3")
-      .map((b) => b.ar?.trim())
+      .filter((b) => b.type === "H3")
+      .map((b) => (b as { ar: string }).ar.trim())
       .filter(Boolean);
-    const firstParagraph = guide.blocks.find((b) => b.kind === "P" && (b.ar ?? "").length > 40)?.ar;
+    const firstParagraph = guide.blocks.find(
+      (b) => b.type === "P" && (b as { ar: string }).ar.length > 40,
+    ) as { ar: string } | undefined;
     parts.push(
-      `### /ar/countries/france/guides/${guide.slug} — ${guide.titleAr}\n${(firstParagraph ?? "").slice(0, 500)}\nالعناوين: ${headings.slice(0, 40).join(" ، ")}`,
+      `### /ar/countries/france/guides/${guide.slug} — ${guide.title_ar}\n${(firstParagraph?.ar ?? "").slice(0, 500)}\nالعناوين: ${headings.slice(0, 40).join(" ، ")}`,
     );
   }
 
