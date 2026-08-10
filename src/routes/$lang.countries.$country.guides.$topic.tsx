@@ -1,4 +1,6 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { type Lang } from "@/lib/i18n";
 import { getGuide, franceGuides } from "@/lib/france-guides";
 
@@ -35,91 +37,151 @@ function GuidePage() {
   const ar = lang === "ar";
   const title = ar ? g.title_ar : g.title_en;
   const others = franceGuides.filter((o) => o.slug !== g.slug);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      setProgress(max > 0 ? Math.min(100, (h.scrollTop / max) * 100) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [topic]);
+
+  let headingCount = 0;
+  let paraCount = 0;
 
   return (
-    <div className="bg-cream">
-      <section className="relative h-[52vh] min-h-[360px] bg-midnight">
+    <div className="bg-cream" dir={ar ? "rtl" : "ltr"}>
+      <div className="fixed top-0 inset-x-0 z-50 h-[3px] bg-transparent">
+        <div className="h-full bg-gold transition-[width] duration-150 ease-out" style={{ width: `${progress}%` }} />
+      </div>
+
+      <section className="relative h-[58svh] min-h-[300px] sm:h-[62vh] bg-midnight">
         <img src={g.image} alt={g.title_en} className="absolute inset-0 h-full w-full object-cover opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-midnight/20" />
-        <div className="relative z-10 mx-auto max-w-4xl h-full flex flex-col justify-end px-6 pb-12 text-cream">
-          <div className="text-xs text-cream/60 mb-3">
+        <div className="relative z-10 mx-auto max-w-4xl h-full flex flex-col justify-end px-5 sm:px-6 pb-10 sm:pb-14 text-cream">
+          <div className="text-[11px] sm:text-xs text-cream/60 mb-3 flex flex-wrap items-center gap-x-2">
             <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className="hover:text-gold">
               {ar ? "فرنسا" : "France"}
             </Link>
-            <span className="mx-2">/</span>
+            <span>/</span>
             <span className="text-gold">{ar ? g.kicker_ar : g.kicker_en}</span>
           </div>
-          <h1 className="font-display text-3xl md:text-5xl leading-tight">{title}</h1>
-          <div className="mt-5 h-px w-24 bg-gold/70" />
+          <h1 className="font-display text-[26px] leading-snug sm:text-4xl md:text-5xl md:leading-tight">{title}</h1>
+          <div className="mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-gold/70" />
+          <div className="mt-5 hidden sm:flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-cream/50">
+            <span className="h-4 w-px bg-gold/60 animate-pulse" />
+            {ar ? "تابع القراءة" : "Keep scrolling"}
+          </div>
         </div>
       </section>
 
-      <article className={`mx-auto max-w-3xl px-6 py-16 ${ar ? "text-right" : "text-left"}`}>
+      <article className={`mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
         {g.blocks.map((b, i) => {
-          if (b.type === "H3")
+          if (b.type === "H3") {
+            headingCount += 1;
+            paraCount = 0;
+            const n = headingCount;
             return (
-              <h2 key={i} className="font-display text-2xl md:text-3xl text-midnight mt-12 mb-4">
-                {ar ? b.ar : b.en}
-              </h2>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5 }}
+                className="mt-12 sm:mt-16 mb-5 flex items-start gap-3 sm:gap-4"
+              >
+                <span className="shrink-0 font-display text-3xl sm:text-5xl text-gold/40 leading-none pt-1 select-none">
+                  {String(n).padStart(2, "0")}
+                </span>
+                <div className="min-w-0">
+                  <h2 className="font-display text-xl leading-snug sm:text-3xl text-midnight">{ar ? b.ar : b.en}</h2>
+                  <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
+                </div>
+              </motion.div>
             );
-          if (b.type === "P")
+          }
+          if (b.type === "P") {
+            paraCount += 1;
             return (
-              <p key={i} className="text-[17px] leading-[1.9] text-charcoal/85 mb-6">
+              <p
+                key={i}
+                className={`text-[16px] sm:text-[18px] leading-[2] text-charcoal/85 mb-5 sm:mb-6 ${
+                  paraCount === 1 && headingCount > 0 ? "text-charcoal" : ""
+                }`}
+              >
                 {ar ? b.ar : b.en}
               </p>
             );
+          }
           if (b.type === "IMG")
             return (
-              <figure key={i} className="my-8 -mx-2 sm:mx-0">
-                <div className="overflow-hidden rounded-2xl border border-sand bg-midnight/5 shadow-sm">
+              <motion.figure
+                key={i}
+                initial={{ opacity: 0, scale: 0.98 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6 }}
+                className="my-8 sm:my-10 -mx-5 sm:mx-0"
+              >
+                <div className="overflow-hidden rounded-none sm:rounded-3xl border-y sm:border border-sand bg-midnight/5 shadow-sm">
                   <img
                     src={b.src}
                     alt={b.cap_en || b.cap_ar}
                     loading="lazy"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03]"
                   />
                 </div>
                 {(ar ? b.cap_ar : b.cap_en) && (
-                  <figcaption className="mt-3 text-center text-[12px] tracking-[0.2em] uppercase text-charcoal/60">
+                  <figcaption className="mt-3 px-5 sm:px-0 text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60">
                     {ar ? b.cap_ar : b.cap_en}
                   </figcaption>
                 )}
-              </figure>
+              </motion.figure>
             );
           const items: string[] = ar ? b.ar : b.en;
           return (
-            <ul key={i} className="my-6 space-y-3">
+            <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
               {items.map((it, j) => (
-                <li
+                <motion.li
                   key={j}
-                  className="flex gap-4 items-start rounded-xl border border-sand bg-white/60 px-5 py-4 hover:border-gold/60 transition-colors"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.6 }}
+                  transition={{ duration: 0.35, delay: Math.min(j * 0.04, 0.3) }}
+                  className="flex gap-3 sm:gap-4 items-start rounded-2xl border border-sand bg-white/70 px-4 py-3.5 sm:px-5 sm:py-4 hover:border-gold/60 hover:shadow-sm transition-all"
                 >
-                  <span className="font-mono text-[11px] text-gold pt-1 shrink-0">{String(j + 1).padStart(2, "0")}</span>
-                  <span className="text-[16px] leading-[1.9] text-charcoal/85">{it}</span>
-                </li>
+                  <span className="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold/15 font-mono text-[10px] text-gold">
+                    {j + 1}
+                  </span>
+                  <span className="min-w-0 text-[15px] sm:text-[16px] leading-[1.9] text-charcoal/85">{it}</span>
+                </motion.li>
               ))}
             </ul>
           );
         })}
       </article>
 
-      <section className="pb-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-5 text-center">
+      <section className="pb-16 sm:pb-20">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6">
+          <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] sm:tracking-[0.4em] text-gold mb-5 text-center">
             {ar ? "أقسام أخرى" : "More sections"}
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {others.map((o) => (
               <Link
                 key={o.slug}
                 to="/$lang/countries/$country/guides/$topic"
                 params={{ lang, country, topic: o.slug }}
-                className="group relative overflow-hidden rounded-2xl bg-midnight h-32 flex items-end border border-midnight/10"
+                className="group relative overflow-hidden rounded-2xl bg-midnight h-28 sm:h-32 flex items-end border border-midnight/10"
               >
                 <img src={o.image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent" />
-                <div className="relative z-10 p-4">
-                  <div className="font-display text-lg text-cream leading-snug">{ar ? o.title_ar : o.title_en}</div>
+                <div className="relative z-10 p-4 min-w-0">
+                  <div className="font-display text-base sm:text-lg text-cream leading-snug">{ar ? o.title_ar : o.title_en}</div>
                 </div>
               </Link>
             ))}
