@@ -9,6 +9,7 @@ import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
+import { franceGuides } from "@/lib/france-guides";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
