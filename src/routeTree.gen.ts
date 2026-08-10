@@ -20,6 +20,7 @@ import { Route as LangCulturesSlugRouteImport } from './routes/$lang.cultures.$s
 import { Route as LangCountriesSlugRouteImport } from './routes/$lang.countries.$slug'
 import { Route as LangContinentsSlugRouteImport } from './routes/$lang.continents.$slug'
 import { Route as LangCountriesCountryCityRouteImport } from './routes/$lang.countries.$country.$city'
+import { Route as LangCountriesCountryGuidesTopicRouteImport } from './routes/$lang.countries.$country.guides.$topic'
 
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
@@ -77,6 +78,12 @@ const LangCountriesCountryCityRoute =
     path: '/countries/$country/$city',
     getParentRoute: () => LangRoute,
   } as any)
+const LangCountriesCountryGuidesTopicRoute =
+  LangCountriesCountryGuidesTopicRouteImport.update({
+    id: '/countries/$country/guides/$topic',
+    path: '/countries/$country/guides/$topic',
+    getParentRoute: () => LangRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByFullPath {
   '/$lang/stories/$slug': typeof LangStoriesSlugRoute
   '/$lang/countries/': typeof LangCountriesIndexRoute
   '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
+  '/$lang/countries/$country/guides/$topic': typeof LangCountriesCountryGuidesTopicRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -102,6 +110,7 @@ export interface FileRoutesByTo {
   '/$lang/stories/$slug': typeof LangStoriesSlugRoute
   '/$lang/countries': typeof LangCountriesIndexRoute
   '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
+  '/$lang/countries/$country/guides/$topic': typeof LangCountriesCountryGuidesTopicRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -116,6 +125,7 @@ export interface FileRoutesById {
   '/$lang/stories/$slug': typeof LangStoriesSlugRoute
   '/$lang/countries/': typeof LangCountriesIndexRoute
   '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
+  '/$lang/countries/$country/guides/$topic': typeof LangCountriesCountryGuidesTopicRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/$lang/stories/$slug'
     | '/$lang/countries/'
     | '/$lang/countries/$country/$city'
+    | '/$lang/countries/$country/guides/$topic'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/$lang/stories/$slug'
     | '/$lang/countries'
     | '/$lang/countries/$country/$city'
+    | '/$lang/countries/$country/guides/$topic'
   id:
     | '__root__'
     | '/'
@@ -156,6 +168,7 @@ export interface FileRouteTypes {
     | '/$lang/stories/$slug'
     | '/$lang/countries/'
     | '/$lang/countries/$country/$city'
+    | '/$lang/countries/$country/guides/$topic'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -242,6 +255,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangCountriesCountryCityRouteImport
       parentRoute: typeof LangRoute
     }
+    '/$lang/countries/$country/guides/$topic': {
+      id: '/$lang/countries/$country/guides/$topic'
+      path: '/countries/$country/guides/$topic'
+      fullPath: '/$lang/countries/$country/guides/$topic'
+      preLoaderRoute: typeof LangCountriesCountryGuidesTopicRouteImport
+      parentRoute: typeof LangRoute
+    }
   }
 }
 
@@ -255,6 +275,7 @@ interface LangRouteChildren {
   LangStoriesSlugRoute: typeof LangStoriesSlugRoute
   LangCountriesIndexRoute: typeof LangCountriesIndexRoute
   LangCountriesCountryCityRoute: typeof LangCountriesCountryCityRoute
+  LangCountriesCountryGuidesTopicRoute: typeof LangCountriesCountryGuidesTopicRoute
 }
 
 const LangRouteChildren: LangRouteChildren = {
@@ -267,6 +288,7 @@ const LangRouteChildren: LangRouteChildren = {
   LangStoriesSlugRoute: LangStoriesSlugRoute,
   LangCountriesIndexRoute: LangCountriesIndexRoute,
   LangCountriesCountryCityRoute: LangCountriesCountryCityRoute,
+  LangCountriesCountryGuidesTopicRoute: LangCountriesCountryGuidesTopicRoute,
 }
 
 const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
