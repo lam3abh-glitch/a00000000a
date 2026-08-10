@@ -297,6 +297,54 @@ function Country() {
         </section>
       )}
 
+      {/* GUIDE SECTIONS */}
+      {c.slug === "france" && (
+        <section className="py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-12 text-center">
+              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
+                {lang === "ar" ? "أقسام" : "Sections"}
+              </div>
+              <h2 className="font-display text-4xl text-midnight">
+                {lang === "ar" ? "المزيد عن فرنسا" : "More about France"}
+              </h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {franceGuides.map((g, i) => (
+                <Link
+                  key={g.slug}
+                  to="/$lang/countries/$country/guides/$topic"
+                  params={{ lang, country: c.slug, topic: g.slug }}
+                  className={`group relative flex items-end overflow-hidden rounded-2xl bg-midnight border border-midnight/10 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 h-44 ${i === 0 ? "md:col-span-2 h-56" : ""}`}
+                >
+                  <img
+                    src={g.image}
+                    alt=""
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover opacity-55 group-hover:opacity-75 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/45 to-transparent" />
+                  <div className={`absolute top-4 ${lang === "ar" ? "right-5" : "left-5"} font-mono text-[11px] tracking-[0.3em] text-gold/90`}>
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className={`relative z-10 w-full p-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
+                    <div className="text-[10px] uppercase tracking-[0.35em] text-gold/90 mb-2">
+                      {lang === "ar" ? g.kicker_ar : g.kicker_en}
+                    </div>
+                    <div className="font-display text-2xl md:text-3xl text-cream leading-snug">
+                      {lang === "ar" ? g.title_ar : g.title_en}
+                    </div>
+                    <div className="mt-3 text-[10px] uppercase tracking-[0.3em] text-cream/60 group-hover:text-gold transition-colors">
+                      {lang === "ar" ? "اقرأ ←" : "Read →"}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* RELATED */}
       {c.slug === "uae" && <WeatherByMonth lang={lang} />}
       {(data.articles.length > 0 || data.itineraries.length > 0) && (
