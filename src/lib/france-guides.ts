@@ -48,7 +48,6 @@ export const franceGuides: Guide[] = [
     image: HERO.before,
     blocks: [
       { type: "P", ar: "فرنسا بلد منظّم يحب الهدوء والاحترام المتبادل، ومعرفة بعض التفاصيل الصغيرة قبل السفر تجعل الرحلة أسهل وأجمل بكثير.", en: "France is an orderly country that values calm and mutual respect, and knowing a few small details before you travel makes the trip far easier and more enjoyable." },
-      { type: "H32", ar: "", en: "" } as unknown as GuideBlock,
       { type: "H3", ar: "التأشيرة والدخول", en: "Visa and entry" },
       { type: "P", ar: "فرنسا ضمن منطقة شنغن، ويمكن التقديم على التأشيرة قبل الرحلة بأسابيع مع حجز الفندق وتذاكر الطيران والتأمين الصحي. احتفظ بنسخة ورقية ورقمية من كل مستند.", en: "France is part of the Schengen area; apply for the visa weeks before the trip with hotel bookings, flight tickets and health insurance. Keep a paper and digital copy of every document." },
       { type: "H3", ar: "أفضل وقت للزيارة", en: "Best time to visit" },
