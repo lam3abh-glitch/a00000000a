@@ -68,7 +68,25 @@ function GuidePage() {
                 {ar ? b.ar : b.en}
               </p>
             );
-          const items = ar ? b.ar : b.en;
+          if (b.type === "IMG")
+            return (
+              <figure key={i} className="my-8 -mx-2 sm:mx-0">
+                <div className="overflow-hidden rounded-2xl border border-sand bg-midnight/5 shadow-sm">
+                  <img
+                    src={b.src}
+                    alt={b.cap_en || b.cap_ar}
+                    loading="lazy"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                {(ar ? b.cap_ar : b.cap_en) && (
+                  <figcaption className="mt-3 text-center text-[12px] tracking-[0.2em] uppercase text-charcoal/60">
+                    {ar ? b.cap_ar : b.cap_en}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          const items: string[] = ar ? b.ar : b.en;
           return (
             <ul key={i} className="my-6 space-y-3">
               {items.map((it, j) => (
