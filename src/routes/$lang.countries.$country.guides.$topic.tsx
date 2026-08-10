@@ -125,14 +125,14 @@ function GuidePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="my-8 sm:my-10 -mx-5 sm:mx-0"
+                className="my-6 sm:my-10 -mx-5 sm:mx-0"
               >
                 <div className="overflow-hidden rounded-none sm:rounded-3xl border-y sm:border border-sand bg-midnight/5 shadow-sm">
                   <img
                     src={b.src}
                     alt={b.cap_en || b.cap_ar}
                     loading="lazy"
-                    className="w-full h-auto object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03]"
+                    className="w-full max-h-[46vh] sm:max-h-[62vh] object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03]"
                   />
                 </div>
                 {(ar ? b.cap_ar : b.cap_en) && (
