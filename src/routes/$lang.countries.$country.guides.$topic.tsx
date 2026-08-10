@@ -188,6 +188,32 @@ function GuidePage() {
           </div>
         </div>
       </section>
+
+      <section className="py-10 sm:py-14 bg-cream border-t border-sand">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 flex justify-center">
+          <Link
+            to="/$lang/countries/$slug"
+            params={{ lang, slug: country }}
+            className="group inline-flex items-center gap-3 rounded-full border border-gold/60 bg-white/80 px-6 py-3.5 sm:px-8 sm:py-4 font-display text-sm sm:text-base text-midnight hover:bg-gold hover:text-cream hover:border-gold transition-all duration-300 shadow-sm hover:shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className={`shrink-0 transition-transform duration-300 ${ar ? "rotate-180 group-hover:-translate-x-1" : "group-hover:-translate-x-1"}`}
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            <span>{ar ? "العودة إلى صفحة فرنسا" : "Back to France"}</span>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
