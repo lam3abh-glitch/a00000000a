@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as LangAboutRouteImport } from './routes/$lang.about'
 import { Route as LangCountriesIndexRouteImport } from './routes/$lang.countries.index'
 import { Route as LangStoriesSlugRouteImport } from './routes/$lang.stories.$slug'
@@ -36,6 +37,11 @@ const LangIndexRoute = LangIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => LangRoute,
+} as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const LangAboutRoute = LangAboutRouteImport.update({
   id: '/about',
@@ -89,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/api/chat': typeof ApiChatRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/continents/$slug': typeof LangContinentsSlugRoute
   '/$lang/countries/$slug': typeof LangCountriesSlugRoute
@@ -102,6 +109,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$lang/about': typeof LangAboutRoute
+  '/api/chat': typeof ApiChatRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/continents/$slug': typeof LangContinentsSlugRoute
   '/$lang/countries/$slug': typeof LangCountriesSlugRoute
@@ -117,6 +125,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
+  '/api/chat': typeof ApiChatRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/continents/$slug': typeof LangContinentsSlugRoute
   '/$lang/countries/$slug': typeof LangCountriesSlugRoute
@@ -133,6 +142,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang'
     | '/$lang/about'
+    | '/api/chat'
     | '/$lang/'
     | '/$lang/continents/$slug'
     | '/$lang/countries/$slug'
@@ -146,6 +156,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$lang/about'
+    | '/api/chat'
     | '/$lang'
     | '/$lang/continents/$slug'
     | '/$lang/countries/$slug'
@@ -160,6 +171,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang'
     | '/$lang/about'
+    | '/api/chat'
     | '/$lang/'
     | '/$lang/continents/$slug'
     | '/$lang/countries/$slug'
@@ -174,6 +186,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LangRoute: typeof LangRouteWithChildren
+  ApiChatRoute: typeof ApiChatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/$lang/'
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
+    }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/$lang/about': {
       id: '/$lang/about'
@@ -296,17 +316,8 @@ const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LangRoute: LangRouteWithChildren,
+  ApiChatRoute: ApiChatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
