@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { type Lang, L, tx } from "@/lib/i18n";
+import { type Lang, L, tx, dir } from "@/lib/i18n";
 import { getGuide, franceGuides } from "@/lib/france-guides";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
@@ -54,7 +54,7 @@ function GuidePage() {
   let paraCount = 0;
 
   return (
-    <div className="bg-cream" dir={tx(lang, "ltr")}>
+    <div className="bg-cream" dir={dir(lang)}>
       <div className="fixed top-0 inset-x-0 z-50 h-[3px] bg-transparent">
         <div className="h-full bg-gold transition-[width] duration-150 ease-out" style={{ width: `${progress}%` }} />
       </div>
@@ -206,7 +206,7 @@ function GuidePage() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className={`shrink-0 transition-transform duration-300 ${tx(lang, "group-hover:-translate-x-1")}`}
+              className={`shrink-0 transition-transform duration-300 ${ar ? "rotate-180 group-hover:-translate-x-1" : "group-hover:-translate-x-1"}`}
             >
               <path d="m15 18-6-6 6-6" />
             </svg>

@@ -1,7 +1,7 @@
-import { tx } from "@/lib/i18n";
+import { type Lang, tx } from "@/lib/i18n";
 import { useEffect, useRef, useState } from "react";
 
-export function AnthemPlayer({ src, lang, title }: { src: string; lang: "ar" | "en"; title: string }) {
+export function AnthemPlayer({ src, lang, title }: { src: string; lang: Lang; title: string }) {
   const ref = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
 
@@ -41,7 +41,7 @@ export function AnthemPlayer({ src, lang, title }: { src: string; lang: "ar" | "
           </div>
           <div className="font-display text-lg text-midnight leading-tight">{title}</div>
         </div>
-        <div className={tx(lang, "pr-4")}>
+        <div className={lang === "ar" ? "pl-4" : "pr-4"}>
           <div className="flex items-end gap-0.5 h-6">
             {[0,1,2,3,4].map((i) => (
               <span

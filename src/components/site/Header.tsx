@@ -15,7 +15,7 @@ export function Header({ lang }: { lang: Lang }) {
   useEffect(() => { setOpen(false); }, [loc.pathname]);
 
   const tr = t[lang].nav;
-  const otherLang: Lang = tx(lang, "ar");
+  
   const otherPath = loc.pathname.replace(/^\/(ar|en)/, `/${otherLang}`) || `/${otherLang}`;
 
   const links = [
