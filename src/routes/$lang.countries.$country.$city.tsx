@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getCity } from "@/lib/content.functions";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, t, L } from "@/lib/i18n";
 import { getCityArticle, type ArticleLine } from "@/lib/city-articles";
 
 const qo = (country: string, city: string) =>
@@ -20,7 +20,7 @@ function City() {
   const city: any = data.city;
   const country: any = data.country;
   const tr = t[lang];
-  const name = lang === "ar" ? city.name_ar : city.name_en;
+  const name = L(lang, city.name_ar, city.name_en);
   const article = country.slug === "france" ? getCityArticle(city.slug, lang) : undefined;
   const heroImage = article?.heroImage ?? city.hero_image;
 
@@ -293,9 +293,9 @@ function City() {
           <div className="text-[11px] sm:text-xs text-cream/70 mb-3 flex flex-wrap items-center gap-x-1 gap-y-1">
             <Link to="/$lang" params={{ lang }} className="hover:text-gold">{tr.sections.world}</Link>
             <span className="opacity-60">/</span>
-            <Link to="/$lang/continents/$slug" params={{ lang, slug: country.continent.slug }} className="hover:text-gold">{lang === "ar" ? country.continent.name_ar : country.continent.name_en}</Link>
+            <Link to="/$lang/continents/$slug" params={{ lang, slug: country.continent.slug }} className="hover:text-gold">{L(lang, country.continent.name_ar, country.continent.name_en)}</Link>
             <span className="opacity-60">/</span>
-            <Link to="/$lang/countries/$slug" params={{ lang, slug: country.slug }} className="hover:text-gold">{lang === "ar" ? country.name_ar : country.name_en}</Link>
+            <Link to="/$lang/countries/$slug" params={{ lang, slug: country.slug }} className="hover:text-gold">{L(lang, country.name_ar, country.name_en)}</Link>
             <span className="opacity-60">/</span>
             <span className="text-gold">{name}</span>
           </div>
@@ -335,7 +335,7 @@ function City() {
       ) : (
         <section className="py-12 sm:py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
-            <p className="text-lg leading-loose text-charcoal/80">{lang === "ar" ? city.content_ar : city.content_en}</p>
+            <p className="text-lg leading-loose text-charcoal/80">{L(lang, city.content_ar, city.content_en)}</p>
           </div>
         </section>
       )}
@@ -351,7 +351,7 @@ function City() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                     <img src={s.hero_image} alt={s.name_en} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-lg">{lang === "ar" ? s.name_ar : s.name_en}</div>
+                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-lg">{L(lang, s.name_ar, s.name_en)}</div>
                   </div>
                 </Link>
               ))}
@@ -362,7 +362,7 @@ function City() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                     <img src={s.hero_image} alt={s.name_en} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/70 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-xl">{lang === "ar" ? s.name_ar : s.name_en}</div>
+                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-xl">{L(lang, s.name_ar, s.name_en)}</div>
                   </div>
                 </Link>
               ))}

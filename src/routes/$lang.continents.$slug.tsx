@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getContinent } from "@/lib/content.functions";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, t, L } from "@/lib/i18n";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["continent", slug], queryFn: () => getContinent({ data: { slug } }) });
 
@@ -15,8 +15,8 @@ function Continent() {
   const { data } = useSuspenseQuery(qo(slug));
   if (!data.continent) throw notFound();
   const cont: any = data.continent;
-  const name = lang === "ar" ? cont.name_ar : cont.name_en;
-  const desc = lang === "ar" ? cont.description_ar : cont.description_en;
+  const name = L(lang, cont.name_ar, cont.name_en);
+  const desc = L(lang, cont.description_ar, cont.description_en);
   const tr = t[lang];
 
   return (
@@ -45,7 +45,7 @@ function Continent() {
                     <img
                       src={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png`}
                       srcSet={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w640/${c.iso2.toLowerCase()}.png 2x`}
-                      alt={lang === "ar" ? c.name_ar : c.name_en}
+                      alt={L(lang, c.name_ar, c.name_en)}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
@@ -56,7 +56,7 @@ function Continent() {
                   )}
                 </div>
                 <div className="mt-3 text-xs md:text-sm text-midnight group-hover:text-gold transition">
-                  {lang === "ar" ? c.name_ar : c.name_en}
+                  {L(lang, c.name_ar, c.name_en)}
                 </div>
               </Link>
             ))}

@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getItinerary } from "@/lib/content.functions";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, t, L } from "@/lib/i18n";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["itinerary", slug], queryFn: () => getItinerary({ data: { slug } }) });
 
@@ -17,7 +17,7 @@ function Itinerary() {
   const it: any = data.itinerary;
   const tr = t[lang];
   const days = (it.days ?? []) as Array<any>;
-  const title = lang === "ar" ? it.title_ar : it.title_en;
+  const title = L(lang, it.title_ar, it.title_en);
 
   return (
     <div className="bg-cream">
@@ -32,7 +32,7 @@ function Itinerary() {
           </div>
           <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{it.duration_days} {lang === "ar" ? "يوم" : "days"}</div>
           <h1 className="font-display text-5xl md:text-7xl">{title}</h1>
-          <p className="mt-6 max-w-2xl text-cream/70">{lang === "ar" ? it.summary_ar : it.summary_en}</p>
+          <p className="mt-6 max-w-2xl text-cream/70">{L(lang, it.summary_ar, it.summary_en)}</p>
         </div>
       </section>
       <section className="py-20">
@@ -40,8 +40,8 @@ function Itinerary() {
           {days.map((d: any) => (
             <article key={d.day} className="border-t border-sand pt-8">
               <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-2">{lang === "ar" ? `اليوم ${d.day}` : `Day ${d.day}`}</div>
-              <h2 className="font-display text-3xl text-midnight">{lang === "ar" ? d.title_ar : d.title_en}</h2>
-              <p className="mt-4 leading-loose text-charcoal/80">{lang === "ar" ? d.content_ar : d.content_en}</p>
+              <h2 className="font-display text-3xl text-midnight">{L(lang, d.title_ar, d.title_en)}</h2>
+              <p className="mt-4 leading-loose text-charcoal/80">{L(lang, d.content_ar, d.content_en)}</p>
             </article>
           ))}
         </div>

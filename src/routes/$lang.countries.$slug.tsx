@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getCountry } from "@/lib/content.functions";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, t, L } from "@/lib/i18n";
 import { WeatherByMonth } from "@/components/site/WeatherByMonth";
 import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
@@ -24,7 +24,7 @@ function Country() {
   if (!data.country) throw notFound();
   const c: any = data.country;
   const tr = t[lang];
-  const name = lang === "ar" ? c.name_ar : c.name_en;
+  const name = L(lang, c.name_ar, c.name_en);
   const continent = c.continent;
 
   return (
@@ -38,7 +38,7 @@ function Country() {
             <Link to="/$lang" params={{ lang }} className="hover:text-gold">{tr.sections.world}</Link>
             <span className="mx-2">/</span>
             <Link to="/$lang/continents/$slug" params={{ lang, slug: continent.slug }} className="hover:text-gold">
-              {lang === "ar" ? continent.name_ar : continent.name_en}
+              {L(lang, continent.name_ar, continent.name_en)}
             </Link>
             <span className="mx-2">/</span>
             <span className="text-gold">{name}</span>
@@ -66,10 +66,10 @@ function Country() {
                 {stats.map((s, i) => (
                   <div key={i} className={`bg-midnight/40 backdrop-blur-sm px-4 py-3 ${lang === "ar" ? "text-right" : "text-left"}`}>
                     <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-1">
-                      {lang === "ar" ? s.label_ar : s.label_en}
+                      {L(lang, s.label_ar, s.label_en)}
                     </div>
                     <div className="text-sm text-cream font-medium leading-tight">
-                      {lang === "ar" ? s.value_ar : s.value_en}
+                      {L(lang, s.value_ar, s.value_en)}
                     </div>
                   </div>
                 ))}
@@ -150,7 +150,7 @@ function Country() {
                 {lang === "ar" ? "★ مقدّمة" : "★ Introduction"}
               </span>
               <p className="font-display text-3xl md:text-4xl text-midnight leading-snug whitespace-pre-line">
-                {lang === "ar" ? c.intro_ar : c.intro_en}
+                {L(lang, c.intro_ar, c.intro_en)}
               </p>
             </div>
           </div>
@@ -247,7 +247,7 @@ function Country() {
           <div className="mx-auto max-w-3xl px-6 text-center">
             <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{lang === "ar" ? "مقدّمة" : "Introduction"}</div>
             <p className="font-display text-2xl md:text-3xl text-midnight leading-relaxed">
-              {lang === "ar" ? c.intro_ar : c.intro_en}
+              {L(lang, c.intro_ar, c.intro_en)}
             </p>
             <div className="gold-divider w-24 mx-auto mt-10" />
           </div>
@@ -284,7 +284,7 @@ function Country() {
                   </div>
                   <div className="relative z-10 w-full p-4 text-center">
                     <div className="font-display text-xl md:text-2xl text-cream leading-tight">
-                      {lang === "ar" ? city.name_ar : city.name_en}
+                      {L(lang, city.name_ar, city.name_en)}
                     </div>
                     <div className="mt-2 mx-auto h-px w-8 bg-gold/70 group-hover:w-16 transition-all duration-500" />
                     <div className="mt-2 text-[10px] uppercase tracking-[0.3em] text-cream/60 group-hover:text-gold transition-colors">
@@ -330,10 +330,10 @@ function Country() {
                   </div>
                   <div className={`relative z-10 w-full p-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
                     <div className="text-[10px] uppercase tracking-[0.35em] text-gold/90 mb-2">
-                      {lang === "ar" ? g.kicker_ar : g.kicker_en}
+                      {L(lang, g.kicker_ar, g.kicker_en)}
                     </div>
                     <div className="font-display text-2xl md:text-3xl text-cream leading-snug">
-                      {lang === "ar" ? g.title_ar : g.title_en}
+                      {L(lang, g.title_ar, g.title_en)}
                     </div>
                     <div className="mt-3 text-[10px] uppercase tracking-[0.3em] text-cream/60 group-hover:text-gold transition-colors">
                       {lang === "ar" ? "اقرأ ←" : "Read →"}
@@ -357,7 +357,7 @@ function Country() {
                 <div className="space-y-3">
                   {data.itineraries.map((i: any) => (
                     <Link key={i.slug} to="/$lang/itineraries/$slug" params={{ lang, slug: i.slug }} className="block border-t border-sand pt-3 hover:text-gold">
-                      <div className="font-display text-xl text-midnight">{lang === "ar" ? i.title_ar : i.title_en}</div>
+                      <div className="font-display text-xl text-midnight">{L(lang, i.title_ar, i.title_en)}</div>
                       <div className="text-xs text-charcoal/60 mt-1">{i.duration_days} {lang === "ar" ? "أيام" : "days"}</div>
                     </Link>
                   ))}
@@ -370,7 +370,7 @@ function Country() {
                 <div className="space-y-3">
                   {data.articles.map((a: any) => (
                     <Link key={a.slug} to={a.kind === "story" ? "/$lang/stories/$slug" : "/$lang/cultures/$slug"} params={{ lang, slug: a.slug }} className="block border-t border-sand pt-3 hover:text-gold">
-                      <div className="font-display text-xl text-midnight">{lang === "ar" ? a.title_ar : a.title_en}</div>
+                      <div className="font-display text-xl text-midnight">{L(lang, a.title_ar, a.title_en)}</div>
                       <div className="text-xs text-charcoal/60 mt-1 uppercase tracking-wider">{a.kind}</div>
                     </Link>
                   ))}

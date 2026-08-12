@@ -1,4 +1,4 @@
-import { type Lang } from "@/lib/i18n";
+import { type Lang, L } from "@/lib/i18n";
 
 type Month = {
   ar: string;
@@ -60,7 +60,7 @@ export function WeatherByMonth({ lang }: { lang: Lang }) {
               className="group relative border border-sand bg-card p-5 flex flex-col hover:border-gold transition"
             >
               <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50">
-                {lang === "ar" ? m.ar : m.en}
+                {L(lang, m.ar, m.en)}
               </div>
               <div className="mt-3 flex items-baseline gap-1">
                 <span
@@ -72,7 +72,7 @@ export function WeatherByMonth({ lang }: { lang: Lang }) {
                 <span className="text-charcoal/50 text-sm">/ {m.low}°</span>
               </div>
               <div className="mt-1 text-[11px] text-charcoal/60">
-                {lang === "ar" ? m.note_ar : m.note_en}
+                {L(lang, m.note_ar, m.note_en)}
               </div>
               <div className="mt-4 pt-3 border-t border-sand/60 flex items-center justify-between text-[10px] text-charcoal/50 uppercase tracking-wider">
                 <span>{rainLbl}</span>

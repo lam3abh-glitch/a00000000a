@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { GlobeHero } from "@/components/site/GlobeHero";
 import { getHomeData } from "@/lib/content.functions";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, t, L } from "@/lib/i18n";
 import shapeAsia from "@/assets/continent-asia-australia.png";
 import shapeEurope from "@/assets/continent-europe.png";
 import shapeAfrica from "@/assets/continent-africa.png";
@@ -21,7 +21,7 @@ function Home() {
   const tr = t[lang];
   const points = data.countries
     .filter((c: any) => c.latitude != null && c.longitude != null)
-    .map((c: any) => ({ lat: Number(c.latitude), lng: Number(c.longitude), name: lang === "ar" ? c.name_ar : c.name_en, slug: c.slug }));
+    .map((c: any) => ({ lat: Number(c.latitude), lng: Number(c.longitude), name: L(lang, c.name_ar, c.name_en), slug: c.slug }));
   const featured = data.countries.filter((c: any) => c.is_featured).slice(0, 12);
   const continentImages: Record<string, string> = {
     "asia-australia": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3649.jpg",
@@ -130,7 +130,7 @@ function Home() {
                   />
                 )}
                 <div className="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-midnight via-midnight/60 to-transparent">
-                  <div className="font-display text-3xl md:text-4xl text-cream">{lang === "ar" ? c.name_ar : c.name_en}</div>
+                  <div className="font-display text-3xl md:text-4xl text-cream">{L(lang, c.name_ar, c.name_en)}</div>
                   <div className="mt-2 text-xs uppercase tracking-[0.3em] text-gold/80 opacity-0 group-hover:opacity-100 transition">{tr.sections.discover} →</div>
                 </div>
               </Link>
@@ -163,7 +163,7 @@ function Home() {
                     <img
                       src={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png`}
                       srcSet={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w640/${c.iso2.toLowerCase()}.png 2x`}
-                      alt={lang === "ar" ? c.name_ar : c.name_en}
+                      alt={L(lang, c.name_ar, c.name_en)}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
@@ -174,7 +174,7 @@ function Home() {
                   )}
                 </div>
                 <div className="mt-3 text-xs md:text-sm text-midnight group-hover:text-gold transition truncate">
-                  {lang === "ar" ? c.name_ar : c.name_en}
+                  {L(lang, c.name_ar, c.name_en)}
                 </div>
               </Link>
             ))}
@@ -197,11 +197,11 @@ function Home() {
             <div className="md:col-span-2">
               <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{tr.sections.featured}</div>
               <h2 className="font-display text-4xl md:text-5xl leading-tight">
-                {lang === "ar" ? data.featured.title_ar : data.featured.title_en}
+                {L(lang, data.featured.title_ar, data.featured.title_en)}
               </h2>
               <div className="gold-divider w-24 my-8" />
               <p className="text-cream/70 leading-loose">
-                {lang === "ar" ? data.featured.excerpt_ar : data.featured.excerpt_en}
+                {L(lang, data.featured.excerpt_ar, data.featured.excerpt_en)}
               </p>
               <Link to="/$lang/stories/$slug" params={{ lang, slug: data.featured.slug }} className="mt-10 inline-block border-b border-gold pb-1 text-cream hover:text-gold">
                 {tr.sections.readStory} →

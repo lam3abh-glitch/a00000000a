@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { type Lang } from "@/lib/i18n";
+import { type Lang, L } from "@/lib/i18n";
 import { getGuide, franceGuides } from "@/lib/france-guides";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
@@ -35,7 +35,7 @@ function GuidePage() {
   const g = getGuide(topic);
   if (!g) throw notFound();
   const ar = lang === "ar";
-  const title = ar ? g.title_ar : g.title_en;
+  const title = L(lang, g.title_ar, g.title_en);
   const others = franceGuides.filter((o) => o.slug !== g.slug);
   const [progress, setProgress] = useState(0);
 
@@ -68,7 +68,7 @@ function GuidePage() {
               {ar ? "فرنسا" : "France"}
             </Link>
             <span>/</span>
-            <span className="text-gold">{ar ? g.kicker_ar : g.kicker_en}</span>
+            <span className="text-gold">{L(lang, g.kicker_ar, g.kicker_en)}</span>
           </div>
           <h1 className="font-display text-[26px] leading-snug sm:text-4xl md:text-5xl md:leading-tight">{title}</h1>
           <div className="mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-gold/70" />
@@ -98,7 +98,7 @@ function GuidePage() {
                   {String(n).padStart(2, "0")}
                 </span>
                 <div className="min-w-0">
-                  <h2 className="font-display text-xl leading-snug sm:text-3xl text-midnight">{ar ? b.ar : b.en}</h2>
+                  <h2 className="font-display text-xl leading-snug sm:text-3xl text-midnight">{L(lang, b.ar, b.en)}</h2>
                   <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
                 </div>
               </motion.div>
@@ -113,7 +113,7 @@ function GuidePage() {
                   paraCount === 1 && headingCount > 0 ? "text-charcoal" : ""
                 }`}
               >
-                {ar ? b.ar : b.en}
+                {L(lang, b.ar, b.en)}
               </p>
             );
           }
@@ -135,14 +135,14 @@ function GuidePage() {
                     className="w-full max-h-[46vh] sm:max-h-[62vh] object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03]"
                   />
                 </div>
-                {(ar ? b.cap_ar : b.cap_en) && (
+                {(L(lang, b.cap_ar, b.cap_en)) && (
                   <figcaption className="mt-3 px-5 sm:px-0 text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60">
-                    {ar ? b.cap_ar : b.cap_en}
+                    {L(lang, b.cap_ar, b.cap_en)}
                   </figcaption>
                 )}
               </motion.figure>
             );
-          const items: string[] = ar ? b.ar : b.en;
+          const items: string[] = L(lang, b.ar, b.en);
           return (
             <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
               {items.map((it, j) => (
@@ -181,7 +181,7 @@ function GuidePage() {
                 <img src={o.image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent" />
                 <div className="relative z-10 p-4 min-w-0">
-                  <div className="font-display text-base sm:text-lg text-cream leading-snug">{ar ? o.title_ar : o.title_en}</div>
+                  <div className="font-display text-base sm:text-lg text-cream leading-snug">{L(lang, o.title_ar, o.title_en)}</div>
                 </div>
               </Link>
             ))}
