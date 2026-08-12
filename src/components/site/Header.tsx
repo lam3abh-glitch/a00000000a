@@ -33,7 +33,7 @@ export function Header({ lang }: { lang: Lang }) {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 text-cream">
-        <Link to={`/${lang}`} className="flex items-baseline gap-2">
+        <Link to="/$lang" params={{ lang }} className="flex items-baseline gap-2">
           <span className="font-display text-xl md:text-2xl tracking-tight">{t[lang].siteName}</span>
           <span className="hidden sm:inline text-[10px] uppercase tracking-[0.25em] text-gold/80">
             {t[lang].tagline}
