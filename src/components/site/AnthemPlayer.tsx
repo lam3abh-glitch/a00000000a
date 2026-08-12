@@ -1,6 +1,7 @@
+import { type Lang, tx } from "@/lib/i18n";
 import { useEffect, useRef, useState } from "react";
 
-export function AnthemPlayer({ src, lang, title }: { src: string; lang: "ar" | "en"; title: string }) {
+export function AnthemPlayer({ src, lang, title }: { src: string; lang: Lang; title: string }) {
   const ref = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
 
@@ -36,7 +37,7 @@ export function AnthemPlayer({ src, lang, title }: { src: string; lang: "ar" | "
         </button>
         <div className={lang === "ar" ? "text-right flex-1" : "text-left flex-1"}>
           <div className="text-[10px] uppercase tracking-[0.4em] text-gold">
-            {lang === "ar" ? "النشيد الوطني" : "National Anthem"}
+            {tx(lang, "National Anthem")}
           </div>
           <div className="font-display text-lg text-midnight leading-tight">{title}</div>
         </div>

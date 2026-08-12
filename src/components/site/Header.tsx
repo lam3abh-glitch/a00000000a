@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, t, tx, LANGS } from "@/lib/i18n";
 import { Menu, X } from "lucide-react";
 
 export function Header({ lang }: { lang: Lang }) {
@@ -15,8 +15,9 @@ export function Header({ lang }: { lang: Lang }) {
   useEffect(() => { setOpen(false); }, [loc.pathname]);
 
   const tr = t[lang].nav;
-  const otherLang: Lang = lang === "ar" ? "en" : "ar";
-  const otherPath = loc.pathname.replace(/^\/(ar|en)/, `/${otherLang}`) || `/${otherLang}`;
+  
+  const pathFor = (code: Lang) =>
+    loc.pathname.replace(/^\/(ar|en|fr|es|zh)/, `/${code}`) || `/${code}`;
 
   const links = [
     { to: `/${lang}`, label: tr.home, exact: true },
@@ -53,12 +54,22 @@ export function Header({ lang }: { lang: Lang }) {
           ))}
         </nav>
         <div className="flex items-center gap-3 text-xs">
-          <Link
-            to={otherPath}
-            className="rounded-full border border-cream/20 px-3 py-1 text-cream/80 hover:border-gold hover:text-gold transition"
-          >
-            {otherLang === "ar" ? "العربية" : "English"}
-          </Link>
+          <div className="flex items-center gap-1">
+            {LANGS.map((l) => (
+              <Link
+                key={l.code}
+                to={pathFor(l.code)}
+                aria-label={l.label}
+                className={`rounded-full border px-2.5 py-1 transition ${
+                  l.code === lang
+                    ? "border-gold text-gold"
+                    : "border-cream/20 text-cream/70 hover:border-gold hover:text-gold"
+                }`}
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
