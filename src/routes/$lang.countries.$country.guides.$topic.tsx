@@ -142,7 +142,7 @@ function GuidePage() {
                 )}
               </motion.figure>
             );
-          const items: string[] = L(lang, b.ar, b.en);
+          const items: string[] = (ar ? b.ar : b.en).map((it) => (lang === "ar" || lang === "en" ? it : tx(lang, it)));
           return (
             <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
               {items.map((it, j) => (
