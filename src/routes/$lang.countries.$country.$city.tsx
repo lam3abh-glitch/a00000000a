@@ -3,6 +3,7 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getCity } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import { useTx } from "@/lib/ui-i18n";
 import { getCityArticle, type ArticleLine } from "@/lib/city-articles";
 import { useTranslated } from "@/lib/useTranslated";
 
@@ -16,12 +17,13 @@ export const Route = createFileRoute("/$lang/countries/$country/$city")({
 
 function City() {
   const { lang, country: countrySlug, city: citySlug } = useParams({ from: "/$lang/countries/$country/$city" }) as { lang: Lang; country: string; city: string };
+  const tx = useTx(lang);
   const { data } = useSuspenseQuery(qo(countrySlug, citySlug));
   if (!data.city || !data.country) throw notFound();
   const city: any = data.city;
   const country: any = data.country;
   const tr = t[lang];
-  const name = lang === "ar" ? city.name_ar : city.name_en;
+  const name = tx(city.name_ar, city.name_en);
   const baseArticle =
     country.slug === "france" ? getCityArticle(city.slug, lang === "ar" ? "ar" : "en") : undefined;
   // Indexes of translatable (non-image) lines
@@ -129,7 +131,7 @@ function City() {
             type="button"
             onClick={() => openLightbox(line.value)}
             className="block w-full cursor-zoom-in overflow-hidden"
-            aria-label={lang === "ar" ? "فتح الصورة" : "Open image"}
+            aria-label={tx("فتح الصورة", "Open image")}
           >
             <img
               src={line.value}
@@ -197,7 +199,7 @@ function City() {
       type="button"
       onClick={() => openLightbox(src)}
       className={`group relative block w-full overflow-hidden rounded-2xl bg-midnight/5 shadow-lg cursor-zoom-in ${className ?? ""}`}
-      aria-label={lang === "ar" ? "فتح الصورة" : "Open image"}
+      aria-label={tx("فتح الصورة", "Open image")}
     >
       <img
         src={src}
@@ -317,9 +319,9 @@ function City() {
           <div className="text-[11px] sm:text-xs text-cream/70 mb-3 flex flex-wrap items-center gap-x-1 gap-y-1">
             <Link to="/$lang" params={{ lang }} className="hover:text-gold">{tr.sections.world}</Link>
             <span className="opacity-60">/</span>
-            <Link to="/$lang/continents/$slug" params={{ lang, slug: country.continent.slug }} className="hover:text-gold">{lang === "ar" ? country.continent.name_ar : country.continent.name_en}</Link>
+            <Link to="/$lang/continents/$slug" params={{ lang, slug: country.continent.slug }} className="hover:text-gold">{tx(country.continent.name_ar, country.continent.name_en)}</Link>
             <span className="opacity-60">/</span>
-            <Link to="/$lang/countries/$slug" params={{ lang, slug: country.slug }} className="hover:text-gold">{lang === "ar" ? country.name_ar : country.name_en}</Link>
+            <Link to="/$lang/countries/$slug" params={{ lang, slug: country.slug }} className="hover:text-gold">{tx(country.name_ar, country.name_en)}</Link>
             <span className="opacity-60">/</span>
             <span className="text-gold">{name}</span>
           </div>
@@ -345,7 +347,7 @@ function City() {
               <div className={`mx-auto max-w-6xl px-4 sm:px-6 mt-10 sm:mt-14 md:mt-20 ${lang === "ar" ? "text-right" : "text-left"}`}>
                 <div className="mb-8 sm:mb-10">
                   <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
-                    {lang === "ar" ? "أبرز المعالم" : "Highlights"}
+                    {tx("أبرز المعالم", "Highlights")}
                   </div>
                   <div className="gold-divider" />
                 </div>
@@ -359,7 +361,7 @@ function City() {
       ) : (
         <section className="py-12 sm:py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
-            <p className="text-lg leading-loose text-charcoal/80">{lang === "ar" ? city.content_ar : city.content_en}</p>
+            <p className="text-lg leading-loose text-charcoal/80">{tx(city.content_ar, city.content_en)}</p>
           </div>
         </section>
       )}
@@ -367,7 +369,7 @@ function City() {
       {data.siblings.length > 0 && (
         <section className="pb-16 sm:pb-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4 sm:mb-6">{lang === "ar" ? "مدن أخرى" : "Other cities"}</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4 sm:mb-6">{tx("مدن أخرى", "Other cities")}</div>
             {/* Mobile: horizontal snap carousel. Desktop: grid. */}
             <div className="flex sm:hidden gap-4 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {data.siblings.map((s: any) => (
@@ -375,7 +377,7 @@ function City() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                     <img src={s.hero_image} alt={s.name_en} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-lg">{lang === "ar" ? s.name_ar : s.name_en}</div>
+                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-lg">{tx(s.name_ar, s.name_en)}</div>
                   </div>
                 </Link>
               ))}
@@ -386,7 +388,7 @@ function City() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                     <img src={s.hero_image} alt={s.name_en} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/70 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-xl">{lang === "ar" ? s.name_ar : s.name_en}</div>
+                    <div className="absolute bottom-0 inset-x-0 p-4 text-cream font-display text-xl">{tx(s.name_ar, s.name_en)}</div>
                   </div>
                 </Link>
               ))}
@@ -402,7 +404,7 @@ function City() {
             params={{ lang, slug: country.slug }}
             className="inline-flex items-center justify-center border border-midnight/20 px-5 py-3 text-sm text-midnight hover:border-gold hover:text-gold transition min-h-[44px]"
           >
-            {lang === "ar" ? "العودة إلى فرنسا" : "Back to France"}
+            {tx("العودة إلى فرنسا", "Back to France")}
           </Link>
         </div>
       </section>
@@ -418,7 +420,7 @@ function City() {
             type="button"
             onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             className="absolute top-4 right-4 h-11 w-11 rounded-full bg-cream/10 hover:bg-cream/20 text-cream text-2xl leading-none flex items-center justify-center"
-            aria-label={lang === "ar" ? "إغلاق" : "Close"}
+            aria-label={tx("إغلاق", "Close")}
           >
             ×
           </button>
@@ -426,7 +428,7 @@ function City() {
             type="button"
             onClick={(e) => { e.stopPropagation(); prevImage(); }}
             className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-cream/10 hover:bg-cream/20 text-cream text-2xl leading-none flex items-center justify-center"
-            aria-label={lang === "ar" ? "السابق" : "Previous"}
+            aria-label={tx("السابق", "Previous")}
           >
             ‹
           </button>
@@ -434,7 +436,7 @@ function City() {
             type="button"
             onClick={(e) => { e.stopPropagation(); nextImage(); }}
             className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-cream/10 hover:bg-cream/20 text-cream text-2xl leading-none flex items-center justify-center"
-            aria-label={lang === "ar" ? "التالي" : "Next"}
+            aria-label={tx("التالي", "Next")}
           >
             ›
           </button>

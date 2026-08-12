@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { type Lang, t } from "@/lib/i18n";
+import { useTx } from "@/lib/ui-i18n";
 
 export function Footer({ lang }: { lang: Lang }) {
+  const tx = useTx(lang);
   return (
     <footer className="bg-midnight text-cream/80 mt-32">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-4">
@@ -14,14 +16,14 @@ export function Footer({ lang }: { lang: Lang }) {
           <div className="text-xs uppercase tracking-widest text-gold/70 mb-4">{t[lang].nav.explore}</div>
           <ul className="space-y-2 text-sm">
             <li><Link to="/$lang/countries" params={{ lang }} className="hover:text-gold">{t[lang].nav.countries}</Link></li>
-            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "asia-australia" }} className="hover:text-gold">{lang === "ar" ? "آسيا وأستراليا" : "Asia & Australia"}</Link></li>
-            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "europe" }} className="hover:text-gold">{lang === "ar" ? "أوروبا" : "Europe"}</Link></li>
-            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "africa" }} className="hover:text-gold">{lang === "ar" ? "أفريقيا" : "Africa"}</Link></li>
-            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "americas" }} className="hover:text-gold">{lang === "ar" ? "الأمريكتان" : "Americas"}</Link></li>
+            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "asia-australia" }} className="hover:text-gold">{tx("آسيا وأستراليا", "Asia & Australia")}</Link></li>
+            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "europe" }} className="hover:text-gold">{tx("أوروبا", "Europe")}</Link></li>
+            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "africa" }} className="hover:text-gold">{tx("أفريقيا", "Africa")}</Link></li>
+            <li><Link to="/$lang/continents/$slug" params={{ lang, slug: "americas" }} className="hover:text-gold">{tx("الأمريكتان", "Americas")}</Link></li>
           </ul>
         </div>
         <div>
-          <div className="text-xs uppercase tracking-widest text-gold/70 mb-4">Social</div>
+          <div className="text-xs uppercase tracking-widest text-gold/70 mb-4">{tx("تواصل", "Social")}</div>
           <ul className="space-y-2 text-sm">
             <li><a href="https://youtube.com/c/flywithahmeda" target="_blank" rel="noreferrer" className="hover:text-gold">YouTube</a></li>
             <li><a href="http://www.instagram.com/ahmed_bahrain" target="_blank" rel="noreferrer" className="hover:text-gold">Instagram</a></li>
@@ -33,7 +35,7 @@ export function Footer({ lang }: { lang: Lang }) {
       <div className="border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-5 text-xs text-cream/40 flex justify-between">
           <span>© {new Date().getFullYear()} {t[lang].siteName}. {t[lang].footer.rights}.</span>
-          <span>Bahrain ⟶ World</span>
+          <span>{tx("البحرين ⟶ العالم", "Bahrain ⟶ World")}</span>
         </div>
       </div>
     </footer>

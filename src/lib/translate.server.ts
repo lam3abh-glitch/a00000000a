@@ -10,8 +10,10 @@ const LANG_NAMES: Record<TargetLang, string> = {
 
 const hash = (s: string) => createHash("sha256").update(s).digest("hex");
 
-async function translateChunk(texts: string[], lang: TargetLang, apiKey: string): Promise<string[]> {
-  const payload = JSON.stringify(texts);
+async function callModel(texts: string[], lang: TargetLang, apiKey: string): Promise<string[]> {
+  const payload = JSON.stringify(
+    Object.fromEntries(texts.map((s, i) => [String(i), s])),
+  );
   const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "content-type": "application/json" },
@@ -20,24 +22,46 @@ async function translateChunk(texts: string[], lang: TargetLang, apiKey: string)
       messages: [
         {
           role: "system",
-          content: `You are a professional travel-content translator. Translate each string in the JSON array into ${LANG_NAMES[lang]}.
+          content: `You are a professional travel-content translator. You receive a JSON object whose values are strings to translate into ${LANG_NAMES[lang]}.
 Rules:
-- Return ONLY a JSON array of strings, same length and same order as the input. No markdown, no explanation.
+- Return ONLY a JSON object with EXACTLY the same keys as the input, where each value is the translation of the matching input value. No markdown, no explanation, no extra or missing keys.
 - Translate meaning faithfully and naturally; keep the travel-magazine tone.
 - Keep proper nouns, place names, numbers, prices and URLs correct. Never add or remove information.
 - If a string is empty or just punctuation, return it unchanged.`,
         },
         { role: "user", content: payload },
       ],
+      response_format: { type: "json_object" },
     }),
   });
   if (!res.ok) throw new Error(`translate failed: ${res.status}`);
   const data: any = await res.json();
-  let content: string = data?.choices?.[0]?.message?.content ?? "[]";
+  let content: string = data?.choices?.[0]?.message?.content ?? "{}";
   content = content.trim().replace(/^```(?:json)?/i, "").replace(/```$/, "").trim();
   const parsed = JSON.parse(content);
-  if (!Array.isArray(parsed) || parsed.length !== texts.length) throw new Error("translate shape mismatch");
-  return parsed.map((v, i) => (typeof v === "string" && v.trim() ? v : texts[i]));
+  const values: unknown[] = Array.isArray(parsed)
+    ? parsed
+    : texts.map((_, i) => (parsed as Record<string, unknown>)?.[String(i)]);
+  if (values.length !== texts.length) throw new Error("translate shape mismatch");
+  return values.map((v, i) => (typeof v === "string" && v.trim() ? v : texts[i]));
+}
+
+/** Translates a chunk, splitting it on shape mismatches so one bad item can't lose the rest. */
+async function translateChunk(texts: string[], lang: TargetLang, apiKey: string): Promise<string[]> {
+  try {
+    return await callModel(texts, lang, apiKey);
+  } catch (err) {
+    if (texts.length === 1) {
+      console.error("translate item error", err);
+      return texts;
+    }
+    const mid = Math.ceil(texts.length / 2);
+    const [a, b] = await Promise.all([
+      translateChunk(texts.slice(0, mid), lang, apiKey),
+      translateChunk(texts.slice(mid), lang, apiKey),
+    ]);
+    return [...a, ...b];
+  }
 }
 
 export async function translateTexts(texts: string[], lang: TargetLang): Promise<string[]> {
@@ -79,14 +103,17 @@ export async function translateTexts(texts: string[], lang: TargetLang): Promise
     for (const chunk of chunks) {
       try {
         const translated = await translateChunk(chunk.map((i) => texts[i]), lang, apiKey);
-        const rows = chunk.map((i, k) => ({
-          hash: keys[i],
-          lang,
-          source: texts[i],
-          translated: translated[k],
-        }));
+        const rows = chunk
+          .map((i, k) => ({
+            hash: keys[i],
+            lang,
+            source: texts[i],
+            translated: translated[k],
+          }))
+          // never cache items the model failed on (they come back unchanged)
+          .filter((r) => r.translated !== r.source);
         chunk.forEach((i, k) => cached.set(keys[i], translated[k]));
-        await supabaseAdmin.from("translation_cache").upsert(rows, { onConflict: "hash,lang" });
+        if (rows.length) await supabaseAdmin.from("translation_cache").upsert(rows, { onConflict: "hash,lang" });
       } catch (err) {
         console.error("translate chunk error", err);
       }
