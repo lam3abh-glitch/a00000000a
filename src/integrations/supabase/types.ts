@@ -277,6 +277,33 @@ export type Database = {
           },
         ]
       }
+      translation_cache: {
+        Row: {
+          created_at: string
+          hash: string
+          id: string
+          lang: string
+          source: string
+          translated: string
+        }
+        Insert: {
+          created_at?: string
+          hash: string
+          id?: string
+          lang: string
+          source: string
+          translated: string
+        }
+        Update: {
+          created_at?: string
+          hash?: string
+          id?: string
+          lang?: string
+          source?: string
+          translated?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
