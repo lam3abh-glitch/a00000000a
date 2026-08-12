@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getItinerary } from "@/lib/content.functions";
-import { type Lang, t, L, tx } from "@/lib/i18n";
+import { type Lang, t, L, tx, fmt } from "@/lib/i18n";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["itinerary", slug], queryFn: () => getItinerary({ data: { slug } }) });
 
@@ -39,7 +39,7 @@ function Itinerary() {
         <div className="mx-auto max-w-3xl px-6 space-y-12">
           {days.map((d: any) => (
             <article key={d.day} className="border-t border-sand pt-8">
-              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-2">{lang === "ar" ? `اليوم ${d.day}` : `Day ${d.day}`}</div>
+              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-2">{fmt(t[lang].sections.day, { n: d.day })}</div>
               <h2 className="font-display text-3xl text-midnight">{L(lang, d.title_ar, d.title_en)}</h2>
               <p className="mt-4 leading-loose text-charcoal/80">{L(lang, d.content_ar, d.content_en)}</p>
             </article>

@@ -164,9 +164,7 @@ function Country() {
               <span className="h-px flex-1 bg-midnight/10" />
             </div>
             <p className={`font-body text-base md:text-lg text-midnight/85 leading-relaxed ${lang === "ar" ? "text-right" : "text-left"}`}>
-              {lang === "ar"
-                ? "فرنسا جمهورية دستورية في غرب أوروبا، شعارها حرية ومساواة وأخوة. بلد قديم يعود تكوينه للعصور الوسطى، وصل إلى أوج قوته في القرن 19 والقرن 20، وامتلك ثاني أكبر إمبراطورية استعمارية عام 1950. وهي من مؤسسي الاتحاد الأوروبي وأحد الأعضاء الدائمين في مجلس الأمن الدولي."
-                : "France is a constitutional republic in Western Europe. Its motto is Liberty, Equality, and Fraternity. An ancient country formed in the Middle Ages, it reached its peak in the 19th and 20th centuries and held the second-largest colonial empire in 1950. It is a founding member of the European Union and a permanent member of the UN Security Council."}
+              {t[lang].france.about}
             </p>
           </div>
 
