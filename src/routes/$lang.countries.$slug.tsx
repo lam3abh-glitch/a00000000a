@@ -50,26 +50,26 @@ function Country() {
           {(() => {
             const stats = c.slug === "france"
               ? [
-                  { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
-                  { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو (€)", value_en: "Euro (€)" },
-                  { label_ar: "السكان", label_en: "Population", value_ar: "٦٧٫١ مليون", value_en: "67.1 million" },
-                  { label_ar: "المساحة", label_en: "Area", value_ar: "٦٧٤٬٨٤٣ كم²", value_en: "674,843 km²" },
-                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
-                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "١٩٥٨", value_en: "1958" },
+                  { label: tr.labels.capital, value: L(lang, c.capital_ar, c.capital_en) },
+                  { label: tr.labels.currency, value: tr.france.euro },
+                  { label: tr.labels.population, value: tr.france.population },
+                  { label: tr.labels.area, value: tr.france.area },
+                  { label: tr.labels.religion, value: tr.france.religion },
+                  { label: tr.labels.founded, value: tr.france.founded },
                 ]
               : [
-                  { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
-                  { label_ar: "العملة", label_en: "Currency", value_ar: c.currency, value_en: c.currency },
+                  { label: tr.labels.capital, value: L(lang, c.capital_ar, c.capital_en) },
+                  { label: tr.labels.currency, value: tx(lang, c.currency ?? "") },
                 ];
             return (
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-px bg-cream/10 border border-cream/10 max-w-4xl">
                 {stats.map((s, i) => (
                   <div key={i} className={`bg-midnight/40 backdrop-blur-sm px-4 py-3 ${lang === "ar" ? "text-right" : "text-left"}`}>
                     <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-1">
-                      {L(lang, s.label_ar, s.label_en)}
+                      {s.label}
                     </div>
                     <div className="text-sm text-cream font-medium leading-tight">
-                      {L(lang, s.value_ar, s.value_en)}
+                      {s.value}
                     </div>
                   </div>
                 ))}
