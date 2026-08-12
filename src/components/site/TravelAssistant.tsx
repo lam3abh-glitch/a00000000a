@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 
 import type { Lang } from "@/lib/i18n";
-import { useTx } from "@/lib/ui-i18n";
 import { cn } from "@/lib/utils";
 
 type Msg = { role: "user" | "assistant"; content: string };
@@ -50,21 +49,7 @@ const copy = {
 
 export function TravelAssistant({ lang }: { lang: Lang }) {
   const rtl = lang === "ar";
-  const tx = useTx(lang);
-  const base = copy[lang === "ar" ? "ar" : "en"];
-  const ar = copy.ar;
-  const en = copy.en;
-  const c = {
-    ...base,
-    button: tx(ar.button, en.button),
-    title: tx(ar.title, en.title),
-    subtitle: tx(ar.subtitle, en.subtitle),
-    welcome: tx(ar.welcome, en.welcome),
-    placeholder: tx(ar.placeholder, en.placeholder),
-    error: tx(ar.error, en.error),
-    close: tx(ar.close, en.close),
-    suggestions: base.suggestions.map((s) => tx(s, s)),
-  };
+  const c = copy[lang];
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Msg[]>([]);
@@ -188,7 +173,7 @@ export function TravelAssistant({ lang }: { lang: Lang }) {
 
             {messages.length === 0 && (
               <div className="flex flex-wrap gap-2 pt-1">
-                {(c.suggestions as readonly string[]).map((s: string) => (
+                {c.suggestions.map((s) => (
                   <button
                     key={s}
                     onClick={() => send(s)}

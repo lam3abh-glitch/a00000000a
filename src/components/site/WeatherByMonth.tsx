@@ -1,5 +1,4 @@
 import { type Lang } from "@/lib/i18n";
-import { useTx } from "@/lib/ui-i18n";
 
 type Month = {
   ar: string;
@@ -35,16 +34,14 @@ function tempColor(high: number) {
 }
 
 export function WeatherByMonth({ lang }: { lang: Lang }) {
-  const tx = useTx(lang);
-  const title = tx("الطقس على مدار السنة", "Weather through the year");
-  const sub = tx(
-    "متوسّط درجات الحرارة وهطول الأمطار في الإمارات لكل شهر.",
-    "Average temperatures and rainfall in the UAE, month by month.",
-  );
-  const eyebrow = tx("دليل الطقس", "Climate guide");
-  const highLbl = tx("عليا", "High");
-  const lowLbl = tx("دنيا", "Low");
-  const rainLbl = tx("أمطار", "Rain");
+  const title = lang === "ar" ? "الطقس على مدار السنة" : "Weather through the year";
+  const sub = lang === "ar"
+    ? "متوسّط درجات الحرارة وهطول الأمطار في الإمارات لكل شهر."
+    : "Average temperatures and rainfall in the UAE, month by month.";
+  const eyebrow = lang === "ar" ? "دليل الطقس" : "Climate guide";
+  const highLbl = lang === "ar" ? "عليا" : "High";
+  const lowLbl = lang === "ar" ? "دنيا" : "Low";
+  const rainLbl = lang === "ar" ? "أمطار" : "Rain";
 
   return (
     <section className="py-24 bg-cream">
@@ -63,7 +60,7 @@ export function WeatherByMonth({ lang }: { lang: Lang }) {
               className="group relative border border-sand bg-card p-5 flex flex-col hover:border-gold transition"
             >
               <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50">
-                {tx(m.ar, m.en)}
+                {lang === "ar" ? m.ar : m.en}
               </div>
               <div className="mt-3 flex items-baseline gap-1">
                 <span
@@ -75,7 +72,7 @@ export function WeatherByMonth({ lang }: { lang: Lang }) {
                 <span className="text-charcoal/50 text-sm">/ {m.low}°</span>
               </div>
               <div className="mt-1 text-[11px] text-charcoal/60">
-                {tx(m.note_ar, m.note_en)}
+                {lang === "ar" ? m.note_ar : m.note_en}
               </div>
               <div className="mt-4 pt-3 border-t border-sand/60 flex items-center justify-between text-[10px] text-charcoal/50 uppercase tracking-wider">
                 <span>{rainLbl}</span>
@@ -94,19 +91,19 @@ export function WeatherByMonth({ lang }: { lang: Lang }) {
         <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.25em] text-charcoal/60">
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.85 0.06 85)" }} />
-            {tx("معتدل", "Mild")}
+            {lang === "ar" ? "معتدل" : "Mild"}
           </span>
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.80 0.10 75)" }} />
-            {tx("دافئ", "Warm")}
+            {lang === "ar" ? "دافئ" : "Warm"}
           </span>
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.72 0.13 55)" }} />
-            {tx("حار", "Hot")}
+            {lang === "ar" ? "حار" : "Hot"}
           </span>
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.62 0.15 40)" }} />
-            {tx("شديد الحرارة", "Very hot")}
+            {lang === "ar" ? "شديد الحرارة" : "Very hot"}
           </span>
         </div>
       </div>
