@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { GlobeHero } from "@/components/site/GlobeHero";
 import { getHomeData } from "@/lib/content.functions";
-import { type Lang, t, L, tx } from "@/lib/i18n";
+import { type Lang, t, L, tx, fmt } from "@/lib/i18n";
 import shapeAsia from "@/assets/continent-asia-australia.png";
 import shapeEurope from "@/assets/continent-europe.png";
 import shapeAfrica from "@/assets/continent-africa.png";
@@ -86,9 +86,7 @@ function Home() {
             <h2 className="font-display text-4xl md:text-5xl text-midnight">{tr.sections.introTitle}</h2>
             <div className="gold-divider w-24 my-8" />
             <p className="text-charcoal/80 leading-loose text-lg">
-              {lang === "ar"
-                ? "أحمد عبد الرحمن من مملكة البحرين. بدأ هواية السفر قبل أكثر من عشر سنوات بهدف بسيط: زيارة مئة دولة وأكثر. اليوم يوثّق ما رآه ليفيد الآخرين، ويبني مع كل رحلة جسوراً من المحبة والتعايش."
-                : "Ahmad Abdulrahman, from the Kingdom of Bahrain. He began travelling more than ten years ago with one goal: to visit a hundred countries and beyond. Today he documents what he has seen so others can benefit, building bridges of love and coexistence with each trip."}
+              {tr.sections.ahmadIntro}
             </p>
             <div className="mt-10 flex items-center gap-10">
               <Stat n={`${data.countries.length}+`} l={tx(lang, "Countries")} />
@@ -147,7 +145,7 @@ function Home() {
             <h2 className="font-display text-4xl md:text-5xl text-midnight">{tr.sections.countries}</h2>
             <div className="gold-divider w-24 mx-auto my-8" />
             <p className="text-charcoal/70 max-w-xl mx-auto">
-              {lang === "ar" ? `${data.countries.length} دولة موثّقة عبر سنوات من السفر.` : `${data.countries.length} countries documented across years of travel.`}
+              {fmt(tr.sections.countriesLine, { count: data.countries.length })}
             </p>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-4 gap-y-8">
