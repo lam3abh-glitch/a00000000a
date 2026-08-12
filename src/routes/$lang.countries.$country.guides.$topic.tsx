@@ -1,8 +1,9 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { type Lang } from "@/lib/i18n";
 import { getGuide, franceGuides } from "@/lib/france-guides";
+import { useTranslated } from "@/lib/useTranslated";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
   beforeLoad: ({ params }) => {
@@ -35,7 +36,30 @@ function GuidePage() {
   const g = getGuide(topic);
   if (!g) throw notFound();
   const ar = lang === "ar";
-  const title = ar ? g.title_ar : g.title_en;
+
+  // Machine-translate the English source text for languages beyond ar/en.
+  const sourceStrings = useMemo(() => {
+    const out: string[] = [g.title_en, g.kicker_en];
+    for (const b of g.blocks) {
+      if (b.type === "IMG") out.push(b.cap_en);
+      else if (b.type === "LIST") out.push(...b.en);
+      else out.push(b.en);
+    }
+    return out;
+  }, [g]);
+  const tx = useTranslated(sourceStrings, lang);
+  const translating = lang !== "ar" && lang !== "en";
+  const blocks = useMemo(() => {
+    if (!translating) return g.blocks;
+    let k = 2;
+    return g.blocks.map((b) => {
+      if (b.type === "IMG") return { ...b, cap_en: tx[k++] ?? b.cap_en };
+      if (b.type === "LIST") return { ...b, en: b.en.map((v) => tx[k++] ?? v) };
+      return { ...b, en: tx[k++] ?? b.en };
+    });
+  }, [g, tx, translating]);
+  const title = ar ? g.title_ar : translating ? (tx[0] ?? g.title_en) : g.title_en;
+  const kicker = ar ? g.kicker_ar : translating ? (tx[1] ?? g.kicker_en) : g.kicker_en;
   const others = franceGuides.filter((o) => o.slug !== g.slug);
   const [progress, setProgress] = useState(0);
 
@@ -68,7 +92,7 @@ function GuidePage() {
               {ar ? "فرنسا" : "France"}
             </Link>
             <span>/</span>
-            <span className="text-gold">{ar ? g.kicker_ar : g.kicker_en}</span>
+            <span className="text-gold">{kicker}</span>
           </div>
           <h1 className="font-display text-[26px] leading-snug sm:text-4xl md:text-5xl md:leading-tight">{title}</h1>
           <div className="mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-gold/70" />
@@ -80,7 +104,7 @@ function GuidePage() {
       </section>
 
       <article className={`mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
-        {g.blocks.map((b, i) => {
+        {blocks.map((b, i) => {
           if (b.type === "H3") {
             headingCount += 1;
             paraCount = 0;
