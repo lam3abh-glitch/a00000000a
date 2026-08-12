@@ -1,22 +1,24 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { type Lang, t } from "@/lib/i18n";
-import { Menu, X } from "lucide-react";
+import { type Lang, t, LANGS } from "@/lib/i18n";
+import { Menu, X, Globe, Check } from "lucide-react";
 
 export function Header({ lang }: { lang: Lang }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const loc = useLocation();
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  useEffect(() => { setOpen(false); }, [loc.pathname]);
+  useEffect(() => { setOpen(false); setLangOpen(false); }, [loc.pathname]);
 
   const tr = t[lang].nav;
-  const otherLang: Lang = lang === "ar" ? "en" : "ar";
-  const otherPath = loc.pathname.replace(/^\/(ar|en)/, `/${otherLang}`) || `/${otherLang}`;
+  const current = LANGS.find((l) => l.code === lang) ?? LANGS[0];
+  const pathFor = (code: Lang) =>
+    loc.pathname.replace(/^\/(ar|en|es|fr|zh)/, `/${code}`) || `/${code}`;
 
   const links = [
     { to: `/${lang}`, label: tr.home, exact: true },
@@ -53,12 +55,33 @@ export function Header({ lang }: { lang: Lang }) {
           ))}
         </nav>
         <div className="flex items-center gap-3 text-xs">
-          <Link
-            to={otherPath}
-            className="rounded-full border border-cream/20 px-3 py-1 text-cream/80 hover:border-gold hover:text-gold transition"
-          >
-            {otherLang === "ar" ? "العربية" : "English"}
-          </Link>
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setLangOpen((v) => !v)}
+              aria-label="Change language"
+              aria-expanded={langOpen}
+              className="inline-flex items-center gap-1.5 rounded-full border border-cream/20 px-3 py-1 text-cream/80 hover:border-gold hover:text-gold transition"
+            >
+              <Globe size={13} />
+              <span>{current.short}</span>
+            </button>
+            {langOpen && (
+              <div className="absolute end-0 mt-2 w-40 overflow-hidden rounded-xl border border-white/10 bg-midnight/95 backdrop-blur-md shadow-xl">
+                {LANGS.map((l) => (
+                  <Link
+                    key={l.code}
+                    to={pathFor(l.code)}
+                    onClick={() => setLangOpen(false)}
+                    className="flex items-center justify-between px-4 py-2.5 text-[13px] text-cream/85 hover:bg-white/5 hover:text-gold transition"
+                  >
+                    <span>{l.label}</span>
+                    {l.code === lang && <Check size={13} className="text-gold" />}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}

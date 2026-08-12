@@ -1,6 +1,15 @@
-export type Lang = "ar" | "en";
+export type Lang = "ar" | "en" | "es" | "fr" | "zh";
 
-export const isLang = (s: string | undefined): s is Lang => s === "ar" || s === "en";
+export const LANGS: { code: Lang; label: string; short: string }[] = [
+  { code: "ar", label: "العربية", short: "AR" },
+  { code: "en", label: "English", short: "EN" },
+  { code: "es", label: "Español", short: "ES" },
+  { code: "fr", label: "Français", short: "FR" },
+  { code: "zh", label: "中文", short: "中文" },
+];
+
+export const isLang = (s: string | undefined): s is Lang =>
+  s === "ar" || s === "en" || s === "es" || s === "fr" || s === "zh";
 
 export const t = {
   ar: {
@@ -101,6 +110,156 @@ export const t = {
     footer: {
       rights: "All rights reserved",
       desc: "A personal travel archive documenting Ahmad's journeys from Bahrain to more than a hundred countries around the world.",
+    },
+  },
+  es: {
+    siteName: "Embajador del Amor",
+    tagline: "El viaje de Ahmad por el mundo",
+    nav: {
+      home: "Inicio",
+      explore: "Explorar",
+      continents: "Continentes",
+      countries: "Países",
+      itineraries: "Itinerarios",
+      stories: "Historias",
+      about: "Sobre Ahmad",
+    },
+    hero: {
+      title: "De Baréin al mundo",
+      sub: "El viaje de Ahmad para descubrir países, ciudades y culturas por todo el planeta.",
+      cta1: "Explora el viaje",
+      cta2: "Sobre Ahmad",
+    },
+    sections: {
+      introTitle: "Una historia que empezó con pasión",
+      introCta: "Sobre Ahmad",
+      byContinent: "Explora por continente",
+      viewAll: "Ver todos los destinos",
+      countries: "Países que Ahmad ha visitado",
+      countriesAll: "Ver todos los países",
+      featured: "Viaje destacado",
+      readStory: "Leer la historia",
+      searchPlaceholder: "Buscar un país",
+      cities: "Ciudades que visitó Ahmad",
+      attractions: "Lugares destacados",
+      culture: "Cultura y notas",
+      relatedItineraries: "Itinerarios relacionados",
+      discover: "Descubre el viaje",
+      world: "Mundo",
+      back: "Volver",
+    },
+    countriesPage: {
+      title: "Países que Ahmad ha visitado",
+      sub: "Más de cien países, documentados a lo largo de los años.",
+      all: "Todos los países",
+    },
+    about: {
+      title: "Ahmad Abdulrahman",
+      sub: "Del Reino de Baréin — creador del proyecto Embajador del Amor.",
+    },
+    footer: {
+      rights: "Todos los derechos reservados",
+      desc: "Un archivo personal de viajes que documenta los recorridos de Ahmad desde Baréin a más de cien países del mundo.",
+    },
+  },
+  fr: {
+    siteName: "Ambassadeur de l'Amour",
+    tagline: "Le voyage d'Ahmad autour du monde",
+    nav: {
+      home: "Accueil",
+      explore: "Explorer",
+      continents: "Continents",
+      countries: "Pays",
+      itineraries: "Itinéraires",
+      stories: "Récits",
+      about: "À propos d'Ahmad",
+    },
+    hero: {
+      title: "De Bahreïn au monde",
+      sub: "Le voyage d'Ahmad à la découverte des pays, des villes et des cultures du monde entier.",
+      cta1: "Explorer le voyage",
+      cta2: "À propos d'Ahmad",
+    },
+    sections: {
+      introTitle: "Une histoire née d'une passion",
+      introCta: "À propos d'Ahmad",
+      byContinent: "Explorer par continent",
+      viewAll: "Voir toutes les destinations",
+      countries: "Les pays visités par Ahmad",
+      countriesAll: "Voir tous les pays",
+      featured: "Voyage à la une",
+      readStory: "Lire le récit",
+      searchPlaceholder: "Rechercher un pays",
+      cities: "Les villes visitées par Ahmad",
+      attractions: "Lieux remarquables",
+      culture: "Culture et notes",
+      relatedItineraries: "Itinéraires liés",
+      discover: "Découvrir le voyage",
+      world: "Monde",
+      back: "Retour",
+    },
+    countriesPage: {
+      title: "Les pays visités par Ahmad",
+      sub: "Plus de cent pays, documentés au fil des années.",
+      all: "Tous les pays",
+    },
+    about: {
+      title: "Ahmad Abdulrahman",
+      sub: "Du Royaume de Bahreïn — fondateur du projet Ambassadeur de l'Amour.",
+    },
+    footer: {
+      rights: "Tous droits réservés",
+      desc: "Une archive de voyage personnelle documentant les périples d'Ahmad, de Bahreïn à plus de cent pays.",
+    },
+  },
+  zh: {
+    siteName: "爱的使者",
+    tagline: "艾哈迈德的环球之旅",
+    nav: {
+      home: "首页",
+      explore: "探索",
+      continents: "各大洲",
+      countries: "国家",
+      itineraries: "行程",
+      stories: "故事",
+      about: "关于艾哈迈德",
+    },
+    hero: {
+      title: "从巴林走向世界",
+      sub: "艾哈迈德的旅程，探索世界各地的国家、城市与文化。",
+      cta1: "开启旅程",
+      cta2: "关于艾哈迈德",
+    },
+    sections: {
+      introTitle: "始于热爱的故事",
+      introCta: "关于艾哈迈德",
+      byContinent: "按大洲探索",
+      viewAll: "查看所有目的地",
+      countries: "艾哈迈德到过的国家",
+      countriesAll: "查看所有国家",
+      featured: "精选旅程",
+      readStory: "阅读故事",
+      searchPlaceholder: "搜索国家",
+      cities: "艾哈迈德到过的城市",
+      attractions: "值得一看的地方",
+      culture: "文化与笔记",
+      relatedItineraries: "相关行程",
+      discover: "发现旅程",
+      world: "世界",
+      back: "返回",
+    },
+    countriesPage: {
+      title: "艾哈迈德到过的国家",
+      sub: "多年来记录的一百多个国家。",
+      all: "所有国家",
+    },
+    about: {
+      title: "艾哈迈德·阿卜杜勒拉赫曼",
+      sub: "来自巴林王国 —— “爱的使者”项目的创始人。",
+    },
+    footer: {
+      rights: "版权所有",
+      desc: "一份个人旅行档案，记录艾哈迈德从巴林出发、走过一百多个国家的旅程。",
     },
   },
 } as const;

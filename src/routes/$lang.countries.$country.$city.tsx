@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getCity } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
 import { getCityArticle, type ArticleLine } from "@/lib/city-articles";
+import { useTranslated } from "@/lib/useTranslated";
 
 const qo = (country: string, city: string) =>
   queryOptions({ queryKey: ["city", country, city], queryFn: () => getCity({ data: { country, city } }) });
@@ -21,7 +22,30 @@ function City() {
   const country: any = data.country;
   const tr = t[lang];
   const name = lang === "ar" ? city.name_ar : city.name_en;
-  const article = country.slug === "france" ? getCityArticle(city.slug, lang) : undefined;
+  const baseArticle =
+    country.slug === "france" ? getCityArticle(city.slug, lang === "ar" ? "ar" : "en") : undefined;
+  // Indexes of translatable (non-image) lines
+  const textIdx = useMemo(
+    () =>
+      baseArticle
+        ? baseArticle.lines.map((l, i) => (l.kind === "IMG" ? -1 : i)).filter((i) => i >= 0)
+        : [],
+    [baseArticle],
+  );
+  const sourceStrings = useMemo(
+    () => (baseArticle ? [baseArticle.title, ...textIdx.map((i) => baseArticle.lines[i].value)] : []),
+    [baseArticle, textIdx],
+  );
+  const translatedStrings = useTranslated(sourceStrings, lang);
+  const article = useMemo(() => {
+    if (!baseArticle) return undefined;
+    if (lang === "ar" || lang === "en") return baseArticle;
+    const lines = [...baseArticle.lines];
+    textIdx.forEach((i, k) => {
+      lines[i] = { ...lines[i], value: translatedStrings[k + 1] ?? lines[i].value };
+    });
+    return { ...baseArticle, title: translatedStrings[0] ?? baseArticle.title, lines };
+  }, [baseArticle, textIdx, translatedStrings, lang]);
   const heroImage = article?.heroImage ?? city.hero_image;
 
   // Collect all images from the article for the lightbox gallery.

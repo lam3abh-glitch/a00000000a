@@ -49,7 +49,7 @@ const copy = {
 
 export function TravelAssistant({ lang }: { lang: Lang }) {
   const rtl = lang === "ar";
-  const c = copy[lang];
+  const c = copy[lang === "ar" ? "ar" : "en"];
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Msg[]>([]);
@@ -173,7 +173,7 @@ export function TravelAssistant({ lang }: { lang: Lang }) {
 
             {messages.length === 0 && (
               <div className="flex flex-wrap gap-2 pt-1">
-                {c.suggestions.map((s) => (
+                {(c.suggestions as readonly string[]).map((s: string) => (
                   <button
                     key={s}
                     onClick={() => send(s)}

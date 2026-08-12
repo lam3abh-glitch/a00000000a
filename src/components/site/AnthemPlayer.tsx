@@ -1,6 +1,7 @@
+import type { Lang } from "@/lib/i18n";
 import { useEffect, useRef, useState } from "react";
 
-export function AnthemPlayer({ src, lang, title }: { src: string; lang: "ar" | "en"; title: string }) {
+export function AnthemPlayer({ src, lang, title }: { src: string; lang: Lang; title: string }) {
   const ref = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
 
