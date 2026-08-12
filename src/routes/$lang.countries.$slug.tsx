@@ -140,7 +140,7 @@ function Country() {
                 <div className="bg-white p-4 pb-16 shadow-2xl max-w-xs md:max-w-sm">
                   <img src={ahmedParis.url} alt="Ahmed in Paris" className="block w-full h-auto object-cover" loading="lazy" />
                   <div className="mt-4 text-center font-display text-midnight text-lg" style={{ fontFamily: "cursive" }}>
-                    Paris · باريس
+                    {tx("باريس · Paris", "Paris · باريس")}
                   </div>
                 </div>
               </div>
