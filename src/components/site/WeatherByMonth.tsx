@@ -1,4 +1,4 @@
-import { type Lang, L } from "@/lib/i18n";
+import { type Lang, L, tx } from "@/lib/i18n";
 
 type Month = {
   ar: string;
@@ -34,14 +34,14 @@ function tempColor(high: number) {
 }
 
 export function WeatherByMonth({ lang }: { lang: Lang }) {
-  const title = lang === "ar" ? "الطقس على مدار السنة" : "Weather through the year";
+  const title = tx(lang, "Weather through the year");
   const sub = lang === "ar"
     ? "متوسّط درجات الحرارة وهطول الأمطار في الإمارات لكل شهر."
     : "Average temperatures and rainfall in the UAE, month by month.";
-  const eyebrow = lang === "ar" ? "دليل الطقس" : "Climate guide";
-  const highLbl = lang === "ar" ? "عليا" : "High";
-  const lowLbl = lang === "ar" ? "دنيا" : "Low";
-  const rainLbl = lang === "ar" ? "أمطار" : "Rain";
+  const eyebrow = tx(lang, "Climate guide");
+  const highLbl = tx(lang, "High");
+  const lowLbl = tx(lang, "Low");
+  const rainLbl = tx(lang, "Rain");
 
   return (
     <section className="py-24 bg-cream">
@@ -91,19 +91,19 @@ export function WeatherByMonth({ lang }: { lang: Lang }) {
         <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.25em] text-charcoal/60">
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.85 0.06 85)" }} />
-            {lang === "ar" ? "معتدل" : "Mild"}
+            {tx(lang, "Mild")}
           </span>
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.80 0.10 75)" }} />
-            {lang === "ar" ? "دافئ" : "Warm"}
+            {tx(lang, "Warm")}
           </span>
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.72 0.13 55)" }} />
-            {lang === "ar" ? "حار" : "Hot"}
+            {tx(lang, "Hot")}
           </span>
           <span className="flex items-center gap-2">
             <span className="inline-block w-3 h-3" style={{ background: "oklch(0.62 0.15 40)" }} />
-            {lang === "ar" ? "شديد الحرارة" : "Very hot"}
+            {tx(lang, "Very hot")}
           </span>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { GlobeHero } from "@/components/site/GlobeHero";
 import { getHomeData } from "@/lib/content.functions";
-import { type Lang, t, L } from "@/lib/i18n";
+import { type Lang, t, L, tx } from "@/lib/i18n";
 import shapeAsia from "@/assets/continent-asia-australia.png";
 import shapeEurope from "@/assets/continent-europe.png";
 import shapeAfrica from "@/assets/continent-africa.png";
@@ -54,7 +54,7 @@ function Home() {
         <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-cols-1 md:grid-cols-12 items-end md:items-center gap-8 px-6 pb-16 md:pb-0 text-cream pointer-events-none">
           <div className="md:col-span-7 max-w-2xl fade-up pointer-events-auto">
             <div className="text-[11px] uppercase tracking-[0.4em] text-[#d4aa5a] mb-4">
-              {lang === "ar" ? "بحرين • العالم" : "Bahrain • World"}
+              {tx(lang, "Bahrain • World")}
             </div>
             <h1 className="font-display text-5xl md:text-7xl leading-[1.05] text-cream">
               {tr.hero.title}
@@ -82,7 +82,7 @@ function Home() {
             <img src="https://i0.wp.com/100region.com/wp-content/uploads/2022/01/img_1371.jpg" alt="Ahmad" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
           </div>
           <div>
-            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{lang === "ar" ? "عن أحمد" : "About Ahmad"}</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{tx(lang, "About Ahmad")}</div>
             <h2 className="font-display text-4xl md:text-5xl text-midnight">{tr.sections.introTitle}</h2>
             <div className="gold-divider w-24 my-8" />
             <p className="text-charcoal/80 leading-loose text-lg">
@@ -91,9 +91,9 @@ function Home() {
                 : "Ahmad Abdulrahman, from the Kingdom of Bahrain. He began travelling more than ten years ago with one goal: to visit a hundred countries and beyond. Today he documents what he has seen so others can benefit, building bridges of love and coexistence with each trip."}
             </p>
             <div className="mt-10 flex items-center gap-10">
-              <Stat n={`${data.countries.length}+`} l={lang === "ar" ? "دولة" : "Countries"} />
-              <Stat n={"4"} l={lang === "ar" ? "قارات" : "Continents"} />
-              <Stat n={"10+"} l={lang === "ar" ? "سنوات" : "Years"} />
+              <Stat n={`${data.countries.length}+`} l={tx(lang, "Countries")} />
+              <Stat n={"4"} l={tx(lang, "Continents")} />
+              <Stat n={"10+"} l={tx(lang, "Years")} />
             </div>
             <Link to="/$lang/about" params={{ lang }} className="mt-10 inline-block text-sm text-midnight border-b border-gold pb-1 hover:text-gold">
               {tr.sections.introCta} →
@@ -107,7 +107,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex items-end justify-between mb-14">
             <div>
-              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{lang === "ar" ? "القارات" : "Continents"}</div>
+              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{tx(lang, "Continents")}</div>
               <h2 className="font-display text-4xl md:text-5xl">{tr.sections.byContinent}</h2>
             </div>
           </div>
@@ -143,7 +143,7 @@ function Home() {
       <section className="bg-cream py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-16">
-            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{lang === "ar" ? "الوجهات" : "Destinations"}</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{tx(lang, "Destinations")}</div>
             <h2 className="font-display text-4xl md:text-5xl text-midnight">{tr.sections.countries}</h2>
             <div className="gold-divider w-24 mx-auto my-8" />
             <p className="text-charcoal/70 max-w-xl mx-auto">

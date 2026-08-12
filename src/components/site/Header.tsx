@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, t, tx } from "@/lib/i18n";
 import { Menu, X } from "lucide-react";
 
 export function Header({ lang }: { lang: Lang }) {
@@ -15,7 +15,7 @@ export function Header({ lang }: { lang: Lang }) {
   useEffect(() => { setOpen(false); }, [loc.pathname]);
 
   const tr = t[lang].nav;
-  const otherLang: Lang = lang === "ar" ? "en" : "ar";
+  const otherLang: Lang = tx(lang, "ar");
   const otherPath = loc.pathname.replace(/^\/(ar|en)/, `/${otherLang}`) || `/${otherLang}`;
 
   const links = [

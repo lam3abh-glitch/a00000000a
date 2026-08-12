@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getCity } from "@/lib/content.functions";
-import { type Lang, t, L } from "@/lib/i18n";
+import { type Lang, t, L, tx } from "@/lib/i18n";
 import { getCityArticle, type ArticleLine } from "@/lib/city-articles";
 
 const qo = (country: string, city: string) =>
@@ -105,7 +105,7 @@ function City() {
             type="button"
             onClick={() => openLightbox(line.value)}
             className="block w-full cursor-zoom-in overflow-hidden"
-            aria-label={lang === "ar" ? "فتح الصورة" : "Open image"}
+            aria-label={tx(lang, "Open image")}
           >
             <img
               src={line.value}
@@ -173,7 +173,7 @@ function City() {
       type="button"
       onClick={() => openLightbox(src)}
       className={`group relative block w-full overflow-hidden rounded-2xl bg-midnight/5 shadow-lg cursor-zoom-in ${className ?? ""}`}
-      aria-label={lang === "ar" ? "فتح الصورة" : "Open image"}
+      aria-label={tx(lang, "Open image")}
     >
       <img
         src={src}
@@ -321,7 +321,7 @@ function City() {
               <div className={`mx-auto max-w-6xl px-4 sm:px-6 mt-10 sm:mt-14 md:mt-20 ${lang === "ar" ? "text-right" : "text-left"}`}>
                 <div className="mb-8 sm:mb-10">
                   <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
-                    {lang === "ar" ? "أبرز المعالم" : "Highlights"}
+                    {tx(lang, "Highlights")}
                   </div>
                   <div className="gold-divider" />
                 </div>
@@ -343,7 +343,7 @@ function City() {
       {data.siblings.length > 0 && (
         <section className="pb-16 sm:pb-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4 sm:mb-6">{lang === "ar" ? "مدن أخرى" : "Other cities"}</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4 sm:mb-6">{tx(lang, "Other cities")}</div>
             {/* Mobile: horizontal snap carousel. Desktop: grid. */}
             <div className="flex sm:hidden gap-4 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {data.siblings.map((s: any) => (
@@ -378,7 +378,7 @@ function City() {
             params={{ lang, slug: country.slug }}
             className="inline-flex items-center justify-center border border-midnight/20 px-5 py-3 text-sm text-midnight hover:border-gold hover:text-gold transition min-h-[44px]"
           >
-            {lang === "ar" ? "العودة إلى فرنسا" : "Back to France"}
+            {tx(lang, "Back to France")}
           </Link>
         </div>
       </section>
@@ -394,7 +394,7 @@ function City() {
             type="button"
             onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             className="absolute top-4 right-4 h-11 w-11 rounded-full bg-cream/10 hover:bg-cream/20 text-cream text-2xl leading-none flex items-center justify-center"
-            aria-label={lang === "ar" ? "إغلاق" : "Close"}
+            aria-label={tx(lang, "Close")}
           >
             ×
           </button>
@@ -402,7 +402,7 @@ function City() {
             type="button"
             onClick={(e) => { e.stopPropagation(); prevImage(); }}
             className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-cream/10 hover:bg-cream/20 text-cream text-2xl leading-none flex items-center justify-center"
-            aria-label={lang === "ar" ? "السابق" : "Previous"}
+            aria-label={tx(lang, "Previous")}
           >
             ‹
           </button>
@@ -410,7 +410,7 @@ function City() {
             type="button"
             onClick={(e) => { e.stopPropagation(); nextImage(); }}
             className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-cream/10 hover:bg-cream/20 text-cream text-2xl leading-none flex items-center justify-center"
-            aria-label={lang === "ar" ? "التالي" : "Next"}
+            aria-label={tx(lang, "Next")}
           >
             ›
           </button>

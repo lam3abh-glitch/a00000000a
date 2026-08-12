@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getContinent } from "@/lib/content.functions";
-import { type Lang, t, L } from "@/lib/i18n";
+import { type Lang, t, L, tx } from "@/lib/i18n";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["continent", slug], queryFn: () => getContinent({ data: { slug } }) });
 
@@ -32,7 +32,7 @@ function Continent() {
           </div>
           <h1 className="font-display text-6xl md:text-8xl">{name}</h1>
           <p className="mt-6 max-w-2xl text-cream/70 leading-relaxed">{desc}</p>
-          <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">{data.countries.length} {lang === "ar" ? "دولة" : "countries"}</div>
+          <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">{data.countries.length} {tx(lang, "countries")}</div>
         </div>
       </section>
       <section className="py-24">

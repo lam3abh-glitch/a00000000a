@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { type Lang, L } from "@/lib/i18n";
+import { type Lang, L, tx } from "@/lib/i18n";
 import { getGuide, franceGuides } from "@/lib/france-guides";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
@@ -54,7 +54,7 @@ function GuidePage() {
   let paraCount = 0;
 
   return (
-    <div className="bg-cream" dir={ar ? "rtl" : "ltr"}>
+    <div className="bg-cream" dir={tx(lang, "ltr")}>
       <div className="fixed top-0 inset-x-0 z-50 h-[3px] bg-transparent">
         <div className="h-full bg-gold transition-[width] duration-150 ease-out" style={{ width: `${progress}%` }} />
       </div>
@@ -65,7 +65,7 @@ function GuidePage() {
         <div className="relative z-10 mx-auto max-w-4xl h-full flex flex-col justify-end px-5 sm:px-6 pb-10 sm:pb-14 text-cream">
           <div className="text-[11px] sm:text-xs text-cream/60 mb-3 flex flex-wrap items-center gap-x-2">
             <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className="hover:text-gold">
-              {ar ? "فرنسا" : "France"}
+              {tx(lang, "France")}
             </Link>
             <span>/</span>
             <span className="text-gold">{L(lang, g.kicker_ar, g.kicker_en)}</span>
@@ -74,7 +74,7 @@ function GuidePage() {
           <div className="mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-gold/70" />
           <div className="mt-5 hidden sm:flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-cream/50">
             <span className="h-4 w-px bg-gold/60 animate-pulse" />
-            {ar ? "تابع القراءة" : "Keep scrolling"}
+            {tx(lang, "Keep scrolling")}
           </div>
         </div>
       </section>
@@ -168,7 +168,7 @@ function GuidePage() {
       <section className="pb-16 sm:pb-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-6">
           <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] sm:tracking-[0.4em] text-gold mb-5 text-center">
-            {ar ? "أقسام أخرى" : "More sections"}
+            {tx(lang, "More sections")}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {others.map((o) => (
@@ -206,11 +206,11 @@ function GuidePage() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className={`shrink-0 transition-transform duration-300 ${ar ? "rotate-180 group-hover:-translate-x-1" : "group-hover:-translate-x-1"}`}
+              className={`shrink-0 transition-transform duration-300 ${tx(lang, "group-hover:-translate-x-1")}`}
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
-            <span>{ar ? "العودة إلى صفحة فرنسا" : "Back to France"}</span>
+            <span>{tx(lang, "Back to France")}</span>
           </Link>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { tx } from "@/lib/i18n";
 import { useEffect, useRef, useState } from "react";
 
 export function AnthemPlayer({ src, lang, title }: { src: string; lang: "ar" | "en"; title: string }) {
@@ -36,11 +37,11 @@ export function AnthemPlayer({ src, lang, title }: { src: string; lang: "ar" | "
         </button>
         <div className={lang === "ar" ? "text-right flex-1" : "text-left flex-1"}>
           <div className="text-[10px] uppercase tracking-[0.4em] text-gold">
-            {lang === "ar" ? "النشيد الوطني" : "National Anthem"}
+            {tx(lang, "National Anthem")}
           </div>
           <div className="font-display text-lg text-midnight leading-tight">{title}</div>
         </div>
-        <div className={lang === "ar" ? "pl-4" : "pr-4"}>
+        <div className={tx(lang, "pr-4")}>
           <div className="flex items-end gap-0.5 h-6">
             {[0,1,2,3,4].map((i) => (
               <span

@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getItinerary } from "@/lib/content.functions";
-import { type Lang, t, L } from "@/lib/i18n";
+import { type Lang, t, L, tx } from "@/lib/i18n";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["itinerary", slug], queryFn: () => getItinerary({ data: { slug } }) });
 
@@ -30,7 +30,7 @@ function Itinerary() {
             <span className="mx-2">/</span>
             <span className="text-gold">{tr.nav.itineraries}</span>
           </div>
-          <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{it.duration_days} {lang === "ar" ? "يوم" : "days"}</div>
+          <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{it.duration_days} {tx(lang, "days")}</div>
           <h1 className="font-display text-5xl md:text-7xl">{title}</h1>
           <p className="mt-6 max-w-2xl text-cream/70">{L(lang, it.summary_ar, it.summary_en)}</p>
         </div>
