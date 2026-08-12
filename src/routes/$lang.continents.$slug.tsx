@@ -2,6 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getContinent } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import { useTx } from "@/lib/ui-i18n";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["continent", slug], queryFn: () => getContinent({ data: { slug } }) });
 
@@ -12,11 +13,12 @@ export const Route = createFileRoute("/$lang/continents/$slug")({
 
 function Continent() {
   const { lang, slug } = useParams({ from: "/$lang/continents/$slug" }) as { lang: Lang; slug: string };
+  const tx = useTx(lang);
   const { data } = useSuspenseQuery(qo(slug));
   if (!data.continent) throw notFound();
   const cont: any = data.continent;
-  const name = lang === "ar" ? cont.name_ar : cont.name_en;
-  const desc = lang === "ar" ? cont.description_ar : cont.description_en;
+  const name = tx(cont.name_ar, cont.name_en);
+  const desc = tx(cont.description_ar, cont.description_en);
   const tr = t[lang];
 
   return (
@@ -32,7 +34,7 @@ function Continent() {
           </div>
           <h1 className="font-display text-6xl md:text-8xl">{name}</h1>
           <p className="mt-6 max-w-2xl text-cream/70 leading-relaxed">{desc}</p>
-          <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">{data.countries.length} {lang === "ar" ? "دولة" : "countries"}</div>
+          <div className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">{data.countries.length} {tx("دولة", "countries")}</div>
         </div>
       </section>
       <section className="py-24">
@@ -45,7 +47,7 @@ function Continent() {
                     <img
                       src={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png`}
                       srcSet={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w640/${c.iso2.toLowerCase()}.png 2x`}
-                      alt={lang === "ar" ? c.name_ar : c.name_en}
+                      alt={tx(c.name_ar, c.name_en)}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
@@ -56,7 +58,7 @@ function Continent() {
                   )}
                 </div>
                 <div className="mt-3 text-xs md:text-sm text-midnight group-hover:text-gold transition">
-                  {lang === "ar" ? c.name_ar : c.name_en}
+                  {tx(c.name_ar, c.name_en)}
                 </div>
               </Link>
             ))}

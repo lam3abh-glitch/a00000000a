@@ -3,6 +3,7 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { getCountriesAll } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import { useTx } from "@/lib/ui-i18n";
 
 const qo = queryOptions({ queryKey: ["countries-all"], queryFn: () => getCountriesAll() });
 
@@ -13,6 +14,7 @@ export const Route = createFileRoute("/$lang/countries/")({
 
 function Countries() {
   const { lang } = useParams({ from: "/$lang/countries/" }) as { lang: Lang };
+  const tx = useTx(lang);
   const { data } = useSuspenseQuery(qo);
   const [q, setQ] = useState("");
   const [cont, setCont] = useState<string>("all");
@@ -46,7 +48,7 @@ function Countries() {
             <FilterBtn active={cont === "all"} onClick={() => setCont("all")}>{tr.countriesPage.all}</FilterBtn>
             {data.continents.map((c: any) => (
               <FilterBtn key={c.slug} active={cont === c.slug} onClick={() => setCont(c.slug)}>
-                {lang === "ar" ? c.name_ar : c.name_en}
+                {tx(c.name_ar, c.name_en)}
               </FilterBtn>
             ))}
           </div>
@@ -59,7 +61,7 @@ function Countries() {
                   <img
                     src={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png`}
                     srcSet={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w640/${c.iso2.toLowerCase()}.png 2x`}
-                    alt={lang === "ar" ? c.name_ar : c.name_en}
+                    alt={tx(c.name_ar, c.name_en)}
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -70,7 +72,7 @@ function Countries() {
                 )}
               </div>
               <div className="mt-3 text-xs md:text-sm text-midnight group-hover:text-gold transition">
-                {lang === "ar" ? c.name_ar : c.name_en}
+                {tx(c.name_ar, c.name_en)}
               </div>
             </Link>
           ))}

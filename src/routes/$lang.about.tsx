@@ -1,5 +1,6 @@
 import { createFileRoute, useParams } from "@tanstack/react-router";
 import { type Lang, t } from "@/lib/i18n";
+import { useTx } from "@/lib/ui-i18n";
 
 export const Route = createFileRoute("/$lang/about")({
   component: About,
@@ -7,6 +8,7 @@ export const Route = createFileRoute("/$lang/about")({
 
 function About() {
   const { lang } = useParams({ from: "/$lang/about" }) as { lang: Lang };
+  const tx = useTx(lang);
   return (
     <div className="bg-cream pt-32 pb-24 min-h-screen">
       <div className="mx-auto max-w-4xl px-6 grid md:grid-cols-5 gap-12">
@@ -18,19 +20,24 @@ function About() {
           <h1 className="font-display text-5xl text-midnight">{t[lang].about.title}</h1>
           <div className="gold-divider w-24 my-8" />
           <div className="space-y-6 text-lg leading-loose text-charcoal/80">
-            {lang === "ar" ? (
-              <>
-                <p>أحمد عبد الرحمن محمد، من مملكة البحرين. بدأت هوايتي للسفر والترحال قبل أكثر من عشر سنوات، بهدف واضح: زيارة مئة دولة وأكثر. وللهِ الحمد، تمكنت مؤخراً من إتمام هذا الهدف.</p>
-                <p>أعمل اليوم على توثيق رحلاتي عبر مختلف وسائل التواصل ليستفيد منها الآخرون، ولنبني معاً علاقات محبة وتواصل أساسها السلام والتعايش. يسعدني تواصلكم والردّ على استفساراتكم في كل ما يخصّ السفر والترحال.</p>
-                <p className="font-display text-2xl text-midnight">«ما أضيق العيش لولا فسحة السفر»</p>
-              </>
-            ) : (
-              <>
-                <p>Ahmad Abdulrahman Mohammed, from the Kingdom of Bahrain. I began travelling more than ten years ago with one clear goal: to visit a hundred countries and beyond. By God's grace, I recently completed that goal.</p>
-                <p>Today I document my journeys across social platforms so others can benefit, and so that together we can build relationships of love and connection rooted in peace and coexistence. I'm always glad to hear from travellers and answer questions about the road.</p>
-                <p className="font-display text-2xl text-midnight">"How narrow life would be, were it not for the openness of travel."</p>
-              </>
-            )}
+            <p>
+              {tx(
+                "أحمد عبد الرحمن محمد، من مملكة البحرين. بدأت هوايتي للسفر والترحال قبل أكثر من عشر سنوات، بهدف واضح: زيارة مئة دولة وأكثر. وللهِ الحمد، تمكنت مؤخراً من إتمام هذا الهدف.",
+                "Ahmad Abdulrahman Mohammed, from the Kingdom of Bahrain. I began travelling more than ten years ago with one clear goal: to visit a hundred countries and beyond. By God's grace, I recently completed that goal.",
+              )}
+            </p>
+            <p>
+              {tx(
+                "أعمل اليوم على توثيق رحلاتي عبر مختلف وسائل التواصل ليستفيد منها الآخرون، ولنبني معاً علاقات محبة وتواصل أساسها السلام والتعايش. يسعدني تواصلكم والردّ على استفساراتكم في كل ما يخصّ السفر والترحال.",
+                "Today I document my journeys across social platforms so others can benefit, and so that together we can build relationships of love and connection rooted in peace and coexistence. I'm always glad to hear from travellers and answer questions about the road.",
+              )}
+            </p>
+            <p className="font-display text-2xl text-midnight">
+              {tx(
+                "«ما أضيق العيش لولا فسحة السفر»",
+                "\u201cHow narrow life would be, were it not for the openness of travel.\u201d",
+              )}
+            </p>
           </div>
         </div>
       </div>

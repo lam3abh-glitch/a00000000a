@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { type Lang } from "@/lib/i18n";
 import { getGuide, franceGuides } from "@/lib/france-guides";
+import { useTx } from "@/lib/ui-i18n";
 import { useTranslated } from "@/lib/useTranslated";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
@@ -36,6 +37,7 @@ function GuidePage() {
   const g = getGuide(topic);
   if (!g) throw notFound();
   const ar = lang === "ar";
+  const ui = useTx(lang);
 
   // Machine-translate the English source text for languages beyond ar/en.
   const sourceStrings = useMemo(() => {
@@ -234,7 +236,7 @@ function GuidePage() {
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
-            <span>{ar ? "العودة إلى صفحة فرنسا" : "Back to France"}</span>
+            <span>{ui("العودة إلى صفحة فرنسا", "Back to France")}</span>
           </Link>
         </div>
       </section>
