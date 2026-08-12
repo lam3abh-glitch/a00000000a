@@ -1,14 +1,55 @@
 import { useEffect, useRef, useState } from "react";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 
-import { type Lang, t } from "@/lib/i18n";
+import type { Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
+const copy = {
+  ar: {
+    button: "اسأل المساعد السياحي",
+    title: "المساعد السياحي الذكي",
+    subtitle: "أرشيف سفير المحبة + مصادر موثوقة",
+    welcome:
+      "أهلاً بك. أقدر أساعدك في أي سؤال عن السفر، الدول، المدن، الثقافات، الأماكن السياحية، أو تخطيط الرحلات باستخدام أرشيف سفير المحبة ومصادر موثوقة من الإنترنت.",
+    placeholder: "اكتب سؤالك عن السفر…",
+    suggestions: [
+      "شنو أفضل وقت أزور فرنسا؟",
+      "قارن لي بين باريس وأنسي",
+      "شنو الأماكن المهمة في شامونيه؟",
+      "أبي دولة فيها طبيعة وثلج",
+      "شنو أشهر أكلات اليابان؟",
+      "هل النرويج مناسبة للعوائل؟",
+      "خطط لي رحلة ٧ أيام في فرنسا",
+      "شنو المدن اللي ذكرها أحمد في فرنسا؟",
+    ],
+    error: "صار خطأ. جرّب مرة ثانية.",
+    close: "إغلاق",
+  },
+  en: {
+    button: "Ask the travel assistant",
+    title: "AI Travel Assistant",
+    subtitle: "Safir Al Mohabba archive + reliable sources",
+    welcome:
+      "Hi. I can help with travel questions, countries, cities, cultures, attractions, and trip ideas using the Safir Al Mohabba archive and reliable internet sources.",
+    placeholder: "Ask a travel question…",
+    suggestions: [
+      "What should I visit in France?",
+      "Compare Japan and South Korea",
+      "Best time to visit Switzerland",
+      "What is the culture like in Morocco?",
+      "Plan a 7-day trip in France",
+      "Which cities did Ahmad cover in France?",
+    ],
+    error: "Something went wrong. Please try again.",
+    close: "Close",
+  },
+} as const;
+
 export function TravelAssistant({ lang }: { lang: Lang }) {
   const rtl = lang === "ar";
-  const c = t[lang].assistant;
+  const c = copy[lang];
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Msg[]>([]);
@@ -132,7 +173,7 @@ export function TravelAssistant({ lang }: { lang: Lang }) {
 
             {messages.length === 0 && (
               <div className="flex flex-wrap gap-2 pt-1">
-                {c.suggestions.map((s: string) => (
+                {c.suggestions.map((s) => (
                   <button
                     key={s}
                     onClick={() => send(s)}

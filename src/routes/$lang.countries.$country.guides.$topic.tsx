@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { type Lang, L, tx, dir } from "@/lib/i18n";
+import { type Lang } from "@/lib/i18n";
 import { getGuide, franceGuides } from "@/lib/france-guides";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
@@ -35,7 +35,7 @@ function GuidePage() {
   const g = getGuide(topic);
   if (!g) throw notFound();
   const ar = lang === "ar";
-  const title = L(lang, g.title_ar, g.title_en);
+  const title = ar ? g.title_ar : g.title_en;
   const others = franceGuides.filter((o) => o.slug !== g.slug);
   const [progress, setProgress] = useState(0);
 
@@ -54,7 +54,7 @@ function GuidePage() {
   let paraCount = 0;
 
   return (
-    <div className="bg-cream" dir={dir(lang)}>
+    <div className="bg-cream" dir={ar ? "rtl" : "ltr"}>
       <div className="fixed top-0 inset-x-0 z-50 h-[3px] bg-transparent">
         <div className="h-full bg-gold transition-[width] duration-150 ease-out" style={{ width: `${progress}%` }} />
       </div>
@@ -65,16 +65,16 @@ function GuidePage() {
         <div className="relative z-10 mx-auto max-w-4xl h-full flex flex-col justify-end px-5 sm:px-6 pb-10 sm:pb-14 text-cream">
           <div className="text-[11px] sm:text-xs text-cream/60 mb-3 flex flex-wrap items-center gap-x-2">
             <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className="hover:text-gold">
-              {tx(lang, "France")}
+              {ar ? "فرنسا" : "France"}
             </Link>
             <span>/</span>
-            <span className="text-gold">{L(lang, g.kicker_ar, g.kicker_en)}</span>
+            <span className="text-gold">{ar ? g.kicker_ar : g.kicker_en}</span>
           </div>
           <h1 className="font-display text-[26px] leading-snug sm:text-4xl md:text-5xl md:leading-tight">{title}</h1>
           <div className="mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-gold/70" />
           <div className="mt-5 hidden sm:flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-cream/50">
             <span className="h-4 w-px bg-gold/60 animate-pulse" />
-            {tx(lang, "Keep scrolling")}
+            {ar ? "تابع القراءة" : "Keep scrolling"}
           </div>
         </div>
       </section>
@@ -98,7 +98,7 @@ function GuidePage() {
                   {String(n).padStart(2, "0")}
                 </span>
                 <div className="min-w-0">
-                  <h2 className="font-display text-xl leading-snug sm:text-3xl text-midnight">{L(lang, b.ar, b.en)}</h2>
+                  <h2 className="font-display text-xl leading-snug sm:text-3xl text-midnight">{ar ? b.ar : b.en}</h2>
                   <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
                 </div>
               </motion.div>
@@ -113,7 +113,7 @@ function GuidePage() {
                   paraCount === 1 && headingCount > 0 ? "text-charcoal" : ""
                 }`}
               >
-                {L(lang, b.ar, b.en)}
+                {ar ? b.ar : b.en}
               </p>
             );
           }
@@ -135,14 +135,14 @@ function GuidePage() {
                     className="w-full max-h-[46vh] sm:max-h-[62vh] object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03]"
                   />
                 </div>
-                {(L(lang, b.cap_ar, b.cap_en)) && (
+                {(ar ? b.cap_ar : b.cap_en) && (
                   <figcaption className="mt-3 px-5 sm:px-0 text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60">
-                    {L(lang, b.cap_ar, b.cap_en)}
+                    {ar ? b.cap_ar : b.cap_en}
                   </figcaption>
                 )}
               </motion.figure>
             );
-          const items: string[] = (ar ? b.ar : b.en).map((it) => (lang === "ar" || lang === "en" ? it : tx(lang, it)));
+          const items: string[] = ar ? b.ar : b.en;
           return (
             <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
               {items.map((it, j) => (
@@ -168,7 +168,7 @@ function GuidePage() {
       <section className="pb-16 sm:pb-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-6">
           <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] sm:tracking-[0.4em] text-gold mb-5 text-center">
-            {tx(lang, "More sections")}
+            {ar ? "أقسام أخرى" : "More sections"}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {others.map((o) => (
@@ -181,7 +181,7 @@ function GuidePage() {
                 <img src={o.image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent" />
                 <div className="relative z-10 p-4 min-w-0">
-                  <div className="font-display text-base sm:text-lg text-cream leading-snug">{L(lang, o.title_ar, o.title_en)}</div>
+                  <div className="font-display text-base sm:text-lg text-cream leading-snug">{ar ? o.title_ar : o.title_en}</div>
                 </div>
               </Link>
             ))}
@@ -210,7 +210,7 @@ function GuidePage() {
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
-            <span>{tx(lang, "Back to France")}</span>
+            <span>{ar ? "العودة إلى صفحة فرنسا" : "Back to France"}</span>
           </Link>
         </div>
       </section>

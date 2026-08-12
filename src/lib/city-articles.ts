@@ -606,7 +606,6 @@ P|يقع فندق أوبرج دو بوا بران على بعد 500 متر من 
 // English translations of every article line, aligned by index with the Arabic
 // lines above (IMG lines keep their original URLs).
 import EN from "./city-articles-en.json";
-import { tx, isLang, type Lang } from "./i18n";
 
 const EN_ARTICLES = EN as Record<string, { title: string; values: string[] }>;
 
@@ -616,13 +615,12 @@ export function getCityArticle(slug: string, lang: string): CityArticle | undefi
   if (lang === "ar") return base;
   const en = EN_ARTICLES[slug];
   if (!en) return base;
-  const to = (source: string) => (isLang(lang) && lang !== "en" ? tx(lang as Lang, source) : source);
   return {
     ...base,
-    title: to(en.title || base.title),
+    title: en.title || base.title,
     lines: base.lines.map((line, i) => ({
       kind: line.kind,
-      value: line.kind === "IMG" ? line.value : to(en.values[i] ?? line.value),
+      value: line.kind === "IMG" ? line.value : (en.values[i] ?? line.value),
     })),
   };
 }

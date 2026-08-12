@@ -1,10 +1,9 @@
-import { type Lang } from "@/lib/i18n";
 import { useEffect, useRef, useState, useMemo } from "react";
 import type { ComponentType } from "react";
 
 type Pt = { lat: number; lng: number; name: string; slug: string };
 
-export function GlobeHero({ points, lang }: { points: Pt[]; lang: Lang }) {
+export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<any>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });

@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getCountry } from "@/lib/content.functions";
-import { type Lang, t, L, tx } from "@/lib/i18n";
+import { type Lang, t } from "@/lib/i18n";
 import { WeatherByMonth } from "@/components/site/WeatherByMonth";
 import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
@@ -24,7 +24,7 @@ function Country() {
   if (!data.country) throw notFound();
   const c: any = data.country;
   const tr = t[lang];
-  const name = L(lang, c.name_ar, c.name_en);
+  const name = lang === "ar" ? c.name_ar : c.name_en;
   const continent = c.continent;
 
   return (
@@ -38,7 +38,7 @@ function Country() {
             <Link to="/$lang" params={{ lang }} className="hover:text-gold">{tr.sections.world}</Link>
             <span className="mx-2">/</span>
             <Link to="/$lang/continents/$slug" params={{ lang, slug: continent.slug }} className="hover:text-gold">
-              {L(lang, continent.name_ar, continent.name_en)}
+              {lang === "ar" ? continent.name_ar : continent.name_en}
             </Link>
             <span className="mx-2">/</span>
             <span className="text-gold">{name}</span>
@@ -50,26 +50,26 @@ function Country() {
           {(() => {
             const stats = c.slug === "france"
               ? [
-                  { label: tr.labels.capital, value: L(lang, c.capital_ar, c.capital_en) },
-                  { label: tr.labels.currency, value: tr.france.euro },
-                  { label: tr.labels.population, value: tr.france.population },
-                  { label: tr.labels.area, value: tr.france.area },
-                  { label: tr.labels.religion, value: tr.france.religion },
-                  { label: tr.labels.founded, value: tr.france.founded },
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو (€)", value_en: "Euro (€)" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "٦٧٫١ مليون", value_en: "67.1 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "٦٧٤٬٨٤٣ كم²", value_en: "674,843 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "١٩٥٨", value_en: "1958" },
                 ]
               : [
-                  { label: tr.labels.capital, value: L(lang, c.capital_ar, c.capital_en) },
-                  { label: tr.labels.currency, value: tx(lang, c.currency ?? "") },
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: c.currency, value_en: c.currency },
                 ];
             return (
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-px bg-cream/10 border border-cream/10 max-w-4xl">
                 {stats.map((s, i) => (
                   <div key={i} className={`bg-midnight/40 backdrop-blur-sm px-4 py-3 ${lang === "ar" ? "text-right" : "text-left"}`}>
                     <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-1">
-                      {s.label}
+                      {lang === "ar" ? s.label_ar : s.label_en}
                     </div>
                     <div className="text-sm text-cream font-medium leading-tight">
-                      {s.value}
+                      {lang === "ar" ? s.value_ar : s.value_en}
                     </div>
                   </div>
                 ))}
@@ -147,10 +147,10 @@ function Country() {
             {/* Intro text */}
             <div className={lang === "ar" ? "text-right" : "text-left"}>
               <span className="inline-block bg-midnight text-cream text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[-2deg] mb-6">
-                {tx(lang, "★ Introduction")}
+                {lang === "ar" ? "★ مقدّمة" : "★ Introduction"}
               </span>
               <p className="font-display text-3xl md:text-4xl text-midnight leading-snug whitespace-pre-line">
-                {L(lang, c.intro_ar, c.intro_en)}
+                {lang === "ar" ? c.intro_ar : c.intro_en}
               </p>
             </div>
           </div>
@@ -159,12 +159,14 @@ function Country() {
           <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
             <div className={`flex items-center gap-3 mb-4 ${lang === "ar" ? "flex-row-reverse" : "flex-row"}`}>
               <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-mono">
-                {tx(lang, "00 · About")}
+                {lang === "ar" ? "٠٠ · نبذة" : "00 · About"}
               </span>
               <span className="h-px flex-1 bg-midnight/10" />
             </div>
             <p className={`font-body text-base md:text-lg text-midnight/85 leading-relaxed ${lang === "ar" ? "text-right" : "text-left"}`}>
-              {t[lang].france.about}
+              {lang === "ar"
+                ? "فرنسا جمهورية دستورية في غرب أوروبا، شعارها حرية ومساواة وأخوة. بلد قديم يعود تكوينه للعصور الوسطى، وصل إلى أوج قوته في القرن 19 والقرن 20، وامتلك ثاني أكبر إمبراطورية استعمارية عام 1950. وهي من مؤسسي الاتحاد الأوروبي وأحد الأعضاء الدائمين في مجلس الأمن الدولي."
+                : "France is a constitutional republic in Western Europe. Its motto is Liberty, Equality, and Fraternity. An ancient country formed in the Middle Ages, it reached its peak in the 19th and 20th centuries and held the second-largest colonial empire in 1950. It is a founding member of the European Union and a permanent member of the UN Security Council."}
             </p>
           </div>
 
@@ -173,7 +175,7 @@ function Country() {
             <AnthemPlayer
               src={franceAnthem.url}
               lang={lang}
-              title={tx(lang, "La Marseillaise")}
+              title={lang === "ar" ? "لا مارسييز" : "La Marseillaise"}
             />
           </div>
 
@@ -182,33 +184,33 @@ function Country() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="group relative bg-white border border-midnight/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-gold font-mono z-10">
-                  {tx(lang, "01 · Fact")}
+                  {lang === "ar" ? "٠١ · حقيقة" : "01 · Fact"}
                 </div>
                 <div className="pt-16 pb-8 px-8 flex items-center justify-center bg-gradient-to-b from-cream to-white min-h-[280px]">
                   <img src={franceEmblem.url} alt="France emblem" loading="lazy" className="max-h-56 w-auto object-contain drop-shadow-md" />
                 </div>
                 <div className={`border-t border-midnight/10 px-6 py-4 ${lang === "ar" ? "text-right" : "text-left"}`}>
                   <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50 mb-1">
-                    {tx(lang, "National Emblem")}
+                    {lang === "ar" ? "الشعار الوطني" : "National Emblem"}
                   </div>
                   <div className="font-display text-xl text-midnight">
-                    {tx(lang, "Emblem of the French Republic")}
+                    {lang === "ar" ? "شعار الجمهورية الفرنسية" : "Emblem of the French Republic"}
                   </div>
                 </div>
               </div>
               <div className="group relative bg-white border border-midnight/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-gold font-mono z-10">
-                  {tx(lang, "02 · Fact")}
+                  {lang === "ar" ? "٠٢ · حقيقة" : "02 · Fact"}
                 </div>
                 <div className="pt-12 pb-4 px-4 flex items-center justify-center bg-gradient-to-b from-cream to-white min-h-[280px]">
                   <img src={franceMap.url} alt="France map" loading="lazy" className="max-h-64 w-auto object-contain" />
                 </div>
                 <div className={`border-t border-midnight/10 px-6 py-4 ${lang === "ar" ? "text-right" : "text-left"}`}>
                   <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50 mb-1">
-                    {tx(lang, "Geography")}
+                    {lang === "ar" ? "الموقع الجغرافي" : "Geography"}
                   </div>
                   <div className="font-display text-xl text-midnight">
-                    {tx(lang, "France on the map · Capital Paris")}
+                    {lang === "ar" ? "فرنسا على الخريطة · العاصمة باريس" : "France on the map · Capital Paris"}
                   </div>
                 </div>
               </div>
@@ -219,7 +221,7 @@ function Country() {
           <div className="relative z-10 mt-16 mx-auto max-w-4xl px-6">
             <div className={`mb-4 flex items-center gap-3 ${lang === "ar" ? "justify-end" : "justify-start"}`}>
               <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-mono">
-                {tx(lang, "03 · Watch")}
+                {lang === "ar" ? "٠٣ · مشاهدة" : "03 · Watch"}
               </span>
               <span className="h-px flex-1 bg-midnight/10" />
             </div>
@@ -234,7 +236,7 @@ function Country() {
               />
             </div>
             <div className={`mt-3 text-xs text-charcoal/60 ${lang === "ar" ? "text-right" : "text-left"}`}>
-              {tx(lang, "A glimpse of France")}
+              {lang === "ar" ? "لمحة عن فرنسا" : "A glimpse of France"}
             </div>
           </div>
 
@@ -243,9 +245,9 @@ function Country() {
       ) : (
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{tx(lang, "Introduction")}</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{lang === "ar" ? "مقدّمة" : "Introduction"}</div>
             <p className="font-display text-2xl md:text-3xl text-midnight leading-relaxed">
-              {L(lang, c.intro_ar, c.intro_en)}
+              {lang === "ar" ? c.intro_ar : c.intro_en}
             </p>
             <div className="gold-divider w-24 mx-auto mt-10" />
           </div>
@@ -257,7 +259,7 @@ function Country() {
         <section className="py-20 bg-sand/20">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 text-center">
-              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{tx(lang, "Cities")}</div>
+              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{lang === "ar" ? "المدن" : "Cities"}</div>
               <h2 className="font-display text-4xl text-midnight">{tr.sections.cities}</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -282,11 +284,11 @@ function Country() {
                   </div>
                   <div className="relative z-10 w-full p-4 text-center">
                     <div className="font-display text-xl md:text-2xl text-cream leading-tight">
-                      {L(lang, city.name_ar, city.name_en)}
+                      {lang === "ar" ? city.name_ar : city.name_en}
                     </div>
                     <div className="mt-2 mx-auto h-px w-8 bg-gold/70 group-hover:w-16 transition-all duration-500" />
                     <div className="mt-2 text-[10px] uppercase tracking-[0.3em] text-cream/60 group-hover:text-gold transition-colors">
-                      {tx(lang, "Explore →")}
+                      {lang === "ar" ? "اكتشف ←" : "Explore →"}
                     </div>
                   </div>
                 </Link>
@@ -302,10 +304,10 @@ function Country() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 text-center">
               <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
-                {tx(lang, "Sections")}
+                {lang === "ar" ? "أقسام" : "Sections"}
               </div>
               <h2 className="font-display text-4xl text-midnight">
-                {tx(lang, "More about France")}
+                {lang === "ar" ? "المزيد عن فرنسا" : "More about France"}
               </h2>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -328,13 +330,13 @@ function Country() {
                   </div>
                   <div className={`relative z-10 w-full p-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
                     <div className="text-[10px] uppercase tracking-[0.35em] text-gold/90 mb-2">
-                      {L(lang, g.kicker_ar, g.kicker_en)}
+                      {lang === "ar" ? g.kicker_ar : g.kicker_en}
                     </div>
                     <div className="font-display text-2xl md:text-3xl text-cream leading-snug">
-                      {L(lang, g.title_ar, g.title_en)}
+                      {lang === "ar" ? g.title_ar : g.title_en}
                     </div>
                     <div className="mt-3 text-[10px] uppercase tracking-[0.3em] text-cream/60 group-hover:text-gold transition-colors">
-                      {tx(lang, "Read →")}
+                      {lang === "ar" ? "اقرأ ←" : "Read →"}
                     </div>
                   </div>
                 </Link>
@@ -355,8 +357,8 @@ function Country() {
                 <div className="space-y-3">
                   {data.itineraries.map((i: any) => (
                     <Link key={i.slug} to="/$lang/itineraries/$slug" params={{ lang, slug: i.slug }} className="block border-t border-sand pt-3 hover:text-gold">
-                      <div className="font-display text-xl text-midnight">{L(lang, i.title_ar, i.title_en)}</div>
-                      <div className="text-xs text-charcoal/60 mt-1">{i.duration_days} {tx(lang, "days")}</div>
+                      <div className="font-display text-xl text-midnight">{lang === "ar" ? i.title_ar : i.title_en}</div>
+                      <div className="text-xs text-charcoal/60 mt-1">{i.duration_days} {lang === "ar" ? "أيام" : "days"}</div>
                     </Link>
                   ))}
                 </div>
@@ -368,7 +370,7 @@ function Country() {
                 <div className="space-y-3">
                   {data.articles.map((a: any) => (
                     <Link key={a.slug} to={a.kind === "story" ? "/$lang/stories/$slug" : "/$lang/cultures/$slug"} params={{ lang, slug: a.slug }} className="block border-t border-sand pt-3 hover:text-gold">
-                      <div className="font-display text-xl text-midnight">{L(lang, a.title_ar, a.title_en)}</div>
+                      <div className="font-display text-xl text-midnight">{lang === "ar" ? a.title_ar : a.title_en}</div>
                       <div className="text-xs text-charcoal/60 mt-1 uppercase tracking-wider">{a.kind}</div>
                     </Link>
                   ))}

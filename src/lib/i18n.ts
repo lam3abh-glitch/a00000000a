@@ -1,59 +1,108 @@
-import frDict from "./translations/fr.json";
-import esDict from "./translations/es.json";
-import zhDict from "./translations/zh.json";
-import { ar, type UI } from "./ui/ar";
-import { en } from "./ui/en";
-import { fr } from "./ui/fr";
-import { es } from "./ui/es";
-import { zh } from "./ui/zh";
+export type Lang = "ar" | "en";
 
-export type Lang = "ar" | "en" | "fr" | "es" | "zh";
+export const isLang = (s: string | undefined): s is Lang => s === "ar" || s === "en";
 
-export const LANGS: { code: Lang; label: string }[] = [
-  { code: "ar", label: "العربية" },
-  { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
-  { code: "es", label: "Español" },
-  { code: "zh", label: "中文" },
-];
-
-export const isLang = (s: string | undefined): s is Lang =>
-  s === "ar" || s === "en" || s === "fr" || s === "es" || s === "zh";
+export const t = {
+  ar: {
+    siteName: "سفير المحبة",
+    tagline: "رحلة أحمد حول العالم",
+    nav: {
+      home: "الرئيسية",
+      explore: "استكشف العالم",
+      continents: "القارات",
+      countries: "الدول",
+      itineraries: "البرامج السياحية",
+      stories: "القصص والمغامرات",
+      about: "عن أحمد",
+    },
+    hero: {
+      title: "من البحرين إلى العالم",
+      sub: "رحلة أحمد لاكتشاف الدول والمدن والثقافات حول العالم",
+      cta1: "استكشف الرحلة",
+      cta2: "تعرف على أحمد",
+    },
+    sections: {
+      introTitle: "قصة بدأت بشغف",
+      introCta: "تعرف على أحمد",
+      byContinent: "استكشف العالم حسب القارة",
+      viewAll: "عرض جميع الوجهات",
+      countries: "الدول التي زارها أحمد",
+      countriesAll: "عرض جميع الدول",
+      featured: "قصة مختارة",
+      readStory: "اقرأ القصة",
+      searchPlaceholder: "ابحث عن دولة",
+      cities: "المدن التي زارها أحمد",
+      attractions: "أبرز الأماكن",
+      culture: "ثقافة ومعلومات",
+      relatedItineraries: "برامج سياحية مرتبطة",
+      discover: "اكتشف الرحلة",
+      world: "العالم",
+      back: "رجوع",
+    },
+    countriesPage: {
+      title: "الدول التي زارها أحمد",
+      sub: "أكثر من مئة دولة وثّقها أحمد على مدى سنوات.",
+      all: "جميع الدول",
+    },
+    about: {
+      title: "أحمد عبد الرحمن",
+      sub: "من مملكة البحرين، صاحب مشروع سفير المحبة.",
+    },
+    footer: {
+      rights: "جميع الحقوق محفوظة",
+      desc: "أرشيف شخصي للسفر، يوثّق رحلات أحمد من البحرين إلى أكثر من مئة دولة حول العالم.",
+    },
+  },
+  en: {
+    siteName: "Ambassador of Love",
+    tagline: "Ahmad's journey around the world",
+    nav: {
+      home: "Home",
+      explore: "Explore",
+      continents: "Continents",
+      countries: "Countries",
+      itineraries: "Itineraries",
+      stories: "Stories",
+      about: "About Ahmad",
+    },
+    hero: {
+      title: "From Bahrain to the world",
+      sub: "Ahmad's journey to discover countries, cities, and cultures across the globe.",
+      cta1: "Explore the journey",
+      cta2: "About Ahmad",
+    },
+    sections: {
+      introTitle: "A story that began with passion",
+      introCta: "About Ahmad",
+      byContinent: "Explore by continent",
+      viewAll: "View all destinations",
+      countries: "Countries Ahmad has visited",
+      countriesAll: "View all countries",
+      featured: "Featured journey",
+      readStory: "Read the story",
+      searchPlaceholder: "Search for a country",
+      cities: "Cities Ahmad visited",
+      attractions: "Notable places",
+      culture: "Culture & notes",
+      relatedItineraries: "Related itineraries",
+      discover: "Discover the journey",
+      world: "World",
+      back: "Back",
+    },
+    countriesPage: {
+      title: "Countries Ahmad has visited",
+      sub: "More than a hundred countries, documented over years.",
+      all: "All countries",
+    },
+    about: {
+      title: "Ahmad Abdulrahman",
+      sub: "From the Kingdom of Bahrain — founder of the Ambassador of Love project.",
+    },
+    footer: {
+      rights: "All rights reserved",
+      desc: "A personal travel archive documenting Ahmad's journeys from Bahrain to more than a hundred countries around the world.",
+    },
+  },
+} as const;
 
 export const dir = (lang: Lang) => (lang === "ar" ? "rtl" : "ltr");
-
-export const htmlLang = (lang: Lang) =>
-  ({ ar: "ar", en: "en", fr: "fr", es: "es", zh: "zh-Hans" })[lang];
-
-export const locale = (lang: Lang) =>
-  ({ ar: "ar", en: "en-GB", fr: "fr-FR", es: "es-ES", zh: "zh-CN" })[lang];
-
-/* Content translations (database rows, city articles, France guides). */
-const DICTS: Record<string, Record<string, string>> = {
-  fr: frDict as Record<string, string>,
-  es: esDict as Record<string, string>,
-  zh: zhDict as Record<string, string>,
-};
-
-/** Translate content that exists in Arabic + English into the active language. */
-export function L(lang: Lang, arText?: string | null, enText?: string | null): string {
-  const arabic = arText ?? "";
-  const english = enText ?? "";
-  if (lang === "ar") return arabic || english;
-  if (lang === "en") return english || arabic;
-  const dict = DICTS[lang] ?? {};
-  return dict[english.trim()] ?? dict[arabic.trim()] ?? english ?? arabic;
-}
-
-/** Translate a single English source string into the active language. */
-export function tx(lang: Lang, source: string): string {
-  if (lang === "ar" || lang === "en") return source;
-  const dict = DICTS[lang] ?? {};
-  return dict[source.trim()] ?? source;
-}
-
-export const fmt = (s: string, vars: Record<string, string | number>) =>
-  s.replace(/\{(\w+)\}/g, (_m, k: string) => String(vars[k] ?? ""));
-
-export const t: Record<Lang, UI> = { ar, en, fr, es, zh };
-export type { UI };
