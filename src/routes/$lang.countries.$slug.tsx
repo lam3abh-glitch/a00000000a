@@ -175,7 +175,7 @@ function Country() {
             <AnthemPlayer
               src={franceAnthem.url}
               lang={lang}
-              title={lang === "ar" ? "لا مارسييز" : "La Marseillaise"}
+              title={lang === "ar" ? "النشيد الوطني لجمهورية فرنسا" : "National Anthem of the French Republic"}
             />
           </div>
 
