@@ -145,7 +145,7 @@ function Home() {
             <h2 className="font-display text-4xl md:text-5xl text-midnight">{tr.sections.countries}</h2>
             <div className="gold-divider w-24 mx-auto my-8" />
             <p className="text-charcoal/70 max-w-xl mx-auto">
-              {lang === "ar" ? `${data.countries.length} دولة موثّقة عبر سنوات من السفر.` : `${data.countries.length} countries documented across years of travel.`}
+              {lang === "ar" ? "122 دولة موثّقة عبر سنوات من السفر." : "122 countries documented across years of travel."}
             </p>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-4 gap-y-8">
