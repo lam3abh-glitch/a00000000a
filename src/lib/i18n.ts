@@ -13,7 +13,7 @@ export const t = {
       countries: "الدول",
       itineraries: "البرامج السياحية",
       stories: "القصص والمغامرات",
-      about: "عن أحمد",
+      about: "عني أنا",
     },
     hero: {
       title: "من البحرين إلى العالم",
