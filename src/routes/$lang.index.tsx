@@ -10,14 +10,6 @@ import shapeAfrica from "@/assets/continent-africa.png";
 import shapeNorthAmerica from "@/assets/continent-north-america.png";
 import shapeSouthAmerica from "@/assets/continent-south-america.png";
 import ahmadHeroBg from "@/assets/ahmad-hero-bg.png.asset.json";
-import stickerEverest from "@/assets/sticker-everest.png";
-import stickerEiffel from "@/assets/sticker-eiffel.png";
-import stickerPyramids from "@/assets/sticker-pyramids.png";
-import stickerTaj from "@/assets/sticker-taj.png";
-import stickerLiberty from "@/assets/sticker-liberty.png";
-import stickerBahrain from "@/assets/sticker-bahrain.png";
-import stickerMachu from "@/assets/sticker-machu.png";
-import stickerFuji from "@/assets/sticker-fuji.png";
 
 const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() });
 
@@ -77,17 +69,9 @@ function Home() {
                 {tr.hero.cta2}
               </Link>
             </div>
-            <BadgeRow badges={badges} lang={lang} className="mt-10 md:hidden" />
           </div>
           <div className="hidden md:block md:col-span-5" />
         </div>
-
-        {/* FLOATING LANDMARK BADGES */}
-        <BadgeRow
-          badges={badges}
-          lang={lang}
-          className="hidden md:flex absolute bottom-10 inset-x-0 z-20 px-6"
-        />
       </section>
 
       {/* AHMAD INTRO */}
@@ -228,17 +212,6 @@ function Home() {
     </>
   );
 }
-
-const badges = [
-  { src: stickerEiffel, ar: "برج إيفل", en: "Eiffel Tower", countryAr: "فرنسا", countryEn: "France" },
-  { src: stickerEverest, ar: "قمة إيفرست", en: "Mount Everest", countryAr: "نيبال", countryEn: "Nepal" },
-  { src: stickerPyramids, ar: "أهرامات الجيزة", en: "Pyramids of Giza", countryAr: "مصر", countryEn: "Egypt" },
-  { src: stickerTaj, ar: "تاج محل", en: "Taj Mahal", countryAr: "الهند", countryEn: "India" },
-  { src: stickerLiberty, ar: "تمثال الحرية", en: "Statue of Liberty", countryAr: "أمريكا", countryEn: "USA" },
-  { src: stickerMachu, ar: "ماتشو بيتشو", en: "Machu Picchu", countryAr: "بيرو", countryEn: "Peru" },
-  { src: stickerFuji, ar: "بوابة تورِي", en: "Torii Gate", countryAr: "اليابان", countryEn: "Japan" },
-  { src: stickerBahrain, ar: "مركز البحرين التجاري", en: "Bahrain WTC", countryAr: "البحرين", countryEn: "Bahrain" },
-];
 
 function Stat({ n, l }: { n: string; l: string }) {
   return (
