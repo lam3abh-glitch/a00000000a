@@ -1,8 +1,6 @@
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { GlobeHero } from "@/components/site/GlobeHero";
-import { EiffelSketch } from "@/components/site/EiffelSketch";
-import { EverestSketch, PyramidsSketch } from "@/components/site/LandmarkSketches";
 import { getHomeData } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
 import shapeAsia from "@/assets/continent-asia.png";
@@ -211,70 +209,7 @@ function Home() {
           </div>
         </section>
       )}
-
-      <LandmarkStrip lang={lang} />
     </>
-  );
-}
-
-function LandmarkStrip({ lang }: { lang: Lang }) {
-  const items = [
-    {
-      Art: EiffelSketch,
-      ar: "برج إيفل",
-      en: "Eiffel Tower",
-      arSub: "باريس، فرنسا",
-      enSub: "Paris, France",
-    },
-    {
-      Art: EverestSketch,
-      ar: "قمة إيفرست",
-      en: "Mount Everest",
-      arSub: "الهيمالايا، نيبال",
-      enSub: "Himalayas, Nepal",
-    },
-    {
-      Art: PyramidsSketch,
-      ar: "أهرامات الجيزة",
-      en: "Pyramids of Giza",
-      arSub: "الجيزة، مصر",
-      enSub: "Giza, Egypt",
-    },
-  ];
-
-  return (
-    <section className="relative overflow-hidden bg-cream py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center mb-12 md:mb-16">
-          <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
-            {lang === "ar" ? "معالم" : "Landmarks"}
-          </div>
-          <h2 className="font-display text-3xl md:text-5xl text-midnight">
-            {lang === "ar" ? "معالم لا تُنسى" : "Landmarks I'll never forget"}
-          </h2>
-          <div className="gold-divider w-24 mx-auto my-8" />
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-6">
-          {items.map(({ Art, ar, en, arSub, enSub }) => (
-            <div
-              key={en}
-              className="group relative flex flex-col items-center rounded-sm border border-sand bg-cream/60 px-5 pt-8 pb-6 transition hover:border-gold hover:bg-white/40"
-            >
-              <Art className="h-40 sm:h-44 md:h-56 w-auto text-midnight/80 transition duration-500 group-hover:-translate-y-1 group-hover:text-midnight" />
-              <div className="mt-6 text-center">
-                <div className="font-display text-xl md:text-2xl text-midnight">
-                  {lang === "ar" ? ar : en}
-                </div>
-                <div className="mt-2 text-[11px] uppercase tracking-[0.3em] text-charcoal/50">
-                  {lang === "ar" ? arSub : enSub}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 
