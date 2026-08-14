@@ -56,7 +56,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
     [points]
   );
 
-  const scale = 0.85;
+  const scale = 0.72;
   const globeW = Math.round(size.w * scale);
   const globeH = Math.round(size.h * scale);
   const left = Math.round((size.w - globeW) / 2);
