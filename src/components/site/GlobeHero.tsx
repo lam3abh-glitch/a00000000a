@@ -1,13 +1,49 @@
-import { useEffect, useRef, useState, useMemo } from "react";
+import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import type { ComponentType } from "react";
 
 type Pt = { lat: number; lng: number; name: string; slug: string };
+type Plane = { id: number; from: Pt; to: Pt; t: number; speed: number; lat: number; lng: number; heading: number };
+
+const toRad = (d: number) => (d * Math.PI) / 180;
+const toDeg = (r: number) => (r * 180) / Math.PI;
+
+/** Great-circle interpolation between two lat/lng points. */
+function interpolate(a: { lat: number; lng: number }, b: { lat: number; lng: number }, f: number) {
+  const [lat1, lng1, lat2, lng2] = [toRad(a.lat), toRad(a.lng), toRad(b.lat), toRad(b.lng)];
+  const d =
+    2 *
+    Math.asin(
+      Math.sqrt(
+        Math.sin((lat2 - lat1) / 2) ** 2 +
+          Math.cos(lat1) * Math.cos(lat2) * Math.sin((lng2 - lng1) / 2) ** 2
+      )
+    );
+  if (!d) return { lat: a.lat, lng: a.lng };
+  const A = Math.sin((1 - f) * d) / Math.sin(d);
+  const B = Math.sin(f * d) / Math.sin(d);
+  const x = A * Math.cos(lat1) * Math.cos(lng1) + B * Math.cos(lat2) * Math.cos(lng2);
+  const y = A * Math.cos(lat1) * Math.sin(lng1) + B * Math.cos(lat2) * Math.sin(lng2);
+  const z = A * Math.sin(lat1) + B * Math.sin(lat2);
+  return { lat: toDeg(Math.atan2(z, Math.sqrt(x * x + y * y))), lng: toDeg(Math.atan2(y, x)) };
+}
+
+function bearing(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
+  const [lat1, lat2] = [toRad(a.lat), toRad(b.lat)];
+  const dLng = toRad(b.lng - a.lng);
+  return toDeg(
+    Math.atan2(
+      Math.sin(dLng) * Math.cos(lat2),
+      Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLng)
+    )
+  );
+}
 
 export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<any>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
   const [GlobeComp, setGlobeComp] = useState<ComponentType<any> | null>(null);
+  const [planes, setPlanes] = useState<Plane[]>([]);
 
   useEffect(() => {
     let alive = true;
@@ -40,6 +76,54 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
   }, [size.w, size.h, GlobeComp]);
 
   const bahrain = { lat: 26.07, lng: 50.55 };
+
+  const pick = useCallback(() => points[Math.floor(Math.random() * points.length)], [points]);
+
+  useEffect(() => {
+    if (points.length < 2) return;
+    const make = (id: number): Plane => {
+      const from = pick();
+      let to = pick();
+      if (to === from) to = points[(points.indexOf(from) + 1) % points.length];
+      const pos = interpolate(from, to, 0);
+      return { id, from, to, t: 0, speed: 0.0012 + Math.random() * 0.0018, lat: pos.lat, lng: pos.lng, heading: bearing(from, to) };
+    };
+    let arr: Plane[] = Array.from({ length: 6 }, (_, i) => make(i));
+    setPlanes(arr);
+
+    let raf = 0;
+    let last = performance.now();
+    const tick = (now: number) => {
+      const dt = Math.min(now - last, 60);
+      last = now;
+      arr = arr.map((p) => {
+        let t = p.t + p.speed * (dt / 16);
+        if (t >= 1) {
+          const from = p.to;
+          let to = pick();
+          if (to === from) to = points[(points.indexOf(from) + 1) % points.length];
+          const pos = interpolate(from, to, 0);
+          return { ...p, from, to, t: 0, lat: pos.lat, lng: pos.lng, heading: bearing(from, to) };
+        }
+        const pos = interpolate(p.from, p.to, t);
+        const nxt = interpolate(p.from, p.to, Math.min(t + 0.01, 1));
+        return { ...p, t, lat: pos.lat, lng: pos.lng, heading: bearing(pos, nxt) };
+      });
+      setPlanes(arr);
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [points, pick]);
+
+  const planeEl = useCallback((d: any) => {
+    const el = document.createElement("div");
+    el.style.pointerEvents = "none";
+    el.style.transform = `rotate(${d.heading}deg)`;
+    el.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="#d4aa5a" style="filter:drop-shadow(0 0 4px rgba(212,170,90,0.8))"><path d="M12 2l2.2 7.2L22 11l-7.8 1.8L12 22l-2.2-9.2L2 11l7.8-1.8z"/></svg>`;
+    return el;
+  }, []);
+
   const arcs = useMemo(
     () =>
       points
@@ -82,6 +166,12 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
             arcDashGap={0.6}
             arcDashAnimateTime={3500}
             arcAltitudeAutoScale={0.4}
+            htmlElementsData={planes}
+            htmlLat="lat"
+            htmlLng="lng"
+            htmlAltitude={0.12}
+            htmlElement={planeEl}
+            htmlTransitionDuration={0}
             onPointClick={(d: any) => {
               if (d?.slug) window.location.href = `/${lang}/countries/${d.slug}`;
             }}
