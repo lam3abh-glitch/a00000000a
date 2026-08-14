@@ -89,8 +89,8 @@ function Home() {
                 : "Ahmad Abdulrahman, from the Kingdom of Bahrain. He began travelling more than ten years ago with one goal: to visit a hundred countries and beyond. Today he documents what he has seen so others can benefit, building bridges of love and coexistence with each trip."}
             </p>
             <div className="mt-10 flex items-center gap-10">
-              <Stat n={`${data.countries.length}+`} l={lang === "ar" ? "دولة" : "Countries"} />
-              <Stat n={"4"} l={lang === "ar" ? "قارات" : "Continents"} />
+              <Stat n={"122+"} l={lang === "ar" ? "دولة" : "Countries"} />
+              <Stat n={"6"} l={lang === "ar" ? "قارات" : "Continents"} />
               <Stat n={"10+"} l={lang === "ar" ? "سنوات" : "Years"} />
             </div>
             <Link to="/$lang/about" params={{ lang }} className="mt-10 inline-block text-sm text-midnight border-b border-gold pb-1 hover:text-gold">
