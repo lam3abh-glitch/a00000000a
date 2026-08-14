@@ -54,13 +54,19 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
     [points]
   );
 
+  const scale = 0.85;
+  const globeW = Math.round(size.w * scale);
+  const globeH = Math.round(size.h * scale);
+  const left = Math.round((size.w - globeW) / 2);
+  const top = Math.round((size.h - globeH) / 2);
+
   return (
     <div ref={wrapRef} className="absolute inset-0">
       {GlobeComp && size.w > 0 && (
         <GlobeComp
             ref={globeRef}
-            width={size.w}
-            height={size.h}
+            width={globeW}
+            height={globeH}
             backgroundColor="rgba(0,0,0,0)"
             globeImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg"
             bumpImageUrl="//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png"
@@ -85,6 +91,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
             onPointClick={(d: any) => {
               if (d?.slug) window.location.href = `/${lang}/countries/${d.slug}`;
             }}
+            style={{ position: "absolute", left, top }}
         />
       )}
     </div>
