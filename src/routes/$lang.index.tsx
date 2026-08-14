@@ -9,6 +9,7 @@ import shapeEurope from "@/assets/continent-europe.png";
 import shapeAfrica from "@/assets/continent-africa.png";
 import shapeNorthAmerica from "@/assets/continent-north-america.png";
 import shapeSouthAmerica from "@/assets/continent-south-america.png";
+import ahmadHeroBg from "@/assets/ahmad-hero-bg.png.asset.json";
 
 const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() });
 
@@ -39,7 +40,7 @@ function Home() {
       {/* HERO + GLOBE */}
       <section className="relative h-screen min-h-[680px] w-full overflow-hidden bg-[#3d4a5f]">
         <img
-          src="https://i0.wp.com/100region.com/wp-content/uploads/2022/01/img_1371.jpg"
+          src={ahmadHeroBg.url}
           alt="Ahmad"
           className="absolute inset-0 h-full w-full object-cover"
         />
