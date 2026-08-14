@@ -8,6 +8,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
   const globeRef = useRef<any>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
   const [GlobeComp, setGlobeComp] = useState<ComponentType<any> | null>(null);
+  const [THREE, setTHREE] = useState<any>(null);
 
   useEffect(() => {
     let alive = true;
@@ -16,6 +17,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
       const Comp = m.default ?? m.Globe ?? m;
       setGlobeComp(() => Comp as ComponentType<any>);
     }).catch((e) => console.error("globe import failed", e));
+    import("three").then((m: any) => { if (alive) setTHREE(m); }).catch(() => {});
     if (!wrapRef.current) return;
     const update = () => {
       if (!wrapRef.current) return;
@@ -60,6 +62,70 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
   const left = Math.round((size.w - globeW) / 2);
   const top = Math.round((size.h - globeH) / 2);
 
+  // ---- animated airplanes ----
+  const planes = useMemo(
+    () =>
+      [
+        { lat0: 26, lng0: 50, tilt: 28, phase: 0, speed: 0.055, alt: 0.22 },
+        { lat0: 0, lng0: 0, tilt: -42, phase: 2.1, speed: 0.042, alt: 0.3 },
+        { lat0: 0, lng0: 0, tilt: 62, phase: 4.2, speed: 0.048, alt: 0.26 },
+        { lat0: 0, lng0: 0, tilt: -12, phase: 1.1, speed: 0.038, alt: 0.34 },
+      ].map((p, i) => ({ ...p, id: i, __mesh: null as any })),
+    []
+  );
+
+  const makePlane = useMemo(() => {
+    if (!THREE) return undefined;
+    return (d: any) => {
+      const mat = new THREE.MeshBasicMaterial({ color: 0xf5f0e8 });
+      const group = new THREE.Group();
+      const body = new THREE.Mesh(new THREE.ConeGeometry(0.55, 2.6, 8), mat);
+      body.rotation.x = Math.PI / 2;
+      const wings = new THREE.Mesh(new THREE.BoxGeometry(3.4, 0.16, 0.8), mat);
+      const tail = new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.14, 0.5), mat);
+      tail.position.z = 1.0;
+      group.add(body, wings, tail);
+      group.scale.setScalar(0.9);
+      d.__mesh = group;
+      return group;
+    };
+  }, [THREE]);
+
+  useEffect(() => {
+    if (!THREE || !GlobeComp || !size.w) return;
+    let raf = 0;
+    const start = performance.now();
+    const tick = () => {
+      const g = globeRef.current;
+      if (g) {
+        const t = (performance.now() - start) / 1000;
+        for (const p of planes) {
+          if (!p.__mesh) continue;
+          const ang = p.phase + t * p.speed * Math.PI * 2;
+          const tilt = (p.tilt * Math.PI) / 180;
+          // circular orbit on a tilted great circle
+          const x = Math.cos(ang);
+          const y = Math.sin(ang) * Math.cos(tilt);
+          const z = Math.sin(ang) * Math.sin(tilt);
+          const lat = (Math.asin(z) * 180) / Math.PI;
+          const lng = (Math.atan2(y, x) * 180) / Math.PI;
+          const c = g.getCoords(lat, lng, p.alt);
+          const nextAng = ang + 0.01;
+          const nx = Math.cos(nextAng);
+          const ny = Math.sin(nextAng) * Math.cos(tilt);
+          const nz = Math.sin(nextAng) * Math.sin(tilt);
+          const n = g.getCoords((Math.asin(nz) * 180) / Math.PI, (Math.atan2(ny, nx) * 180) / Math.PI, p.alt);
+          p.__mesh.position.set(c.x, c.y, c.z);
+          p.__mesh.up.set(c.x, c.y, c.z).normalize();
+          p.__mesh.lookAt(n.x, n.y, n.z);
+        }
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [THREE, GlobeComp, size.w, planes]);
+
   return (
     <div ref={wrapRef} className="absolute inset-0">
       {GlobeComp && size.w > 0 && (
@@ -88,6 +154,9 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
             arcDashGap={0.6}
             arcDashAnimateTime={3500}
             arcAltitudeAutoScale={0.4}
+            customLayerData={makePlane ? planes : []}
+            customThreeObject={makePlane}
+            customThreeObjectUpdate={() => {}}
             onPointClick={(d: any) => {
               if (d?.slug) window.location.href = `/${lang}/countries/${d.slug}`;
             }}
