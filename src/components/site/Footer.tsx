@@ -29,6 +29,7 @@ export function Footer({ lang }: { lang: Lang }) {
             <li><a href="http://www.instagram.com/ahmed_bahrain" target="_blank" rel="noreferrer" className="hover:text-gold">Instagram</a></li>
             <li><a href="http://www.twitter.com/ahmed__bahrain" target="_blank" rel="noreferrer" className="hover:text-gold">Twitter</a></li>
             <li><a href="http://www.facebook.com/100region" target="_blank" rel="noreferrer" className="hover:text-gold">Facebook</a></li>
+            <li><a href="https://www.snapchat.com/@ahmed100bahrain" target="_blank" rel="noreferrer" className="hover:text-gold">Snapchat</a></li>
           </ul>
         </div>
       </div>
