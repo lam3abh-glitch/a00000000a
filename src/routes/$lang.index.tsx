@@ -211,6 +211,8 @@ function Home() {
           </div>
         </section>
       )}
+
+      <LandmarkStrip lang={lang} />
     </>
   );
 }
