@@ -77,15 +77,57 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
   const makePlane = useMemo(() => {
     if (!THREE) return undefined;
     return (d: any) => {
-      const mat = new THREE.MeshBasicMaterial({ color: 0xf5f0e8 });
+      const body = new THREE.MeshBasicMaterial({ color: 0xfaf6ee });
+      const accent = new THREE.MeshBasicMaterial({ color: 0xd4aa5a });
       const group = new THREE.Group();
-      const body = new THREE.Mesh(new THREE.ConeGeometry(0.55, 2.6, 8), mat);
-      body.rotation.x = Math.PI / 2;
-      const wings = new THREE.Mesh(new THREE.BoxGeometry(3.4, 0.16, 0.8), mat);
-      const tail = new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.14, 0.5), mat);
-      tail.position.z = 1.0;
-      group.add(body, wings, tail);
-      group.scale.setScalar(0.9);
+
+      // fuselage along +z (nose forward)
+      const fuselage = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 4.2, 12), body);
+      fuselage.rotation.x = Math.PI / 2;
+
+      // nose cone
+      const nose = new THREE.Mesh(new THREE.ConeGeometry(0.42, 1.2, 12), body);
+      nose.rotation.x = Math.PI / 2;
+      nose.position.z = 2.7;
+
+      // tail cone
+      const tailCone = new THREE.Mesh(new THREE.ConeGeometry(0.42, 1.0, 12), body);
+      tailCone.rotation.x = -Math.PI / 2;
+      tailCone.position.z = -2.6;
+
+      // main wings (swept back)
+      const wingGeo = new THREE.BoxGeometry(3.4, 0.12, 1.3);
+      const wingL = new THREE.Mesh(wingGeo, body);
+      wingL.position.set(-1.8, 0, -0.2);
+      wingL.rotation.y = -0.32;
+      const wingR = new THREE.Mesh(wingGeo, body);
+      wingR.position.set(1.8, 0, -0.2);
+      wingR.rotation.y = 0.32;
+
+      // engines
+      const engGeo = new THREE.CylinderGeometry(0.22, 0.22, 0.9, 8);
+      const engL = new THREE.Mesh(engGeo, accent);
+      engL.rotation.x = Math.PI / 2;
+      engL.position.set(-1.5, -0.22, 0.1);
+      const engR = new THREE.Mesh(engGeo, accent);
+      engR.rotation.x = Math.PI / 2;
+      engR.position.set(1.5, -0.22, 0.1);
+
+      // horizontal stabilizers
+      const hGeo = new THREE.BoxGeometry(1.5, 0.1, 0.6);
+      const hL = new THREE.Mesh(hGeo, body);
+      hL.position.set(-0.75, 0.05, -2.3);
+      hL.rotation.y = -0.25;
+      const hR = new THREE.Mesh(hGeo, body);
+      hR.position.set(0.75, 0.05, -2.3);
+      hR.rotation.y = 0.25;
+
+      // vertical fin
+      const fin = new THREE.Mesh(new THREE.BoxGeometry(0.1, 1.1, 1.0), accent);
+      fin.position.set(0, 0.6, -2.3);
+
+      group.add(fuselage, nose, tailCone, wingL, wingR, engL, engR, hL, hR, fin);
+      group.scale.setScalar(2.6);
       d.__mesh = group;
       return group;
     };
