@@ -26,7 +26,7 @@ export const t = {
       introCta: "تعرف على أحمد",
       byContinent: "استكشف العالم حسب القارة",
       viewAll: "عرض جميع الوجهات",
-      countries: "الدول التي زارها أحمد",
+      countries: "الدول التي زرتها بمختلف قارات العالم",
       countriesAll: "عرض جميع الدول",
       featured: "قصة مختارة",
       readStory: "اقرأ القصة",
