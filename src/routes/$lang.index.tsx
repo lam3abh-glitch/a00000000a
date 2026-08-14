@@ -10,6 +10,14 @@ import shapeAfrica from "@/assets/continent-africa.png";
 import shapeNorthAmerica from "@/assets/continent-north-america.png";
 import shapeSouthAmerica from "@/assets/continent-south-america.png";
 import ahmadHeroBg from "@/assets/ahmad-hero-bg.png.asset.json";
+import stickerEverest from "@/assets/sticker-everest.png";
+import stickerEiffel from "@/assets/sticker-eiffel.png";
+import stickerPyramids from "@/assets/sticker-pyramids.png";
+import stickerTaj from "@/assets/sticker-taj.png";
+import stickerLiberty from "@/assets/sticker-liberty.png";
+import stickerBahrain from "@/assets/sticker-bahrain.png";
+import stickerMachu from "@/assets/sticker-machu.png";
+import stickerFuji from "@/assets/sticker-fuji.png";
 
 const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() });
 
@@ -209,9 +217,59 @@ function Home() {
           </div>
         </section>
       )}
+
+      {/* SOUVENIR BADGES */}
+      <section className="bg-cream py-20 md:py-24 border-t border-sand">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center mb-12">
+            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
+              {lang === "ar" ? "ذكريات" : "Souvenirs"}
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl text-midnight">
+              {lang === "ar" ? "معالم من رحلاتي" : "Landmarks from my travels"}
+            </h2>
+            <div className="gold-divider w-20 mx-auto my-6" />
+          </div>
+          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
+            {badges.map((b, i) => (
+              <li
+                key={b.src}
+                className="group relative flex flex-col items-center gap-3 rounded-2xl border border-sand bg-white/60 px-3 py-6 shadow-sm transition hover:-translate-y-1 hover:border-gold hover:shadow-md"
+                style={{ transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 1.2}deg)` }}
+              >
+                <img
+                  src={b.src}
+                  alt={lang === "ar" ? b.ar : b.en}
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                  className="h-20 w-20 md:h-28 md:w-28 object-contain drop-shadow-sm transition duration-500 group-hover:scale-110"
+                />
+                <span className="text-center text-[11px] md:text-xs tracking-wide text-midnight">
+                  {lang === "ar" ? b.ar : b.en}
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-gold/80">
+                  {lang === "ar" ? b.countryAr : b.countryEn}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </>
   );
 }
+
+const badges = [
+  { src: stickerEiffel, ar: "برج إيفل", en: "Eiffel Tower", countryAr: "فرنسا", countryEn: "France" },
+  { src: stickerEverest, ar: "قمة إيفرست", en: "Mount Everest", countryAr: "نيبال", countryEn: "Nepal" },
+  { src: stickerPyramids, ar: "أهرامات الجيزة", en: "Pyramids of Giza", countryAr: "مصر", countryEn: "Egypt" },
+  { src: stickerTaj, ar: "تاج محل", en: "Taj Mahal", countryAr: "الهند", countryEn: "India" },
+  { src: stickerLiberty, ar: "تمثال الحرية", en: "Statue of Liberty", countryAr: "أمريكا", countryEn: "USA" },
+  { src: stickerMachu, ar: "ماتشو بيتشو", en: "Machu Picchu", countryAr: "بيرو", countryEn: "Peru" },
+  { src: stickerFuji, ar: "بوابة تورِي", en: "Torii Gate", countryAr: "اليابان", countryEn: "Japan" },
+  { src: stickerBahrain, ar: "مركز البحرين التجاري", en: "Bahrain WTC", countryAr: "البحرين", countryEn: "Bahrain" },
+];
 
 function Stat({ n, l }: { n: string; l: string }) {
   return (
