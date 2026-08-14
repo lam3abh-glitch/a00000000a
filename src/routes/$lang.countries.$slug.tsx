@@ -52,10 +52,10 @@ function Country() {
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو (€)", value_en: "Euro (€)" },
-                  { label_ar: "السكان", label_en: "Population", value_ar: "٦٧٫١ مليون", value_en: "67.1 million" },
-                  { label_ar: "المساحة", label_en: "Area", value_ar: "٦٧٤٬٨٤٣ كم²", value_en: "674,843 km²" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "67.1 مليون", value_en: "67.1 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "674,843 كم²", value_en: "674,843 km²" },
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
-                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "١٩٥٨", value_en: "1958" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1958", value_en: "1958" },
                 ]
               : [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
