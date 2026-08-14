@@ -80,7 +80,7 @@ function Home() {
             <img src="https://i0.wp.com/100region.com/wp-content/uploads/2022/01/img_1371.jpg" alt="Ahmad" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
           </div>
           <div>
-            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{lang === "ar" ? "عن أحمد" : "About Ahmad"}</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{lang === "ar" ? "" : "About Ahmad"}</div>
             <h2 className="font-display text-4xl md:text-5xl text-midnight">{tr.sections.introTitle}</h2>
             <div className="gold-divider w-24 my-8" />
             <p className="text-charcoal/80 leading-loose text-lg">
