@@ -80,6 +80,29 @@ function Home() {
           </div>
           <div className="hidden md:block md:col-span-5" />
         </div>
+
+        {/* FLOATING LANDMARK BADGES */}
+        <div className="absolute bottom-6 md:bottom-10 inset-x-0 z-20 px-4">
+          <ul className="mx-auto flex max-w-3xl flex-wrap items-end justify-center gap-3 md:gap-6">
+            {badges.map((b, i) => (
+              <li
+                key={b.src}
+                title={lang === "ar" ? `${b.ar} — ${b.countryAr}` : `${b.en} — ${b.countryEn}`}
+                className="group grid h-14 w-14 md:h-20 md:w-20 place-items-center rounded-full border border-[#d4aa5a]/40 bg-cream/10 backdrop-blur-sm transition duration-500 hover:scale-110 hover:border-[#d4aa5a] hover:bg-cream/20"
+                style={{ animation: `badge-float 6s ease-in-out ${i * 0.4}s infinite` }}
+              >
+                <img
+                  src={b.src}
+                  alt={lang === "ar" ? b.ar : b.en}
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                  className="h-9 w-9 md:h-14 md:w-14 object-contain drop-shadow"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* AHMAD INTRO */}
