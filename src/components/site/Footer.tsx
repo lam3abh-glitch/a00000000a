@@ -8,7 +8,7 @@ export function Footer({ lang }: { lang: Lang }) {
         <div className="md:col-span-2">
           <div className="font-display text-2xl text-cream">{t[lang].siteName}</div>
           <div className="mt-1 text-xs uppercase tracking-[0.25em] text-gold/80">{t[lang].tagline}</div>
-          <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/60">{t[lang].footer.desc}</p>
+          <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/60 whitespace-pre-line">{t[lang].footer.desc}</p>
         </div>
         <div>
           <div className="text-xs uppercase tracking-widest text-gold/70 mb-4">{t[lang].nav.explore}</div>
