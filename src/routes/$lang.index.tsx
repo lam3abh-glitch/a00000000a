@@ -10,6 +10,14 @@ import shapeAfrica from "@/assets/continent-africa.png";
 import shapeNorthAmerica from "@/assets/continent-north-america.png";
 import shapeSouthAmerica from "@/assets/continent-south-america.png";
 import ahmadHeroBg from "@/assets/ahmad-hero-bg.png.asset.json";
+import stickerEverest from "@/assets/sticker-everest.png";
+import stickerEiffel from "@/assets/sticker-eiffel.png";
+import stickerPyramids from "@/assets/sticker-pyramids.png";
+import stickerTaj from "@/assets/sticker-taj.png";
+import stickerLiberty from "@/assets/sticker-liberty.png";
+import stickerBahrain from "@/assets/sticker-bahrain.png";
+import stickerMachu from "@/assets/sticker-machu.png";
+import stickerFuji from "@/assets/sticker-fuji.png";
 
 const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() });
 
