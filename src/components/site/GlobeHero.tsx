@@ -93,6 +93,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
 
     let raf = 0;
     let last = performance.now();
+    let lastRender = 0;
     const tick = (now: number) => {
       const dt = Math.min(now - last, 60);
       last = now;
@@ -109,7 +110,10 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
         const nxt = interpolate(p.from, p.to, Math.min(t + 0.01, 1));
         return { ...p, t, lat: pos.lat, lng: pos.lng, heading: bearing(pos, nxt) };
       });
-      setPlanes(arr);
+      if (now - lastRender > 60) {
+        lastRender = now;
+        setPlanes(arr);
+      }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
@@ -120,7 +124,7 @@ export function GlobeHero({ points, lang }: { points: Pt[]; lang: "ar" | "en" })
     const el = document.createElement("div");
     el.style.pointerEvents = "none";
     el.style.transform = `rotate(${d.heading}deg)`;
-    el.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="#d4aa5a" style="filter:drop-shadow(0 0 4px rgba(212,170,90,0.8))"><path d="M12 2l2.2 7.2L22 11l-7.8 1.8L12 22l-2.2-9.2L2 11l7.8-1.8z"/></svg>`;
+    el.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="#f3e6c8" style="filter:drop-shadow(0 0 5px rgba(212,170,90,0.9))"><path d="M12 2c.7 0 1.3 1.1 1.3 2.4v4l7.2 4.3c.3.2.5.5.5.9v1.3l-7.7-2.2v4.2l2.4 1.7v1.6L12 19.4l-3.7.8v-1.6l2.4-1.7v-4.2L3 14.9v-1.3c0-.4.2-.7.5-.9l7.2-4.3v-4C10.7 3.1 11.3 2 12 2z"/></svg>`;
     return el;
   }, []);
 
