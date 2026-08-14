@@ -240,45 +240,6 @@ function Home() {
           </div>
         </section>
       )}
-
-      {/* SOUVENIR BADGES */}
-      <section className="bg-cream py-20 md:py-24 border-t border-sand">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center mb-12">
-            <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
-              {lang === "ar" ? "ذكريات" : "Souvenirs"}
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl text-midnight">
-              {lang === "ar" ? "معالم من رحلاتي" : "Landmarks from my travels"}
-            </h2>
-            <div className="gold-divider w-20 mx-auto my-6" />
-          </div>
-          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
-            {badges.map((b, i) => (
-              <li
-                key={b.src}
-                className="group relative flex flex-col items-center gap-3 rounded-2xl border border-sand bg-white/60 px-3 py-6 shadow-sm transition hover:-translate-y-1 hover:border-gold hover:shadow-md"
-                style={{ transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 1.2}deg)` }}
-              >
-                <img
-                  src={b.src}
-                  alt={lang === "ar" ? b.ar : b.en}
-                  loading="lazy"
-                  width={512}
-                  height={512}
-                  className="h-20 w-20 md:h-28 md:w-28 object-contain drop-shadow-sm transition duration-500 group-hover:scale-110"
-                />
-                <span className="text-center text-[11px] md:text-xs tracking-wide text-midnight">
-                  {lang === "ar" ? b.ar : b.en}
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.25em] text-gold/80">
-                  {lang === "ar" ? b.countryAr : b.countryEn}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
     </>
   );
 }
