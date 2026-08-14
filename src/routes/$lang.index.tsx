@@ -91,7 +91,7 @@ function Home() {
             <div className="mt-10 flex items-center gap-10">
               <Stat n={"122+"} l={lang === "ar" ? "دولة" : "Countries"} />
               <Stat n={"6"} l={lang === "ar" ? "قارات" : "Continents"} />
-              <Stat n={"10+"} l={lang === "ar" ? "سنوات" : "Years"} />
+              <Stat n={"1000+"} l={lang === "ar" ? "مدينة" : "Cities"} />
             </div>
             <Link to="/$lang/about" params={{ lang }} className="mt-10 inline-block text-sm text-midnight border-b border-gold pb-1 hover:text-gold">
               {tr.sections.introCta} →
