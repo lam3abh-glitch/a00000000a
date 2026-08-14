@@ -63,20 +63,20 @@ export const t = {
       countries: "Countries",
       itineraries: "Itineraries",
       stories: "Stories",
-      about: "About Ahmad",
+      about: "About Me",
     },
     hero: {
       title: "From Bahrain to the world",
       sub: "Ahmad's journey to discover countries, cities, and cultures across the globe.",
       cta1: "Explore the journey",
-      cta2: "About Ahmad",
+      cta2: "About Me",
     },
     sections: {
       introTitle: "A story that began with passion",
-      introCta: "About Ahmad",
+      introCta: "About Me",
       byContinent: "Explore by continent",
       viewAll: "View all destinations",
-      countries: "Countries Ahmad has visited",
+      countries: "Countries I've visited across the world's continents",
       countriesAll: "View all countries",
       featured: "Featured journey",
       readStory: "Read the story",
@@ -100,7 +100,7 @@ export const t = {
     },
     footer: {
       rights: "All rights reserved",
-      desc: "A personal travel archive documenting Ahmad's journeys from Bahrain to more than a hundred countries around the world.",
+      desc: "A personal archive of travel, journeys and coexistence, documenting more than a hundred countries around the world.",
     },
   },
 } as const;
