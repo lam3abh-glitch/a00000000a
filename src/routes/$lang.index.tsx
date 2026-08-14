@@ -3,10 +3,12 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { GlobeHero } from "@/components/site/GlobeHero";
 import { getHomeData } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
-import shapeAsia from "@/assets/continent-asia-australia.png";
+import shapeAsia from "@/assets/continent-asia.png";
+import shapeOceania from "@/assets/continent-oceania.png";
 import shapeEurope from "@/assets/continent-europe.png";
 import shapeAfrica from "@/assets/continent-africa.png";
-import shapeAmericas from "@/assets/continent-americas.png";
+import shapeNorthAmerica from "@/assets/continent-north-america.png";
+import shapeSouthAmerica from "@/assets/continent-south-america.png";
 
 const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() });
 
@@ -23,17 +25,13 @@ function Home() {
     .filter((c: any) => c.latitude != null && c.longitude != null)
     .map((c: any) => ({ lat: Number(c.latitude), lng: Number(c.longitude), name: lang === "ar" ? c.name_ar : c.name_en, slug: c.slug }));
   const featured = data.countries.filter((c: any) => c.is_featured).slice(0, 12);
-  const continentImages: Record<string, string> = {
-    "asia-australia": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3649.jpg",
-    "europe": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3749.jpg",
-    "africa": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3566.jpg",
-    "americas": "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3579.jpg",
-  };
   const continentShapes: Record<string, string> = {
-    "asia-australia": shapeAsia,
+    "asia": shapeAsia,
+    "oceania": shapeOceania,
     "europe": shapeEurope,
     "africa": shapeAfrica,
-    "americas": shapeAmericas,
+    "north-america": shapeNorthAmerica,
+    "south-america": shapeSouthAmerica,
   };
 
   return (
