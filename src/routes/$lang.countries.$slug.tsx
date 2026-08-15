@@ -273,7 +273,7 @@ function Country() {
             <div className="mb-12 text-center">
               <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{lang === "ar" ? "المدن" : "Cities"}</div>
               <h2 className="font-display text-4xl text-midnight">
-                {c.slug === "uganda" && lang === "ar" ? "المدن التي زرتها فيي أوغندا" : tr.sections.cities}
+                {lang === "ar" ? `المدن التي زرتها في ${c.name_ar}` : `Cities I visited in ${c.name_en}`}
               </h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
