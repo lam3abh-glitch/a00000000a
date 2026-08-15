@@ -633,6 +633,7 @@ IMG|https://upload.wikimedia.org/wikipedia/commons/d/d5/Kabaka%27s_Lake.jpg
 IMG|https://upload.wikimedia.org/wikipedia/commons/4/47/Kabaka%27s_Lake_2.jpg
 P|تقع بحيرة كاباكا على بعد أمتار قليلة من العاصمة ، ويحدها أحد التلال السبعة الرئيسية ، تعد البحيرة بمياهها ذات اللون الفيروزي موطنا للعديد من أسراب الطيور مثل البلشون ، ويمكن ركوب القوارب داخل البحيرة للاستمتاع بجمال الطبيعة
 H5|حديقة وندر وورلد الترفيهية
+IMG|/__l5e/assets-v1/2850af3b-684d-4043-892c-dc6802f4860c/wonder-world-kampala.webp
 P|تضم حديقة وندر وورلد الترفيهية عددا متنوعا من الألعاب الترفيهية مثل سباق السيارات ، والمراجيح الدوارة العملاقة ، الزلاجات وغيرها بالإضافة الى منتزه مائي ضخم
 H5|حديقة بويندي الترفيهية
 IMG|https://upload.wikimedia.org/wikipedia/commons/5/59/068_Mountain_gorilla_close-up_at_Bwindi_Impenetrable_Forest_National_Park_Photo_by_Giles_Laurent.jpg
