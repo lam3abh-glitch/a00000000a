@@ -17,13 +17,13 @@ export const t = {
     },
     hero: {
       title: "من البحرين إلى العالم",
-      sub: "رحلة أحمد لاكتشاف الدول والمدن والثقافات حول العالم",
+      sub: "رحلتي لاكتشاف الدول والمدن والثقافات حول العالم",
       cta1: "استكشف الرحلة",
       cta2: "من أنا",
     },
     sections: {
       introTitle: "قصة بدأت بشغف",
-      introCta: "تعرف على أحمد",
+      introCta: "من أنا",
       byContinent: "استكشف العالم حسب القارة",
       viewAll: "عرض جميع الوجهات",
       countries: "الدول التي زرتها بمختلف قارات العالم",
@@ -31,7 +31,7 @@ export const t = {
       featured: "قصة مختارة",
       readStory: "اقرأ القصة",
       searchPlaceholder: "ابحث عن دولة",
-      cities: "المدن التي زارها أحمد",
+      cities: "المدن التي زرتها",
       attractions: "أبرز الأماكن",
       culture: "ثقافة ومعلومات",
       relatedItineraries: "برامج سياحية مرتبطة",
@@ -40,8 +40,8 @@ export const t = {
       back: "رجوع",
     },
     countriesPage: {
-      title: "الدول التي زارها أحمد",
-      sub: "أكثر من مئة دولة وثّقها أحمد على مدى سنوات.",
+      title: "الدول التي زرتها",
+      sub: "أكثر من مئة دولة وثّقتها على مدى سنوات.",
       all: "جميع الدول",
     },
     about: {
@@ -67,7 +67,7 @@ export const t = {
     },
     hero: {
       title: "From Bahrain to the world",
-      sub: "Ahmad's journey to discover countries, cities, and cultures across the globe.",
+      sub: "My journey to discover countries, cities and cultures across the globe.",
       cta1: "Explore the journey",
       cta2: "About Me",
     },
@@ -81,7 +81,7 @@ export const t = {
       featured: "Featured journey",
       readStory: "Read the story",
       searchPlaceholder: "Search for a country",
-      cities: "Cities Ahmad visited",
+      cities: "Cities I visited",
       attractions: "Notable places",
       culture: "Culture & notes",
       relatedItineraries: "Related itineraries",
@@ -90,7 +90,7 @@ export const t = {
       back: "Back",
     },
     countriesPage: {
-      title: "Countries Ahmad has visited",
+      title: "Countries I've visited",
       sub: "More than a hundred countries, documented over years.",
       all: "All countries",
     },
