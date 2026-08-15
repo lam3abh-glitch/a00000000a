@@ -272,7 +272,9 @@ function Country() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 text-center">
               <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{lang === "ar" ? "المدن" : "Cities"}</div>
-              <h2 className="font-display text-4xl text-midnight">{tr.sections.cities}</h2>
+              <h2 className="font-display text-4xl text-midnight">
+                {c.slug === "uganda" && lang === "ar" ? "المدن التي زرتها فيي أوغندا" : tr.sections.cities}
+              </h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {data.cities.map((city: any, i: number) => (
