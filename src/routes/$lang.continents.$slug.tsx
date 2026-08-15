@@ -2,6 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getContinent } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import turkishCyprusFlag from "@/assets/turkish-cyprus-flag.png.asset.json";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["continent", slug], queryFn: () => getContinent({ data: { slug } }) });
 
@@ -41,7 +42,14 @@ function Continent() {
             {data.countries.map((c: any) => (
               <Link key={c.slug} to="/$lang/countries/$slug" params={{ lang, slug: c.slug }} className="group text-center">
                 <div className="aspect-square rounded-full bg-sand/40 border border-sand overflow-hidden group-hover:border-gold transition shadow-sm">
-                  {c.iso2 ? (
+                  {c.slug === "northern-cyprus" ? (
+                    <img
+                      src={turkishCyprusFlag.url}
+                      alt={lang === "ar" ? c.name_ar : c.name_en}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : c.iso2 ? (
                     <img
                       src={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png`}
                       srcSet={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w640/${c.iso2.toLowerCase()}.png 2x`}
