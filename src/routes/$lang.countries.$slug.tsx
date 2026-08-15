@@ -10,6 +10,7 @@ import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
 import { franceGuides } from "@/lib/france-guides";
+import { UgandaCountry } from "@/components/site/UgandaCountry";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -48,7 +49,16 @@ function Country() {
             <h1 className="font-display text-5xl md:text-7xl">{name}</h1>
           </div>
           {(() => {
-            const stats = c.slug === "france"
+            const stats = c.slug === "uganda"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "كمبالا", value_en: "Kampala" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "شيلينغ أوغندي", value_en: "Ugandan shilling" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "24.2 مليون", value_en: "24.2 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "236,040 كم²", value_en: "236,040 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
+                  { label_ar: "الاستقلال", label_en: "Independence", value_ar: "1962", value_en: "1962" },
+                ]
+              : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو (€)", value_en: "Euro (€)" },
@@ -80,7 +90,9 @@ function Country() {
       </section>
 
       {/* INTRO */}
-      {c.slug === "france" ? (
+      {c.slug === "uganda" ? (
+        <UgandaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}
           <div
