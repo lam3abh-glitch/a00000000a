@@ -5,7 +5,7 @@ export const isLang = (s: string | undefined): s is Lang => s === "ar" || s === 
 export const t = {
   ar: {
     siteName: "سفير المحبة",
-    tagline: "رحلة أحمد حول العالم",
+    tagline: "رحلتي حول العالم",
     nav: {
       home: "الرئيسية",
       explore: "استكشف العالم",
@@ -55,7 +55,7 @@ export const t = {
   },
   en: {
     siteName: "Ambassador of Love",
-    tagline: "Ahmad's journey around the world",
+    tagline: "My journey around the world",
     nav: {
       home: "Home",
       explore: "Explore",
