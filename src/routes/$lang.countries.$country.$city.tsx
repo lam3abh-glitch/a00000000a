@@ -378,7 +378,7 @@ function City() {
             params={{ lang, slug: country.slug }}
             className="inline-flex items-center justify-center border border-midnight/20 px-5 py-3 text-sm text-midnight hover:border-gold hover:text-gold transition min-h-[44px]"
           >
-            {lang === "ar" ? "العودة إلى فرنسا" : "Back to France"}
+            {lang === "ar" ? `العودة إلى ${country.name_ar}` : `Back to ${country.name_en}`}
           </Link>
         </div>
       </section>
