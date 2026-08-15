@@ -65,6 +65,9 @@
   --color-charcoal: var(--charcoal);
   --color-gold: var(--gold);
   --color-terracotta: var(--terracotta);
+  --color-earth: var(--earth);
+  --color-savanna: var(--savanna);
+  --color-clay: var(--clay);
   --font-display: "Amiri", "Cormorant Garamond", serif;
   --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
 }
@@ -78,6 +81,11 @@
   --charcoal: oklch(0.25 0.01 250);
   --gold: oklch(0.72 0.13 75);
   --terracotta: oklch(0.58 0.13 40);
+
+  /* Uganda / African earth accents */
+  --earth: oklch(0.27 0.05 55);
+  --savanna: oklch(0.66 0.1 105);
+  --clay: oklch(0.6 0.14 48);
 
   --background: var(--cream);
   --foreground: var(--midnight);
