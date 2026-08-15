@@ -158,7 +158,14 @@ function Home() {
                 className="group text-center"
               >
                 <div className="aspect-square rounded-full overflow-hidden group-hover:scale-105 transition shadow-sm border border-sand group-hover:border-gold">
-                  {c.iso2 ? (
+                  {c.slug === "northern-cyprus" ? (
+                    <img
+                      src={turkishCyprusFlag.url}
+                      alt={lang === "ar" ? c.name_ar : c.name_en}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : c.iso2 ? (
                     <img
                       src={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png`}
                       srcSet={`https://flagcdn.com/w320/${c.iso2.toLowerCase()}.png 1x, https://flagcdn.com/w640/${c.iso2.toLowerCase()}.png 2x`}
