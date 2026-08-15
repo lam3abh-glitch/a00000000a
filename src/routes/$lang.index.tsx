@@ -9,6 +9,7 @@ import shapeEurope from "@/assets/continent-europe.png";
 import shapeAfrica from "@/assets/continent-africa.png";
 import shapeNorthAmerica from "@/assets/continent-north-america.png";
 import shapeSouthAmerica from "@/assets/continent-south-america.png";
+import turkishCyprusFlag from "@/assets/turkish-cyprus-flag.png.asset.json";
 
 const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() });
 

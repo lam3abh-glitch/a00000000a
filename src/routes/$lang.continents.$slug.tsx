@@ -2,6 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getContinent } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import turkishCyprusFlag from "@/assets/turkish-cyprus-flag.png.asset.json";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["continent", slug], queryFn: () => getContinent({ data: { slug } }) });
 

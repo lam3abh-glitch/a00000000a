@@ -3,6 +3,7 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { getCountriesAll } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
+import turkishCyprusFlag from "@/assets/turkish-cyprus-flag.png.asset.json";
 
 const qo = queryOptions({ queryKey: ["countries-all"], queryFn: () => getCountriesAll() });
 
