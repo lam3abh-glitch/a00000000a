@@ -21,7 +21,7 @@ function City() {
   const country: any = data.country;
   const tr = t[lang];
   const name = lang === "ar" ? city.name_ar : city.name_en;
-  const article = country.slug === "france" ? getCityArticle(city.slug, lang) : undefined;
+  const article = getCityArticle(city.slug, lang);
   const heroImage = article?.heroImage ?? city.hero_image;
 
   // Collect all images from the article for the lightbox gallery.
