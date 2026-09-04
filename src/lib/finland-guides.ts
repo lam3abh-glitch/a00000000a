@@ -1,5 +1,6 @@
 import type { Guide } from "./france-guides";
 import finlandFlag from "@/assets/finland-flag.png.asset.json";
+import finlandFlagImportance from "@/assets/finland-flag-importance.png.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
