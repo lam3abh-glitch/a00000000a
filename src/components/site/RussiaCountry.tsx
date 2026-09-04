@@ -169,7 +169,7 @@ export function RussiaCountry({ lang }: { lang: Lang }) {
         <AnthemPlayer
           src={ANTHEM}
           lang={lang}
-          title={rtl ? "علم روسيا والنشيد الوطني الروسي" : "The flag of Russia and the Russian national anthem"}
+          title={rtl ? "النشيد الوطني الروسي" : "The Russian national anthem"}
         />
       </div>
 
