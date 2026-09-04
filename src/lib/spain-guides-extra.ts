@@ -68,4 +68,91 @@ export const spainGuidesExtra: Guide[] = [
       },
     ],
   },
+  {
+    slug: "plaza-mayor",
+    title_ar: "بلازا مايور .. ايقونة السياحة في مدريد",
+    title_en: "Plaza Mayor — an icon of tourism in Madrid",
+    kicker_ar: "مدريد",
+    kicker_en: "Madrid",
+    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2899-1.jpg",
+    blocks: [
+      {
+        type: "P",
+        ar: "بلازا مايور الساحة الكبرى Plaza Mayor de Madrid هي ساحة من أهم الساحات في مدريد ، بل وعلي مستوي اسبانيا ككل ، ففيها تقام الاحتفالات الرسمية",
+        en: "Plaza Mayor de Madrid (the Great Square) is one of the most important squares in Madrid — indeed, in Spain as a whole — where official celebrations are held",
+      },
+      {
+        type: "P",
+        ar: "تاريخها .. بنيت هذه الساحة اثناء حكم فيليب الثالث ملك اسبانيا وذلك في القرن السابع عشر عام 1617 ، وكان يتم بها عمليات الاعدام ، ومن ثم أصبحت ساحة لمصارعة الثيران ، حتي أصبح يقام فيها الاحتفالات الرسمية للدولة ، يطل علي هذه الساحة ما يقارب 136 منزلا وحوالي 437 شرفة ، يتم استخامها في مشاهدة ما يدور في هذه الساحة ، تعد هذه الساحة بمثابة قلب مدريد",
+        en: "Its history: this square was built during the reign of Philip III, King of Spain, in the seventeenth century in 1617. Executions were once carried out there, then it became a bullfighting arena, until official state celebrations came to be held in it. Around 136 houses and some 437 balconies overlook the square, used to watch what takes place in it. This square is the heart of Madrid",
+      },
+      {
+        type: "P",
+        ar: "اما عن شكل الساحة .. فيتوسط الساحة تمثال للملك فيليب الثالث ، كما يحيط بها بعض المباني الدينية القديمة ، ويوجد بالساحة بعض الفنانين الذين يرسمون صور للسائحين كتذكار من المدينة",
+        en: "As for the square's appearance: at its centre stands a statue of King Philip III, surrounded by some old religious buildings, and in the square are artists who draw portraits for tourists as a souvenir of the city",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2899.jpg",
+        cap_ar: "بلازا مايور",
+        cap_en: "Plaza Mayor",
+      },
+      {
+        type: "P",
+        ar: "ساحة مايور هى واحده من الساحات المركزيه الشهيرة فى مدينة مدريد الاسبانيه , وهى واحده من اجمل الاماكن المفتوحه فى المدينة وتعتبر الساحه مزيجا رائعا من التاريخ القديم حيث المبانى العتيقه والحاضر الصاخب حيث المطاعم و المقاهى التى دائما ما تكون مزدحمه بالسياح و زائرى مدينة مدريد الجميلة",
+        en: "Plaza Mayor is one of the famous central squares in the Spanish city of Madrid, and one of the most beautiful open spaces in the city. The square is a wonderful blend of ancient history — with its old buildings — and a vibrant present, with restaurants and cafés always crowded with tourists and visitors to beautiful Madrid",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2900.jpg",
+        cap_ar: "ساحة مايور",
+        cap_en: "Plaza Mayor",
+      },
+      {
+        type: "P",
+        ar: "يضع الراغبون في تجربة السياحة في مدريد زيارة بلازا مايور في مقدمة برنامجهم السياحي لما به من أهمية سياحية كبيرة جعلتها متربعة على عرش ميادين مدريد قاطبة ، لاسيما وأن تاريخ تأسيس هذا الميدان يعود الى عهد الملك فيليب الثالث ، يتفرع من هذا الميدان عدد من الشوارع المعروفة في هذه المدينة بأهميتها ، وهذا ما يضاعف من أهميته ومكانته لدى السياح والسكان المحليين على حد سواء ، ومن الشوارع المتفرعة منه ، شارع جيرونا بالاضافة الى مايور ستريت",
+        en: "Those wishing to experience tourism in Madrid put a visit to Plaza Mayor at the top of their itinerary, given its great tourist importance that has made it the foremost of Madrid's squares — especially since this square's foundation dates back to the era of King Philip III. A number of well-known, important streets branch off from it, which doubles its importance and standing for tourists and locals alike; among these streets are Calle de Gerona and Mayor Street",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2904.jpg",
+        cap_ar: "بلازا مايور من الداخل",
+        cap_en: "Inside Plaza Mayor",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2906.jpg",
+        cap_ar: "المباني المحيطة بالساحة",
+        cap_en: "The buildings around the square",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2905.jpg",
+        cap_ar: "شرفات بلازا مايور",
+        cap_en: "The balconies of Plaza Mayor",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2902.jpg",
+        cap_ar: "بلازا مايور",
+        cap_en: "Plaza Mayor",
+      },
+      {
+        type: "H3",
+        ar: "افضل الانشطة التي يمكن القيام بها في ساحة مايور بمدريد",
+        en: "The best activities to do at Plaza Mayor in Madrid",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2907.jpg",
+        cap_ar: "الأنشطة في ساحة مايور",
+        cap_en: "Activities at Plaza Mayor",
+      },
+      {
+        type: "H3",
+        ar: "اوقات عمل ساحة مايور بمدريد",
+        en: "Opening hours of Plaza Mayor in Madrid",
+      },
+    ],
+  },
 ];

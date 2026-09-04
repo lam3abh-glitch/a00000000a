@@ -4,6 +4,8 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
   madrid: {
     "ساحة دي سيبيليس": { country: "spain", topic: "cibeles" },
     "Plaza de Cibeles": { country: "spain", topic: "cibeles" },
+    "بلازا مايور مدريد": { country: "spain", topic: "plaza-mayor" },
+    "Plaza Mayor, Madrid": { country: "spain", topic: "plaza-mayor" },
   },
 };
 
