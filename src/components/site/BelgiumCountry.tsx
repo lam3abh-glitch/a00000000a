@@ -26,7 +26,7 @@ function Gable({ className }: { className?: string }) {
   );
 }
 
-export function BelgiumCountry({ lang, cityLabel }: { lang: Lang; cityLabel: { ar: string; en: string } }) {
+export function BelgiumCountry({ lang }: { lang: Lang; cityLabel?: { ar: string; en: string } }) {
   const rtl = lang === "ar";
   const align = rtl ? "text-right" : "text-left";
 
