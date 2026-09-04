@@ -8,7 +8,7 @@ export const spainGuidesBarcelona: Guide[] = [
     title_en: "The Sagrada Família Church",
     kicker_ar: "برشلونة",
     kicker_en: "Barcelona",
-    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2412-1.jpg",
+    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2875.jpg",
     blocks: [
       {
         type: "P",
