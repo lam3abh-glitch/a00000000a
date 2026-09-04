@@ -651,11 +651,20 @@ P|يمتاز الشلال بإرتفاعه الكبير والذى يصل الى
   ),
 };
 
+export const CITY_ARTICLES: Record<string, CityArticle> = {
+  ...FRANCE_AND_UGANDA,
+  ...SPAIN_CITY_ARTICLES,
+};
+
 // English translations of every article line, aligned by index with the Arabic
 // lines above (IMG lines keep their original URLs).
 import EN from "./city-articles-en.json";
 
-const EN_ARTICLES = EN as Record<string, { title: string; values: string[] }>;
+const EN_ARTICLES = {
+  ...(EN as Record<string, { title: string; values: string[] }>),
+  ...(SPAIN_EN as Record<string, { title: string; values: string[] }>),
+};
+
 
 export function getCityArticle(slug: string, lang: string): CityArticle | undefined {
   const base = CITY_ARTICLES[slug];
