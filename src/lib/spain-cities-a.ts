@@ -69,6 +69,9 @@ P|يعرض هذا المتحف تاريخ مدينة برشلونة من الع�
 IMG|https://i0.wp.com/100region.com/wp-content/uploads/2022/05/img_7062.jpg
 IMG|https://i0.wp.com/100region.com/wp-content/uploads/2022/05/img_7063.jpg
 IMG|https://i0.wp.com/100region.com/wp-content/uploads/2022/05/img_7061.jpg
+H5|ملعب الكامب نو
+P|ملعب الكامب نو هو الملعب البيتي لنادي برشلونة الاسباني ، بدأ بناء الاستاد عام 1954م واستمر حتى عام 1957م ، ويعد من أكبر ملاعب كرة القدم في العالم وأشهرها ، وقد شهد العديد من الأحداث الرياضية الهامة مثل المباراة الافتتاحية لكأس العالم 1982م ونهائيات دوري أبطال أوروبا
+IMG|https://i0.wp.com/100region.com/wp-content/uploads/2022/02/file28581.jpg
 `
   ),
   bilbao: article(

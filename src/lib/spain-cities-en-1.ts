@@ -63,6 +63,9 @@ export const SPAIN_EN_1: Record<string, { title: string; values: string[] }> = {
       "",
       "",
       "",
+      "Camp Nou Stadium",
+      "Camp Nou is the home stadium of the Spanish club FC Barcelona. Construction of the stadium began in 1954 and continued until 1957. It is one of the largest and most famous football stadiums in the world, and it has witnessed many major sporting events such as the opening match of the 1982 World Cup and UEFA Champions League finals.",
+      "",
     ],
   },
   bilbao: {
