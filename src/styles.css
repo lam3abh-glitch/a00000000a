@@ -72,11 +72,6 @@
   --color-carmine: var(--carmine);
   --color-azulejo: var(--azulejo);
   --color-olive: var(--olive);
-  --color-belnoir: var(--belnoir);
-  --color-belor: var(--belor);
-  --color-belrouge: var(--belrouge);
-  --color-belbrick: var(--belbrick);
-  --color-belcopper: var(--belcopper);
 
   --font-display: "Amiri", "Cormorant Garamond", serif;
   --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
@@ -101,12 +96,6 @@
   --carmine: oklch(0.48 0.19 25);
   --azulejo: oklch(0.52 0.11 235);
   --olive: oklch(0.55 0.07 120);
-  /* Belgium: Grand-Place gold, tricolour black & red, brick, patinated copper */
-  --belnoir: oklch(0.2 0.02 280);
-  --belor: oklch(0.82 0.15 88);
-  --belrouge: oklch(0.5 0.19 27);
-  --belbrick: oklch(0.42 0.08 45);
-  --belcopper: oklch(0.62 0.06 175);
 
 
   --background: var(--cream);
