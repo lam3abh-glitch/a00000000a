@@ -102,6 +102,9 @@ function GuidePage() {
                 )}
                 <div className="min-w-0">
                   <h2 className={`font-display leading-snug text-midnight ${isTitle ? "text-2xl sm:text-4xl" : "text-xl sm:text-3xl"}`}>{ar ? b.ar : b.en}</h2>
+                  {(ar ? b.sub_ar : b.sub_en) && (
+                    <div className="mt-1.5 text-[13px] sm:text-[14px] text-charcoal/60">{ar ? b.sub_ar : b.sub_en}</div>
+                  )}
                   <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
                 </div>
               </motion.div>
