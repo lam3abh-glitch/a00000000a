@@ -8,6 +8,11 @@ import { norwayGuides } from "./norway-guides";
 import { norwayDiscoverGuide, norwayDiscoverSubGuides } from "./norway-discover";
 import { norwayMoreGuides } from "./norway-more";
 import { russiaGuides } from "./russia-guides";
+import { pragueGuidesA } from "./czech-guides-prague-a";
+import { pragueGuidesB } from "./czech-guides-prague-b";
+import { pragueGuidesC } from "./czech-guides-prague-c";
+
+const pragueLandmarkGuides = [...pragueGuidesA, ...pragueGuidesB, ...pragueGuidesC];
 
 export type { Guide, GuideBlock };
 
