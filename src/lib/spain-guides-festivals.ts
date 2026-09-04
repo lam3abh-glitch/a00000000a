@@ -3,13 +3,12 @@ import type { Guide } from "./france-guides";
 export const spainGuidesFestivals: Guide[] = [
   {
     slug: "festivals",
-    title_ar: "المهرجانات والتقاليد الشعبية",
-    title_en: "Festivals and popular traditions",
+    title_ar: "تعرف على سمات وأشكال المهرجانات والتقاليد الشعبية الاسبانية",
+    title_en: "Get to know the characteristics and forms of Spanish festivals and popular traditions",
     kicker_ar: "مهرجانات",
     kicker_en: "Festivals",
     image: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_1001.jpg",
     blocks: [
-      { type: "H3", ar: "تعرف على سمات وأشكال المهرجانات والتقاليد الشعبية الاسبانية", en: "Get to know the characteristics and forms of Spanish festivals and popular traditions" },
       { type: "H3", ar: "رحلة عبر المهرجانات والتقاليد", en: "A journey through festivals and traditions" },
       { type: "H3", ar: "التي حددتها اليونسكو كتراث ثقافي غير مادي", en: "Which UNESCO has designated as intangible cultural heritage" },
       { type: "P", ar: "انها جزء من الثقافة الشعبية والتقاليد التي تستمر وتمثل هوية أولئك الذين يحتفلون بها ، تعترف اليونسكو بهم كجزء من التراث الثقافي غير المادي للبشرية ، ويمكنك الاستمتاع بالعديد منهم في اسبانيا", en: "They are part of the popular culture and traditions that endure and represent the identity of those who celebrate them; UNESCO recognizes them as part of the intangible cultural heritage of humanity, and you can enjoy many of them in Spain" },
