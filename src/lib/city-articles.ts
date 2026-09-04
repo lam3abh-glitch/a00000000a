@@ -675,9 +675,12 @@ export function getCityArticle(slug: string, lang: string): CityArticle | undefi
   return {
     ...base,
     title: en.title || base.title,
-    lines: base.lines.map((line, i) => ({
-      kind: line.kind,
-      value: line.kind === "IMG" ? line.value : (en.values[i] ?? line.value),
-    })),
+    lines: base.lines.map((line, i) => {
+      if (line.kind !== "IMG") return { kind: line.kind, value: en.values[i] ?? line.value };
+      const src = line.value.split("||")[0];
+      const caption = en.values[i];
+      return { kind: line.kind, value: caption ? `${src}||${caption}` : src };
+    }),
+
   };
 }
