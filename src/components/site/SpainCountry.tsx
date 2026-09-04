@@ -4,7 +4,7 @@ import type { Lang } from "@/lib/i18n";
 const IMG = (name: string, month: string) =>
   `https://i0.wp.com/100region.com/wp-content/uploads/${month}/${name}?ssl=1`;
 
-const AHMAD_SPAIN = IMG("img_0849.jpg", "2023/04");
+const AHMAD_SPAIN = ahmadCampNou.url;
 const EMBLEM_MAP = IMG("img_4700.jpg", "2022/04");
 
 const LANDSCAPE = IMG("img_3652-1.jpg", "2022/03");
