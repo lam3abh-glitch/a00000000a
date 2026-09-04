@@ -664,11 +664,19 @@ export const CITY_ARTICLES: Record<string, CityArticle> = {
   ...BULGARIA_CITY_ARTICLES,
   ...NORWAY_CITY_ARTICLES,
   ...RUSSIA_CITY_ARTICLES,
+  ...CZ_CITY_ARTICLES_A,
+  ...CZ_CITY_ARTICLES_B,
+  ...CZ_CITY_ARTICLES_C,
+  ...CZ_CITY_ARTICLES_D,
 };
 
 // English translations of every article line, aligned by index with the Arabic
 // lines above (IMG lines keep their original URLs).
 import EN from "./city-articles-en.json";
+import { CZ_CITY_ARTICLES_A, CZ_CITY_ARTICLES_A_EN } from "./czech-cities-a";
+import { CZ_CITY_ARTICLES_B, CZ_CITY_ARTICLES_B_EN } from "./czech-cities-b";
+import { CZ_CITY_ARTICLES_C, CZ_CITY_ARTICLES_C_EN } from "./czech-cities-c";
+import { CZ_CITY_ARTICLES_D, CZ_CITY_ARTICLES_D_EN } from "./czech-cities-d";
 
 const EN_ARTICLES = {
   ...(EN as Record<string, { title: string; values: string[] }>),
@@ -678,6 +686,10 @@ const EN_ARTICLES = {
   ...BULGARIA_CITY_ARTICLES_EN,
   ...NORWAY_CITY_ARTICLES_EN,
   ...RUSSIA_CITY_ARTICLES_EN,
+  ...CZ_CITY_ARTICLES_A_EN,
+  ...CZ_CITY_ARTICLES_B_EN,
+  ...CZ_CITY_ARTICLES_C_EN,
+  ...CZ_CITY_ARTICLES_D_EN,
 };
 
 

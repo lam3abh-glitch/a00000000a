@@ -17,6 +17,7 @@ import { FinlandCountry } from "@/components/site/FinlandCountry";
 import { BulgariaCountry } from "@/components/site/BulgariaCountry";
 import { NorwayCountry } from "@/components/site/NorwayCountry";
 import { RussiaCountry } from "@/components/site/RussiaCountry";
+import { CzechCountry } from "@/components/site/CzechCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
@@ -120,6 +121,15 @@ function Country() {
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1991", value_en: "1991" },
                 ]
 
+              : c.slug === "czech-republic"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "براغ", value_en: "Prague" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "كرونة تشيكية", value_en: "Czech koruna" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "10.6 مليون", value_en: "10.6 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "78,866 كم²", value_en: "78,866 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1993", value_en: "1993" },
+                ]
               : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
@@ -167,6 +177,8 @@ function Country() {
         <NorwayCountry lang={lang} />
       ) : c.slug === "russia" ? (
         <RussiaCountry lang={lang} />
+      ) : c.slug === "czech-republic" ? (
+        <CzechCountry lang={lang} />
 
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
@@ -355,6 +367,15 @@ function Country() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {(() => {
                 const list = [...data.cities];
+                const CZECH_ORDER = [
+                  "kutna-hora", "prague", "ceske-budejovice", "olomouc", "melnik",
+                  "tabor", "trebic", "brno", "karlovy-vary", "plzen",
+                ];
+                if (c.slug === "czech-republic") {
+                  return list.sort(
+                    (x: any, y: any) => CZECH_ORDER.indexOf(x.slug) - CZECH_ORDER.indexOf(y.slug),
+                  );
+                }
                 const a = list.findIndex((x: any) => x.slug === "madrid");
                 const b = list.findIndex((x: any) => x.slug === "seville");
                 if (a > -1 && b > -1) { const tmp = list[a]; list[a] = list[b]; list[b] = tmp; }
