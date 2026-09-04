@@ -189,6 +189,22 @@ function GuidePage() {
                 </motion.figure>
               );
             }
+            if (b.type === "MORE") {
+              return (
+                <div key={i} className="my-8 sm:my-10 flex justify-center">
+                  <Link
+                    to="/$lang/countries/$country/guides/$topic"
+                    params={{ lang, country, topic: b.topic }}
+                    className="group inline-flex items-center gap-2 rounded-full border border-gold/60 bg-white/70 px-6 py-3 text-[13px] sm:text-sm text-midnight hover:bg-gold hover:text-cream transition-colors"
+                  >
+                    <span className="font-display">{ar ? b.label_ar : b.label_en}</span>
+                    <span className="text-[11px] uppercase tracking-[0.25em] text-charcoal/50 group-hover:text-cream/80">
+                      {ar ? "اقرأ المزيد" : "Read more"}
+                    </span>
+                  </Link>
+                </div>
+              );
+            }
             const items: string[] = ar ? b.ar : b.en;
             return (
               <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
