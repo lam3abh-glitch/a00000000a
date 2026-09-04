@@ -1,5 +1,5 @@
 import { franceGuides, type Guide } from "./france-guides";
-import { spainGuides } from "./spain-guides";
+import { spainGuides, spainGuidesAll } from "./spain-guides";
 
 export type { Guide };
 
@@ -17,8 +17,14 @@ export function guidesFor(country: string): Guide[] {
   return GUIDES_BY_COUNTRY[country] ?? [];
 }
 
+// Includes unlisted landmark pages that are only linked from city articles.
+const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
+  france: franceGuides,
+  spain: spainGuidesAll,
+};
+
 export function getGuideFor(country: string, slug: string): Guide | undefined {
-  return guidesFor(country).find((g) => g.slug === slug);
+  return (LOOKUP_BY_COUNTRY[country] ?? guidesFor(country)).find((g) => g.slug === slug);
 }
 
 export function countryLabel(country: string, lang: string): string {
