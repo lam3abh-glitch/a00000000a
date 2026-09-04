@@ -6,6 +6,7 @@ import { finlandGuides } from "./finland-guides";
 import { bulgariaGuides } from "./bulgaria-guides";
 import { norwayGuides } from "./norway-guides";
 import { norwayDiscoverGuide, norwayDiscoverSubGuides } from "./norway-discover";
+import { norwayMoreGuides } from "./norway-more";
 
 export type { Guide, GuideBlock };
 
