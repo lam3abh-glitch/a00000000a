@@ -155,6 +155,13 @@ export function NorwayCountry({ lang }: { lang: Lang }) {
       <Longship className="absolute top-24 end-4 md:end-14 w-24 md:w-32 text-midnight/15 pointer-events-none" />
       <Fjord className="absolute bottom-0 inset-x-0 h-24 md:h-32 text-midnight/[0.07] pointer-events-none" />
 
+      {/* Viking-themed background stickers — kept subtle so content stays readable */}
+      <RuneRing className="absolute -top-8 -start-8 w-40 md:w-56 text-gold/25 pointer-events-none rotate-12" />
+      <Shield className="absolute top-36 start-4 md:start-10 w-16 md:w-24 text-midnight/10 pointer-events-none -rotate-6" />
+      <Axe className="absolute bottom-28 end-6 md:end-20 w-14 md:w-20 text-midnight/10 pointer-events-none rotate-[25deg]" />
+      <KnotCorner className="absolute top-4 end-4 md:end-10 w-16 md:w-24 text-gold/30 pointer-events-none" />
+      <KnotCorner className="absolute bottom-4 start-4 md:start-10 w-16 md:w-24 text-gold/25 pointer-events-none rotate-180" />
+
       {/* INTRO — arched fjord window + text */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="relative flex justify-center md:justify-start" dir="ltr">
