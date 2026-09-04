@@ -17,7 +17,6 @@ const ORDER = [
   "cantabria-train",
   "ibiza",
   "food",
-  "weddings",
   "weather",
   "flag",
 ];

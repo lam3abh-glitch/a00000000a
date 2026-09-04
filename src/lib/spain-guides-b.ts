@@ -71,17 +71,6 @@ export const spainGuidesB: Guide[] = [
     ],
   },
   {
-    slug: "weddings",
-    title_ar: "عادات وتقاليد الزواج في اسبانيا",
-    title_en: "Marriage customs and traditions in Spain",
-    kicker_ar: "عادات",
-    kicker_en: "Customs",
-    image: "",
-    blocks: [
-      { type: "P", ar: "عادات وتقاليد الزواج في اسبانيا", en: "Marriage customs and traditions in Spain" },
-    ],
-  },
-  {
     slug: "weather",
     title_ar: "الطقس وفصول السنة",
     title_en: "The weather and the seasons of the year",
