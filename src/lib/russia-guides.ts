@@ -10,6 +10,7 @@ const transSiberian: Guide = {
   kicker_ar: "قطار سيبيريا العظيم",
   kicker_en: "Trans-Siberian train",
   image: U("2022/09/img_2582.jpg"),
+  theme: "siberia",
   blocks: [
     { type: "H3", ar: "خط سير قطار سيبيريا العظيم", en: "The route of the Great Siberian train", noNumber: true },
     {
@@ -43,6 +44,12 @@ const transSiberian: Guide = {
       en: "Watch the video of the Great Siberian train on my YouTube channel.",
     },
     {
+      type: "YT",
+      id: "4vurkhR921Q",
+      cap_ar: "شاهد فيديو قطار سيبيريا العظيم على قناتي في اليوتيوب",
+      cap_en: "Watch the Great Siberian train video on my YouTube channel",
+    },
+    {
       type: "P",
       ar: "ما ان وصلت الى مدينة فالديفستوك حتى كانت الطاقة الجسمانية التي كانت بداخلي منتهية تماما ، حيث انني معتاد على عدم النوم بالطائرة ، وكما ذكرت ، فإن المجال مفتوح أمامي لمدة تسع ساعات لاكتشاف المدينة ولو بصورة سريعة ، لذلك اتفقت مع أحد أصحاب التكاسي وكان من جمهورية أوزبكستان بأن يتولى عملية أخذ جولة سياحية في المدينة لمدة خمس ساعات ، وبالفعل قمت بذلك وسوف أشرح في صفحة روسيا الأماكن التي زرتها في فالديفستوك ، وذلك لأن الحديث هنا فقط عن قطار سيبيريا العظيم",
       en: "By the time I reached Vladivostok my physical energy was completely spent, since I am used to not sleeping on planes. As I said, I had nine free hours to discover the city, even if quickly, so I agreed with a taxi driver — he was from Uzbekistan — to take me on a five-hour tour of the city. I will describe the places I visited in Vladivostok on the Russia page, because the subject here is only the Great Siberian train.",
@@ -61,6 +68,12 @@ const transSiberian: Guide = {
       type: "P",
       ar: "في الساعة السادسة مساء جاءت اللحظة المنتظرة وقد اتى قطار سيبيريا العظيم الى نقطة الانطلاق ، وبعد التصوير الخارجي للقطار وللأجواء المحيطة به ، بادرت بالصعود اليه ، وقبلها قام موظف الأمن بالقطار بالتحقق من التذكرة والتي كانت موجودة في جهاز هاتفي ، وقد قارن التذكرة مع جوازي والحمدلله الامور طيبة وسلسه",
       en: "At six in the evening the awaited moment came and the Great Siberian train pulled into the departure point. After filming the outside of the train and the atmosphere around it, I boarded. Before that the train's security officer checked my ticket, which was on my phone, and compared it with my passport — and, thank God, everything went smoothly.",
+    },
+    {
+      type: "VIDEO",
+      src: "https://videos.files.wordpress.com/zLpmPuft/img_1179.mp4",
+      cap_ar: "لحظة الصعود إلى قطار سيبيريا العظيم",
+      cap_en: "Boarding the Great Siberian train",
     },
     {
       type: "P",
@@ -263,9 +276,10 @@ const transSiberian: Guide = {
       en: "If God grants me long life among you, I would not be surprised to try an experience like this a second time, now that I have gained the experience for it.",
     },
     {
-      type: "P",
-      ar: "فرحة ما بعد اكتمال رحلة قطار سيبيريا العظيم",
-      en: "The joy that followed the completion of the Great Siberian train journey.",
+      type: "VIDEO",
+      src: "https://videos.files.wordpress.com/lOL1mbrs/img_2351.mp4",
+      cap_ar: "فرحة ما بعد اكتمال رحلة قطار سيبيريا العظيم",
+      cap_en: "The joy that followed the completion of the Great Siberian train journey",
     },
   ],
 };
