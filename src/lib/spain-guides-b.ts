@@ -51,7 +51,7 @@ export const spainGuidesB: Guide[] = [
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0942.jpg", cap_ar: "سمك القد على طريقة بيلبيل", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0943.jpg", cap_ar: "جبن كابراليس", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0944.jpg", cap_ar: "أخطبوط على الطريقة الجاليسية", cap_en: "Spanish cuisine" },
-      { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0945.jpg", cap_ar: "أكلات اسبانية", cap_en: "Spanish cuisine" },
+      { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0945.jpg", cap_ar: "طبق سمك الأنقليس", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0946.jpg", cap_ar: "أكلات اسبانية", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0948.jpg", cap_ar: "أكلات اسبانية", cap_en: "Spanish cuisine" },
     ],
