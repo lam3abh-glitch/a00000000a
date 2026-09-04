@@ -71,9 +71,21 @@ export function BelgiumCountry({ lang, cityLabel }: { lang: Lang; cityLabel: { a
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-midnight leading-tight">
             {rtl ? "مملكة بلجيكا" : "The Kingdom of Belgium"}
           </h2>
-          <div className="gold-divider w-24 my-7" />
+          <p className="mt-3 font-display text-xl sm:text-2xl text-[#bf2a2d]/90 leading-snug">
+            {rtl ? "قلب أوروبا النابض وعاصمة الاتحاد الأوروبي" : "The beating heart of Europe and capital of the European Union"}
+          </p>
+          <div className="my-6 h-px w-16 bg-midnight/25" />
           <p className="text-[16px] sm:text-[18px] leading-[2] text-charcoal/85">{rtl ? ABOUT.ar : ABOUT.en}</p>
         </div>
+      </div>
+
+      {/* ANTHEM */}
+      <div className="relative z-10 mt-16">
+        <AnthemPlayer
+          src={ANTHEM_VIDEO}
+          lang={lang}
+          title={rtl ? "النشيد الوطني البلجيكي" : "The Belgian national anthem"}
+        />
       </div>
 
       {/* EMBLEM + MAP · FLAG + ANTHEM */}
