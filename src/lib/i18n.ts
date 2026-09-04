@@ -85,6 +85,7 @@ export const t = {
       cities: "Cities I visited",
       attractions: "Notable places",
       culture: "Culture & notes",
+      stories: "Stories & Adventures",
       relatedItineraries: "Related itineraries",
       discover: "Discover the journey",
       world: "World",
