@@ -9,9 +9,6 @@ const SCENE_A = U("2022/01/img_1193.jpg");
 const SCENE_B = U("2022/01/img_1853.jpg");
 const ANTHEM = "https://videos.files.wordpress.com/S9aLWVJR/my-movie-5-4-1.mp4";
 
-const BG_GREEN = "#00966E";
-const BG_RED = "#D62612";
-
 const ABOUT = {
   ar: "تقع جمهورية بلغاريا في القارة الأوروبية ، في الجزء الجنوبي الشرقي من أوروبا على حدود البحر الأسود بين تركيا ورومانيا ، وتعتبر بلغاريا جزء من شبه جزيرة البلقان ، ويحدها العديد من الدول ، يحدها من جهة الشمال رومانيا ، ويحدها من جهة الجنوب الشرقي تركيا ، ومن جهة الجنوب تحدها اليونان ، ومن جهة الشرق يحدها البحر الأسود ، ومن جهة الغرب تحدها مقدونيا وصربيا",
   en: "The Republic of Bulgaria lies in Europe, in the south-eastern part of the continent on the shore of the Black Sea between Turkey and Romania. Bulgaria is part of the Balkan peninsula and is bordered by several countries: Romania to the north, Turkey to the south-east, Greece to the south, the Black Sea to the east, and North Macedonia and Serbia to the west.",
@@ -37,7 +34,7 @@ const TELECOM = {
   en: ["Blizoo", "Max Telecom", "Bulsatcom", "Mobikom", "Cool Box"],
 };
 
-/** Bulgarian rose — the country's national flower, drawn in SVG. */
+/** Stylised rose drawn in SVG. */
 function Rose({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 100" aria-hidden className={className}>
@@ -54,12 +51,12 @@ function Rose({ className }: { className?: string }) {
   );
 }
 
-/** Bulgarian folk-embroidery band (kanaviza style) drawn as repeating diamonds. */
-function FolkBand({ color, className }: { color: string; className?: string }) {
+/** Decorative folk-embroidery band drawn as repeating diamonds. */
+function FolkBand({ className }: { className?: string }) {
   return (
     <div className={className} aria-hidden>
       <svg viewBox="0 0 120 12" className="w-full h-3" preserveAspectRatio="none">
-        <g fill={color}>
+        <g fill="currentColor">
           {Array.from({ length: 12 }).map((_, i) => (
             <polygon key={i} points={`${i * 10 + 5},1 ${i * 10 + 9},6 ${i * 10 + 5},11 ${i * 10 + 1},6`} />
           ))}
@@ -74,31 +71,28 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
   const align = rtl ? "text-right" : "text-left";
 
   return (
-    <section className="relative overflow-hidden bg-white py-20 sm:py-24">
-      {/* Bulgarian tricolour wash: white → green → red */}
+    <section className="relative overflow-hidden bg-cream py-20 sm:py-24">
+      {/* Soft warm wash */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,150,110,0.10) 45%, rgba(214,38,18,0.10) 100%)",
+            "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(219,184,122,0.08) 45%, rgba(224,126,80,0.08) 100%)",
         }}
       />
-      <Rose className="absolute -top-4 end-4 md:end-16 w-24 md:w-32 text-[#D62612]/15 pointer-events-none" />
-      <Rose className="absolute bottom-10 start-4 md:start-16 w-16 md:w-24 text-[#00966E]/15 pointer-events-none" />
+      <Rose className="absolute -top-4 end-4 md:end-16 w-24 md:w-32 text-gold/25 pointer-events-none" />
+      <Rose className="absolute bottom-10 start-4 md:start-16 w-16 md:w-24 text-midnight/10 pointer-events-none" />
 
       {/* INTRO — cover photo + about text */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="relative flex justify-center md:justify-start" dir="ltr">
           <div className="relative">
-            <div aria-hidden className="absolute -inset-3 rounded-[2rem] border" style={{ borderColor: "rgba(0,150,110,0.3)" }} />
+            <div aria-hidden className="absolute -inset-3 rounded-[2rem] border border-gold/30" />
             <figure className="relative overflow-hidden rounded-[1.75rem] shadow-2xl max-w-xs md:max-w-sm bg-white">
               <img src={COVER} alt="Bulgaria" loading="lazy" className="w-full object-cover" />
-              <FolkBand color="#ffffff" className="absolute bottom-14 inset-x-0 opacity-70" />
-              <figcaption
-                className="px-5 py-3 text-center text-[11px] uppercase tracking-[0.3em] text-white"
-                style={{ background: BG_GREEN }}
-              >
+              <FolkBand className="absolute bottom-14 inset-x-0 text-gold/70" />
+              <figcaption className="px-5 py-3 text-center text-[11px] uppercase tracking-[0.3em] text-cream bg-midnight">
                 {rtl ? "لؤلؤة البلقان" : "The pearl of the Balkans"}
               </figcaption>
             </figure>
@@ -106,14 +100,14 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
         </div>
 
         <div className={align} dir={rtl ? "rtl" : "ltr"}>
-          <div className="text-[11px] uppercase tracking-[0.4em] mb-4" style={{ color: BG_GREEN }}>
+          <div className="text-[11px] uppercase tracking-[0.4em] mb-4 text-gold">
             {rtl ? "جمهورية بلغاريا" : "Republic of Bulgaria"}
           </div>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-midnight leading-tight">
             {rtl ? "جمهورية بلغاريا" : "The Republic of Bulgaria"}
           </h2>
-          <div className="my-4 h-px w-14" style={{ background: BG_RED }} />
-          <p className="font-display text-xl sm:text-2xl leading-snug" style={{ color: BG_RED }}>
+          <div className="my-4 h-px w-14 bg-gold" />
+          <p className="font-display text-xl sm:text-2xl leading-snug text-terracotta">
             {rtl
               ? "أرض الورد الدمشقي وجبال البلقان وشواطئ البحر الأسود"
               : "Land of the damask rose, the Balkan mountains and the Black Sea coast"}
@@ -128,17 +122,6 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
           src={ANTHEM}
           lang={lang}
           title={rtl ? "النشيد الوطني البلغاري" : "The Bulgarian national anthem"}
-          theme={{
-            bg: "bg-white",
-            border: "border-[#00966E]/25",
-            buttonBg: "bg-[#00966E]",
-            buttonText: "text-white",
-            buttonHoverBg: "hover:bg-[#D62612]",
-            buttonHoverText: "hover:text-white",
-            accent: "text-[#00966E]",
-            title: "text-[#00966E]",
-            ping: "border-[#D62612]",
-          }}
         />
       </div>
 
@@ -147,16 +130,16 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
         <div className={`${align} space-y-6`} dir={rtl ? "rtl" : "ltr"}>
           {PARAS.map((p, i) => (
             <div key={i}>
-              <FolkBand color={i % 2 ? BG_RED : BG_GREEN} className="w-16 mb-3 opacity-70" />
+              <FolkBand className={`w-16 mb-3 ${i % 2 ? "text-terracotta/70" : "text-gold/70"}`} />
               <p className="text-[16px] leading-[2] text-charcoal/85">{rtl ? p.ar : p.en}</p>
             </div>
           ))}
         </div>
         <div className="grid grid-cols-2 gap-4" dir="ltr">
-          <figure className="overflow-hidden rounded-2xl border bg-white shadow-sm" style={{ borderColor: "rgba(0,150,110,0.25)" }}>
+          <figure className="overflow-hidden rounded-2xl border border-gold/25 bg-white shadow-sm">
             <img src={SCENE_A} alt="Bulgaria" loading="lazy" className="w-full object-cover" />
           </figure>
-          <figure className="overflow-hidden rounded-2xl border bg-white shadow-sm mt-8" style={{ borderColor: "rgba(214,38,18,0.25)" }}>
+          <figure className="overflow-hidden rounded-2xl border border-terracotta/25 bg-white shadow-sm mt-8">
             <img src={SCENE_B} alt="Bulgaria" loading="lazy" className="w-full object-cover" />
           </figure>
         </div>
@@ -165,11 +148,10 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
       {/* TELECOM NOTE */}
       <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
         <div
-          className={`rounded-3xl border bg-white shadow-sm px-6 py-6 ${align}`}
-          style={{ borderColor: "rgba(0,150,110,0.25)" }}
+          className={`rounded-3xl border border-gold/25 bg-white shadow-sm px-6 py-6 ${align}`}
           dir={rtl ? "rtl" : "ltr"}
         >
-          <div className="text-[10px] uppercase tracking-[0.4em] mb-3" style={{ color: BG_GREEN }}>
+          <div className="text-[10px] uppercase tracking-[0.4em] mb-3 text-gold">
             {rtl ? "◆ الاتصالات" : "◆ Telecoms"}
           </div>
           <p className="text-[16px] leading-[2] text-charcoal/85">
@@ -181,8 +163,7 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
             {(rtl ? TELECOM.ar : TELECOM.en).map((n) => (
               <li
                 key={n}
-                className="rounded-full border px-4 py-1.5 text-sm text-charcoal/80"
-                style={{ borderColor: "rgba(214,38,18,0.3)" }}
+                className="rounded-full border border-terracotta/30 px-4 py-1.5 text-sm text-charcoal/80"
               >
                 {n}
               </li>
@@ -193,14 +174,14 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
 
       {/* EMBLEM + MAP */}
       <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
-        <figure className="overflow-hidden rounded-3xl border bg-white shadow-sm" style={{ borderColor: "rgba(0,150,110,0.2)" }}>
+        <figure className="overflow-hidden rounded-3xl border border-gold/20 bg-white shadow-sm">
           <img
             src={EMBLEM_MAP}
             alt={rtl ? "شعار وخارطة جمهورية بلغاريا" : "Emblem and map of the Republic of Bulgaria"}
             loading="lazy"
             className="w-full object-cover"
           />
-          <FolkBand color={BG_GREEN} className="opacity-80" />
+          <FolkBand className="text-gold/80" />
           <figcaption className="px-5 py-4 text-center text-[11px] tracking-[0.2em] uppercase text-charcoal/60">
             {rtl ? "شعار وخارطة جمهورية بلغاريا" : "Emblem and map of the Republic of Bulgaria"}
           </figcaption>
