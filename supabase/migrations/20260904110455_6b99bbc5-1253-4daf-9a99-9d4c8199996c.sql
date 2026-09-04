@@ -1,0 +1,1 @@
+update public.countries set hero_image = 'https://i0.wp.com/100region.com/wp-content/uploads/2022/08/img_1680.jpg?ssl=1' where slug = 'finland';
