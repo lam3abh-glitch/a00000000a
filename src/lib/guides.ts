@@ -3,6 +3,7 @@ import { spainGuides, spainGuidesAll } from "./spain-guides";
 import { belgiumGuides } from "./belgium-guides";
 import { brusselsLandmarkGuides } from "./belgium-guides-brussels";
 import { finlandGuides } from "./finland-guides";
+import { bulgariaGuides } from "./bulgaria-guides";
 
 export type { Guide };
 
@@ -11,6 +12,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   spain: spainGuides,
   belgium: belgiumGuides,
   finland: finlandGuides,
+  bulgaria: bulgariaGuides,
 };
 
 export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
@@ -18,6 +20,7 @@ export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   spain: { ar: "إسبانيا", en: "Spain" },
   belgium: { ar: "بلجيكا", en: "Belgium" },
   finland: { ar: "فنلندا", en: "Finland" },
+  bulgaria: { ar: "بلغاريا", en: "Bulgaria" },
 };
 
 export function guidesFor(country: string): Guide[] {
@@ -30,6 +33,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   spain: spainGuidesAll,
   belgium: [...belgiumGuides, ...brusselsLandmarkGuides],
   finland: finlandGuides,
+  bulgaria: bulgariaGuides,
 };
 
 export function getGuideFor(country: string, slug: string): Guide | undefined {

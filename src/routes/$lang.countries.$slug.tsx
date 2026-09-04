@@ -14,6 +14,7 @@ import { UgandaCountry } from "@/components/site/UgandaCountry";
 import { SpainCountry } from "@/components/site/SpainCountry";
 import { BelgiumCountry } from "@/components/site/BelgiumCountry";
 import { FinlandCountry } from "@/components/site/FinlandCountry";
+import { BulgariaCountry } from "@/components/site/BulgariaCountry";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -88,6 +89,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1917", value_en: "1917" },
                 ]
+              : c.slug === "bulgaria"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "صوفيا", value_en: "Sofia" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "الليف البلغاري", value_en: "Bulgarian lev" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "6.4 مليون", value_en: "6.4 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "110,879 كم²", value_en: "110,879 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "681", value_en: "681" },
+                ]
               : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
@@ -128,6 +138,8 @@ function Country() {
         <BelgiumCountry lang={lang} cityLabel={{ ar: "بروكسيل .. مدينة الجمال", en: "Brussels .. the city of beauty" }} />
       ) : c.slug === "finland" ? (
         <FinlandCountry lang={lang} />
+      ) : c.slug === "bulgaria" ? (
+        <BulgariaCountry lang={lang} />
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}
