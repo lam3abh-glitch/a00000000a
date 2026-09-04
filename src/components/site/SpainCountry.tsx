@@ -6,7 +6,7 @@ const IMG = (name: string, month: string) =>
 
 const AHMAD_SPAIN = IMG("img_0849.jpg", "2023/04");
 const EMBLEM_MAP = IMG("img_4700.jpg", "2022/04");
-const CREST = IMG("img_2095.png", "2022/08");
+
 const LANDSCAPE = IMG("img_3652-1.jpg", "2022/03");
 const ANTHEM = "https://videos.files.wordpress.com/N1M9ZE9R/my-movie-5-18.mp4";
 
