@@ -14,6 +14,17 @@ export const spainGuidesA: Guide[] = [
       { type: "P", ar: "اضغط على التعليق تحت الصورة للذهاب الى الموضوع", en: "Click on the caption beneath the picture to go to the topic" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0961.jpg", cap_ar: "الأسواق والمجمعات التجارية", cap_en: "Markets and shopping malls" },
     ],
+    subPages: [
+      { slug: "shopping-general", label_ar: "التسوق بشكل عام", label_en: "Shopping in general" },
+      { slug: "shopping-cities", label_ar: "مدن التسوق", label_en: "Shopping cities" },
+      { slug: "shopping-places", label_ar: "أماكن مقترحة للتسوق", label_en: "Suggested places to shop" },
+      { slug: "shopping-street-markets", label_ar: "أشهر أسواق الشوارع", label_en: "The most famous street markets" },
+      { slug: "shopping-historic", label_ar: "أصالة التسوق مع تاريخ زاخر", label_en: "Authentic shopping with a rich history" },
+      { slug: "shopping-crafts", label_ar: "عالم غني بالحرف اليدوية", label_en: "A world rich in handicrafts" },
+      { slug: "shopping-atmosphere", label_ar: "أجواء تسوق مثالية", label_en: "Perfect shopping atmospheres" },
+      { slug: "shopping-tips", label_ar: "نصائح تسوق ناجحة", label_en: "Tips for successful shopping" },
+      { slug: "shopping-malaga", label_ar: "التسوق في مالقا", label_en: "Shopping in Málaga" },
+    ],
   },
   {
     slug: "programs",
