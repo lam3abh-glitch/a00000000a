@@ -59,7 +59,7 @@ function GuidePage() {
       {sib && (
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <div
-            className="absolute inset-0 opacity-[0.05]"
+            className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage:
                 "repeating-linear-gradient(90deg, var(--steel) 0 2px, transparent 2px 26px)",
