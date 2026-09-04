@@ -6,7 +6,7 @@ const IMG = (name: string, month: string) =>
 
 const AHMAD_SPAIN = IMG("img_0849.jpg", "2023/04");
 const EMBLEM_MAP = IMG("img_4700.jpg", "2022/04");
-const CREST = IMG("img_2095.png", "2022/08");
+
 const LANDSCAPE = IMG("img_3652-1.jpg", "2022/03");
 const ANTHEM = "https://videos.files.wordpress.com/N1M9ZE9R/my-movie-5-18.mp4";
 
@@ -110,14 +110,6 @@ export function SpainCountry({ lang, intro }: { lang: Lang; intro: string }) {
             <p className="font-body text-base md:text-lg text-charcoal/85 leading-[1.95]">{ABOUT[lang]}</p>
           </div>
           <div className="md:col-span-5 space-y-4">
-            <figure className="overflow-hidden rounded-2xl shadow-lg border border-carmine/10 bg-white flex items-center justify-center p-6">
-              <img
-                src={CREST}
-                alt={rtl ? "شعار مملكة اسبانيا" : "Coat of arms of the Kingdom of Spain"}
-                loading="lazy"
-                className="max-h-40 w-auto object-contain drop-shadow"
-              />
-            </figure>
             <figure className="overflow-hidden rounded-2xl shadow-lg border border-carmine/10 md:translate-x-4">
               <img
                 src={LANDSCAPE}
