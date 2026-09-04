@@ -70,6 +70,7 @@ export const BULGARIA_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "Among the finest things you can do in Sofia is strolling among its many ancient historical monuments, foremost the National History Museum, as well as climbing Vitosha mountain for charming panoramic views filled with huge lakes, skiing on the mountain in winter, touring the green parks spread across the city, walking along the stone-paved streets, and much more.",
       "Vitosha Mountain",
       "",
+      "",
       "Vitosha is the most famous landmark of tourism in Sofia, a huge peak inside a nature park rising more than 2,200 metres behind Sofia's south-western suburbs. The place lets you go hiking, mountain climbing and skiing.",
       "Vitosha is a ski resort, and it can be climbed all the way to the Black Peak for a wonderful panoramic view over the city. It is also the oldest nature park in the Balkan peninsula, and the mountain is home to a variety of mammals, birds, insects, reptiles and amphibians, as well as many wonderful plant species. The mountain also holds two rare biosphere reserves.",
       "The National History Museum",
