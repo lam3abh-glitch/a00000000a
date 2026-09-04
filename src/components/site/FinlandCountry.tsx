@@ -6,8 +6,7 @@ const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/
 const EMBLEM_MAP = U("2022/04/img_4494.jpg");
 const LAKE = U("2022/01/img_0450.jpg");
 const ANTHEM_VIDEO = "https://videos.files.wordpress.com/u2ebRce2/my-movie-5-6.mp4";
-const YOUTUBE_URL = "https://www.youtube.com/watch?v=NM2LbFovLkc";
-const YOUTUBE_THUMB = "https://i.ytimg.com/vi/NM2LbFovLkc/hqdefault.jpg";
+
 
 const FINN_BLUE = "#005293";
 
@@ -117,32 +116,41 @@ export function FinlandCountry({ lang }: { lang: Lang }) {
 
 
       {/* YOUTUBE */}
-      <div className="relative z-10 mt-8 mx-auto max-w-xl px-6">
-        <a
-          href={YOUTUBE_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="group flex items-center gap-4 rounded-2xl border bg-white/90 p-3 shadow-sm hover:shadow-md transition-all"
-          style={{ borderColor: "rgba(0,82,147,0.25)" }}
+      <div className="relative z-10 mt-12 mx-auto max-w-4xl px-6">
+        <div
+          className="relative overflow-hidden rounded-3xl border bg-white shadow-md"
+          style={{ borderColor: "rgba(0,82,147,0.2)" }}
         >
-          <span className="relative flex-shrink-0 overflow-hidden rounded-xl w-28 sm:w-36">
-            <img src={YOUTUBE_THUMB} alt="" loading="lazy" className="w-full object-cover" />
-            <span className="absolute inset-0 grid place-items-center bg-midnight/30">
-              <svg viewBox="0 0 24 24" className="h-7 w-7 text-white" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </span>
-          </span>
-          <span className={rtl ? "text-right min-w-0" : "text-left min-w-0"}>
-            <span className="block text-[10px] uppercase tracking-[0.35em]" style={{ color: FINN_BLUE }}>
-              YouTube
-            </span>
-            <span className="block font-display text-base sm:text-lg text-midnight leading-snug">
-              {rtl ? "شاهد فيديو السياحة في فنلندا على قناتي في اليوتيوب" : "Watch my Finland travel video on YouTube"}
-            </span>
-          </span>
-        </a>
+          <div
+            className="absolute top-4 start-4 text-[10px] uppercase tracking-[0.4em] z-10"
+            style={{ color: FINN_BLUE }}
+          >
+            {rtl ? "◆ مشاهدة" : "◆ Watch"}
+          </div>
+          <div className="pt-14 pb-6 px-6 md:px-8">
+            <h3
+              className={`font-display text-2xl md:text-3xl mb-5 ${rtl ? "text-right" : "text-left"}`}
+              style={{ color: FINN_BLUE }}
+            >
+              {rtl ? "السياحة في فنلندا" : "Travelling through Finland"}
+            </h3>
+            <div
+              className="overflow-hidden rounded-2xl border bg-midnight"
+              style={{ borderColor: "rgba(0,82,147,0.25)", aspectRatio: "16 / 9" }}
+            >
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/NM2LbFovLkc"
+                title={rtl ? "السياحة في فنلندا" : "Tourism in Finland"}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
       </div>
+
 
       {/* EMBLEM + MAP */}
       <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
