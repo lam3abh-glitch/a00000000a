@@ -81,7 +81,7 @@ function GuidePage() {
 
       <article className={`mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
         {g.blocks
-          .reduce<((typeof g.blocks)[0] | (typeof g.blocks)[0][])[]>((acc, b) => {
+          .reduce<(GuideBlock | Extract<GuideBlock, { type: "IMG" }>[])[]>((acc, b) => {
             if (b.type === "IMG" && b.size === "compact") {
               const last = acc[acc.length - 1];
               if (Array.isArray(last)) last.push(b);
