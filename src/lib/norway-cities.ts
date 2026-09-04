@@ -306,7 +306,7 @@ const LYSEFJORD = build(
   "https://100region.com/?p=34922&amp=1",
   "تعرف على أنشطة منطقة ليسفجورد وما حولها",
   "Activities in the Lysefjord area and around it",
-  U("2023/04/img_0745-1.jpg"),
+  lysefjordHeroAsset.url,
   [
     [
       "P",
