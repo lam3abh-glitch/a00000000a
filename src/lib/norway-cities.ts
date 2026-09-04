@@ -1,5 +1,7 @@
 import vigelandParkAsset from "@/assets/vigeland-park-oslo.png.asset.json";
 import osloMunchMuseumAsset from "@/assets/oslo-munch-museum.png.asset.json";
+import osloMunchSelfPortraitAsset from "@/assets/oslo-munch-selfportrait.png.asset.json";
+import osloMunchInteriorAsset from "@/assets/oslo-munch-interior.png.asset.json";
 import { type ArticleLine, type ArticleLineKind, type CityArticle } from "./article-format";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
