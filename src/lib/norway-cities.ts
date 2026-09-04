@@ -153,13 +153,18 @@ const OSLO = build(
     ],
     [
       "P",
-      "الوجهة الأولى في العالم لتجربة حياة وفن ادوارد مونش ، يتمتع Edvard Munch بمكانة فريدة بين الرسامين الشماليين ويعتبر رائدا في التعبيرية ، بالاضافة الى فن مونش ، يتم عرض الفن العالمي المعاصر في المبنى المكون من 13 طابقا ، من خلال تغيير المعارض باستمرار ، يتأكد المتحف من أنه يمكن للمرء دائما تجربة شيء جديد أثناء زيارته هناك",
-      "It is the world's foremost destination for experiencing the life and art of Edvard Munch, who holds a unique position among Nordic painters and is regarded as a pioneer of Expressionism. Alongside Munch's art, contemporary international art is shown in the thirteen-storey building. By changing the exhibitions constantly, the museum makes sure there is always something new to experience on a visit.",
+      "الوجهة الأولى في العالم لتجربة حياة وفن ادوارد مونش ، يتمتع Edvard Munch بمكانة فريدة بين الرسامين الشماليين ويعتبر رائدا في التعبيرية ، بالاضافة الى فن مونش ، يتم عرض الفن العالمي المعاصر في المبنى المكون من 13 طابقا ، من خلال تغيير المعارض باستمرار ، يتأكد المتحف من أنه يمكن للمرء دائما تجربة شيء جديد أثناء زيارته هناك ، مثل المعارض الفردية لتكريم الفائزين بجائزة Edvard Munch Art",
+      "It is the world's foremost destination for experiencing the life and art of Edvard Munch, who holds a unique position among Nordic painters and is regarded as a pioneer of Expressionism. Alongside Munch's art, contemporary international art is shown in the thirteen-storey building. By changing the exhibitions constantly, the museum makes sure there is always something new to experience on a visit, such as the solo exhibitions honouring the winners of the Edvard Munch Art Award.",
     ],
     [
       "P",
-      "تظهر الأحداث الفنية والثقافية أيضا في تقويم MUNCH ، كما يوفر المتحف الضخم بجوار مضيق أوسلو ثلاثة أماكن لتناول الطعام والشراب : Munch Deli & Café وBistro Tolvte وKranen Bar ، فضلا عن وجود متجر الهدايا ومنتجات للأطفال",
-      "Art and cultural events also appear on the MUNCH calendar, and the huge museum beside the Oslo fjord offers three places to eat and drink — Munch Deli & Café, Bistro Tolvte and Kranen Bar — as well as a gift shop with products for children.",
+      "تظهر الأحداث الفنية والثقافية أيضا في تقويم MUNCH ، كما يوفر المتحف الضخم بجوار مضيق أوسلو ثلاثة أماكن لتناول الطعام والشراب : Munch Deli & Café وBistro Tolvte وKranen Bar ، فضلا عن وجود متجر الهدايا ومنتجات للأطفال وأدبا عن Munch ومنتجات فريدة أخرى مستوحاة من فن Munch",
+      "Art and cultural events also appear on the MUNCH calendar, and the huge museum beside the Oslo fjord offers three places to eat and drink — Munch Deli & Café, Bistro Tolvte and Kranen Bar — as well as a gift shop with products for children, literature about Munch and other unique products inspired by his art.",
+    ],
+    [
+      "P",
+      "حجز التذاكر العادية : عدد الأشخاص الذين يمكنهم الدخول في فترة زمنية معينة محدود ، وللتأكد من القبول يجب أن تحصل على التذاكر المحددة بوقت مقدما ، اذا لم تقم بحجز تذكرتك مسبقا ، فلن يضمن المتحف أنك ستتمكن من الدخول في الوقت الذي تريده ، سعر التذاكر 160 للكبار ، و100 لأقل من 25 سنة ، ومجانا لأقل من 18 سنة",
+      "Booking regular tickets: the number of people who can enter within a given time slot is limited, so to be sure of admission you should buy timed tickets in advance. If you have not booked your ticket beforehand, the museum cannot guarantee that you will be able to enter at the time you want. Tickets cost 160 for adults, 100 for those under 25, and are free for under-18s.",
     ],
     ["IMG", osloMunchSelfPortraitAsset.url, ""],
     ["IMG", osloMunchInteriorAsset.url, ""],
