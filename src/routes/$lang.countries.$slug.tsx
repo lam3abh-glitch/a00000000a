@@ -15,6 +15,7 @@ import { SpainCountry } from "@/components/site/SpainCountry";
 import { BelgiumCountry } from "@/components/site/BelgiumCountry";
 import { FinlandCountry } from "@/components/site/FinlandCountry";
 import { BulgariaCountry } from "@/components/site/BulgariaCountry";
+import { NorwayCountry } from "@/components/site/NorwayCountry";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -98,6 +99,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "681", value_en: "681" },
                 ]
+              : c.slug === "norway"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "أوسلو", value_en: "Oslo" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "الكرونة النرويجية", value_en: "Norwegian krone" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "5.4 مليون", value_en: "5.4 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "385,207 كم²", value_en: "385,207 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "نظام الحكم", label_en: "Government", value_ar: "مملكة دستورية", value_en: "Constitutional monarchy" },
+                ]
               : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
@@ -140,6 +150,8 @@ function Country() {
         <FinlandCountry lang={lang} />
       ) : c.slug === "bulgaria" ? (
         <BulgariaCountry lang={lang} />
+      ) : c.slug === "norway" ? (
+        <NorwayCountry lang={lang} />
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}
