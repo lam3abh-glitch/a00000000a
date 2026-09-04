@@ -100,7 +100,14 @@ function Country() {
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "681", value_en: "681" },
                 ]
               : c.slug === "norway"
-              ? null
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "اوسلو", value_en: "Oslo" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "كرونه نرويجية", value_en: "Norwegian krone" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "5.4 مليون", value_en: "5.4 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "385,207 كم²", value_en: "385,207 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1905", value_en: "1905" },
+                ]
               : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },

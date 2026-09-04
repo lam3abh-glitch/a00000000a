@@ -5,7 +5,6 @@ const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/
 
 const COVER = U("2023/04/img_0401.jpg");
 const EMBLEM_MAP = U("2022/04/img_4496.jpg");
-const SCENE_A = U("2022/04/img_4657.png");
 const SCENE_B = U("2022/01/img_4955.jpg");
 const ANTHEM = "https://videos.files.wordpress.com/30HCtNV0/my-movie-5-7.mp4";
 const YOUTUBE_ID = "uMUt1gzNMiQ";
@@ -155,14 +154,9 @@ export function NorwayCountry({ lang }: { lang: Lang }) {
           <Aurora className="w-24 h-8 mb-4 text-gold/70" />
           <p className="text-[16px] sm:text-[17px] leading-[2] text-charcoal/85">{rtl ? TOURISM.ar : TOURISM.en}</p>
         </div>
-        <div className="grid grid-cols-2 gap-4" dir="ltr">
-          <figure className="overflow-hidden rounded-2xl border border-gold/25 bg-white shadow-sm">
-            <img src={SCENE_A} alt="Norway" loading="lazy" className="w-full object-cover" />
-          </figure>
-          <figure className="overflow-hidden rounded-2xl border border-terracotta/25 bg-white shadow-sm mt-8">
-            <img src={SCENE_B} alt="Norway" loading="lazy" className="w-full object-cover" />
-          </figure>
-        </div>
+        <figure className="overflow-hidden rounded-2xl border border-gold/25 bg-white shadow-sm" dir="ltr">
+          <img src={SCENE_B} alt="Norway" loading="lazy" className="w-full object-cover" />
+        </figure>
       </div>
 
       {/* EMBLEM + MAP */}
