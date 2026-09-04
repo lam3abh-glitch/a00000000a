@@ -1,5 +1,7 @@
 import vigelandParkAsset from "@/assets/vigeland-park-oslo.png.asset.json";
 import osloMunchMuseumAsset from "@/assets/oslo-munch-museum.png.asset.json";
+import osloMunchSelfPortraitAsset from "@/assets/oslo-munch-selfportrait.png.asset.json";
+import osloMunchInteriorAsset from "@/assets/oslo-munch-interior.png.asset.json";
 import { type ArticleLine, type ArticleLineKind, type CityArticle } from "./article-format";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
@@ -159,8 +161,8 @@ const OSLO = build(
       "تظهر الأحداث الفنية والثقافية أيضا في تقويم MUNCH ، كما يوفر المتحف الضخم بجوار مضيق أوسلو ثلاثة أماكن لتناول الطعام والشراب : Munch Deli & Café وBistro Tolvte وKranen Bar ، فضلا عن وجود متجر الهدايا ومنتجات للأطفال",
       "Art and cultural events also appear on the MUNCH calendar, and the huge museum beside the Oslo fjord offers three places to eat and drink — Munch Deli & Café, Bistro Tolvte and Kranen Bar — as well as a gift shop with products for children.",
     ],
-    ["IMG", osloMunchMuseumAsset.url, ""],
-    img("2023/04/img_0728.jpg"),
+    ["IMG", osloMunchSelfPortraitAsset.url, ""],
+    ["IMG", osloMunchInteriorAsset.url, ""],
     img("2023/04/img_0727.jpg"),
     img("2023/04/img_0726.jpg"),
     img("2023/04/img_0725.jpg"),
