@@ -3,10 +3,9 @@ import type { Lang } from "@/lib/i18n";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
-const COVER = U("2022/04/img_4651.png");
+const COVER = U("2022/01/fullsizerender-4-2.jpg");
 const EMBLEM_MAP = U("2022/04/img_4482.jpg");
-const SCENE_A = U("2022/01/fullsizerender-4-2.jpg");
-const SCENE_B = U("2022/01/cf0468b2-5693-41a4-b0d8-e1a041586501.jpg");
+const SCENE_A = U("2022/01/cf0468b2-5693-41a4-b0d8-e1a041586501.jpg");
 const ANTHEM = "https://videos.files.wordpress.com/OEaM1Cq0/my-movie-5-4.mp4";
 
 const HEADINGS = {
@@ -170,13 +169,6 @@ export function RussiaCountry({ lang }: { lang: Lang }) {
         </div>
         <figure className="overflow-hidden rounded-2xl border border-gold/25 bg-white shadow-sm" dir="ltr">
           <img src={SCENE_A} alt="Russia" loading="lazy" className="w-full object-cover" />
-        </figure>
-      </div>
-
-      {/* SECOND PHOTO */}
-      <div className="relative z-10 mt-12 mx-auto max-w-3xl px-6">
-        <figure className="overflow-hidden rounded-3xl border border-gold/25 bg-white shadow-sm" dir="ltr">
-          <img src={SCENE_B} alt="Russia" loading="lazy" className="w-full object-cover" />
         </figure>
       </div>
 
