@@ -1,4 +1,3 @@
-import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import type { Lang } from "@/lib/i18n";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
@@ -214,15 +213,6 @@ export function CzechCountry({ lang }: { lang: Lang }) {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* National anthem */}
-      <div className="relative z-10 mt-16">
-        <AnthemPlayer
-          src=""
-          lang={lang}
-          title={rtl ? "النشيد الوطني التشيكي" : "The Czech national anthem"}
-        />
       </div>
 
       {/* Scenes from Czechia */}
