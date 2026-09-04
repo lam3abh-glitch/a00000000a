@@ -1,6 +1,8 @@
 import type { Guide } from "./france-guides";
+import finlandFlag from "@/assets/finland-flag.png.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
+
 
 // Photo album — images from the Helsinki article (https://100region.com/?p=11732)
 const ALBUM = [
@@ -27,7 +29,7 @@ export const finlandGuides: Guide[] = [
     title_en: "The flag of the Republic of Finland",
     kicker_ar: "مدلولات العلم",
     kicker_en: "Flag meanings",
-    image: U("2022/10/img_4686.jpg"),
+    image: finlandFlag.url,
     blocks: [
 
       { type: "H3", noNumber: true, ar: "وصف مدلولات علم جمهورية فنلندا", en: "The meanings of the flag of the Republic of Finland" },
@@ -36,7 +38,7 @@ export const finlandGuides: Guide[] = [
         ar: "يرجع استخدام الأعلام الى فترات الحرب قديما ، فكانت تستخدم لتحديد شارات القيادة وجمع الحلفاء في ساحة الحرب ، أما الآن تستخدم الأعلام للإشارة الى الدولة وتحديد الهوية ، وفي صناعة الأعلام تعتبر الأنماط البسيطة أساسا لها مع استعمال ألوان وشعارات تدل على هوية الدولة . وبالرجوع أكثر إلى التاريخ يعود اختراع العلم الى شبه القارة الهندية ، حيث ان مؤسس سلالة تشو الصينية في الفترة (1046-256 قبل الميلاد) استخدم الأعلام والرايات البيضاء حيث كانت تتميز بالرموز مثل الطيور والحيوانات ، وانتشرت التنانين الزرقاء على المراكب ، وان سقط العلم سقط أصحابه مما يعني هزيمتهم ، وتعتبر الأعلام رموزا مقدسة وملكية ، وسواء على مراكب أو عربات كان للأعلام أهمية كبيرة في الصين ، وفي مصر القديمة التي استخدمت الحيوانات في رموز الأعلام ، ومع مرور الزمن تم تناقل فكرة الأعلام بين القارات الى ان وصلت الى أوروبا",
         en: "The use of flags goes back to times of war in antiquity, when they were used to mark the insignia of command and to gather allies on the battlefield. Today flags are used to indicate the state and to establish identity, and in flag-making simple patterns are the foundation, together with colours and emblems that point to the identity of the country. Looking further back in history, the invention of the flag goes back to the Indian subcontinent: the founder of the Chinese Zhou dynasty (1046–256 BC) used white flags and banners distinguished by symbols such as birds and animals, and blue dragons spread across ships. If the flag fell, its bearers had fallen, which meant their defeat. Flags were considered sacred and royal symbols, and whether on ships or carts they held great importance in China, and in ancient Egypt, which used animals in the symbols of its flags. Over time the idea of flags passed between continents until it reached Europe.",
       },
-      { type: "IMG", src: U("2022/10/img_4686.jpg"), cap_ar: "علم فنلندا", cap_en: "The flag of Finland" },
+      { type: "IMG", src: finlandFlag.url, cap_ar: "علم فنلندا", cap_en: "The flag of Finland" },
       { type: "H3", ar: "أهمية علم الدولة", en: "The importance of a country's flag" },
       {
         type: "P",
