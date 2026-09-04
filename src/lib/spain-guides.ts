@@ -20,7 +20,6 @@ export const spainGuidesAll: Guide[] = ALL;
 
 // Display order mirrors the section list on the original Spain page.
 const ORDER = [
-  "before-travel",
   "markets",
   "festivals",
   "programs",
