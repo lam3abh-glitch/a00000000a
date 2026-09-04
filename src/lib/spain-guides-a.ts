@@ -28,16 +28,12 @@ export const spainGuidesA: Guide[] = [
   },
   {
     slug: "programs",
-    title_ar: "البرامج السياحية المعدة لعدد من المدن الاسبانية",
-    title_en: "Travel programs prepared for a number of Spanish cities",
+    title_ar: "تعرف على البرامج السياحية المعدة لعدد من المدن في اسبانيا",
+    title_en: "Learn about the travel programs prepared for a number of cities in Spain",
     kicker_ar: "برامج سياحية",
     kicker_en: "Itineraries",
     image: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0940.jpg",
     blocks: [
-      { type: "H3", ar: "اكتشف اسبانيا", en: "Discover Spain" },
-      { type: "H3", ar: "تعرف على البرامج السياحية المعدة لعدد من المدن في اسبانيا", en: "Learn about the travel programs prepared for a number of cities in Spain" },
-      { type: "H3", ar: "يالله نسافر", en: "Let's travel" },
-      { type: "H3", ar: "يالله على اسبانيا !", en: "Come on to Spain!" },
       { type: "P", ar: "لمحبي السفر والسياحة اقدم لكم عدد من البرامج السياحية لعدد من المدن الاسبانية ، متمنيا ان تكون هذه البرامج غنية ومثمرة بما يكفي بوجود الكثير من الأماكن السياحية التي يمكنكم زيارتها خلال الايام المقترحة", en: "For lovers of travel and tourism, I present a number of travel programs for several Spanish cities, hoping that these programs will be rich and fruitful enough, with many tourist places you can visit during the suggested days." },
       { type: "P", ar: "فمملكة اسبانيا تعد من الدول السياحية الهامة على خارطة السياحة العالمية ، وهي التي اكتملت فيها معالم السحر والجمال لتكون في مقدمة الدول السياحية التي يقصدها الكثيرون", en: "The Kingdom of Spain is one of the important tourist countries on the world tourism map, one where the features of charm and beauty have come together to place it at the forefront of the tourist countries that many people head to." },
       { type: "P", ar: "اضغط على التعليق تحت الصورة للذهاب الى البرنامج السياحي", en: "Click on the caption beneath the picture to go to the travel program" },
