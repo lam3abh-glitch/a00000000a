@@ -16,6 +16,8 @@ import { BelgiumCountry } from "@/components/site/BelgiumCountry";
 import { FinlandCountry } from "@/components/site/FinlandCountry";
 import { BulgariaCountry } from "@/components/site/BulgariaCountry";
 import { NorwayCountry } from "@/components/site/NorwayCountry";
+import { RussiaCountry } from "@/components/site/RussiaCountry";
+
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
