@@ -2,6 +2,7 @@ import { article, type ArticleLineKind, type ArticleLine, type CityArticle } fro
 import { SPAIN_CITY_ARTICLES } from "./spain-cities";
 import { SPAIN_CITY_ARTICLES_EN as SPAIN_EN } from "./spain-cities-en";
 import { BELGIUM_CITY_ARTICLES, BELGIUM_CITY_ARTICLES_EN } from "./belgium-cities";
+import { FINLAND_CITY_ARTICLES, FINLAND_CITY_ARTICLES_EN } from "./finland-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
@@ -656,6 +657,7 @@ export const CITY_ARTICLES: Record<string, CityArticle> = {
   ...FRANCE_AND_UGANDA,
   ...SPAIN_CITY_ARTICLES,
   ...BELGIUM_CITY_ARTICLES,
+  ...FINLAND_CITY_ARTICLES,
 };
 
 // English translations of every article line, aligned by index with the Arabic
@@ -666,6 +668,7 @@ const EN_ARTICLES = {
   ...(EN as Record<string, { title: string; values: string[] }>),
   ...(SPAIN_EN as Record<string, { title: string; values: string[] }>),
   ...BELGIUM_CITY_ARTICLES_EN,
+  ...FINLAND_CITY_ARTICLES_EN,
 };
 
 
