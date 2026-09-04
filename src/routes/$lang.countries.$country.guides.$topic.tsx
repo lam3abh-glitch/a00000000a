@@ -251,7 +251,65 @@ function GuidePage() {
                 </motion.figure>
               );
             }
+            if (b.type === "VIDEO") {
+              return (
+                <motion.figure
+                  key={i}
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5 }}
+                  className="my-6 sm:my-10 -mx-5 sm:mx-0"
+                >
+                  <div className={`overflow-hidden rounded-none sm:rounded-3xl border-y sm:border bg-midnight shadow-sm ${sib ? "border-glacier/40" : "border-sand"}`}>
+                    <video
+                      src={b.src}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full max-h-[60vh] bg-midnight"
+                    />
+                  </div>
+                  {(ar ? b.cap_ar : b.cap_en) && (
+                    <figcaption className="text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60 mt-3 px-5 sm:px-0">
+                      {ar ? b.cap_ar : b.cap_en}
+                    </figcaption>
+                  )}
+                </motion.figure>
+              );
+            }
+            if (b.type === "YT") {
+              return (
+                <motion.figure
+                  key={i}
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5 }}
+                  className="my-6 sm:my-10 -mx-5 sm:mx-0"
+                >
+                  <div className={`overflow-hidden rounded-none sm:rounded-3xl border-y sm:border bg-midnight shadow-sm ${sib ? "border-glacier/40" : "border-sand"}`}>
+                    <div className="relative w-full aspect-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${b.id}`}
+                        title={b.cap_en || b.cap_ar}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 h-full w-full"
+                      />
+                    </div>
+                  </div>
+                  {(ar ? b.cap_ar : b.cap_en) && (
+                    <figcaption className="text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60 mt-3 px-5 sm:px-0">
+                      {ar ? b.cap_ar : b.cap_en}
+                    </figcaption>
+                  )}
+                </motion.figure>
+              );
+            }
             if (b.type === "MORE") {
+
               return (
                 <div key={i} className="my-8 sm:my-10 flex justify-center">
                   <Link
