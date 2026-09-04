@@ -108,26 +108,39 @@ function GuidePage() {
 
 
       <section className="relative h-[58svh] min-h-[300px] sm:h-[62vh] bg-midnight">
-        <img src={g.image} alt={g.title_en} className="absolute inset-0 h-full w-full object-cover opacity-60" />
+        <img src={g.image} alt={g.title_en} className={`absolute inset-0 h-full w-full object-cover ${sib ? "opacity-55 saturate-[0.75]" : "opacity-60"}`} />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-midnight/20" />
+        {sib && <div className="absolute inset-0 bg-gradient-to-t from-steel/60 via-transparent to-glacier/15" />}
         <div className="relative z-10 mx-auto max-w-4xl h-full flex flex-col justify-end px-5 sm:px-6 pb-10 sm:pb-14 text-cream">
           <div className="text-[11px] sm:text-xs text-cream/60 mb-3 flex flex-wrap items-center gap-x-2">
-            <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className="hover:text-gold">
+            <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className={sib ? "hover:text-glacier" : "hover:text-gold"}>
               {countryLabel(country, lang)}
             </Link>
             <span>/</span>
-            <span className="text-gold">{ar ? g.kicker_ar : g.kicker_en}</span>
+            <span className={sib ? "text-glacier" : "text-gold"}>{ar ? g.kicker_ar : g.kicker_en}</span>
           </div>
           <h1 className="font-display text-[26px] leading-snug sm:text-4xl md:text-5xl md:leading-tight">{title}</h1>
-          <div className="mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-gold/70" />
+          {sib && (
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] sm:text-xs text-cream/70 font-mono">
+              <span>9248 KM</span>
+              <span className="text-glacier">·</span>
+              <span>{ar ? "7 أيام" : "7 days"}</span>
+              <span className="text-glacier">·</span>
+              <span>{ar ? "70 محطة" : "70 stations"}</span>
+              <span className="text-glacier">·</span>
+              <span>-20°C</span>
+            </div>
+          )}
+          <div className={`mt-4 sm:mt-5 h-px w-20 sm:w-24 ${sib ? "bg-glacier/80" : "bg-gold/70"}`} />
           <div className="mt-5 hidden sm:flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-cream/50">
-            <span className="h-4 w-px bg-gold/60 animate-pulse" />
+            <span className={`h-4 w-px animate-pulse ${sib ? "bg-glacier/70" : "bg-gold/60"}`} />
             {ar ? "تابع القراءة" : "Keep scrolling"}
           </div>
         </div>
       </section>
 
-      <article className={`mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
+      <article className={`relative mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
+
         {g.blocks
           .reduce<(GuideBlock | Extract<GuideBlock, { type: "IMG" }>[])[]>((acc, b) => {
             if (b.type === "IMG" && b.size === "compact") {
