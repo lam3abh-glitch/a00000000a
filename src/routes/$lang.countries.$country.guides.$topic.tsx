@@ -37,6 +37,7 @@ function GuidePage() {
   const ar = lang === "ar";
   const title = ar ? g.title_ar : g.title_en;
   const others = guidesFor(country).filter((o) => o.slug !== g.slug);
+  const sib = g.theme === "siberia";
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -54,10 +55,57 @@ function GuidePage() {
   let paraCount = 0;
 
   return (
-    <div className="bg-cream" dir={ar ? "rtl" : "ltr"}>
+    <div className={`relative ${sib ? "bg-frost" : "bg-cream"}`} dir={ar ? "rtl" : "ltr"}>
+      {sib && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-[0.05]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(90deg, var(--steel) 0 2px, transparent 2px 26px)",
+            }}
+          />
+          <svg className="absolute -left-10 top-[30vh] w-40 opacity-[0.07] text-steel" viewBox="0 0 120 40" fill="currentColor">
+            <rect x="0" y="18" width="120" height="3" />
+            <rect x="0" y="30" width="120" height="2" />
+            <rect x="10" y="4" width="34" height="14" rx="3" />
+            <rect x="48" y="7" width="28" height="11" rx="2" />
+            <rect x="80" y="7" width="28" height="11" rx="2" />
+            <circle cx="20" cy="22" r="4" />
+            <circle cx="36" cy="22" r="4" />
+            <circle cx="60" cy="22" r="3" />
+            <circle cx="92" cy="22" r="3" />
+          </svg>
+          {[
+            { top: "18vh", left: "8%", size: 26 },
+            { top: "52vh", left: "82%", size: 34 },
+            { top: "88vh", left: "14%", size: 20 },
+            { top: "128vh", left: "76%", size: 28 },
+            { top: "170vh", left: "10%", size: 24 },
+          ].map((f, i) => (
+            <svg
+              key={i}
+              className="absolute text-glacier opacity-[0.16]"
+              style={{ top: f.top, left: f.left, width: f.size, height: f.size }}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+            >
+              <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" />
+              <path d="M12 6l-2.5 2.5M12 6l2.5 2.5M12 18l-2.5-2.5M12 18l2.5-2.5" />
+            </svg>
+          ))}
+        </div>
+      )}
       <div className="fixed top-0 inset-x-0 z-50 h-[3px] bg-transparent">
-        <div className="h-full bg-gold transition-[width] duration-150 ease-out" style={{ width: `${progress}%` }} />
+        <div
+          className={`h-full transition-[width] duration-150 ease-out ${sib ? "bg-glacier" : "bg-gold"}`}
+          style={{ width: `${progress}%` }}
+        />
       </div>
+
 
       <section className="relative h-[58svh] min-h-[300px] sm:h-[62vh] bg-midnight">
         <img src={g.image} alt={g.title_en} className="absolute inset-0 h-full w-full object-cover opacity-60" />
