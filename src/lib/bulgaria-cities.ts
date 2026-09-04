@@ -12,19 +12,18 @@ P|تعد من أهم مدن السياحة وأكبرها وأكثرها زيا�
 P|من أروع الأنشطة التي يمكنك القيام بها في صوفيا ، التنزه وسط العديد من المعالم الأثرية التاريخية العتيقة ، ومن أبرزها المتحف التاريخي الوطني ، فضلا عن تسلق جبل فيتوش ، والحصول على الإطلالات البانورامية الساحرة المليئة بالبحيرات الضخمة ، والتزلج على الجبل في الشتاء ، والقيام بجولات في الحدائق الخضراء المنتشرة بالمدينة ، وأيضا المشي في الشوارع المرصوفة بالحجر ، وغيرها العديد من الأشياء الأخرى
 H5|جبل فيتوشا
 IMG|${U("2022/08/img_1019.jpg")}
+IMG|/__l5e/assets-v1/32387ee1-ff81-4dfe-9d44-7f7cdb62e280/sofia-15.png
 P|جبل فيتوشا هو أشهر معالم السياحة في صوفيا بلغاريا البارزة ، هو قمة ضخمة في حديقة طبيعية ، ويبلغ ارتفاعه ما يزيد عن 2200 متر خلف ضواحي صوفيا الجنوبية الغربية ، يتيح لك هذا المكان ممارسة رياضة المشي لمسافات طويلة ، وتسلق الجبال والتزلج
 P|فيتوشا هو منتجع للتزلج ، ويمكن تسلقه والوصول الى القمة السوداء ، للحصول على اطلالة بانورامية رائعة على المدينة ، كما انه أقدم منتزه طبيعي في شبه جزيرة البلقان ، ويعد الجبل موطنا لمجموعة متنوعة من الثدييات ، والطيور ، والحشرات ، والزواحف والبرمائيات ، علاوة على أنواع عديدة من النباتات الرائعة ، كذلك يضم الجبل اثنين من محميات المحيط النادرة
 H5|متحف التاريخ الوطني
-IMG|${U("2022/08/img_1082.jpg")}
-IMG|${U("2022/08/img_1020.jpg")}
+IMG|/__l5e/assets-v1/7ec0c447-d6e5-4e05-92af-4ad584e94bba/sofia-16.png
 P|يقع متحف التاريخ الوطني في مقر اقامة الديكتاتور السابق تودور جيفكوف ، ويغطي المتحف 8000 عام من التاريخ البلغاري ، وذلك من خلال خمس قاعات متخصصة ، وهو احدى المزارات الشهيرة في صوفيا ، كما انه أكبر متحف تاريخي في البلقان من حيث حجم المحتويات ، حيث انه يضم أكثر من 700 ألف قطعة مرتبة ترتيبا زمنيا ، كما يشتهر المتحف أيضا بمجموعة من العملات القديمة ، التي تعود الى القرون الوسطى ، وكذلك رؤية كنز باناغيوريشته ، وهو أحد أشهر كنوز تراقيا التي لا تزال موجودة
 H5|الحمامات المعدنية المركزية
-IMG|${U("2022/08/img_1021.jpg")}
+IMG|/__l5e/assets-v1/cc3a558f-8b6c-4f39-8241-2d57866fb1ab/sofia-17.png
 P|يعود تاريخ الحمامات المركزية الى عام 1913 م ، وكانت مستخدمة حتى منتصف الثمانينيات ، وتعتبر الحمامات المعدنية المركزية من مواقع السياحة في صوفيا بلغاريا الهامة ، التي يجب زيارتها على الرغم من أنها لم تعد تعمل كحمام معدني عام كما في السابق
 P|وتعد تلك الحمامات أكثر المباني التي تم تصويرها في صوفيا ، وقد شيدت على الطراز البيزنطي الجديد ، مع قبة كبيرة خلف دهليز مثير للاعجاب ، وتم تحويلها الى متحف التاريخ الاقليمي ، حيث يمكن معرفة كل شيء عن تاريخ صوفيا ، ويمكن زيارة الحديقة الواقعة أمام الحمامات المعدنية المركزية مباشرة ، والنافورة في المركز التي تغذيها المياه المعدنية الطبيعية الساخنة ، ومن الجدير بالذكر انه يتم استخدام المكان الآن كقاعة للمعارض المؤقتة
 H5|مسجد بنيا باشي
-IMG|${U("2022/08/img_1083.jpg")}
-IMG|${U("2022/08/img_1023.jpg")}
+IMG|/__l5e/assets-v1/1b244fcd-8a6d-4bce-84cc-ca6a30d53ef4/sofia-18.png
 P|مسجد بنيا باشي هو المسجد العثماني الوحيد الذي لا يزال قائما في صوفيا حتى اليوم ، وقد تم تصميمه من قِبل المهندس المعماري العثماني سنان ، والذي يعتبر من أفضل المهندسين المعماريين في التاريخ ، وهو يعد من أفضل مناطق جذب السياحة في صوفيا ، يمكن الاستمتاع باستكشاف التصاميم الداخلية للمسجد الرائعة للغاية ، يستوعب المسجد حوالي 700 من المصلين ، وفيه يمكن مشاهدة البلاط الذي يعد مثال ممتاز للفن الاسلامي
 H5|شارع فيتوشا
 IMG|${U("2022/08/img_1024.jpg")}
@@ -71,10 +70,10 @@ export const BULGARIA_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "Among the finest things you can do in Sofia is strolling among its many ancient historical monuments, foremost the National History Museum, as well as climbing Vitosha mountain for charming panoramic views filled with huge lakes, skiing on the mountain in winter, touring the green parks spread across the city, walking along the stone-paved streets, and much more.",
       "Vitosha Mountain",
       "",
+      "",
       "Vitosha is the most famous landmark of tourism in Sofia, a huge peak inside a nature park rising more than 2,200 metres behind Sofia's south-western suburbs. The place lets you go hiking, mountain climbing and skiing.",
       "Vitosha is a ski resort, and it can be climbed all the way to the Black Peak for a wonderful panoramic view over the city. It is also the oldest nature park in the Balkan peninsula, and the mountain is home to a variety of mammals, birds, insects, reptiles and amphibians, as well as many wonderful plant species. The mountain also holds two rare biosphere reserves.",
       "The National History Museum",
-      "",
       "",
       "The National History Museum is housed in the former residence of the dictator Todor Zhivkov, and covers 8,000 years of Bulgarian history across five specialised halls. It is one of the famous attractions of Sofia and the largest history museum in the Balkans in terms of the size of its collection, holding more than 700 thousand pieces arranged chronologically. The museum is also famous for a collection of ancient coins dating from the Middle Ages, as well as the Panagyurishte treasure, one of the most famous Thracian treasures still in existence.",
       "The Central Mineral Baths",
@@ -82,7 +81,6 @@ export const BULGARIA_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "The Central Baths date back to 1913 and were in use until the mid-1980s. The Central Mineral Baths are one of the important sights of Sofia that must be visited, even though they no longer work as a public mineral bath as they once did.",
       "These baths are the most photographed building in Sofia. They were built in the neo-Byzantine style with a large dome behind an impressive vestibule, and were turned into the Regional History Museum, where you can learn everything about the history of Sofia. You can also visit the garden directly in front of the Central Mineral Baths and the fountain at its centre, fed by naturally hot mineral water. It is worth noting that the place is now used as a hall for temporary exhibitions.",
       "Banya Bashi Mosque",
-      "",
       "",
       "Banya Bashi Mosque is the only Ottoman mosque still standing in Sofia today. It was designed by the Ottoman architect Sinan, considered one of the finest architects in history, and it is one of the best tourist attractions in Sofia. Visitors can enjoy exploring the mosque's extremely beautiful interior designs; it holds around 700 worshippers, and inside you can see tilework that is an excellent example of Islamic art.",
       "Vitosha Boulevard",
