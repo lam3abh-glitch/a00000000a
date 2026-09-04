@@ -2,20 +2,6 @@ import type { Guide } from "./france-guides";
 
 export const spainGuidesB: Guide[] = [
   {
-    slug: "before-travel",
-    title_ar: "تعرف على اسبانيا قبل السفر لها",
-    title_en: "Get to know Spain before you travel there",
-    kicker_ar: "تعريف",
-    kicker_en: "Overview",
-    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3652-1.jpg?ssl=1",
-    blocks: [
-      { type: "H3", ar: "مملكة اسبانيا", en: "Kingdom of Spain" },
-      { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/08/img_2095.png", cap_ar: "مملكة اسبانيا", cap_en: "Kingdom of Spain" },
-      { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/file28581.jpg", cap_ar: "مملكة اسبانيا", cap_en: "Kingdom of Spain" },
-      { type: "P", ar: "هي دولة عضو في الاتحاد الاوروبي تقع في جنوب غرب اوروبا في شبه الجزيرة الأيبيرية ، يجد برها الرئيسي من الجنوب والشرق البحر الأبيض المتوسط ، باستثناء الحدود البرية الصغيرة مع اقليم ما وراء البحار البريطاني جبل طارق ، يحدها من الشمال فرنسا وأندورا وخليج بسكاي ، والى الشمال الغربي والغرب المحيط الأطلسي والبرتغال", en: "It is a member state of the European Union located in southwestern Europe on the Iberian Peninsula. Its mainland borders the Mediterranean Sea to the south and east, except for the small land border with the British Overseas Territory of Gibraltar. It is bordered to the north by France, Andorra and the Bay of Biscay, and to the northwest and west by the Atlantic Ocean and Portugal." },
-    ],
-  },
-  {
     slug: "ibiza",
     title_ar: "جزر البليار (جزيرة ايبيزا)",
     title_en: "The Balearic Islands (Ibiza)",
