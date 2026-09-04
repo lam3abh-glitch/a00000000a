@@ -1,6 +1,15 @@
 // "Read more" deep-dive pages linked from specific attraction sections of a city
 // article. Keyed by city slug, then by the exact attraction heading text.
 export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; topic: string }>> = {
+  barcelona: {
+    "كنيسة ساغرادا فاميليا": { country: "spain", topic: "sagrada-familia" },
+    "Sagrada Família Church": { country: "spain", topic: "sagrada-familia" },
+    "شارع الرامبلا": { country: "spain", topic: "la-rambla" },
+    "La Rambla Street": { country: "spain", topic: "la-rambla" },
+    "حديقة جويل برشلونه": { country: "spain", topic: "park-guell" },
+    "حديقة جويل برشلونة": { country: "spain", topic: "park-guell" },
+    "Park Güell, Barcelona": { country: "spain", topic: "park-guell" },
+  },
   madrid: {
     "ساحة دي سيبيليس": { country: "spain", topic: "cibeles" },
     "Plaza de Cibeles": { country: "spain", topic: "cibeles" },

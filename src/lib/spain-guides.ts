@@ -3,8 +3,9 @@ import { spainGuidesA } from "./spain-guides-a";
 import { spainGuidesB } from "./spain-guides-b";
 import { spainGuidesFestivals } from "./spain-guides-festivals";
 import { spainGuidesExtra } from "./spain-guides-extra";
+import { spainGuidesBarcelona } from "./spain-guides-barcelona";
 
-const ALL = [...spainGuidesA, ...spainGuidesB, ...spainGuidesFestivals, ...spainGuidesExtra];
+const ALL = [...spainGuidesA, ...spainGuidesB, ...spainGuidesFestivals, ...spainGuidesExtra, ...spainGuidesBarcelona];
 
 // Every guide, including unlisted landmark pages, for URL lookups.
 export const spainGuidesAll: Guide[] = ALL;
