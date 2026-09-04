@@ -193,29 +193,6 @@ function Home() {
         </div>
       </section>
 
-      {/* FEATURED STORY */}
-      {data.featured && (
-        <section className="bg-midnight text-cream py-28">
-          <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-5 gap-12 items-center">
-            <div className="md:col-span-3 relative aspect-[4/3] overflow-hidden">
-              <img src={data.featured.hero_image ?? "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3749.jpg"} alt={data.featured.title_en} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-            </div>
-            <div className="md:col-span-2">
-              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-4">{tr.sections.featured}</div>
-              <h2 className="font-display text-4xl md:text-5xl leading-tight">
-                {lang === "ar" ? data.featured.title_ar : data.featured.title_en}
-              </h2>
-              <div className="gold-divider w-24 my-8" />
-              <p className="text-cream/70 leading-loose">
-                {lang === "ar" ? data.featured.excerpt_ar : data.featured.excerpt_en}
-              </p>
-              <Link to="/$lang/stories/$slug" params={{ lang, slug: data.featured.slug }} className="mt-10 inline-block border-b border-gold pb-1 text-cream hover:text-gold">
-                {tr.sections.readStory} →
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
     </>
   );
 }
