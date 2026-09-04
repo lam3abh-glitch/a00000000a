@@ -1,5 +1,6 @@
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import type { Lang } from "@/lib/i18n";
+import ahmadCampNou from "@/assets/ahmad-camp-nou.png.asset.json";
 
 const IMG = (name: string, month: string) =>
   `https://i0.wp.com/100region.com/wp-content/uploads/${month}/${name}?ssl=1`;
