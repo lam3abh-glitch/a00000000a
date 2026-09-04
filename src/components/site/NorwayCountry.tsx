@@ -69,6 +69,72 @@ function Longship({ className }: { className?: string }) {
   );
 }
 
+/** Viking round shield with a simple boss and rim. */
+function Shield({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" aria-hidden className={className}>
+      <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="2" />
+      <circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+      <circle cx="50" cy="50" r="10" fill="currentColor" opacity="0.35" />
+      <path d="M50 4 V96 M4 50 H96" stroke="currentColor" strokeWidth="1" opacity="0.25" />
+    </svg>
+  );
+}
+
+/** Elder Futhark rune ring decoration. */
+function RuneRing({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 160 160" aria-hidden className={className}>
+      <circle cx="80" cy="80" r="72" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.25" />
+      <circle cx="80" cy="80" r="58" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.15" />
+      <g fill="currentColor" fontSize="10" fontFamily="serif" opacity="0.35" textAnchor="middle" dominantBaseline="middle">
+        <text x="80" y="14">ᚠ</text>
+        <text x="113" y="23">ᚢ</text>
+        <text x="137" y="47">ᚦ</text>
+        <text x="146" y="80">ᚨ</text>
+        <text x="137" y="113">ᚱ</text>
+        <text x="113" y="137">ᚲ</text>
+        <text x="80" y="146">ᚷ</text>
+        <text x="47" y="137">ᚹ</text>
+        <text x="23" y="113">ᚺ</text>
+        <text x="14" y="80">ᚾ</text>
+        <text x="23" y="47">ᛁ</text>
+        <text x="47" y="23">ᛃ</text>
+      </g>
+    </svg>
+  );
+}
+
+/** Norse interlace knot corner ornament. */
+function KnotCorner({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 80 80" aria-hidden className={className}>
+      <path
+        d="M4 4 h40 a16 16 0 0 1 16 16 v16 M4 4 v40 a16 16 0 0 0 16 16 h16 M4 4 l32 32 M4 4 l52 52"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+      <circle cx="4" cy="4" r="2.5" fill="currentColor" />
+      <circle cx="36" cy="36" r="2.5" fill="currentColor" opacity="0.5" />
+    </svg>
+  );
+}
+
+/** Simple Viking axe silhouette. */
+function Axe({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 80 100" aria-hidden className={className}>
+      <path
+        d="M38 12 v76 a4 4 0 0 0 8 0 V12 a4 4 0 0 0 -8 0 M46 16 C62 10 72 22 74 38 C68 34 58 30 46 28 Z"
+        fill="currentColor"
+        opacity="0.85"
+      />
+    </svg>
+  );
+}
+
 export function NorwayCountry({ lang }: { lang: Lang }) {
   const rtl = lang === "ar";
   const align = rtl ? "text-right" : "text-left";
