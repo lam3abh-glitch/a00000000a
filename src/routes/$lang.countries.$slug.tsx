@@ -12,6 +12,7 @@ import franceMap from "@/assets/france-map.png.asset.json";
 import { guidesFor } from "@/lib/guides";
 import { UgandaCountry } from "@/components/site/UgandaCountry";
 import { SpainCountry } from "@/components/site/SpainCountry";
+import { BelgiumCountry } from "@/components/site/BelgiumCountry";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
