@@ -150,7 +150,6 @@ export const SPAIN_EN_3: Record<string, { title: string; values: string[] }> = {
     title: "The Complete Guide to Costa del Sol",
     values: [
       "Discover Spain",
-      "The Complete Guide to Costa del Sol",
       "Who could resist its beauty? It flaunts the most gorgeous scenery!",
       "", // IMG
       "Where is Costa del Sol located?",
