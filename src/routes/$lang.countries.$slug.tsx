@@ -105,6 +105,8 @@ function Country() {
         <UgandaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "spain" ? (
         <SpainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "belgium" ? (
+        <BelgiumCountry lang={lang} cityLabel={{ ar: "بروكسيل .. مدينة الجمال", en: "Brussels .. the city of beauty" }} />
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}
