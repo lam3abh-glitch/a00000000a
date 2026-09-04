@@ -10,7 +10,7 @@ export const spainGuidesB: Guide[] = [
     image: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0939.jpg",
     blocks: [
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0939.jpg", cap_ar: "ايبيزا", cap_en: "Ibiza" },
-      { type: "H3", noNumber: true, ar: "اكتشف اسبانيا", en: "Discover Spain" , noNumber: true },
+      { type: "H3", ar: "اكتشف اسبانيا", en: "Discover Spain", noNumber: true },
       { type: "H3", ar: "أجمل ما في جزر البليار – جزيرة ايبيزا", en: "The best of the Balearic Islands – Ibiza" , noNumber: true },
       { type: "H3", ar: "يالله نستمتع بأجمل جزيرة", en: "Let's enjoy the most beautiful island" , noNumber: true },
       { type: "P", ar: "تعتبر ايبيزا ، الواقعة في جزر البليار ، واحدة من الجزر الفريدة في اسبانيا ، وهي في الأصل الجزيرة التي يختارها العديد من المشاهير لقضاء العطلة ، وذلك بفضل تنوعها الطبيعي وثقافتها", en: "Ibiza, located in the Balearic Islands, is considered one of the unique islands of Spain. It is originally the island that many celebrities choose for their holidays, thanks to its natural diversity and culture." },
