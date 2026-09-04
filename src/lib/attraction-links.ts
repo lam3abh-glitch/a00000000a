@@ -9,6 +9,8 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "حديقة جويل برشلونه": { country: "spain", topic: "park-guell" },
     "حديقة جويل برشلونة": { country: "spain", topic: "park-guell" },
     "Park Güell, Barcelona": { country: "spain", topic: "park-guell" },
+    "ملعب الكامب نو": { country: "spain", topic: "camp-nou" },
+    "Camp Nou Stadium": { country: "spain", topic: "camp-nou" },
   },
   madrid: {
     "ساحة دي سيبيليس": { country: "spain", topic: "cibeles" },
