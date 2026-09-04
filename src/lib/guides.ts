@@ -4,6 +4,7 @@ import { belgiumGuides } from "./belgium-guides";
 import { brusselsLandmarkGuides } from "./belgium-guides-brussels";
 import { finlandGuides } from "./finland-guides";
 import { bulgariaGuides } from "./bulgaria-guides";
+import { norwayGuides } from "./norway-guides";
 
 export type { Guide };
 
