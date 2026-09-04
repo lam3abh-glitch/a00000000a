@@ -168,6 +168,36 @@ export const spainGuidesExtra: Guide[] = [
         en: "The best activities to do at Plaza Mayor in Madrid",
       },
       {
+        type: "P",
+        ar: "زيارة هذا الميدان له طابع مميز ، حيث يقترب الزائر من سكان المدينة ويكتشف المزيد حول الثقافات المختلفة ، كما أن الميدان يتيح عدد من الأنشطة الرائعة",
+        en: "Visiting this square has a special character, as the visitor gets closer to the city's residents and discovers more about the different cultures, and the square also offers a number of wonderful activities",
+      },
+      {
+        type: "P",
+        ar: "سوف تحلو لك زيارة هذه الميدان عندما تبدأ نهارك بجولة استكشافية لأرجاء المكان تطلع عن طريقها على أهم معالم الميدان وتستمتع برؤية الحياة والحركة التي تدب من حولك وسوف تستمتع أيضا باستكشاف بعض التصاميم المعمارية القديمة المنعكسة على المباني التاريخية في الميدان ، وان وجدت ما يحيط بك يستحق التأمل أكثر ، امنح نفسك وقتا ملائما للاستمتاع بذلك من خلال الاستراحة على أحد الأماكن المخصصة للجلوس في الميدان",
+        en: "Your visit to this square will be delightful when you start your day with an exploratory tour around the place, through which you will see the square's most important landmarks and enjoy watching the life and movement stirring around you. You will also enjoy discovering some of the old architectural designs reflected on the historic buildings in the square — and if you find that your surroundings deserve more contemplation, give yourself suitable time to enjoy that by resting at one of the seating areas in the square",
+      },
+      {
+        type: "P",
+        ar: "قد تستوقفك بعض المتاجر التي تنتشر في جوانب متنوعة من هذه الساحة لشراء بعض من السلع المتوفرة بها ، ولاريب في أنك لن تفوت الذهاب الى محلات الهدايا التذكارية المتوفرة في المكان والحصول على هدايا فريدة تخلد هذه الزيارة",
+        en: "Some of the shops spread across various corners of this square may catch your attention to buy some of the goods available there, and no doubt you will not miss going to the souvenir shops in the place and getting unique gifts to immortalise this visit",
+      },
+      {
+        type: "P",
+        ar: "سوف تتمتع وباقي الزوار في بلازا مايور في مدريد بعروض فنية مميزة يقوم بتأديتها بعض الهواة ، حيث ستتمتع ببعض العروض الموسيقية الحية التي يتغنن بها عدد من الهواة ، كما أنك ستنجذب لمشاهدة بعض الرسامين والفنانين الذين يعرضون للمارة مواهبهم",
+        en: "You and the rest of the visitors at Plaza Mayor in Madrid will enjoy distinctive artistic performances put on by amateurs — you will enjoy some live musical performances sung by a number of them, and you will also be drawn to watching some of the painters and artists who display their talents to passers-by",
+      },
+      {
+        type: "P",
+        ar: "وربما يكون حظك جيدا بشكل كافٍ لتصادف خلال نزهتك في الميدان احدى الفعاليات التي يتم تنظيمها بشكل دوري أو الاحتفالات الوطنية التي يشهدها المكان في أوقات متفرقة من السنة وتستمتع بهذه الفرصة المميزة",
+        en: "And perhaps you will be lucky enough to come across, during your stroll in the square, one of the events that are organised periodically or the national celebrations the place witnesses at various times of the year, and enjoy this special opportunity",
+      },
+      {
+        type: "P",
+        ar: "زيارة قصر لاكازا دي لا بانداريا في جنوب الساحة وأخذ جولة استطلاعية داخل القصر",
+        en: "Visit the Casa de la Panadería palace on the south side of the square and take an exploratory tour inside the palace",
+      },
+      {
         type: "IMG",
         src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2907.jpg",
         cap_ar: "الأنشطة في ساحة مايور",
@@ -177,6 +207,11 @@ export const spainGuidesExtra: Guide[] = [
         type: "H3",
         ar: "اوقات عمل ساحة مايور بمدريد",
         en: "Opening hours of Plaza Mayor in Madrid",
+      },
+      {
+        type: "P",
+        ar: "الساحة مفتوحة طوال ايام الاسبوع وعلى مدار الساعة",
+        en: "The square is open all days of the week, around the clock",
       },
     ],
   },
