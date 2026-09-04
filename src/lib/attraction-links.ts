@@ -22,6 +22,18 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "القصر الملكي": { country: "spain", topic: "royal-palace" },
     "The Royal Palace": { country: "spain", topic: "royal-palace" },
   },
+  brussels: {
+    "الميدان الكبير": { country: "belgium", topic: "grand-place" },
+    "The Grand Place": { country: "belgium", topic: "grand-place" },
+    "حديقة سينكونت ناير": { country: "belgium", topic: "cinquantenaire-park" },
+    "Cinquantenaire Park": { country: "belgium", topic: "cinquantenaire-park" },
+    "القصر الملكي": { country: "belgium", topic: "royal-palace-brussels" },
+    "The Royal Palace": { country: "belgium", topic: "royal-palace-brussels" },
+    "الأتوميوم": { country: "belgium", topic: "atomium" },
+    "The Atomium": { country: "belgium", topic: "atomium" },
+    "حديقة أوروبا الصغيرة": { country: "belgium", topic: "mini-europe" },
+    "Mini-Europe Park": { country: "belgium", topic: "mini-europe" },
+  },
 };
 
 export function attractionLink(citySlug: string, title: string) {
