@@ -29,6 +29,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   bulgaria: bulgariaGuides,
   norway: [...norwayGuides, norwayDiscoverGuide, ...norwayMoreGuides],
   russia: russiaGuides,
+  "czech-republic": czechExtraGuides,
 };
 
 export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
