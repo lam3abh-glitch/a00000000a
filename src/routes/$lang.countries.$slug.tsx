@@ -442,40 +442,7 @@ function Country() {
         </section>
       )}
 
-      {/* RELATED */}
       {c.slug === "uae" && <WeatherByMonth lang={lang} />}
-      {(data.articles.length > 0 || data.itineraries.length > 0) && (
-        <section className="py-20">
-          <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
-            {data.itineraries.length > 0 && (
-              <div>
-                <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{tr.sections.relatedItineraries}</div>
-                <div className="space-y-3">
-                  {data.itineraries.map((i: any) => (
-                    <Link key={i.slug} to="/$lang/itineraries/$slug" params={{ lang, slug: i.slug }} className="block border-t border-sand pt-3 hover:text-gold">
-                      <div className="font-display text-xl text-midnight">{lang === "ar" ? i.title_ar : i.title_en}</div>
-                      <div className="text-xs text-charcoal/60 mt-1">{i.duration_days} {lang === "ar" ? "أيام" : "days"}</div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-            {data.articles.length > 0 && (
-              <div>
-                <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{tr.sections.culture}</div>
-                <div className="space-y-3">
-                  {data.articles.map((a: any) => (
-                    <Link key={a.slug} to={a.kind === "story" ? "/$lang/stories/$slug" : "/$lang/cultures/$slug"} params={{ lang, slug: a.slug }} className="block border-t border-sand pt-3 hover:text-gold">
-                      <div className="font-display text-xl text-midnight">{lang === "ar" ? a.title_ar : a.title_en}</div>
-                      <div className="text-xs text-charcoal/60 mt-1 uppercase tracking-wider">{a.kind}</div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </section>
-      )}
     </div>
   );
 }
