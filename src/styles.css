@@ -72,6 +72,11 @@
   --color-carmine: var(--carmine);
   --color-azulejo: var(--azulejo);
   --color-olive: var(--olive);
+  --color-belnoir: var(--belnoir);
+  --color-belor: var(--belor);
+  --color-belrouge: var(--belrouge);
+  --color-belbrick: var(--belbrick);
+  --color-belcopper: var(--belcopper);
 
   --font-display: "Amiri", "Cormorant Garamond", serif;
   --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
