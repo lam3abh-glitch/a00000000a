@@ -84,25 +84,25 @@ export function BulgariaCountry({ lang }: { lang: Lang }) {
       <Rose className="absolute -top-4 end-4 md:end-16 w-24 md:w-32 text-gold/25 pointer-events-none" />
       <Rose className="absolute bottom-10 start-4 md:start-16 w-16 md:w-24 text-midnight/10 pointer-events-none" />
 
-      {/* INTRO — cover photo + about text */}
+      {/* INTRO — Polaroid cover photo + about text */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="relative flex justify-center md:justify-start" dir="ltr">
-          <div className="relative">
-            <div aria-hidden className="absolute -inset-3 rounded-[2rem] border border-gold/30" />
-            <figure className="relative overflow-hidden rounded-[1.75rem] shadow-2xl max-w-xs md:max-w-sm bg-white">
-              <img src={COVER} alt="Bulgaria" loading="lazy" className="w-full object-cover" />
-              <FolkBand className="absolute bottom-14 inset-x-0 text-gold/70" />
-              <figcaption className="px-5 py-3 text-center text-[11px] uppercase tracking-[0.3em] text-cream bg-midnight">
+          <div className="relative rotate-[-4deg] hover:rotate-0 transition-transform duration-500">
+            <div className="absolute -top-4 left-6 w-20 h-6 bg-gold/70 rotate-[-6deg] z-20 shadow-sm" />
+            <div className="absolute -top-4 right-8 w-16 h-5 bg-terracotta/60 rotate-[10deg] z-20 shadow-sm" />
+            <div className="bg-white p-4 pb-16 shadow-2xl max-w-xs md:max-w-sm">
+              <img src={COVER} alt="Bulgaria" loading="lazy" className="block w-full h-auto object-cover" />
+              <div className="mt-4 text-center font-display text-midnight text-lg" style={{ fontFamily: "cursive" }}>
                 {rtl ? "لؤلؤة البلقان" : "The pearl of the Balkans"}
-              </figcaption>
-            </figure>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className={align} dir={rtl ? "rtl" : "ltr"}>
-          <div className="text-[11px] uppercase tracking-[0.4em] mb-4 text-gold">
-            {rtl ? "جمهورية بلغاريا" : "Republic of Bulgaria"}
-          </div>
+          <span className="inline-block bg-midnight text-cream text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[-2deg] mb-6">
+            {rtl ? "◆ مقدّمة" : "◆ Introduction"}
+          </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-midnight leading-tight">
             {rtl ? "جمهورية بلغاريا" : "The Republic of Bulgaria"}
           </h2>
