@@ -82,7 +82,6 @@ export const BULGARIA_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "These baths are the most photographed building in Sofia. They were built in the neo-Byzantine style with a large dome behind an impressive vestibule, and were turned into the Regional History Museum, where you can learn everything about the history of Sofia. You can also visit the garden directly in front of the Central Mineral Baths and the fountain at its centre, fed by naturally hot mineral water. It is worth noting that the place is now used as a hall for temporary exhibitions.",
       "Banya Bashi Mosque",
       "",
-      "",
       "Banya Bashi Mosque is the only Ottoman mosque still standing in Sofia today. It was designed by the Ottoman architect Sinan, considered one of the finest architects in history, and it is one of the best tourist attractions in Sofia. Visitors can enjoy exploring the mosque's extremely beautiful interior designs; it holds around 700 worshippers, and inside you can see tilework that is an excellent example of Islamic art.",
       "Vitosha Boulevard",
       "",
