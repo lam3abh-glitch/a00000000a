@@ -1,3 +1,4 @@
+import vigelandParkAsset from "@/assets/vigeland-park-oslo.png.asset.json";
 import { type ArticleLine, type ArticleLineKind, type CityArticle } from "./article-format";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
@@ -103,6 +104,7 @@ const OSLO = build(
       "تعتبر حديقة فيجلاند واحدة من مناطق السياحة في أوسلو النرويج الأكثر شعبية ، ويجدر القول بأنها أكبر حديقة منحوتات مصنوعة من قبل فنان واحد في العالم ، والتي تمثل حياة النحات غوستاف فيجيلاند الفنية",
       "Vigeland Park is one of the most popular attractions in Oslo, and it is worth saying that it is the largest sculpture park in the world made by a single artist, representing the artistic life of the sculptor Gustav Vigeland.",
     ],
+    ["IMG", vigelandParkAsset.url, ""],
     ["H5", "متحف سفينة الفايكنغ", "The Viking Ship Museum"],
     [
       "P",
