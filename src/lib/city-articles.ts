@@ -4,6 +4,7 @@ import { SPAIN_CITY_ARTICLES_EN as SPAIN_EN } from "./spain-cities-en";
 import { BELGIUM_CITY_ARTICLES, BELGIUM_CITY_ARTICLES_EN } from "./belgium-cities";
 import { FINLAND_CITY_ARTICLES, FINLAND_CITY_ARTICLES_EN } from "./finland-cities";
 import { BULGARIA_CITY_ARTICLES, BULGARIA_CITY_ARTICLES_EN } from "./bulgaria-cities";
+import { NORWAY_CITY_ARTICLES, NORWAY_CITY_ARTICLES_EN } from "./norway-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
@@ -672,6 +673,7 @@ const EN_ARTICLES = {
   ...BELGIUM_CITY_ARTICLES_EN,
   ...FINLAND_CITY_ARTICLES_EN,
   ...BULGARIA_CITY_ARTICLES_EN,
+  ...NORWAY_CITY_ARTICLES_EN,
 };
 
 

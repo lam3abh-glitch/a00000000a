@@ -14,6 +14,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   belgium: belgiumGuides,
   finland: finlandGuides,
   bulgaria: bulgariaGuides,
+  norway: norwayGuides,
 };
 
 export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
@@ -22,6 +23,7 @@ export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   belgium: { ar: "بلجيكا", en: "Belgium" },
   finland: { ar: "فنلندا", en: "Finland" },
   bulgaria: { ar: "بلغاريا", en: "Bulgaria" },
+  norway: { ar: "النرويج", en: "Norway" },
 };
 
 export function guidesFor(country: string): Guide[] {
@@ -35,6 +37,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   belgium: [...belgiumGuides, ...brusselsLandmarkGuides],
   finland: finlandGuides,
   bulgaria: bulgariaGuides,
+  norway: norwayGuides,
 };
 
 export function getGuideFor(country: string, slug: string): Guide | undefined {
