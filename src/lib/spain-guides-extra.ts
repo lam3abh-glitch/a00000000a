@@ -262,6 +262,26 @@ export const spainGuidesExtra: Guide[] = [
         cap_en: "More about Gran Vía in Madrid",
       },
       {
+        type: "H3",
+        ar: "المزيد من المعرفة عن شارع غران فيا بمدريد",
+        en: "More to know about Gran Vía in Madrid",
+      },
+      {
+        type: "P",
+        ar: "شهدت الشوارع احد اشهر الاحداث التي حدثت عام 1928، عندما وجهت الدعوة الى مصارع الثيران الشهير دييجو فورتونا للسيطرة على ثور نطح عدة مارة",
+        en: "The street witnessed one of the most famous events of 1928, when the famous bullfighter Diego Fortuna was called in to control a bull that had gored several passers-by",
+      },
+      {
+        type: "P",
+        ar: "في عام 1977 اوقف المخرج اليخاندرو امينابار حركة المرور اليومية في الشارع والتي تصل الى 50 الف سيارة، وذلك لتصوير احدى المشاهد في فيلم افتح عينيك من بطولة بينلوبي كروز",
+        en: "In 1997, director Alejandro Amenábar stopped the street's daily traffic — which reaches 50,000 cars — to film one of the scenes in the movie Open Your Eyes, starring Penélope Cruz",
+      },
+      {
+        type: "P",
+        ar: "بدأ العمل في الشارع عام 1910 بعد سنوات من الجدل، وبعد فشل 3 خطط، حيث تطلب تسوية شارعا قديما",
+        en: "Work on the street began in 1910 after decades of disputes and the failure of 3 plans, as it required levelling an old street",
+      },
+      {
         type: "IMG",
         src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2940.jpg",
         cap_ar: "شارع غران فيا",
