@@ -114,6 +114,7 @@ function Country() {
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
                   { label_ar: "العملة", label_en: "Currency", value_ar: c.currency, value_en: c.currency },
                 ];
+            if (!stats) return null;
             return (
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-px bg-cream/10 border border-cream/10 max-w-4xl">
                 {stats.map((s, i) => (
