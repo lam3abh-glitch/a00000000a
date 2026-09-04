@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getCity } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
 import { getCityArticle, type ArticleLine } from "@/lib/city-articles";
+import { attractionLink } from "@/lib/attraction-links";
 
 const qo = (country: string, city: string) =>
   queryOptions({ queryKey: ["city", country, city], queryFn: () => getCity({ data: { country, city } }) });
@@ -205,6 +206,20 @@ function City() {
           {p}
         </p>
       ))}
+      {(() => {
+        const link = attractionLink(city.slug, a.title);
+        if (!link) return null;
+        return (
+          <Link
+            to="/$lang/countries/$country/guides/$topic"
+            params={{ lang, country: link.country, topic: link.topic }}
+            className="inline-flex items-center gap-2 border border-gold/60 px-5 py-3 text-sm text-gold hover:bg-gold hover:text-midnight transition min-h-[44px]"
+          >
+            {lang === "ar" ? "اقرأ المزيد" : "Read more"}
+            <span aria-hidden>{lang === "ar" ? "←" : "→"}</span>
+          </Link>
+        );
+      })()}
     </div>
   );
 
