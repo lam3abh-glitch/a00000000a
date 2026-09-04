@@ -215,4 +215,99 @@ export const spainGuidesExtra: Guide[] = [
       },
     ],
   },
+  {
+    slug: "gran-via",
+    title_ar: "شارع غران فيا .. قلب مدريد النابض",
+    title_en: "Gran Vía — the beating heart of Madrid",
+    kicker_ar: "مدريد",
+    kicker_en: "Madrid",
+    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2938.jpg",
+    blocks: [
+      {
+        type: "P",
+        ar: "شارع غران فيا مدريد هو واحد من اهم الشوارع في مدينة مدريد ، ولا نبالغ اذا قلنا الرئيسي والاساسي فيها حيث يعتبر الشارع الذي لا ينام وجزء هام من المدينة الصاخبة فيه العديد من المعالم السياحية التي تستحق الزيارة ، وجد شارع غران فيا مدريد سنة 1929 وكان الهدف من تصميمه ربط بوابة الكالاو وساحة اسبانيا ويطلق عليه بالاسبانية Gran Via ، الشارع العظيم في اسبانيا هكذا كان لقبه أيام الحرب الاهلية حيث كان مسرحا للنزاعات ومازال هذا الشارع شاهدا على التغير الاقتصادي والسياسي والسياحة في اسبانيا",
+        en: "Gran Vía in Madrid is one of the most important streets in the city of Madrid — and it is no exaggeration to call it the main and essential one, as it is considered the street that never sleeps and a vital part of the bustling city, with many tourist landmarks worth visiting. Gran Vía came into being in 1929, and the goal of its design was to connect the Callao gate area with Plaza de España; in Spanish it is called Gran Vía — the Great Street of Spain. That was its nickname during the Civil War, when it was a theatre of conflict, and this street still bears witness to the economic, political and tourism change in Spain",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2937.jpg",
+        cap_ar: "شارع غران فيا",
+        cap_en: "Gran Vía",
+      },
+      {
+        type: "P",
+        ar: "كان شارع جران فيا واحدا من أكثر المباني العمرانية تحديا في اسبانيا ، حيث كان من الضروري هدم أكثر من 300 مبنى و50 شارعا لتصميم هذا الطريق",
+        en: "Gran Vía was one of the most challenging urban projects in Spain, as it was necessary to demolish more than 300 buildings and 50 streets to design this road",
+      },
+      {
+        type: "P",
+        ar: "يحتوي شارع غران فيا في مدريد على عدد كبير من المحلات التجارية المنتشرة على طرفيه ، والتي تؤمن للزائر جميع ما يحتاجه من ملابس مستلزمات أخرى ، وتتميز هذه المحلات بأنها تحمل أسماء أشهر الماركات التجارية من حول العالم ، كـ يونايتد كولور بينيتون و زارا",
+        en: "Gran Vía in Madrid contains a large number of shops spread along both sides, providing visitors with everything they need from clothes to other necessities. These shops carry the names of the most famous brands from around the world, such as United Colors of Benetton and Zara",
+      },
+      {
+        type: "P",
+        ar: "كما ويوجد في الشارع معرض خاص بالمنتجات الرياضية التابعة لفريق ريال مدريد الشهير ، وبالمقابل لهذا المتجر هنا المركز التجاري المعروف بري مارك ، وهو من المراكز المنتشرة في العاصمة الاسبانية بشكل كبير ، ويحوي العديد من المتاجر التي تقدم أجود أنواع البضائع",
+        en: "The street also has a store dedicated to the sports products of the famous Real Madrid team, and opposite this store is the well-known Primark shopping centre — one of the centres spread widely across the Spanish capital — which houses many shops offering the finest goods",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2935.jpg",
+        cap_ar: "شارع غران فيا",
+        cap_en: "Gran Vía",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2939.jpg",
+        cap_ar: "المزيد من المعرفة عن شارع غران فيا بمدريد",
+        cap_en: "More about Gran Vía in Madrid",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2940.jpg",
+        cap_ar: "شارع غران فيا",
+        cap_en: "Gran Vía",
+      },
+      {
+        type: "H3",
+        ar: "افضل الانشطة التي يمكن القيام بها في شارع غران فيا بمدريد",
+        en: "The best activities to do on Gran Vía in Madrid",
+      },
+      {
+        type: "P",
+        ar: "تستطيع اخذ قسطا من الراحة عند أحد المقاهي المتواجدة بكثرة في شارع غران فيا وتناول ما يحلو لكم من المشروبات والوجبات المشهورة بلذتها عند المطاعم هنا",
+        en: "You can take a break at one of the many cafés on Gran Vía and enjoy whatever drinks you fancy, along with the meals famous for their deliciousness at the restaurants here",
+      },
+      {
+        type: "P",
+        ar: "وانت تتنزه بشارع غران فيا مدريد فتواجهك ساحة كلاو التي تعتبر المنطقة المحيطة بهذه الساحة المكان الرسمي لصالات السينما حيث يوجد ما يزيد على 6 سينمات متجاورة حيث بامكانك حضور أي عرض سينمائي يناسب اذواقكم",
+        en: "As you stroll along Gran Vía in Madrid you will come across Callao Square — the area around this square is the official home of cinemas, with more than 6 adjacent cinemas where you can attend any film screening that suits your taste",
+      },
+      {
+        type: "P",
+        ar: "التسوق فهو مركز تسوق حقيقي في الهواء الطلق حيث يجتذب أكثر من 10 ملايين شخص كل عام ، ويعتبر من أهم شوارع التسوق لأنه يضم ثاني أكبر متجر في العالم في بريمارك ، بالاضافة الى علامات تجارية أخرى معروفة مثل زارا ولوي واتش آند ام وسفيرا وبول أند بير فيمكنكم شراء بعض الهدايا التذكارية",
+        en: "Shopping — it is a true open-air shopping centre, attracting more than 10 million people every year, and it is considered one of the most important shopping streets because it houses the second-largest Primark store in the world, in addition to other well-known brands such as Zara, H&M, Sfera and Pull & Bear — and you can buy some souvenirs",
+      },
+      {
+        type: "P",
+        ar: "زيارة مطعم مروش اللبناني وغيره العديد من افضل مطاعم عربية في شارع غراف فيا في مدريد للاستمتاع باشهى الوجبات العربية والغربية",
+        en: "Visit Marouch Lebanese restaurant and many other of the best Arab restaurants on Gran Vía in Madrid to enjoy the tastiest Arabic and Western dishes",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2941.jpg",
+        cap_ar: "شارع غران فيا بمدريد صباحا",
+        cap_en: "Gran Vía in Madrid in the morning",
+      },
+      {
+        type: "H3",
+        ar: "عنوان شارع غران فيا بمدريد",
+        en: "Address of Gran Vía in Madrid",
+      },
+      {
+        type: "P",
+        ar: "يقع الشارع في وسط مدينه مدريد حيث ينتهي غران فيا الى الغرب في ساحة بلازا اسبانيا والى الشرق عند التقاطع مع شارع ألكالا ويمكن الوصول اليه عن طريق المترو عند محطة غران فيا",
+        en: "The street is located in the centre of Madrid: Gran Vía ends to the west at Plaza de España and to the east at the intersection with Calle de Alcalá, and it can be reached by metro at Gran Vía station",
+      },
+    ],
+  },
 ];
