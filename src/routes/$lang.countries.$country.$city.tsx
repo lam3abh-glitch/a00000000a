@@ -100,24 +100,29 @@ function City() {
 
   const renderLine = (line: ArticleLine, index: number) => {
     if (line.kind === "IMG") {
+      const [src, caption] = line.value.split("||");
       return (
         <figure key={index} className="my-6 sm:my-8 md:my-10 overflow-hidden rounded-xl bg-midnight/5 shadow-xl group">
           <button
             type="button"
-            onClick={() => openLightbox(line.value)}
+            onClick={() => openLightbox(src)}
             className="block w-full cursor-zoom-in overflow-hidden"
             aria-label={lang === "ar" ? "فتح الصورة" : "Open image"}
           >
             <img
-              src={line.value}
-              alt={article?.title ?? name}
+              src={src}
+              alt={caption || article?.title || name}
               loading="lazy"
               className="w-full max-h-[280px] sm:max-h-[420px] md:max-h-[520px] object-cover transition duration-700 group-hover:scale-[1.03]"
             />
           </button>
+          {caption ? (
+            <figcaption className="px-4 py-3 text-center text-sm sm:text-base text-charcoal/70">{caption}</figcaption>
+          ) : null}
         </figure>
       );
     }
+
 
     if (line.kind === "H3") {
       const text = line.value.replace(/\\n/g, "").trim();
