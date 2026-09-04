@@ -12,6 +12,8 @@ export type Guide = {
   kicker_en: string;
   image: string;
   blocks: GuideBlock[];
+  // Deep-dive pages that belong to this guide, rendered as a grid at the end.
+  subPages?: { slug: string; label_ar: string; label_en: string }[];
 };
 
 

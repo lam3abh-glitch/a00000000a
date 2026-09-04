@@ -168,6 +168,33 @@ function GuidePage() {
         })}
       </article>
 
+      {g.subPages && g.subPages.length > 0 && (
+        <section className="pb-12 sm:pb-16">
+          <div className="mx-auto max-w-5xl px-5 sm:px-6">
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] sm:tracking-[0.4em] text-gold mb-5 text-center">
+              {ar ? "تفاصيل أكثر" : "Explore in detail"}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+              {g.subPages.map((s) => (
+                <Link
+                  key={s.slug}
+                  to="/$lang/countries/$country/guides/$topic"
+                  params={{ lang, country, topic: s.slug }}
+                  className="group rounded-2xl border border-sand bg-white/70 px-5 py-4 hover:border-gold/60 hover:shadow-sm transition-all"
+                >
+                  <div className="font-display text-base sm:text-lg text-midnight leading-snug group-hover:text-gold transition-colors">
+                    {ar ? s.label_ar : s.label_en}
+                  </div>
+                  <div className="mt-2 text-[11px] uppercase tracking-[0.25em] text-charcoal/50">
+                    {ar ? "اقرأ المزيد" : "Read more"}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="pb-16 sm:pb-20">
         <div className="mx-auto max-w-5xl px-5 sm:px-6">
           <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] sm:tracking-[0.4em] text-gold mb-5 text-center">
