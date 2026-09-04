@@ -216,13 +216,20 @@ export function CzechCountry({ lang }: { lang: Lang }) {
         </div>
       </div>
 
+      {/* ANTHEM */}
+      <div className="relative z-10 mt-20">
+        <AnthemPlayer
+          src={czechAnthem.url}
+          lang={lang}
+          title={rtl ? "النشيد الوطني التشيكي" : "The Czech national anthem"}
+        />
+      </div>
+
       {/* Scenes from Czechia */}
-      <div className="relative z-10 mt-20 mx-auto max-w-5xl px-6 grid md:grid-cols-2 gap-6">
-        {[SCENE_A, SCENE_B].map((src) => (
-          <div key={src} className="overflow-hidden border border-midnight/10 bg-white shadow-md">
-            <img src={src} alt="Czechia" loading="lazy" className="w-full h-64 md:h-80 object-cover" />
-          </div>
-        ))}
+      <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
+        <div className="overflow-hidden border border-midnight/10 bg-white shadow-md">
+          <img src={SCENE_B} alt="Czechia" loading="lazy" className="w-full h-64 md:h-80 object-cover" />
+        </div>
       </div>
 
       {/* Video */}
