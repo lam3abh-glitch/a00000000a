@@ -82,7 +82,8 @@ function GuidePage() {
       <article className={`mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
         {g.blocks.map((b, i) => {
           if (b.type === "H3") {
-            headingCount += 1;
+            const isTitle = b.noNumber;
+            if (!isTitle) headingCount += 1;
             paraCount = 0;
             const n = headingCount;
             return (
@@ -92,13 +93,15 @@ function GuidePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5 }}
-                className="mt-12 sm:mt-16 mb-5 flex items-start gap-3 sm:gap-4"
+                className={`mb-5 flex items-start gap-3 sm:gap-4 ${isTitle ? "mt-8 sm:mt-10" : "mt-12 sm:mt-16"}`}
               >
-                <span className="shrink-0 font-display text-3xl sm:text-5xl text-gold/40 leading-none pt-1 select-none">
-                  {String(n).padStart(2, "0")}
-                </span>
+                {!isTitle && (
+                  <span className="shrink-0 font-display text-3xl sm:text-5xl text-gold/40 leading-none pt-1 select-none">
+                    {String(n).padStart(2, "0")}
+                  </span>
+                )}
                 <div className="min-w-0">
-                  <h2 className="font-display text-xl leading-snug sm:text-3xl text-midnight">{ar ? b.ar : b.en}</h2>
+                  <h2 className={`font-display leading-snug text-midnight ${isTitle ? "text-2xl sm:text-4xl" : "text-xl sm:text-3xl"}`}>{ar ? b.ar : b.en}</h2>
                   <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
                 </div>
               </motion.div>
