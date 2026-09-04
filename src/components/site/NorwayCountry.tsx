@@ -190,7 +190,7 @@ export function NorwayCountry({ lang }: { lang: Lang }) {
         <AnthemPlayer
           src={ANTHEM}
           lang={lang}
-          title={rtl ? "علم مملكة النرويج والنشيد الوطني النرويجي" : "The flag of Norway and the Norwegian national anthem"}
+          title={rtl ? "النشيد الوطني النرويجي" : "The Norwegian national anthem"}
         />
       </div>
 
