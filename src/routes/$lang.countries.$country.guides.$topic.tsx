@@ -2,7 +2,7 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { type Lang } from "@/lib/i18n";
-import { getGuideFor, guidesFor, countryLabel } from "@/lib/guides";
+import { getGuideFor, guidesFor, countryLabel, type GuideBlock } from "@/lib/guides";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
   beforeLoad: ({ params }) => {
