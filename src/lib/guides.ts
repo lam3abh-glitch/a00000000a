@@ -26,6 +26,7 @@ export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   finland: { ar: "فنلندا", en: "Finland" },
   bulgaria: { ar: "بلغاريا", en: "Bulgaria" },
   norway: { ar: "النرويج", en: "Norway" },
+  russia: { ar: "روسيا", en: "Russia" },
 };
 
 export function guidesFor(country: string): Guide[] {
