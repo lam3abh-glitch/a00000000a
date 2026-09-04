@@ -150,6 +150,8 @@ function Country() {
         <FinlandCountry lang={lang} />
       ) : c.slug === "bulgaria" ? (
         <BulgariaCountry lang={lang} />
+      ) : c.slug === "norway" ? (
+        <NorwayCountry lang={lang} />
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}
