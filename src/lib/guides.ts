@@ -1,4 +1,4 @@
-import { franceGuides, type Guide } from "./france-guides";
+import { franceGuides, type Guide, type GuideBlock } from "./france-guides";
 import { spainGuides, spainGuidesAll } from "./spain-guides";
 import { belgiumGuides } from "./belgium-guides";
 import { brusselsLandmarkGuides } from "./belgium-guides-brussels";
@@ -6,7 +6,7 @@ import { finlandGuides } from "./finland-guides";
 import { bulgariaGuides } from "./bulgaria-guides";
 import { norwayGuides } from "./norway-guides";
 
-export type { Guide };
+export type { Guide, GuideBlock };
 
 export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   france: franceGuides,
