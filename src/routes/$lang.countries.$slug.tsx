@@ -442,9 +442,39 @@ function Country() {
         </section>
       )}
 
+      {/* STORIES & ADVENTURES */}
+      {data.articles.filter((a: any) => a.kind === "story").length > 0 && (
+        <section className="py-20 bg-midnight text-cream">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-12 text-center">
+              <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{lang === "ar" ? "من الرحلة" : "From the journey"}</div>
+              <h2 className="font-display text-4xl">{tr.sections.stories}</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {data.articles.filter((a: any) => a.kind === "story").map((a: any) => (
+                <Link key={a.slug} to="/$lang/stories/$slug" params={{ lang, slug: a.slug }} className="group relative flex flex-col overflow-hidden rounded-2xl border border-cream/10 bg-midnight/50 hover:border-gold/40 transition-all duration-500">
+                  <div className="relative h-56 overflow-hidden">
+                    <img src={a.hero_image} alt="" loading="lazy" className="h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent" />
+                  </div>
+                  <div className="relative z-10 -mt-12 p-6">
+                    <div className="text-[10px] uppercase tracking-[0.35em] text-gold/90 mb-2">{lang === "ar" ? "قصة" : "Story"}</div>
+                    <div className="font-display text-2xl text-cream leading-snug">{lang === "ar" ? a.title_ar : a.title_en}</div>
+                    {a.excerpt_ar && (
+                      <div className="mt-3 text-sm text-cream/70 line-clamp-3">{lang === "ar" ? a.excerpt_ar : a.excerpt_en}</div>
+                    )}
+                    <div className="mt-4 text-[10px] uppercase tracking-[0.3em] text-gold/80 group-hover:text-gold transition-colors">{tr.sections.readStory} →</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* RELATED */}
       {c.slug === "uae" && <WeatherByMonth lang={lang} />}
-      {(data.articles.length > 0 || data.itineraries.length > 0) && (
+      {(data.itineraries.length > 0 || data.articles.filter((a: any) => a.kind !== "story").length > 0) && (
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
             {data.itineraries.length > 0 && (
@@ -460,12 +490,12 @@ function Country() {
                 </div>
               </div>
             )}
-            {data.articles.length > 0 && (
+            {data.articles.filter((a: any) => a.kind !== "story").length > 0 && (
               <div>
                 <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">{tr.sections.culture}</div>
                 <div className="space-y-3">
-                  {data.articles.map((a: any) => (
-                    <Link key={a.slug} to={a.kind === "story" ? "/$lang/stories/$slug" : "/$lang/cultures/$slug"} params={{ lang, slug: a.slug }} className="block border-t border-sand pt-3 hover:text-gold">
+                  {data.articles.filter((a: any) => a.kind !== "story").map((a: any) => (
+                    <Link key={a.slug} to="/$lang/cultures/$slug" params={{ lang, slug: a.slug }} className="block border-t border-sand pt-3 hover:text-gold">
                       <div className="font-display text-xl text-midnight">{lang === "ar" ? a.title_ar : a.title_en}</div>
                       <div className="text-xs text-charcoal/60 mt-1 uppercase tracking-wider">{a.kind}</div>
                     </Link>
