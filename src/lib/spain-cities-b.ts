@@ -157,6 +157,7 @@ P|يعتبر (Sevilla Fútbol Club) هو نادي كرة قدم لمدينة ا�
     "الدليل الشامل لكوستا ديل سول",
     "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0931.jpg",
     `
+H3|اكتشف اسبانيا
 H3|من في حسنها ؟ فهي تتباهي بأجمل صورة !
 IMG|https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0932.jpg||أحد شواطىء كوستا ديل سول
 H3|أين تقع كوستا ديل سول ؟
