@@ -29,7 +29,7 @@ export const finlandGuides: Guide[] = [
     title_en: "The flag of the Republic of Finland",
     kicker_ar: "مدلولات العلم",
     kicker_en: "Flag meanings",
-    image: U("2022/10/img_4686.jpg"),
+    image: finlandFlag.url,
     blocks: [
 
       { type: "H3", noNumber: true, ar: "وصف مدلولات علم جمهورية فنلندا", en: "The meanings of the flag of the Republic of Finland" },
