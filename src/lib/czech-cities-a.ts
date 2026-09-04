@@ -99,7 +99,7 @@ const PRAGUE = build(
       "Discover the most beautiful and most famous tourist places in Prague",
     ],
     [
-      "H5",
+      "H3",
       "براغ كما لو لم تعرفها من قبل",
       "Prague as you have never known it before",
     ],
@@ -133,6 +133,7 @@ const PRAGUE = build(
       "مدينة براغ عاصمة التشيك ومن أجمل مدن العالم والوجهة الاهم من بين وجهات السياحة في التشيك ، فهي تضم مجموعة كبيرة من المعالم السياحية التي تثير الاعجاب ، تلقب براغ بعدة القاب منها لقب المدينة الذهبية ومدينة الابراج حيث تتميز بكثرة الابراج وبمبانيها التاريخية التي تعد احدى سماتها السياحية",
       "The city of Prague, the capital of Czechia, is one of the most beautiful cities in the world and the most important destination among Czechia's tourist attractions. It holds a large collection of impressive landmarks, and Prague carries several nicknames, including the Golden City and the City of a Hundred Spires, since it is distinguished by its many towers and its historic buildings, which are one of its tourist features.",
     ],
+    ["H5", "ساعة براغ الفلكية", "The Prague Astronomical Clock"],
     img("2022/05/img_6858.jpg"),
     [
       "P",
