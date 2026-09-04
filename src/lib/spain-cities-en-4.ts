@@ -4,7 +4,6 @@ export const SPAIN_EN_4: Record<string, { title: string; values: string[] }> = {
     values: [
       "",
       "Discover Spain",
-      "Discover everything about the enchanting city of Marbella",
       "Have a holiday coming up? Then let's spend it in Marbella!",
       "Marbella offers an unrivalled tourist experience: sixteen golf courses, four marinas, twenty-five beaches, about twenty thalassotherapy centres, and countless resorts, along with an old town built in the Andalusian style and festivals held all year round. It is also home to some of the most luxurious yachts in the world, restaurants with top-quality cuisine, and extremely fashionable shops.",
       "",
