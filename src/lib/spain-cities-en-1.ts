@@ -15,6 +15,7 @@ export const SPAIN_EN_1: Record<string, { title: string; values: string[] }> = {
       "",
       "Retiro Park",
       "Spain is famous for the celebrated Retiro Park, one of the most beautiful tourist areas in Madrid. The park extends over vast spaces and includes many recreational activities that help visitors spend an enjoyable time amid stunning nature and trees.",
+      "",
       "Plaza de Cibeles",
       "Plaza de Cibeles is one of the tourist attractions in Madrid and one of the most beautiful squares in Spain. At its center stands a fountain surrounded by a monument to the Greek symbol of fertility, carved from purple marble in 1780. The square includes a number of important buildings and tourist sites in Madrid, such as the Post and Telegraph Museum.",
       "",
