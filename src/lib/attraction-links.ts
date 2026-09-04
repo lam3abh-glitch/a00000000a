@@ -8,6 +8,8 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "Plaza Mayor, Madrid": { country: "spain", topic: "plaza-mayor" },
     "شارع غران فيا": { country: "spain", topic: "gran-via" },
     "Gran Vía Street": { country: "spain", topic: "gran-via" },
+    "القصر الملكي": { country: "spain", topic: "royal-palace" },
+    "The Royal Palace": { country: "spain", topic: "royal-palace" },
   },
 };
 
