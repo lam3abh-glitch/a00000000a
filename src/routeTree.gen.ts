@@ -14,6 +14,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as LangAboutRouteImport } from './routes/$lang.about'
+import { Route as LangStoriesIndexRouteImport } from './routes/$lang.stories.index'
 import { Route as LangCountriesIndexRouteImport } from './routes/$lang.countries.index'
 import { Route as LangStoriesSlugRouteImport } from './routes/$lang.stories.$slug'
 import { Route as LangItinerariesSlugRouteImport } from './routes/$lang.itineraries.$slug'
@@ -46,6 +47,11 @@ const ApiChatRoute = ApiChatRouteImport.update({
 const LangAboutRoute = LangAboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangStoriesIndexRoute = LangStoriesIndexRouteImport.update({
+  id: '/stories/',
+  path: '/stories/',
   getParentRoute: () => LangRoute,
 } as any)
 const LangCountriesIndexRoute = LangCountriesIndexRouteImport.update({
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/$lang/itineraries/$slug': typeof LangItinerariesSlugRoute
   '/$lang/stories/$slug': typeof LangStoriesSlugRoute
   '/$lang/countries/': typeof LangCountriesIndexRoute
+  '/$lang/stories/': typeof LangStoriesIndexRoute
   '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
   '/$lang/countries/$country/guides/$topic': typeof LangCountriesCountryGuidesTopicRoute
 }
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/$lang/itineraries/$slug': typeof LangItinerariesSlugRoute
   '/$lang/stories/$slug': typeof LangStoriesSlugRoute
   '/$lang/countries': typeof LangCountriesIndexRoute
+  '/$lang/stories': typeof LangStoriesIndexRoute
   '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
   '/$lang/countries/$country/guides/$topic': typeof LangCountriesCountryGuidesTopicRoute
 }
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/$lang/itineraries/$slug': typeof LangItinerariesSlugRoute
   '/$lang/stories/$slug': typeof LangStoriesSlugRoute
   '/$lang/countries/': typeof LangCountriesIndexRoute
+  '/$lang/stories/': typeof LangStoriesIndexRoute
   '/$lang/countries/$country/$city': typeof LangCountriesCountryCityRoute
   '/$lang/countries/$country/guides/$topic': typeof LangCountriesCountryGuidesTopicRoute
 }
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/$lang/itineraries/$slug'
     | '/$lang/stories/$slug'
     | '/$lang/countries/'
+    | '/$lang/stories/'
     | '/$lang/countries/$country/$city'
     | '/$lang/countries/$country/guides/$topic'
   fileRoutesByTo: FileRoutesByTo
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/$lang/itineraries/$slug'
     | '/$lang/stories/$slug'
     | '/$lang/countries'
+    | '/$lang/stories'
     | '/$lang/countries/$country/$city'
     | '/$lang/countries/$country/guides/$topic'
   id:
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/$lang/itineraries/$slug'
     | '/$lang/stories/$slug'
     | '/$lang/countries/'
+    | '/$lang/stories/'
     | '/$lang/countries/$country/$city'
     | '/$lang/countries/$country/guides/$topic'
   fileRoutesById: FileRoutesById
@@ -224,6 +236,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/$lang/about'
       preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/stories/': {
+      id: '/$lang/stories/'
+      path: '/stories'
+      fullPath: '/$lang/stories/'
+      preLoaderRoute: typeof LangStoriesIndexRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/countries/': {
@@ -294,6 +313,7 @@ interface LangRouteChildren {
   LangItinerariesSlugRoute: typeof LangItinerariesSlugRoute
   LangStoriesSlugRoute: typeof LangStoriesSlugRoute
   LangCountriesIndexRoute: typeof LangCountriesIndexRoute
+  LangStoriesIndexRoute: typeof LangStoriesIndexRoute
   LangCountriesCountryCityRoute: typeof LangCountriesCountryCityRoute
   LangCountriesCountryGuidesTopicRoute: typeof LangCountriesCountryGuidesTopicRoute
 }
@@ -307,6 +327,7 @@ const LangRouteChildren: LangRouteChildren = {
   LangItinerariesSlugRoute: LangItinerariesSlugRoute,
   LangStoriesSlugRoute: LangStoriesSlugRoute,
   LangCountriesIndexRoute: LangCountriesIndexRoute,
+  LangStoriesIndexRoute: LangStoriesIndexRoute,
   LangCountriesCountryCityRoute: LangCountriesCountryCityRoute,
   LangCountriesCountryGuidesTopicRoute: LangCountriesCountryGuidesTopicRoute,
 }

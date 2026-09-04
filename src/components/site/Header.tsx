@@ -22,7 +22,7 @@ export function Header({ lang }: { lang: Lang }) {
     { to: `/${lang}`, label: tr.home, exact: true },
     { to: `/${lang}/countries`, label: tr.countries },
     { to: `/${lang}/itineraries/czech-republic-15-days`, label: tr.itineraries },
-    { to: `/${lang}/stories/trans-siberian-railway`, label: tr.stories },
+    { to: `/${lang}/stories`, label: tr.stories },
     { to: `/${lang}/about`, label: tr.about },
   ];
 
