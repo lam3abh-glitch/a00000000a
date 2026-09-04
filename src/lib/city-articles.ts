@@ -5,6 +5,7 @@ import { BELGIUM_CITY_ARTICLES, BELGIUM_CITY_ARTICLES_EN } from "./belgium-citie
 import { FINLAND_CITY_ARTICLES, FINLAND_CITY_ARTICLES_EN } from "./finland-cities";
 import { BULGARIA_CITY_ARTICLES, BULGARIA_CITY_ARTICLES_EN } from "./bulgaria-cities";
 import { NORWAY_CITY_ARTICLES, NORWAY_CITY_ARTICLES_EN } from "./norway-cities";
+import { RUSSIA_CITY_ARTICLES, RUSSIA_CITY_ARTICLES_EN } from "./russia-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
@@ -662,6 +663,7 @@ export const CITY_ARTICLES: Record<string, CityArticle> = {
   ...FINLAND_CITY_ARTICLES,
   ...BULGARIA_CITY_ARTICLES,
   ...NORWAY_CITY_ARTICLES,
+  ...RUSSIA_CITY_ARTICLES,
 };
 
 // English translations of every article line, aligned by index with the Arabic
@@ -675,6 +677,7 @@ const EN_ARTICLES = {
   ...FINLAND_CITY_ARTICLES_EN,
   ...BULGARIA_CITY_ARTICLES_EN,
   ...NORWAY_CITY_ARTICLES_EN,
+  ...RUSSIA_CITY_ARTICLES_EN,
 };
 
 
