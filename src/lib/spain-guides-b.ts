@@ -7,7 +7,7 @@ export const spainGuidesB: Guide[] = [
     title_en: "Get to know Spain before you travel there",
     kicker_ar: "تعريف",
     kicker_en: "Overview",
-    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/08/img_2095.png",
+    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/03/img_3652-1.jpg?ssl=1",
     blocks: [
       { type: "H3", ar: "مملكة اسبانيا", en: "Kingdom of Spain" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/08/img_2095.png", cap_ar: "مملكة اسبانيا", cap_en: "Kingdom of Spain" },
