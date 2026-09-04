@@ -6,6 +6,7 @@ import { finlandGuides } from "./finland-guides";
 import { bulgariaGuides } from "./bulgaria-guides";
 import { norwayGuides } from "./norway-guides";
 import { norwayDiscoverGuide, norwayDiscoverSubGuides } from "./norway-discover";
+import { norwayMoreGuides } from "./norway-more";
 
 export type { Guide, GuideBlock };
 
@@ -15,7 +16,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   belgium: belgiumGuides,
   finland: finlandGuides,
   bulgaria: bulgariaGuides,
-  norway: [...norwayGuides, norwayDiscoverGuide],
+  norway: [...norwayGuides, norwayDiscoverGuide, ...norwayMoreGuides],
 };
 
 export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
@@ -38,7 +39,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   belgium: [...belgiumGuides, ...brusselsLandmarkGuides],
   finland: finlandGuides,
   bulgaria: bulgariaGuides,
-  norway: [...norwayGuides, norwayDiscoverGuide, ...norwayDiscoverSubGuides],
+  norway: [...norwayGuides, norwayDiscoverGuide, ...norwayDiscoverSubGuides, ...norwayMoreGuides],
 };
 
 export function getGuideFor(country: string, slug: string): Guide | undefined {
