@@ -80,97 +80,136 @@ function GuidePage() {
       </section>
 
       <article className={`mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
-        {g.blocks.map((b, i) => {
-          if (b.type === "H3") {
-            const isTitle = b.noNumber;
-            if (!isTitle) headingCount += 1;
-            paraCount = 0;
-            const n = headingCount;
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.5 }}
-                className={`mb-5 flex items-start gap-3 sm:gap-4 ${isTitle ? "mt-8 sm:mt-10" : "mt-12 sm:mt-16"}`}
-              >
-                {!isTitle && (
-                  <span className="shrink-0 font-display text-3xl sm:text-5xl text-gold/40 leading-none pt-1 select-none">
-                    {String(n).padStart(2, "0")}
-                  </span>
-                )}
-                <div className="min-w-0">
-                  <h2 className={`font-display leading-snug text-midnight ${isTitle ? "text-2xl sm:text-4xl" : "text-xl sm:text-3xl"}`}>{ar ? b.ar : b.en}</h2>
-                  {(ar ? b.sub_ar : b.sub_en) && (
-                    <div className="mt-1.5 text-[13px] sm:text-[14px] text-charcoal/60">{ar ? b.sub_ar : b.sub_en}</div>
-                  )}
-                  <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
-                </div>
-              </motion.div>
-            );
-          }
-          if (b.type === "P") {
-            paraCount += 1;
-            return (
-              <p
-                key={i}
-                className={`text-[16px] sm:text-[18px] leading-[2] text-charcoal/85 mb-5 sm:mb-6 ${
-                  paraCount === 1 && headingCount > 0 ? "text-charcoal" : ""
-                }`}
-              >
-                {ar ? b.ar : b.en}
-              </p>
-            );
-          }
-          if (b.type === "IMG") {
-            const compact = b.size === "compact";
-            return (
-              <motion.figure
-                key={i}
-                initial={{ opacity: 0, scale: 0.98 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.6 }}
-                className={`${compact ? "my-4 sm:my-6" : "my-6 sm:my-10"} -mx-5 sm:mx-0`}
-              >
-                <div className={`overflow-hidden rounded-none sm:rounded-3xl border-y sm:border border-sand bg-midnight/5 shadow-sm ${compact ? "max-w-2xl mx-auto" : ""}`}>
-                  <img
-                    src={b.src}
-                    alt={b.cap_en || b.cap_ar}
-                    loading="lazy"
-                    className={`w-full object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03] ${compact ? "max-h-[30vh] sm:max-h-[44vh]" : "max-h-[46vh] sm:max-h-[62vh]"}`}
-                  />
-                </div>
-                {(ar ? b.cap_ar : b.cap_en) && (
-                  <figcaption className={`text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60 ${compact ? "mt-2 px-5 sm:px-0" : "mt-3 px-5 sm:px-0"}`}>
-                    {ar ? b.cap_ar : b.cap_en}
-                  </figcaption>
-                )}
-              </motion.figure>
-            );
-          }
-          const items: string[] = ar ? b.ar : b.en;
-          return (
-            <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
-              {items.map((it, j) => (
-                <motion.li
-                  key={j}
-                  initial={{ opacity: 0, y: 10 }}
+        {g.blocks
+          .reduce<((typeof g.blocks)[0] | (typeof g.blocks)[0][])[]>((acc, b) => {
+            if (b.type === "IMG" && b.size === "compact") {
+              const last = acc[acc.length - 1];
+              if (Array.isArray(last)) last.push(b);
+              else acc.push([b]);
+            } else {
+              acc.push(b);
+            }
+            return acc;
+          }, [])
+          .map((item, i) => {
+            if (Array.isArray(item)) {
+              return (
+                <motion.div
+                  key={`grid-${i}`}
+                  initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.6 }}
-                  transition={{ duration: 0.35, delay: Math.min(j * 0.04, 0.3) }}
-                  className="flex gap-3 sm:gap-4 items-start rounded-2xl border border-sand bg-white/70 px-4 py-3.5 sm:px-5 sm:py-4 hover:border-gold/60 hover:shadow-sm transition-all"
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5 }}
+                  className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 my-4 sm:my-6 -mx-5 sm:mx-0"
                 >
-                  <span className="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold/15 font-mono text-[10px] text-gold">
-                    {j + 1}
-                  </span>
-                  <span className="min-w-0 text-[15px] sm:text-[16px] leading-[1.9] text-charcoal/85">{it}</span>
-                </motion.li>
-              ))}
-            </ul>
-          );
-        })}
+                  {item.map((b, j) => (
+                    <figure key={j} className="overflow-hidden rounded-2xl border border-sand bg-midnight/5 shadow-sm">
+                      <img
+                        src={b.src}
+                        alt={ar ? b.cap_ar : b.cap_en}
+                        loading="lazy"
+                        className="w-full h-36 sm:h-44 object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.04]"
+                      />
+                      {(ar ? b.cap_ar : b.cap_en) && (
+                        <figcaption className="text-center text-[10px] sm:text-[11px] tracking-[0.15em] uppercase text-charcoal/60 mt-2 px-2 pb-2">
+                          {ar ? b.cap_ar : b.cap_en}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </motion.div>
+              );
+            }
+            const b = item;
+            if (b.type === "H3") {
+              const isTitle = b.noNumber;
+              if (!isTitle) headingCount += 1;
+              paraCount = 0;
+              const n = headingCount;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.5 }}
+                  className={`mb-5 flex items-start gap-3 sm:gap-4 ${isTitle ? "mt-8 sm:mt-10" : "mt-12 sm:mt-16"}`}
+                >
+                  {!isTitle && (
+                    <span className="shrink-0 font-display text-3xl sm:text-5xl text-gold/40 leading-none pt-1 select-none">
+                      {String(n).padStart(2, "0")}
+                    </span>
+                  )}
+                  <div className="min-w-0">
+                    <h2 className={`font-display leading-snug text-midnight ${isTitle ? "text-2xl sm:text-4xl" : "text-xl sm:text-3xl"}`}>{ar ? b.ar : b.en}</h2>
+                    {(ar ? b.sub_ar : b.sub_en) && (
+                      <div className="mt-1.5 text-[13px] sm:text-[14px] text-charcoal/60">{ar ? b.sub_ar : b.sub_en}</div>
+                    )}
+                    <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
+                  </div>
+                </motion.div>
+              );
+            }
+            if (b.type === "P") {
+              paraCount += 1;
+              return (
+                <p
+                  key={i}
+                  className={`text-[16px] sm:text-[18px] leading-[2] text-charcoal/85 mb-5 sm:mb-6 ${
+                    paraCount === 1 && headingCount > 0 ? "text-charcoal" : ""
+                  }`}
+                >
+                  {ar ? b.ar : b.en}
+                </p>
+              );
+            }
+            if (b.type === "IMG") {
+              return (
+                <motion.figure
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6 }}
+                  className="my-6 sm:my-10 -mx-5 sm:mx-0"
+                >
+                  <div className="overflow-hidden rounded-none sm:rounded-3xl border-y sm:border border-sand bg-midnight/5 shadow-sm">
+                    <img
+                      src={b.src}
+                      alt={b.cap_en || b.cap_ar}
+                      loading="lazy"
+                      className="w-full object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03] max-h-[46vh] sm:max-h-[62vh]"
+                    />
+                  </div>
+                  {(ar ? b.cap_ar : b.cap_en) && (
+                    <figcaption className="text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60 mt-3 px-5 sm:px-0">
+                      {ar ? b.cap_ar : b.cap_en}
+                    </figcaption>
+                  )}
+                </motion.figure>
+              );
+            }
+            const items: string[] = ar ? b.ar : b.en;
+            return (
+              <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
+                {items.map((it, j) => (
+                  <motion.li
+                    key={j}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.6 }}
+                    transition={{ duration: 0.35, delay: Math.min(j * 0.04, 0.3) }}
+                    className="flex gap-3 sm:gap-4 items-start rounded-2xl border border-sand bg-white/70 px-4 py-3.5 sm:px-5 sm:py-4 hover:border-gold/60 hover:shadow-sm transition-all"
+                  >
+                    <span className="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gold/15 font-mono text-[10px] text-gold">
+                      {j + 1}
+                    </span>
+                    <span className="min-w-0 text-[15px] sm:text-[16px] leading-[1.9] text-charcoal/85">{it}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            );
+          })}
       </article>
 
       {g.gallery && g.gallery.length > 0 && (
