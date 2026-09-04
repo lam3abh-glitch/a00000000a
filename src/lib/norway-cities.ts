@@ -1,3 +1,4 @@
+import vigelandParkAsset from "@/assets/vigeland-park-oslo.png.asset.json";
 import { type ArticleLine, type ArticleLineKind, type CityArticle } from "./article-format";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
