@@ -172,16 +172,6 @@ export const norwayDiscoverGuide: Guide = {
       en: "You can reach Norway by bus from Sweden, Denmark, Finland and Russia. Services from Gothenburg in Sweden and Copenhagen in Denmark run roughly hourly with several departures a day, and the service from Stockholm is far more frequent than the train. Many operators offer inexpensive coach services between the major cities of Norway, Denmark and Sweden.",
     },
   ],
-  subPages: [
-    { slug: "norway-history", label_ar: "تاريخ النرويج", label_en: "The history of Norway" },
-    { slug: "norway-architecture", label_ar: "فن العمارة", label_en: "Architecture" },
-    { slug: "norway-language", label_ar: "اللغة", label_en: "Language" },
-    { slug: "norway-religion", label_ar: "الديانة", label_en: "Religion" },
-    { slug: "norway-animals", label_ar: "الحيوانات", label_en: "Animals" },
-    { slug: "norway-climate", label_ar: "المناخ", label_en: "Climate" },
-    { slug: "norway-transport", label_ar: "المواصلات", label_en: "Transport" },
-    { slug: "norway-culture-arts", label_ar: "الثقافة والفنون والموسيقى", label_en: "Culture, arts and music" },
-  ],
 };
 
 // Unlisted detail pages linked from the sections above.
