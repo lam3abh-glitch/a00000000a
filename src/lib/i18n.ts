@@ -34,6 +34,7 @@ export const t = {
       cities: "المدن التي زرتها",
       attractions: "أبرز الأماكن",
       culture: "ثقافة ومعلومات",
+      stories: "القصص والمغامرات",
       relatedItineraries: "برامج سياحية مرتبطة",
       discover: "اكتشف الرحلة",
       world: "العالم",
