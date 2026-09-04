@@ -39,6 +39,21 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "دار الأوبرا": { country: "norway", topic: "opera-house" },
     "The Opera House": { country: "norway", topic: "opera-house" },
   },
+  prague: {
+    "ساعة براغ الفلكية": { country: "czech-republic", topic: "astronomical-clock" },
+    "The Prague Astronomical Clock": { country: "czech-republic", topic: "astronomical-clock" },
+    "قلعة براغ": { country: "czech-republic", topic: "prague-castle" },
+    "Prague Castle": { country: "czech-republic", topic: "prague-castle" },
+    "برج بترين": { country: "czech-republic", topic: "petrin-tower" },
+    "Petřín Tower": { country: "czech-republic", topic: "petrin-tower" },
+    "ساحة البلدة القديمة": { country: "czech-republic", topic: "old-town-square" },
+    "Old Town Square": { country: "czech-republic", topic: "old-town-square" },
+    "جسر تشارلز": { country: "czech-republic", topic: "charles-bridge" },
+    "Charles Bridge": { country: "czech-republic", topic: "charles-bridge" },
+    "البيت الراقص": { country: "czech-republic", topic: "dancing-house" },
+    "The Dancing House": { country: "czech-republic", topic: "dancing-house" },
+  },
+
 };
 
 export function attractionLink(citySlug: string, title: string) {
