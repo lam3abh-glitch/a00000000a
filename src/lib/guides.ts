@@ -56,7 +56,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   bulgaria: bulgariaGuides,
   norway: [...norwayGuides, norwayDiscoverGuide, ...norwayDiscoverSubGuides, ...norwayMoreGuides],
   russia: russiaGuides,
-  "czech-republic": pragueLandmarkGuides,
+  "czech-republic": [...pragueLandmarkGuides, ...czechExtraGuides],
 };
 
 export function getGuideFor(country: string, slug: string): Guide | undefined {
