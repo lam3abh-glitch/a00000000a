@@ -39,6 +39,7 @@ const CESKE_BUDEJOVICE = build(
       "في وسط České Budějovice ستجد فخر المدينة وفرحها – ساحة مربعة سميت على اسم الملك Přemysl Otakar II ، واحدة من أكبر المربعات في أوروبا ، تبلغ مساحتها هكتارا بالضبط وأصبحت جزء لا يتجزأ من كل كتاب رياضيات تشيكي ، الساحة محاطة بالمنازل الرائعة ذات الأقواس الباروكية ، والمبنى الكبير لمبنى البلدية ، وهو أحد أكثر الأماكن جاذبية في البلاد ، يزين أيضا أحجاره ، خذ قسطا من الراحة بجوار نافورة شمشون في المنتصف والتي تتميز ببعض الزخارف النحتية الرائعة ، تأكد من زيارة كاتدرائية القديس نيكولاس ومتجر الملح الشهير في المدينة أثناء التنزه في وسط المدينة",
       "In the centre of České Budějovice you will find the town's pride and joy — a square named after King Přemysl Otakar II, one of the largest squares in Europe. It measures exactly one hectare and has become an integral part of every Czech mathematics textbook. The square is surrounded by wonderful houses with baroque arcades, and the large town hall building, one of the most attractive spots in the country, also adorns its stones. Take a rest beside the Samson Fountain in the middle, which features some marvellous sculpted decorations, and be sure to visit St Nicholas's Cathedral and the town's famous salt shop while strolling through the town centre.",
     ],
+    ["IMG", "/__l5e/assets-v1/922d75b2-ce01-43df-8ae7-fa999dc082d1/ceske-budejovice-square.png", ""],
     ["H5", "احترس من الهيكل العظمي", "Beware of the Skeleton"],
     [
       "P",
