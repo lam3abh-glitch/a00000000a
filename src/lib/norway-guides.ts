@@ -552,8 +552,8 @@ export const norwayGuides: Guide[] = [
       { type: "H3", ar: "العنوان وموقع الأوبرا على الخريطة", en: "The address and the location of the opera on the map" },
       {
         type: "LIST",
-        items_ar: ["العنوان : Kirsten Flagstads plass 1, Oslo", "اسم دار الأوبرا بالنرويجي : Den Norske Opera & Ballett"],
-        items_en: ["Address: Kirsten Flagstads plass 1, Oslo", "Norwegian name: Den Norske Opera & Ballett"],
+        ar: ["العنوان : Kirsten Flagstads plass 1, Oslo", "اسم دار الأوبرا بالنرويجي : Den Norske Opera & Ballett"],
+        en: ["Address: Kirsten Flagstads plass 1, Oslo", "Norwegian name: Den Norske Opera & Ballett"],
       },
       { type: "IMG", src: U("2023/04/img_0705.jpg"), cap_ar: "دار الأوبرا والباليه بأوسلو بالنرويج", cap_en: "The Opera and Ballet House in Oslo, Norway" },
       { type: "H3", ar: "خصائص دار الأوبرا والباليه", en: "The features of the Opera and Ballet House" },
@@ -597,12 +597,12 @@ export const norwayGuides: Guide[] = [
       { type: "H3", ar: "أوقات العمل", en: "Opening hours" },
       {
         type: "LIST",
-        items_ar: [
+        ar: [
           "6 أبريل – 10 أبريل : الاثنين والخميس والجمعة والسبت والأحد من 12:00 ظهرا حتى 4:00 مساء",
           "11 أبريل – 25 مايو : من الاثنين حتى السبت من 11:00 صباحا حتى 10:00 مساء ، والأحد من 12:00 ظهرا حتى 6:00 مساء",
           "2 يناير – 5 أبريل : من الاثنين حتى السبت من 11:00 صباحا حتى 10:00 مساء ، والأحد من 12:00 ظهرا حتى 6:00 مساء",
         ],
-        items_en: [
+        en: [
           "Apr 6 – Apr 10: Mon, Thu, Fri, Sat, Sun 12:00 PM–4:00 PM",
           "Apr 11 – May 25: Mon–Sat 11:00 AM–10:00 PM, Sun 12:00 PM–6:00 PM",
           "Jan 2 – Apr 5: Mon–Sat 11:00 AM–10:00 PM, Sun 12:00 PM–6:00 PM",
