@@ -1,6 +1,7 @@
 import { article, type ArticleLineKind, type ArticleLine, type CityArticle } from "./article-format";
 import { SPAIN_CITY_ARTICLES } from "./spain-cities";
 import { SPAIN_CITY_ARTICLES_EN as SPAIN_EN } from "./spain-cities-en";
+import { BELGIUM_CITY_ARTICLES, BELGIUM_CITY_ARTICLES_EN } from "./belgium-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
