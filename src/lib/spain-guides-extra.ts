@@ -56,6 +56,21 @@ export const spainGuidesExtra: Guide[] = [
         en: "The best activities to do at Plaza de Cibeles in Madrid",
       },
       {
+        type: "P",
+        ar: "يمكنكم في بداية وصولكم لمنطقة الساحة الحيوية مع العائلة أو الأصحاب القيام بركوب احدى العربات الخاصة بنقل الركاب بجولة مكوكية حول المعالم الجاذبة للزوار بجانب الساحة بأسعار رمزية للتعرف عن كثب على كل ما سوف تقوموا بزيارته لاحقا",
+        en: "When you first arrive at this lively square with family or friends, you can ride one of the special shuttle carriages on a tour around the attractions surrounding the square at symbolic prices, to get a close look at everything you will visit later.",
+      },
+      {
+        type: "P",
+        ar: "تستطيعون أيضا في حال كنتم من عشاق الأعمال الفنية الأكثر من رائعة لفنانين معاصرين ايجاد ضالتكم التي تبحثون عنها في محيط هذه الساحة نظرا لتزينها على الدوام بأعمال فنية تسر ناظر الزوار على الدوام أمثال التماثيل الخشبية واللوحات الزيتية المركونة في كل مكان فيها",
+        en: "If you are lovers of wonderful artworks by contemporary artists, you can also find what you are looking for around this square, as it is always decorated with artworks that delight visitors, such as the wooden sculptures and oil paintings placed everywhere in it.",
+      },
+      {
+        type: "P",
+        ar: "بالنسبة لختام برنامجكم السياحي في داخل منطقة موقع بلازا دي سيبيليس النابض بالحياة اننا نشيد بكم التوجه لأحد مولات مدريد المجربة لعام 2021 والتي تقع بجانب الساحة لاقتناء بعض الهدايا الخاصة بكل أفراد العائلة بأسعار رمزية",
+        en: "To conclude your tourist program in the lively Plaza de Cibeles area, we recommend heading to one of Madrid's tried-and-tested malls located next to the square to buy some special gifts for all family members at symbolic prices.",
+      },
+      {
         type: "IMG",
         src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/09/img_2917.jpg",
         cap_ar: "الأنشطة في ساحة سيبيليس",
