@@ -5,6 +5,8 @@ import { spainGuidesFestivals } from "./spain-guides-festivals";
 import { spainGuidesExtra } from "./spain-guides-extra";
 import { spainGuidesBarcelona } from "./spain-guides-barcelona";
 import { spainGuidesShopping } from "./spain-guides-shopping";
+import { spainBeachesA } from "./spain-beaches-a";
+import { spainBeachesB } from "./spain-beaches-b";
 import { spainProgramsA } from "./spain-programs-a";
 import { spainProgramsB } from "./spain-programs-b";
 import { spainProgramsC } from "./spain-programs-c";
@@ -18,6 +20,8 @@ const ALL = [
   ...spainGuidesExtra,
   ...spainGuidesBarcelona,
   ...spainGuidesShopping,
+  ...spainBeachesA,
+  ...spainBeachesB,
   ...spainProgramsA,
   ...spainProgramsB,
   ...spainProgramsC,
