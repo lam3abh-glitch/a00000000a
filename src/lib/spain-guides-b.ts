@@ -50,7 +50,7 @@ export const spainGuidesB: Guide[] = [
       { type: "P", ar: "يعد فن الأكل في اسبانيا الخضراء فن حقيقي ويشكل جزء من التراث الثقافي للمنطقة ، وسترى ذلك بنفسك عندما تجلس في أي من مطاعم هذا البلد وحاناته", en: "The art of eating in Green Spain is a true art and forms part of the region's cultural heritage, and you will see this for yourself when you sit at any of this country's restaurants and bars." },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0942.jpg", cap_ar: "سمك القد على طريقة بيلبيل", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0943.jpg", cap_ar: "جبن كابراليس", cap_en: "Spanish cuisine" },
-      { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0944.jpg", cap_ar: "أكلات اسبانية", cap_en: "Spanish cuisine" },
+      { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0944.jpg", cap_ar: "أخطبوط على الطريقة الجاليسية", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0945.jpg", cap_ar: "أكلات اسبانية", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0946.jpg", cap_ar: "أكلات اسبانية", cap_en: "Spanish cuisine" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0948.jpg", cap_ar: "أكلات اسبانية", cap_en: "Spanish cuisine" },
