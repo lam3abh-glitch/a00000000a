@@ -13,6 +13,7 @@ import { guidesFor } from "@/lib/guides";
 import { UgandaCountry } from "@/components/site/UgandaCountry";
 import { SpainCountry } from "@/components/site/SpainCountry";
 import { BelgiumCountry } from "@/components/site/BelgiumCountry";
+import { FinlandCountry } from "@/components/site/FinlandCountry";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -78,6 +79,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1830", value_en: "1830" },
                 ]
+              : c.slug === "finland"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "هلسنكي", value_en: "Helsinki" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو", value_en: "Euro" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "5.5 مليون", value_en: "5.5 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "338,424 كم²", value_en: "338,424 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1917", value_en: "1917" },
+                ]
               : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
@@ -116,6 +126,8 @@ function Country() {
         <SpainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "belgium" ? (
         <BelgiumCountry lang={lang} cityLabel={{ ar: "بروكسيل .. مدينة الجمال", en: "Brussels .. the city of beauty" }} />
+      ) : c.slug === "finland" ? (
+        <FinlandCountry lang={lang} />
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}
