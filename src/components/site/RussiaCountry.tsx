@@ -107,15 +107,12 @@ export function RussiaCountry({ lang }: { lang: Lang }) {
   const h = rtl ? HEADINGS.ar : HEADINGS.en;
 
   return (
-    <section className="relative overflow-hidden bg-cream py-20 sm:py-24">
-      {/* Soft wash kept inside the site palette */}
+    <section className="relative overflow-hidden bg-cream py-24">
+      {/* subtle background dots — same as France */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(26,26,46,0.07) 0%, rgba(219,184,122,0.10) 45%, rgba(255,255,255,0) 100%)",
-        }}
+        className="absolute inset-0 opacity-[0.12] pointer-events-none"
+        style={{ backgroundImage: "radial-gradient(circle, #1a1a2e 1px, transparent 1.5px)", backgroundSize: "22px 22px" }}
       />
 
       {/* Russian background stickers — subtle so the content stays readable */}
@@ -129,30 +126,45 @@ export function RussiaCountry({ lang }: { lang: Lang }) {
       <Snowflake className="absolute top-1/3 end-1/4 w-6 md:w-8 text-gold/35 pointer-events-none" />
       <Snowflake className="absolute bottom-40 start-1/4 w-7 md:w-9 text-midnight/10 pointer-events-none" />
 
-      {/* INTRO — cover photo + text */}
+      {/* INTRO — Polaroid photo + intro text (France layout) */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="relative flex justify-center md:justify-start" dir="ltr">
-          <div className="relative">
-            <div aria-hidden className="absolute -inset-3 rounded-t-full rounded-b-[2rem] border border-gold/35" />
-            <figure className="relative overflow-hidden rounded-t-[9rem] rounded-b-[1.75rem] shadow-2xl max-w-xs md:max-w-sm bg-white">
-              <img src={COVER} alt="Russia" loading="lazy" className="w-full object-cover" />
-              <figcaption className="bg-midnight px-5 py-3 text-center text-[11px] uppercase tracking-[0.3em] text-cream">
-                {rtl ? "بلاد القياصرة والقباب الذهبية" : "Land of the tsars and golden domes"}
-              </figcaption>
-            </figure>
+          <div className="relative rotate-[-4deg] hover:rotate-0 transition-transform duration-500">
+            <div className="absolute -top-4 left-6 w-20 h-6 bg-gold/70 rotate-[-6deg] z-20 shadow-sm" />
+            <div className="absolute -top-4 right-8 w-16 h-5 bg-terracotta/60 rotate-[10deg] z-20 shadow-sm" />
+            <div className="bg-white p-4 pb-16 shadow-2xl max-w-xs md:max-w-sm">
+              <img src={COVER} alt="Russia" className="block w-full h-auto object-cover" loading="lazy" />
+              <div className="mt-4 text-center font-display text-midnight text-lg" style={{ fontFamily: "cursive" }}>
+                Moscow · موسكو
+              </div>
+            </div>
           </div>
         </div>
 
         <div className={align} dir={rtl ? "rtl" : "ltr"}>
-          <div className="text-[11px] uppercase tracking-[0.4em] mb-4 text-gold">◆ {h.kicker}</div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-midnight leading-tight">{h.title}</h2>
+          <span className="inline-block bg-midnight text-cream text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[-2deg] mb-6">
+            {rtl ? "★ مقدّمة" : "★ Introduction"}
+          </span>
+          <p className="font-display text-3xl md:text-4xl text-midnight leading-snug">{h.title}</p>
           <div className="my-4 h-px w-14 bg-gold" />
           <p className="font-display text-xl sm:text-2xl leading-snug text-terracotta">{h.crown}</p>
-          <p className="mt-6 text-[16px] sm:text-[18px] leading-[2] text-charcoal/85">{rtl ? ABOUT.ar : ABOUT.en}</p>
         </div>
       </div>
 
-      {/* ANTHEM */}
+      {/* About Russia — compact text block */}
+      <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
+        <div className={`flex items-center gap-3 mb-4 ${rtl ? "flex-row-reverse" : "flex-row"}`}>
+          <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-mono">
+            {rtl ? "00 · نبذة" : "00 · About"}
+          </span>
+          <span className="h-px flex-1 bg-midnight/10" />
+        </div>
+        <p className={`font-body text-base md:text-lg text-midnight/85 leading-relaxed ${align}`}>
+          {rtl ? ABOUT.ar : ABOUT.en}
+        </p>
+      </div>
+
+      {/* National Anthem */}
       <div className="relative z-10 mt-16">
         <AnthemPlayer
           src={ANTHEM}
@@ -161,31 +173,61 @@ export function RussiaCountry({ lang }: { lang: Lang }) {
         />
       </div>
 
-      {/* SCALE TEXT + PHOTO */}
-      <div className="relative z-10 mt-16 mx-auto max-w-5xl px-6 grid md:grid-cols-2 gap-10 items-center">
-        <div className={align} dir={rtl ? "rtl" : "ltr"}>
-          <FolkSwirl className="w-28 h-10 mb-4 text-gold/70" />
-          <p className="text-[16px] sm:text-[17px] leading-[2] text-charcoal/85">{rtl ? SCALE.ar : SCALE.en}</p>
+      {/* Fact cards: Emblem & map + scale photo */}
+      <div className="relative z-10 mt-20 mx-auto max-w-5xl px-6">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="group relative bg-white border border-midnight/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-gold font-mono z-10">
+              {rtl ? "01 · حقيقة" : "01 · Fact"}
+            </div>
+            <div className="pt-16 pb-8 px-8 flex items-center justify-center bg-gradient-to-b from-cream to-white min-h-[280px]">
+              <img
+                src={EMBLEM_MAP}
+                alt={rtl ? "شعار وخارطة جمهورية روسيا" : "Emblem and map of the Russian Federation"}
+                loading="lazy"
+                className="max-h-64 w-auto object-contain drop-shadow-md"
+              />
+            </div>
+            <div className={`border-t border-midnight/10 px-6 py-4 ${align}`}>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50 mb-1">
+                {rtl ? "الشعار والموقع" : "Emblem & Geography"}
+              </div>
+              <div className="font-display text-xl text-midnight">
+                {rtl ? "شعار وخارطة روسيا · العاصمة موسكو" : "Emblem and map of Russia · Capital Moscow"}
+              </div>
+            </div>
+          </div>
+
+          <div className="group relative bg-white border border-midnight/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-gold font-mono z-10">
+              {rtl ? "02 · حقيقة" : "02 · Fact"}
+            </div>
+            <div className="pt-12 pb-4 px-4 flex items-center justify-center bg-gradient-to-b from-cream to-white min-h-[280px]">
+              <img src={SCENE_A} alt="Russia" loading="lazy" className="max-h-64 w-auto object-contain" />
+            </div>
+            <div className={`border-t border-midnight/10 px-6 py-4 ${align}`}>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50 mb-1">
+                {rtl ? "المساحة" : "Scale"}
+              </div>
+              <div className="font-display text-xl text-midnight">
+                {rtl ? "أكبر بلد في العالم من حيث المساحة" : "The largest country in the world by area"}
+              </div>
+            </div>
+          </div>
         </div>
-        <figure className="overflow-hidden rounded-2xl border border-gold/25 bg-white shadow-sm" dir="ltr">
-          <img src={SCENE_A} alt="Russia" loading="lazy" className="w-full object-cover" />
-        </figure>
       </div>
 
-      {/* EMBLEM + MAP */}
+      {/* Scale text */}
       <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
-        <figure className="overflow-hidden rounded-3xl border border-gold/20 bg-white shadow-sm">
-          <img
-            src={EMBLEM_MAP}
-            alt={rtl ? "شعار وخارطة جمهورية روسيا" : "Emblem and map of the Russian Federation"}
-            loading="lazy"
-            className="w-full object-cover"
-          />
-          <OnionSkyline className="h-6 w-full text-gold/70" />
-          <figcaption className="px-5 py-4 text-center text-[11px] tracking-[0.2em] uppercase text-charcoal/60">
-            {rtl ? "شعار وخارطة جمهورية روسيا" : "Emblem and map of the Russian Federation"}
-          </figcaption>
-        </figure>
+        <div className={`flex items-center gap-3 mb-4 ${rtl ? "flex-row-reverse" : "flex-row"}`}>
+          <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-mono">
+            {rtl ? "03 · تفاصيل" : "03 · Detail"}
+          </span>
+          <span className="h-px flex-1 bg-midnight/10" />
+        </div>
+        <p className={`font-body text-base md:text-lg text-midnight/85 leading-relaxed ${align}`}>
+          {rtl ? SCALE.ar : SCALE.en}
+        </p>
       </div>
     </section>
   );
