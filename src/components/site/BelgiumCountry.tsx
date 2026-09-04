@@ -1,10 +1,9 @@
-import { Link } from "@tanstack/react-router";
+import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import type { Lang } from "@/lib/i18n";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
 const EMBLEM_MAP = U("2022/04/img_4534.jpg");
-const FLAG = U("2022/04/img_4735.png");
 const AHMAD = U("2022/01/img_1365.jpg");
 const ANTHEM_VIDEO = "https://videos.files.wordpress.com/4hF23bST/my-movie-5-1-7.mp4";
 
