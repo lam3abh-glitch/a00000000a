@@ -434,4 +434,94 @@ export const spainGuidesBarcelona: Guide[] = [
       },
     ],
   },
+  {
+    slug: "camp-nou",
+    title_ar: "ملعب الكامب نو",
+    title_en: "Camp Nou Stadium",
+    kicker_ar: "برشلونة",
+    kicker_en: "Barcelona",
+    image: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/file28581.jpg",
+    blocks: [
+      {
+        type: "P",
+        ar: "ملعب الكامب نو بدأ بناء الاستاد عام 1954م واستمر حتى عام 1957م ، وكان المهندس المسئول عن البناء هو فرانسيس فميتجانس ميرو وجوزيف سوتيرنس مورى بالتعاون مع لورنزو غارسيا باربون ، وقدرت تكلفة المشروع بنحو 288 مليون بيزيتا ، وعندما أنشأ الملعب كانت مساحته 107×72 متر ، الا انه تم تقليصه بسبب قرار من الفيفا إلى 105×68 متر",
+        en: "Construction of the Camp Nou stadium began in 1954 and continued until 1957. The engineers responsible for the construction were Francesc Mitjans Miró and Josep Soteras Mauri, in collaboration with Lorenzo García Barbón. The cost of the project was estimated at around 288 million pesetas, and when the stadium was built its pitch measured 107×72 metres, but it was later reduced to 105×68 metres due to a FIFA decision",
+      },
+      {
+        type: "P",
+        ar: "كان الافتتاح في 24 سبتمبر 1957م وكانت سعة المتفرجين تقدر بنحو 73,054 شخص على الرغم من ان العمل في الملعب كان لم يكتمل بعد ، ولكن اكثر من 80،000 متفرج تمكنوا من مشاهدة الحدث الذي استمر مع ممثلي جميع نوادي كرة القدم الرئيسية في كاتالونيا وكان الافتتاح في الملعب بفوز البارسا 4-2",
+        en: "The opening took place on 24 September 1957, with a spectator capacity estimated at around 73,054 people. Although work on the stadium had not yet been completed, more than 80,000 spectators were able to watch the event, which continued with representatives of all the major football clubs in Catalonia, and the opening match at the stadium ended with a 4-2 win for Barça",
+      },
+      {
+        type: "P",
+        ar: "ولقد مر على الملعب عدة تجديدات وتحسينات منذ عام 1957م أهمها الكشف على نظام الإضاءة في عام 1959م ، فضلا عن اضافة المدرج اللوحه الإلكترونية وغرفة الصحافة ، وتم تمديد بنية ادنى مستوى لها في عام 1994م ، والتي تضمنت خفض مستوى أرضية الملعب",
+        en: "The stadium has undergone several renovations and improvements since 1957, the most important of which was the inspection of the lighting system in 1959, in addition to the addition of the electronic scoreboard stand and the press room. The lower-tier structure was extended in 1994, which included lowering the level of the pitch",
+      },
+      {
+        type: "P",
+        ar: "تم تحديد اسم الكامب نو بناء على تصويت أعضاء النادى بريديا ، حيث وصلت الأصوات الى 29،102 صوت ، للاحتفال بالذكرى الخمسين من انشاء الاستاد ، ثم اعيد نموذج الاستاد عن طريق المعماري الانجليزي فوستر ، وكان الهدف من ذلك تكامل الملعب والبيئة الحضارية ، ولكن النادي لا يسعى في زيادة عدد المقاعد بل يريد ان تكون نسبة 50% من المقاعد تحت الغطاء ، وفي يوم 18 سبتمبر 2007م تم اختيار اعادة هيكل ملعب الكامب نو من قبل المهندس المعماري البريطاني نورمان فوستر وشركته ، وتشمل هذه الخطة 10,000 مقعد اضافي بتكلفة تقديرية تبلغ 250 مليون يورو",
+        en: "The name Camp Nou was decided by a postal vote of the club's members, with 29,102 votes cast, to celebrate the fiftieth anniversary of the stadium's construction. The stadium was then remodelled by the English architect Foster, with the aim of integrating the stadium with the urban environment. The club does not seek to increase the number of seats, but rather wants 50% of the seats to be under cover. On 18 September 2007, the restructuring of the Camp Nou stadium was assigned to the British architect Norman Foster and his company; this plan includes 10,000 additional seats at an estimated cost of 250 million euros",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/img_0762.jpg",
+        cap_ar: "ملعب الكامب نو ببرشلونة",
+        cap_en: "Camp Nou stadium in Barcelona",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/img_0731.jpg",
+        cap_ar: "مدرجات ملعب الكامب نو",
+        cap_en: "The stands of Camp Nou stadium",
+      },
+      {
+        type: "H3",
+        ar: "شهد ستاد الكامب نو عدد من الاحداث الرياضية الهامة وابرزها :",
+        en: "Camp Nou stadium has witnessed a number of major sporting events, the most prominent of which are:",
+      },
+      {
+        type: "LIST",
+        ar: [
+          "استضافة المباراة الافتتاحية في بطولة كأس العالم 1982م التي اقيمت في اسبانيا وعدد من مباريات البطولة",
+          "استضافة حفلي افتتاح وختام دورة الالعاب الاولمبية التي اقيمت بمدينة برشلونة عام 1992م",
+          "استضافة عدد من نهائيات بطولات الاندية الأوروبية ، اذ استضاف مباراتي نهائي دوري ابطال أوروبا عامي 1989م و 1999م ، اضافة الى نهائي كأس الاتحاد الأوروبي للأندية ابطال الكؤوس عام 1972م",
+        ],
+        en: [
+          "Hosting the opening match of the 1982 World Cup held in Spain, along with a number of the tournament's matches",
+          "Hosting the opening and closing ceremonies of the Olympic Games held in the city of Barcelona in 1992",
+          "Hosting a number of European club competition finals, including the two European Cup / Champions League finals in 1989 and 1999, in addition to the UEFA Cup Winners' Cup final in 1972",
+        ],
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/file28699.jpg",
+        cap_ar: "اجواء ملعب الكامب نو",
+        cap_en: "The atmosphere at Camp Nou stadium",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/img_0972.jpg",
+        cap_ar: "ملعب الكامب نو من الداخل",
+        cap_en: "Inside Camp Nou stadium",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/file28563.jpg",
+        cap_ar: "ملعب الكامب نو ببرشلونة",
+        cap_en: "Camp Nou stadium in Barcelona",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/img_0724.jpg",
+        cap_ar: "ارضية ملعب الكامب نو",
+        cap_en: "The Camp Nou pitch",
+      },
+      {
+        type: "IMG",
+        src: "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/file28456.jpg",
+        cap_ar: "جماهير ملعب الكامب نو",
+        cap_en: "Camp Nou fans",
+      },
+    ],
+  },
 ];
