@@ -68,6 +68,11 @@
   --color-earth: var(--earth);
   --color-savanna: var(--savanna);
   --color-clay: var(--clay);
+  --color-saffron: var(--saffron);
+  --color-carmine: var(--carmine);
+  --color-azulejo: var(--azulejo);
+  --color-olive: var(--olive);
+
   --font-display: "Amiri", "Cormorant Garamond", serif;
   --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
 }
