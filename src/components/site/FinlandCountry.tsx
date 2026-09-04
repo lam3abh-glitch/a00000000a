@@ -101,8 +101,20 @@ export function FinlandCountry({ lang }: { lang: Lang }) {
           src={ANTHEM_VIDEO}
           lang={lang}
           title={rtl ? "النشيد الوطني الفنلندي" : "The Finnish national anthem"}
+          theme={{
+            bg: "bg-white",
+            border: "border-[#005293]/25",
+            buttonBg: "bg-[#005293]",
+            buttonText: "text-white",
+            buttonHoverBg: "hover:bg-[#003d70]",
+            buttonHoverText: "hover:text-white",
+            accent: "text-[#005293]",
+            title: "text-[#005293]",
+            ping: "border-[#005293]",
+          }}
         />
       </div>
+
 
       {/* YOUTUBE */}
       <div className="relative z-10 mt-8 mx-auto max-w-xl px-6">
