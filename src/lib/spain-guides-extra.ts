@@ -81,6 +81,16 @@ export const spainGuidesExtra: Guide[] = [
         ar: "المزيد من المعرفة عن ساحة سيبيليس بمدريد",
         en: "More to know about Plaza de Cibeles in Madrid",
       },
+      {
+        type: "P",
+        ar: "اذا كانت ساحة سيبيليس هي أحد أبرز المعالم الاسبانية بشكل عام ، ومعالم العاصمة مدريد بشكل خاص ، فانها باتت معلما أساسيا من معالم انتصارات نادي ريال مدريد ، فالنادي الملكي اعتاد على احتفال لاعبيه مع جماهيرهم بالبطولات المختلفة في الساحة التي تتوسط العاصمة الاسبانية على مدار السنوات الماضية ، حيث يتم ربط وشاح النادي حول النافورة الموجودة فيها",
+        en: "If Plaza de Cibeles is one of the most prominent Spanish landmarks in general, and one of the landmarks of the capital Madrid in particular, it has become an essential symbol of Real Madrid club's victories. The royal club is accustomed to celebrating its players' various championships with their fans in the square that lies in the heart of the Spanish capital over the past years, where the club's scarf is tied around the fountain in it.",
+      },
+      {
+        type: "P",
+        ar: "تحيط بالساحة العديد من المباني التي شيدت على الطراز النيو الكلاسيكي ، بما في ذلك بالاسيو دي سيبيليس المذهلة ، والمعروفة سابقا باسم بالاسيو دي كومونيكاسيونس ، الذي تم تصميمه من قبل المهندس المعماري أنطونيو بالاسيوس ، في وسط الساحة وضع التمثال الذي يعتبر أيضا رمزا للمدينة وهو تمثال للآلهة فرجيا ويطلق عليه فوينتي دي لا سيبيليس ، ومعه نافورة رائعة تصور آلهة الرومان على عربة تجرها الأسود ، وهي منحوتة من الرخام الأرجواني عن طريق فرانسيسكو غوتيريز وروبرتو ميشيل في 1780 ، والنافورة تعد مصدرا للمياه الداخلية للمنازل مجاورة",
+        en: "Many Neoclassical-style buildings surround the square, including the magnificent Palacio de Cibeles, formerly known as Palacio de Comunicaciones, which was designed by the architect Antonio Palacios. In the centre of the square stands the statue that is also considered a symbol of the city: a statue of the goddess Cybele, known as Fuente de la Cibeles, accompanied by a magnificent fountain depicting the Roman goddess in a chariot drawn by lions, carved from reddish marble by Francisco Gutiérrez and Roberto Michel in 1780. The fountain also served as a source of domestic water for the surrounding houses.",
+      },
     ],
   },
   {
