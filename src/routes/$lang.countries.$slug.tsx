@@ -108,6 +108,16 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1905", value_en: "1905" },
                 ]
+              : c.slug === "russia"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "موسكو", value_en: "Moscow" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "الروبل الروسي", value_en: "Russian ruble" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "146 مليون", value_en: "146 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "17,098,246 كم²", value_en: "17,098,246 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1991", value_en: "1991" },
+                ]
+
               : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
