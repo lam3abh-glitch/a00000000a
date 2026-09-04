@@ -8,16 +8,14 @@ async function admin() {
 
 export const getHomeData = createServerFn({ method: "GET" }).handler(async () => {
   const sb = await admin();
-  const [continents, countries, featured, itineraries] = await Promise.all([
+  const [continents, countries, itineraries] = await Promise.all([
     sb.from("continents").select("*").order("sort_order"),
     sb.from("countries").select("id, slug, name_ar, name_en, iso2, flag_emoji, hero_image, continent_id, latitude, longitude, is_featured"),
-    sb.from("articles").select("*").eq("is_featured", true).limit(1),
     sb.from("itineraries").select("slug, title_ar, title_en, hero_image, duration_days").limit(6),
   ]);
   return {
     continents: continents.data ?? [],
     countries: countries.data ?? [],
-    featured: featured.data?.[0] ?? null,
     itineraries: itineraries.data ?? [],
   };
 });
