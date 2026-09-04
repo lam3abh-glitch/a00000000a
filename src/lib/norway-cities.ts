@@ -1,4 +1,5 @@
 import vigelandParkAsset from "@/assets/vigeland-park-oslo.png.asset.json";
+import osloMunchMuseumAsset from "@/assets/oslo-munch-museum.png.asset.json";
 import { type ArticleLine, type ArticleLineKind, type CityArticle } from "./article-format";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
@@ -140,9 +141,6 @@ const OSLO = build(
       "حفلات كاريلون في أول يوم سبت كل شهر في الساعة 11 صباحا ، في يونيو ويوليو وأغسطس من كل يوم أحد في الساعة 3 مساء ، وما بين 14 يناير و27 أبريل ، يمكنك مشاهدة معرض جائزة السلام من مركز نوبل للسلام في قاعة المدينة ، الدخول مجاني ومفتوح كل يوم من الساعة 9 صباحا الى الساعة 4 مساء",
       "Carillon concerts take place on the first Saturday of every month at 11 am, and in June, July and August every Sunday at 3 pm. Between 14 January and 27 April you can see the Peace Prize exhibition from the Nobel Peace Center inside the City Hall. Entry is free and it is open every day from 9 am to 4 pm.",
     ],
-    img("2023/04/img_0734.jpg"),
-    img("2023/04/img_0733.jpg"),
-    img("2023/04/img_0732.jpg"),
     img("2023/04/img_0731.jpg"),
     img("2023/04/img_0730.jpg"),
     ["H5", "مجموعة مونش", "The MUNCH collection"],
@@ -161,7 +159,7 @@ const OSLO = build(
       "تظهر الأحداث الفنية والثقافية أيضا في تقويم MUNCH ، كما يوفر المتحف الضخم بجوار مضيق أوسلو ثلاثة أماكن لتناول الطعام والشراب : Munch Deli & Café وBistro Tolvte وKranen Bar ، فضلا عن وجود متجر الهدايا ومنتجات للأطفال",
       "Art and cultural events also appear on the MUNCH calendar, and the huge museum beside the Oslo fjord offers three places to eat and drink — Munch Deli & Café, Bistro Tolvte and Kranen Bar — as well as a gift shop with products for children.",
     ],
-    img("2023/04/img_0729.jpg"),
+    ["IMG", osloMunchMuseumAsset.url, ""],
     img("2023/04/img_0728.jpg"),
     img("2023/04/img_0727.jpg"),
     img("2023/04/img_0726.jpg"),
