@@ -11,8 +11,13 @@ import { russiaGuides } from "./russia-guides";
 import { pragueGuidesA } from "./czech-guides-prague-a";
 import { pragueGuidesB } from "./czech-guides-prague-b";
 import { pragueGuidesC } from "./czech-guides-prague-c";
+import { czechGuidesExtraA } from "./czech-guides-extra-a";
+import { czechGuidesExtraB } from "./czech-guides-extra-b";
+import { czechGuidesExtraC } from "./czech-guides-extra-c";
+import { czechGuidesExtraD } from "./czech-guides-extra-d";
 
 const pragueLandmarkGuides = [...pragueGuidesA, ...pragueGuidesB, ...pragueGuidesC];
+const czechExtraGuides = [...czechGuidesExtraA, ...czechGuidesExtraB, ...czechGuidesExtraC, ...czechGuidesExtraD];
 
 export type { Guide, GuideBlock };
 
