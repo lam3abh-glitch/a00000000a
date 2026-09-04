@@ -128,29 +128,14 @@ export function CzechCountry({ lang }: { lang: Lang }) {
       <BaroqueScroll className="absolute -top-2 -start-6 w-44 md:w-64 text-gold/30 pointer-events-none" />
       <BaroqueScroll className="absolute bottom-24 end-2 md:end-16 w-40 md:w-56 text-gold/25 pointer-events-none rotate-180" />
 
-      {/* INTRO — Polaroid photo + intro text */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-        <div className="relative flex justify-center md:justify-start" dir="ltr">
-          <div className="relative rotate-[-4deg] hover:rotate-0 transition-transform duration-500">
-            <div className="absolute -top-4 left-6 w-20 h-6 bg-gold/70 rotate-[-6deg] z-20 shadow-sm" />
-            <div className="absolute -top-4 right-8 w-16 h-5 bg-terracotta/60 rotate-[10deg] z-20 shadow-sm" />
-            <div className="bg-white p-4 pb-16 shadow-2xl max-w-xs md:max-w-sm">
-              <img src={COVER} alt="Czechia" className="block w-full h-auto object-cover" loading="lazy" />
-              <div className="mt-4 text-center font-display text-midnight text-lg" style={{ fontFamily: "cursive" }}>
-                Prague · براغ
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={align} dir={rtl ? "rtl" : "ltr"}>
-          <span className="inline-block bg-midnight text-cream text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[-2deg] mb-6">
-            {rtl ? "★ مقدّمة" : "★ Introduction"}
-          </span>
-          <p className="font-display text-3xl md:text-4xl text-midnight leading-snug">{h.title}</p>
-          <div className="my-4 h-px w-14 bg-gold" />
-          <p className="font-display text-xl sm:text-2xl leading-snug text-terracotta">{h.crown}</p>
-        </div>
+      {/* INTRO */}
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center" dir={rtl ? "rtl" : "ltr"}>
+        <span className="inline-block bg-midnight text-cream text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[-2deg] mb-6">
+          {rtl ? "★ مقدّمة" : "★ Introduction"}
+        </span>
+        <p className="font-display text-3xl md:text-5xl text-midnight leading-snug">{h.title}</p>
+        <div className="my-5 h-px w-16 bg-gold mx-auto" />
+        <p className="font-display text-xl sm:text-2xl leading-snug text-terracotta">{h.crown}</p>
       </div>
 
       {/* About */}
