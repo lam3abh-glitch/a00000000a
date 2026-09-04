@@ -289,7 +289,13 @@ function Country() {
               </h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {data.cities.map((city: any, i: number) => (
+              {(() => {
+                const list = [...data.cities];
+                const a = list.findIndex((x: any) => x.slug === "madrid");
+                const b = list.findIndex((x: any) => x.slug === "seville");
+                if (a > -1 && b > -1) { const tmp = list[a]; list[a] = list[b]; list[b] = tmp; }
+                return list;
+              })().map((city: any, i: number) => (
                 <Link
                   key={city.slug}
                   to="/$lang/countries/$country/$city"
