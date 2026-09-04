@@ -65,7 +65,7 @@ export const spainGuidesB: Guide[] = [
     image: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0938.jpg",
     blocks: [
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0938.jpg", cap_ar: "طقس اسبانيا", cap_en: "The weather in Spain" },
-      { type: "H3", ar: "اكتشف اسبانيا", en: "Discover Spain" },
+      { type: "H3", ar: "اكتشف اسبانيا", en: "Discover Spain", noNumber: true },
       { type: "H3", noNumber: true, ar: "تعرف على طقس اسبانيا عبر مختلف فصول السنة", en: "Get to know Spain's weather across the different seasons" },
       { type: "H3", noNumber: true, ar: "حيث تتبعك أشعة الشمس خلال كل موسم", en: "Where the sun follows you through every season" },
       { type: "P", ar: "اسبانيا بلد ذو مناخ معتدل على مدار السنة ولكنه لا يزال يحافظ على تناقضاته الموسمية ، هنا يمكنك التحقق من متوسط درجات الحرارة وساعات أشعة الشمس في بعض الوجهات الرئيسية ، كما نقدم لك المشورة بشأن نوع الملابس التي يجب احضارها لكل موسم ونقدم لك المزيد من المعلومات حول الطقس في اسبانيا", en: "Spain is a country with a moderate climate all year round, but it still keeps its seasonal contrasts. Here you can check the average temperatures and hours of sunshine in some of the main destinations, and we also offer advice on the kind of clothes you should bring for each season and give you more information about the weather in Spain." },
