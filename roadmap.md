@@ -8,3 +8,8 @@
 - [x] 12 Spain guide/article pages (AR + EN, weddings source page was empty upstream)
 - [x] Make guides route country-aware; link everything from the Spain page
 - [x] Verify build + preview (no typecheck errors)
+
+# Norway
+- [x] Oslo, Bergen, Lysefjord city pages (AR + EN)
+- [x] More about Norway: train journeys, Tromsø locals guide, spring reasons
+- [ ] Remaining Norway pages (to be added later)
