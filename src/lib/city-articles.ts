@@ -1,35 +1,11 @@
-export type ArticleLineKind = "H3" | "H4" | "H5" | "P" | "LI" | "IMG";
+import { article, type ArticleLineKind, type ArticleLine, type CityArticle } from "./article-format";
+import { SPAIN_CITY_ARTICLES } from "./spain-cities";
+import { SPAIN_CITY_ARTICLES_EN as SPAIN_EN } from "./spain-cities-en";
 
-export type ArticleLine = {
-  kind: ArticleLineKind;
-  value: string;
-};
+export type { ArticleLineKind, ArticleLine, CityArticle };
 
-export type CityArticle = {
-  sourceUrl: string;
-  title: string;
-  heroImage: string;
-  lines: ArticleLine[];
-};
+const FRANCE_AND_UGANDA: Record<string, CityArticle> = {
 
-function lines(raw: string): ArticleLine[] {
-  return raw
-    .trim()
-    .split("\n")
-    .map((line) => {
-      const separator = line.indexOf("|");
-      return {
-        kind: line.slice(0, separator) as ArticleLineKind,
-        value: line.slice(separator + 1),
-      };
-    });
-}
-
-function article(sourceUrl: string, title: string, heroImage: string, raw: string): CityArticle {
-  return { sourceUrl, title, heroImage, lines: lines(raw) };
-}
-
-export const CITY_ARTICLES: Record<string, CityArticle> = {
   paris: article(
     "https://100region.com/?p=11215&amp=1",
     "أجمل وأشهر أماكن السياحة في باريس",
@@ -675,11 +651,20 @@ P|يمتاز الشلال بإرتفاعه الكبير والذى يصل الى
   ),
 };
 
+export const CITY_ARTICLES: Record<string, CityArticle> = {
+  ...FRANCE_AND_UGANDA,
+  ...SPAIN_CITY_ARTICLES,
+};
+
 // English translations of every article line, aligned by index with the Arabic
 // lines above (IMG lines keep their original URLs).
 import EN from "./city-articles-en.json";
 
-const EN_ARTICLES = EN as Record<string, { title: string; values: string[] }>;
+const EN_ARTICLES = {
+  ...(EN as Record<string, { title: string; values: string[] }>),
+  ...(SPAIN_EN as Record<string, { title: string; values: string[] }>),
+};
+
 
 export function getCityArticle(slug: string, lang: string): CityArticle | undefined {
   const base = CITY_ARTICLES[slug];

@@ -9,8 +9,9 @@ import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
-import { franceGuides } from "@/lib/france-guides";
+import { guidesFor } from "@/lib/guides";
 import { UgandaCountry } from "@/components/site/UgandaCountry";
+import { SpainCountry } from "@/components/site/SpainCountry";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -58,6 +59,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
                   { label_ar: "الاستقلال", label_en: "Independence", value_ar: "1962", value_en: "1962" },
                 ]
+              : c.slug === "spain"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "مدريد", value_en: "Madrid" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو (€)", value_en: "Euro (€)" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "47.4 مليون", value_en: "47.4 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "505,990 كم²", value_en: "505,990 km²" },
+                  { label_ar: "اللغة", label_en: "Language", value_ar: "الإسبانية", value_en: "Spanish" },
+                  { label_ar: "نظام الحكم", label_en: "Government", value_ar: "مملكة دستورية", value_en: "Constitutional monarchy" },
+                ]
               : c.slug === "france"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: c.capital_ar, value_en: c.capital_en },
@@ -92,6 +102,8 @@ function Country() {
       {/* INTRO */}
       {c.slug === "uganda" ? (
         <UgandaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "spain" ? (
+        <SpainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}
@@ -313,7 +325,7 @@ function Country() {
       )}
 
       {/* GUIDE SECTIONS */}
-      {c.slug === "france" && (
+      {guidesFor(c.slug).length > 0 && (
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 text-center">
@@ -321,11 +333,11 @@ function Country() {
                 {lang === "ar" ? "أقسام" : "Sections"}
               </div>
               <h2 className="font-display text-4xl text-midnight">
-                {lang === "ar" ? "المزيد عن فرنسا" : "More about France"}
+                {lang === "ar" ? `المزيد عن ${c.name_ar}` : `More about ${c.name_en}`}
               </h2>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
-              {franceGuides.map((g, i) => (
+              {guidesFor(c.slug).map((g, i) => (
                 <Link
                   key={g.slug}
                   to="/$lang/countries/$country/guides/$topic"

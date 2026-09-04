@@ -2,16 +2,16 @@ import { createFileRoute, Link, useParams, notFound } from "@tanstack/react-rout
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { type Lang } from "@/lib/i18n";
-import { getGuide, franceGuides } from "@/lib/france-guides";
+import { getGuideFor, guidesFor, countryLabel } from "@/lib/guides";
 
 export const Route = createFileRoute("/$lang/countries/$country/guides/$topic")({
   beforeLoad: ({ params }) => {
-    if (!getGuide(params.topic)) throw notFound();
+    if (!getGuideFor(params.country, params.topic)) throw notFound();
   },
   head: ({ params }) => {
-    const g = getGuide(params.topic);
+    const g = getGuideFor(params.country, params.topic);
     const title = g ? `${g.title_en} — سفير المحبة` : "Guide — سفير المحبة";
-    const desc = g ? `${g.title_ar} · ${g.title_en}` : "France travel guide";
+    const desc = g ? `${g.title_ar} · ${g.title_en}` : "Travel guide";
     return {
       meta: [
         { title },
@@ -32,11 +32,11 @@ function GuidePage() {
     country: string;
     topic: string;
   };
-  const g = getGuide(topic);
+  const g = getGuideFor(country, topic);
   if (!g) throw notFound();
   const ar = lang === "ar";
   const title = ar ? g.title_ar : g.title_en;
-  const others = franceGuides.filter((o) => o.slug !== g.slug);
+  const others = guidesFor(country).filter((o) => o.slug !== g.slug);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -65,7 +65,7 @@ function GuidePage() {
         <div className="relative z-10 mx-auto max-w-4xl h-full flex flex-col justify-end px-5 sm:px-6 pb-10 sm:pb-14 text-cream">
           <div className="text-[11px] sm:text-xs text-cream/60 mb-3 flex flex-wrap items-center gap-x-2">
             <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className="hover:text-gold">
-              {ar ? "فرنسا" : "France"}
+              {countryLabel(country, lang)}
             </Link>
             <span>/</span>
             <span className="text-gold">{ar ? g.kicker_ar : g.kicker_en}</span>
@@ -210,7 +210,7 @@ function GuidePage() {
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
-            <span>{ar ? "العودة إلى صفحة فرنسا" : "Back to France"}</span>
+            <span>{ar ? `العودة إلى صفحة ${countryLabel(country, lang)}` : `Back to ${countryLabel(country, lang)}`}</span>
           </Link>
         </div>
       </section>
