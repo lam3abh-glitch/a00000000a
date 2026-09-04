@@ -110,14 +110,6 @@ export function SpainCountry({ lang, intro }: { lang: Lang; intro: string }) {
             <p className="font-body text-base md:text-lg text-charcoal/85 leading-[1.95]">{ABOUT[lang]}</p>
           </div>
           <div className="md:col-span-5 space-y-4">
-            <figure className="overflow-hidden rounded-2xl shadow-lg border border-carmine/10 bg-white flex items-center justify-center p-6">
-              <img
-                src={CREST}
-                alt={rtl ? "شعار مملكة اسبانيا" : "Coat of arms of the Kingdom of Spain"}
-                loading="lazy"
-                className="max-h-40 w-auto object-contain drop-shadow"
-              />
-            </figure>
             <figure className="overflow-hidden rounded-2xl shadow-lg border border-carmine/10 md:translate-x-4">
               <img
                 src={LANDSCAPE}
