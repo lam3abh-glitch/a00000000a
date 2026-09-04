@@ -9,10 +9,7 @@ export const spainGuidesA: Guide[] = [
     kicker_en: "Shopping",
     image: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0952.jpg",
     blocks: [
-      { type: "H3", ar: "اكتشف اسبانيا", en: "Discover Spain" },
-      { type: "H3", ar: "تعرف على كل ما يخص الأسواق والمجمعات التجارية في اسبانيا", en: "Learn all about the markets and shopping malls of Spain" },
-      { type: "H3", ar: "يالله نتسوق", en: "Let's go shopping" },
-      { type: "H3", ar: "يالله على اسبانيا !", en: "Come on to Spain!" },
+      { type: "H3", ar: "اكتشف اسبانيا تعرف على كل ما يخص الأسواق والمجمعات التجارية في اسبانيا يالله نتسوق يالله على اسبانيا !", en: "Discover Spain — learn all about the markets and shopping malls of Spain. Let's go shopping — come on to Spain!" },
       { type: "H3", ar: "في اسبانيا ستستمتع كما لم يحدث من قبل بالتسوق ، وذلك بفضل مجموعة واسعة من العروض : فهناك الكثير من العلامات التجارية الرائدة والمصممين الاسبان والعالميين ، والأزياء البديلة ومراكز التسوق الكبيرة ، ناهيك عن الأماكن الترفيهية لجميع أفراد الأسرة وتخفيضات وأسواق متجددة باستمرار ، بالاضافة الى المحلات الحرفية الصغيرة التقليدية ، واذا أضفنا الى ذلك توقيت العمل المستمر للمحلات ، وبالتالي فان التسوق الجيد مضمون ، في اسبانيا سوف تجد بضائع ذات جودة عالية في الأزياء والمجوهرات والأحذية والهدايا", en: "In Spain you will enjoy shopping like never before, thanks to a wide range of offerings: there are many leading brands and Spanish and international designers, alternative fashion and large shopping centres, not to mention entertainment venues for the whole family and constantly renewed sales and markets, in addition to small traditional craft shops. If we add to that the continuous opening hours of the shops, then good shopping is guaranteed — in Spain you will find high-quality goods in fashion, jewellery, shoes and gifts." },
       { type: "P", ar: "اضغط على التعليق تحت الصورة للذهاب الى الموضوع", en: "Click on the caption beneath the picture to go to the topic" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0961.jpg", cap_ar: "الأسواق والمجمعات التجارية", cap_en: "Markets and shopping malls" },
