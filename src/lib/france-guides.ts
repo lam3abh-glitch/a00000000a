@@ -2,7 +2,7 @@ export type GuideBlock =
   | { type: "P"; ar: string; en: string }
   | { type: "H3"; ar: string; en: string; noNumber?: boolean; sub_ar?: string; sub_en?: string }
   | { type: "LIST"; ar: string[]; en: string[] }
-  | { type: "IMG"; src: string; cap_ar: string; cap_en: string };
+  | { type: "IMG"; src: string; cap_ar: string; cap_en: string; size?: "default" | "compact" };
 
 export type Guide = {
   slug: string;

@@ -123,7 +123,8 @@ function GuidePage() {
               </p>
             );
           }
-          if (b.type === "IMG")
+          if (b.type === "IMG") {
+            const compact = b.size === "compact";
             return (
               <motion.figure
                 key={i}
@@ -131,23 +132,24 @@ function GuidePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="my-6 sm:my-10 -mx-5 sm:mx-0"
+                className={`${compact ? "my-4 sm:my-6" : "my-6 sm:my-10"} -mx-5 sm:mx-0`}
               >
-                <div className="overflow-hidden rounded-none sm:rounded-3xl border-y sm:border border-sand bg-midnight/5 shadow-sm">
+                <div className={`overflow-hidden rounded-none sm:rounded-3xl border-y sm:border border-sand bg-midnight/5 shadow-sm ${compact ? "max-w-2xl mx-auto" : ""}`}>
                   <img
                     src={b.src}
                     alt={b.cap_en || b.cap_ar}
                     loading="lazy"
-                    className="w-full max-h-[46vh] sm:max-h-[62vh] object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03]"
+                    className={`w-full object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03] ${compact ? "max-h-[30vh] sm:max-h-[44vh]" : "max-h-[46vh] sm:max-h-[62vh]"}`}
                   />
                 </div>
                 {(ar ? b.cap_ar : b.cap_en) && (
-                  <figcaption className="mt-3 px-5 sm:px-0 text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60">
+                  <figcaption className={`text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60 ${compact ? "mt-2 px-5 sm:px-0" : "mt-3 px-5 sm:px-0"}`}>
                     {ar ? b.cap_ar : b.cap_en}
                   </figcaption>
                 )}
               </motion.figure>
             );
+          }
           const items: string[] = ar ? b.ar : b.en;
           return (
             <ul key={i} className="my-6 sm:my-8 space-y-2.5 sm:space-y-3">
