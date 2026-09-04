@@ -274,7 +274,7 @@ export const spainGuidesExtra: Guide[] = [
       {
         type: "P",
         ar: "في عام 1977 اوقف المخرج اليخاندرو امينابار حركة المرور اليومية في الشارع والتي تصل الى 50 الف سيارة، وذلك لتصوير احدى المشاهد في فيلم افتح عينيك من بطولة بينلوبي كروز",
-        en: "In 1997, director Alejandro Amenábar stopped the street's daily traffic — which reaches 50,000 cars — to film one of the scenes in the movie Open Your Eyes, starring Penélope Cruz",
+        en: "In 1977, director Alejandro Amenábar stopped the street's daily traffic — which reaches 50,000 cars — to film one of the scenes in the movie Open Your Eyes, starring Penélope Cruz",
       },
       {
         type: "P",
