@@ -6,8 +6,7 @@ const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/
 const EMBLEM_MAP = U("2022/04/img_4494.jpg");
 const LAKE = U("2022/01/img_0450.jpg");
 const ANTHEM_VIDEO = "https://videos.files.wordpress.com/u2ebRce2/my-movie-5-6.mp4";
-const YOUTUBE_URL = "https://www.youtube.com/watch?v=NM2LbFovLkc";
-const YOUTUBE_THUMB = "https://i.ytimg.com/vi/NM2LbFovLkc/hqdefault.jpg";
+
 
 const FINN_BLUE = "#005293";
 
