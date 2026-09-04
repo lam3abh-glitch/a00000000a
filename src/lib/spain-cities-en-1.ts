@@ -30,6 +30,7 @@ export const SPAIN_EN_1: Record<string, { title: string; values: string[] }> = {
       "",
       "Puerta del Sol Square",
       "Puerta del Sol Square is located in the heart of the city and includes many buildings with distinctive architectural designs that make it one of the most beautiful tourist places in Madrid. At the center of the square stand a number of statues symbolizing the Spanish city of Madrid, which attract many tourists to it, in addition to the presence of many international shops.",
+      "",
       "Gran Vía Street",
       "Gran Vía Street, located in the heart of the city, is considered one of the most famous bustling streets in Madrid and was completed in 1910. This street contains a large number of restaurants and many shops, making it one of the most prominent tourist attractions in Madrid.",
       "",
