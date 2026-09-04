@@ -1,6 +1,8 @@
 import type { Guide } from "./france-guides";
+import finlandFlag from "@/assets/finland-flag.png.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
+
 
 // Photo album — images from the Helsinki article (https://100region.com/?p=11732)
 const ALBUM = [
