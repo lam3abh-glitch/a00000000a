@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getCity } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
 import { getCityArticle, type ArticleLine } from "@/lib/city-articles";
-import { attractionLink } from "@/lib/attraction-links";
+import { attractionLink, sectionLink } from "@/lib/attraction-links";
 
 const qo = (country: string, city: string) =>
   queryOptions({ queryKey: ["city", country, city], queryFn: () => getCity({ data: { country, city } }) });
@@ -334,7 +334,37 @@ function City() {
           <section className="py-12 sm:py-16 md:py-24">
             <div className={`mx-auto max-w-4xl px-4 sm:px-6 ${lang === "ar" ? "text-right" : "text-left"}`}>
               <article className="space-y-5">
-                {prelude.map(renderLine)}
+                {(() => {
+                  // Insert a "Read more" button at the end of any prelude section
+                  // (H3 heading) that has a linked deep-dive page.
+                  const out: React.ReactNode[] = [];
+                  let active: { country: string; topic: string } | null = null;
+                  const flush = (key: string) => {
+                    if (!active) return;
+                    const link = active;
+                    active = null;
+                    out.push(
+                      <Link
+                        key={`more-${key}`}
+                        to="/$lang/countries/$country/guides/$topic"
+                        params={{ lang, country: link.country, topic: link.topic }}
+                        className="inline-flex items-center gap-2 border border-gold/60 px-5 py-3 text-sm text-gold hover:bg-gold hover:text-midnight transition min-h-[44px]"
+                      >
+                        {lang === "ar" ? "اقرأ المزيد" : "Read more"}
+                        <span aria-hidden>{lang === "ar" ? "←" : "→"}</span>
+                      </Link>,
+                    );
+                  };
+                  prelude.forEach((line, i) => {
+                    if (line.kind === "H3") flush(String(i));
+                    out.push(renderLine(line, i));
+                    if (line.kind === "H3") {
+                      active = sectionLink(city.slug, line.value.replace(/\\n/g, "").trim()) ?? null;
+                    }
+                  });
+                  flush("end");
+                  return out;
+                })()}
               </article>
             </div>
             {attractions.length > 0 && (

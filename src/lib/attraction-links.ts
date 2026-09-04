@@ -44,3 +44,16 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
 export function attractionLink(citySlug: string, title: string) {
   return ATTRACTION_LINKS[citySlug]?.[title.trim()];
 }
+
+// "Read more" links attached to the end of a prelude section (H3 heading) of a
+// city article, keyed by city slug then by the exact heading text.
+export const SECTION_LINKS: Record<string, Record<string, { country: string; topic: string }>> = {
+  bergen: {
+    "بيرغن باختصار": { country: "norway", topic: "bergen-brief" },
+    "Bergen in brief": { country: "norway", topic: "bergen-brief" },
+  },
+};
+
+export function sectionLink(citySlug: string, title: string) {
+  return SECTION_LINKS[citySlug]?.[title.trim()];
+}
