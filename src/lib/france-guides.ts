@@ -3,6 +3,8 @@ export type GuideBlock =
   | { type: "H3"; ar: string; en: string; noNumber?: boolean; sub_ar?: string; sub_en?: string }
   | { type: "LIST"; ar: string[]; en: string[] }
   | { type: "IMG"; src: string; cap_ar: string; cap_en: string; size?: "default" | "compact" }
+  | { type: "VIDEO"; src: string; cap_ar: string; cap_en: string }
+  | { type: "YT"; id: string; cap_ar: string; cap_en: string }
   | { type: "MORE"; topic: string; label_ar: string; label_en: string };
 
 export type Guide = {
@@ -13,11 +15,14 @@ export type Guide = {
   kicker_en: string;
   image: string;
   blocks: GuideBlock[];
+  // Optional visual treatment for a specific story (e.g. the Siberian train).
+  theme?: "siberia";
   // Deep-dive pages that belong to this guide, rendered as a grid at the end.
   subPages?: { slug: string; label_ar: string; label_en: string }[];
   // Photo album rendered as a grid instead of full-width images.
   gallery?: { src: string; cap_ar: string; cap_en: string }[];
 };
+
 
 
 export const franceGuides: Guide[] = [
