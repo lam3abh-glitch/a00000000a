@@ -197,7 +197,7 @@ function GuidePage() {
                   className={`mb-5 flex items-start gap-3 sm:gap-4 ${isTitle ? "mt-8 sm:mt-10" : "mt-12 sm:mt-16"}`}
                 >
                   {!isTitle && (
-                    <span className="shrink-0 font-display text-3xl sm:text-5xl text-gold/40 leading-none pt-1 select-none">
+                    <span className={`shrink-0 font-display text-3xl sm:text-5xl leading-none pt-1 select-none ${sib ? "text-glacier/50" : "text-gold/40"}`}>
                       {String(n).padStart(2, "0")}
                     </span>
                   )}
@@ -206,8 +206,9 @@ function GuidePage() {
                     {(ar ? b.sub_ar : b.sub_en) && (
                       <div className="mt-1.5 text-[13px] sm:text-[14px] text-charcoal/60">{ar ? b.sub_ar : b.sub_en}</div>
                     )}
-                    <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
+                    <div className={`mt-3 h-px w-full bg-gradient-to-r rtl:bg-gradient-to-l ${sib ? "from-glacier/70 to-transparent" : "from-gold/60 to-transparent"}`} />
                   </div>
+
                 </motion.div>
               );
             }
