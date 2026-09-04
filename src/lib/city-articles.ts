@@ -661,6 +661,7 @@ export const CITY_ARTICLES: Record<string, CityArticle> = {
   ...BELGIUM_CITY_ARTICLES,
   ...FINLAND_CITY_ARTICLES,
   ...BULGARIA_CITY_ARTICLES,
+  ...NORWAY_CITY_ARTICLES,
 };
 
 // English translations of every article line, aligned by index with the Arabic
