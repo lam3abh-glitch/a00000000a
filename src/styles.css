@@ -67,6 +67,9 @@
   --color-terracotta: var(--terracotta);
   --color-earth: var(--earth);
   --color-savanna: var(--savanna);
+  --color-frost: var(--frost);
+  --color-glacier: var(--glacier);
+  --color-steel: var(--steel);
   --color-clay: var(--clay);
   --color-saffron: var(--saffron);
   --color-carmine: var(--carmine);
@@ -86,6 +89,11 @@
   --charcoal: oklch(0.25 0.01 250);
   --gold: oklch(0.72 0.13 75);
   --terracotta: oklch(0.58 0.13 40);
+
+  /* Siberia / winter-rail accents */
+  --frost: oklch(0.96 0.012 240);
+  --glacier: oklch(0.62 0.075 235);
+  --steel: oklch(0.34 0.03 250);
 
   /* Uganda / African earth accents */
   --earth: oklch(0.27 0.05 55);

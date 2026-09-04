@@ -37,6 +37,7 @@ function GuidePage() {
   const ar = lang === "ar";
   const title = ar ? g.title_ar : g.title_en;
   const others = guidesFor(country).filter((o) => o.slug !== g.slug);
+  const sib = g.theme === "siberia";
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -54,32 +55,92 @@ function GuidePage() {
   let paraCount = 0;
 
   return (
-    <div className="bg-cream" dir={ar ? "rtl" : "ltr"}>
+    <div className={`relative ${sib ? "bg-frost" : "bg-cream"}`} dir={ar ? "rtl" : "ltr"}>
+      {sib && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(90deg, var(--steel) 0 2px, transparent 2px 26px)",
+            }}
+          />
+          <svg className="absolute -left-10 top-[30vh] w-40 opacity-[0.07] text-steel" viewBox="0 0 120 40" fill="currentColor">
+            <rect x="0" y="18" width="120" height="3" />
+            <rect x="0" y="30" width="120" height="2" />
+            <rect x="10" y="4" width="34" height="14" rx="3" />
+            <rect x="48" y="7" width="28" height="11" rx="2" />
+            <rect x="80" y="7" width="28" height="11" rx="2" />
+            <circle cx="20" cy="22" r="4" />
+            <circle cx="36" cy="22" r="4" />
+            <circle cx="60" cy="22" r="3" />
+            <circle cx="92" cy="22" r="3" />
+          </svg>
+          {[
+            { top: "18vh", left: "8%", size: 26 },
+            { top: "52vh", left: "82%", size: 34 },
+            { top: "88vh", left: "14%", size: 20 },
+            { top: "128vh", left: "76%", size: 28 },
+            { top: "170vh", left: "10%", size: 24 },
+          ].map((f, i) => (
+            <svg
+              key={i}
+              className="absolute text-glacier opacity-[0.16]"
+              style={{ top: f.top, left: f.left, width: f.size, height: f.size }}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+            >
+              <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" />
+              <path d="M12 6l-2.5 2.5M12 6l2.5 2.5M12 18l-2.5-2.5M12 18l2.5-2.5" />
+            </svg>
+          ))}
+        </div>
+      )}
       <div className="fixed top-0 inset-x-0 z-50 h-[3px] bg-transparent">
-        <div className="h-full bg-gold transition-[width] duration-150 ease-out" style={{ width: `${progress}%` }} />
+        <div
+          className={`h-full transition-[width] duration-150 ease-out ${sib ? "bg-glacier" : "bg-gold"}`}
+          style={{ width: `${progress}%` }}
+        />
       </div>
 
+
       <section className="relative h-[58svh] min-h-[300px] sm:h-[62vh] bg-midnight">
-        <img src={g.image} alt={g.title_en} className="absolute inset-0 h-full w-full object-cover opacity-60" />
+        <img src={g.image} alt={g.title_en} className={`absolute inset-0 h-full w-full object-cover ${sib ? "opacity-55 saturate-[0.75]" : "opacity-60"}`} />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-midnight/20" />
+        {sib && <div className="absolute inset-0 bg-gradient-to-t from-steel/60 via-transparent to-glacier/15" />}
         <div className="relative z-10 mx-auto max-w-4xl h-full flex flex-col justify-end px-5 sm:px-6 pb-10 sm:pb-14 text-cream">
           <div className="text-[11px] sm:text-xs text-cream/60 mb-3 flex flex-wrap items-center gap-x-2">
-            <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className="hover:text-gold">
+            <Link to="/$lang/countries/$slug" params={{ lang, slug: country }} className={sib ? "hover:text-glacier" : "hover:text-gold"}>
               {countryLabel(country, lang)}
             </Link>
             <span>/</span>
-            <span className="text-gold">{ar ? g.kicker_ar : g.kicker_en}</span>
+            <span className={sib ? "text-glacier" : "text-gold"}>{ar ? g.kicker_ar : g.kicker_en}</span>
           </div>
           <h1 className="font-display text-[26px] leading-snug sm:text-4xl md:text-5xl md:leading-tight">{title}</h1>
-          <div className="mt-4 sm:mt-5 h-px w-20 sm:w-24 bg-gold/70" />
+          {sib && (
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] sm:text-xs text-cream/70 font-mono">
+              <span>9248 KM</span>
+              <span className="text-glacier">·</span>
+              <span>{ar ? "7 أيام" : "7 days"}</span>
+              <span className="text-glacier">·</span>
+              <span>{ar ? "70 محطة" : "70 stations"}</span>
+              <span className="text-glacier">·</span>
+              <span>-20°C</span>
+            </div>
+          )}
+          <div className={`mt-4 sm:mt-5 h-px w-20 sm:w-24 ${sib ? "bg-glacier/80" : "bg-gold/70"}`} />
           <div className="mt-5 hidden sm:flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-cream/50">
-            <span className="h-4 w-px bg-gold/60 animate-pulse" />
+            <span className={`h-4 w-px animate-pulse ${sib ? "bg-glacier/70" : "bg-gold/60"}`} />
             {ar ? "تابع القراءة" : "Keep scrolling"}
           </div>
         </div>
       </section>
 
-      <article className={`mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
+      <article className={`relative mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
+
         {g.blocks
           .reduce<(GuideBlock | Extract<GuideBlock, { type: "IMG" }>[])[]>((acc, b) => {
             if (b.type === "IMG" && b.size === "compact") {
@@ -136,7 +197,7 @@ function GuidePage() {
                   className={`mb-5 flex items-start gap-3 sm:gap-4 ${isTitle ? "mt-8 sm:mt-10" : "mt-12 sm:mt-16"}`}
                 >
                   {!isTitle && (
-                    <span className="shrink-0 font-display text-3xl sm:text-5xl text-gold/40 leading-none pt-1 select-none">
+                    <span className={`shrink-0 font-display text-3xl sm:text-5xl leading-none pt-1 select-none ${sib ? "text-glacier/50" : "text-gold/40"}`}>
                       {String(n).padStart(2, "0")}
                     </span>
                   )}
@@ -145,8 +206,9 @@ function GuidePage() {
                     {(ar ? b.sub_ar : b.sub_en) && (
                       <div className="mt-1.5 text-[13px] sm:text-[14px] text-charcoal/60">{ar ? b.sub_ar : b.sub_en}</div>
                     )}
-                    <div className="mt-3 h-px w-full bg-gradient-to-r from-gold/60 to-transparent rtl:bg-gradient-to-l" />
+                    <div className={`mt-3 h-px w-full bg-gradient-to-r rtl:bg-gradient-to-l ${sib ? "from-glacier/70 to-transparent" : "from-gold/60 to-transparent"}`} />
                   </div>
+
                 </motion.div>
               );
             }
@@ -189,7 +251,65 @@ function GuidePage() {
                 </motion.figure>
               );
             }
+            if (b.type === "VIDEO") {
+              return (
+                <motion.figure
+                  key={i}
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5 }}
+                  className="my-6 sm:my-10 -mx-5 sm:mx-0"
+                >
+                  <div className={`overflow-hidden rounded-none sm:rounded-3xl border-y sm:border bg-midnight shadow-sm ${sib ? "border-glacier/40" : "border-sand"}`}>
+                    <video
+                      src={b.src}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full max-h-[60vh] bg-midnight"
+                    />
+                  </div>
+                  {(ar ? b.cap_ar : b.cap_en) && (
+                    <figcaption className="text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60 mt-3 px-5 sm:px-0">
+                      {ar ? b.cap_ar : b.cap_en}
+                    </figcaption>
+                  )}
+                </motion.figure>
+              );
+            }
+            if (b.type === "YT") {
+              return (
+                <motion.figure
+                  key={i}
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5 }}
+                  className="my-6 sm:my-10 -mx-5 sm:mx-0"
+                >
+                  <div className={`overflow-hidden rounded-none sm:rounded-3xl border-y sm:border bg-midnight shadow-sm ${sib ? "border-glacier/40" : "border-sand"}`}>
+                    <div className="relative w-full aspect-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${b.id}`}
+                        title={b.cap_en || b.cap_ar}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 h-full w-full"
+                      />
+                    </div>
+                  </div>
+                  {(ar ? b.cap_ar : b.cap_en) && (
+                    <figcaption className="text-center text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-charcoal/60 mt-3 px-5 sm:px-0">
+                      {ar ? b.cap_ar : b.cap_en}
+                    </figcaption>
+                  )}
+                </motion.figure>
+              );
+            }
             if (b.type === "MORE") {
+
               return (
                 <div key={i} className="my-8 sm:my-10 flex justify-center">
                   <Link
