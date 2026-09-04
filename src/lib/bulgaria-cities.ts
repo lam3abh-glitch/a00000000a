@@ -47,17 +47,17 @@ P|لا تكتمل السياحة في صوفيا ببلغاريا الا من خ
     String.raw`
 P|هي واحدة من أقدم المدن في اوروبا ، حيث يعود تاريخها للقرن السادس قبل الميلاد ، وهي ثاني أكبر مدينة في بلغاريا ، تقع بين السهل الكبير بين جبال رودوب في جنوب البلاد وسلسلة البلقان ، لذلك هى من أهم وأفضل أماكن السياحة في بلغاريا ، التي تستقطب السياحين بإستمرار ، لا سيما عشاق التاريخ ومحبي الآثار
 P|يمكن الإستمتاع بالعديد من الأنشطة السياحية والترفيهية في مدينة بلوفديف ، ومن أبرزها التجول في الشوارع المرصوفة بالحصى ، وإستكشاف الهندسة المعمارية المذهلة للكنائس ، والمتاحف ، والمنازل الأثرية الرائعة لتلك المدينة القديمة ، كذلك القيام بالجولات في الحدائق المورقة ونوافير المياة ، والتمتع بمشاهدة سلسلة جبال رودوب المذهلة وجبال البلقان
-IMG|${U("2022/08/img_1084.jpg")}
 H5|المدينة القديمة
+IMG|${U("2022/08/img_1084.jpg")}
 P|تعتبر مدينة بلوفديف القديمة واحدة من أهم وأشهر المواقع التاريخية والمعمارية في بلوفديف ، وذلك نتيجة لاحتوائها على مجموعة كبيرة من المباني والمعالم الأثرية التي تعود للعصور القديمة والوسطى ، والتي توثق حياة السكان في المدينة على مر العصور ، وتمتد على ثلاثة تلال هي نيبت تيبي ودزامباز تيبي وتقسيم تيبي ، ويمكن زيارة كل من المسرح الروماني القديم وبوابة هيسار كابيا بالاضافة لقلعة نيبت
-IMG|${U("2022/08/img_1085.jpg")}
 H5|المسرح الروماني
+IMG|${U("2022/08/img_1085.jpg")}
 P|هذا المسرح الروماني المذهل في مدينة بلوفديف هو أحد أقدم المسارح الرومانية في العالم ، كما ويعتبر أحد أكبر المسارح التي تم المحافظة على عمارتها عبر القرون ، وبني هذا المسرح في العام 90 من القرن الأول الميلادي ، وكانت تقام فيه أهم الأحداث الترفيهية والسياسية في المدينة ، ويزوره في الوقت الحالي مئات الآلاف من السياح للتمتع بجمال وروعة العمارة الرومانية القديمة التي لا تزال شامخة الى وقتنا الحالي
-IMG|${U("2022/08/img_1087.jpg")}
 H5|متحف بلوفديف للطيران
+IMG|${U("2022/08/img_1087.jpg")}
 P|اذا كنت مهتما بالتاريخ البلغاري وخصوصا تاريخها الشيوعي والحروب الباردة التي خاضتها ، فان هذا المتحف الواقع في مطار المدينة سيعجبك لا محاله ، فهو متحف مفتوح في الهواء الطلق يعرض بعض من الأسلحة والطائرات الحربية التي قاومت وقاتلت فيها بلغاريا خلال الحروب ، وسيأخذك هذا المتحف الى عالم آخر حتما فالمدينة لم تكن هادئة كما الحال الآن ، اذ كانت مقرا للسلاح الجوي البلغاري وخاضت الكثير من الحروب وخسرت الكثير من الأرواح
-IMG|${U("2022/08/img_1088.jpg")}
 H5|دير باتشكوفو
+IMG|${U("2022/08/img_1088.jpg")}
 P|هذا الدير الواقع في أحد أرياف المدينة هو من المعالم الأثرية الأهم في بلغاريا ، وذلك لأن تاريخ انشائه يعود الى العام 1083م ، ويعتبر ثاني أكبر دير في بلغاريا وأقدم دير في البلاد ، وهو دير ارثدوكسي يدرس التعاليم الدينية البلغارية والجورجية والبيزنطية ، ويوجد في داخل كنيسة الدير لوحة مذهلة لمريم العذراء يعود تاريخها الى القرن الرابع عشر
 `
   ),
@@ -104,17 +104,17 @@ export const BULGARIA_CITY_ARTICLES_EN: Record<string, { title: string; values: 
     values: [
       "Plovdiv is one of the oldest cities in Europe, its history going back to the sixth century BC, and it is the second largest city in Bulgaria. It lies on the great plain between the Rhodope mountains in the south of the country and the Balkan range, which makes it one of the most important and finest places of tourism in Bulgaria, constantly attracting visitors — especially lovers of history and antiquities.",
       "There are many tourist and leisure activities to enjoy in Plovdiv, foremost wandering the cobbled streets and exploring the astonishing architecture of the churches, the museums and the wonderful historic houses of this old city, as well as touring the leafy gardens and water fountains and enjoying views of the stunning Rhodope range and the Balkan mountains.",
-      "",
       "The Old Town",
+      "",
       "The old town of Plovdiv is considered one of the most important and famous historical and architectural sites in Plovdiv, thanks to the large collection of buildings and monuments dating from ancient and medieval times, which document the life of the city's inhabitants across the ages. It extends over three hills — Nebet Tepe, Dzhambaz Tepe and Taksim Tepe — and you can visit the ancient Roman theatre and the Hisar Kapia gate as well as the Nebet fortress.",
-      "",
       "The Roman Theatre",
+      "",
       "This astonishing Roman theatre in Plovdiv is one of the oldest Roman theatres in the world, and is also considered one of the largest theatres whose architecture has been preserved through the centuries. It was built in the year 90 of the first century AD and hosted the city's most important entertainment and political events. Today hundreds of thousands of visitors come to enjoy the beauty and splendour of ancient Roman architecture that still stands proud to this day.",
-      "",
       "Plovdiv Aviation Museum",
-      "If you are interested in Bulgarian history, particularly its communist era and the cold wars it went through, this museum at the city's airport will certainly appeal to you. It is an open-air museum displaying some of the weapons and warplanes with which Bulgaria resisted and fought during the wars, and it will surely take you into another world — the city was not as quiet as it is now, since it was the headquarters of the Bulgarian air force, fought many wars and lost many lives.",
       "",
+      "If you are interested in Bulgarian history, particularly its communist era and the cold wars it went through, this museum at the city's airport will certainly appeal to you. It is an open-air museum displaying some of the weapons and warplanes with which Bulgaria resisted and fought during the wars, and it will surely take you into another world — the city was not as quiet as it is now, since it was the headquarters of the Bulgarian air force, fought many wars and lost many lives.",
       "Bachkovo Monastery",
+      "",
       "This monastery, in the countryside outside the city, is one of the most important monuments in Bulgaria, since its founding dates back to the year 1083 AD. It is the second largest monastery in Bulgaria and the oldest in the country — an Orthodox monastery teaching Bulgarian, Georgian and Byzantine religious doctrine — and inside the monastery church there is an astonishing icon of the Virgin Mary dating from the fourteenth century.",
     ],
   },
