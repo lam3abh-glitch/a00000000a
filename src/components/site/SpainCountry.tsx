@@ -127,7 +127,7 @@ export function SpainCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM}
           lang={lang}
-          title={rtl ? "علم مملكة اسبانيا والنشيد الوطني" : "The flag of the Kingdom of Spain and the national anthem"}
+          title={rtl ? "النشيد الوطني لأسبانيا" : "The flag of the Kingdom of Spain and the national anthem"}
         />
       </div>
 
