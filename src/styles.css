@@ -91,6 +91,12 @@
   --earth: oklch(0.27 0.05 55);
   --savanna: oklch(0.66 0.1 105);
   --clay: oklch(0.6 0.14 48);
+  /* Spain / Mediterranean & Andalusian accents */
+  --saffron: oklch(0.78 0.15 78);
+  --carmine: oklch(0.48 0.19 25);
+  --azulejo: oklch(0.52 0.11 235);
+  --olive: oklch(0.55 0.07 120);
+
 
   --background: var(--cream);
   --foreground: var(--midnight);
