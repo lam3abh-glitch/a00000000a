@@ -34,6 +34,11 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "حديقة أوروبا الصغيرة": { country: "belgium", topic: "mini-europe" },
     "Mini-Europe Park": { country: "belgium", topic: "mini-europe" },
   },
+  oslo: {
+    "دار الاوبرا": { country: "norway", topic: "opera-house" },
+    "دار الأوبرا": { country: "norway", topic: "opera-house" },
+    "The Opera House": { country: "norway", topic: "opera-house" },
+  },
 };
 
 export function attractionLink(citySlug: string, title: string) {
