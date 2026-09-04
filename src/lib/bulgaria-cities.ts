@@ -75,7 +75,6 @@ export const BULGARIA_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "Vitosha is a ski resort, and it can be climbed all the way to the Black Peak for a wonderful panoramic view over the city. It is also the oldest nature park in the Balkan peninsula, and the mountain is home to a variety of mammals, birds, insects, reptiles and amphibians, as well as many wonderful plant species. The mountain also holds two rare biosphere reserves.",
       "The National History Museum",
       "",
-      "",
       "The National History Museum is housed in the former residence of the dictator Todor Zhivkov, and covers 8,000 years of Bulgarian history across five specialised halls. It is one of the famous attractions of Sofia and the largest history museum in the Balkans in terms of the size of its collection, holding more than 700 thousand pieces arranged chronologically. The museum is also famous for a collection of ancient coins dating from the Middle Ages, as well as the Panagyurishte treasure, one of the most famous Thracian treasures still in existence.",
       "The Central Mineral Baths",
       "",
