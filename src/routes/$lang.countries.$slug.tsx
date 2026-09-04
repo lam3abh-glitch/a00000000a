@@ -12,6 +12,7 @@ import franceMap from "@/assets/france-map.png.asset.json";
 import { guidesFor } from "@/lib/guides";
 import { UgandaCountry } from "@/components/site/UgandaCountry";
 import { SpainCountry } from "@/components/site/SpainCountry";
+import { BelgiumCountry } from "@/components/site/BelgiumCountry";
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
 
@@ -104,6 +105,8 @@ function Country() {
         <UgandaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "spain" ? (
         <SpainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "belgium" ? (
+        <BelgiumCountry lang={lang} cityLabel={{ ar: "بروكسيل .. مدينة الجمال", en: "Brussels .. the city of beauty" }} />
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
           {/* subtle background dots */}

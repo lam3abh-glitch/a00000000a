@@ -171,6 +171,33 @@ function GuidePage() {
         })}
       </article>
 
+      {g.gallery && g.gallery.length > 0 && (
+        <section className="pb-14 sm:pb-20">
+          <div className="mx-auto max-w-6xl px-5 sm:px-6">
+            <div className="columns-2 sm:columns-3 gap-3 sm:gap-4 [column-fill:_balance]">
+              {g.gallery.map((p, i) => (
+                <motion.figure
+                  key={i}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5 }}
+                  className="mb-3 sm:mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-sand bg-midnight/5 shadow-sm"
+                >
+                  <img
+                    src={p.src}
+                    alt={ar ? p.cap_ar : p.cap_en}
+                    loading="lazy"
+                    className="w-full object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.04]"
+                  />
+                </motion.figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+
       {g.subPages && g.subPages.length > 0 && (
         <section className="pb-12 sm:pb-16">
           <div className="mx-auto max-w-5xl px-5 sm:px-6">

@@ -1,16 +1,19 @@
 import { franceGuides, type Guide } from "./france-guides";
 import { spainGuides, spainGuidesAll } from "./spain-guides";
+import { belgiumGuides } from "./belgium-guides";
 
 export type { Guide };
 
 export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   france: franceGuides,
   spain: spainGuides,
+  belgium: belgiumGuides,
 };
 
 export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   france: { ar: "فرنسا", en: "France" },
   spain: { ar: "إسبانيا", en: "Spain" },
+  belgium: { ar: "بلجيكا", en: "Belgium" },
 };
 
 export function guidesFor(country: string): Guide[] {
@@ -21,6 +24,7 @@ export function guidesFor(country: string): Guide[] {
 const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   france: franceGuides,
   spain: spainGuidesAll,
+  belgium: belgiumGuides,
 };
 
 export function getGuideFor(country: string, slug: string): Guide | undefined {

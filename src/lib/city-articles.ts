@@ -1,6 +1,7 @@
 import { article, type ArticleLineKind, type ArticleLine, type CityArticle } from "./article-format";
 import { SPAIN_CITY_ARTICLES } from "./spain-cities";
 import { SPAIN_CITY_ARTICLES_EN as SPAIN_EN } from "./spain-cities-en";
+import { BELGIUM_CITY_ARTICLES, BELGIUM_CITY_ARTICLES_EN } from "./belgium-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
@@ -654,6 +655,7 @@ P|يمتاز الشلال بإرتفاعه الكبير والذى يصل الى
 export const CITY_ARTICLES: Record<string, CityArticle> = {
   ...FRANCE_AND_UGANDA,
   ...SPAIN_CITY_ARTICLES,
+  ...BELGIUM_CITY_ARTICLES,
 };
 
 // English translations of every article line, aligned by index with the Arabic
@@ -663,6 +665,7 @@ import EN from "./city-articles-en.json";
 const EN_ARTICLES = {
   ...(EN as Record<string, { title: string; values: string[] }>),
   ...(SPAIN_EN as Record<string, { title: string; values: string[] }>),
+  ...BELGIUM_CITY_ARTICLES_EN,
 };
 
 

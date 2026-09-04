@@ -14,6 +14,8 @@ export type Guide = {
   blocks: GuideBlock[];
   // Deep-dive pages that belong to this guide, rendered as a grid at the end.
   subPages?: { slug: string; label_ar: string; label_en: string }[];
+  // Photo album rendered as a grid instead of full-width images.
+  gallery?: { src: string; cap_ar: string; cap_en: string }[];
 };
 
 
