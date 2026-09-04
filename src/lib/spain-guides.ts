@@ -5,6 +5,11 @@ import { spainGuidesFestivals } from "./spain-guides-festivals";
 import { spainGuidesExtra } from "./spain-guides-extra";
 import { spainGuidesBarcelona } from "./spain-guides-barcelona";
 import { spainGuidesShopping } from "./spain-guides-shopping";
+import { spainProgramsA } from "./spain-programs-a";
+import { spainProgramsB } from "./spain-programs-b";
+import { spainProgramsC } from "./spain-programs-c";
+import { spainProgramsD } from "./spain-programs-d";
+import { spainProgramsE } from "./spain-programs-e";
 
 const ALL = [
   ...spainGuidesA,
@@ -13,6 +18,11 @@ const ALL = [
   ...spainGuidesExtra,
   ...spainGuidesBarcelona,
   ...spainGuidesShopping,
+  ...spainProgramsA,
+  ...spainProgramsB,
+  ...spainProgramsC,
+  ...spainProgramsD,
+  ...spainProgramsE,
 ];
 
 // Every guide, including unlisted landmark pages, for URL lookups.

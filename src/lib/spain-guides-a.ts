@@ -36,8 +36,20 @@ export const spainGuidesA: Guide[] = [
     blocks: [
       { type: "P", ar: "لمحبي السفر والسياحة اقدم لكم عدد من البرامج السياحية لعدد من المدن الاسبانية ، متمنيا ان تكون هذه البرامج غنية ومثمرة بما يكفي بوجود الكثير من الأماكن السياحية التي يمكنكم زيارتها خلال الايام المقترحة", en: "For lovers of travel and tourism, I present a number of travel programs for several Spanish cities, hoping that these programs will be rich and fruitful enough, with many tourist places you can visit during the suggested days." },
       { type: "P", ar: "فمملكة اسبانيا تعد من الدول السياحية الهامة على خارطة السياحة العالمية ، وهي التي اكتملت فيها معالم السحر والجمال لتكون في مقدمة الدول السياحية التي يقصدها الكثيرون", en: "The Kingdom of Spain is one of the important tourist countries on the world tourism map, one where the features of charm and beauty have come together to place it at the forefront of the tourist countries that many people head to." },
-      { type: "P", ar: "اضغط على التعليق تحت الصورة للذهاب الى البرنامج السياحي", en: "Click on the caption beneath the picture to go to the travel program" },
+      { type: "P", ar: "اضغط على اسم البرنامج للذهاب الى البرنامج السياحي", en: "Click on the program name to go to that travel program" },
       { type: "IMG", src: "https://i0.wp.com/100region.com/wp-content/uploads/2023/04/img_0962.jpg", cap_ar: "البرامج السياحية", cap_en: "Travel programs" },
+    ],
+    subPages: [
+      { slug: "program-madrid", label_ar: "برنامج سياحي – مدريد والمناطق المجاورة – اسبانيا", label_en: "Itinerary – Madrid and the surrounding areas – Spain" },
+      { slug: "program-barcelona", label_ar: "برنامج سياحي – برشلونة والمناطق المجاورة – اسبانيا", label_en: "Itinerary – Barcelona and the surrounding areas – Spain" },
+      { slug: "program-bilbao", label_ar: "برنامج سياحي – بلباو – اسبانيا", label_en: "Itinerary – Bilbao – Spain" },
+      { slug: "program-zaragoza", label_ar: "برنامج سياحي – سرقسطة – اسبانيا", label_en: "Itinerary – Zaragoza – Spain" },
+      { slug: "program-barcelona-family", label_ar: "برنامج سياحي – برشلونة للعائلات – اسبانيا", label_en: "Itinerary – Barcelona for families – Spain" },
+      { slug: "program-madrid-valencia", label_ar: "برنامج سياحي – مدريد وفالنسيا – اسبانيا", label_en: "Itinerary – Madrid and Valencia – Spain" },
+      { slug: "program-andalusia", label_ar: "برنامج سياحي – مدن الأندلس – اسبانيا", label_en: "Itinerary – the cities of Andalusia – Spain" },
+      { slug: "program-madrid-barcelona", label_ar: "برنامج سياحي – مدريد وبرشلونة والمناطق المجاورة – اسبانيا", label_en: "Itinerary – Madrid, Barcelona and the surrounding areas – Spain" },
+      { slug: "program-tenerife", label_ar: "برنامج سياحي – تينيريفي بجزر الكناري بالسيارة – اسبانيا", label_en: "Itinerary – Tenerife in the Canary Islands by car – Spain" },
+      { slug: "program-ibiza", label_ar: "برنامج سياحي – جزيرة ايبيزا – اسبانيا", label_en: "Itinerary – the island of Ibiza – Spain" },
     ],
   },
   {
