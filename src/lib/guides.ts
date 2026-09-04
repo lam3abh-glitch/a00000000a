@@ -11,8 +11,13 @@ import { russiaGuides } from "./russia-guides";
 import { pragueGuidesA } from "./czech-guides-prague-a";
 import { pragueGuidesB } from "./czech-guides-prague-b";
 import { pragueGuidesC } from "./czech-guides-prague-c";
+import { czechGuidesExtraA } from "./czech-guides-extra-a";
+import { czechGuidesExtraB } from "./czech-guides-extra-b";
+import { czechGuidesExtraC } from "./czech-guides-extra-c";
+import { czechGuidesExtraD } from "./czech-guides-extra-d";
 
 const pragueLandmarkGuides = [...pragueGuidesA, ...pragueGuidesB, ...pragueGuidesC];
+const czechExtraGuides = [...czechGuidesExtraA, ...czechGuidesExtraB, ...czechGuidesExtraC, ...czechGuidesExtraD];
 
 export type { Guide, GuideBlock };
 
@@ -24,6 +29,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   bulgaria: bulgariaGuides,
   norway: [...norwayGuides, norwayDiscoverGuide, ...norwayMoreGuides],
   russia: russiaGuides,
+  "czech-republic": czechExtraGuides,
 };
 
 export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
@@ -50,7 +56,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   bulgaria: bulgariaGuides,
   norway: [...norwayGuides, norwayDiscoverGuide, ...norwayDiscoverSubGuides, ...norwayMoreGuides],
   russia: russiaGuides,
-  "czech-republic": pragueLandmarkGuides,
+  "czech-republic": [...pragueLandmarkGuides, ...czechExtraGuides],
 };
 
 export function getGuideFor(country: string, slug: string): Guide | undefined {
