@@ -6,6 +6,7 @@ import { FINLAND_CITY_ARTICLES, FINLAND_CITY_ARTICLES_EN } from "./finland-citie
 import { BULGARIA_CITY_ARTICLES, BULGARIA_CITY_ARTICLES_EN } from "./bulgaria-cities";
 import { NORWAY_CITY_ARTICLES, NORWAY_CITY_ARTICLES_EN } from "./norway-cities";
 import { RUSSIA_CITY_ARTICLES, RUSSIA_CITY_ARTICLES_EN } from "./russia-cities";
+import { LATVIA_CITY_ARTICLES, LATVIA_CITY_ARTICLES_EN } from "./latvia-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
@@ -687,6 +688,7 @@ const EN_ARTICLES = {
   ...BULGARIA_CITY_ARTICLES_EN,
   ...NORWAY_CITY_ARTICLES_EN,
   ...RUSSIA_CITY_ARTICLES_EN,
+  ...LATVIA_CITY_ARTICLES_EN,
   ...CZ_CITY_ARTICLES_A_EN,
   ...CZ_CITY_ARTICLES_B_EN,
   ...CZ_CITY_ARTICLES_C_EN,

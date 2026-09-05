@@ -18,6 +18,7 @@ import { BulgariaCountry } from "@/components/site/BulgariaCountry";
 import { NorwayCountry } from "@/components/site/NorwayCountry";
 import { RussiaCountry } from "@/components/site/RussiaCountry";
 import { CzechCountry } from "@/components/site/CzechCountry";
+import { LatviaCountry } from "@/components/site/LatviaCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
@@ -121,6 +122,15 @@ function Country() {
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1991", value_en: "1991" },
                 ]
 
+              : c.slug === "latvia"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "ريغا", value_en: "Riga" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو", value_en: "Euro" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "1.9 مليون", value_en: "1.9 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "64,589 كم²", value_en: "64,589 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1918", value_en: "1918" },
+                ]
               : c.slug === "czech-republic"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "براغ", value_en: "Prague" },
@@ -177,6 +187,8 @@ function Country() {
         <NorwayCountry lang={lang} />
       ) : c.slug === "russia" ? (
         <RussiaCountry lang={lang} />
+      ) : c.slug === "latvia" ? (
+        <LatviaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "czech-republic" ? (
         <CzechCountry lang={lang} />
 
