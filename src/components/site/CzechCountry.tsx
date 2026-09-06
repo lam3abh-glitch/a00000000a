@@ -1,6 +1,7 @@
 import type { Lang } from "@/lib/i18n";
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import czechAnthem from "@/assets/czech-anthem.m4a.asset.json";
+import ahmadPrague from "@/assets/ahmad-prague.png.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
