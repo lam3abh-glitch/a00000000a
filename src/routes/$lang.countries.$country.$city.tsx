@@ -84,7 +84,7 @@ function City() {
         continue;
       }
       if (current) {
-        if (line.kind === "IMG") current.images.push(line.value);
+        if (line.kind === "IMG") current.images.push(line.value.split("||")[0]);
         else if (line.kind === "P" || line.kind === "LI") current.paragraphs.push(line.value);
         else {
           // H3/H4 after attractions started — end attraction grouping
