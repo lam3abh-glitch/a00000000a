@@ -220,7 +220,7 @@ export function AlbaniaCountry({ lang, intro }: { lang: Lang; intro: string }) {
           </figure>
         </div>
 
-        <div className="relative bg-white border border-carmine/10 shadow-md flex flex-col">
+        <div className="relative bg-white border border-carmine/10 shadow-md flex flex-col md:self-start">
           <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-carmine font-mono z-10">
             {rtl ? "03 · اللغة" : "03 · Language"}
           </div>
