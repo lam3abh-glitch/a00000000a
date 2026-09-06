@@ -136,7 +136,6 @@ export const ARMENIA_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "The garden is open daily from 07:00 in the morning until 09:00 in the evening.",
       "Yerevan Water World",
       "Yerevan Water World is a water park of clear blue water on a street called Myasnikyan in the Nor Nork district of the Armenian capital. That district is also one of the loveliest tourist areas of Yerevan and includes the botanical garden and the zoo. Water World, built in late 2001, covers an area of 3 hectares.",
-      "Water World",
       "The pools",
       "Water slides",
       "Families at the park",
