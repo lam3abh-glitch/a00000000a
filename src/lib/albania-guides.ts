@@ -31,7 +31,7 @@ export const albaniaGuides: Guide[] = [
         ar: "بيرات وهي واحدة من الوجهات السياحية الهامة في البانيا ، يطلق عليها أسم مدينة الألف نافذة نظرا لمزجها بين الحضارة الألبانية والعثمانية ، وقد تم إدراجها في قائمة اليونسكو للتراث العالمي ، تشتهر بيرات بجمال العمارة العثمانية ، وتقع في وسط البانيا ، تضم المدينة مجموعة مميزة من المعالم السياحية الجميلة التي يمكنك الإستمتاع بزيارتها",
         en: "Berat is one of Albania's important destinations, nicknamed the city of a thousand windows for the way it blends Albanian and Ottoman civilisation, and it is inscribed on the UNESCO World Heritage list. Berat is famous for the beauty of its Ottoman architecture and lies in central Albania, with a distinctive set of beautiful sights you will enjoy visiting.",
       },
-      { type: "IMG", src: U("2022/08/img_1592.jpg"), cap_ar: "بيرات", cap_en: "Berat" },
+      { type: "IMG", src: U("2022/08/img_1591.jpg"), cap_ar: "بيرات · مدينة الألف نافذة", cap_en: "Berat · the city of a thousand windows" },
       {
         type: "P",
         ar: "من أهم معالم المدينة قلعة كالاجا التي يرجع تاريخها إلى القرن 14 ، والتي لا تزال موطنا لمجموعة من الأفراد ، بالإضافة إلى ذلك الكنائس البيزنطية العديدة المنتشرة حول المدينة ، أيضا من معالمها الهامة قصر يعود للقرن الثالث عشر ، ويتمتع بالعديد من المناظر الطبيعية ، وكذلك المتحف الإثنوغرافي الوطني ، والمتحف الأيقوني الوطني ، وجسر جوريكا ، علاوة على نهر Osumi أيضا من أهم عوامل الجذب السياحي في مدينة بيرات",
