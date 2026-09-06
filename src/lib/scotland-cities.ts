@@ -159,6 +159,7 @@ export const SCOTLAND_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "The Tay Bridge",
       "The Tay Bridge",
       "Edinburgh Old Town",
+      "Edinburgh Old Town",
       "One of the most important attractions of all. Edinburgh can sometimes seem like two separate cities, so different are the elegant eighteenth-century Georgian quarters from those of the New Town. The Old Town holds grand terraces reached by narrow winding closes, alongside many monuments, famous squares and a great number of cafés and shops.",
       "The Palace of Holyroodhouse",
       "At the heart of Scottish history and one of the greatest attractions in Edinburgh, this is the official residence of the British monarch, Queen Elizabeth II. Holyroodhouse stands at the lower end of the Royal Mile in Edinburgh, at the opposite end from Edinburgh Castle, and has been the principal residence of Scotland's kings and queens since the sixteenth century, as well as a place for official and ceremonial occasions.",
