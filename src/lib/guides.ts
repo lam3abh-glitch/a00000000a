@@ -34,6 +34,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   russia: russiaGuides,
   latvia: latviaGuides,
   armenia: armeniaGuides,
+  albania: albaniaGuides,
   "czech-republic": czechExtraGuides,
 };
 
@@ -47,6 +48,7 @@ export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   russia: { ar: "روسيا", en: "Russia" },
   latvia: { ar: "لاتفيا", en: "Latvia" },
   armenia: { ar: "أرمينيا", en: "Armenia" },
+  albania: { ar: "ألبانيا", en: "Albania" },
   "czech-republic": { ar: "التشيك", en: "Czechia" },
 };
 
@@ -65,6 +67,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   russia: russiaGuides,
   latvia: latviaGuides,
   armenia: armeniaGuides,
+  albania: albaniaGuides,
   "czech-republic": [...pragueLandmarkGuides, ...czechExtraGuides],
 };
 
