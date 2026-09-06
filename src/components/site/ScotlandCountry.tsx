@@ -5,7 +5,6 @@ const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/upload
 const EMBLEM_MAP = IMG("2022/04/img_4695.jpg");
 const FLAG = IMG("2022/04/img_4696.jpg");
 const POLAROID = IMG("2022/02/fullsizerender-1-1.jpg");
-const SCENE_A = IMG("2022/04/img_4739.png");
 const SCENE_B = IMG("2022/02/a8002b07-2f91-4e08-a74e-98dbab285cc4.jpg");
 const SCENE_C = IMG("2022/02/fullsizerender-1.jpg");
 
