@@ -63,14 +63,22 @@ P|يعتبر شارع زيل من اهم المناطق السياحية في ف
 IMG|${U("2022/08/img_1328.jpg")}
 H5|بالم غاردن فرانكفورت
 P|من اجمل حدائق فرانكفورت واكبرها حيث تحتل مساحة واسعة تحتوي فيها حدائق للأزهار الموسمية والنباتات ذات الطبيعة المدارية كالنباتات الصحراوية بالاضافة الى اصناف النباتات الاخرى
+IMG|${U("2022/08/img_1332.jpg")}
 H5|بيتمان غاردن
 P|من اجمل معالم السياحة في فرانكفورت فتحت للجمهور عام 1952م ، وهي حديقة ذات اسوار تضم العديد من النباتات الجميلة من بينها احواض الزهور الملونة ، كما أنها تحوي حديقة صينية مميزة افتتحت عام 1990م
+IMG|https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Bethmannpark-ffm001.jpg/1280px-Bethmannpark-ffm001.jpg
 H5|غابات فرانكفورت
 P|تعتبر غابات فرانكفورت وجهة مناسبة لعشاق الطبيعة ولأولئك الذين يبحثون عن الهدوء بعيداً عن صخب المدينة ، تعد أكبر غابة موجودة ضمن مدينة في المانيا ، تتضمن مسارات للدراجات والمشي بالاضافة الى مئات المقاعد الخشبية للجلوس والعديد من المقاهي كما انها تحوي العديد من برك المياه الجميلة
+IMG|${U("2022/08/img_1333.jpg")}
+IMG|${U("2022/08/img_1334.jpg")}
 H5|متحف التاريخ الطبيعي
 P|متحف سنكنبيرج ثاني أكبر متحف للتاريخ الطبيعي في ألمانيا ، وهو من اهم الاماكن السياحية في فرانكفورت والتي تحظى بشعبية كبيرة لدى السياح والسكان المحليين
+IMG|https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Senckenberg_Museum_Frankfurt_am_Main.jpg/1280px-Senckenberg_Museum_Frankfurt_am_Main.jpg
 H5|متحف شتيدال
 P|يتميز متحف شتيدال بموقعه على نهر الراين الرائع كما انه يضم عددا كبيرا من التحف الفنية التي يعود تاريخها من القرن السادس عشر الى وقتنا هذا ، يعتبر المتحف من الاماكن السياحية في فرانكفورت
+IMG|${U("2022/08/img_1335.jpg")}
+IMG|${U("2022/08/img_1336.jpg")}
+IMG|${U("2022/08/img_1337.jpg")}
 `
   ),
 };
@@ -132,14 +140,22 @@ export const GERMANY_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Zeil Street",
       "The Palmengarten, Frankfurt",
       "One of the most beautiful and largest gardens in Frankfurt, occupying a wide area with gardens of seasonal flowers and plants of a tropical nature such as desert plants, in addition to many other plant varieties.",
+      "The Palmengarten, Frankfurt",
       "The Bethmann Garden",
       "One of the most beautiful landmarks in Frankfurt, opened to the public in 1952. It is a walled garden holding many beautiful plants including beds of colourful flowers, and it also contains a distinctive Chinese garden opened in 1990.",
+      "The Bethmann Garden",
       "Frankfurt City Forest",
       "The Frankfurt forest is a fitting destination for nature lovers and for those seeking quiet away from the bustle of the city. It is the largest forest within a city in Germany, with cycling and walking trails as well as hundreds of wooden benches, many cafés and a number of lovely ponds.",
+      "Frankfurt City Forest",
+      "Frankfurt City Forest",
       "The Natural History Museum",
       "The Senckenberg Museum is the second largest natural history museum in Germany and one of the most important places to visit in Frankfurt, enjoying great popularity with tourists and locals alike.",
+      "The Senckenberg Natural History Museum",
       "The Städel Museum",
       "The Städel Museum stands out for its wonderful location on the river, and it holds a large number of artworks dating from the sixteenth century to the present day. It is one of Frankfurt's notable attractions.",
+      "The Städel Museum",
+      "The Städel Museum",
+      "The Städel Museum",
     ],
   },
 };
