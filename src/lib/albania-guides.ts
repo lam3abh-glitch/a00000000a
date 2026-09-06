@@ -95,7 +95,7 @@ export const albaniaGuides: Guide[] = [
         ar: "شكودر هي أحدى المدن التاريخية القديمة في البانيا ، وتتمتع بموقع إستراتيجي فوق بحيرة شكودر الساحرة ، وتعد من أهم مناطق الجذب السياحي في ألبانيا ، تعرف المدينة بأسم مدينة الدراجات ، وتضم مجموعة متعددة من المعالم السياحية الجميلة ، والتي يعد أبرزها أطلال قلعة روزافا ، على تل صخري فوق المدينة ويوفر للزائر إطلالات بانورامية للمناظر الطبيعية حول البحيرة",
         en: "Shkodër is one of Albania's ancient historic cities, in a strategic position above the charming Lake Shkodër, and among the country's most important attractions. Known as the city of bicycles, it holds many beautiful sights, the most prominent being the ruins of Rozafa Castle on a rocky hill above the city, offering panoramic views of the scenery around the lake.",
       },
-      { type: "IMG", src: U("2022/08/img_1606.jpg"), cap_ar: "شكودر", cap_en: "Shkodër" },
+      { type: "IMG", src: U("2022/08/img_1606.jpg"), cap_ar: "جبال الألب الألبانية شمال شكودر", cap_en: "The Albanian Alps north of Shkodër" },
       {
         type: "P",
         ar: "وتعتبر شكودر العاصمة الثقافية للبلاد ، وذلك لما تستضيفه من أحداث مثل مهرجان الأطفال ، ويوم البحيرة ، والكرنفال ، ومهرجان شكودر للجاز وغيرها الكثير ، يمكنك ايضا الإستمتاع في شكودر بزيارة متحف ماروبي الوطني للتصوير الفوتوغرافي ، الذي يتيح لزائريه تعلم التاريخ والفن والديموغرافيا ، فضلًا عن تاريخ التصوير الفوتوغرافي العالمي",
