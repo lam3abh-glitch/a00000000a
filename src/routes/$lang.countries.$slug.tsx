@@ -26,6 +26,7 @@ import { AlbaniaCountry } from "@/components/site/AlbaniaCountry";
 import { GermanyCountry } from "@/components/site/GermanyCountry";
 import { CubaCountry } from "@/components/site/CubaCountry";
 import { IrelandCountry } from "@/components/site/IrelandCountry";
+import { ScotlandCountry } from "@/components/site/ScotlandCountry";
 import { BritainCountry } from "@/components/site/BritainCountry";
 
 
@@ -157,6 +158,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1922", value_en: "1922" },
                 ]
+              : c.slug === "scotland"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "أدنبرة", value_en: "Edinburgh" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "الجنيه الإسترليني", value_en: "Pound sterling" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "5.5 مليون", value_en: "5.5 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "77,933 كم²", value_en: "77,933 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "اللغة", label_en: "Language", value_ar: "الإنجليزية والاسكتلندية", value_en: "English & Scots" },
+                ]
               : c.slug === "britain"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "لندن", value_en: "London" },
@@ -271,6 +281,8 @@ function Country() {
         <LatviaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "ireland" ? (
         <IrelandCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "scotland" ? (
+        <ScotlandCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "britain" ? (
         <BritainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "cuba" ? (
