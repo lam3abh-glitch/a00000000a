@@ -14,6 +14,7 @@ import { armeniaGuides } from "./armenia-guides";
 import { albaniaGuides } from "./albania-guides";
 import { irelandGuides } from "./ireland-guides";
 import { britainGuides } from "./britain-guides";
+import { londonLandmarkGuides } from "./britain-guides-london";
 import { germanyGuides, germanyGuidesAll } from "./germany-guides";
 import { pragueGuidesA } from "./czech-guides-prague-a";
 import { pragueGuidesB } from "./czech-guides-prague-b";
@@ -82,7 +83,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   armenia: armeniaGuides,
   albania: albaniaGuides,
   ireland: irelandGuides,
-  britain: britainGuides,
+  britain: [...britainGuides, ...londonLandmarkGuides],
   germany: germanyGuidesAll,
   "czech-republic": [...pragueLandmarkGuides, ...czechExtraGuides],
 };

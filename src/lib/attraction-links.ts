@@ -1,6 +1,22 @@
 // "Read more" deep-dive pages linked from specific attraction sections of a city
 // article. Keyed by city slug, then by the exact attraction heading text.
 export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; topic: string }>> = {
+  london: {
+    "ساعة بيغ بن": { country: "britain", topic: "big-ben" },
+    "Big Ben": { country: "britain", topic: "big-ben" },
+    "برج لندن": { country: "britain", topic: "tower-of-london" },
+    "The Tower of London": { country: "britain", topic: "tower-of-london" },
+    "قصر وستمنستر": { country: "britain", topic: "westminster-palace" },
+    "The Palace of Westminster": { country: "britain", topic: "westminster-palace" },
+    "عين لندن": { country: "britain", topic: "london-eye" },
+    "The London Eye": { country: "britain", topic: "london-eye" },
+    "قصر باكنغهام": { country: "britain", topic: "buckingham-palace" },
+    "Buckingham Palace": { country: "britain", topic: "buckingham-palace" },
+    "شارع أكسفورد": { country: "britain", topic: "oxford-street" },
+    "Oxford Street": { country: "britain", topic: "oxford-street" },
+    "المتحف البريطاني": { country: "britain", topic: "british-museum" },
+    "The British Museum": { country: "britain", topic: "british-museum" },
+  },
   barcelona: {
     "كنيسة ساغرادا فاميليا": { country: "spain", topic: "sagrada-familia" },
     "Sagrada Família Church": { country: "spain", topic: "sagrada-familia" },
