@@ -153,7 +153,7 @@ export function IrelandCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM}
           lang={lang}
-          title={rtl ? "علم جمهورية ايرلندا والنشيد الوطني الايرلندي" : "The flag of Ireland and the Irish national anthem"}
+          title={rtl ? "النشيد الوطني الايرلندي" : "The flag of Ireland and the Irish national anthem"}
         />
       </div>
 
