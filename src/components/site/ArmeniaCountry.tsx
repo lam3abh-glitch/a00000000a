@@ -133,7 +133,7 @@ export function ArmeniaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM_VIDEO}
           lang={lang}
-          title={rtl ? "علم جمهورية ارمينيا والنشيد الوطني الارميني" : "The flag of the Republic of Armenia and the Armenian national anthem"}
+          title={rtl ? "النشيد الوطني الارميني" : "The Armenian national anthem"}
           theme={{
             bg: "bg-white",
             border: "border-carmine/15",
