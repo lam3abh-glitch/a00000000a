@@ -395,6 +395,12 @@ function Country() {
                   "kutna-hora", "prague", "ceske-budejovice", "olomouc", "melnik",
                   "tabor", "trebic", "brno", "karlovy-vary", "plzen",
                 ];
+                if (c.slug === "armenia") {
+                  const ARMENIA_ORDER = ["yerevan", "villages"];
+                  return list.sort(
+                    (x: any, y: any) => ARMENIA_ORDER.indexOf(x.slug) - ARMENIA_ORDER.indexOf(y.slug),
+                  );
+                }
                 if (c.slug === "czech-republic") {
                   return list.sort(
                     (x: any, y: any) => CZECH_ORDER.indexOf(x.slug) - CZECH_ORDER.indexOf(y.slug),
