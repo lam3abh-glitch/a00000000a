@@ -45,7 +45,9 @@ export const albaniaGuides: Guide[] = [
         ar: "كرويه هي مدينة صغيرة تقع على قمة جبل ، وتعد من المدن الشهيرة والتاريخية للغاية في البانيا ، وذلك حيث أنها مسقط رأس البطل القومي لألبانيا جاجيرج سكاندربيج الذي أنقذ البلاد من الغزو العثماني لأكثر من ثلاثة عقود ، تشتهر كرويه بهندستها المعمارية المذهلة ، والبيوت الحجرية القديمة ، وتتيح لك المدينة الإستمتاع بممارسة انشطة ترفيهية متنوعة مثل زيارة البازار ، ومتحف سكاندربج ، والقلعة التي يمكنك من خلالها مشاهدة أفضل الإطلالات على البحر الأدرياتيكي ، كذلك يمكنك الذهاب إلى الحديقة الوطنية ، والإستمتاع ببحيراتها وجبالها ووديانها الرائعة",
         en: "Krujë is a small town on a mountain top and one of Albania's most famous and historic places, being the birthplace of the national hero Gjergj Kastrioti Skanderbeg, who saved the country from Ottoman invasion for more than three decades. Krujë is known for its stunning architecture and old stone houses, and it offers a variety of activities: the bazaar, the Skanderbeg Museum, and the castle with the finest views over the Adriatic Sea. You can also head to the national park and enjoy its lakes, mountains and wonderful valleys.",
       },
-      { type: "IMG", src: U("2022/08/img_1595.jpg"), cap_ar: "كرويه", cap_en: "Krujë" },
+      { type: "IMG", src: U("2022/08/img_1593.jpg"), cap_ar: "قلعة كرويه", cap_en: "Krujë Castle" },
+      { type: "IMG", src: U("2022/08/img_1596.jpg"), cap_ar: "بازار كرويه القديم", cap_en: "The old bazaar of Krujë", size: "compact" },
+      { type: "IMG", src: U("2022/08/img_1595.jpg"), cap_ar: "كرويه على سفح الجبل", cap_en: "Krujë on the mountainside", size: "compact" },
 
       { type: "H3", ar: "جيروكاسترا", en: "Gjirokastër" },
       {
