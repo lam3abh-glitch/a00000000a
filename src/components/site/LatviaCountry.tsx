@@ -105,6 +105,26 @@ export function LatviaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         </div>
       </div>
 
+      {/* ANTHEM */}
+      <div className="relative z-10 mt-16">
+        <AnthemPlayer
+          src={ANTHEM_VIDEO}
+          lang={lang}
+          title={rtl ? "النشيد الوطني اللاتفي" : "The Latvian national anthem"}
+          theme={{
+            bg: "bg-white",
+            border: "border-carmine/15",
+            buttonBg: "bg-carmine",
+            buttonText: "text-cream",
+            buttonHoverBg: "hover:bg-gold",
+            buttonHoverText: "hover:text-midnight",
+            accent: "text-gold",
+            title: "text-midnight",
+            ping: "border-carmine",
+          }}
+        />
+      </div>
+
       {/* ABOUT + weather + language */}
       <div className="relative z-10 mt-20 mx-auto max-w-5xl px-6">
         <div className={`flex items-center gap-3 mb-6 ${rtl ? "flex-row-reverse" : "flex-row"}`}>
