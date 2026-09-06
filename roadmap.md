@@ -13,3 +13,8 @@
 - [x] Oslo, Bergen, Lysefjord city pages (AR + EN)
 - [x] More about Norway: train journeys, Tromsø locals guide, spring reasons
 - [ ] Remaining Norway pages (to be added later)
+
+# Ukraine
+- [x] Ukraine landing page (info at top, Kyiv polaroid, emblem/map, about/weather/language)
+- [x] Kyiv + Odesa city pages (AR + EN)
+- [x] "What Ukraine is famous for" added under the cities
