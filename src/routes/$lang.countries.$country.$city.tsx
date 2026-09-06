@@ -301,7 +301,8 @@ function City() {
     // Single image → alternating side-by-side (odd = image start, even = image end)
     const imageFirst = i % 2 === 1;
     return (
-      <section key={i} className="border-t border-sand pt-8 sm:pt-10">
+      <section key={i} className={i === 0 ? "pt-6" : "border-t border-sand pt-8 sm:pt-10"}>
+
         <div className="grid gap-6 sm:gap-8 md:grid-cols-12 md:items-center">
           <div className={`md:col-span-6 ${imageFirst ? "md:order-1" : "md:order-2"}`}>
             <AttractionImage src={imgs[0]} heightClass="h-56 sm:h-72 md:h-96" />
