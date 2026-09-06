@@ -242,8 +242,8 @@ function City() {
     const n = i + 1;
     const imgs = a.images;
 
-    // First attraction: large feature block
-    if (i === 0) {
+    // First attraction with multiple images: large feature block
+    if (i === 0 && imgs.length > 1) {
       return (
         <section key={i} className="pt-6">
           {imgs[0] && (
