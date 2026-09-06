@@ -42,7 +42,6 @@ IMG|${U("2022/08/img_1287.jpg")}
 P|الحديقة مفتوحة بشكل يومي من الساعة 07:00 صباحا وحتى الساعة 09:00 مساء
 H5|حديقة عالم يريفان المائية
 P|ان حديقة عالم يريفان المائية هي عبارة عن حديقه مائية ذات مياه زرقاء صافية تقع في وسط شارع يسمى مياسنيكال ضمن منطقة نور نورك في مدينة يريفان العاصمة الأرمنية ، اذ تعد تلك المنطقة بالاضافة الى ذلك من أجمل مناطق السياحة في مدينة يريفان وتشمل الحديقه النباتية وحديقة حيوان يريفان ايضا ، يحتل عالم يريفان المائي الذي بني في اواخر عام 2001 ميلادي على مساحة 3 هكتار
-IMG|${U("2022/08/img_1286.jpg")}
 IMG|${U("2022/08/img_1288.jpg")}
 IMG|${U("2022/08/img_1289.jpg")}
 IMG|${U("2022/08/img_1290.jpg")}
@@ -137,7 +136,6 @@ export const ARMENIA_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "The garden is open daily from 07:00 in the morning until 09:00 in the evening.",
       "Yerevan Water World",
       "Yerevan Water World is a water park of clear blue water on a street called Myasnikyan in the Nor Nork district of the Armenian capital. That district is also one of the loveliest tourist areas of Yerevan and includes the botanical garden and the zoo. Water World, built in late 2001, covers an area of 3 hectares.",
-      "Water World",
       "The pools",
       "Water slides",
       "Families at the park",
