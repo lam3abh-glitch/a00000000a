@@ -23,4 +23,4 @@
 - [x] Preserve the existing homepage content and navigation
 - [x] Add a central atlas-style continent explorer
 - [x] Showcase existing country photography in the atlas
-- [ ] Verify desktop and mobile presentation
+- [x] Verify desktop and mobile presentation
