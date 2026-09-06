@@ -12,6 +12,16 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "ملعب الكامب نو": { country: "spain", topic: "camp-nou" },
     "Camp Nou Stadium": { country: "spain", topic: "camp-nou" },
   },
+  munich: {
+    "كنيسة القديس بطرس": { country: "germany", topic: "st-peters-church" },
+    "St Peter's Church": { country: "germany", topic: "st-peters-church" },
+    "المتحف الالماني": { country: "germany", topic: "deutsches-museum" },
+    "The Deutsches Museum": { country: "germany", topic: "deutsches-museum" },
+    "الحديقة الأولمبية": { country: "germany", topic: "olympic-park" },
+    "The Olympic Park": { country: "germany", topic: "olympic-park" },
+    "قصر نيمفينبورج": { country: "germany", topic: "nymphenburg-palace" },
+    "Nymphenburg Palace": { country: "germany", topic: "nymphenburg-palace" },
+  },
   madrid: {
     "ساحة دي سيبيليس": { country: "spain", topic: "cibeles" },
     "Plaza de Cibeles": { country: "spain", topic: "cibeles" },

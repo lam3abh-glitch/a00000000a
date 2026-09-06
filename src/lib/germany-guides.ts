@@ -1,0 +1,96 @@
+import type { Guide } from "./france-guides";
+import { munichLandmarkGuides } from "./germany-guides-munich";
+
+const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
+
+export const germanyGuides: Guide[] = [
+  {
+    slug: "allianz-arena",
+    title_ar: "ملاعب عالمية – ملعب اليانز ارينا ببايرن ميونخ",
+    title_en: "World stadiums — the Allianz Arena of Bayern Munich",
+    kicker_ar: "ملاعب عالمية",
+    kicker_en: "World stadiums",
+    image: U("2022/02/img_6312.jpg"),
+    blocks: [
+      { type: "P", ar: "اليانز ارينا هو ملعب كرة القدم الرئيسي في مدينة ميونخ الألمانية ، وكان يلعب عليه قطبا المدينة بايرن ميونخ وميونخ 1860م ، حتى تم التوصل لاتفاق حل عقد ايجار نادي ميونخ 1860م في عام 2017م ، وأصبح الملعب ملكا لنادي بايرن ميونخ وحده ، وقد تم افتتاحه في 31 مايو 2005م وبكلفة 400 مليون دولار ، وتبلغ طاقته الاستيعابية 67,812 متفرجا (مباريات دولية) و71,437 متفرجاً (مباريات محلية) ، ويعتبر من أجمل ملاعب العالم وأكثرها استيعابا للجماهير ، وقد سمي الملعب بهذا الاسم نسبة الى شركة التأمينات الألمانية اليانز بعد قيامها بتمويل المشروع ، وهو أحد الملاعب التي انشئت خصيصا لكأس العالم 2006 بألمانيا", en: "The Allianz Arena is the main football stadium in Munich. Both of the city's clubs, Bayern Munich and 1860 Munich, played there until an agreement dissolved 1860 Munich's lease in 2017 and the stadium became the property of Bayern Munich alone. It opened on 31 May 2005 at a cost of 400 million dollars, with a capacity of 67,812 spectators for international matches and 71,437 for domestic ones. It is considered one of the most beautiful and largest-capacity stadiums in the world, and it was named after the German insurance company Allianz, which financed the project. It is one of the stadiums built especially for the 2006 World Cup in Germany." },
+      { type: "IMG", src: U("2022/02/img_2880.jpg"), cap_ar: "ملعب اليانز ارينا", cap_en: "The Allianz Arena" },
+      { type: "H3", ar: "معلومات عامة عن ملعب اليانز ارينا", en: "General information about the Allianz Arena" },
+      {
+        type: "LIST",
+        ar: [
+          "الدولة : المانيا",
+          "المدينة : ميونخ",
+          "الوضعية : مازال يلعب عليه",
+          "الرياضات : كرة القدم",
+          "مقاعد كبار الشخصيات : 2000",
+          "مقاعد الاعلاميين : 400",
+          "سعة المقعدين : 174",
+          "مقاعد الجمهور : 75.000",
+          "الأرضية : عشبية",
+          "سنة الانشاء : 2005",
+          "عرض الملعب : 68",
+          "طول الملعب : 105",
+        ],
+        en: [
+          "Country: Germany",
+          "City: Munich",
+          "Status: still in use",
+          "Sports: football",
+          "VIP seats: 2000",
+          "Media seats: 400",
+          "Commentary positions: 174",
+          "Public seats: 75,000",
+          "Surface: grass",
+          "Year built: 2005",
+          "Pitch width: 68",
+          "Pitch length: 105",
+        ],
+      },
+      { type: "IMG", src: U("2022/02/img_6266.jpg"), cap_ar: "الملعب من الداخل", cap_en: "The stadium from inside" },
+      { type: "H3", ar: "موقع ملعب اليانز ارينا", en: "The location of the Allianz Arena" },
+      { type: "P", ar: "يقع ستاد اليانز ارينا على الحافة الشمالية لمدينة ميونيخ الألمانية ، على بعد حوالي 10 كم من وسط المدينة ، ويقع الملعب بالقرب من كل من الطريق السريع A9 و A99 ، وإذا ما كان الشخص قادما من A9 عليه أخذ المخرج 73 مونشن فروتمانينغ سود ، وإذا وصل من الغرب A99 فمع اتخاذ مخرج 12b مونشن فروتمانينغ نورد يمكن الوصول بسهولة الى ساحة اليانز ، وفي حالة استخدام وسائل النقل العام بالمترو يمكن اتخاذ خط 6 في اتجاه غارشينغ هوشبروك والخروج في موقف فروتمانينغ ، كما يمكن اللحاق بالخط 6 مباشرة في وسط مدينة ميونيخ القديم في محطة مارينبلاتز ، وتستغرق الرحلة حوالي 15 دقيقة ، وتتوفر وصلات الترام من كل من محطات القطار الكبيرة في ميونيخ (هاوبتباهنهوف وأوستباهنهوف) الى مارينبلاتز", en: "The Allianz Arena stands on the northern edge of Munich, about 10 km from the city centre, close to both the A9 and A99 motorways. Coming from the A9, take exit 73 München-Fröttmaning-Süd; arriving from the west on the A99, take exit 12b München-Fröttmaning-Nord to reach the arena easily. Using public transport, take metro line 6 towards Garching-Hochbrück and get off at Fröttmaning; line 6 can also be caught directly in Munich's old city centre at Marienplatz, a journey of about 15 minutes. Tram connections run from Munich's main railway stations (Hauptbahnhof and Ostbahnhof) to Marienplatz." },
+      { type: "IMG", src: U("2022/02/img_6040.jpg"), cap_ar: "اليانز ارينا ليلا", cap_en: "The Allianz Arena at night" },
+      { type: "IMG", src: U("2022/02/img_6059.jpg"), cap_ar: "مدرجات الملعب", cap_en: "The stands" },
+    ],
+  },
+  {
+    slug: "album",
+    title_ar: "ألبوم الصور – ألمانيا",
+    title_en: "Photo album — Germany",
+    kicker_ar: "ألبوم الصور",
+    kicker_en: "Photo album",
+    image: U("2022/08/img_1576.jpg"),
+    blocks: [
+      { type: "P", ar: "مجموعة من الصور التي التقطتها خلال رحلتي في ألمانيا بين ميونخ وفرانكفورت", en: "A set of photographs I took during my journey through Germany, between Munich and Frankfurt." },
+    ],
+    gallery: [
+      "2022/08/img_1576.jpg",
+      "2022/08/img_1577.jpg",
+      "2022/08/img_1578.jpg",
+      "2022/08/img_1579.jpg",
+      "2022/08/img_1580.jpg",
+      "2022/08/img_1581.jpg",
+      "2022/09/img_3505.jpg",
+      "2022/09/img_3504.jpg",
+      "2022/09/img_3503.jpg",
+      "2022/09/img_3502.jpg",
+      "2022/09/img_3501.jpg",
+      "2022/09/img_3500.jpg",
+      "2022/09/img_3499.jpg",
+      "2022/09/img_3498.jpg",
+      "2022/09/img_3497.jpg",
+      "2022/09/img_3496.jpg",
+      "2022/09/img_3495.jpg",
+      "2022/09/img_3494.jpg",
+      "2022/09/img_3493.jpg",
+      "2022/09/img_3492.jpg",
+      "2022/09/img_3491.jpg",
+      "2022/09/img_3490.jpg",
+      "2022/09/img_3507.jpg",
+      "2022/09/img_3506.jpg",
+    ].map((n) => ({ src: U(n), cap_ar: "ألمانيا", cap_en: "Germany" })),
+  },
+];
+
+// Includes the unlisted Munich landmark pages for URL lookups.
+export const germanyGuidesAll: Guide[] = [...germanyGuides, ...munichLandmarkGuides];
