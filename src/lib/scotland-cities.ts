@@ -132,12 +132,12 @@ IMG|${U("2022/05/img_6979.jpg")}||بيت بولوك ومنتزه بولوك ال
     String.raw`
 P|أصغر مدن اسكتلندا الساحلية حيث يمكنك قطعها بسهولة على قدميك لكونها الرابعة بين مثيلاتها من حيث المساحة ، وفي الوقت نفسه فهي واحدة من الوجهات المغفل عنها خلال رحلات السياحة في اسكتلندا رغم معالمها السياحية والطبيعية الرائعة والخلابة
 P|فالمدينة التي تمتلك ميناء ذات أهمية تجارية وتاريخية وثقافية عريقة على مر تاريخ دولة اسكتلندا ، تمتلك أيضا إطلالة متميزة على نهر تاي ، ورؤية بانورامية لأهم وأشهر معالمها الأثرية من أعلى جبل بالجاري وبركان دندي الشهير
-IMG|${U("2022/05/img_6980.jpg")}||مدينة دندي||small
 H5|كاتدرائية سانت بول
 P|واحدة من أهم المعالم الأثرية والدينية الموصى بزيارتها أثناء السياحة في اسكتلندا لما تتميز به من نقوش وزخارف تزين نوافذها الكبيرة وأسقفها العالية ، مع الجداريات الدينية والبرج الطويل والطراز المعماري القوطي الذي يجعلها من أهم الاماكن السياحية في اسكتلندا بقلب دندي القديمة
-IMG|${U("2022/05/img_6981.jpg")}||كاتدرائية سانت بول
+IMG|${U("2022/05/img_6980.jpg")}||كاتدرائية سانت بول
 H5|متحف الجوت الاسكتلندي
 P|يعد هذا المتحف من أهم المزارات التي تتصدر قائمة سياحة اسكتلندا لدى الوكالات أو الأشخاص المسافرين الى هناك بهدف السياحة ، حيث يستعرض المتحف تاريخ صناعة الجوت والحبال التي اشتهرت بها دندي واسكتلندا على حد سواء من خلال آلاف الصور والأفلام الوثائقية ومعارض الآلات والمنتجات
+IMG|${U("2022/05/img_6981.jpg")}||متحف الجوت الاسكتلندي
 `
   ),
 };
@@ -266,12 +266,12 @@ export const SCOTLAND_CITY_ARTICLES_EN: Record<string, { title: string; values: 
     values: [
       "The smallest of Scotland's coastal cities, easily crossed on foot since it is the fourth largest by area — and at the same time one of the destinations overlooked on trips around Scotland, despite its wonderful, breathtaking sights and natural scenery.",
       "This city, whose port has held commercial, historical and cultural importance throughout Scotland's history, also enjoys a distinctive outlook over the river Tay and a panoramic view of its most important and famous monuments from the top of Balgay Hill and the famous Dundee Law volcano.",
-      "The city of Dundee",
       "St Paul's Cathedral",
       "One of the most important historical and religious landmarks recommended while touring Scotland, with the carvings and ornament that decorate its large windows and high ceilings, along with religious murals, a tall spire and Gothic architecture that make it one of Scotland's most important sights, in the heart of old Dundee.",
       "St Paul's Cathedral",
       "The Scottish Jute Museum",
       "This museum is one of the leading attractions on the tourism list of Scotland for agencies and for travellers heading there as visitors. It presents the history of the jute and rope industry for which both Dundee and Scotland were famous, through thousands of photographs, documentary films and displays of machinery and products.",
+      "The Scottish Jute Museum",
     ],
   },
 };
