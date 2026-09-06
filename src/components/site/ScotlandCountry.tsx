@@ -138,8 +138,8 @@ export function ScotlandCountry({ lang, intro }: { lang: Lang; intro: string }) 
           <p>{t(TOURISM)}</p>
         </div>
 
-        <div className="mt-10 grid sm:grid-cols-3 gap-4" dir="ltr">
-          {[SCENE_A, SCENE_B, SCENE_C].map((src, i) => (
+        <div className="mt-10 grid sm:grid-cols-2 gap-4" dir="ltr">
+          {[SCENE_B, SCENE_C].map((src, i) => (
             <div key={src} className="bg-white p-2 shadow-lg" style={{ transform: `rotate(${i % 2 ? 1.5 : -1.5}deg)` }}>
               <img src={src} alt={rtl ? "اسكتلندا" : "Scotland"} loading="lazy" className="block w-full h-56 object-cover" />
             </div>
