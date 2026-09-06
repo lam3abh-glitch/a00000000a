@@ -1,6 +1,16 @@
 // "Read more" deep-dive pages linked from specific attraction sections of a city
 // article. Keyed by city slug, then by the exact attraction heading text.
 export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; topic: string }>> = {
+  edinburgh: {
+    "قلعة أدنبره": { country: "scotland", topic: "edinburgh-castle" },
+    "Edinburgh Castle": { country: "scotland", topic: "edinburgh-castle" },
+    "بلدة أدنبرة القديمة": { country: "scotland", topic: "edinburgh-old-town" },
+    "Edinburgh Old Town": { country: "scotland", topic: "edinburgh-old-town" },
+    "قصر هوليرود هاوس": { country: "scotland", topic: "holyroodhouse" },
+    "The Palace of Holyroodhouse": { country: "scotland", topic: "holyroodhouse" },
+    "جسر فيرث أوف فورث بأدنبرة": { country: "scotland", topic: "forth-bridge" },
+    "The Forth Bridge at Edinburgh": { country: "scotland", topic: "forth-bridge" },
+  },
   london: {
     "ساعة بيغ بن": { country: "britain", topic: "big-ben" },
     "Big Ben": { country: "britain", topic: "big-ben" },

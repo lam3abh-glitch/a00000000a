@@ -14,6 +14,10 @@
 - [x] More about Norway: train journeys, Tromsø locals guide, spring reasons
 - [ ] Remaining Norway pages (to be added later)
 
+# Scotland
+- [x] Scotland country page (saltire/tartan/thistle theme), Edinburgh + Glasgow + Dundee, food, famous-for, album
+- [x] Edinburgh deep-dive pages: castle, old town, Holyroodhouse, Forth Bridge (read more links wired)
+
 # Ukraine
 - [x] Ukraine landing page (info at top, Kyiv polaroid, emblem/map, about/weather/language)
 - [x] Kyiv + Odesa city pages (AR + EN)
