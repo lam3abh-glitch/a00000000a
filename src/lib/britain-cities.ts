@@ -1,5 +1,9 @@
 import { article, type CityArticle } from "./article-format";
 
+import bigBenAsset from "@/assets/big-ben.png.asset.json";
+
+const BIG_BEN = bigBenAsset.url;
+
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
 export const BRITAIN_CITY_ARTICLES: Record<string, CityArticle> = {
@@ -12,6 +16,7 @@ P|لندن عاصمة المملكة المتحدة بريطانيا ، وهي �
 IMG|${U("2022/05/img_6897.jpg")}||مدينة لندن||small
 H5|ساعة بيغ بن
 P|إحدى أهم معالم لندن الشهيرة ، والتي تعتبر رمز العاصمة البريطانية ، حيث يتهافت العديد من السياح من كافة أنحاء العالم لرؤيتها ، تبلغ من العمر أكثر من قرن ونصف ، تم إنشاؤها وافتتاحها في عام 1858 م ، تشتهر ساعة بيغ بن بدقتها المتناهية في قياس الوقت ، وتعتبر دقاتها رمزاً للتوقيت العالمي المعروف باسم غرينتش
+IMG|${BIG_BEN}||ساعة بيغ بن
 H5|برج لندن
 P|برج لندن أو قلعة لندن من معالم لندن السياحية الشهيرة ، وهو عبارة عن قلعة تاريخية تقع في وسط مدينة لندن على نهر التايمز من ضفته الشمالية ، حيث كان ويليام الفاتح هو من أمر ببناء البرج الأبيض ليصبح رمزاً لقوة الأسرة الحاكمة في إنجلترا فيما بعد
 IMG|${U("2022/05/img_6894-1.jpg")}||برج لندن
@@ -51,6 +56,7 @@ export const BRITAIN_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "The city of London",
       "Big Ben",
       "One of London's most famous landmarks and a symbol of the British capital, drawing visitors from every corner of the world. It is more than a century and a half old, built and opened in 1858. Big Ben is renowned for the extreme accuracy of its timekeeping, and its chimes are a symbol of the world standard known as Greenwich Mean Time.",
+      "Big Ben",
       "The Tower of London",
       "The Tower of London, or London Castle, is one of the city's famous sights — a historic fortress in the middle of London on the northern bank of the Thames. It was William the Conqueror who ordered the building of the White Tower, which later became a symbol of the power of England's ruling house.",
       "The Tower of London",
