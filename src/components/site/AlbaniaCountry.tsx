@@ -157,7 +157,7 @@ export function AlbaniaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM_VIDEO}
           lang={lang}
-          title={rtl ? "علم جمهورية البانيا والنشيد الوطني الالباني" : "The flag of the Republic of Albania and the Albanian national anthem"}
+          title={rtl ? "النشيد الوطني الالباني" : "The flag of the Republic of Albania and the Albanian national anthem"}
         />
       </div>
 
