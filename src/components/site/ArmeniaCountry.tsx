@@ -109,7 +109,7 @@ export function ArmeniaCountry({ lang, intro }: { lang: Lang; intro: string }) {
                 className="block w-full h-auto object-cover"
               />
               <div className="mt-4 text-center font-display text-midnight text-lg" style={{ fontFamily: "cursive" }}>
-                Հայաստան · أرمينيا
+                Sevan · بحيرة سيفان
               </div>
             </div>
           </div>
