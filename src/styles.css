@@ -75,7 +75,6 @@
   --color-carmine: var(--carmine);
   --color-azulejo: var(--azulejo);
   --color-olive: var(--olive);
-  --color-atlas-teal: var(--atlas-teal);
 
   --font-display: "Amiri", "Cormorant Garamond", serif;
   --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
@@ -105,8 +104,6 @@
   --carmine: oklch(0.48 0.19 25);
   --azulejo: oklch(0.52 0.11 235);
   --olive: oklch(0.55 0.07 120);
-  /* Homepage atlas / Bahrain coast accent */
-  --atlas-teal: oklch(0.55 0.09 195);
 
 
   --background: var(--cream);
@@ -213,28 +210,3 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .fade-up { animation: fade-up 0.8s ease-out both; }
-
-/* Homepage atlas: a quiet chart-paper field behind the existing travel content. */
-.atlas-grid {
-  background-image:
-    linear-gradient(color-mix(in oklab, var(--atlas-teal) 8%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in oklab, var(--atlas-teal) 8%, transparent) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
-}
-
-.atlas-continent img {
-  filter: sepia(0.2) saturate(0.65) hue-rotate(128deg) contrast(0.85);
-}
-
-@keyframes atlas-route {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0 0 0 0); }
-}
-
-.atlas-route { animation: atlas-route 2.4s ease-out both; }
-
-@media (prefers-reduced-motion: reduce) {
-  .atlas-route { animation: none; }
-  .fade-up { animation: none; }
-}

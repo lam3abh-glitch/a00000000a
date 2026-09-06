@@ -1,7 +1,6 @@
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { GlobeHero } from "@/components/site/GlobeHero";
-import { HomeAtlas } from "@/components/site/HomeAtlas";
 import { getHomeData } from "@/lib/content.functions";
 import { type Lang, t } from "@/lib/i18n";
 import shapeAsia from "@/assets/continent-asia.png";
@@ -16,21 +15,6 @@ const homeQO = queryOptions({ queryKey: ["home"], queryFn: () => getHomeData() }
 
 export const Route = createFileRoute("/$lang/")({
   loader: ({ context }) => context.queryClient.ensureQueryData(homeQO),
-  head: ({ params }) => {
-    const isAr = params.lang === "ar";
-    const title = isAr ? "سفير المحبة | رحلات أحمد حول العالم" : "Ambassador of Love | Ahmad's World Travels";
-    const description = isAr
-      ? "اكتشف رحلات أحمد من البحرين إلى أكثر من 122 دولة، مع أدلة المدن وقصص السفر والثقافات."
-      : "Explore Ahmad's journeys from Bahrain to more than 122 countries, with city guides, travel stories and cultures.";
-    return { meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ] };
-  },
   component: Home,
 });
 
@@ -89,8 +73,6 @@ function Home() {
           <div className="hidden md:block md:col-span-5" />
         </div>
       </section>
-
-      <HomeAtlas lang={lang} />
 
       {/* AHMAD INTRO */}
       <section className="bg-cream py-28">

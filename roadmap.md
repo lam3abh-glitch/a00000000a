@@ -18,9 +18,3 @@
 - [x] Ukraine landing page (info at top, Kyiv polaroid, emblem/map, about/weather/language)
 - [x] Kyiv + Odesa city pages (AR + EN)
 - [x] "What Ukraine is famous for" added under the cities
-
-# Homepage atlas refresh
-- [x] Preserve the existing homepage content and navigation
-- [x] Add a central atlas-style continent explorer
-- [x] Showcase existing country photography in the atlas
-- [x] Verify desktop and mobile presentation
