@@ -37,7 +37,7 @@ export const albaniaGuides: Guide[] = [
         ar: "من أهم معالم المدينة قلعة كالاجا التي يرجع تاريخها إلى القرن 14 ، والتي لا تزال موطنا لمجموعة من الأفراد ، بالإضافة إلى ذلك الكنائس البيزنطية العديدة المنتشرة حول المدينة ، أيضا من معالمها الهامة قصر يعود للقرن الثالث عشر ، ويتمتع بالعديد من المناظر الطبيعية ، وكذلك المتحف الإثنوغرافي الوطني ، والمتحف الأيقوني الوطني ، وجسر جوريكا ، علاوة على نهر Osumi أيضا من أهم عوامل الجذب السياحي في مدينة بيرات",
         en: "Among the city's most important landmarks is Kalaja Castle, dating back to the 14th century and still home to a number of families, along with the many Byzantine churches scattered around the city. Other notable sights include a 13th-century palace with wide natural views, the National Ethnographic Museum, the National Iconographic Museum, the Gorica bridge, and the Osumi river — one of Berat's biggest attractions.",
       },
-      { type: "IMG", src: U("2022/08/img_1593.jpg"), cap_ar: "قلعة بيرات", cap_en: "Berat Castle" },
+      { type: "IMG", src: U("2022/08/img_1592.jpg"), cap_ar: "جسر جوريكا في بيرات", cap_en: "The Gorica bridge in Berat" },
 
       { type: "H3", ar: "كرويه", en: "Krujë" },
       {
