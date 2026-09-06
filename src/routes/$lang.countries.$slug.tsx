@@ -226,7 +226,7 @@ function Country() {
       ) : c.slug === "armenia" ? (
         <ArmeniaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "czech-republic" ? (
-        <CzechCountry lang={lang} />
+        <CzechCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
 
       ) : c.slug === "france" ? (
         <section className="relative py-24 overflow-hidden bg-cream">
