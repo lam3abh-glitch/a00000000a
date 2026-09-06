@@ -84,7 +84,7 @@ export const albaniaGuides: Guide[] = [
       },
       {
         type: "IMG",
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sarand%C3%AB%2C_Albania.jpg/1280px-Sarand%C3%AB%2C_Albania.jpg",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sarande-Albania.jpg/1280px-Sarande-Albania.jpg",
         cap_ar: "خليج سارنده على البحر الآيوني",
         cap_en: "The bay of Sarandë on the Ionian Sea",
       },
