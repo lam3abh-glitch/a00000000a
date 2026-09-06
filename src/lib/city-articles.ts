@@ -10,6 +10,7 @@ import { LATVIA_CITY_ARTICLES, LATVIA_CITY_ARTICLES_EN } from "./latvia-cities";
 import { ARMENIA_CITY_ARTICLES, ARMENIA_CITY_ARTICLES_EN } from "./armenia-cities";
 import { GERMANY_CITY_ARTICLES, GERMANY_CITY_ARTICLES_EN } from "./germany-cities";
 import { UKRAINE_CITY_ARTICLES, UKRAINE_CITY_ARTICLES_EN } from "./ukraine-cities";
+import { BRAZIL_CITY_ARTICLES, BRAZIL_CITY_ARTICLES_EN } from "./brazil-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
@@ -670,6 +671,7 @@ export const CITY_ARTICLES: Record<string, CityArticle> = {
   ...RUSSIA_CITY_ARTICLES,
   ...LATVIA_CITY_ARTICLES,
   ...UKRAINE_CITY_ARTICLES,
+  ...BRAZIL_CITY_ARTICLES,
   ...ARMENIA_CITY_ARTICLES,
   ...GERMANY_CITY_ARTICLES,
   ...CZ_CITY_ARTICLES_A,
@@ -696,6 +698,7 @@ const EN_ARTICLES = {
   ...RUSSIA_CITY_ARTICLES_EN,
   ...LATVIA_CITY_ARTICLES_EN,
   ...UKRAINE_CITY_ARTICLES_EN,
+  ...BRAZIL_CITY_ARTICLES_EN,
   ...ARMENIA_CITY_ARTICLES_EN,
   ...GERMANY_CITY_ARTICLES_EN,
   ...CZ_CITY_ARTICLES_A_EN,

@@ -20,6 +20,7 @@ import { RussiaCountry } from "@/components/site/RussiaCountry";
 import { CzechCountry } from "@/components/site/CzechCountry";
 import { LatviaCountry } from "@/components/site/LatviaCountry";
 import { UkraineCountry } from "@/components/site/UkraineCountry";
+import { BrazilCountry } from "@/components/site/BrazilCountry";
 import { ArmeniaCountry } from "@/components/site/ArmeniaCountry";
 import { AlbaniaCountry } from "@/components/site/AlbaniaCountry";
 import { GermanyCountry } from "@/components/site/GermanyCountry";
@@ -135,6 +136,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1918", value_en: "1918" },
                 ]
+              : c.slug === "brazil"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "برازيليا", value_en: "Brasília" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "الريال البرازيلي", value_en: "Brazilian real" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "214 مليون", value_en: "214 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "8,515,767 كم²", value_en: "8,515,767 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1822", value_en: "1822" },
+                ]
               : c.slug === "ukraine"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "كييف", value_en: "Kyiv" },
@@ -229,6 +239,8 @@ function Country() {
         <RussiaCountry lang={lang} />
       ) : c.slug === "latvia" ? (
         <LatviaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "brazil" ? (
+        <BrazilCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "ukraine" ? (
         <UkraineCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "albania" ? (
