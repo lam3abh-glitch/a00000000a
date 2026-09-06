@@ -102,25 +102,25 @@ P|اكبر مدن اسكتلندا وأقدمها بتاريخها الذي يع
 P|سياحيا تتميز غلاسكو بطراز شوارعها ومبانيها الأثرية الذي يعود للعصور الوسطى ، استضافتها للعديد من الفعاليات والاحتفالات الفنية والرياضية ، مع الآلاف من مراكز التسوق الترفيهية الرائعة ، مما يجعلها وجهة مميزة أثناء السياحة في اسكتلندا
 P|تقع مدينة غلاسكو على نهر كلايد ، وقد تحولت من مدينة صناعية الى أحد المراكز الثقافية للبلاد ، حيث تحتوي على مجموعة من المتاحف والمعارض الفنية وأماكن للحفلات الموسيقية والمهرجانات ، وتحتوي على عدد كبير من المتنزهات والمساحات المفتوحة
 P|تعرف مدينة غلاسكو بالعاصمة الموسيقية لدولة اسكتلندا ، وتحتوي على المسرح الملكي وهو موطن الأوبرا الاسكتلندية ، وقاعة الحفلات الموسيقية وهي موطن الأوركسترا الملكية الاسكتلندية ، وهي واحدة من المدن الرياضية المزدحمة فهي موطن ناديين رئيسيين لكرة القدم في البلاد
-IMG|${U("2022/05/img_6972.jpg")}||مدينة غلاسكو||small
 H5|مركز غلاسكو للعلوم
 P|ان كنت من محبي علوم الفلك والفضاء فإليك فرصة لا تعوض للاستمتاع بسحر النجوم واستكشاف الكويكبات اللامعة والمتلألئة في السماء من خلال تليسكوب مرصد جلاسكو للعلوم في مدينة غلاسكو ، كما يمكنك تكرار التجربة ذاتها من خلال زيارة مرصد ومعارض ميلز الفلكية في مدينة دندي
+IMG|${U("2022/05/img_6972.jpg")}||مركز غلاسكو للعلوم
 IMG|${U("2022/05/img_6973.jpg")}||مركز غلاسكو للعلوم
-IMG|${U("2022/05/img_6974.jpg")}||مركز غلاسكو للعلوم
 H5|تايتان كلايد بانك
 P|ان كنت من هواة التسلق أو التصوير ، فتوفر لك تايتان كلايد بانك الرافعة الأقدم من نوعها في اسكتلندا بتاريخها العائد لقرن مضى هذه المغامرة المثيرة على ارتفاع 150 قدم ، حيث يمكنك الاستمتاع بنظرة بانوراميه على المدينة والتقاط أروع الصور لأهم معالمها
-IMG|${U("2022/05/img_6975.jpg")}||تايتان كلايد بانك
+IMG|${U("2022/05/img_6974.jpg")}||تايتان كلايد بانك
 H5|ساحة جورج وحي التاجر
 P|تقع في قلب مركز مدينة فيكتوريا التاريخي في مدينة غلاسكو ، حيث يقف جورج سكوير مزين بالأزهار مع 12 تماثيل لبعض المشاهير المرتبطين بالمدينة مثل روبي بيرنز ، وولتر سكوت ، والملكة فيكتوريا ، وتقع في الجانب الشرقي من الساحة قاعة المدينة وبرجها الذي يبلغ ارتفاعه 230 قدم والذي اكتمل عام 1890 م ، وبيت التجار هو المقر الرئيسي لأقدم الغرف التجارة التي تأسست عام 1605 م في جنوب ميدان جورج ، بالإضافة الى المركز الإيطالي ومقاهي فريدة وبعض المطاعم والبوتيكات الأنيقة
-IMG|${U("2022/05/img_6976.jpg")}||ساحة جورج وحي التاجر
+IMG|${U("2022/05/img_6975.jpg")}||ساحة جورج وحي التاجر
 H5|متحف ومعرض فنون كيلفينغروف
 P|تم افتتاح المتحف في عام 1901 م ، ويحتوي على مجموعة رائعة من اللوحات البريطانية والكثير من الجواهر ويضم مجموعة متنوعة من اللوحات الفنية مثل صورة فان جوخ لموزع الفن الكسندر ألكسندر ريد وسلفادور دالي مسيح القديس يوحنا الصليب ، وأعمال فخارية ، وأعمال معدنية ، ووحدات أثاث ، وبعض الأعمال الفنية الأخرى ، ويحتوي على الاكتشافات الاسبانية الاسكتلندية مثل أدوات العصر البرونزي والأسلحة والدروع ، مثل الخوذات ، والنشاب ، والسيوف التي تعود إلى القرنين الخامس عشر والسادس عشر ، بالإضافة الى المفروشات الفلمنكية ، والمجوهرات والفضيات ، والأواني الزجاجية ، والفخار
-IMG|${U("2022/05/img_6977.jpg")}||متحف ومعرض فنون كيلفينغروف
+IMG|${U("2022/05/img_6976.jpg")}||متحف ومعرض فنون كيلفينغروف
 H5|جامعة غلاسكو
 P|يعود تاريخ جامعة غلاسكو الى عام 1451 م وهي ثاني أقدم مدرسة للتعليم العالي في اسكتلندا ، وتحتوي الجامعة على العديد من المدرسين اللامعين مثل جيمس وات وآدم سميث وجوزيف ليستر ، وتضم الجامعة معرض دائم في مركز الزوار ، وهناك مجموعة من القطع التشريحية والقطع النقدية والعملية ، ويضم متحف هنتيريان الذي يحتوي على مجموعات من أقسام الإثنوغرافيا وعلم الحيوان والجيولوجيا وعلم الآثار
-IMG|${U("2022/05/img_6978.jpg")}||جامعة غلاسكو
+IMG|${U("2022/05/img_6977.jpg")}||جامعة غلاسكو
 H5|بيت بولوك ومنتزه بولوك الريفي
 P|يقع على مقربة من أربعة أميال جنوب غرب وسط مدينة غلاسكو ، وتغطي أراضي بيت بولوك مساحة 355 فدانا ، وتم بناء هذا المنزل في عام 1752 م ، وتحتوي المنزل على مجموعة من اللوحات الإغريقية ، والمنزل مفتوح للزوار ، وتشمل الأراضي المحيطة بالبيت منتزه بولوك الريفي ، ويمكن الاستمتاع بالحدائق والمشي في بعض المسارات التي تؤدي الى الغابات الى جانب النهر
+IMG|${U("2022/05/img_6978.jpg")}||بيت بولوك ومنتزه بولوك الريفي
 IMG|${U("2022/05/img_6979.jpg")}||بيت بولوك ومنتزه بولوك الريفي
 `
   ),
@@ -238,7 +238,6 @@ export const SCOTLAND_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "For visitors, Glasgow stands out for the style of its streets and its historic buildings dating back to the Middle Ages, for hosting many artistic and sporting events and celebrations, and for thousands of wonderful shopping and leisure centres — all of which makes it a special destination while touring Scotland.",
       "The city of Glasgow lies on the river Clyde and has been transformed from an industrial city into one of the country's cultural centres, with a range of museums and art galleries and venues for concerts and festivals, as well as a great many parks and open spaces.",
       "Glasgow is known as Scotland's music capital, and it holds the Theatre Royal, home of Scottish Opera, and the concert hall that is home of the Royal Scottish National Orchestra. It is also one of the busiest sporting cities, home to the country's two main football clubs.",
-      "The city of Glasgow",
       "Glasgow Science Centre",
       "If you love astronomy and space, here is an opportunity not to be missed to enjoy the magic of the stars and explore the bright, glittering asteroids in the sky through the telescope of the Glasgow science observatory. You can repeat the same experience by visiting the Mills Observatory and its astronomy displays in the city of Dundee.",
       "Glasgow Science Centre",
@@ -257,6 +256,7 @@ export const SCOTLAND_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "The University of Glasgow",
       "Pollok House and Pollok Country Park",
       "Standing about four miles south-west of central Glasgow, the Pollok House estate covers 355 acres. The house was built in 1752 and contains a collection of Spanish paintings; it is open to visitors. The surrounding grounds include Pollok Country Park, where you can enjoy the gardens and walk some of the trails leading to the woods beside the river.",
+      "Pollok House and Pollok Country Park",
       "Pollok House and Pollok Country Park",
     ],
   },
