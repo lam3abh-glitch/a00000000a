@@ -5,7 +5,6 @@ const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/upload
 const EMBLEM_MAP = IMG("2022/04/img_4695.jpg");
 const FLAG = IMG("2022/04/img_4696.jpg");
 const POLAROID = IMG("2022/02/fullsizerender-1-1.jpg");
-const SCENE_A = IMG("2022/04/img_4739.png");
 const SCENE_B = IMG("2022/02/a8002b07-2f91-4e08-a74e-98dbab285cc4.jpg");
 const SCENE_C = IMG("2022/02/fullsizerender-1.jpg");
 
@@ -139,8 +138,8 @@ export function ScotlandCountry({ lang, intro }: { lang: Lang; intro: string }) 
           <p>{t(TOURISM)}</p>
         </div>
 
-        <div className="mt-10 grid sm:grid-cols-3 gap-4" dir="ltr">
-          {[SCENE_A, SCENE_B, SCENE_C].map((src, i) => (
+        <div className="mt-10 grid sm:grid-cols-2 gap-4" dir="ltr">
+          {[SCENE_B, SCENE_C].map((src, i) => (
             <div key={src} className="bg-white p-2 shadow-lg" style={{ transform: `rotate(${i % 2 ? 1.5 : -1.5}deg)` }}>
               <img src={src} alt={rtl ? "اسكتلندا" : "Scotland"} loading="lazy" className="block w-full h-56 object-cover" />
             </div>
