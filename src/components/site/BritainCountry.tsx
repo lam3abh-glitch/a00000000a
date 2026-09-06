@@ -192,12 +192,7 @@ export function BritainCountry({ lang, intro }: { lang: Lang; intro: string }) {
             </div>
             <div className="relative mt-auto px-7 pb-7">
               <div className="overflow-hidden border border-cream/20 bg-white">
-                <img
-                  src={FLAG}
-                  alt={rtl ? "علم مملكة بريطانيا" : "The flag of Great Britain"}
-                  loading="lazy"
-                  className="w-full h-auto object-contain"
-                />
+                <UnionJack className="w-full h-auto" />
               </div>
             </div>
           </div>
