@@ -5,7 +5,6 @@ const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/upload
 
 const POLAROID = IMG("2022/01/img_0669.jpg");
 const EMBLEM_MAP = IMG("2022/04/img_4206.jpg");
-const FLAG = IMG("2022/04/img_4738.png");
 const LONDON = IMG("2022/05/img_6897.jpg");
 const ANTHEM = "https://videos.files.wordpress.com/DMbFVXK7/my-movie-5-12.mp4";
 
@@ -149,6 +148,17 @@ export function BritainCountry({ lang, intro }: { lang: Lang; intro: string }) {
           src={ANTHEM}
           lang={lang}
           title={rtl ? "النشيد الوطني البريطاني" : "The British national anthem"}
+          theme={{
+            bg: "bg-white",
+            border: "border-[#012169]/20",
+            buttonBg: "bg-[#012169]",
+            buttonText: "text-white",
+            buttonHoverBg: "hover:bg-[#C8102E]",
+            buttonHoverText: "hover:text-white",
+            accent: "text-[#C8102E]",
+            title: "text-[#012169]",
+            ping: "border-[#C8102E]",
+          }}
         />
       </div>
 
