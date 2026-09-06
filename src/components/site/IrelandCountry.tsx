@@ -5,8 +5,7 @@ const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/upload
 
 const POLAROID = IMG("2022/02/img_4375.jpg");
 const EMBLEM_MAP = IMG("2022/04/img_4287.jpg");
-const FLAG = IMG("2022/04/img_4649.png");
-const LANDSCAPE = IMG("2022/03/img_3602.jpg");
+const LANDSCAPE = IMG("2022/08/img_1224.jpg");
 const ANTHEM = "https://videos.files.wordpress.com/wdauW5wR/my-movie-5-6-1.mp4";
 
 const GREEN = "#169B62";
@@ -144,17 +143,6 @@ export function IrelandCountry({ lang, intro }: { lang: Lang; intro: string }) {
                 loading="lazy"
                 className="h-48 md:h-60 w-full object-cover"
               />
-            </figure>
-            <figure className="overflow-hidden rounded-2xl bg-white shadow-md p-4" style={{ border: `1px solid ${ORANGE}33` }}>
-              <img
-                src={FLAG}
-                alt={rtl ? "علم جمهورية ايرلندا" : "The flag of the Republic of Ireland"}
-                loading="lazy"
-                className="h-28 w-full object-contain"
-              />
-              <figcaption className={`mt-3 font-body text-xs text-charcoal/70 ${align}`}>
-                {rtl ? "علم جمهورية ايرلندا" : "The flag of the Republic of Ireland"}
-              </figcaption>
             </figure>
           </div>
         </div>
