@@ -155,7 +155,7 @@ export function UkraineCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM_VIDEO}
           lang={lang}
-          title={rtl ? "علم جمهورية اوكرانيا والنشيد الوطني الاوكراني" : "The flag of Ukraine and the Ukrainian national anthem"}
+          title={rtl ? "النشيد الوطني الاوكراني" : "The flag of Ukraine and the Ukrainian national anthem"}
         />
       </div>
 
