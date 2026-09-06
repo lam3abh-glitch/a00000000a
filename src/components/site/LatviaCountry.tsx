@@ -1,6 +1,9 @@
 import type { Lang } from "@/lib/i18n";
+import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import ahmadRiga from "@/assets/ahmad-riga.jpg.asset.json";
 import latviaEmblemMap from "@/assets/latvia-emblem-map.jpg.asset.json";
+
+const ANTHEM_VIDEO = "https://videos.files.wordpress.com/RIlDGJYz/my-movie-5-2-7.mp4";
 
 const ABOUT = {
   ar: "تقع لاتفيا في شمال شرق أوروبا على ساحل بحر البلطيق . يحدها من جهة الشمال جمهورية إستونيا ، ومن جهة الجنوب جمهورية ليتوانيا ، وجمهورية روسيا من جهة الشرق ، وجمهورية بيلاروسيا من جهة الجنوب الشرقي ، وبحر البلطيق من جهة الغرب",
@@ -100,6 +103,26 @@ export function LatviaCountry({ lang, intro }: { lang: Lang; intro: string }) {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* ANTHEM */}
+      <div className="relative z-10 mt-16">
+        <AnthemPlayer
+          src={ANTHEM_VIDEO}
+          lang={lang}
+          title={rtl ? "النشيد الوطني اللاتفي" : "The Latvian national anthem"}
+          theme={{
+            bg: "bg-white",
+            border: "border-carmine/15",
+            buttonBg: "bg-carmine",
+            buttonText: "text-cream",
+            buttonHoverBg: "hover:bg-gold",
+            buttonHoverText: "hover:text-midnight",
+            accent: "text-gold",
+            title: "text-midnight",
+            ping: "border-carmine",
+          }}
+        />
       </div>
 
       {/* ABOUT + weather + language */}
