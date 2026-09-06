@@ -3,7 +3,7 @@ import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import ahmedCuba from "@/assets/ahmed-cuba.png.asset.json";
 
 const ANTHEM_VIDEO = "https://videos.files.wordpress.com/SuCuoxWM/my-movie-5-1-2.mp4";
-const EMBLEM_MAP = "https://i0.wp.com/100region.com/wp-content/uploads/2022/04/img_4611.png?ssl=1";
+const EMBLEM_MAP = "https://i0.wp.com/100region.com/wp-content/uploads/2022/04/img_4250.jpg?ssl=1";
 const SCENE_A = "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/img_3062.jpg?ssl=1";
 const SCENE_B =
   "https://i0.wp.com/100region.com/wp-content/uploads/2022/02/596579c3-75da-40d5-893b-42f15caed96c.jpg?ssl=1";
