@@ -148,6 +148,15 @@ export function UkraineCountry({ lang, intro }: { lang: Lang; intro: string }) {
         </div>
       </div>
 
+      {/* ANTHEM */}
+      <div className="relative z-10 mt-16">
+        <AnthemPlayer
+          src={ANTHEM_VIDEO}
+          lang={lang}
+          title={rtl ? "علم جمهورية اوكرانيا والنشيد الوطني الاوكراني" : "The flag of Ukraine and the Ukrainian national anthem"}
+        />
+      </div>
+
       {/* FACT — emblem & map */}
       <div className="relative z-10 mt-16 mx-auto max-w-3xl px-6">
         <div className="relative bg-white overflow-hidden shadow-md" style={{ border: "1px solid rgba(0,87,183,0.14)" }}>
