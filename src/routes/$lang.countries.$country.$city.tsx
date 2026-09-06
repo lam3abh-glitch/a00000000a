@@ -100,9 +100,15 @@ function City() {
 
   const renderLine = (line: ArticleLine, index: number) => {
     if (line.kind === "IMG") {
-      const [src, caption] = line.value.split("||");
+      const [src, caption, size] = line.value.split("||");
+      const isSmall = size?.trim() === "small";
       return (
-        <figure key={index} className="my-6 sm:my-8 md:my-10 overflow-hidden rounded-xl bg-midnight/5 shadow-xl group">
+        <figure
+          key={index}
+          className={`my-6 sm:my-8 md:my-10 overflow-hidden rounded-xl bg-midnight/5 shadow-xl group ${
+            isSmall ? "mx-auto w-full max-w-md" : ""
+          }`}
+        >
           <button
             type="button"
             onClick={() => openLightbox(src)}
