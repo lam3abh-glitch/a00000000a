@@ -10,6 +10,7 @@ import { norwayMoreGuides } from "./norway-more";
 import { russiaGuides } from "./russia-guides";
 import { latviaGuides } from "./latvia-guides";
 import { armeniaGuides } from "./armenia-guides";
+import { albaniaGuides } from "./albania-guides";
 import { pragueGuidesA } from "./czech-guides-prague-a";
 import { pragueGuidesB } from "./czech-guides-prague-b";
 import { pragueGuidesC } from "./czech-guides-prague-c";
