@@ -24,6 +24,7 @@ import { BrazilCountry } from "@/components/site/BrazilCountry";
 import { ArmeniaCountry } from "@/components/site/ArmeniaCountry";
 import { AlbaniaCountry } from "@/components/site/AlbaniaCountry";
 import { GermanyCountry } from "@/components/site/GermanyCountry";
+import { CubaCountry } from "@/components/site/CubaCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
@@ -145,6 +146,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1822", value_en: "1822" },
                 ]
+              : c.slug === "cuba"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "هافانا", value_en: "Havana" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "بيزو كوبي", value_en: "Cuban peso" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "12.7 مليون", value_en: "12.7 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "109,886 كم²", value_en: "109,886 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1868", value_en: "1868" },
+                ]
               : c.slug === "ukraine"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "كييف", value_en: "Kyiv" },
@@ -239,6 +249,8 @@ function Country() {
         <RussiaCountry lang={lang} />
       ) : c.slug === "latvia" ? (
         <LatviaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "cuba" ? (
+        <CubaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "brazil" ? (
         <BrazilCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "ukraine" ? (
