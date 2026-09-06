@@ -20,9 +20,9 @@ const ABOUT = {
 };
 
 /** Shamrock — the three-leaf clover of Ireland. */
-function Shamrock({ className }: { className?: string }) {
+function Shamrock({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
-    <svg viewBox="0 0 100 100" aria-hidden className={className}>
+    <svg viewBox="0 0 100 100" aria-hidden className={className} style={style}>
       <g fill="currentColor">
         <path d="M50 46c-6-6-6-16 0-22s16-4 20 3c-3 9-11 16-20 19Z" />
         <path d="M50 46c-8-3-16-10-19-19 4-7 14-9 20-3s5 16-1 22Z" />
@@ -34,9 +34,9 @@ function Shamrock({ className }: { className?: string }) {
 }
 
 /** Celtic knot motif drawn in SVG. */
-function CelticKnot({ className }: { className?: string }) {
+function CelticKnot({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
-    <svg viewBox="0 0 100 100" aria-hidden className={className}>
+    <svg viewBox="0 0 100 100" aria-hidden className={className} style={style}>
       <g stroke="currentColor" strokeWidth="3" fill="none">
         <circle cx="50" cy="50" r="30" />
         <circle cx="50" cy="50" r="18" />
