@@ -160,7 +160,7 @@ export function BrazilCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM_VIDEO}
           lang={lang}
-          title={rtl ? "علم جمهورية البرازيل والنشيد الوطني البرازيلى" : "The flag of Brazil and the Brazilian national anthem"}
+          title={rtl ? "النشيد الوطني البرازيلى" : "The flag of Brazil and the Brazilian national anthem"}
         />
       </div>
 
