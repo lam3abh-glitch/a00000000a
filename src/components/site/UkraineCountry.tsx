@@ -1,5 +1,7 @@
 import type { Lang } from "@/lib/i18n";
+import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 
+const ANTHEM_VIDEO = "https://videos.files.wordpress.com/EraZE9Az/my-movie-5-5-1.mp4";
 const EMBLEM_MAP = "https://i0.wp.com/100region.com/wp-content/uploads/2022/04/img_4278.jpg?ssl=1";
 const POLAROID =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Saint_Sophia_Cathedral_Kiev.jpg/1280px-Saint_Sophia_Cathedral_Kiev.jpg";
@@ -146,6 +148,15 @@ export function UkraineCountry({ lang, intro }: { lang: Lang; intro: string }) {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* ANTHEM */}
+      <div className="relative z-10 mt-16">
+        <AnthemPlayer
+          src={ANTHEM_VIDEO}
+          lang={lang}
+          title={rtl ? "علم جمهورية اوكرانيا والنشيد الوطني الاوكراني" : "The flag of Ukraine and the Ukrainian national anthem"}
+        />
       </div>
 
       {/* FACT — emblem & map */}
