@@ -7,7 +7,7 @@ const ANTHEM_VIDEO = "https://videos.files.wordpress.com/DNROMNuL/my-movie-5-1-4
 
 /** Source page ?p=3330 — image order and captions taken from the original. */
 const EMBLEM_MAP = U("2022/04/img_4333.jpg"); // شعار وخارطة جمهورية البانيا
-const SCENE_A = U("2022/04/img_4605.png");
+
 const SCENE_B = U("2022/02/img_3930.jpg");
 const SCENE_C = U("2022/02/img_3802.jpg");
 const SCENE_D = U("2022/02/img_4230.jpg");
@@ -140,14 +140,6 @@ export function AlbaniaCountry({ lang, intro }: { lang: Lang; intro: string }) {
             <p className="mt-5 font-body text-base md:text-lg text-charcoal/85 leading-[1.95]">{NATURE[lang]}</p>
           </div>
           <div className="md:col-span-5 space-y-4">
-            <figure className="overflow-hidden rounded-2xl shadow-lg border border-carmine/10 md:translate-x-4">
-              <img
-                src={SCENE_A}
-                alt={rtl ? "مشاهد من ألبانيا" : "Scenes from Albania"}
-                loading="lazy"
-                className="h-48 md:h-56 w-full object-cover"
-              />
-            </figure>
             <figure className="overflow-hidden rounded-2xl shadow-lg border border-carmine/10">
               <img
                 src={SCENE_C}
