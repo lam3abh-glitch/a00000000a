@@ -101,11 +101,10 @@ export const albaniaGuides: Guide[] = [
         ar: "وتعتبر شكودر العاصمة الثقافية للبلاد ، وذلك لما تستضيفه من أحداث مثل مهرجان الأطفال ، ويوم البحيرة ، والكرنفال ، ومهرجان شكودر للجاز وغيرها الكثير ، يمكنك ايضا الإستمتاع في شكودر بزيارة متحف ماروبي الوطني للتصوير الفوتوغرافي ، الذي يتيح لزائريه تعلم التاريخ والفن والديموغرافيا ، فضلًا عن تاريخ التصوير الفوتوغرافي العالمي",
         en: "Shkodër is considered the country's cultural capital for the events it hosts, such as the children's festival, Lake Day, the carnival and the Shkodër jazz festival, and much more. You can also enjoy the Marubi National Museum of Photography, where visitors learn about history, art and demography as well as the history of world photography.",
       },
-      { type: "IMG", src: U("2022/08/img_1607.jpg"), cap_ar: "شكودر", cap_en: "Shkodër" },
-      { type: "IMG", src: U("2022/08/img_1608.jpg"), cap_ar: "شكودر", cap_en: "Shkodër" },
-      { type: "IMG", src: U("2022/08/img_1609.jpg"), cap_ar: "شكودر", cap_en: "Shkodër" },
-      { type: "IMG", src: U("2022/08/img_1610.jpg"), cap_ar: "شكودر", cap_en: "Shkodër" },
-      { type: "IMG", src: U("2022/08/img_1611.jpg"), cap_ar: "شكودر", cap_en: "Shkodër" },
+      { type: "IMG", src: U("2022/08/img_1607.jpg"), cap_ar: "جسر ميسي القديم قرب شكودر", cap_en: "The old Mesi bridge near Shkodër" },
+      { type: "IMG", src: U("2022/08/img_1608.jpg"), cap_ar: "شكودر وبحيرتها", cap_en: "Shkodër and its lake", size: "compact" },
+      { type: "IMG", src: U("2022/08/img_1609.jpg"), cap_ar: "بحيرة كومان", cap_en: "Lake Koman", size: "compact" },
+      { type: "IMG", src: U("2022/08/img_1605.jpg"), cap_ar: "منعطف النهر قرب شكودر", cap_en: "The river bend near Shkodër", size: "compact" },
 
       { type: "H3", ar: "دوريس", en: "Durrës" },
       {
