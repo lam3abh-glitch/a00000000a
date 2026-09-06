@@ -1,4 +1,5 @@
 import type { Guide } from "./france-guides";
+import bigBenAsset from "@/assets/big-ben.png.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
@@ -10,7 +11,7 @@ export const londonLandmarkGuides: Guide[] = [
     title_en: "Big Ben — a symbol of British culture",
     kicker_ar: "معلم",
     kicker_en: "Landmark",
-    image: U("2022/09/img_2671-1.jpg"),
+    image: bigBenAsset.url,
     blocks: [
       {
         type: "P",
