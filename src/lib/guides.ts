@@ -9,6 +9,7 @@ import { norwayDiscoverGuide, norwayDiscoverSubGuides } from "./norway-discover"
 import { norwayMoreGuides } from "./norway-more";
 import { russiaGuides } from "./russia-guides";
 import { latviaGuides } from "./latvia-guides";
+import { ukraineGuides } from "./ukraine-guides";
 import { armeniaGuides } from "./armenia-guides";
 import { albaniaGuides } from "./albania-guides";
 import { germanyGuides, germanyGuidesAll } from "./germany-guides";
@@ -34,6 +35,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   norway: [...norwayGuides, norwayDiscoverGuide, ...norwayMoreGuides],
   russia: russiaGuides,
   latvia: latviaGuides,
+  ukraine: ukraineGuides,
   armenia: armeniaGuides,
   albania: albaniaGuides,
   germany: germanyGuides,
@@ -49,6 +51,7 @@ export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   norway: { ar: "النرويج", en: "Norway" },
   russia: { ar: "روسيا", en: "Russia" },
   latvia: { ar: "لاتفيا", en: "Latvia" },
+  ukraine: { ar: "أوكرانيا", en: "Ukraine" },
   armenia: { ar: "أرمينيا", en: "Armenia" },
   albania: { ar: "ألبانيا", en: "Albania" },
   germany: { ar: "ألمانيا", en: "Germany" },
@@ -69,6 +72,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   norway: [...norwayGuides, norwayDiscoverGuide, ...norwayDiscoverSubGuides, ...norwayMoreGuides],
   russia: russiaGuides,
   latvia: latviaGuides,
+  ukraine: ukraineGuides,
   armenia: armeniaGuides,
   albania: albaniaGuides,
   germany: germanyGuidesAll,
