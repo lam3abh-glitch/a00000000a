@@ -189,7 +189,7 @@ export function CubaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM_VIDEO}
           lang={lang}
-          title={rtl ? "علم جمهورية كوبا والنشيد الوطني الكوبي" : "The flag of Cuba and the Cuban national anthem"}
+          title={rtl ? "النشيد الوطني الكوبي" : "The flag of Cuba and the Cuban national anthem"}
         />
       </div>
 
