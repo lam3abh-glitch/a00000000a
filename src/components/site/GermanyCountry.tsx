@@ -121,7 +121,7 @@ export function GermanyCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM}
           lang={lang}
-          title={rtl ? "علم جمهورية المانيا والنشيد الوطني الالماني" : "The flag of the Federal Republic of Germany and the German national anthem"}
+          title={rtl ? "النشيد الوطني الالماني" : "The flag of the Federal Republic of Germany and the German national anthem"}
           theme={{
             bg: "bg-midnight",
             border: "border-gold/30",
