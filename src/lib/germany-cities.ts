@@ -58,9 +58,9 @@ IMG|${U("2022/08/img_1326.jpg")}
 H5|ميدان روميربيرغ ومبنى رومر
 P|هو أحد أشهر معالم السياحة في فرانكفورت ، كما أن هذا الميدان يعد القلب التاريخي لفرانكفورت ، مبنى البلدية هو عبارة عن مبنى قديم يتميز بتصميمه المعماري الفريد ويعتبر من اقدم مباني المدينة واشهرها وهو مكان يستقطب العديد من السياح
 IMG|${U("2022/08/img_1327.jpg")}
-IMG|${U("2022/08/img_1328.jpg")}
 H5|شارع زيل
 P|يعتبر شارع زيل من اهم المناطق السياحية في فرانكفورت ويعتبر مكان التسوق الرئيسي في المدينة حيث يستقطب العديد من السياح والزوار باعتباره شارعاً مشهورا باحتوائه على افخم المحلات والماركات العالمية
+IMG|${U("2022/08/img_1328.jpg")}
 H5|بالم غاردن فرانكفورت
 P|من اجمل حدائق فرانكفورت واكبرها حيث تحتل مساحة واسعة تحتوي فيها حدائق للأزهار الموسمية والنباتات ذات الطبيعة المدارية كالنباتات الصحراوية بالاضافة الى اصناف النباتات الاخرى
 H5|بيتمان غاردن
@@ -127,9 +127,9 @@ export const GERMANY_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Römerberg Square and the Römer",
       "One of the most famous landmarks in Frankfurt, this square is the historic heart of the city. The town hall is an old building with a unique architectural design; it is one of the oldest and most famous buildings in the city and attracts many visitors.",
       "Römerberg Square",
-      "The Römer",
       "Zeil Street",
       "Zeil Street is one of the most important tourist areas in Frankfurt and the city's main shopping destination, drawing many tourists and visitors as a street famous for its most luxurious shops and international brands.",
+      "Zeil Street",
       "The Palmengarten, Frankfurt",
       "One of the most beautiful and largest gardens in Frankfurt, occupying a wide area with gardens of seasonal flowers and plants of a tropical nature such as desert plants, in addition to many other plant varieties.",
       "The Bethmann Garden",
