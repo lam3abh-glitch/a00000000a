@@ -23,7 +23,7 @@ export const albaniaGuides: Guide[] = [
         ar: "تضم تيرانا مجموعة فريدة من المعالم السياحية التي يمكنك إستكشافها بسهولة مثل الكنائس ، والتحف المعمارية ، والمتحف التاريخي الوطني ، وقلعة بتريلا ، ومسجد علم بك ، والبازار القديم ، وصالة العرض الوطنية ، وجرس السلام ، وبرج الساعة ، ومسرح العرائس وغيرها العديد من المعالم التاريخية والترفيهية . علاوة على ذلك تتمتع تيرانا بالغابات الخضراء الواسعة ، والحدائق الرائعة التي يمكنك الإسترخاء فيها والإستمتاع بالهدوء التام ، هذا بالإضافة إلى جبل داجتي ، وإمكانية القيام بمغامرات مثيرة",
         en: "Tirana holds a unique collection of sights that are easy to explore: churches, architectural treasures, the National Historical Museum, Petrela Castle, the Et'hem Bey Mosque, the old bazaar, the National Gallery, the Peace Bell, the clock tower, the puppet theatre and many more historic and recreational landmarks. Tirana also has wide green forests and wonderful parks where you can relax in complete calm, as well as Mount Dajti and the chance to take on thrilling adventures.",
       },
-      { type: "IMG", src: U("2022/08/img_1591.jpg"), cap_ar: "معالم تيرانا", cap_en: "Landmarks of Tirana" },
+      { type: "IMG", src: U("2022/08/img_1589.jpg"), cap_ar: "تيرانا وجبل داجتي", cap_en: "Tirana and Mount Dajti" },
 
       { type: "H3", ar: "بيرات", en: "Berat" },
       {
