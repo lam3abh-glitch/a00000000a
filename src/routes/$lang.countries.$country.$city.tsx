@@ -119,7 +119,11 @@ function City() {
               src={src}
               alt={caption || article?.title || name}
               loading="lazy"
-              className="w-full max-h-[280px] sm:max-h-[420px] md:max-h-[520px] object-cover transition duration-700 group-hover:scale-[1.03]"
+              className={`w-full object-cover transition duration-700 group-hover:scale-[1.03] ${
+                isSmall
+                  ? "max-h-[200px] sm:max-h-[260px]"
+                  : "max-h-[280px] sm:max-h-[420px] md:max-h-[520px]"
+              }`}
             />
           </button>
           {caption ? (
