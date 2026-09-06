@@ -71,6 +71,13 @@ export const ukraineGuides: Guide[] = [
         ar: "يقع هذا النفق الشهير خارج مدينة كليفان مباشرة ، وهو مكان شهير آخر يستحق الزيارة في أوكرانيا ، ويزوره الكثير من العشاق والعزاب على حد سواء ، وهو يعتبر امتداد لمسافة ميلين من السكك الحديدية الخاصة ، وهي مظلة من الأشجار تصنع نفق مميز وتتوجه حفلات الزفاف إلى هناك لتمني أمنية أو القيام بعمل نزهة رومانسية لا مثيل لها ، وتقول الأسطورة أن الأزواج الذين يتمنون أمنية في نفق الحب تتحقق هذه الأمنية لهم إذا كان الحب حقيقيا ، وهو موقع يهتم الكثير من المصورين بتصويره لإبراز جماله",
         en: "This famous tunnel lies just outside the town of Klevan and is another well-known place worth visiting in Ukraine, drawing couples and singles alike. It runs for two miles of private railway, a canopy of trees forming a remarkable tunnel. Weddings head there to make a wish or enjoy an unmatched romantic walk, and legend says that couples who make a wish in the tunnel of love will have it granted if the love is true. Many photographers love to capture the site and show off its beauty.",
       },
+      { type: "H3", ar: "المصادر الطبيعية", en: "Natural resources" },
+      {
+        type: "P",
+        ar: "تشتهر أوكرانيا بالعديد من المصادر الطبيعية كخام الحديد والفحم والمنغنيز والغاز الطبيعي والزيت والملح والكبريت ، الجرافيت ، التيتانيوم ، والمغنيسيوم ، والكاولين ، النيكل ، الزئبق ، الأخشاب ، والأراضي الصالحة للزراعة",
+        en: "Ukraine is famous for many natural resources such as iron ore, coal, manganese, natural gas, oil, salt, sulphur, graphite, titanium, magnesium, kaolin, nickel, mercury, timber and arable land.",
+      },
+
     ],
   },
 ];
