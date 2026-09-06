@@ -148,9 +148,9 @@ function Country() {
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "تيرانا", value_en: "Tirana" },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "ليك ألباني", value_en: "Albanian lek" },
-                  { label_ar: "السكان", label_en: "Population", value_ar: "2.8 مليون", value_en: "2.8 million" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "3.1 مليون", value_en: "3.1 million" },
                   { label_ar: "المساحة", label_en: "Area", value_ar: "28,748 كم²", value_en: "28,748 km²" },
-                  { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1912", value_en: "1912" },
                 ]
               : c.slug === "germany"
