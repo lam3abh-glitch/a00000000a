@@ -15,46 +15,47 @@ H5|متحف تاريخ أرمينيا يريفان
 P|تأسس في أواخر عام 1920 ميلادي و الواقع بالقرب من ساحة الجمهورية الشهيرة في مدينة يريفان ، ومن خلاله تستطيع أن تتعرف على فن العمارة الأرمنية القديمة وعلوم الآثار والاثنوغرافيا ، بالاضافة للتاريخ القديم
 IMG|${U("2022/08/img_1271.jpg")}
 IMG|${U("2022/08/img_1272.jpg")}
+IMG|${U("2022/08/img_1275.jpg")}
 P|سعر التذكرة 2000 درام ارميني أي ما يعادل 4.20 دولار أمريكي ، وهو مفتوح بشكل يومي من الساعة 11:00 صباحا وحتى الساعة 06:00 مساء
 H5|حديقة حيوانات يريفان
 P|تقع حديقة الحيوانات في يريفان في وسط مكان متميز ضمن المدينة القديمة وتمتد أيضا على مساحة تصل الى حوالي 25 هكتار ، وتم انشاء حديقة الحيوان يريفان في أواخر عام 1941 ميلادي قبل الحرب العظمى التي قامت في أرمينيا ، حيث أنها مكان طبيعي متناسق لا يمكن تجاهله عند السفر لأرمينيا
-IMG|${U("2022/08/img_1275.jpg")}
 IMG|${U("2022/08/img_1273.jpg")}
 IMG|${U("2022/08/img_1274.jpg")}
+IMG|${U("2022/08/img_1276.jpg")}
 P|سعر التذكرة 800 درام ارميني أي ما يعادل 1.68 دولار أمريكي ، وهو مفتوح بشكل يومي من الساعة 10:00 صباحا وحتى الساعة 07:00 مساء
 H5|متحف يريفان كاسكيد
 P|متحف يريفان كاسكيد هو عبارة عن مدرج مصنوع من الحجر الجيري ، بني في أواخر عام 1971 ميلادي ، كما يضم في محيطه مجموعة كبيرة من المنحوتات الفريدة من نوعها ، اذ يقع على قمة الجانب الشمالي من مدينة يريفان ويعد أكبر متحف مكشوف في دولة أرمينيا والدول المحيطة بها في غرب قارة آسيا ، حيث يبهر متحف يريفان كاسكيد الزائرين له ببساطة التصميم المعمارية وأصالته العريقة في الوقت ذاته ، كما يحتوي على طابق سفلي وطابق علوي
-IMG|${U("2022/08/img_1276.jpg")}
 IMG|${U("2022/08/img_1277.jpg")}
 IMG|${U("2022/08/img_1278.jpg")}
 IMG|${U("2022/08/img_1279.jpg")}
+IMG|${U("2022/08/img_1280.jpg")}
 H5|ساحة الجمهورية
 P|ان ساحة الجمهورية بيريفان هي الساحة الاكثر روعة في قارة اوروبا العريقة ، وتعد من أبرز المعالم السياحية الحديثة في مدينة يريفان ، تلك الساحة الكبيرة التي تجمع في أرجائها بين الثقافة المعاصرة وعراقة التاريخ ، اذ تقع ساحة الجمهوريه في وسط مدينة يريفان الحيوية و تعد هي الميدان الرئيسي بالمدينة وهي شبيهه للساحات القديمة التي تقع في قلب مدينة روما الايطالية ، كما تعد المكان المميز للتعرف على عادات الأرمن وأنماط حياتهم وتصاميم مدنهم وقراهم التي تشبه الى حد كبير تلك التي توجد في مدن وقرى بلدان المشرق العربي
-IMG|${U("2022/08/img_1280.jpg")}
 IMG|${U("2022/08/img_1281.jpg")}
 IMG|${U("2022/08/img_1282.jpg")}
+IMG|${U("2022/08/img_1284.jpg")}
 H5|حديقة يريفان النباتية
 P|تعتبر حديقة يريفان النباتية الحديقة الساحرة للأعين وذات موقع جمالي وطبيعي رائع بوسط مدينة يريفان الحيوية الأكثر زيارة من قبل الزوار العرب خصوصا ، اذ تعد الحديقة الهيئة الوطنية المسؤولة عن حماية وحفاظ الزهور الملونة والنباتات الطبيعية النادرة ، كما تحتل الحديقة مساحة تمتد الى حوالي 80 هكتارا
-IMG|${U("2022/08/img_1284.jpg")}
 IMG|${U("2022/08/img_1283.jpg")}
+IMG|${U("2022/08/img_1285.jpg")}
+IMG|${U("2022/08/img_1287.jpg")}
 P|الحديقة مفتوحة بشكل يومي من الساعة 07:00 صباحا وحتى الساعة 09:00 مساء
 H5|حديقة عالم يريفان المائية
-P|ان حديقة عالم يريفان المائية هي عبارة عن حديقه مائية ذات مياه زرقاء صافية تقع في وسط شارع يسمى مياسنيكال ضمن منطقة نور نورك في مدينة يريفان العاصمة الأرمينية ، اذ تعد تلك المنطقة بالاضافة الى ذلك من أجمل مناطق السياحة في مدينة يريفان وتشمل الحديقه النباتية وحديقة حيوان يريفان ايضا ، يحتل عالم يريفان المائي الذي بني في اواخر عام 2001 ميلادي على مساحة 3 هكتار
-IMG|${U("2022/08/img_1287.jpg")}
-IMG|${U("2022/08/img_1285.jpg")}
+P|ان حديقة عالم يريفان المائية هي عبارة عن حديقه مائية ذات مياه زرقاء صافية تقع في وسط شارع يسمى مياسنيكال ضمن منطقة نور نورك في مدينة يريفان العاصمة الأرمنية ، اذ تعد تلك المنطقة بالاضافة الى ذلك من أجمل مناطق السياحة في مدينة يريفان وتشمل الحديقه النباتية وحديقة حيوان يريفان ايضا ، يحتل عالم يريفان المائي الذي بني في اواخر عام 2001 ميلادي على مساحة 3 هكتار
 IMG|${U("2022/08/img_1286.jpg")}
 IMG|${U("2022/08/img_1288.jpg")}
+IMG|${U("2022/08/img_1289.jpg")}
+IMG|${U("2022/08/img_1290.jpg")}
 P|الحديقة مفتوحة بشكل يومي من الساعة 12:00 ظهرا وحتى الساعة 06:00 مساء
 H5|حديقة النصر
 P|تحوي مدينة يريفان على عدد كبير من الحدائق الطبيعية المتناسقة والمنتزهات الكبرى الساحرة للأعين أمثال حديقة النصر يريفان ، والتي تعد الأكثر زيارة ، اذ تقع حديقه النصر في يريفان في وسط شارع أزاتوتيان ، حيث يعد اختيار هذا المكان لتتواجد فيه الحديقة هو اختيار موفق جدا ، لذا سميت هذه الحديقة بحديقة النصر نسبة الى الانتصار الكبير في الحرب العالمية الثانية
-IMG|${U("2022/08/img_1289.jpg")}
-IMG|${U("2022/08/img_1290.jpg")}
+IMG|${U("2022/08/img_1293.jpg")}
 H5|المسجد الازرق
 P|يعتبر المسجد الازرق والذي بني في أواخر القرن الثامن عشر الميلادي واحد من أكبر المساجد التاريخية المتواجدة في منطقة القوقاز ، اذ يتلئلئ بلونه الجميل في وسط العاصمة ، وتصل قبة المسجد الى 24 متر ، وتعد القبة الوحيدة في سماء يريفان ، كما يعد المسجد بمثابة منارة الاسلام التي تشع نورا وحضارة وتعبر عن الحضارة الاسلامية في أرمينيا التي أعترفت بالمسيحية كدين رسمي لها
-IMG|${U("2022/08/img_1293.jpg")}
 IMG|${U("2022/08/img_1291.jpg")}
 IMG|${U("2022/08/img_1292.jpg")}
 IMG|${U("2022/08/img_1294.jpg")}
+P|
 `,
   ),
 
@@ -108,6 +109,7 @@ export const ARMENIA_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Founded in late 1920 and located close to the famous Republic Square in Yerevan, it lets you discover ancient Armenian architecture, archaeology and ethnography, as well as ancient history.",
       "The museum",
       "Inside the museum",
+      "Museum galleries",
       "A ticket costs 2,000 Armenian dram, about 4.20 US dollars. It is open daily from 11:00 in the morning until 06:00 in the evening.",
       "Yerevan Zoo",
       "The zoo in Yerevan sits in a prime spot within the old city and stretches across roughly 25 hectares. It was created in late 1941, before the great war that reached Armenia, and it is a harmonious natural place you should not skip when travelling to Armenia.",
@@ -126,10 +128,12 @@ export const ARMENIA_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Republic Square",
       "The square by day",
       "The square at night",
+      "Fountain at Republic Square",
       "Yerevan Botanical Garden",
       "The Yerevan Botanical Garden is a garden that enchants the eye, in a beautiful natural setting in the middle of lively Yerevan and especially popular with Arab visitors. It is the national body responsible for protecting and preserving colourful flowers and rare natural plants, and covers an area of roughly 80 hectares.",
       "The botanical garden",
       "Plants in the garden",
+      "Garden pathways",
       "The garden is open daily from 07:00 in the morning until 09:00 in the evening.",
       "Yerevan Water World",
       "Yerevan Water World is a water park of clear blue water on a street called Myasnikyan in the Nor Nork district of the Armenian capital. That district is also one of the loveliest tourist areas of Yerevan and includes the botanical garden and the zoo. Water World, built in late 2001, covers an area of 3 hectares.",
@@ -141,7 +145,6 @@ export const ARMENIA_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Victory Park",
       "Yerevan has a great many harmonious natural gardens and large parks that enchant the eye, such as Victory Park, the most visited of them. Victory Park lies in the middle of Azatutyan Street, a very fitting choice of location, and it was named Victory Park after the great victory in the Second World War.",
       "Victory Park",
-      "Park views",
       "The Blue Mosque",
       "The Blue Mosque, built in the late eighteenth century, is one of the largest historic mosques in the Caucasus region. It gleams in its beautiful colour in the middle of the capital, its dome reaching 24 metres and being the only dome in Yerevan's skyline. The mosque stands as a minaret of Islam radiating light and civilisation, expressing Islamic civilisation in Armenia, a country that recognises Christianity as its official religion.",
       "The Blue Mosque",
