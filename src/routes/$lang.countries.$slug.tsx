@@ -19,6 +19,7 @@ import { NorwayCountry } from "@/components/site/NorwayCountry";
 import { RussiaCountry } from "@/components/site/RussiaCountry";
 import { CzechCountry } from "@/components/site/CzechCountry";
 import { LatviaCountry } from "@/components/site/LatviaCountry";
+import { ArmeniaCountry } from "@/components/site/ArmeniaCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
@@ -131,6 +132,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1918", value_en: "1918" },
                 ]
+              : c.slug === "armenia"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "يريفان", value_en: "Yerevan" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "درام أرميني", value_en: "Armenian dram" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "3.2 مليون", value_en: "3.2 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "29,743 كم²", value_en: "29,743 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1991", value_en: "1991" },
+                ]
               : c.slug === "czech-republic"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "براغ", value_en: "Prague" },
@@ -189,6 +199,8 @@ function Country() {
         <RussiaCountry lang={lang} />
       ) : c.slug === "latvia" ? (
         <LatviaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "armenia" ? (
+        <ArmeniaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "czech-republic" ? (
         <CzechCountry lang={lang} />
 
