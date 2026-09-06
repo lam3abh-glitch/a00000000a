@@ -1,4 +1,7 @@
 import type { Guide } from "./france-guides";
+import shkoderAsset from "@/assets/albania-42.png.asset.json";
+import sarandeAsset from "@/assets/albania-43.png.asset.json";
+import pogradecAsset from "@/assets/albania-44.png.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
@@ -74,7 +77,7 @@ export const albaniaGuides: Guide[] = [
         ar: "تتمتع مدينة بوغراديس بموقع جغرافي ساحر على ضفاف بحيرة أوخريد ، والذي قام بدوره في جعلها من أكثر وجهات السياحة في البانيا شهرة وشعبية بين السائحين . فهي وجهة مثالية للإسترخاء والإنسجام في أحضان الطبيعة الجميلة والإستمتاع بالهدوء التام ، يمكنك الإستمتاع بممارسة العديد من الأنشطة الترفيهية في بوغراديس ، ومنها زيارة متنزه Driloni الوطني ، وجسر جوليك ، والمقابر الملكية ، هذا فضلا عن القيام بالرحلات الرائعة للقرى المجاورة ، وإستكشاف كل ما بها من مغامرات مثيرة مثل التجديف وغيرها الكثير",
         en: "Pogradec has a charming setting on the shores of Lake Ohrid, which has made it one of Albania's most famous and popular destinations among travellers. It is an ideal place to relax in the arms of beautiful nature and enjoy complete quiet. You can take part in many activities in Pogradec: visiting the Drilon national park, the Golik bridge and the royal tombs, as well as wonderful trips to the neighbouring villages and thrilling adventures such as rowing and much more.",
       },
-      { type: "IMG", src: U("2022/08/img_1604.jpg"), cap_ar: "بوغراديس", cap_en: "Pogradec" },
+      { type: "IMG", src: pogradecAsset.url, cap_ar: "بوغراديس على بحيرة أوخريد", cap_en: "Pogradec on Lake Ohrid" },
 
       { type: "H3", ar: "سارنده", en: "Sarandë" },
       {
@@ -84,9 +87,9 @@ export const albaniaGuides: Guide[] = [
       },
       {
         type: "IMG",
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sarande-Albania.jpg/1280px-Sarande-Albania.jpg",
-        cap_ar: "خليج سارنده على البحر الآيوني",
-        cap_en: "The bay of Sarandë on the Ionian Sea",
+        src: sarandeAsset.url,
+        cap_ar: "شوارع سارنده",
+        cap_en: "The streets of Sarandë",
       },
 
       { type: "H3", ar: "شكودر", en: "Shkodër" },
@@ -95,7 +98,7 @@ export const albaniaGuides: Guide[] = [
         ar: "شكودر هي أحدى المدن التاريخية القديمة في البانيا ، وتتمتع بموقع إستراتيجي فوق بحيرة شكودر الساحرة ، وتعد من أهم مناطق الجذب السياحي في ألبانيا ، تعرف المدينة بأسم مدينة الدراجات ، وتضم مجموعة متعددة من المعالم السياحية الجميلة ، والتي يعد أبرزها أطلال قلعة روزافا ، على تل صخري فوق المدينة ويوفر للزائر إطلالات بانورامية للمناظر الطبيعية حول البحيرة",
         en: "Shkodër is one of Albania's ancient historic cities, in a strategic position above the charming Lake Shkodër, and among the country's most important attractions. Known as the city of bicycles, it holds many beautiful sights, the most prominent being the ruins of Rozafa Castle on a rocky hill above the city, offering panoramic views of the scenery around the lake.",
       },
-      { type: "IMG", src: U("2022/08/img_1606.jpg"), cap_ar: "جبال الألب الألبانية شمال شكودر", cap_en: "The Albanian Alps north of Shkodër" },
+      { type: "IMG", src: shkoderAsset.url, cap_ar: "الطبيعة حول شكودر", cap_en: "The scenery around Shkodër" },
       {
         type: "P",
         ar: "وتعتبر شكودر العاصمة الثقافية للبلاد ، وذلك لما تستضيفه من أحداث مثل مهرجان الأطفال ، ويوم البحيرة ، والكرنفال ، ومهرجان شكودر للجاز وغيرها الكثير ، يمكنك ايضا الإستمتاع في شكودر بزيارة متحف ماروبي الوطني للتصوير الفوتوغرافي ، الذي يتيح لزائريه تعلم التاريخ والفن والديموغرافيا ، فضلًا عن تاريخ التصوير الفوتوغرافي العالمي",
