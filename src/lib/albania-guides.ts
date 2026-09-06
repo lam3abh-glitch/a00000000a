@@ -112,7 +112,7 @@ export const albaniaGuides: Guide[] = [
         ar: "دوريس هي واحدة من أحمل أماكن السياحة في البانيا . تتمتع المدينة بإطلالات ساحرة على البحر الأدرياتيكي ، فهي من أكثر الجهات زيارة ، لما تضمه من مجموعة مميزة من الشواطئ الساحلية المُبهرة ذات المياة المتلألأة والرمال الناعمة ، تضم مدينة دوريس أيضا الكثير من المواقع الأثرية والتاريخية الرومانية العتيقة ، التي يمكنك زيارتها وإستكشاف تاريخ البلاد العريق ، حيث أنها المدينة الأقدم في البانيا",
         en: "Durrës is one of the most beautiful places to visit in Albania. The city has charming views over the Adriatic Sea and is among the most visited, thanks to a stunning set of coastal beaches with glittering water and soft sand. Durrës also holds many ancient Roman archaeological and historic sites you can visit to explore the country's deep past — it is the oldest city in Albania.",
       },
-      { type: "IMG", src: U("2022/08/img_1612.jpg"), cap_ar: "دوريس", cap_en: "Durrës" },
+      { type: "IMG", src: U("2022/08/img_1611.jpg"), cap_ar: "برج دوريس البندقي", cap_en: "The Venetian tower of Durrës" },
 
       { type: "H3", ar: "برمت", en: "Përmet" },
       {
@@ -120,6 +120,8 @@ export const albaniaGuides: Guide[] = [
         ar: "تعد مدينة برمت من أجمل مدن السياحة في البانيا وأجملها على الإطلاق . فهي تعد مقصدا سياحيا هاما ، وذلك لما تمتاز به من مناظر طبيعية رائعة تثير الإعجاب والدهشة ، فهي مدينة كثيرة الخضرة ، تضم برمت مجموعة من الينابيع المائية الدافئة ، يمكنك القيام بالعديد من الأنشطة الترفيهية المثيرة في المدينة ، والتي من أهمها التجول والإستمتاع بالمشاهد الطبيعية الخلابة ، فضلا عن البحيرات الصغيرة ذات الأحجام المختلفة . كما يمكنك الذهاب إلى جسر كاتيو القديم الذي تم بناؤه في فترة العصور الوسطى ، والذي لا يزال بحالة جيدة إلى يومنا هذا",
         en: "Përmet is among the most beautiful tourist towns in Albania — an important destination for its wonderful scenery that stirs admiration and wonder. It is a very green town with a group of warm water springs, and you can take part in many exciting activities, chief among them wandering and enjoying the breathtaking landscapes as well as the small lakes of varying sizes. You can also visit the old Katiu bridge, built in the Middle Ages and still in good condition today.",
       },
+      { type: "IMG", src: U("2022/08/img_1610.jpg"), cap_ar: "ينابيع بينيا الدافئة في برمت", cap_en: "The warm Benja springs in Përmet" },
+      { type: "IMG", src: U("2022/08/img_1612.jpg"), cap_ar: "واد برمت الأخضر", cap_en: "The green valley of Përmet", size: "compact" },
 
       { type: "H3", ar: "كورتشي", en: "Korçë" },
       {
