@@ -21,6 +21,7 @@ P|لا تكتمل متعة سياحة اسكتلندا بدون زيارة جس�
 IMG|${U("2022/09/img_2826.jpg")}||جسر تاي
 IMG|${U("2022/05/img_6928.jpg")}||جسر تاي
 H5|بلدة أدنبرة القديمة
+IMG|${U("2022/09/img_2852-1.jpg")}||البلدة القديمة بأدنبره
 P|واحدة من أهم المزارات السياحية ، فقد تبدو مدينة إدنبرة في بعض الأحيان مدينتين منفصلتين ، لذلك تختلف الأحياء الجورجية الأنيقة التي ترجع للقرن الثامن عشر عن تلك الموجودة في المدينة الحديثة ، فتضم تراسات فخمة من ممرات المدينة الضيقة المتعرجة ، بجانب العديد من المعالم الأثرية ، الميادين الشهيرة ، والعديد من المقاهي ، والمتاجر
 H5|قصر هوليرود هاوس
 P|في قلب التاريخ الاسكتلندي ، واحد من أكثر مناطق الجذب السياحي في مدينة ادنبرة ، وهو المقر الرسمي للملك البريطاني ، الملكة إليزابيث الثانية ، ويقع فندق قصر هوليرود في الجزء السفلي من رويال مايل في ادنبره ، في الطرف المقابل لقلعة ادنبره ، كما يعد المقر الرئيسي لملوك وملكات اسكتلندا منذ القرن السادس عشر ، ومكان يقام به المناسبات الرسمية والترفيهية
@@ -157,6 +158,7 @@ export const SCOTLAND_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "The pleasure of touring Scotland is not complete without visiting the venerable Tay Bridge and crossing it on the journey from Edinburgh to Dundee. The bridge linking two of Scotland's most famous tourist cities dates back to the 1870s, when it was the longest bridge in the world, before a powerful storm destroyed it; it was rebuilt in its present form in 1966. During your visit you can enjoy a superb panoramic view over the river Tay and the charming city of Dundee from its two viewing platforms.",
       "The Tay Bridge",
       "The Tay Bridge",
+      "Edinburgh Old Town",
       "Edinburgh Old Town",
       "One of the most important attractions of all. Edinburgh can sometimes seem like two separate cities, so different are the elegant eighteenth-century Georgian quarters from those of the New Town. The Old Town holds grand terraces reached by narrow winding closes, alongside many monuments, famous squares and a great number of cafés and shops.",
       "The Palace of Holyroodhouse",
