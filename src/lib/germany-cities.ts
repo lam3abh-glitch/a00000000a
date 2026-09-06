@@ -52,9 +52,9 @@ IMG|${U("2022/08/img_1322.jpg")}
 H5|برج أوروبا
 P|أحد أبرز رموز السياحة في فرانكفورت المانيا بني عام 1974 م ويبلغ ارتفاعه حوالي 337.5 متر ويعتبر بذلك ثاني أطول مبنى في ألمانيا بعد برج برلين الشهير ، البرج مخصص للاتصالات كما أنه يوفر مشاهد بانورامية رائعة لمدينة فرانكفورت ويحوي مطعما في أعلى البرج
 IMG|${U("2022/08/img_1324.jpg")}
-IMG|${U("2022/08/img_1326.jpg")}
 H5|برج ايشنهايم
 P|برج ايشنهايم أحد أبرز معالم السياحة في فرانكفورت يبلغ ارتفاعه 154 قدما ويعتبر بوابة المدينة الرئيسية وجزءا من تحصيناتها في القرون الوسطى ، يعود تاريخه الى بداية القرن الخامس عشر
+IMG|${U("2022/08/img_1326.jpg")}
 H5|ميدان روميربيرغ ومبنى رومر
 P|هو أحد أشهر معالم السياحة في فرانكفورت ، كما أن هذا الميدان يعد القلب التاريخي لفرانكفورت ، مبنى البلدية هو عبارة عن مبنى قديم يتميز بتصميمه المعماري الفريد ويعتبر من اقدم مباني المدينة واشهرها وهو مكان يستقطب العديد من السياح
 IMG|${U("2022/08/img_1327.jpg")}
@@ -121,9 +121,9 @@ export const GERMANY_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Europe Tower",
       "One of the most prominent symbols of tourism in Frankfurt, built in 1974 and about 337.5 metres high, making it the second tallest building in Germany after the famous Berlin tower. The tower is dedicated to telecommunications, offers wonderful panoramic views of Frankfurt and has a restaurant at the top.",
       "Europe Tower",
-      "The city skyline",
       "Eschenheim Tower",
       "Eschenheim Tower is one of Frankfurt's most prominent landmarks, 154 feet high. It was the city's main gate and part of its medieval fortifications, dating back to the beginning of the fifteenth century.",
+      "Eschenheim Tower",
       "Römerberg Square and the Römer",
       "One of the most famous landmarks in Frankfurt, this square is the historic heart of the city. The town hall is an old building with a unique architectural design; it is one of the oldest and most famous buildings in the city and attracts many visitors.",
       "Römerberg Square",
