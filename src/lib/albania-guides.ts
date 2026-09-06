@@ -82,7 +82,12 @@ export const albaniaGuides: Guide[] = [
         ar: "سارنده هي واحدة من المدن الشاطئية الخيالية في البانيا ، تقع على خليج مفتوح للبحر الآيوني في وسط البحر الأبيض المتوسط ، وهي من أفضل الأماكن السياحية الألبانية التي يُمكنك زيارتها خلال شهور فصل الصيف ، يمكن للزائر الإستمتاع بالمناظر الطبيعية التي لا يمكن نسيانها ، وخاصة غروب الشمس الذي يجذب عددًا كبيرا من الزوار والسائحين ، هذا بالإضافة إلى المواقع الأثرية والتاريخية الهامة في المدينة مثل قلعة ليكورسي ، وميناء سارنده ، فضلًا عن محلات بيع الهدايا التذكارية، والمطاعم والمقاهي",
         en: "Sarandë is one of Albania's fairy-tale seaside towns, set on a bay open to the Ionian Sea in the middle of the Mediterranean, and one of the best Albanian places to visit during the summer months. Visitors can enjoy unforgettable scenery, especially the sunset that draws large numbers of travellers, as well as important archaeological and historic sites such as Lëkurësi Castle and the port of Sarandë, plus souvenir shops, restaurants and cafés.",
       },
-      { type: "IMG", src: U("2022/08/img_1605.jpg"), cap_ar: "سارنده", cap_en: "Sarandë" },
+      {
+        type: "IMG",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sarand%C3%AB%2C_Albania.jpg/1280px-Sarand%C3%AB%2C_Albania.jpg",
+        cap_ar: "خليج سارنده على البحر الآيوني",
+        cap_en: "The bay of Sarandë on the Ionian Sea",
+      },
 
       { type: "H3", ar: "شكودر", en: "Shkodër" },
       {
