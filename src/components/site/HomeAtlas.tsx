@@ -13,12 +13,12 @@ import barcelona from "@/assets/sagrada-familia.webp.asset.json";
 import kampala from "@/assets/wonder-world-kampala.webp.asset.json";
 
 const continents = [
-  { slug: "north-america", ar: "أمريكا الشمالية", en: "North America", image: shapeNorthAmerica, pos: "left-[2%] top-[8%] w-[28%]" },
-  { slug: "south-america", ar: "أمريكا الجنوبية", en: "South America", image: shapeSouthAmerica, pos: "left-[19%] top-[48%] w-[18%]" },
-  { slug: "europe", ar: "أوروبا", en: "Europe", image: shapeEurope, pos: "left-[39%] top-[7%] w-[23%]" },
-  { slug: "africa", ar: "أفريقيا", en: "Africa", image: shapeAfrica, pos: "left-[43%] top-[39%] w-[19%]" },
-  { slug: "asia", ar: "آسيا", en: "Asia", image: shapeAsia, pos: "left-[58%] top-[13%] w-[33%]" },
-  { slug: "oceania", ar: "أستراليا", en: "Oceania", image: shapeOceania, pos: "left-[76%] top-[60%] w-[19%]" },
+  { slug: "north-america", ar: "أمريكا الشمالية", en: "North America", image: shapeNorthAmerica, pos: "md:left-[2%] md:top-[8%] md:w-[28%]" },
+  { slug: "south-america", ar: "أمريكا الجنوبية", en: "South America", image: shapeSouthAmerica, pos: "md:left-[19%] md:top-[48%] md:w-[18%]" },
+  { slug: "europe", ar: "أوروبا", en: "Europe", image: shapeEurope, pos: "md:left-[39%] md:top-[7%] md:w-[23%]" },
+  { slug: "africa", ar: "أفريقيا", en: "Africa", image: shapeAfrica, pos: "md:left-[43%] md:top-[39%] md:w-[19%]" },
+  { slug: "asia", ar: "آسيا", en: "Asia", image: shapeAsia, pos: "md:left-[58%] md:top-[13%] md:w-[33%]" },
+  { slug: "oceania", ar: "أستراليا", en: "Oceania", image: shapeOceania, pos: "md:left-[76%] md:top-[60%] md:w-[19%]" },
 ];
 
 const destinations = [
@@ -51,7 +51,7 @@ export function HomeAtlas({ lang }: { lang: Lang }) {
           </p>
         </div>
 
-        <div className="relative mx-auto min-h-[470px] max-w-6xl overflow-hidden border-y border-atlas-teal/15 py-8 md:min-h-[610px] md:py-0">
+        <div className="relative mx-auto max-w-6xl overflow-hidden border-y border-atlas-teal/15 py-8 md:min-h-[610px] md:py-0">
           <div className="atlas-route absolute left-[12%] top-[39%] hidden w-[75%] border-t border-dashed border-atlas-teal/45 md:block" />
           <Plane aria-hidden="true" className="absolute left-[47%] top-[36%] hidden size-5 -rotate-12 text-gold md:block" />
           <div className="grid grid-cols-2 gap-3 md:block">
