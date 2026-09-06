@@ -100,9 +100,15 @@ function City() {
 
   const renderLine = (line: ArticleLine, index: number) => {
     if (line.kind === "IMG") {
-      const [src, caption] = line.value.split("||");
+      const [src, caption, size] = line.value.split("||");
+      const isSmall = size?.trim() === "small";
       return (
-        <figure key={index} className="my-6 sm:my-8 md:my-10 overflow-hidden rounded-xl bg-midnight/5 shadow-xl group">
+        <figure
+          key={index}
+          className={`my-6 sm:my-8 md:my-10 overflow-hidden rounded-xl bg-midnight/5 shadow-xl group ${
+            isSmall ? "mx-auto w-full max-w-md" : ""
+          }`}
+        >
           <button
             type="button"
             onClick={() => openLightbox(src)}
@@ -113,7 +119,11 @@ function City() {
               src={src}
               alt={caption || article?.title || name}
               loading="lazy"
-              className="w-full max-h-[280px] sm:max-h-[420px] md:max-h-[520px] object-cover transition duration-700 group-hover:scale-[1.03]"
+              className={`w-full object-cover transition duration-700 group-hover:scale-[1.03] ${
+                isSmall
+                  ? "max-h-[200px] sm:max-h-[260px]"
+                  : "max-h-[280px] sm:max-h-[420px] md:max-h-[520px]"
+              }`}
             />
           </button>
           {caption ? (
