@@ -1,4 +1,5 @@
 import type { Lang } from "@/lib/i18n";
+import { Link } from "@tanstack/react-router";
 import ahmadMorocco from "@/assets/ahmad-morocco.png.asset.json";
 
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
