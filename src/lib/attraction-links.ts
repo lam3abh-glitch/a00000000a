@@ -11,6 +11,16 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "جسر فيرث أوف فورث بأدنبرة": { country: "scotland", topic: "forth-bridge" },
     "The Forth Bridge at Edinburgh": { country: "scotland", topic: "forth-bridge" },
   },
+  cairo: {
+    "أهرامات الجيزة": { country: "egypt", topic: "giza-pyramids" },
+    "The Pyramids of Giza": { country: "egypt", topic: "giza-pyramids" },
+    "برج القاهرة": { country: "egypt", topic: "cairo-tower" },
+    "Cairo Tower": { country: "egypt", topic: "cairo-tower" },
+    "المتحف المصري": { country: "egypt", topic: "egypt-museums" },
+    "The Egyptian Museum": { country: "egypt", topic: "egypt-museums" },
+    "جامع محمد علي": { country: "egypt", topic: "muhammad-ali-mosque" },
+    "The Mosque of Muhammad Ali": { country: "egypt", topic: "muhammad-ali-mosque" },
+  },
   london: {
     "ساعة بيغ بن": { country: "britain", topic: "big-ben" },
     "Big Ben": { country: "britain", topic: "big-ben" },
