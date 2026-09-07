@@ -7,6 +7,7 @@ import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import { SenegalCountry } from "@/components/site/SenegalCountry";
+import { TanzaniaCountry } from "@/components/site/TanzaniaCountry";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
