@@ -17,6 +17,7 @@ import { BRITAIN_CITY_ARTICLES, BRITAIN_CITY_ARTICLES_EN } from "./britain-citie
 import { SCOTLAND_CITY_ARTICLES, SCOTLAND_CITY_ARTICLES_EN } from "./scotland-cities";
 import { MOROCCO_CITY_ARTICLES, MOROCCO_CITY_ARTICLES_EN } from "./morocco-cities";
 import { SENEGAL_CITY_ARTICLES, SENEGAL_CITY_ARTICLES_EN } from "./senegal-cities";
+import { TANZANIA_CITY_ARTICLES, TANZANIA_CITY_ARTICLES_EN } from "./tanzania-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
