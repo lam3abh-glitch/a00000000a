@@ -2,6 +2,7 @@ import type { Guide, GuideBlock } from "./france-guides";
 import { egyptMuseumsGuide } from "./egypt-museums";
 import { egyptExtraGuides } from "./egypt-extra-guides";
 import { egyptErasGuides } from "./egypt-eras-guides";
+import { egyptSitesGuides } from "./egypt-sites-guides";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
@@ -328,4 +329,5 @@ export const egyptGuides: Guide[] = [
   citadelGuide,
   ...egyptExtraGuides,
   ...egyptErasGuides,
+  ...egyptSitesGuides,
 ];

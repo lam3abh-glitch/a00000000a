@@ -5,7 +5,11 @@ export type GuideBlock =
   | { type: "IMG"; src: string; cap_ar: string; cap_en: string; size?: "default" | "compact" }
   | { type: "VIDEO"; src: string; cap_ar: string; cap_en: string }
   | { type: "YT"; id: string; cap_ar: string; cap_en: string }
-  | { type: "MORE"; topic: string; label_ar: string; label_en: string };
+  | { type: "MORE"; topic: string; label_ar: string; label_en: string }
+  | {
+      type: "CARDS";
+      items: { topic: string; label_ar: string; label_en: string; src: string }[];
+    };
 
 export type Guide = {
   slug: string;
