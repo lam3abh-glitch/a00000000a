@@ -572,7 +572,7 @@ const blocks: GuideBlock[] = museums.flatMap((m): GuideBlock[] => [
   { type: "P", ar: `الموقع : ${m.loc_ar}`, en: `Location: ${m.loc_en}` },
   ...m.paras.map(([ar, en]) => ({ type: "P" as const, ar, en })),
   { type: "P", ar: m.tickets[0], en: m.tickets[1] },
-  ...m.images.map((n) => ({ type: "IMG" as const, src: U(n), cap_ar: m.ar, cap_en: m.en })),
+  ...m.images.map((n) => ({ type: "IMG" as const, size: "compact" as const, src: U(n), cap_ar: m.ar, cap_en: m.en })),
 ]);
 
 export const egyptMuseumsGuide: Guide = {
