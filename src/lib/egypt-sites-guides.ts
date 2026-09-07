@@ -520,19 +520,47 @@ const abuMena: Guide = {
   ],
 };
 
-const stubs: Guide[] = [
-  {
-    slug: "egypt-site-saint-catherine",
-    title_ar: "دير سانت كاترين وتوابعه",
-    title_en: "Saint Catherine's Monastery and its surroundings",
-    kicker_ar: "مواقع أثرية · سيناء",
-    kicker_en: "Archaeological sites · Sinai",
-    image: U("2022/10/img_4161.jpg"),
-    blocks: [
-      { type: "P", ar: "هذه الصفحة قيد الإعداد وسيتم إضافة تفاصيلها قريباً.", en: "This page is being prepared; its details will be added soon." },
-    ],
-  },
-];
+const saintCatherine: Guide = {
+  slug: "egypt-site-saint-catherine",
+  title_ar: "دير سانت كاترين وتوابعه",
+  title_en: "Saint Catherine's Monastery and its surroundings",
+  kicker_ar: "مواقع أثرية · سيناء",
+  kicker_en: "Archaeological sites · Sinai",
+  image: U("2022/10/img_4149.jpg"),
+  blocks: [
+    { type: "H3", ar: "دير سانت كاترين وتوابعه", en: "Saint Catherine's Monastery and its surroundings", noNumber: true },
+    { type: "P", ar: "على سفوح جبل سيناء ، حيث تلقى موسى الوصايا العشر من الله ، يقع أحد أقدم الأديرة العاملة في العالم ، يعرف باسم دير القديسة كاترين ، اسمه الفعلي هو دير الله المقدس لجبل سيناء ، تم بناؤه بأمر من الامبراطور البيزنطي جستنيان الأول (527-565م) في 548-565 ميلادي لايواء الرهبان الذين كانوا يعيشون في شبه جزيرة سيناء منذ القرن الرابع الميلادي ، استشهدت القديسة كاترين في أوائل القرن الرابع الميلادي حيث يحمل الدير اسمها لاكتشاف رهبانها جسدها بالقرب من جبل سانت كاترين في القرن التاسع الميلادي ، حيث تم وضعه من قبل الملائكة بعد استشهادها", en: "On the slopes of Mount Sinai, where Moses received the Ten Commandments from God, stands one of the oldest working monasteries in the world, known as the Monastery of Saint Catherine; its actual name is the Sacred Monastery of God-Trodden Mount Sinai. It was built by order of the Byzantine emperor Justinian I (527–565 AD) in 548–565 AD to house the monks who had lived in the Sinai peninsula since the fourth century. Saint Catherine was martyred in the early fourth century, and the monastery bears her name because its monks discovered her body near Mount Saint Catherine in the ninth century, where it had been placed by angels after her martyrdom." },
+    { type: "P", ar: "ويشتمل الدير على هياكل متعددة ، أهمها كنيسة تجلي السيد المسيح المخلص ، والتي تضم في حد ذاتها تسع كنائس أصغر ، احدى هذه الكنائس هي الكنيسة المحترقة التي تكلم عندها الله مع النبي موسى ، يشتمل دير سانت كاترين أيضا على عشر كنائس أخرى ، وأماكن اقامة الرهبان ، وقاعة طعام ، ومكبس زيتون ،وصناديق عظام الموتى ، ومسجد فاطمي من القرن الثاني عشر الميلادي ، ومكتبة تضم كتبا نادرة و6000 مخطوطة", en: "The monastery includes many structures, the most important being the Church of the Transfiguration of Christ the Saviour, which itself contains nine smaller chapels, one of them the Chapel of the Burning Bush where God spoke to the Prophet Moses. Saint Catherine's also includes ten further churches, the monks' quarters, a refectory, an olive press, ossuaries, a twelfth-century Fatimid mosque, and a library holding rare books and 6,000 manuscripts." },
+    { type: "P", ar: "أوقات عمل واسعار تذاكر دير سانت كاترين وتوابعه : مفتوح يوميا من الساعة 8 صباحا وحتى الساعة 5 مساء ، وتذاكر الدخول للأجانب 200 جنيه مصري ، وللمصريين والعرب 10 جنيه مصري ، وللطلبة نصف اسعار هذه التذاكر", en: "Opening hours and tickets for Saint Catherine's Monastery: open daily from 8 am to 5 pm; entry is 200 Egyptian pounds for foreigners and 10 pounds for Egyptians and Arabs, with half price for students." },
+    g("2022/10/img_4149.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4150.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4151.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4152.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4153.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4154.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4155.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4156.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    g("2022/10/img_4157.jpg", "دير سانت كاترين بسيناء", "Saint Catherine's Monastery in Sinai"),
+    { type: "H3", ar: "المسجد الفاطمي", en: "The Fatimid Mosque" },
+    { type: "P", ar: "يقع المسجد الفاطمي في دير القديسة كاترين حيث بني عام 500 هـ / 1106 م في عهد الخليفة الفاطمي الآمر بأحكام الله ، وجاء بنائة داخل الدير ثمرة العلاقة الطيبة بين المسلمين والمسيحيين التى شهدت ذروتها فى الخلافة الفاطمية ، كما عمل الخلفاء الفاطمين أثناء فترة حكمهم على بناء المساجد في الأماكن المقدسة ، حيث أصبح المسجد الفاطمي في دير سانت كاترين محطة للحجاج في طريقهم الى مكة وتركوا كتابات تذكارية عديدة ما زالت على محراب الجامع الى الآن", en: "The Fatimid Mosque stands inside Saint Catherine's Monastery, built in 500 AH / 1106 AD in the reign of the Fatimid caliph al-Amir bi-Ahkam Allah. Its construction within the monastery was the fruit of the good relations between Muslims and Christians that peaked under the Fatimid caliphate, during which the caliphs built mosques at holy places. The mosque became a station for pilgrims on their way to Mecca, and they left many commemorative inscriptions that remain on its mihrab to this day." },
+    { type: "P", ar: "المسجد يقع في الجزء الشمالي الغربي داخل الدير ويواجه الكنيسة الرئيسية ، حيث تتعانق مئذنته مع برج الكنيسة وتخطيطه مستطيل ينقسم لستة أجزاء بواسطة عقود نصف دائرية من الحجر الجرانيتى المنحوت ثلاثة عقود موازية لجدار القبلة وأربعة متعامدة عليه وله ثلاثة محاريب الرئيسي متوج بعقد ذو أربعة مراكز كالموجود فى الجزء القديم من الجامع الأزهر وله منبر خشبي آية في الجمال يعد أحد ثلاثة منابر خشبية كاملة من العصر الفاطمي ، وللجامع مئذنة جميلة ، تتكون من دورتين قطاعهما مربع في منظر لا يتكرر الا في مصر هذا التعانق والوحدة التي تجمع الأديان في بوتقة واحدة", en: "The mosque lies in the north-western part of the monastery facing the main church, its minaret embracing the church tower. Its rectangular plan is divided into six parts by semicircular arches of carved granite — three parallel to the qibla wall and four perpendicular to it — and it has three mihrabs, the main one crowned with a four-centred arch like that in the old part of al-Azhar Mosque. Its wooden minbar is a marvel of beauty, one of only three complete Fatimid-period wooden pulpits, and the mosque has a beautiful minaret of two square-sectioned storeys, in a scene of embrace and unity gathering religions in one crucible that is found nowhere but Egypt." },
+    { type: "P", ar: "أوقات عمل المسجد الفاطمي : مفتوح يوميا من الساعة 9 صباحا وحتى الساعة 3 مساء", en: "Opening hours of the Fatimid Mosque: open daily from 9 am to 3 pm." },
+    g("2022/10/img_4151-1.jpg", "المسجد الفاطمي بدير سانت كاترين", "The Fatimid Mosque at Saint Catherine's Monastery"),
+    g("2022/10/img_4151-2.jpg", "المسجد الفاطمي بدير سانت كاترين", "The Fatimid Mosque at Saint Catherine's Monastery"),
+    { type: "H3", ar: "مكتبة دير سانت كاترين", en: "The library of Saint Catherine's Monastery" },
+    { type: "P", ar: "تعد مكتبة دير القديسة كاترين ، مع كتبها ومخطوطاتها النادرة ، واحدة من أهم المكتبات المرتبطة بأي دير ، تقع في مبنى قديم الى الجنوب من كنيسة تجلي السيد المسيح المخلص ، وتحتوي على حوالي 6000 مخطوطة حول مواضيع مختلفة ، بما في ذلك الدين والتاريخ والجغرافيا والفلسفة ، يرجع تاريخ أقدمها الى القرن الرابع الميلادي ، تحتوي مجموعة المخطوطات في المكتبة على العديد من اللغات ، بما في ذلك 2،319 باللغة اليونانية ، و600 باللغة العربية ، و284 باللغة اللاتينية ، و86 باللغة الجورجية", en: "With its rare books and manuscripts, the library of Saint Catherine's Monastery is one of the most important libraries attached to any monastery. It occupies an old building south of the Church of the Transfiguration and holds about 6,000 manuscripts on various subjects, including religion, history, geography and philosophy, the oldest dating to the fourth century AD. The collection covers many languages, including 2,319 in Greek, 600 in Arabic, 284 in Latin and 86 in Georgian." },
+    { type: "P", ar: "قام مشروع لحفظ المكتبة ، تم الانتهاء منه في نوفمبر 2017 ، بالقاء الضوء على مخطوطة طبية من القرن الخامس الى السادس تضمنت مقتطفات من أعمال أبقراط ، بالاضافة الى أعمال مؤلف مجهول حتى الآن", en: "A conservation project for the library, completed in November 2017, brought to light a fifth- to sixth-century medical manuscript containing extracts from the works of Hippocrates as well as works by an author still unidentified." },
+    { type: "P", ar: "أوقات عمل مكتبة دير سانت كاترين : مفتوح يوميا من الساعة 9 صباحا وحتى الساعة 3 مساء", en: "Opening hours of the monastery library: open daily from 9 am to 3 pm." },
+    g("2022/10/img_4159.jpg", "مكتبة دير سانت كاترين", "The library of Saint Catherine's Monastery"),
+    g("2022/10/img_4159-1.jpg", "مكتبة دير سانت كاترين", "The library of Saint Catherine's Monastery"),
+    { type: "H3", ar: "كنيسة العليقة", en: "The Chapel of the Burning Bush" },
+    { type: "P", ar: "وفقا للكتاب المقدس ، أمر الله موسى أن يخرج بني اسرائيل من مصر عندما تحدث اليه عند العليقة الملتهبة التى على الرغم من وجود النار الا انها لم تتأثر بلهيبها ، وقامت الامبراطورة هيلينا ، والدة قسطنطين الكبير (272-337م) ، أول امبراطور روماني يعتنق المسيحية ، ببناء كنيسة في موقع العليقة الملتهبة في القرن الرابع الميلادي", en: "According to the Bible, God commanded Moses to lead the Israelites out of Egypt when He spoke to him at the burning bush, which, despite the fire, was untouched by its flames. The Empress Helena, mother of Constantine the Great (272–337 AD), the first Roman emperor to embrace Christianity, built a church on the site of the burning bush in the fourth century AD." },
+    { type: "P", ar: "كما قام الامبراطور جستنيان الأول (527-565م) باعادة بنائها ، والذي جعلها داخل كنيسة تجلي السيد المسيح المخلص الكبيرة التي بناها ، ويحدد موقع العليقة الملتهبة مذبح صغير على أرضية رخامية يقع مباشرة فوق جذورها ، وعلى الجانب الأخر من الجدار الذى يقع خلف المذبح تتألق الشجرة الملتهبة التى كانت داخل الكنيسة حتى يومنا هذا", en: "Emperor Justinian I (527–565 AD) rebuilt it and placed it inside the great Church of the Transfiguration that he built. The site of the burning bush is marked by a small altar on a marble floor standing directly above its roots, and on the other side of the wall behind the altar the burning bush that stood inside the church still flourishes to this day." },
+    { type: "P", ar: "أوقات عمل واسعار تذاكر كنيسة العليقة : مفتوح يوميا من الساعة 9 صباحا وحتى الساعة 3 مساء ، والتذاكر للاجانب 140 جنيه مصرى ، وللمصريين والعرب 20 جنيه مصري ، وللطلبة نصف السعر المذكور", en: "Opening hours and tickets for the Chapel of the Burning Bush: open daily from 9 am to 3 pm; tickets are 140 Egyptian pounds for foreigners and 20 pounds for Egyptians and Arabs, with half price for students." },
+    g("2022/10/img_4160-1.jpg", "كنيسة العليقة بدير سانت كاترين", "The Chapel of the Burning Bush"),
+    g("2022/10/img_4160.jpg", "كنيسة العليقة بدير سانت كاترين", "The Chapel of the Burning Bush"),
+  ],
+};
 
 export const egyptSitesGuides: Guide[] = [
   mainSites,
@@ -548,5 +576,5 @@ export const egyptSitesGuides: Guide[] = [
   abuSimbel,
   pompeysPillar,
   abuMena,
-  ...stubs,
+  saintCatherine,
 ];
