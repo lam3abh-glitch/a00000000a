@@ -75,9 +75,9 @@ function Country() {
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "كمبالا", value_en: "Kampala" },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "شيلينغ أوغندي", value_en: "Ugandan shilling" },
                   { label_ar: "السكان", label_en: "Population", value_ar: "24.2 مليون", value_en: "24.2 million" },
-                  { label_ar: "المساحة", label_en: "Area", value_ar: "236,040 كم²", value_en: "236,040 km²" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "236.040 كم²", value_en: "236,040 km²" },
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
-                  { label_ar: "الاستقلال", label_en: "Independence", value_ar: "1962", value_en: "1962" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1962", value_en: "1962" },
                 ]
               : c.slug === "spain"
               ? [

@@ -1,10 +1,11 @@
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import type { Lang } from "@/lib/i18n";
+import ahmadKampalaAsset from "@/assets/ahmad-kampala.png.asset.json";
 
 const IMG = (name: string, month: string) =>
   `https://i0.wp.com/100region.com/wp-content/uploads/${month}/${name}?ssl=1`;
 
-const AHMAD_KAMPALA = IMG("img_0718.jpg", "2022/01");
+const AHMAD_KAMPALA = ahmadKampalaAsset.url;
 const SAFARI = IMG("img_3050.jpg", "2022/01");
 const PEOPLE = IMG("img_2102.jpg", "2022/01");
 const EMBLEM_MAP = IMG("img_4242.jpg", "2022/04");
