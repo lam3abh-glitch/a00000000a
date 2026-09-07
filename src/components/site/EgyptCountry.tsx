@@ -6,7 +6,7 @@ import pyramidsAerial from "@/assets/egypt-pyramids-aerial.jpg";
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
 const EMBLEM_MAP = IMG("2022/04/img_4175.jpg");
-const FLAG = IMG("2022/03/img_3559-1.jpg");
+const FLAG = "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg";
 const AHMAD_NILE = IMG("2022/01/img_3805.jpg");
 const NILE_LAND = IMG("2022/10/img_4102-1.jpg");
 
