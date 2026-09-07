@@ -72,12 +72,34 @@ function City() {
 
   // Split article lines into pre-attractions prelude (intro, history, geography, etc.)
   // and a list of attraction blocks (each starting at an H5).
+  // Any H3 heading that sits immediately before the first H5 block is treated as the
+  // attractions section heading and rendered above the attractions list.
   type Attraction = { title: string; paragraphs: string[]; images: string[] };
-  const { prelude, attractions } = useMemo(() => {
+  const { prelude, attractionsHeading, attractions } = useMemo(() => {
     const pre: ArticleLine[] = [];
     const list: Attraction[] = [];
     let current: Attraction | null = null;
-    for (const line of article?.lines ?? []) {
+    let pendingHeading: ArticleLine | null = null;
+
+    const lines = article?.lines ?? [];
+    for (let idx = 0; idx < lines.length; idx++) {
+      const line = lines[idx];
+
+      if (line.kind === "H3" && !current) {
+        // Look ahead: if the next content-bearing lines are H5s, this H3 is the
+        // attractions section heading.
+        let hasH5 = false;
+        for (let j = idx + 1; j < lines.length; j++) {
+          const next = lines[j];
+          if (next.kind === "H5") { hasH5 = true; break; }
+          if (next.kind === "H3" || next.kind === "H4") break;
+        }
+        if (hasH5) {
+          pendingHeading = line;
+          continue;
+        }
+      }
+
       if (line.kind === "H5") {
         current = { title: line.value, paragraphs: [], images: [] };
         list.push(current);
@@ -95,7 +117,7 @@ function City() {
         pre.push(line);
       }
     }
-    return { prelude: pre, attractions: list };
+    return { prelude: pre, attractionsHeading: pendingHeading, attractions: list };
   }, [article]);
 
   const renderLine = (line: ArticleLine, index: number) => {
