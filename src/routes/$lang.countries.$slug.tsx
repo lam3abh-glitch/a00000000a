@@ -11,6 +11,7 @@ import { TanzaniaCountry } from "@/components/site/TanzaniaCountry";
 import { EthiopiaCountry } from "@/components/site/EthiopiaCountry";
 import { SeychellesCountry } from "@/components/site/SeychellesCountry";
 import { ZimbabweCountry } from "@/components/site/ZimbabweCountry";
+import { EgyptCountry } from "@/components/site/EgyptCountry";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
