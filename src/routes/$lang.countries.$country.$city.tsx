@@ -402,6 +402,11 @@ function City() {
             </div>
             {attractions.length > 0 && (
               <div className={`mx-auto max-w-6xl px-4 sm:px-6 mt-10 sm:mt-14 md:mt-20 ${lang === "ar" ? "text-right" : "text-left"}`}>
+                {attractionsHeading && (
+                  <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-midnight leading-tight mb-8 sm:mb-10">
+                    {attractionsHeading.value.replace(/\\n/g, "").trim()}
+                  </h2>
+                )}
                 <div className="space-y-12 sm:space-y-16 md:space-y-24">
                   {attractions.map(renderAttraction)}
                 </div>
