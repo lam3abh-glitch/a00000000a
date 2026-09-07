@@ -22,3 +22,6 @@
 - [x] Ukraine landing page (info at top, Kyiv polaroid, emblem/map, about/weather/language)
 - [x] Kyiv + Odesa city pages (AR + EN)
 - [x] "What Ukraine is famous for" added under the cities
+
+# Morocco
+- [x] Country page (zellige theme), 10 cities, 10 extra pages (program, hammam, breeds, museums, water sports, produce, fashion, food, album, brief)

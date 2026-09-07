@@ -15,6 +15,7 @@ import { albaniaGuides } from "./albania-guides";
 import { irelandGuides } from "./ireland-guides";
 import { britainGuides } from "./britain-guides";
 import { scotlandGuides, scotlandGuidesAll } from "./scotland-guides";
+import { moroccoGuides } from "./morocco-guides";
 import { londonLandmarkGuides } from "./britain-guides-london";
 import { germanyGuides, germanyGuidesAll } from "./germany-guides";
 import { pragueGuidesA } from "./czech-guides-prague-a";
@@ -45,6 +46,7 @@ export const GUIDES_BY_COUNTRY: Record<string, Guide[]> = {
   ireland: irelandGuides,
   britain: britainGuides,
   scotland: scotlandGuides,
+  morocco: moroccoGuides,
   germany: germanyGuides,
   "czech-republic": czechExtraGuides,
 };
@@ -64,6 +66,7 @@ export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   ireland: { ar: "أيرلندا", en: "Ireland" },
   britain: { ar: "بريطانيا", en: "Britain" },
   scotland: { ar: "اسكتلندا", en: "Scotland" },
+  morocco: { ar: "المغرب", en: "Morocco" },
   germany: { ar: "ألمانيا", en: "Germany" },
   "czech-republic": { ar: "التشيك", en: "Czechia" },
 };
@@ -88,6 +91,7 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   ireland: irelandGuides,
   britain: [...britainGuides, ...londonLandmarkGuides],
   scotland: scotlandGuidesAll,
+  morocco: moroccoGuides,
   germany: germanyGuidesAll,
   "czech-republic": [...pragueLandmarkGuides, ...czechExtraGuides],
 };
