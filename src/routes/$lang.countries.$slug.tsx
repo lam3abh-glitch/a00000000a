@@ -169,14 +169,7 @@ function Country() {
                   { label_ar: "اللغة", label_en: "Language", value_ar: "الإنجليزية والاسكتلندية", value_en: "English & Scots" },
                 ]
               : c.slug === "morocco"
-              ? [
-                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "الرباط", value_en: "Rabat" },
-                  { label_ar: "العملة", label_en: "Currency", value_ar: "درهم مغربي", value_en: "Moroccan dirham" },
-                  { label_ar: "السكان", label_en: "Population", value_ar: "36.4 مليون", value_en: "36.4 million" },
-                  { label_ar: "المساحة", label_en: "Area", value_ar: "710,850 كم²", value_en: "710,850 km²" },
-                  { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
-                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "400 ق.م", value_en: "400 BC" },
-                ]
+              ? null
               : c.slug === "britain"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "لندن", value_en: "London" },
