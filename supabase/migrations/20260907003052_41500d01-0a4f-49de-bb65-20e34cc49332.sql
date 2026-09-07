@@ -1,0 +1,2 @@
+UPDATE public.cities SET hero_image = 'https://i0.wp.com/100region.com/wp-content/uploads/2022/10/img_4459.jpg?ssl=1'
+WHERE slug = 'fes' AND country_id = (SELECT id FROM public.countries WHERE slug = 'morocco');
