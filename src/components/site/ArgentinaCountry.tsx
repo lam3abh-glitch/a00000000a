@@ -6,8 +6,8 @@ import argentinaAnthem from "@/assets/argentina-anthem.mp3.asset.json";
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
 const EMBLEM_MAP = IMG("2022/04/img_4307.jpg");
-const FLAG = IMG("2022/04/img_4610.png");
-const LANDSCAPE = IMG("2022/04/img_4764.jpg");
+const FLAG = "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg";
+const LANDSCAPE = IMG("2022/02/img_4603.jpg");
 
 const SKY = "#74ACDF";
 const SUN = "#F6B40E";
@@ -131,9 +131,9 @@ export function ArgentinaCountry({ lang, intro }: { lang: Lang; intro: string })
         <figure className="mt-10">
           <img
             src={LANDSCAPE}
-            alt={rtl ? "مناظر من الأرجنتين" : "Landscapes of Argentina"}
+            alt={rtl ? "أحمد في ملعب لا بومبونيرا" : "Ahmad at La Bombonera stadium"}
             loading="lazy"
-            className="w-full max-h-[420px] object-cover shadow-md"
+            className="w-full max-h-[520px] object-contain bg-white shadow-md"
           />
         </figure>
       </div>
