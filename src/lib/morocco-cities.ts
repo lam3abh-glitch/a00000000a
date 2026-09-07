@@ -291,13 +291,10 @@ P|في سنة 146 قبل الميلاد ، غزا الرومان الجزيرة 
 P|مع بناء مدينة جديدة من قبل سلطان محمد عبد الله في سنة 1765 عرفت المدينة تطورا كبيرا ، حيث كانت من أهم المحطات التجارية حتى أوائل القرن العشرين ، اليوم أصبحت الصويرة موطنا للسلام الذي ألهم فنانين من مختلف أنحاء العالم ، الصويرة عضو في التراث العالمي لليونسكو ، فالمدينة القديمة قد مرت بحقب عديدة لكن ظلت محمية من ويلات الزمن ، ويكمن وراء الجدران مدينة مشرقة بأزقتها المتشابكة وساحاتها الصغيرة ومنازلها البيضاء ، وقد كانت ديكور للفيلم الأسطوري عطيل لاورسون ويلز ، اذ أنها تلهم وتأسر السينمائيين ، ولقد أعاد ريدلي سكوت ، بناء مجسم للقدس بها من أجل فيلمه «مملكة الجنة» ، جيمي هندريكس وموسيقيين من السبعينيات كانوا يجدون فيها متعتهم ، وهي الآن مازالت تعيش على ايقاع موسيقى كناوة
 H3|الأماكن السياحية
 H5|قلعة كاستيلو دي موكادور
-IMG|${U("2022/10/img_4454.jpg")}||قلعة كاستيلو دي موكادور
 H5|مدن الصويرة
 H5|قصبة بولعوان
-IMG|${U("2022/10/img_4454.jpg")}||قصبة بولعوان
 H5|ميناء الصويرة
 H5|موسيقى كناوة
-IMG|${U("2022/10/img_4454.jpg")}||موسيقى كناوة
 `,
   ),
   chefchaouen: article(
@@ -326,13 +323,10 @@ P|البلدة ذات الجبلين ببيئة طبيعية استثنائية 
 P|فضواحيها مليئة بعجائب الطبيعة مثل قنطرة ربي في أشقور ، وهي عبارة عن صخرة مقوسة تتواجد فوق منحدر يبلغ طوله 25 مترا ، عيون دافقة ، غابات التنوب ، أشجار الصنوبر والأرز تغطي الحديقة الوطنية الطبيعية في تلاسمتان (60 ألف هكتار) ، حديقة تالمبوت ، جبال وغابات ومنحدرات غمارة ، الحديقة الاقليمية الطبيعية في بوهاشم (105 ألف هكتار) كلها عناصر خلقت لتزيد من جمالية وسحر المنطقة ، بالقرب من المدينة هناك عين اسمها رأس الماء تزود شفشاون بالماء الشروب ، وتشكل أيضا مكانا تطيب فيه النزهة ، شأنها في ذك شأن مغارة توغوبيت أو شلالات شرافات ، ومن الممكن أيضا اصطياد الأسماك في المنطقة ، هذا ويعد العقيب والنسر الذهبي والوشق وثعلب الماء والقرود من بين الحيوانات البرية المحمية التي تزخر بها المنطقة
 H3|الأماكن السياحية
 H5|شلالات أقشور
-IMG|${U("2022/10/img_4454.jpg")}||شلالات أقشور
 H5|حديقة تلاسيمتان الوطنية
 H5|الجامع الكبير
-IMG|${U("2022/10/img_4454.jpg")}||الجامع الكبير
 H5|محلات السجاد
 H5|مدينة شفشاون السابقة
-IMG|${U("2022/10/img_4454.jpg")}||مدينة شفشاون السابقة
 `,
   ),
   tangier: article(
@@ -357,13 +351,10 @@ H3|رأس مالاباطا
 P|يوجد رأس مالاباطا على بعد 10 كيلومترات من طنجة ، وفيه سيتحقق حلمكم بالاستمتاع بتأمل شروق الشمس على البحر الأبيض المتوسط ، والطريق المؤدية الى المنارة البحرية لرأس مالاباطا متميزة بخلجانها الصغيرة وكذا بشواطئ رملية خالية تمنحكم اطلالة مدهشة على مضيق جبل طارق ، وكذا السواحل الاسبانية ، ما أن تصلوا الى المنارة ستحضون باطلالة على مشهد ممتع رائع للمدينة ولخليج طنجة ، وبعيدا على نفس الطريق ، ستجدون أنفسككم في القصر الصغير ، وهو ميناء صغير للصيد يقام فيه كل يوم سبت سوق أسبوعي كثير الرواج مليء بزخم الألوان ، وغير بعيد سيلقاكم شاطئ رملي غاية في الروعة ، كل ذلك في طنجة حيث تعانق الشمس البحر المتوسط والمحيط الأطلسي
 H3|الأماكن السياحية
 H5|الجامع الكبير
-IMG|${U("2022/10/img_4454.jpg")}||الجامع الكبير
 H5|القصبة
 H5|رأس سبارطيل
-IMG|${U("2022/10/img_4454.jpg")}||رأس سبارطيل
 H5|مغارة هرقل
 H5|حدائق المندوبية
-IMG|${U("2022/10/img_4454.jpg")}||حدائق المندوبية
 `,
   ),
   agadir: article(
@@ -401,19 +392,16 @@ P|تتميز تغازوت بمشاهدها الرائعة ، مناظرها مب
 P|تغازوت هي أيضا نقطة ركوب الأمواج الشهيرة على مستوى العالم ، فاذا كنت من محبي الرياضات على سطح الماء فهذا هو المكان المناسب لك ، تضرب الرياح المحيط الأطلسي بقنوات رائعة جعلت من هذا الموقع الأسطوري مقصدا لراكبي الأمواج منذ 1970 ، هل أنت حديث العهد بركوب الأمواج ، لا داع للقلق : هناك مجموعة متنوعة من الموجات تصل الى الشاطئ تجعله مكانا رائعا لراكبي الأمواج من جميع المستويات ، خض المغامرة على بعد بضعة أميال من أغادير للاستمتاع بالمناظر وأمواج المحيط الخلابة في تغازوت
 H3|الأماكن السياحية
 H5|زيت الأركان
-IMG|${U("2022/10/img_4454.jpg")}||زيت الأركان
 H5|كروكو بارك اكادير
 H5|أملوا
-IMG|${U("2022/10/img_4454.jpg")}||أملوا
 H5|تغازوت
 H5|ميرلفت
-IMG|${U("2022/10/img_4454.jpg")}||ميرلفت
 `,
   ),
   fes: article(
     "https://100region.com/?p=25847",
     "السياحة في المغرب – فاس",
-    U("2022/10/img_4440.jpg"),
+    U("2022/10/img_4459.jpg"),
     String.raw`
 IMG|${U("2022/10/img_4446.jpg")}||
 P|فاس التاريخية .. فاس العريقة هي مدينة نابضة بالألوان الزاهية والهندسة المعمارية والحرف التقليدية ، فاس باعتبارها أقدم مدينة تاريخية مغربية ، تزخر جدرانها بفسيفساء خلابة وزخارف دقيقة في تصميمات هندسية ترسخت رغم مرور الزمن لتحكي قصة السلالات المغربية المتعاقبة ، مما يطلق العنان لخيال كل من يجولها ، هذه المدينة التي أسسها الأدارسة ، لا تضم فقط العديد من القصور ، ولكن أيضا أقدم جامعة في العالم ، جامعة القرويين ، ويتيح التجول بين ازقتها لذة التمتع بأدق التفاصيل المعمارية والحرف اليدوية التقليدية ، كما أنها فرصة للتعمق في مدينة ذات طابع علمي وروحي
@@ -449,13 +437,10 @@ P|في افران والمناطق المحيطة بها تكثر المساحا
 P|كما يمكنك استكشاف هذه البوابة تماما بالتزلج على الجليد حيث تدعوك منتجعات التزلج في فصل الشتاء في مشليفن وفي جبل هبري الى رحلة بحرية الى أسفل المنحدرات الثلجية على الزلاجات أو على ألواح التزلج
 H3|الأماكن السياحية
 H5|ضاية عوا
-IMG|${U("2022/10/img_4454.jpg")}||ضاية عوا
 H5|جامعة الأخوين
 H5|نهر عين فيتال
-IMG|${U("2022/10/img_4454.jpg")}||نهر عين فيتال
 H5|منتجع التزلج ميشليفن
 H5|أسد افران
-IMG|${U("2022/10/img_4454.jpg")}||أسد افران
 `,
   ),
 };
@@ -739,12 +724,9 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "With the construction of a new city by Sultan Mohammed ben Abdallah in 1765, the city underwent significant development, becoming one of the most important trading posts until the early 20th century. Today, Essaouira is a haven of peace that has inspired artists from around the world. Essaouira is a UNESCO World Heritage site; its old medina has passed through many eras but has remained protected from the ravages of time. Behind its walls lies a radiant city with intertwined alleys, small squares, and white houses. It was the set for Orson Welles' legendary film 'Othello,' as it inspires and captivates filmmakers. Ridley Scott rebuilt a replica of Jerusalem here for his film 'Kingdom of Heaven.' Jimi Hendrix and musicians from the 1970s were captivated by its charm, and today, it still lives to the rhythm of Gnaoua music.",
       "Tourist Attractions",
       "Castelo de Mogador Fortress",
-      "Castelo de Mogador Fortress",
       "The Medina of Essaouira",
       "Kasbah Boulaouane",
-      "Kasbah Boulaouane",
       "Port of Essaouira",
-      "Gnaoua Music",
       "Gnaoua Music",
     ],
   },
@@ -772,12 +754,9 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Its outskirts are full of natural wonders like Qantarat Rabbi in Akchour, a rock arch over a 25-meter-high cliff. Gushing springs, fir, pine, and cedar forests cover the Talassemtane National Park (60,000 hectares), Talembote park, the Ghomara mountains, forests, and cliffs, and the Bouhachem Regional Nature Park (105,000 hectares)—all elements created to enhance the region's beauty and charm. Near the city, there is a spring called Ras El Maa, which supplies Chefchaouen with drinking water and is also a pleasant place for a walk, much like the Toughoubite cave or the Cherafat waterfalls. It is also possible to fish in the area. The Bonelli's eagle, golden eagle, lynx, otter, and monkeys are among the protected wild animals that abound in the region.",
       "Tourist Attractions",
       "Akchour Waterfalls",
-      "Akchour Waterfalls",
       "Talassemtane National Park",
       "The Great Mosque",
-      "The Great Mosque",
       "Carpet Shops",
-      "The old city of Chefchaouen",
       "The old city of Chefchaouen",
     ],
   },
@@ -801,12 +780,9 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Cape Malabata is located 10 kilometers from Tangier, a place where you can realize your dream of watching the sunrise over the Mediterranean Sea. The road to the Cape Malabata lighthouse is notable for its small coves and deserted sandy beaches, offering stunning views of the Strait of Gibraltar and the Spanish coast. Once at the lighthouse, you'll be treated to a magnificent panorama of the city and the Bay of Tangier. Further down the same road, you'll find Ksar Sghir, a small fishing port that hosts a bustling and colorful weekly market every Saturday. Nearby, a splendid sandy beach awaits. This is Tangier, where the sun embraces both the Mediterranean Sea and the Atlantic Ocean.",
       "Tourist Sites",
       "The Grand Mosque",
-      "The Grand Mosque",
       "The Kasbah",
       "Cape Spartel",
-      "Cape Spartel",
       "Caves of Hercules",
-      "Mendoubia Gardens",
       "Mendoubia Gardens",
     ],
   },
@@ -843,12 +819,9 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Taghazout is also a world-famous surfing spot. If you love water sports, this is the place for you. The Atlantic winds create incredible swells that have made this legendary site a go-to destination for surfers since 1970. Are you new to surfing? Don't worry: a variety of waves reach the shore, making it a fantastic spot for surfers of all levels. Venture just a few miles from Agadir to enjoy the breathtaking landscapes and ocean waves of Taghazout.",
       "Tourist Attractions",
       "Argan Oil",
-      "Argan Oil",
       "Crocoparc Agadir",
       "Amlou",
-      "Amlou",
       "Taghazout",
-      "Mirleft",
       "Mirleft",
     ],
   },
@@ -887,12 +860,9 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "You can also explore this gateway on skis, as the winter ski resorts of Michlifen and Jbel Hebri invite you to cruise down the snowy slopes on skis or a snowboard.",
       "Tourist Attractions",
       "Dayet Aoua",
-      "Dayet Aoua",
       "Al Akhawayn University",
       "Ain Vittel Spring",
-      "Ain Vittel Spring",
       "Michlifen Ski Resort",
-      "The Lion of Ifrane",
       "The Lion of Ifrane",
     ],
   },
