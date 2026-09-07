@@ -181,6 +181,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1960", value_en: "1960" },
                 ]
+              : c.slug === "tanzania"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "دودوما", value_en: "Dodoma" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "شيلينغ تنزاني", value_en: "Tanzanian shilling" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "57.3 مليون", value_en: "57.3 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "945.203 كم²", value_en: "945,203 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1964", value_en: "1964" },
+                ]
               : c.slug === "britain"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "لندن", value_en: "London" },
