@@ -176,6 +176,26 @@ export function MoroccoCountry({ lang, intro }: { lang: Lang; intro: string }) {
             </div>
           ))}
         </div>
+
+        <div className={`mt-10 ${rtl ? "text-right" : "text-left"}`}>
+          <Link
+            to="/$lang/countries/$country/guides/$topic"
+            params={{ lang, country: "morocco", topic: "in-brief" }}
+            className="inline-flex items-center gap-2 border px-5 py-3 text-sm transition min-h-[44px]"
+            style={{ borderColor: `${CLAY}80`, color: CLAY, background: "#fff" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = CLAY;
+              e.currentTarget.style.color = "#fff";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#fff";
+              e.currentTarget.style.color = CLAY;
+            }}
+          >
+            {rtl ? "اقرأ المزيد" : "Read more"}
+            <span aria-hidden>{rtl ? "←" : "→"}</span>
+          </Link>
+        </div>
       </div>
 
       {/* EMBLEM / FLAG + ANTHEM */}
