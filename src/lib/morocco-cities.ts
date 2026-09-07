@@ -64,93 +64,91 @@ P|تحتل حديقة تاماريس المائية مساحة كبيرة تقد
   marrakesh: article(
     "https://100region.com/?p=11059",
     "السياحة في المغرب – مراكش",
-    U("2022/05/img_6580.jpg"),
+    U("2022/05/img_6567.jpg"),
     String.raw`
 H3|مراكش .. أيقونة السياحة في المغرب
-IMG|${U("2022/05/img_6580.jpg")}||مراكش .. أيقونة السياحة في المغرب
+IMG|${U("2022/05/img_6567.jpg")}||مراكش .. أيقونة السياحة في المغرب
 P|تعتبر مراكش من اهم مدن المغرب السياحية وعاصمة الامبراطورية الاندلسية حيث تمتاز بجمالها وطبيعتها الخلابة ، ففيها التناغم والتمازج بين جمال الحاضر وروعة الماضي تضم مراكش العديد من الاسوار التاريخية والمباني والحدائق العملاقة ، وتعد مراكش في هذا العصر معقلاً للحضارة الإسلامية ومركزاً فكرياً للعلوم والفلسفة فهي تضم العديد من المتاحف والمعالم الأثرية التي تجذب العديد من السياح ، إضافة إلى العديد من اهم اماكن السياحة بالمغرب التي للعطلة طعم آخر وسط اجواء مغربية، كما يتوفر فيها العديد من المطاعم والمقاهي والأسواق والأنشطة الترفيهية
 P|وصف مراكش .. على غرار المدن الأخرى في المملكة المغربية ، تعتبر المدينة القديمة لمراكش ، التي تم ادراجها في قائمة اليونسكو للتراث العالمي منذ عام 1985م ، من المناطق التاريخية بمراكش التي تستقطب عددا كبيرا من الزوار ، محاطة بأسوار من جميع الجهات ، وتشكل عدة بوابات للمرور ، تمثل المدينة القديمة القلب النابض لمراكش الحمراء التي تشتهر بمعالمها السياحية المتعددة ، ليس بعيدا عن المدخل ، بين المدينة القديمة والمدينة المعاصرة ، يلفت انتباه الزائر مسجد الكتبية ، المحاط بمساحات خضراء ، ويعتبر من المعالم الراسخة في تاريخ المغرب ، تم بناؤه من قبل الموحدين وكان بمثابة نموذج لمهندسي جيرالدا في اشبيلية ، في قلب أحياء مراكش القديمة ، هناك بازارات وأسواق تقليدية ومتاحف ورياض ومقاهي حديثة وتقليدية ، كل هذه الأماكن تطل على ساحة جامع الفنا والتي تتحول في الليل الى مسرح كبير للفرجة
 H3|\n
 H5|ساحة جامع الفنا
 IMG|${U("2022/05/img_6564.jpg")}||ساحة جامع الفنا
+IMG|${U("2022/05/img_6565.jpg")}||ساحة جامع الفنا
+IMG|${U("2022/05/img_6566.jpg")}||ساحة جامع الفنا
+IMG|${U("2022/05/img_6568.jpg")}||ساحة جامع الفنا
 P|ساحة جامع الفنا يرجع تاريخها الى عهد تأسيس مدينة مراكش ، حيث بنيت في عهد الدولة المرابطية خلال القرن الخامس عشر لكن أهميتها زادت بعد بناء مسجد الكتيبة بعد قرابة قرن وكانت هذه الساحة هي نواة التسوق آنذاك ، استغل الملوك الساحة كفناء كبير لاستعراض جيوشهم والوقوف على استعدادات قواتهم قبيل الانطلاق لمعارك توحيد المدن والبلاد وحروب الاستقلال ومنذ ذلك التاريخ وهي تعد من اهم اماكن السياحة في مراكش ورمزا للمدينة يفتخر بحيويتها وجاذبيتها للسياح العرب والاجانب
 H5|متحف مراكش
-IMG|${U("2022/05/img_6565.jpg")}||متحف مراكش
-IMG|${U("2022/05/img_6566.jpg")}||متحف مراكش
-IMG|${U("2022/05/img_6568.jpg")}||متحف مراكش
-IMG|${U("2022/05/img_6569.jpg")}||متحف مراكش
-IMG|${U("2022/05/img_6567.jpg")}||متحف مراكش
-P|من اهم اماكن السياحة في مراكش المغرب وهو من المتاحف المميزة في المدينة حيث يضم مجموعة فريدة من المعروضات التي يجتمع فيها الفن المعاصر والاعمال بالسيراميك والمنسوجات والنقوش القرآنية والقطع النقدية والفخاريات وغير ذلك ، يمكن الوصول الى متحف مراكش من خلال المرور عبر الأزقة الملتوية انطلاقاً من ساحة جامع الفنا المشهورة في مراكش
-IMG|${U("2022/05/img_6573.jpg")}||متحف مراكش
 IMG|${U("2022/05/img_6570.jpg")}||متحف مراكش
-IMG|${U("2022/05/img_6571.jpg")}||متحف مراكش
+IMG|${U("2022/05/img_6573.jpg")}||متحف مراكش
 IMG|${U("2022/05/img_6574.jpg")}||متحف مراكش
+IMG|${U("2022/05/img_6571.jpg")}||متحف مراكش
 IMG|${U("2022/05/img_6572.jpg")}||متحف مراكش
+P|من اهم اماكن السياحة في مراكش المغرب وهو من المتاحف المميزة في المدينة حيث يضم مجموعة فريدة من المعروضات التي يجتمع فيها الفن المعاصر والاعمال بالسيراميك والمنسوجات والنقوش القرآنية والقطع النقدية والفخاريات وغير ذلك ، يمكن الوصول الى متحف مراكش من خلال المرور عبر الأزقة الملتوية انطلاقاً من ساحة جامع الفنا المشهورة في مراكش
 P|اسعار تذاكر متحف مراكيش : 20 درهم مغربي
 P|اوقات زيارة متحف مراكيش المغرب : يوميا من الساعة 09:00 صباحا و حتى الساعة 06:30 مساء
 H5|حدائق ماجوريل
 IMG|${U("2022/05/img_6575.jpg")}||حدائق ماجوريل
+IMG|${U("2022/05/img_6576.jpg")}||حدائق ماجوريل
+IMG|${U("2022/05/img_6577.jpg")}||حدائق ماجوريل
+IMG|${U("2022/05/img_6578.jpg")}||حدائق ماجوريل
 P|حدائق ماجوريل من اجمل الحدائق وأكثرها استقطاباً للسيّاح في مراكش المغرب وهي عبارة عن حدائق استوائية مميزة في تصميمها ومزجها بين الالوان والطبيعة الخضراء . تضم الحدائق نباتات متنوعة بعضها نادر جمعت من القارات الخمس ومن بينها الصبار والنخيل والسراخس ، سميت الحدائق بهذا الاسم نسبة الى الفنان الفرنسي جاك ماجوريل الذي صممها حيث يرجع اصل هذا التصميم الى بلدة نانسي الفرنسية . تعتبر الحدائق الآن من اجمل الاماكن السياحية في مراكش
 H5|الأسواق التجارية
-IMG|${U("2022/05/img_6576.jpg")}||الأسواق التجارية
-IMG|${U("2022/05/img_6577.jpg")}||الأسواق التجارية
-IMG|${U("2022/05/img_6578.jpg")}||الأسواق التجارية
+IMG|${U("2022/05/img_6569.jpg")}||الأسواق التجارية
+IMG|${U("2022/05/img_6579.jpg")}||الأسواق التجارية
+IMG|${U("2022/05/img_6580.jpg")}||الأسواق التجارية
+IMG|${U("2022/05/img_6582.jpg")}||الأسواق التجارية
 P|تعتبر الاسواق التجارية في المدينة القديمة من اهم اماكن السياحة في مراكش واشهر الوجهات للتسوق في المدينة حيث تتميز المدينة القديمة بأزقتها الضيقة وبيوتها الملونة ، توفر المنطقة العديد من المتاجر التي تبيع الهدايا التذكارية المميزة كالأحذية والعطور والتحف النحاسية وغيرها كما يوجد سوق مخصص للجلود حيث تتواجد العديد من المدابغ القديمة في المنطقة
 H5|جامع الكتبية
-IMG|${U("2022/05/img_6579.jpg")}||جامع الكتبية
-IMG|${U("2022/05/img_6580.jpg")}||جامع الكتبية
-IMG|${U("2022/05/img_6582.jpg")}||جامع الكتبية
+IMG|${U("2022/05/img_6584.png")}||جامع الكتبية
 IMG|${U("2022/05/img_6583.jpg")}||جامع الكتبية
+IMG|${U("2022/05/img_6586.jpg")}||جامع الكتبية
+IMG|${U("2022/05/img_6587.jpg")}||جامع الكتبية
 P|جامع الكتبية هو من المعالم الاسلامية الراسخة في تاريخ السياحة في مراكش ، ويقع الجامع وسط مدينة مراكش بالقرب من ساحة جامع الفنا ويعد من اهم معالم السياحة في المغرب ، وتسمية المسجد تعود لـ الكتبيين ، وهو اسم سوق لبيع الكتب كان بمقربة المسجد . تم بناء المسجد عام 1147 م
 P|يعتبر جامع الكتبية من اشهر معالم السياحة في المغرب مراكش يتميز بمأذنته المزخرفة ذات الـ 70 متراً حيث يجتذب عشّاق الفنون المعمارية القديمة من كافة انحاء العالم نظراً لجمال عمارته وزخرفاته الرائعة ، يقع الجامع على مساحة تقدر بـ 5300 متر مربع ويضم أحد عشر قبة منقوشة بالاضافة الى سبعة عشر جناحاً داخلياً ويتميز بمنبره الآلي المتحرك الذي يعكس جمال فن النجارة الاسلامية
 H5|مدرسة علي بن يوسف
-IMG|${U("2022/05/img_6584.png")}||مدرسة علي بن يوسف
-IMG|${U("2022/05/img_6586.jpg")}||مدرسة علي بن يوسف
-IMG|${U("2022/05/img_6587.jpg")}||مدرسة علي بن يوسف
 IMG|${U("2022/05/img_6588.jpg")}||مدرسة علي بن يوسف
+IMG|${U("2022/05/img_6589.jpg")}||مدرسة علي بن يوسف
+IMG|${U("2022/05/img_6590.jpg")}||مدرسة علي بن يوسف
+IMG|${U("2022/05/img_6591.jpg")}||مدرسة علي بن يوسف
+IMG|${U("2022/05/img_6592.jpg")}||مدرسة علي بن يوسف
+IMG|${U("2022/05/img_6593.jpg")}||مدرسة علي بن يوسف
+IMG|${U("2022/05/img_6594.jpg")}||مدرسة علي بن يوسف
 P|مدرسة علي بن يوسف من افضل اماكن السياحة في مراكش تعتبر تحفة معمارية تاريخية فقد أسست عام 1346 ميلادي وكانت تحتضن كبار العلماء والأدباء الذين درّسوا العلوم الدينية والفقهية وعلوم أخرى لذا تعتبر من اشهر مدارس المغرب التاريخية ، المدرسة اليوم هي من اهم الاماكن السياحية في مراكش هي تجتذب السيّاح باعتبارها تحفة أثرية تعكس ازدهار الحضارة المغربية
 H5|قصر الباهية
-IMG|${U("2022/05/img_6589.jpg")}||قصر الباهية
-IMG|${U("2022/05/img_6590.jpg")}||قصر الباهية
-IMG|${U("2022/05/img_6591.jpg")}||قصر الباهية
-IMG|${U("2022/05/img_6592.jpg")}||قصر الباهية
-IMG|${U("2022/05/img_6593.jpg")}||قصر الباهية
-IMG|${U("2022/05/img_6594.jpg")}||قصر الباهية
 IMG|${U("2022/05/img_6595.jpg")}||قصر الباهية
 IMG|${U("2022/05/img_6596.jpg")}||قصر الباهية
 IMG|${U("2022/05/img_6597.jpg")}||قصر الباهية
 IMG|${U("2022/05/img_6598.jpg")}||قصر الباهية
 IMG|${U("2022/05/img_6599.jpg")}||قصر الباهية
+IMG|${U("2022/05/img_6600.jpg")}||قصر الباهية
+IMG|${U("2022/05/img_6601.jpg")}||قصر الباهية
+IMG|${U("2022/05/img_6602.jpg")}||قصر الباهية
+IMG|${U("2022/05/img_6603.jpg")}||قصر الباهية
 P|يعود تاريخ هذا القصر الى عهد الدولة العلوية ويعد من اهم الاماكن السياحية في مراكش المغرب، والتي تجذب السياح من مختلف انحاء العالم للتعرف على روعة فن العمارة المغربي الذي يظهر في الاجنحة الملكية للقصر والقاعات والحدائق واحواض المياه . بني قصر الباهية في القرن التاسع عشر وقد كان مقراً للوزير الكبير بو احمد في ذلك الوقت
 H5|القبة المرابطية
-IMG|${U("2022/05/img_6600.jpg")}||القبة المرابطية
-IMG|${U("2022/05/img_6601.jpg")}||القبة المرابطية
-IMG|${U("2022/05/img_6602.jpg")}||القبة المرابطية
-IMG|${U("2022/05/img_6603.jpg")}||القبة المرابطية
-IMG|${U("2022/05/img_6611.jpg")}||القبة المرابطية
+IMG|${U("2022/05/img_6604.jpg")}||القبة المرابطية
+IMG|${U("2022/05/img_6605.jpg")}||القبة المرابطية
+IMG|${U("2022/05/img_6606.jpg")}||القبة المرابطية
+IMG|${U("2022/05/img_6607.jpg")}||القبة المرابطية
+IMG|${U("2022/05/img_6608.jpg")}||القبة المرابطية
+IMG|${U("2022/05/img_6609.jpg")}||القبة المرابطية
+IMG|${U("2022/05/img_6610.jpg")}||القبة المرابطية
 P|تعتبر القبة المرابطية أقدم معالم مراكش حيث يرجع تاريخها الى عام 1064 فقد بنيت في عهد علي بن يوسف كدار للوضوء للمصلين في جامع بن يوسف ، القبة تعكس فن العمارة المرابطية من خلال بنائها المتين الذي لم يتأثر بتقلبات الزمن بالاضافة الى نظام ايصال الماء اليها والذي يعتبر فريداً من نوعه حيث تعبر المياه عبره من تحت الارض لتصب في الانابيب البرونزية
 H5|حدائق المنار
-IMG|${U("2022/05/img_6610.jpg")}||حدائق المنار
-IMG|${U("2022/05/img_6609.jpg")}||حدائق المنار
-IMG|${U("2022/05/img_6608.jpg")}||حدائق المنار
-IMG|${U("2022/05/img_6607.jpg")}||حدائق المنار
-IMG|${U("2022/05/img_6606.jpg")}||حدائق المنار
-IMG|${U("2022/05/img_6605.jpg")}||حدائق المنار
-IMG|${U("2022/05/img_6604.jpg")}||حدائق المنار
+IMG|${U("2022/05/img_6612.jpg")}||حدائق المنار
+IMG|${U("2022/05/img_6613.jpg")}||حدائق المنار
+IMG|${U("2022/05/img_6614.jpg")}||حدائق المنار
+IMG|${U("2022/05/img_6615.jpg")}||حدائق المنار
+IMG|${U("2022/05/img_6616.jpg")}||حدائق المنار
+IMG|${U("2022/05/img_6617.jpg")}||حدائق المنار
 P|من اجمل الاماكن السياحية في مراكش تقع على بعد حوالي 3 كلم خارج أسوار المدينة وتعتبر متنفساً مثاليا للسكان المحليين للخروج من مشاكل الحياة والحصول على بعض الهدوء ، أنشأت حدائق المنارة في عهد الموحدين أواخر القرن التاسع عشر ، يتوسط الحدائق خزان المنارة الكبير وهي بركة كبيرة تملؤها المياه عمقها مترين ومحيطها 510 أمتار
 H5|سوق مراكش
-IMG|${U("2022/05/img_6612.jpg")}||سوق مراكش
-IMG|${U("2022/05/img_6613.jpg")}||سوق مراكش
-IMG|${U("2022/05/img_6614.jpg")}||سوق مراكش
-IMG|${U("2022/05/img_6615.jpg")}||سوق مراكش
-IMG|${U("2022/05/img_6616.jpg")}||سوق مراكش
-IMG|${U("2022/05/img_6617.jpg")}||سوق مراكش
 IMG|${U("2022/05/img_6624.jpg")}||سوق مراكش
-P|يعتبر هذا السور من اهم الاماكن السياحية في مراكش يعود تاريخ بنائه الى العام 1126 ميلادي وقد بني بهدف حماية المدينة من الاعداء ، استُخدم التراب المدكوك في بناء السور الذي مازال قائماً إلى يومنا هذا دون أن يتأثر بتقلبات الزمن ، سور مراكش هو تحفة فنية معمارية فريدة يمتد بطول 9 كم ليحيط بالمدينة
 IMG|${U("2022/05/img_6625.jpg")}||سوق مراكش
 IMG|${U("2022/05/img_6626.jpg")}||سوق مراكش
 IMG|${U("2022/05/img_6627.jpg")}||سوق مراكش
 IMG|${U("2022/05/img_6628.jpg")}||سوق مراكش
+P|يعتبر هذا السور من اهم الاماكن السياحية في مراكش يعود تاريخ بنائه الى العام 1126 ميلادي وقد بني بهدف حماية المدينة من الاعداء ، استُخدم التراب المدكوك في بناء السور الذي مازال قائماً إلى يومنا هذا دون أن يتأثر بتقلبات الزمن ، سور مراكش هو تحفة فنية معمارية فريدة يمتد بطول 9 كم ليحيط بالمدينة
 `,
   ),
   rabat: article(
@@ -509,7 +507,10 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Marrakesh: Morocco's Tourism Icon",
       "Marrakesh is one of Morocco's most important tourist cities and a former imperial capital, distinguished by its beauty and stunning nature. Here, the beauty of the present harmoniously blends with the splendor of the past. Marrakesh is home to numerous historic walls, buildings, and vast gardens. Today, the city is a bastion of Islamic civilization and an intellectual hub for science and philosophy, housing many museums and archaeological sites that attract countless tourists. In addition, it offers many of Morocco's most important tourist spots that give a holiday a different flavor in a Moroccan atmosphere, along with a wide array of restaurants, cafes, souks, and recreational activities.",
       "Description of Marrakesh... Like other cities in the Kingdom of Morocco, the old medina of Marrakesh, a UNESCO World Heritage site since 1985, is one of the city's historic areas that attracts a large number of visitors. Surrounded by walls, with several gates providing access, the old medina is the vibrant heart of the 'Red City,' famous for its many tourist attractions. Not far from the entrance, between the old city and the new city, the Koutoubia Mosque, surrounded by green spaces, catches the visitor's eye. It is a landmark deeply rooted in Moroccan history, built by the Almohads, and it served as a model for the architects of the Giralda in Seville. In the heart of Marrakesh's old quarters, you'll find bazaars, traditional souks, museums, riads, and both modern and traditional cafes. All these places overlook the Jemaa el-Fnaa square, which transforms into a grand open-air theater at night.",
-      "Tourist Attractions in Marrakesh",
+      "\\n",
+      "Jemaa el-Fnaa Square",
+      "Jemaa el-Fnaa Square",
+      "Jemaa el-Fnaa Square",
       "Jemaa el-Fnaa Square",
       "Jemaa el-Fnaa Square",
       "Jemaa el-Fnaa square dates back to the founding of Marrakesh, established during the Almoravid dynasty in the 15th century. Its importance grew after the construction of the Koutoubia Mosque about a century later, and the square became the city's commercial heart. Rulers used the square as a grand courtyard to parade their armies and review their troops before heading to battles for unification and independence. Since then, it has been one of the most important tourist attractions in Marrakesh and a symbol of the city, celebrated for its vitality and its appeal to both Arab and international tourists.",
@@ -520,16 +521,15 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Marrakesh Museum",
       "Marrakesh Museum",
       "One of the most important tourist attractions in Marrakesh, Morocco, this is one of the city's outstanding museums. It houses a unique collection of exhibits, showcasing contemporary art, ceramics, textiles, Qur'anic inscriptions, coins, pottery, and more. The Marrakesh Museum can be reached by navigating the winding alleys leading from the famous Jemaa el-Fnaa square.",
-      "Marrakesh Museum",
-      "Marrakesh Museum",
-      "Marrakesh Museum",
-      "Marrakesh Museum",
-      "Marrakesh Museum",
       "Marrakesh Museum Ticket Price: 20 Moroccan Dirhams",
       "Marrakesh Museum, Morocco Visiting Hours: Daily from 9:00 AM to 6:30 PM",
       "Majorelle Garden",
       "Majorelle Garden",
+      "Majorelle Garden",
+      "Majorelle Garden",
+      "Majorelle Garden",
       "The Majorelle Garden is one of the most beautiful and popular gardens for tourists in Marrakesh, Morocco. It is a distinctive tropical garden, remarkable for its design and its fusion of vibrant colors with lush nature. The garden features a variety of plants, including rare species, collected from all five continents, such as cacti, palm trees, and ferns. It is named after the French artist Jacques Majorelle who designed it, with the design originating from his hometown of Nancy, France. Today, the garden is considered one of the most beautiful tourist attractions in Marrakesh.",
+      "The Souks",
       "The Souks",
       "The Souks",
       "The Souks",
@@ -547,9 +547,10 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Ali ben Youssef Madrasa",
       "Ali ben Youssef Madrasa",
       "Ali ben Youssef Madrasa",
+      "Ali ben Youssef Madrasa",
+      "Ali ben Youssef Madrasa",
+      "Ali ben Youssef Madrasa",
       "One of the best tourist destinations in Marrakesh, the Ali ben Youssef Madrasa is a historic architectural masterpiece. Founded in 1346 AD, it once hosted great scholars and men of letters who taught religious sciences, jurisprudence, and other disciplines, making it one of Morocco's most famous historic schools. Today, the madrasa is a major tourist attraction in Marrakesh, drawing visitors as an archaeological marvel that reflects the prosperity of Moroccan civilization.",
-      "Bahia Palace",
-      "Bahia Palace",
       "Bahia Palace",
       "Bahia Palace",
       "Bahia Palace",
@@ -567,8 +568,9 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Almoravid Koubba",
       "Almoravid Koubba",
       "Almoravid Koubba",
+      "Almoravid Koubba",
+      "Almoravid Koubba",
       "The Almoravid Koubba is considered the oldest monument in Marrakesh, dating back to 1064. It was built during the reign of Ali ibn Yusuf as an ablution house for worshipers at the Ben Youssef Mosque. The koubba reflects Almoravid architecture through its sturdy construction, which has withstood the test of time, as well as its unique water supply system where water flows from underground to pour into bronze pipes.",
-      "Menara Gardens",
       "Menara Gardens",
       "Menara Gardens",
       "Menara Gardens",
@@ -583,13 +585,7 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Marrakesh Souk",
       "Marrakesh Souk",
       "Marrakesh Souk",
-      "Marrakesh Souk",
-      "Marrakesh Souk",
       "These walls are one of the most important tourist attractions in Marrakesh. Their construction dates back to 1126 AD, and they were built to protect the city from enemies. Rammed earth was used to build the walls, which still stand today, unaffected by the passage of time. The Walls of Marrakesh are a unique architectural masterpiece, stretching for 9 km to surround the city.",
-      "Marrakesh Souk",
-      "Marrakesh Souk",
-      "Marrakesh Souk",
-      "Marrakesh Souk",
     ],
   },
   rabat: {
