@@ -75,6 +75,10 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "دار الأوبرا": { country: "norway", topic: "opera-house" },
     "The Opera House": { country: "norway", topic: "opera-house" },
   },
+  zanzibar: {
+    "السياحة في زنجبار": { country: "tanzania", topic: "zanzibar-tourism" },
+    "Tourism in Zanzibar": { country: "tanzania", topic: "zanzibar-tourism" },
+  },
   prague: {
     "ساعة براغ الفلكية": { country: "czech-republic", topic: "astronomical-clock" },
     "The Prague Astronomical Clock": { country: "czech-republic", topic: "astronomical-clock" },
