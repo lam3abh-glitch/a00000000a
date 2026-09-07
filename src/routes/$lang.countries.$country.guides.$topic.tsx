@@ -310,6 +310,37 @@ function GuidePage() {
                 </motion.figure>
               );
             }
+            if (b.type === "CARDS") {
+              return (
+                <div key={i} className="my-6 sm:my-9 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                  {b.items.map((it) => (
+                    <Link
+                      key={it.topic}
+                      to="/$lang/countries/$country/guides/$topic"
+                      params={{ lang, country, topic: it.topic }}
+                      className="group overflow-hidden rounded-2xl border border-sand bg-white/70 shadow-sm hover:border-gold/60 hover:shadow-md transition-all"
+                    >
+                      <div className="overflow-hidden bg-midnight/5">
+                        <img
+                          src={it.src}
+                          alt={it.label_en}
+                          loading="lazy"
+                          className="h-44 sm:h-52 w-full object-cover sm:transition-transform sm:duration-700 sm:group-hover:scale-[1.04]"
+                        />
+                      </div>
+                      <div className="px-4 py-3.5 sm:px-5 sm:py-4">
+                        <div className="font-display text-base sm:text-lg leading-snug text-midnight group-hover:text-gold transition-colors">
+                          {ar ? it.label_ar : it.label_en}
+                        </div>
+                        <div className="mt-1.5 text-[10px] uppercase tracking-[0.25em] text-charcoal/50">
+                          {ar ? "اقرأ المزيد" : "Read more"}
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              );
+            }
             if (b.type === "MORE") {
 
               return (
