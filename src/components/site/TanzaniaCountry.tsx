@@ -143,7 +143,7 @@ export function TanzaniaCountry({ lang, intro }: { lang: Lang; intro: string }) 
             className="inline-block text-white text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[2deg] mb-6"
             style={{ background: GREEN }}
           >
-            {rtl ? "🐘 مقدّمة" : "🐘 Introduction"}
+            {rtl ? "★ مقدّمة" : "★ Introduction"}
           </span>
           <p className="font-display text-3xl md:text-4xl leading-snug whitespace-pre-line" style={{ color: BARK }}>
             {intro}
