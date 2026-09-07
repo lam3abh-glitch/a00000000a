@@ -475,30 +475,52 @@ const abuSimbel: Guide = {
   ],
 };
 
-const stubs: Guide[] = [
+const pompeysPillar: Guide = {
+  slug: "egypt-site-pompeys-pillar",
+  title_ar: "عمود دقلديانوس",
+  title_en: "Pompey's Pillar",
+  kicker_ar: "مواقع أثرية · الاسكندرية",
+  kicker_en: "Archaeological sites · Alexandria",
+  image: U("2022/10/img_4139.jpg"),
+  blocks: [
+    { type: "H3", ar: "عمود دقلديانوس", en: "Pompey's Pillar", noNumber: true },
+    { type: "P", ar: "أسس الاسكندر الاكبر المدينة التي تحمل اسمه على ساحل البحر المتوسط في 7 ابريل 331 ق.م ، على أطلال مدينة مصرية قديمة كانت تسمى رع قدت أو راقودة ، وبعد وفاة الاسكندر في بابل عام 323 ق.م ، تصارع قادة جيشه فيما بينهم من أجل السيطرة على أجزاء امبراطوريته الكبيرة ، وكانت مصر من نصيب القائد بطلميوس الأول سوتير 305-285 (ق.م) والذي أسس دولة تحمل اسمه عرفت باسم دولة البطالمة 332-30 (ق.م) ، وأصبحت الاسكندرية عاصمة لحكم البطالمة وباتت اهم وأكبر مدينة في شرق البحر المتوسط حتى نهوض القسطنطينية بالقرن الخامس الميلادي", en: "Alexander the Great founded the city that bears his name on the Mediterranean coast on 7 April 331 BC, on the ruins of an ancient Egyptian town called Ra-Qedet or Rhakotis. After Alexander's death in Babylon in 323 BC, his generals fought over the parts of his great empire, and Egypt fell to Ptolemy I Soter (305–285 BC), who founded the Ptolemaic state (332–30 BC). Alexandria became the capital of Ptolemaic rule and the largest and most important city of the eastern Mediterranean until the rise of Constantinople in the fifth century AD." },
+    { type: "P", ar: "من أهم المعالم الأثرية التي يمكن رؤيتها في الاسكندرية اليوم هو عمود دقلديانوس الضخم أو عمود السواري (أواخر عام 290م) والذي يعرف خطأ باسم عمود بومبي ، حيث يقع مباشرة بجوار موقع السيرابيوم وهو المعبد الرئيسي للمعبود سرابيس المعبود الرسمى خلال هذه الفترة ، وقد تم تدمير هذا المعبد عندما حظر الامبراطور البيزنطي ثيودوسيوس الوثنية في عام 391م ، لسوء الحظ لم تنج العديد من المعالم الأثرية للاسكندرية من الهلاك مثل فنار الاسكندرية العظيم ومكتبة الاسكندرية ومقبرة الاسكندر الأكبر", en: "One of the most important monuments still visible in Alexandria today is the huge Column of Diocletian, or Pillar of the Masts (late 290 AD), wrongly known as Pompey's Pillar. It stands right beside the Serapeum, the main temple of Serapis, the official god of the period, which was destroyed when the Byzantine emperor Theodosius banned paganism in 391 AD. Unfortunately many of Alexandria's monuments did not survive, such as the great Lighthouse, the Library and the tomb of Alexander the Great." },
+    { type: "P", ar: "تعد أكثر آثار الاسكندرية الباقية حاليا هي الجبانات ، ومن أكثرها أهمية وابداعا هي جبانة او كتاكومب كوم الشقافة من العصر الروماني بالقرب من السيرابيوم ، ويحتوي الكتاكومب على سراديب الموتى على الطراز اليوناني والدفنات الثلاثية ومزار ومنطقة مأدبة كان يتم استخدامها خلال الجنازات ، تجمع المناظر والنقوش ما بين المعتقدات والتقاليد الفنية المصرية واليونانية القديمة", en: "Most of Alexandria's surviving antiquities are its cemeteries, the most important and inventive being the Roman-period catacombs of Kom el-Shoqafa near the Serapeum. They contain Greek-style burial galleries, triple burials, a shrine and a banqueting area used during funerals, and their scenes and reliefs combine ancient Egyptian and Greek beliefs and artistic traditions." },
+    { type: "P", ar: "ومن أجمل المواقع الاثرية الغير جنائزية الباقية منطقة كوم الدكة ، والتي ترجع آثارها لأواخر العصر الروماني وحتى العصر البيزنطي والتي تتضمن المسرح الروماني وحمام وقاعة محاضرات ومنازل للصفوة والمميزة بزخارف الفسيفساء بالاضافة الى ورش عمل", en: "Among the finest surviving non-funerary sites is Kom el-Dikka, whose remains date from the late Roman to the Byzantine period and include the Roman theatre, a bath, a lecture hall, elite houses noted for their mosaic decoration, and workshops." },
+    { type: "P", ar: "عانت المدينة القديمة كثيرا طوال تاريخها ، حيث تعرضت للتدمير على يد الملكة زنوبيا ملكة تدمر عام 259م ، كما تعرضت لعدة زلازل كبرى في اواخر العصور القديمة والعصور الوسطى ، ومع ذلك فقد بقي مجد الاسكندرية والعديد من آثارها في ذاكرة وكتابات الرحالة الاغريق والرومان ، مؤخرا بدأت عمليات الكشف عن الآثار الغارقة في العثور على آثار وتماثيل ضخمة بعدة مواقع ساحلية مختلفة", en: "The ancient city suffered greatly throughout its history: it was destroyed by Queen Zenobia of Palmyra in 259 AD and struck by several major earthquakes in late antiquity and the Middle Ages. Yet the glory of Alexandria and many of its monuments survive in the memory and writings of Greek and Roman travellers, and recent underwater excavations have begun to uncover monuments and colossal statues at several coastal sites." },
+    g("2022/10/img_4139-1.jpg", "عمود دقلديانوس بالاسكندرية", "Pompey's Pillar in Alexandria"),
+    { type: "H3", ar: "جبانة الشاطبي", en: "The Shatby Necropolis" },
+    { type: "P", ar: "تتضمن جبانة الشاطبي أقدم مقابر أثرية بالاسكندرية حيث يبدو أنها شيدت بعد تأسيس المدينة مباشرة عام 332 ق.م ، ويمكن للزائر أن يلمح تطور معمار المقابر في تلك الجبانة بداية من آبار الدفن مرورا بممرات الدفن وحتى ما يعرف بالهيبوجيوم ، وهي عبارة عن مجموعة من الحجرات الواقعة تحت الأرض والمنحوتة في باطن الصخر تفتح على مساحة مفتوحة والتي كان يقام فيها الطقوس الجنائزية", en: "The Shatby necropolis contains the oldest tombs in Alexandria, apparently built immediately after the city's founding in 332 BC. Visitors can trace the development of tomb architecture here, from burial shafts through burial corridors to what is known as the hypogeum, a group of underground chambers cut into the rock and opening onto an open space where funerary rites were performed." },
+    { type: "P", ar: "وكان البعض من تلك الحجرات تضم توابيت ضخمة على شكل أسرة تسمى كليني وهي كلمة يونانية تعنى سرير ، ولكن أغلب الدفنات كانت تتضمن لوكولي ، وهي عبارة عن فجوات مستطيلة منحوتة في الجدران ، وكانت أغلب الدفنات تتضمن تلك الكوة التي تحتوي على جرار تضم رفات الموتى بعد حرقها وهي العادة التي جاءت إلى مصر من اليونان", en: "Some of these chambers held huge bed-shaped sarcophagi called kline, a Greek word meaning bed, but most burials used loculi, rectangular niches cut into the walls, containing jars with the cremated remains of the dead — a custom that came to Egypt from Greece." },
+    { type: "P", ar: "ويمكن لزوار المنطقة أن يروا بقايا الهيبوجيوم الذي يرجع لحوالي عام 280 ق.م ، والذي يبدو أنه كان يخص عائلة واحدة كبيرة والذي توسع لتتوارثه عدة أجيال ، وعلى الرغم من أن مناظر الجدران ليست في حالة جيدة من الحفظ ، الا أن ما تبقى منها يعطينا فكرة على ما كانت عليه المناظر من روعة في السابق ، حيث كانت أغلب الجدران منحوتة تضم أفاريز وأعمدة ونوافذ وهمية مسمطة ، أما المناظر فكانت تعلق بين أعمدة الساحة وتمثل طيور محلقة في السماء الزرقاء في محاكاة للطبيعة المفتوحة", en: "Visitors can see the remains of the hypogeum dating to about 280 BC, which seems to have belonged to one large family and was expanded as it passed down through several generations. Although the wall scenes are not well preserved, what remains gives an idea of their former splendour: most walls were carved with friezes, columns and false windows, while the scenes hung between the columns of the courtyard and depicted birds soaring in a blue sky in imitation of open nature." },
+    { type: "P", ar: "أما الكليني الخاص بالهيبوجيوم فكان منحوتا في الصخر على شكل سرير منفذا بدقة عالية تظهر كل أجزاء السرير بما في ذلك المراتب والوسائد ، واتي تعكس صورة رمزية للموت كنوم طويل ، كما استخدمت تلك الأسرة المنحوتة في مناسبات المآدب كي يمتع المتوفى بمتع الحياة بعد موته مما يحول المقبرة الى منزل الأبدية", en: "The hypogeum's kline was cut into the rock in the shape of a bed, executed with great precision so that every part of it appears, including mattresses and cushions, reflecting death symbolically as a long sleep. These carved beds were also used at banquets so the deceased could enjoy the pleasures of life after death, turning the tomb into a house of eternity." },
+    { type: "P", ar: "أوقات عمل واسعار تذاكر جبانة الشاطبي : مفتوح يوميا من الساعة 9 صباحا وحتى الساعة 5 مساء ، وتذاكر الدخول للأجانب 40 جنيه مصري ، وللمصريين والعرب 10 جنيه مصري ، وللطلبة نصف اسعار هذه التذاكر", en: "Opening hours and tickets for the Shatby necropolis: open daily from 9 am to 5 pm; entry is 40 Egyptian pounds for foreigners and 10 pounds for Egyptians and Arabs, with half price for students." },
+    g("2022/10/img_4142.jpg", "جبانة الشاطبي بالاسكندرية", "The Shatby necropolis in Alexandria"),
+    g("2022/10/img_4142-1.jpg", "جبانة الشاطبي بالاسكندرية", "The Shatby necropolis in Alexandria"),
+    g("2022/10/img_4141.jpg", "جبانة الشاطبي بالاسكندرية", "The Shatby necropolis in Alexandria"),
+    g("2022/10/img_4140.jpg", "جبانة الشاطبي بالاسكندرية", "The Shatby necropolis in Alexandria"),
+  ],
+};
 
-  {
-    slug: "egypt-site-pompeys-pillar",
-    title_ar: "عمود دقلديانوس",
-    title_en: "Pompey's Pillar",
-    kicker_ar: "مواقع أثرية · الاسكندرية",
-    kicker_en: "Archaeological sites · Alexandria",
-    image: U("2022/10/img_4144.jpg"),
-    blocks: [
-      { type: "P", ar: "هذه الصفحة قيد الإعداد وسيتم إضافة تفاصيلها قريباً.", en: "This page is being prepared; its details will be added soon." },
-    ],
-  },
-  {
-    slug: "egypt-site-abu-mena",
-    title_ar: "منطقة أبو مينا",
-    title_en: "The Abu Mena area",
-    kicker_ar: "مواقع أثرية · الاسكندرية",
-    kicker_en: "Archaeological sites · Alexandria",
-    image: U("2022/10/img_4148.jpg"),
-    blocks: [
-      { type: "P", ar: "هذه الصفحة قيد الإعداد وسيتم إضافة تفاصيلها قريباً.", en: "This page is being prepared; its details will be added soon." },
-    ],
-  },
+const abuMena: Guide = {
+  slug: "egypt-site-abu-mena",
+  title_ar: "منطقة أبو مينا",
+  title_en: "The Abu Mena area",
+  kicker_ar: "مواقع أثرية · الاسكندرية",
+  kicker_en: "Archaeological sites · Alexandria",
+  image: U("2022/10/img_4148.jpg"),
+  blocks: [
+    { type: "H3", ar: "منطقة أبو مينا", en: "The Abu Mena area", noNumber: true },
+    g("2022/10/img_4148-1.jpg", "منطقة أبو مينا", "The Abu Mena area"),
+    { type: "P", ar: "تضم منطقة أبو مينا الأثرية العديد من المنشآت أغلبها ذات طابع ديني ، أبرزها قبر القديس مينا (285–309م) الذي سميت المنطقة المحيطة باسمه بسبب شهرته في أواخر العصور الرومانية ، فأصبح قبره مزارا دينيا يتبارك به الحجاج", en: "The archaeological area of Abu Mena contains many structures, most of them religious, the most notable being the tomb of Saint Menas (285–309 AD), after whom the surrounding area was named because of his fame in late Roman times; his tomb became a religious shrine where pilgrims sought blessings." },
+    { type: "P", ar: "توالى بناء المنشآت المعمارية حول قبر القديس مينا مثل المعمودية ومجموعة من الكنائس والحمامات والمنازل والمعاصر والورش ، بالاضافة الى دور الضيافة وساحة الحجاج وهي عبارة عن فناء يحده صفوف من الأعمدة الرخامية كان يتجمع فيه الحجاج الوافدون على المكان المقدس", en: "Buildings rose one after another around the tomb of Saint Menas: the baptistery, a group of churches, baths, houses, presses and workshops, as well as guest houses and the pilgrims' square — a courtyard bordered by rows of marble columns where pilgrims arriving at the holy place would gather." },
+    { type: "P", ar: "اندثرت بقايا المدينة القديمة وكذلك قبر القديس مينا مع مرور الزمن حتى تم اكتشافها على يد عالم الآثار الألماني كاوفمان أوائل القرن العشرين ، لتتوالى أعمال الحفائر للكشف عن بقايا المدينة السكنية من قبل بعثات المتحف القبطي والمتحف اليوناني الروماني ، نظرا للقيمة الدينية والتاريخية للموقع الأثري لأبو مينا ، تم ادراج الموقع بأكمله ضمن قائمة التراث العالمي لليونسكو في عام 1979م", en: "The remains of the ancient city and the tomb of Saint Menas were lost over time until they were discovered by the German archaeologist Kaufmann in the early twentieth century, after which successive excavations by missions from the Coptic Museum and the Greco-Roman Museum uncovered the remains of the residential city. Given the religious and historical value of Abu Mena, the whole site was inscribed on the UNESCO World Heritage list in 1979." },
+    g("2022/10/img_4147.jpg", "منطقة أبو مينا بالاسكندرية", "The Abu Mena area in Alexandria"),
+  ],
+};
+
+const stubs: Guide[] = [
   {
     slug: "egypt-site-saint-catherine",
     title_ar: "دير سانت كاترين وتوابعه",
@@ -520,5 +542,11 @@ export const egyptSitesGuides: Guide[] = [
   salahAlDinSquare,
   senusretObelisk,
   alSuyufiyya,
+  amadaTemples,
+  wadiAlSebua,
+  philae,
+  abuSimbel,
+  pompeysPillar,
+  abuMena,
   ...stubs,
 ];
