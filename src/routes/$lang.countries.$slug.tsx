@@ -9,6 +9,7 @@ import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import { SenegalCountry } from "@/components/site/SenegalCountry";
 import { TanzaniaCountry } from "@/components/site/TanzaniaCountry";
 import { EthiopiaCountry } from "@/components/site/EthiopiaCountry";
+import { SeychellesCountry } from "@/components/site/SeychellesCountry";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
@@ -334,6 +335,8 @@ function Country() {
         <TanzaniaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "ethiopia" ? (
         <EthiopiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "seychelles" ? (
+        <SeychellesCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "britain" ? (
         <BritainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "cuba" ? (
