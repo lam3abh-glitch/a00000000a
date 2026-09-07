@@ -380,12 +380,6 @@ function City() {
             </div>
             {attractions.length > 0 && (
               <div className={`mx-auto max-w-6xl px-4 sm:px-6 mt-10 sm:mt-14 md:mt-20 ${lang === "ar" ? "text-right" : "text-left"}`}>
-                <div className="mb-8 sm:mb-10">
-                  <div className="text-[11px] uppercase tracking-[0.4em] text-gold mb-3">
-                    {lang === "ar" ? "أبرز المعالم" : "Highlights"}
-                  </div>
-                  <div className="gold-divider" />
-                </div>
                 <div className="space-y-12 sm:space-y-16 md:space-y-24">
                   {attractions.map(renderAttraction)}
                 </div>
