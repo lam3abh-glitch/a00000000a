@@ -6,7 +6,7 @@ import ethiopiaAnthem from "@/assets/ethiopia-anthem.mp3.asset.json";
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
 const EMBLEM_MAP = IMG("2022/04/img_4370.jpg");
-const FLAG = IMG("2022/04/img_4644.png");
+const FLAG = "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg";
 const SCENE = IMG("2022/01/img_7560.jpg");
 const HERITAGE = IMG("2022/01/img_7502.jpg");
 
