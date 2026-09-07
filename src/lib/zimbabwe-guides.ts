@@ -58,7 +58,7 @@ export const zimbabweGuides: Guide[] = [
         ar: "مازو أورانج هو شراب البرتقال المركز الأشهر في زيمبابوي ، ويعتبر المشروب الوطني غير الكحولي",
         en: "Mazoe Orange is Zimbabwe's most famous orange squash, considered the national soft drink.",
       },
-      { type: "IMG", src: U("2023/03/image-4.jpg"), cap_ar: "أكلات وأطباق زيمبابوية", cap_en: "Zimbabwean food and dishes" },
+      
     ],
   },
 ];
