@@ -7,6 +7,7 @@ import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import { SenegalCountry } from "@/components/site/SenegalCountry";
+import { ArgentinaCountry } from "@/components/site/ArgentinaCountry";
 import { TanzaniaCountry } from "@/components/site/TanzaniaCountry";
 import { EthiopiaCountry } from "@/components/site/EthiopiaCountry";
 import { SeychellesCountry } from "@/components/site/SeychellesCountry";
@@ -204,6 +205,15 @@ function Country() {
                 ]
               : c.slug === "morocco"
               ? null
+              : c.slug === "argentina"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "بيونس آيرس", value_en: "Buenos Aires" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "بيزو أرجنتيني", value_en: "Argentine peso" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "45.8 مليون", value_en: "45.8 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "2.780.400 كم", value_en: "2,780,400 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1816", value_en: "1816" },
+                ]
               : c.slug === "senegal"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "داكار", value_en: "Dakar" },
@@ -349,6 +359,8 @@ function Country() {
         <ScotlandCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "morocco" ? (
         <MoroccoCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "argentina" ? (
+        <ArgentinaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "senegal" ? (
         <SenegalCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "tanzania" ? (
