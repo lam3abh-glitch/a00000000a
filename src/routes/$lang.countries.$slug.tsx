@@ -8,6 +8,7 @@ import stickerEiffel from "@/assets/sticker-eiffel.png";
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import { SenegalCountry } from "@/components/site/SenegalCountry";
 import { TanzaniaCountry } from "@/components/site/TanzaniaCountry";
+import { EthiopiaCountry } from "@/components/site/EthiopiaCountry";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
@@ -70,7 +71,16 @@ function Country() {
             <h1 className="font-display text-5xl md:text-7xl">{name}</h1>
           </div>
           {(() => {
-            const stats = c.slug === "uganda"
+            const stats = c.slug === "ethiopia"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "اديس ابابا", value_en: "Addis Ababa" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "بير اثيوبي", value_en: "Ethiopian birr" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "104.9 مليون", value_en: "104.9 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "1.104.300 كم", value_en: "1,104,300 km" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "—", value_en: "—" },
+                ]
+              : c.slug === "uganda"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "كمبالا", value_en: "Kampala" },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "شيلينغ أوغندي", value_en: "Ugandan shilling" },
@@ -312,6 +322,8 @@ function Country() {
         <SenegalCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "tanzania" ? (
         <TanzaniaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "ethiopia" ? (
+        <EthiopiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "britain" ? (
         <BritainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "cuba" ? (
