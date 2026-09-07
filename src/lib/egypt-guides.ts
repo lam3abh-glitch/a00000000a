@@ -327,4 +327,5 @@ export const egyptGuides: Guide[] = [
   egyptMuseumsGuide,
   citadelGuide,
   ...egyptExtraGuides,
+  ...egyptErasGuides,
 ];
