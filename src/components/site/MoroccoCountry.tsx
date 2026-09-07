@@ -192,7 +192,7 @@ export function MoroccoCountry({ lang, intro }: { lang: Lang; intro: string }) {
             />
           </Arch>
           <div className={`mt-4 font-display text-xl ${align}`} style={{ color: DEEP }}>
-            {rtl ? "شعار وخارطة مملكة المغرب · العاصمة الرباط" : "Emblem and map of Morocco · Capital Rabat"}
+            {rtl ? "شعار وخارطة مملكة المغرب " : "Emblem and map of Morocco · Capital Rabat"}
           </div>
         </div>
 
