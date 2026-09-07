@@ -356,6 +356,8 @@ function Country() {
         <EthiopiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "seychelles" ? (
         <SeychellesCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "egypt" ? (
+        <EgyptCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "zimbabwe" ? (
         <ZimbabweCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "britain" ? (
