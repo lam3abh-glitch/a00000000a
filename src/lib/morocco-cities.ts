@@ -14,51 +14,51 @@ IMG|${U("2022/05/img_6472.jpg")}||المدينة القديمة
 P|تقع المدينة القديمة بالقرب من ميناء الدار البيضاء وهي عبارة عن منطقة تاريخية يحيط بها سور له عدة ابواب رئيسية اشهرها باب مراكش وهي من اكثر المناطق شهرة في السياحة في الدار البيضاء على الرغم من قدمها ، تعتبر المدينة القديمة من اهم اماكن السياحة في كازابلانكا المغرب حيث تضم آثاراً تاريخية تتمثل بالمساجد القديمة والمنازل العتيقة ويعتر حي القناصلة وحي الملاح اليهودي المطل على الساحل من اشهر احيائها
 H5|باب مراكش
 IMG|${U("2022/05/img_6473.jpg")}||باب مراكش
+IMG|${U("2022/05/img_6474.jpg")}||باب مراكش
+IMG|${U("2022/05/img_6475.jpg")}||باب مراكش
 P|باب مراكش من اهم رموز السياحة في كازابلانكا وهو أحد ابواب المدينة القديمة ويقصده معظم زوار الدار البيضاء بهدف التسوق أو للتعرف على تاريخ المدينة القديمة ، بقي باب مراكش شاهداً على تاريخ المدينة القديمة في كازابلانكا بالرغم من انهيار المدينة جراء زلزال ضرب المنطقة عام 1775 ، يصطف العديد من الباعة المتجولون امام الباب لبيع بضائعهم من المغرب ودول افريقية اخرى
 H5|حديقة الجامعة العربية
-IMG|${U("2022/05/img_6474.jpg")}||حديقة الجامعة العربية
-IMG|${U("2022/05/img_6475.jpg")}||حديقة الجامعة العربية
+IMG|${U("2022/05/img_6476.jpg")}||حديقة الجامعة العربية
+IMG|${U("2022/05/img_6477.jpg")}||حديقة الجامعة العربية
 IMG|${U("2022/05/img_6478.jpg")}||حديقة الجامعة العربية
+IMG|${U("2022/05/img_6479.jpg")}||حديقة الجامعة العربية
 P|تعتبر حديقة الجامعة العربية من اشهر اماكن السياحة في كازابلانكا يعود تاريخ نشأتها الى بداية القرن العشرين عام 1913 وهي حديقة مصممة على طراز الحدائق الفرنسية وتبلغ مساحتها بما يزيد عن 30 هكتار ، تضم الحديقة انواع عديدة من النباتات كأشجار النخيل الشامخة التي تحيط بمساحات خضراء واسعة، كما تتواجد عدة أماكن ترفيهية للاطفال ومقاهي تجتذب العائلات لقضاء أجمل الاوقات ولذلك تعد من افضل اماكن السياحة في الدار البيضاء
 H5|مسجد الحسن الثاني
-IMG|${U("2022/05/img_6479.jpg")}||مسجد الحسن الثاني
-IMG|${U("2022/05/img_6477.jpg")}||مسجد الحسن الثاني
-IMG|${U("2022/05/img_6476.jpg")}||مسجد الحسن الثاني
 IMG|${U("2022/05/img_6480.jpg")}||مسجد الحسن الثاني
+IMG|${U("2022/05/img_6481.jpg")}||مسجد الحسن الثاني
+IMG|${U("2022/05/img_6482.jpg")}||مسجد الحسن الثاني
+IMG|${U("2022/05/img_6483.jpg")}||مسجد الحسن الثاني
 P|يقع مسجد الحسن الثاني بالقرب من المدينة القديمة على ساحل المحيط الاطلسي ويعتبر من اشهر معالم السياحة في كازابلانكا وهو اكبر معلم ديني في المغرب والسابع على مستوى العالم ، يجسد يناء المسجد ابداع فن العمارة المغربي تتسع قاعة الصلاة في المسجد لحوالي 25 الف مصلي في حين يصل العدد الى 100 الف خلال شهر رمضان حيث تبلغ مساحة المسجد حوالي 9 هكتارات
 H5|موروكو مول
-IMG|${U("2022/05/img_6481.jpg")}||موروكو مول
-IMG|${U("2022/05/img_6482.jpg")}||موروكو مول
-IMG|${U("2022/05/img_6483.jpg")}||موروكو مول
 IMG|${U("2022/05/img_6484.jpg")}||موروكو مول
+IMG|${U("2022/05/img_6485.jpg")}||موروكو مول
+IMG|${U("2022/05/img_6486.jpg")}||موروكو مول
+IMG|${U("2022/05/img_6502.jpg")}||موروكو مول
 P|اكبر مجمع تجاري للتسوق في افريقيا يقع على شاطئ عين الدياب في ساحل المحيط الاطلسي ويعتبر الوجهة الرئيسية للتسوق في الدار البيضاء لذا يستقطب الكثير من الزوار وقد بلغ تعداد زواره السنوي حوالي 14 مليون زائر ، يضم موروكو مول الذي افتتح عام 2011 اشهر الماركات التجارية العالمية بالاضافة الى العديد من المطاعم واماكن الترفيه كما انه يقدم عروضاً مميزة باستمرار
 H5|شارع محمد علي
-IMG|${U("2022/05/img_6485.jpg")}||شارع محمد علي
-IMG|${U("2022/05/img_6486.jpg")}||شارع محمد علي
 IMG|${U("2022/05/img_6487.jpg")}||شارع محمد علي
+IMG|${U("2022/05/img_6488.jpg")}||شارع محمد علي
+IMG|${U("2022/05/img_6489.jpg")}||شارع محمد علي
+IMG|${U("2022/05/img_6490.jpg")}||شارع محمد علي
 P|يعتبر شارع محمد الخامس من الشوارع الرئيسية الهامة كما انه من اهم مناطق السياحة في كازابلانكا المغرب لما يحتويه من مباني مصممة على الطراز المعماري الفرنسي الى جانب المحلات التجارية الراقي ، يرجع تاريخ هذا الشارع الى عام 1930 ويمر فيه خط ترام الدار البيضاء الذي يربط الشارع بأحياء عديدة في المدينة، يضم الشارع السوق المركزي والعديد من المقاهي والفنادق العريقة، مما جعله من افضل اماكن السياحة في الدار البيضاء
 H5|ميدان محمد الخامس
-IMG|${U("2022/05/img_6488.jpg")}||ميدان محمد الخامس
-IMG|${U("2022/05/img_6489.jpg")}||ميدان محمد الخامس
-IMG|${U("2022/05/img_6490.jpg")}||ميدان محمد الخامس
 IMG|${U("2022/05/img_6491.jpg")}||ميدان محمد الخامس
+IMG|${U("2022/05/img_6492.jpg")}||ميدان محمد الخامس
+IMG|${U("2022/05/img_6493.jpg")}||ميدان محمد الخامس
 P|يقع ميدان محمد الخامس في قلب مدينة كازابلانكا الدار البيضاء ويعتبر القلب النابض للمدينة يتميز بوجود الكثير من الحمام في كل جنباته، وبستقطب الكثير من السياح والزوار القادمين من مختلف انحاء العالم لاكتشاف مدينة الدار البيضاء ، غالباً ماترى ساحة محمد الخامس مكتظة بالناس فهي تعتبر المتنفس الرئيسي للسكان والسياح في مدينة الدار البيضاء
 H5|كورنيش عين الدياب
-IMG|${U("2022/05/img_6492.jpg")}||كورنيش عين الدياب
-IMG|${U("2022/05/img_6493.jpg")}||كورنيش عين الدياب
 IMG|${U("2022/05/img_6494.jpg")}||كورنيش عين الدياب
 IMG|${U("2022/05/img_6495.jpg")}||كورنيش عين الدياب
+IMG|${U("2022/05/img_6496.jpg")}||كورنيش عين الدياب
+IMG|${U("2022/05/img_6497.jpg")}||كورنيش عين الدياب
 P|يعتبر كورنيش عين الدياب من اشهر الاماكن السياحية في الدار البيضاء وتتواجد فيه العديد من مرافق التنزه والترفيه التي تستقطب السكان المحليين والسيّاح من مختلف انحاء العالم ، كما يعد من الاماكن التي تعج بصخب الحياة ليلا نهارا ، يكتظ الكورنيش في الليل والنهار بالزوار حيث يضم العديد من المطاعم والمقاهي الراقية والفنادق الفاخرة التي تمتد على طول الكورنيش من مسجد الحسن الثاني حتى منارة العنق
 H5|حديقة تاماريس المائية
-IMG|${U("2022/05/img_6496.jpg")}||حديقة تاماريس المائية
-IMG|${U("2022/05/img_6497.jpg")}||حديقة تاماريس المائية
-IMG|${U("2022/05/img_6499.jpg")}||حديقة تاماريس المائية
-P|تحتل حديقة تاماريس المائية مساحة كبيرة تقدر بـ 10 كم على طريق ازمور في الدار البيضاء وتعتبر من الحدائق المائية الترفيهية الفريدة من نوعها حيث تشكل مساحة مثالية للترفيه سواء للكبار أو للصغار ، تضم الحديقة انواع عديدة من الالعاب المائية كالزحاليق المختلفة الاحجام والاشكال والمسابح وقنواة المياه الكبيرة، تعتبر وجهة محببة للسياح القادمين من اجل السياحة في الدار البيضاء
 IMG|${U("2022/05/img_6498.jpg")}||حديقة تاماريس المائية
-IMG|${U("2022/05/img_6501.jpg")}||حديقة تاماريس المائية
+IMG|${U("2022/05/img_6499.jpg")}||حديقة تاماريس المائية
 IMG|${U("2022/05/img_6500.jpg")}||حديقة تاماريس المائية
-IMG|${U("2022/05/img_6502.jpg")}||حديقة تاماريس المائية
+IMG|${U("2022/05/img_6501.jpg")}||حديقة تاماريس المائية
 IMG|${U("2022/05/img_6503.jpg")}||حديقة تاماريس المائية
+P|تحتل حديقة تاماريس المائية مساحة كبيرة تقدر بـ 10 كم على طريق ازمور في الدار البيضاء وتعتبر من الحدائق المائية الترفيهية الفريدة من نوعها حيث تشكل مساحة مثالية للترفيه سواء للكبار أو للصغار ، تضم الحديقة انواع عديدة من الالعاب المائية كالزحاليق المختلفة الاحجام والاشكال والمسابح وقنواة المياه الكبيرة، تعتبر وجهة محببة للسياح القادمين من اجل السياحة في الدار البيضاء
 `,
   ),
   marrakesh: article(
@@ -455,7 +455,10 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Located near the Port of Casablanca, the Old Medina is a historic area surrounded by a wall with several main gates, the most famous of which is Bab Marrakesh. Despite its age, it is one of the most popular tourist areas in Casablanca. The Old Medina is considered one of the most important tourist sites in Casablanca, Morocco, as it contains historical monuments such as old mosques and ancient houses. The Consuls' Quarter and the coastal Jewish Quarter (Mellah) are among its most famous neighborhoods.",
       "Bab Marrakesh",
       "Bab Marrakesh",
+      "Bab Marrakesh",
+      "Bab Marrakesh",
       "Bab Marrakesh is one of the most important symbols of tourism in Casablanca. It is one of the gates to the Old Medina and is visited by most visitors to Casablanca for shopping or to learn about the old city's history. Bab Marrakesh has remained a witness to the history of the Old Medina of Casablanca, despite the city's collapse due to an earthquake that struck the area in 1775. Many street vendors line up in front of the gate to sell their goods from Morocco and other African countries.",
+      "Arab League Park",
       "Arab League Park",
       "Arab League Park",
       "Arab League Park",
@@ -477,8 +480,8 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Mohammed V Street",
       "Mohammed V Street",
       "Mohammed V Street",
+      "Mohammed V Street",
       "Mohammed V Street is one of the most important main streets and a key tourist area in Casablanca, Morocco, featuring buildings designed in the French architectural style alongside high-end shops. Dating back to 1930, the street is served by the Casablanca tram line, connecting it to many of the city's neighborhoods. The street is also home to the Central Market and numerous historic cafes and hotels, making it one of the best places to visit in Casablanca.",
-      "Mohammed V Square",
       "Mohammed V Square",
       "Mohammed V Square",
       "Mohammed V Square",
@@ -494,12 +497,9 @@ export const MOROCCO_CITY_ARTICLES_EN: Record<string, { title: string; values: s
       "Tamaris Aquaparc",
       "Tamaris Aquaparc",
       "Tamaris Aquaparc",
+      "Tamaris Aquaparc",
+      "Tamaris Aquaparc",
       "Tamaris Aquaparc occupies a large area estimated at 10 km on the Azemmour road in Casablanca. It is a unique recreational water park, offering an ideal entertainment space for both adults and children. The park features numerous water attractions, including slides of various sizes and shapes, pools, and large lazy rivers, making it a popular destination for tourists visiting Casablanca.",
-      "Tamaris Aquaparc",
-      "Tamaris Aquaparc",
-      "Tamaris Aquaparc",
-      "Tamaris Aquaparc",
-      "Tamaris Aquaparc",
     ],
   },
   marrakesh: {
