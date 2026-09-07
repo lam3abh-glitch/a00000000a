@@ -108,3 +108,7 @@ export const SECTION_LINKS: Record<string, Record<string, { country: string; top
 export function sectionLink(citySlug: string, title: string) {
   return SECTION_LINKS[citySlug]?.[title.trim()];
 }
+
+export function sectionLink(citySlug: string, title: string) {
+  return SECTION_LINKS[citySlug]?.[title.trim()];
+}
