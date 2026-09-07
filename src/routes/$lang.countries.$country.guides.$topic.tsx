@@ -38,6 +38,7 @@ function GuidePage() {
   const title = ar ? g.title_ar : g.title_en;
   const others = guidesFor(country).filter((o) => o.slug !== g.slug);
   const sib = g.theme === "siberia";
+  const compact = ["giza-pyramids", "cairo-tower", "egypt-museums", "muhammad-ali-mosque"].includes(topic);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -234,14 +235,14 @@ function GuidePage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6 }}
-                  className="my-6 sm:my-10 -mx-5 sm:mx-0"
+                  className={compact ? "my-4 sm:my-6 mx-auto max-w-[430px]" : "my-6 sm:my-10 -mx-5 sm:mx-0"}
                 >
-                  <div className="overflow-hidden rounded-none sm:rounded-3xl border-y sm:border border-sand bg-midnight/5 shadow-sm">
+                  <div className={`overflow-hidden border-sand bg-midnight/5 shadow-sm ${compact ? "rounded-2xl border" : "rounded-none sm:rounded-3xl border-y sm:border"}`}>
                     <img
                       src={b.src}
                       alt={b.cap_en || b.cap_ar}
                       loading="lazy"
-                      className="w-full object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03] max-h-[46vh] sm:max-h-[62vh]"
+                      className={`w-full object-cover sm:transition-transform sm:duration-700 sm:hover:scale-[1.03] ${compact ? "max-h-[30vh] sm:max-h-[36vh]" : "max-h-[46vh] sm:max-h-[62vh]"}`}
                     />
                   </div>
                   {(ar ? b.cap_ar : b.cap_en) && (
