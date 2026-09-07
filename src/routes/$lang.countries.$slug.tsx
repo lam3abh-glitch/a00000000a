@@ -10,6 +10,7 @@ import { SenegalCountry } from "@/components/site/SenegalCountry";
 import { TanzaniaCountry } from "@/components/site/TanzaniaCountry";
 import { EthiopiaCountry } from "@/components/site/EthiopiaCountry";
 import { SeychellesCountry } from "@/components/site/SeychellesCountry";
+import { ZimbabweCountry } from "@/components/site/ZimbabweCountry";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
@@ -72,7 +73,16 @@ function Country() {
             <h1 className="font-display text-5xl md:text-7xl">{name}</h1>
           </div>
           {(() => {
-            const stats = c.slug === "seychelles"
+            const stats = c.slug === "zimbabwe"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "هراري", value_en: "Harare" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "راند جنوب افريقيا", value_en: "South African rand" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "16.5 مليون", value_en: "16.5 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "390.757 كم", value_en: "390,757 km" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1980", value_en: "1980" },
+                ]
+              : c.slug === "seychelles"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "فكتوريا", value_en: "Victoria" },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "روبية سيشيلية", value_en: "Seychellois rupee" },
@@ -337,6 +347,8 @@ function Country() {
         <EthiopiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "seychelles" ? (
         <SeychellesCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "zimbabwe" ? (
+        <ZimbabweCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "britain" ? (
         <BritainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "cuba" ? (
