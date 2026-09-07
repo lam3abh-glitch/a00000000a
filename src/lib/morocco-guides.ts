@@ -2,6 +2,35 @@ import type { Guide } from "./france-guides";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
+const in_briefGuide: Guide = {
+  slug: "in-brief",
+  title_ar: "المغرب باختصار",
+  title_en: "Morocco in brief",
+  kicker_ar: "ثقافة",
+  kicker_en: "Culture",
+  image: U("2022/05/img_6600.jpg"),
+  blocks: [
+    { type: "H3", ar: "المغرب باختصار", en: "Morocco in Brief", noNumber: true },
+    { type: "IMG", src: U("2022/05/img_6600.jpg"), cap_ar: "المغرب باختصار", cap_en: "Morocco in Brief" },
+    { type: "H3", ar: "حضارة .. عراقة .. مستقبل مشرق", en: "Civilization... Heritage... A Bright Future", noNumber: true },
+    { type: "H3", ar: "تقاليد راسخة", en: "Deep-Rooted Traditions", noNumber: true },
+    { type: "P", ar: "المغرب بلد متعدد في مكوناته القومية واللغوية والثقافية ويتميز بموروث من التقاليد المتناقلة من جيل الى جيل ، فلا شيء ثابت في المملكة ، حتى الثقافة حية وتنبض يوما بعد يوم في ايماءات يومية بسيطة ، في الحفلات أو الطقوس أو ببساطة العادات اليومية ، ابق هناك لفترة من الوقت واستمتع بفن العيش بأسلوب مغربي", en: "Morocco is a country of diverse ethnic, linguistic, and cultural components, characterized by a heritage of traditions passed from one generation to the next. Nothing is static in the Kingdom; even the culture is alive, pulsating day after day through simple daily gestures, celebrations, rituals, or simply daily customs. Stay for a while and enjoy the Moroccan art of living." },
+    { type: "H3", ar: "ثقافات حية", en: "Living Cultures", noNumber: true },
+    { type: "IMG", src: U("2022/10/img_4459.jpg"), cap_ar: "ثقافات حية", cap_en: "Living Cultures" },
+    { type: "P", ar: "لتغمر نفسك في الثقافة والتقاليد المغربية ، فان المدن العتيقة هي الوجهة المثالية ، من خلال تقاطع شوارع كل مدينة ، ستغمر نفسك في تفاصيل الحياة اليومية للمغاربة ، يتطور المغرب وسكانه على ايقاع نمط الحياة منطقة البحر الأبيض المتوسط المعترف بها من قبل اليونسكو ، انها مجموعة من الممارسات والأطباق ، والرمزية التي تضفي سحرا مميزا ، شاي في كل وقت ، لمة حول الكسكس والطاجين ، تجارة في الحرف التقليدية ، تضامن وطيد ، ستغادر مع حقيبة مليئة بالذكريات التي لاتنسى", en: "To immerse yourself in Moroccan culture and traditions, the ancient medinas are the perfect destination. In the maze-like streets of each city, you will be enveloped in the details of daily Moroccan life. Morocco and its people evolve to the rhythm of the Mediterranean lifestyle, recognized by UNESCO. It's a collection of practices, dishes, and symbolism that adds a special charm: tea at all hours, gatherings around couscous and tagine, trade in traditional crafts, and strong solidarity. You will leave with a suitcase full of unforgettable memories." },
+    { type: "H3", ar: "احتفالات فريدة", en: "Unique Festivities", noNumber: true },
+    { type: "IMG", src: U("2022/10/img_4458.jpg"), cap_ar: "احتفالات فريدة", cap_en: "Unique Festivities" },
+    { type: "P", ar: "تقام العديد من التظاهرات الثقافية ، الفنية والاحتفالات الدينية في جميع مدن المغرب ، التي توضح بشكل مثالي التقاليد المغربية ، يشتهر المغرب بمواسمه ومهرجاناته ذات الصيت العالمي ، فلا تفوت موسم طانطان المشهور والمسجل منذ عام 2008 على القائمة التمثيلية للتراث الثقافي غير المادي للبشرية ومهرجان حب الملوك (الكرز) في مدينة صفرو ، وموسم الورود بقلعة مكونة أو مهرجان كناوة في الصويرة ، فلديك كل ما يلزم لاسعاد نفسك على الطراز المغربي", en: "Numerous cultural, artistic, and religious events are held in all of Morocco's cities, perfectly showcasing Moroccan traditions. Morocco is famous for its world-renowned moussems (festivals). Don't miss the famous Tan-Tan Moussem, inscribed since 2008 on the Representative List of the Intangible Cultural Heritage of Humanity, the Cherry Festival in Sefrou, the Rose Festival in Kelaat M'Gouna, or the Gnaoua Festival in Essaouira. You'll have everything you need to enjoy yourself, Moroccan style." },
+    { type: "H3", ar: "موسيقى كناوة", en: "Gnaoua Music", noNumber: true },
+    { type: "IMG", src: U("2022/10/img_4460.jpg"), cap_ar: "موسيقى كناوة", cap_en: "Gnaoua Music" },
+    { type: "P", ar: "تسافر بنا موسيقى كناوة في رحلة روحية ثقافية ، صنفت موسيقى كناوة في عام 2019 ضمن قائمة التراث الثقافي غير المادي للبشرية لليونسكو ، وهذا الفن دخل المغرب من خلال عبيد استقدموا من أفريقيا جنوب الصحراء الى المغرب ، وهو مزيج من طقوس تجمع بين الغناء والرقص ، وهي تدفعنا الى الرقص والتماهي مع الايقاعات القوية ، وترتدي فرقة الكناوة أزياء ملونة ويعزف الكناويون موسيقاهم بآلتين أساسيتين : القراقب والكمبري ، وقد ساهم فنانون كبار قدموا من أنحاء العالم مثل ليد زيبلين Led Zeppelin ، بات ميثيني Pat Metheny ، ديدييه لوكوود Didier Lockwood أو ماركوس ميللر Marcus Miller في اعطاء اشعاع وانتعاشة جديدين لهذا الفن بتقديمهم لعروض خاصة بجانب الكناويون", en: "Gnaoua music takes us on a spiritual and cultural journey. In 2019, it was added to UNESCO's Representative List of the Intangible Cultural Heritage of Humanity. This art form came to Morocco with enslaved people brought from sub-Saharan Africa. It is a blend of rituals combining song and dance, compelling listeners to move and become one with its powerful rhythms. The Gnaoua troupes wear colorful costumes, and the musicians play two main instruments: the 'krakebs' (large iron castanets) and the 'guembri' (a three-stringed bass lute). Great artists from around the world, like Led Zeppelin, Pat Metheny, Didier Lockwood, and Marcus Miller, have contributed to its global reach and revival by performing alongside Gnaoua masters." },
+    { type: "H3", ar: "مدن قديمة وعتيقة", en: "Old and Ancient Cities", noNumber: true },
+    { type: "IMG", src: U("2022/10/img_4456.jpg"), cap_ar: "مدن قديمة وعتيقة", cap_en: "Old and Ancient Cities" },
+    { type: "P", ar: "تجولوا في المدن المغربية وهي قلبها النابض ، لتكتشفوا طابعها السحري والمدهش الذي تتميز به ، في قلب مدن مغربية ، خلف اسوار حمراء عالية ، كنوز تغوص بكم في تاريخ المغرب الأصيل ، تنبض الأحياء القديمة بسكانها الذين ينقلون معرفتهم من جيل الى جيل ، وتندرج مدن فاس وتطوان والصويرة ومراكش ضمن قائمة اليونسكو للتراث العالمي ، تعتبر مدينة فاس من أعرق المدن المغربية وأشهرها ، كما تعتبر تطوان والصويرة والرباط من أبرز المدن المغربية التي تستحق الزيارة ، امبريالية ، ساحلية أو واقعة على منحدرات الجبال ، سوف تتيح لك السفر عبر الزمن ، اكتشفوا هذه الأحياء القديمة ، وتمتعوا بدفء الأزقة وسكانها", en: "Wander through the Moroccan medinas, the beating heart of the cities, to discover their magical and astonishing character. In the heart of Moroccan cities, behind high red ramparts, lie treasures that immerse you in Morocco's authentic history. The old quarters pulse with their inhabitants, who pass their knowledge from one generation to the next. The medinas of Fes, Tetouan, Essaouira, and Marrakesh are on the UNESCO World Heritage list. Fes is one of the oldest and most famous Moroccan cities, while Tetouan, Essaouira, and Rabat are also prominent cities well worth a visit. Whether imperial, coastal, or perched on mountain slopes, they allow you to travel back in time. Discover these ancient quarters and enjoy the warmth of the alleyways and their people." },
+    { type: "IMG", src: U("2022/10/img_4457.jpg"), cap_ar: "مدن قديمة وعتيقة", cap_en: "Old and Ancient Cities" },
+  ],
+};
+
 const programGuide: Guide = {
   slug: "program",
   title_ar: "تعرف على البرنامج السياحي المعد للمغرب",
@@ -334,4 +363,4 @@ const albumGuide: Guide = {
   ].map((n) => ({ src: U(n), cap_ar: "المغرب", cap_en: "Morocco" })),
 };
 
-export const moroccoGuides: Guide[] = [programGuide, hammamGuide, breedsGuide, museumsGuide, water_sportsGuide, productsGuide, clothingGuide, foodGuide, albumGuide];
+export const moroccoGuides: Guide[] = [in_briefGuide, programGuide, hammamGuide, breedsGuide, museumsGuide, water_sportsGuide, productsGuide, clothingGuide, foodGuide, albumGuide];
