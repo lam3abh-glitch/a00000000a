@@ -21,6 +21,7 @@ import { TANZANIA_CITY_ARTICLES, TANZANIA_CITY_ARTICLES_EN } from "./tanzania-ci
 import { ETHIOPIA_CITY_ARTICLES, ETHIOPIA_CITY_ARTICLES_EN } from "./ethiopia-cities";
 import { SEYCHELLES_CITY_ARTICLES, SEYCHELLES_CITY_ARTICLES_EN } from "./seychelles-cities";
 import { ZIMBABWE_CITY_ARTICLES, ZIMBABWE_CITY_ARTICLES_EN } from "./zimbabwe-cities";
+import { EGYPT_CITY_ARTICLES, EGYPT_CITY_ARTICLES_EN } from "./egypt-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
