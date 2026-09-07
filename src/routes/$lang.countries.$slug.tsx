@@ -7,6 +7,7 @@ import ahmedParis from "@/assets/ahmed-paris.png.asset.json";
 import stickerEiffel from "@/assets/sticker-eiffel.png";
 import { AnthemPlayer } from "@/components/site/AnthemPlayer";
 import { SenegalCountry } from "@/components/site/SenegalCountry";
+import { TanzaniaCountry } from "@/components/site/TanzaniaCountry";
 import franceAnthem from "@/assets/france-anthem.mp4.asset.json";
 import franceEmblem from "@/assets/france-emblem.png.asset.json";
 import franceMap from "@/assets/france-map.png.asset.json";
@@ -180,6 +181,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1960", value_en: "1960" },
                 ]
+              : c.slug === "tanzania"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "دودوما", value_en: "Dodoma" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "شيلينغ تنزاني", value_en: "Tanzanian shilling" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "57.3 مليون", value_en: "57.3 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "945.203 كم²", value_en: "945,203 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1964", value_en: "1964" },
+                ]
               : c.slug === "britain"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "لندن", value_en: "London" },
@@ -300,6 +310,8 @@ function Country() {
         <MoroccoCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "senegal" ? (
         <SenegalCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "tanzania" ? (
+        <TanzaniaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "britain" ? (
         <BritainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "cuba" ? (
