@@ -212,6 +212,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1960", value_en: "1960" },
                 ]
+              : c.slug === "egypt"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "القاهرة", value_en: "Cairo" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "جنيه مصري", value_en: "Egyptian pound" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "100.3 مليون", value_en: "100.3 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "1.019.600 كم", value_en: "1,019,600 km²" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "3.150 ق.م", value_en: "3150 BC" },
+                ]
               : c.slug === "tanzania"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "دودوما", value_en: "Dodoma" },
