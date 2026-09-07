@@ -221,7 +221,8 @@ function GuidePage() {
                     paraCount === 1 && headingCount > 0 ? "text-charcoal" : ""
                   }`}
                 >
-                  {ar ? b.ar : b.en}
+                  {ar ? b.ar : b.en || b.ar}
+
                 </p>
               );
             }
