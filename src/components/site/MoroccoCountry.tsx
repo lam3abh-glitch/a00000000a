@@ -4,7 +4,7 @@ import ahmadMorocco from "@/assets/ahmad-morocco.png.asset.json";
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
 const EMBLEM_MAP = IMG("2022/04/img_4167.jpg");
-const KINGDOM = IMG("2022/04/img_4612.png");
+const SCENE_C = IMG("2022/10/img_4459.jpg");
 const SCENE_A = IMG("2022/04/img_4672.jpg");
 const SCENE_B = IMG("2022/10/img_4462.jpg");
 const ANTHEM_VIDEO = "https://videos.files.wordpress.com/K0FqCvhL/my-movie-5-3.mp4";
@@ -160,7 +160,7 @@ export function MoroccoCountry({ lang, intro }: { lang: Lang; intro: string }) {
         </div>
 
         <div className="mt-10 grid sm:grid-cols-3 gap-4" dir="ltr">
-          {[KINGDOM, SCENE_A, SCENE_B].map((src, i) => (
+          {[SCENE_C, SCENE_A, SCENE_B].map((src, i) => (
             <div
               key={src}
               className="bg-white p-2 shadow-lg"
