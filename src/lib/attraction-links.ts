@@ -21,6 +21,16 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "جامع محمد علي": { country: "egypt", topic: "muhammad-ali-mosque" },
     "The Mosque of Muhammad Ali": { country: "egypt", topic: "muhammad-ali-mosque" },
   },
+  lisbon: {
+    "كاتدرائية لشبونة": { country: "portugal", topic: "lisbon-cathedral" },
+    "Lisbon Cathedral": { country: "portugal", topic: "lisbon-cathedral" },
+    "قلعة سانت جورج": { country: "portugal", topic: "sao-jorge-castle" },
+    "The Castle of São Jorge": { country: "portugal", topic: "sao-jorge-castle" },
+  },
+  porto: {
+    "جسر دوم لويس": { country: "portugal", topic: "dom-luis-bridge" },
+    "The Dom Luís Bridge": { country: "portugal", topic: "dom-luis-bridge" },
+  },
   london: {
     "ساعة بيغ بن": { country: "britain", topic: "big-ben" },
     "Big Ben": { country: "britain", topic: "big-ben" },
