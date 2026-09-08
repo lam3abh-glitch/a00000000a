@@ -4,7 +4,7 @@ import type { Lang } from "@/lib/i18n";
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
 const EMBLEM_MAP = IMG("2022/04/img_4193.jpg");
-const FLAG = IMG("2022/04/img_4736.png");
+const FLAG = "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg";
 const AHMAD_PORTUGAL = IMG("2022/01/img_7781.jpg");
 const ANTHEM = "https://videos.files.wordpress.com/0ABjTNVZ/my-movie-5-4.mp4";
 
