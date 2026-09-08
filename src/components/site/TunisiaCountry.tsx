@@ -137,12 +137,7 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         </div>
 
         <div className="mt-10" dir="ltr">
-          <Link
-            to="/$lang/countries/$country/guides/$topic"
-            params={{ lang, country: "tunisia", topic: "tourist-places" }}
-            className="block bg-white p-2 shadow-lg transition hover:-translate-y-1"
-            style={{ transform: "rotate(-1.2deg)" }}
-          >
+          <div className="block bg-white p-2 shadow-lg" style={{ transform: "rotate(-1.2deg)" }}>
             <img
               src={SIDI_BOU_SAID}
               alt={rtl ? "تونس الخضراء - سيدي بوسعيد" : "Green Tunisia — Sidi Bou Said"}
@@ -150,9 +145,9 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
               className="block w-full h-72 md:h-96 object-cover"
             />
             <span className={`block mt-3 mb-1 text-sm ${align}`} style={{ color: BLUE }}>
-              {rtl ? "تونس الخضراء — اضغط للمزيد ←" : "Green Tunisia — click for more →"}
+              {rtl ? "تونس الخضراء" : "Green Tunisia"}
             </span>
-          </Link>
+          </div>
         </div>
       </div>
 
