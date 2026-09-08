@@ -359,6 +359,8 @@ function Country() {
       {/* INTRO */}
       {c.slug === "uganda" ? (
         <UgandaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "georgia" ? (
+        <GeorgiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "spain" ? (
         <SpainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "belgium" ? (
