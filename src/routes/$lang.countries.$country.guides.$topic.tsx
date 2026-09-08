@@ -39,6 +39,7 @@ function GuidePage() {
   const others = guidesFor(country).filter((o) => o.slug !== g.slug);
   const sib = g.theme === "siberia";
   const compact = ["giza-pyramids", "cairo-tower", "egypt-museums", "muhammad-ali-mosque"].includes(topic);
+  const cityAttractionsLayout = country === "argentina" && topic === "argentina-places";
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -54,6 +55,32 @@ function GuidePage() {
 
   let headingCount = 0;
   let paraCount = 0;
+
+  const attractionSections = cityAttractionsLayout
+    ? g.blocks.reduce<
+        Array<{
+          title_ar: string;
+          title_en: string;
+          paragraphs: Array<Extract<GuideBlock, { type: "P" }>>;
+          images: Array<Extract<GuideBlock, { type: "IMG" }>>;
+        }>
+      >((sections, block) => {
+        if (block.type === "H3") {
+          sections.push({
+            title_ar: block.ar,
+            title_en: block.en,
+            paragraphs: [],
+            images: [],
+          });
+        } else {
+          const current = sections[sections.length - 1];
+          if (!current) return sections;
+          if (block.type === "P") current.paragraphs.push(block);
+          if (block.type === "IMG") current.images.push(block);
+        }
+        return sections;
+      }, [])
+    : [];
 
   return (
     <div className={`relative ${sib ? "bg-frost" : "bg-cream"}`} dir={ar ? "rtl" : "ltr"}>
@@ -140,6 +167,76 @@ function GuidePage() {
         </div>
       </section>
 
+      {cityAttractionsLayout ? (
+        <article className={`relative mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16 md:py-24 ${ar ? "text-right" : "text-left"}`}>
+          <div className="space-y-12 sm:space-y-16 md:space-y-24">
+            {attractionSections.map((section, index) => {
+              const imageFirst = index % 2 === 1;
+              return (
+                <motion.section
+                  key={`${section.title_en}-${index}`}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.5 }}
+                  className={index === 0 ? "pt-2" : "border-t border-sand pt-8 sm:pt-10"}
+                >
+                  <div className="grid gap-6 sm:gap-8 md:grid-cols-12 md:items-center">
+                    <div className={`md:col-span-7 ${imageFirst ? "md:order-1" : "md:order-2"}`}>
+                      {section.images.length === 1 ? (
+                        <figure className="overflow-hidden rounded-2xl bg-midnight/5 shadow-lg">
+                          <img
+                            src={section.images[0].src}
+                            alt={ar ? section.images[0].cap_ar : section.images[0].cap_en}
+                            loading="lazy"
+                            className="h-56 sm:h-72 md:h-96 w-full object-cover transition duration-700 hover:scale-[1.04]"
+                          />
+                        </figure>
+                      ) : (
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                          {section.images.map((image, imageIndex) => (
+                            <figure
+                              key={`${image.src}-${imageIndex}`}
+                              className={`overflow-hidden rounded-2xl bg-midnight/5 shadow-lg ${imageIndex === 0 ? "col-span-2" : ""}`}
+                            >
+                              <img
+                                src={image.src}
+                                alt={ar ? image.cap_ar : image.cap_en}
+                                loading="lazy"
+                                className={`w-full object-cover transition duration-700 hover:scale-[1.04] ${
+                                  imageIndex === 0 ? "h-56 sm:h-72 md:h-96" : "h-36 sm:h-48 md:h-56"
+                                }`}
+                              />
+                            </figure>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <div className={`md:col-span-5 ${imageFirst ? "md:order-2" : "md:order-1"}`}>
+                      <div className="inline-flex items-baseline gap-2 text-gold">
+                        <span className="font-display text-5xl sm:text-6xl leading-none">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="h-px w-10 bg-gold/60 -translate-y-[0.6em]" />
+                      </div>
+                      <h2 className="mt-4 font-display text-2xl sm:text-3xl md:text-4xl text-midnight leading-tight">
+                        {ar ? section.title_ar : section.title_en}
+                      </h2>
+                      <div className="mt-4 space-y-4">
+                        {section.paragraphs.map((paragraph, paragraphIndex) => (
+                          <p key={paragraphIndex} className="text-[15px] sm:text-base md:text-lg text-charcoal/85 leading-[1.9]">
+                            {ar ? paragraph.ar : paragraph.en || paragraph.ar}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.section>
+              );
+            })}
+          </div>
+        </article>
+      ) : (
       <article className={`relative mx-auto max-w-3xl px-5 sm:px-6 py-10 sm:py-16 ${ar ? "text-right" : "text-left"}`}>
 
         {g.blocks
@@ -380,6 +477,7 @@ function GuidePage() {
             );
           })}
       </article>
+      )}
 
       {g.gallery && g.gallery.length > 0 && (
         <section className="pb-14 sm:pb-20">
