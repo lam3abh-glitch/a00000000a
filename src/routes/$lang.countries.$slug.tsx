@@ -39,6 +39,7 @@ import { MoroccoCountry } from "@/components/site/MoroccoCountry";
 import { BritainCountry } from "@/components/site/BritainCountry";
 import { GeorgiaCountry } from "@/components/site/GeorgiaCountry";
 import { UnitedStatesCountry } from "@/components/site/UnitedStatesCountry";
+import { TunisiaCountry } from "@/components/site/TunisiaCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
@@ -224,6 +225,15 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "اللغة", label_en: "Language", value_ar: "الإنجليزية والاسكتلندية", value_en: "English & Scots" },
                 ]
+              : c.slug === "tunisia"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "تونس", value_en: "Tunis" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "دينار تونسي", value_en: "Tunisian dinar" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "11.8 مليون", value_en: "11.8 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "163.610 كم", value_en: "163,610 km²" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1956", value_en: "1956" },
+                ]
               : c.slug === "morocco"
               ? null
               : c.slug === "portugal"
@@ -391,6 +401,8 @@ function Country() {
         <IrelandCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "scotland" ? (
         <ScotlandCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "tunisia" ? (
+        <TunisiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "morocco" ? (
         <MoroccoCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "portugal" ? (
