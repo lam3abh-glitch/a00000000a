@@ -4,8 +4,8 @@ import type { Lang } from "@/lib/i18n";
 const IMG = (name: string, month: string) =>
   `https://i0.wp.com/100region.com/wp-content/uploads/${month}/${name}?ssl=1`;
 
-const AHMAD_DODGERS = IMG("img_4669.jpg", "2022/04");
-const AHMAD_LIBERTY = IMG("img_4668.jpg", "2022/04");
+const AHMAD_DODGERS = IMG("img_4668.jpg", "2022/04");
+const AHMAD_LIBERTY = IMG("img_4669.jpg", "2022/04");
 const EMBLEM_MAP = IMG("img_3950.jpg", "2022/03");
 const ANTHEM = "https://videos.files.wordpress.com/VgXEpT2E/my-movie-5-13.mp4";
 
