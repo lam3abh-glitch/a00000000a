@@ -59,7 +59,7 @@ const language: Guide = {
   title_en: "Languages of Argentina",
   kicker_ar: "لغة وثقافة",
   kicker_en: "Language & culture",
-  image: U("2022/04/img_4610.png"),
+  image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
   blocks: [
     {
       type: "P",
