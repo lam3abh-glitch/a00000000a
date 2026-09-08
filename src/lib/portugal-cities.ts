@@ -28,9 +28,9 @@ H5|قوس النصر
 P|يقع القوس التاريخي الذي يعود تاريخه إلى القرن التاسع عشر ، على الحافة الشمالية بالقرب من الطرف الجنوبي لروا أوغوستا ، وهو طريق المشاة الرئيسي في لشبونة ، صممه مهندس البناء المعماري البرتغالي سانتوس دي كارفالو ، من أجل الإحتفال بإعادة إعمار العاصمة بعد زلزال 1755 م ، يتيح هذا الموقع الزائر بالتمتع بزيارة الجزء العلوي من القوس
 P|حيث يعلو الشرفة تمثال مجازي للمجد ، يقوم بتتويج شخصيات تمثل الشجاعة والعبقرية ومزينة بأكاليل الزهور الرائعة . ويمكنهم أيضا الوصول للقمة من خلال المصعد ، الذي يوفر لهم نظرة بانورامية ساحرة للمدينة ، ويوجد به ساعة ميكانيكية فريدة صُنعت عام 1941 م توضع على المنصة
 IMG|${U("2022/05/img_7048-1.jpg")}||قوس النصر في لشبونة
-IMG|${U("2022/05/img_7049.jpg")}||قوس النصر وطريق روا أوغوستا
 H5|برج بيليم
 P|يعد برج بيليم في العاصمة البرتغالية ، من أبرز مناطق السياحة في لشبونة ، فهو يقع في المياه الضحلة ، من مصب نهر تاجوس ، كرمز من رموز عصر الإستكشاف الإستثنائي في البرتغال خلال القرن السادس عشر ، يمثل البرج أعلى نقطة في فن العمارة مانويل ، وتتميز واجهته بتزيينها بزخارف بحرية مميزة ، عبارة عن حبال ملتوية وكريات مدببة منحوتة على الحجر ، ويعتبر برج بيليم محميا ، كموقع تراث عالمي لليونسكو . وتبرز غرف الملك الداخلية ، في هذا البرج العظيم دهشة الزوار ، حيث انها تفتح على لوجيا من عصر النهضة ، ويوضع شعار النبالة الملكي لمانويل الأول فوق الأروقة الأنيقة
+IMG|${U("2022/05/img_7049.jpg")}||برج بيليم في لشبونة
 H5|اكواريوم لشبونة
 P|يعتبر حوض أسماك لشبونة ، أحد أفضل أحواض الأسماك في أوروبا على الإطلاق ، وواحدا من أكبر أحواض الأسماك في العالم ، فهو من افضل اماكن السياحة في لشبونة للأطفال والعائلة بأكملها ، فهو موطنا للعديد من الأسماك والكائنات والحيوانات البحرية المختلفة ، بما في ذلك العديد من أنواع الطيور ، ويحيط به خزان مركزي هائل يعج بالأسماك من جميع الأشكال والأحجام ، ومنها سمكة القرش ، وسمكة الشمس المنتفخة ، وسمك المهرج ، وتنين البحر ، فضلا عن طيور البطريق الرائعة المرحة وغيرها العديد ، ويعمل هذا الاكواريوم على المحافظة على محيطات العالم ، فهي بذلك حظيت على ثناء عالمي لحملات التوعية البيئية البحرية ، لذلك يعد مكان فريد من نوعه وله طابع خاص وفريد
 IMG|${U("2022/05/img_7050-1.jpg")}||اكواريوم لشبونة
@@ -82,9 +82,9 @@ export const PORTUGAL_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "This historic nineteenth-century arch stands on the northern edge, near the southern end of Rua Augusta, Lisbon's main pedestrian street. It was designed by the Portuguese architect Santos de Carvalho to celebrate the rebuilding of the capital after the earthquake of 1755, and visitors can enjoy going up to the top of the arch.",
       "Above the terrace rises an allegorical statue of Glory, crowning figures that represent Valour and Genius and adorned with splendid garlands. Visitors can also reach the top by lift, which rewards them with an enchanting panorama of the city, and there is a unique mechanical clock made in 1941 set on the platform.",
       "The Rua Augusta Arch in Lisbon",
-      "The arch and Rua Augusta",
       "Belém Tower",
       "Belém Tower in the Portuguese capital is one of the leading sights of Lisbon. It stands in the shallow water at the mouth of the river Tagus as a symbol of Portugal's extraordinary age of discovery in the sixteenth century. The tower marks the high point of Manueline architecture, and its façade is distinguished by remarkable maritime ornament — twisted ropes and pointed spheres carved in stone. Belém Tower is protected as a UNESCO World Heritage site. The king's inner chambers astonish visitors, opening onto a Renaissance loggia, with the royal coat of arms of Manuel I set above the elegant arcades.",
+      "Belém Tower in Lisbon",
       "The Lisbon Oceanarium",
       "The Lisbon Oceanarium is considered one of the very best aquariums in Europe and one of the largest in the world. It is among the finest places to visit in Lisbon for children and the whole family, home to a great variety of fish, sea creatures and animals, including many kinds of birds. A huge central tank teems with fish of every shape and size, among them sharks, the puffed-up sunfish, clownfish and sea dragons, as well as wonderfully playful penguins and many more. The oceanarium works to protect the world's oceans, and has won global praise for its marine environmental awareness campaigns, making it a truly one-of-a-kind place.",
       "The Lisbon Oceanarium",
