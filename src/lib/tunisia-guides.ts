@@ -89,4 +89,5 @@ export const tunisiaGuides: Guide[] = [
     image: SIDI,
     blocks: soon(),
   },
+  ...tunisiaRegionGuides,
 ];
