@@ -1,0 +1,339 @@
+import { article, type CityArticle } from "./article-format";
+
+const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
+
+export const USA_CITY_ARTICLES: Record<string, CityArticle> = {
+  "new-york": article(
+    "https://100region.com/?p=10440",
+    "السياحة في امريكا – نيويورك",
+    U("2022/08/img_2050.jpg"),
+    String.raw`
+P|اهم معالم السياحة في نيويورك ، من منا لا يعرف تمثال الحرية الشهير في الولايات المتحدة الامريكية ، يقع هذا التمثال في جزيرة الحرية بخليج نيويورك ، وهو عبارة عن تمثال ضخم يبلغ ارتفاعه 93 متر ويرتكز على قاعدة يبلغ عرضها ٤٧ متر ، يعتبر تمثال الحرية من اهم الرموز التي تشتهر بها الولايات المتحدة الامريكية
+H5|متحف المتروبوليتان
+IMG|${U("2022/08/img_2046.jpg")}
+P|تم انشاء متحف المتروبوليتان في عام 1870 م ، ويعد أحد أشهر المتاحف في الولايات المتحدة ، يضم هذا المتحف أكثر من 2 مليون عمل فني ، يرجع تاريخها لـ 5000 عام مضى ومنها مجموعة الفنون الزخرفية الأمريكية ، والفن المصري ، والأسلحة ، والدروع ، والآلات الموسيقية ، والصور الفوتوغرافية وغيرها الكثير ، كما يعرض المتحف ، بعض الأعمال الفريدة والشهيرة التي لن تجدها الا هناك
+H5|منطقة هاي لاين
+IMG|${U("2022/08/img_2049.jpg")}
+P|تعد منطقة هاي لاين ، من مناطق جذب السياحة في نيويورك الحديثة ، فهي عبارة عن خط سكة حديد سابق ، وتم تحويله الى مسار للمشي بين شوارع المدينة ، وتمت زراعة هذه الحديقة العامة بمجموعة فريدة ومتنوعة من النباتات والأشجار الجميلة ، فتوفر حديقة هاي لاين اطلالات ساحرة على المدينة ، كما يوجد بجوار هابي لاين العديد من المنشآت الفنية ، التي يمكن التمتع بها ، بالاضافة الى جلسات لها جدار زجاجي ، يطل على المدينة ، والكثير من المطاعم الفاخرة
+H5|تمثال الحرية
+IMG|${U("2022/08/img_2050.jpg")}
+P|بني تمثال الحرية في عام 1886م ، وكان هدية من فرنسا لأمريكا ، ويعد واحد من أهم الرموز الأمريكية الشهيرة ، كما أنه يعد رمزا عالميا شهيرا يرمز للحرية ، ويعتبر تمثال الحرية أحد أكبر التماثيل في العالم ، اذ يبلغ ارتفاعه حوالي 150 قدما ، من القاعدة الى الشعلة ، ويزن ما يقرب من 450.000 رطل
+H5|مكتبة نيويورك العامة
+IMG|${U("2022/08/img_2051.jpg")}
+P|تم تصميم مكتبة نيويورك العامة بأسلوب معماري مميز وجميل لذلك تعد المكتبة بغرفها الرائعة ، من أهم معالم السياحة في نيويورك البارزة ، حيث يقصدها كثير من الزوار والسياح باستمرار ، وقد ظهرت هذه المكتبة الرائعة في العديد من الأفلام والبرامج التلفزيونية على مر السنين ، وتحتوى المكتبة على مجموعة رائعة من الكتب والمطبوعات والمجلدات ، فان كنتم من محبي القراءة فلا تفوتو عليكم فرصة زيارة هذه المكتبة الرائعة
+H5|محطة غراند سنترال
+IMG|${U("2022/08/img_2072.jpg")}
+P|غراند سنترال هي عبارة عن مبنى رائع للفنون الجميلة ، وهي من معالم نيويورك الشهيرة ، التي تم افتتاحها في عام 1913 م ، وذلك كمحطة من محطات مترو الأنفاق والقطارات ، تضم محطة غراند سنترال بنيويورك العديد من المعالم البارزة ، التي تلفت الانتباه وتجذب السياح ، كما ويوجد بها تماثيل ووجوه مكسوة بالأعمدة ، ودرج كبير يمكن الوقوف عليه ومشاهدة السقف المرمم بشكل روعة ، يوجد ايضا العديد من متاجر البيع بالتجزئة والمطاعم لتتناول الوجبات والمشروبات الساخنة والباردة
+H5|حديقة براينت بارك
+IMG|${U("2022/08/img_2073.jpg")}
+P|وهي حديقة عامة ومن المناطق السياحية البارزة في نيويورك ، وتتميز هذه الحديقة الرائعة بالعديد من الآثار والمساحات الخضراء الواسعة ، وهي عبارة عن منطقة دائرية لها شعبية كبيرة بالمدينة ، يوجد بحديقة براينت بارك منطقة مخصصة للألعاب ، من ألواح الشطرنج ، وألواح الطاولة ، وألواح الداما الممتعة ، كل ذلك مقابل رسوم رمزية ، يتمتع زوار الحديقة بمشاهدة المناظر الطبيعية الرائعة ، والاسترخاء وسط الاشجار والخضرة ، وتقع حديقة براينت بارك بجوار مكتبة نيويورك العامة
+H5|معرض فريك
+IMG|${U("2022/08/img_2074.jpg")}
+P|تتصدر مجموعة فريك أماكن السياحة في نيويورك ، وقد قام ببناء هذا المبنى الرائع هنري كلاي فريك ، وذلك من أجل عرض مجموعته الفنية الفريدة ، تضم مجموعة فريك العديد من المقتنيات الفنية الرائعة ، التي من بينها اللوحات الفنية والأثاث والخزف ، وتتألف من ستة عشر صالة عرض جميلة ، تعرض أيضا مجموعة أعمال لمونيه ورامبرانت ، وبيليني ، وإل جريكو والكثير من الفنانين المشهورين ، ويتم عرض تلك الأعمال الفنية بطريقة عشوائية ولكنها جميلة ، يحيط بالغرف حديقة مغطاة ، بالعديد من النباتات الاستوائية الرائعة وبركة مياة مركزية
+H5|راديو سيتي ميوزيك
+IMG|${U("2022/08/img_2075.jpg")}
+P|يقع راديو سيتي ميوزيك هول في مركز روكفلر ، وهو من الأماكن الترفيهية الشهيرة والبارزة في مدينة نيويورك ، وقد تم بناء وتمويل هذا المبنى الرائع من قبل روكفلر ، وذلك خلال الثلاثينات من القرن الماضي ، وضم أكبر مسرح داخلي في العالم في ذلك الوقت وهو مسرح آرت ديكو ، يقدم هذا المسرح عروض موسيقية وأفلام رائعة ، ويعد الموطن الرئيسي لشركة رقص الروكيت ، كما يستضيف هذا المسرح باستمرار ، الفعاليات الكبرى بما في ذلك جوائز جرامي وجوائز توني
+H5|سنترال بارك
+IMG|${U("2022/08/img_2076.jpg")}
+P|سنترال بارك هى من أشهر وأهم اماكن السياحة في نيويورك على الإطلاق ، فلا يمكن التخطيط للسفر الى نيويورك ، دون وضع سنترال بارك ضمن خطتك وبرنامجك السياحي ، فهناك يمكن المشي والتجوال أو ركوب عربة عبر المسارات المتقاطعة في سنترال بارك ، فهي مكانا رائعا للعائلات والاستمتاع بالهواء الطلق والطبيعية الجميلة ، و يوجد داخل سنترال بارك العديد من عوامل الجذب البارزة ، ومعظمها مجاني ، مما يجعلها أحد أهم الأماكن السياحية المناسبة لجميع الفئات
+H5|شارع وول ستريت
+IMG|${U("2022/08/img_2077.jpg")}
+P|يعد شارع وول ستريت من أشهر شوارع نيويورك ، والمنطقة المحيطة به موطنا لبعض أهم البورصات في العالم ، ومن بينها بورصة نيويورك وناسداك ، وبورصة نيويورك التجارية ، ويضم وول ستريت العديد من مناطق جذب السياحة في نيويورك ، ومنها القاعة الفيدرالية ، والتمثال البرونزي شارشنج بول ، وكنيسة الثالثوث ، وغيرها من المناطق الرائعة التي يمكن زيارتها
+H5|مركز التجارة العالمي
+IMG|${U("2022/08/img_2078.jpg")}
+P|تم بناء الجزء العلوي من مبنى التجارة العالمي حديثا ، وهو عبارة عن منصة مراقبة ، توفر اطلالة بانورامية ساحرة للمدينة من الطوابق العليا ، كما يعتبر المصعد عامل جذب ، حيث أنه أثناء صعودك عليه تظهر اللوحات المحيطة بنيويورك ، وتحولها على مر السنين ، بداية من المناظر الطبيعية الريفية ، وصولا الى العاصمة التي تراها اليوم ، ويعد هذا المبنى الزجاجي هيكلا فريدا من نوعه على أفق مانهاتن بزوايا تضفي عليه مظهرا مميزا للغاية ، ويمكن رؤيته من جميع أنحاء المدينة
+H5|قاعة كارنيجي
+IMG|${U("2022/08/img_2079.jpg")}
+P|تم افتتاح قاعة كارنيجي عام 1891 م ، كأول قاعة حفلات موسيقية كبيرة في نيويورك ، تضم القاعة العديد من الموسيقيين من تشايكوفسكي ، الذين أجروا حفل الافتتاح ليلة ليونارد بيرنشتاين ، وفرقة البيتلز ، التي تمتلك بعض من أفضل صوتيات العالم ، يمكن هناك التمتع بالقيام بجولة ارشادية ، بالقاء نظرة ثاقبة على روعة البناء ، ونظرة شاملة على القاعة والاستمتاع بالأداء المذهل للعروض
+H5|مينو امباير ستيت
+IMG|${U("2022/08/img_2080.jpg")}
+P|يعد مبنى امباير ستيت أحد أشهر المباني التاريخية ، ومن أهم مناطق جذب السياحة في مدينة نيويورك ، يتكون هذا المبنى من 102 طابق ، ويصل ارتفاعه الى 381 مترا ، وقد ظهر هذا المبنى في عدد كبير من الأفلام والبرامج التلفزيونية ، يتيح مبنى المقاطعة الملكية بنيويورك للسائح فرصة مشاهدة المدينة من الأعلى ، في مشهد رائع من خلال المصاعد الأوتوماتيكية عالية السرعة ، ويضم منطقة مغلقة بالزجاج ، يتم تبريدها وقت الصيف ، وتسخينها وقت الشتاء ، كما يوجد به ممشى خارجي واسع على الجوانب الأربعة للمبنى
+H5|مركز روكفلر
+IMG|${U("2022/08/img_2081.jpg")}
+P|مركز روكفلر وهو عبارة عن مركز ترفيهي وتسوقي واسع جدا في مانهاتن ، وهو يعد وجهة سياحية هامة ، كما انه موطنا لشبكة ان بي سي تي في ووسائل الأعلام الأخرى ، ويتكون من 30 طابق ، فهو بمثابة ناطحة سحاب ، تتيح لك التمتع بمناظر رائعة على مانهاتن من أعلى قمة المبنى ، ولعل التزلج على حلبة التزلج في الهواء الطلق عند قاعدة البرج ، أحد أفضل الأشياء التي يمكن ممارستها في فصل الشتاء أثناء السياحة في نيويورك ، فهو من الأنشطة الترفيهية الممتعة لك ولعائلتك
+`,
+  ),
+  "washington": article(
+    "https://100region.com/?p=10442",
+    "السياحة في امريكا – واشنطن",
+    U("2022/08/img_1169.jpg"),
+    String.raw`
+P|واشنطن عاصمة الولايات المتحدة الامريكية واحدى أهم اماكن السياحة في أمريكا ، تحوي واشنطن الكثير من المتاحف التي تكثر في المنطقة الوسطى ، تذخر العاصمة بالمعالم السياحية الكثيرة ومن اهمها منتزه ناشونال مول الذي يحتوي على أهم المتاحف و المواقع السياسية و الثقافية و النصب التذكارية في المدينة
+H5|مبنى الكابيتول
+IMG|${U("2022/08/img_1169.jpg")}
+P|من ابرز الاماكن السياحية في واشنطن وهو مبنى ضخم يطل على منتزه ناشيونال مول وقد بني سنة 1793 م ، يستخدم المبنى لعقد اجتماعات مجلس الشيوخ ومجلس النواب المفتوحة ، يمكن الحصول على تصاريح للقيام بجولات في مبنى الكابيتول ، الكونغرس الأمريكي او كابيتول الولايات المتحدة من أهم معالم السياحة في أمريكا ، والتي عليك زيارتها عند قدومك إلى العاصمة واشنطن ، هذا المبنى يعود بنائه إلى عام 1800 ميلاديا ، يقع هذا المبنى في الطرف الشرقي من شارع بنسلفانيا ، يحده من الغرب نصب واشنطن ونصب لينكونن التذكاري ، وتقع المحكمة العليا ومكتبة الكونغرس في الشرق ، ويمتد لمساحة قدرها 53 هكتار
+H5|منتزة ناشيونال مول
+IMG|${U("2022/08/img_1170.jpg")}
+P|منتزه مفتوح يقع في وسط العاصمة واشنطن ويمتد غربا من الكابيتول الى نهر بوتوماك وعلى الجانب الشرقي من جيفرسون التذكاري لشارع الدستور ، يحيط بالمنتزه عدة مباني تاريخية و متاحف ونصب تذكارية من أهمها متاحف سميثسونيان والنصب التذكاري للمحاربين القدماء في فيتنام ، يستقبل منتزه ناشونال مول حوالي 24 مليون زائر سنويا ، ويتعتبر من اهم المناطق السياحية في واشنطن ، قد يكون مشهد لن تستطيع أن تنساه عند رؤيتك له للمرة الأولى ، وهو مشهد منتزه ناشيونال مول بتصميمه الفريد وارتفاعه الشاهق ، حيث يعد هذا المنتزه من اهم الأماكن السياحية في أمريكا ، يقع هذا المزار في قلب مدينة واشنطن تماما مما يجعل الوصول إليه من كافة المناطق أمرا سهلا ، كما يستقبل ما يزيد عن 24 مليون زائر بشكل سنوي ، وبجوار البعد التاريخي الهام الموجود به فإن هذا المكان تمتد به المساحات الخضراء المفتوحة ذات المناظر الطبيعية و التي غالباً ما تستخدم للمناسبات العامة
+H5|نصب لنكولن التذكاري
+IMG|${U("2022/08/img_1172.jpg")}
+IMG|${U("2022/08/img_1171.jpg")}
+P|من اهم معالم السياحة في واشنطن فقد شيّد هذا النصب لتكريم ذكرى الرئيس الأمريكي أبراهام لنكولن ويقع بجانب منتزه ناشونال مول ، بني النصب على شكل المعبد الإغريقي التقليدي تحيط به ستة وثلاثين من الأعمدة الضخمة وهو مفتوح للعامة على مدار 24 ساعة في اليوم
+H5|البيت الأبيض
+IMG|${U("2022/08/img_1173.jpg")}
+P|يعد البيت الابيض من اهم رموز الولايات المتحدة الامريكية ومقر اقامة الرئيس وعائلته ، يمكن زيارة البيت الأبيض بعد الحصول على تصريح مسبق فهو من اجمل معالم السياحة في واشنطن العاصمة ، من المؤكد أنك سمعت عن البيت الأبيض في أحد نشرات الأخبار أو قرأت هذا الأسم يومًا ما في أحد الصحف، ولكن ماذا يحدث اذا ما قررت الذهاب في جولة داخل البيت الأبيض في العاصمة واشنطن لتكتشف عن قرب طبيعة الأنشطة المقامة بداخله ، وتصميمه الخارجي والداخلي بالإضافة إلى أبرز العوامل التي ساهمت في انشائه ، يعد البيت الأبيض من اهم معالم السياحة في أمريكا وهو مقر الاقامة الرسمى لجميع القادة والرؤساء الذين تناوبوا على كرسي الحكم بالولايات المتحدة الأمريكية ، يحتوي على 132 غرفة والتي أشرف على بنائها الرئيس جورج واشنطن
+H5|حديقة الحيوانات الوطنية
+IMG|${U("2022/08/img_1174.jpg")}
+P|تعتبر حديقة الحيوانات الوطنية من اجمل اماكن سياحية في واشنطن حيث تضم حوالي 2000 حيوان من انواع مختلفة وبعضها نادر مثل الباندا والافيال والقرود وغيرها ، حيث يتم رعاية تلك الحيوانات بعناية تامة ، حديقة حيوان واشنطن الوطنية أو الحديقة الوطنية في واشنطن كما يطلق عليها في بعض الأحيان ، تعد أقدم حديقة حيوان بالولايات المتحدة على الإطلاق حيث تأسست عام 1889 ميلاديا ، وتعتبر من اجمل اماكن السياحة في واشنطن ، وبجوار احتوائها على مجموعة كبيرة من مختلف فصائل الحيوانات ، فإن حديقة حيوان واشنطن تحرص على دورها في تقديم تجارب جذابة مع الحيوانات وإنقاذ الحياة البرية ، مما جعل اقبال الزوار عليها هائلا حيث تستقبل ما يزيد عن مليوني زائر سنويا ممن يأتي من اجل السياحة في أمريكا
+H5|متحف الطيران والفضاء الوطني
+IMG|${U("2022/08/img_1175.jpg")}
+P|من اهم معالم السياحة في واشنطن حيث يضم أكبر عدد من الطائرات والمركبات الفضائية في العالم كما انه يعد مركزا هاما للبحث في علوم الطيران والفضاء ، يعرض المتحف الكثير من المراكب الأصلية سواء كانت صواريخ ام طائرات وغيرها ، يصحبك متحف الطيران والفضاء الوطني بواشنطن في جولة لا تنسى إلى عالم الفضاء الساحر ، يضم المبنى الرئيسي للمتحف الواقع في المول الوطني في مدينة واشنطن ، نحو ثلاثة وعشرين معرضا يعرض مئات الطائرات والمركبات الفضائية والصواريخ وغيرها من القطع الأثرية المرتبطة بالرحلات الجوية
+`,
+  ),
+  "los-angeles": article(
+    "https://100region.com/?p=10445",
+    "السياحة في امريكا – لوس انجلوس",
+    U("2022/08/img_1153.jpg"),
+    String.raw`
+P|مدينة لوس انجلوس من اشهر مدن أمريكا واحدى أهم مدن العالم ، تذخر هذه المدينة الصاخبة بالمعالم السياحية والفنادق الراقية والمطاعم المميزة ناهيك عن أماكن التسوق الرائعة
+H5|ديزني لاند
+IMG|${U("2022/08/img_1151.jpg")}
+P|ديزني لاند لوس انجلوس الوجهة العائلية الاولى للترفيه والمرح في مدينة لوس انجلوس امريكا وهي من اهم اماكن السياحة في لوس انجلوس ، ديزني لاند بارك هي الاولى من بين اثنبن من المنتزهات التي بنيت في منتجع ديزني لاند في أنهايم، كاليفورنيا ، افتتحت في 17 يوليو 1955 م ، وتعتبر الحديقة الوحيدة التي صممت وبنيت تحت إشراف مباشر من والت ديزني ، وهي الوجهة العائلية الاولى للترفيه والمرح في مدينة لوس انجلوس ، استضافت الحديقة منذ افتتاحها حتى عام 2013 حوالي 650 مليون زائر ومازال العدد في ارتفاع مما يجعلها ثالث حديقة الأكثر زيارة في العالم
+H5|هوليوود
+IMG|${U("2022/08/img_1153.jpg")}
+IMG|${U("2022/08/img_1152.jpg")}
+P|من منا لا يعرف هوليوود الواقعة في مقاطعة لوس أنجلوس في الولايات المتحدة الامريكية والتي تضم استوديوهات السينما والنجوم العالميين، تعد هوليوود من اشهر المناطق السياحية في لوس انجلوس وهي المركز التاريخي للسينما الامريكية حتى أصبح اسمها مستخدماً للكناية عن السينما في الولايات المتحدة الامريكية ، هوليوود هو حي واقع في المنطقة الوسطى من مدينة لوس انجلوس كاليفورنيا ، ويعتبر من اشهر اماكن السياحة في أمريكا باعتباره الموطن الرئيسي لصناعة السينما في الولايات المتحدة
+H5|يونيفرسال استوديو
+IMG|${U("2022/08/img_1149.jpg")}
+IMG|${U("2022/08/img_1150.jpg")}
+P|تعتبر ستوديوهات يونيفرسال من اهم الاماكن السياحية في لوس انجلوس في هوليوود ، توفر لزوارها امكانية قضاء يوم كامل من المتعة والتشويق فبإمكانهم التجول في اماكن مخصصة اثناء تصوير الافلام أو زيارة مدين الملاهي كما يمكنهم مشاهدة العديد من العروض الرائعة لأشهر الافلام ، يونيفرسال ستوديوز هي استوديو للافلام ومتنزه في منطقة يونيفرسال سيتي في وادي سان فرناندو في مقاطعة لوس أنجلوس بولاية كاليفورنيا
+H5|شاطىء فينيس
+IMG|${U("2022/08/img_1154.jpg")}
+P|يعتبر فينيس بيتش من ابرز اماكن السياحة في لوس انجلوس تجذب اعداد كبيرة من الزوار والسياح ، حيث يضم الكثير من متاجر بيع الهدايا وغيرها ، كما تقام عروض بهلوانية جميلة على الشاطئ ، توجد بجانب الشاطئ ملاهي جميلة في حديقة باسيفيك ، شاطئ فينيسيا يمتد لمسافة 3 اميال ويعتبر من وجهات السياحة في أمريكا الاكثر شعبية في فصل الصيف ، حيث يعج بالزوار والمصطافين من جميع انحاء الولايات المتحدة والعالم ، يتميز الشاطئ بنظافته واحتضانه للكثير من الانشطة الرياضية والترفيهية المائية لذا تراه ينبض بالحياة على مدار اليوم
+H5|منتزة غريفيث
+IMG|${U("2022/08/img_1155.jpg")}
+P|من اهم الاماكن السياحية في لوس انجلوس واحدى اشهر الحدائق فيها تضم حديقة للحيوانات ومسرح يوناني والعديد من الالعاب ، تحوي الحديقة مسارات مخصصة للمشاة وأخرى للدراجات الهوائية كما يوجد مركز لتعليم الفروسية ، على مر السنين تم تطوير مناطق الجذب الترفيهية في جميع أنحاء الحديقة ، ولكن جزءا كبيرا من الحديقة لا يزال دون تغيير تقريبا من أيام القرى الأمريكية الأصلية التي احتلت المنحدرات السفلى للمنطقة ، تقدم حديقة غريفيث اليوم العديد من المعالم العائلية ، ومجموعة متنوعة من المؤسسات التعليمية والثقافية ، وأميال من مسارات المشي لمسافات طويلة وركوب الخيل ، وتوفر للزوار بيئة مثالية للأنشطة الترفيهية الممتعة
+H5|متحف التاريخ الطبيعي
+IMG|${U("2022/08/img_1156.jpg")}
+P|متحف التاريخ الطبيعي في لوس انجلوس الواقع بالقرب من جامعة كاليفورنيا الجنوبية في لوس انجلوس يعتبر من ابرز وجهات السياحة في لوس انجلوس ، متحف التاريخ الطبيعي لمقاطعة لوس انجلوس هو أكبر متحف طبيعي وتاريخي في غرب الولايات المتحدة ، وتشمل مجموعاته حوالي 35 مليون عينة وتحفة وتغطي 4.5 مليار سنة من التاريخ
+H5|متحف مدام توسو هوليوود
+IMG|${U("2022/08/img_1157.jpg")}
+P|متحف مدام توسو هوليوود للشمع الواقع في شارع هوليوود والتاسع من بين سلسلة متاحف مدام توسو حول العالم هو واحد من معالم لوس انجلوس السياحية ويتمتع بشعبية بين سكان المدينة ، يتألف المتحف من 3 طوابق ويعرض حوالي 125 مجسما لأشهر شخصيات هوليوود وقد تم وضع لافتة بالقرب من كل مجسم تتضمن معلومات عن الشخصية ومسيرتها الفنية ، ويعتبر المتحف من اشهر اماكن السياحة في لوس انجلوس
+H5|حديقة حيوانات لوس انجلوس
+IMG|${U("2022/08/img_1158.jpg")}
+P|حديقة الحيوان من اجمل الاماكن السياحية في لوس انجلوس حيث تضم اكثر من 1100 حيوان من انواع مختلفة منها حيوانات نادرة كالكونكورد والشمبانزي وغيرها، كما تحوي الحديقة انواع نادرة من النباتات ، تبلغ مساحتها 133 فدان وقد تأسست سنة 1966 م ، وفي عام 2002 تم توسعة الحديقة وقد اصبحت تحتضن اكثر من 800 نوع مختلف من النباتات وتم تسمية الحديقة بـ حديقة حيوانات لوس انجلوس وحدائق النباتات
+`,
+  ),
+  "orlando": article(
+    "https://100region.com/?p=10447",
+    "السياحة في امريكا – اورلاندو",
+    U("2022/08/img_1131.jpg"),
+    String.raw`
+P|اشتهرت مدينة اورلاندو بكونها من افضل وجهات السياحة في أمريكا ذات الطابع الترفيهي حيث يقصدها السياح من كافة انحاء العالم للاستمتاع بخيارات الترفيه الغير محدودة للعائلة بشكل عام
+H5|عالم والت ديزني
+IMG|${U("2022/08/img_1127.jpg")}
+IMG|${U("2022/09/img_2176.jpg")}
+IMG|${U("2022/08/img_1128.jpg")}
+P|عالم والت ديزني هو منتجع ومجمع ترفيهي يقع في منطقتي بحيرة باي وبحيرة بوينا فيستا بالقرب من مدينة اورلاندو ، ويعتبر عالم والت ديزني اليوم من اهم الاماكن السياحية في اورلاندو والمنتجع الأمثل لقضاء العطلة ، وهو الوجهة الرئيسة لكافة مشاريع شركات ديزني الترفيهية في جميع أنحاء العالم ، ويحظى بشعبية خاصة في الثقافة الأمريكية
+P|وقد تم افتتاحه عام 1971 م لتقديم زاوية متميزة من الترفيه تتضمن مجموعة متنوعة من عوامل الجذب السياحية ، مثل مملكة السحر ، وهي أولى المتنزهات التي تم إنشاؤها في نفس العام ، ثم تلاها منتزه إبكوت في عام 1982 م ، ومتنزه استوديوهات ديزني هوليوود في عام 1989 م ، وأحدثها متنزه مملكة حيوانات ديزني في عام 1998 م ، ويعتبر عالم والت ديزني اليوم من اهم الأماكن السياحية في أمريكا والمنتجع الأمثل لقضاء العطلة ، وهو الوجهة الرئيسة لكافة مشاريع شركات ديزني الترفيهية في جميع أنحاء العالم ، ويحظى بشعبية خاصة في الثقافة الأمريكية
+H5|مملكة ديزني للحيوانات
+IMG|${U("2022/08/img_1129.jpg")}
+P|تُعد مملكة ديزني للحيوانات أكبر متنزه في العالم مُكرَّس تمامًا لأمور البيئة الطبيعية والحفاظ على الحيوانات ، وقد تم اعتمادها من قِبل جمعية حدائق الحيوان وأحواض السمك والرابطة العالمية لحدائق الحيوان والأحواض المائية ، لذا تعتبر من اشهر معالم السياحة في اورلاندو
+H5|منتزة ايكوت
+IMG|${U("2022/08/img_1130.jpg")}
+P|متنزه إبكوت في مدينة اورلاندو امريكا ثاني المتنزهات التي بنيت في عالم والت ديزني، بعد مملكة السحر ، يعد من اهم اماكن سياحية في اورلاندو ، حيث حقق المتنزه المرتبة الثالثة في قائمة المتنزهات الأكثر زيارة في أمريكا الشمالية ، والسادس على مستوى العالم
+H5|مملكة السحر
+IMG|${U("2022/08/img_1131.jpg")}
+IMG|${U("2022/08/img_1132.jpg")}
+IMG|${U("2022/08/img_1133.jpg")}
+IMG|${U("2022/08/img_1134.jpg")}
+P|مملكة السحر من اجمل اماكن سياحية في اورلاندو وهي حديقة ترفيهية في منتجع عالم والت ديزني الذي يتميز بمناطق الجذب الكلاسيكية والألعاب النارية الساحرة وشخصيات ديزني لاند مثل ميكي ماوس ، وشخصيات الأفلام مثل كابتن سبارو ، وأكبر معلم يمثل الحديقة هي قلعة سندريلا، المستوحاة من قلعة خرافية شوهدت في فيلم سندريلا عام 1950 م
+H5|عالم البحار اورلاندو
+IMG|${U("2022/08/img_1137.jpg")}
+P|عالم البحار اورلاندو متنزه بحري يقترن مع جاريه الخليج الاستكشافي ومتنزه أكواتيكا في اورلاندو لتشكيل منتجع بحري متكامل يتضمن مجمع ترفيهي والعديد من الفنادق المجاورة ، ويحتل المتنزه المرتبة العاشرة لأكثر المتنزهات تسلية في الولايات المتحدة ، وهو بذلك يعتبر من اهم اماكن السياحة في اورلاندو
+H5|منتزة جزر المغامرة
+IMG|${U("2022/08/img_1138.jpg")}
+IMG|${U("2022/08/img_1140.jpg")}
+P|جزر المغامرة هو متنزه تم افتتاحه جنبا إلى جنب مع متنزه سيتي ووك في اورلاندو ، كجزء من التوسع حول استوديوهات فلوريدا العالمية وحولتها إلى منتجع أورلاندو العالمي الذي يحمل شعار العطلة بمعناها الحقيقي ، يعد من افضل اماكن السياحة في اورلاندو وبالأخص لعشاق المغامرة فالفكرة العامة للمتنزه هي الانطلاق بصحبة الزوار برحلة استكشافية تبدأ من مغادرتهم الميناء الرئيس مرورا بجزر ثمانية استثنائية مفعمة بكل أنواع المغامرات
+H5|استوديوهات ديزني هوليوود
+IMG|${U("2022/08/img_1139.jpg")}
+P|استوديوهات ديزني هوليوود تعتبر من اهم اماكن السياحة في اورلاندو وقد تم افتتاحها في البداية كمتنزه ترفيهي واستوديو للإنتاج السينمائي والتلفزيوني وفرع للرسوم المتحركة في مدينة اورلاندو ، واهم ما يميز هذه الاستديوهات هما برج الشفق المخيف، وجولة الفيلم العظيم
+H5|منتزة المدينة القديمة
+P|المدينة القديمة من اهم الاماكن السياحية في اورلاندو وهو متنزه ومركز تسوق ترفيهي مفتوح يقع في منطقة كيسيمي جنوب مدينة اورلاندو ، يمكنك الاسترخاء والتنزه في شوارعه الجميلة المزينة بالأشجار ، والتسوق بأكثر من 70 متجر ، وتناول الوجبات في المطاعم بأسعار معقولة ، فالمتنزه يتميز بعروضه الرخيصة ، كما يمكنك الاستمتاع بجولات وألعاب تناسب كل الأجيال
+H5|مركز اورلاندوا العلمي
+IMG|${U("2022/08/img_1141.jpg")}
+P|مركز اورلاندو العلمي كان على مدى ستين عاما ولا يزال موقعا يثير الفضول والاستكشاف ، وهو من أهم اماكن السياحة في اورلاندو والتي يجب زيارتها ، وبشكل خاص للعائلات ، حيث إنه يشجع على التعلم بطريقة ممتعة ، وهو نشاط تعليمي مثالي ومليء بالمرح والمعرفة ، يتكون من أربعة طوابق من المعارض الخلابة ، وأفلام الشاشة العملاقة ، والتجارب العلمية والتقنية الحية ، وغيرها من الأنشطة المثيرة
+H5|عين اورلاندوا
+IMG|${U("2022/08/img_1142.jpg")}
+P|عين اورلاندو من اهم اماكن السياحة في اورلاندو وهو دولاب عملاق وشاهق بطول 122 متر، حمل أول ركابه في 29 أبريل 2015 م ، ويعرف حاليا باسم كوكا كولا عين أورلاندو ، يوصف بأنه دولاب مراقبة ، لأنه مكون من مركبات تدور باتزان، والتي تمنح الركاب القدرة على التمتع بمشاهد بانورامية لأفق مدينة اورلاندو
+H5|منتزة بحيرة ايولا
+IMG|${U("2022/08/img_1143.jpg")}
+IMG|${U("2022/08/img_1144.jpg")}
+P|يقع منتزه بحيرة إيولا في قلب مدينة اورلاندو ويصل طول الرصيف المحيط بالبحيرة إلى 9 أميال ، حيث يمكن للزوار الاستمتاع بالمشي ، كما يمكن الإبحار داخل البحيرة لرؤية البجع الحي والطيور الأخرى التي تسكن الحديقة ، والاستمتاع بإطعامها ، يضم العديد من المطاعم والمقاهي المنتشرة حول البحيرة ذات الإطلالات الخلابة على أفق المدينة ، كل ذلك جعل المكان واحدا من اهم اماكن السياحة في اورلاندو
+H5|أكواريوم الحياة البحرية
+IMG|${U("2022/08/img_1145.jpg")}
+P|يقع أكواريوم الحياة البحرية في اورلاندو داخل مجمع عين أورلاندو احد اماكن سياحية في اورلاندو الهامة ، حيث يحتضن الحوض العديد من أصناف الحياة البحرية كسمك القرش، وحصان البحر، وقنديل البحر، وغيرها، ويمكن للأطفال لقاء القرش ماغنوس الذي يتجول داخل ممرات الحوض وصالاته ليرسم ابتسامة على وجوههم
+H5|متحف ريبلي صدق او لا تصدق
+IMG|${U("2022/08/img_1146.jpg")}
+IMG|${U("2022/08/img_1147.jpg")}
+P|من الاماكن السياحية في اورلاندو حيث يبدو متحف ريبلي صدق أو لا تصدق في اورلاندو وكأنه خرج من باطن الأرض بمبناه المائل الغريب، ومحتواه من المعروضات التي قام ولأكثر من 40 عامًا ، روبرت ريبلي ، وماركو بولو ، وإنديانا جونز ، بالسفر حول كل العالم لجمعها ، وهي عبارة عن كل ماهو فريد من نوعه، ولا يصدق، وما لا يمكن تفسيره
+H5|متحف مدام توسو
+IMG|${U("2022/08/img_1148.jpg")}
+P|متحف مدام توسو اورلاندو احد اماكن سياحية في اورلاندو ويعتبر رحلة فوق السجادة الحمراء لمقابلة تماثيل أهم شخصيات العالم الشمعية المفضلة ، والتي تبدو وكأنها نابضة بالحياة
+`,
+  ),
+};
+
+export const USA_CITY_ARTICLES_EN: Record<string, { title: string; values: string[] }> = {
+  "new-york": {
+    title: "Tourism in the United States — New York",
+    values: [
+      "The most important sights of New York. Who among us does not know the famous Statue of Liberty in the United States of America? The statue stands on Liberty Island in New York Bay: a colossal figure 93 metres tall resting on a base 47 metres wide, and it is one of the best known symbols of the United States.",
+      "The Metropolitan Museum",
+      "",
+      "The Metropolitan Museum was founded in 1870 and is one of the most famous museums in the United States. It holds more than two million works of art going back 5,000 years, among them collections of American decorative arts, Egyptian art, arms and armour, musical instruments, photographs and much more. The museum also displays unique and celebrated pieces you will find nowhere else.",
+      "The High Line",
+      "",
+      "The High Line is one of the newest attractions in New York: a former railway line turned into a walking trail running between the streets of the city. This public park has been planted with a unique variety of beautiful plants and trees, and it offers enchanting views over the city. Alongside the High Line there are many art installations to enjoy, as well as seating areas with a glass wall looking out over the city, and plenty of fine restaurants.",
+      "The Statue of Liberty",
+      "",
+      "The Statue of Liberty was built in 1886 as a gift from France to America. It is one of the most famous American symbols and a world-renowned emblem of freedom. It is also among the largest statues on earth, standing roughly 150 feet from base to torch and weighing close to 450,000 pounds.",
+      "The New York Public Library",
+      "",
+      "The New York Public Library was designed in a distinctive and beautiful architectural style, and its magnificent rooms make it one of New York's outstanding sights, visited constantly by travellers. The library has appeared in many films and television programmes over the years, and it holds a wonderful collection of books, prints and volumes — if you love reading, do not miss the chance to visit it.",
+      "Grand Central Terminal",
+      "",
+      "Grand Central is a magnificent Beaux-Arts building and one of New York's famous landmarks, opened in 1913 as a station for the subway and the railways. The terminal contains many striking features that draw visitors: statues and carved faces set among the columns, and a great staircase where you can stand and admire the beautifully restored ceiling. There are also many retail shops and restaurants serving meals and hot and cold drinks.",
+      "Bryant Park",
+      "",
+      "A public park and one of New York's prominent tourist areas, distinguished by its monuments and wide green lawns. It is a circular space enormously popular with the city, and it has an area set aside for games — chessboards, backgammon and draughts — all for a token fee. Visitors enjoy the lovely scenery and relax among the trees and greenery. Bryant Park sits right beside the New York Public Library.",
+      "The Frick Collection",
+      "",
+      "The Frick Collection is among the leading places to visit in New York. This splendid building was erected by Henry Clay Frick to display his unique art collection, which includes paintings, furniture and porcelain across sixteen beautiful galleries, with works by Monet, Rembrandt, Bellini, El Greco and many other celebrated artists. The works are displayed in a seemingly random yet beautiful arrangement, and the rooms surround a covered garden full of splendid tropical plants with a central pool.",
+      "Radio City Music Hall",
+      "",
+      "Radio City Music Hall stands in Rockefeller Center and is one of the most famous entertainment venues in New York City. The building was built and financed by Rockefeller during the 1930s and contained the largest indoor theatre in the world at the time, an Art Deco hall. It presents wonderful concerts and films, is the home of the Rockettes dance company, and regularly hosts major events including the Grammy Awards and the Tony Awards.",
+      "Central Park",
+      "",
+      "Central Park is by far one of the most famous and important places to visit in New York; you cannot plan a trip to New York without putting Central Park in your itinerary. There you can walk and wander or ride a carriage along the paths that criss-cross the park, a wonderful place for families to enjoy the open air and beautiful nature. Central Park holds many notable attractions, most of them free, which makes it one of the best sights for visitors of every kind.",
+      "Wall Street",
+      "",
+      "Wall Street is one of New York's most famous streets, and the surrounding district is home to some of the world's most important exchanges, among them the New York Stock Exchange, Nasdaq and the New York Mercantile Exchange. Wall Street contains many New York attractions, including Federal Hall, the bronze Charging Bull and Trinity Church, along with other fine places worth visiting.",
+      "One World Trade Center",
+      "",
+      "The upper part of the World Trade Center building is newly built as an observation deck offering an enchanting panoramic view of the city from the highest floors. The lift itself is an attraction: as you rise, panels show the New York around you and how it changed over the years, from rural landscape to the capital you see today. This glass building is a uniquely shaped structure on the Manhattan skyline, with angles that give it a very distinctive look, and it can be seen from all over the city.",
+      "Carnegie Hall",
+      "",
+      "Carnegie Hall opened in 1891 as the first great concert hall in New York. Its stage has held many musicians, from Tchaikovsky, who conducted the opening night, to Leonard Bernstein and the Beatles, and it has some of the finest acoustics in the world. A guided tour there gives an insight into the splendour of the building and a full view of the hall, along with the chance to enjoy remarkable performances.",
+      "The Empire State Building",
+      "",
+      "The Empire State Building is one of the most famous historic buildings and among the most important attractions in New York City. It has 102 floors and rises 381 metres, and it has appeared in a great many films and television programmes. The building lets visitors see the city from above in a magnificent scene reached by high-speed automatic lifts, and it includes a glass-enclosed area cooled in summer and heated in winter, as well as a wide outdoor walkway on all four sides.",
+      "Rockefeller Center",
+      "",
+      "Rockefeller Center is a vast entertainment and shopping complex in Manhattan and an important destination in its own right, as well as the home of the NBC television network and other media. Rising thirty floors, it is a skyscraper that lets you enjoy splendid views over Manhattan from the very top, and skating on the open-air rink at the base of the tower is one of the finest things to do in winter in New York — an enjoyable outing for you and your family.",
+    ],
+  },
+  washington: {
+    title: "Tourism in the United States — Washington",
+    values: [
+      "Washington is the capital of the United States of America and one of the most important places to visit in the country. It holds a great many museums, most of them clustered in the central district, and the capital is rich in sights — chief among them the National Mall, which gathers the city's most important museums, political and cultural sites and memorials.",
+      "The Capitol",
+      "",
+      "One of the foremost sights of Washington, a vast building overlooking the National Mall, begun in 1793. It is used for the open sessions of the Senate and the House of Representatives, and permits can be obtained for guided tours. The United States Capitol is one of the most important landmarks in America and a must-see when you come to Washington. The building dates back to 1800 and stands at the eastern end of Pennsylvania Avenue, bounded to the west by the Washington Monument and the Lincoln Memorial, with the Supreme Court and the Library of Congress to the east, across a site of 53 hectares.",
+      "The National Mall",
+      "",
+      "An open park in the middle of the capital, running west from the Capitol to the Potomac river and, on its eastern side, from the Jefferson Memorial to Constitution Avenue. It is surrounded by historic buildings, museums and memorials, most notably the Smithsonian museums and the Vietnam Veterans Memorial. The National Mall receives around 24 million visitors a year and is one of the most important sights in Washington — a scene you will not forget when you see its unique design and soaring monument for the first time. It lies right in the heart of the city, which makes it easy to reach from anywhere, and beside its historic importance it offers wide open landscaped lawns often used for public events.",
+      "The Lincoln Memorial",
+      "",
+      "",
+      "One of the most important sights of Washington, raised to honour the memory of the American president Abraham Lincoln and standing beside the National Mall. The memorial was built in the form of a traditional Greek temple surrounded by thirty-six massive columns, and it is open to the public 24 hours a day.",
+      "The White House",
+      "",
+      "The White House is one of the great symbols of the United States and the residence of the president and his family. It can be visited with a permit obtained in advance, and it is one of the finest sights in the capital. You have surely heard of the White House on the news or read the name in a newspaper — but what happens if you decide to take a tour inside it, to discover at first hand the work carried on within, its exterior and interior design and the story of its construction? The White House is one of the most important landmarks in America and the official residence of every leader and president who has held office in the United States. It contains 132 rooms, and its building was overseen by President George Washington.",
+      "The National Zoo",
+      "",
+      "The National Zoo is one of the loveliest places to visit in Washington, home to around 2,000 animals of different species, some of them rare such as pandas, elephants and monkeys, all cared for with great attention. Washington's National Zoo is the oldest zoo in the United States, founded in 1889, and beside its large collection of species it takes seriously its role in offering engaging encounters with animals and in rescuing wildlife — which is why it draws enormous numbers of visitors, more than two million a year, many of them travelling in America.",
+      "The National Air and Space Museum",
+      "",
+      "One of the most important sights of Washington, holding the largest collection of aircraft and spacecraft in the world and serving as a major centre for research in aviation and space science. The museum displays many original craft, rockets and aeroplanes alike. The National Air and Space Museum takes you on an unforgettable journey into the enchanting world of space: its main building on the National Mall holds some twenty-three galleries displaying hundreds of aircraft, spacecraft, rockets and other artefacts connected with flight.",
+    ],
+  },
+  "los-angeles": {
+    title: "Tourism in the United States — Los Angeles",
+    values: [
+      "Los Angeles is one of the most famous cities in America and one of the most important cities in the world. This bustling city is rich in sights, elegant hotels and distinctive restaurants, not to mention wonderful shopping.",
+      "Disneyland",
+      "",
+      "Disneyland Los Angeles is the first choice for family fun and entertainment in the city and one of the most important places to visit in Los Angeles. Disneyland Park is the first of the two parks built at the Disneyland Resort in Anaheim, California, opened on 17 July 1955, and it is the only park designed and built under the direct supervision of Walt Disney. From its opening until 2013 the park hosted around 650 million visitors, and the number keeps rising, making it the third most visited park in the world.",
+      "Hollywood",
+      "",
+      "",
+      "Who does not know Hollywood, in Los Angeles County in the United States, home to the film studios and the world's stars? Hollywood is one of the most famous districts to visit in Los Angeles and the historic centre of American cinema — so much so that its name became a byword for the film industry in the United States. Hollywood is a neighbourhood in the central district of Los Angeles, California, and one of the best known sights in America as the principal home of American film-making.",
+      "Universal Studios",
+      "",
+      "",
+      "Universal Studios is one of the most important attractions in Los Angeles, in Hollywood. It offers visitors a full day of fun and excitement: they can walk through areas set aside during filming, visit the theme park, and watch many wonderful shows based on the most famous films. Universal Studios is a film studio and theme park in the Universal City area of the San Fernando Valley in Los Angeles County, California.",
+      "Venice Beach",
+      "",
+      "Venice Beach is one of the leading places to visit in Los Angeles and draws large numbers of visitors. It holds many gift shops and more, and beautiful acrobatic performances are staged on the sand, while a lovely amusement park sits beside the beach in Pacific Park. Venice Beach stretches three miles and is one of the most popular destinations in America in summer, crowded with visitors and holidaymakers from all over the United States and the world. The beach is known for its cleanliness and for the many sports and water activities it hosts, which keep it alive with people all day long.",
+      "Griffith Park",
+      "",
+      "One of the most important attractions in Los Angeles and one of its most famous parks, holding a zoo, a Greek theatre and many amusements. The park has trails for walkers and others for cyclists, as well as an equestrian centre. Over the years recreational attractions have been developed throughout the park, but a large part of it remains almost unchanged from the days of the Native American villages that occupied the lower slopes of the area. Today Griffith Park offers many family sights, a variety of educational and cultural institutions and miles of hiking and riding trails, giving visitors an ideal setting for enjoyable recreation.",
+      "The Natural History Museum",
+      "",
+      "The Natural History Museum of Los Angeles, near the University of Southern California, is one of the leading sights in the city. The Natural History Museum of Los Angeles County is the largest natural and historical museum in the western United States, and its collections include some 35 million specimens and artefacts covering 4.5 billion years of history.",
+      "Madame Tussauds Hollywood",
+      "",
+      "The Madame Tussauds wax museum in Hollywood, on Hollywood Boulevard, is the ninth in the chain of Madame Tussauds museums around the world and one of the sights of Los Angeles, popular with the city's own residents. The museum has three floors and displays around 125 figures of the most famous Hollywood personalities, with a plaque beside each one giving information about the person and their career. It is one of the most famous places to visit in Los Angeles.",
+      "Los Angeles Zoo",
+      "",
+      "The zoo is one of the loveliest places to visit in Los Angeles, home to more than 1,100 animals of different species, among them rare creatures such as condors and chimpanzees, as well as rare plants. It covers 133 acres and was founded in 1966; in 2002 the grounds were expanded and came to hold more than 800 different species of plants, at which point it was renamed the Los Angeles Zoo and Botanical Gardens.",
+    ],
+  },
+  orlando: {
+    title: "Tourism in the United States — Orlando",
+    values: [
+      "Orlando is famous as one of the finest destinations in America for entertainment, and travellers come to it from every corner of the world to enjoy its unlimited choices of family fun.",
+      "Walt Disney World",
+      "",
+      "",
+      "",
+      "Walt Disney World is a resort and entertainment complex in the Bay Lake and Lake Buena Vista districts near the city of Orlando. Today it is one of the most important places to visit in Orlando and the ideal resort for a holiday, as well as the flagship destination of all of Disney's entertainment ventures around the world, and it holds a special place in American culture.",
+      "It opened in 1971 to offer a distinctive kind of entertainment with a wide variety of attractions, such as Magic Kingdom, the first of its parks, created in the same year, followed by Epcot in 1982, Disney's Hollywood Studios in 1989 and, most recently, Disney's Animal Kingdom in 1998. Walt Disney World is today one of the most important sights in America and the ideal resort for a holiday, the flagship destination for all of Disney's entertainment projects worldwide, and it enjoys a special popularity in American culture.",
+      "Disney's Animal Kingdom",
+      "",
+      "Disney's Animal Kingdom is the largest park in the world devoted entirely to the natural environment and animal conservation. It is accredited by the Association of Zoos and Aquariums and the World Association of Zoos and Aquariums, which makes it one of the most famous sights in Orlando.",
+      "Epcot",
+      "",
+      "Epcot in Orlando is the second park built at Walt Disney World, after Magic Kingdom, and one of the most important places to visit in the city: it ranks third among the most visited parks in North America and sixth in the world.",
+      "Magic Kingdom",
+      "",
+      "",
+      "",
+      "",
+      "Magic Kingdom is one of the loveliest places to visit in Orlando, a theme park at the Walt Disney World Resort known for its classic attractions, enchanting fireworks and Disney characters such as Mickey Mouse, along with film characters such as Captain Sparrow. Its greatest landmark is Cinderella Castle, inspired by the fairy-tale castle seen in the 1950 film Cinderella.",
+      "SeaWorld Orlando",
+      "",
+      "SeaWorld Orlando is a marine park that joins its neighbours Discovery Cove and Aquatica in Orlando to form a complete marine resort with an entertainment complex and many nearby hotels. The park ranks tenth among the most popular amusement parks in the United States, which makes it one of the most important places to visit in Orlando.",
+      "Islands of Adventure",
+      "",
+      "",
+      "Islands of Adventure is a park opened alongside CityWalk in Orlando as part of the expansion around Universal Studios Florida that turned it into the Universal Orlando Resort, a place that carries the true meaning of a holiday. It is one of the best places to visit in Orlando, especially for lovers of adventure: the idea of the park is to set visitors off on a voyage of discovery that begins as they leave the main harbour and carries them through eight extraordinary islands packed with adventures of every kind.",
+      "Disney's Hollywood Studios",
+      "",
+      "Disney's Hollywood Studios is one of the most important places to visit in Orlando. It opened as a theme park, a film and television production studio and an animation branch in the city, and what most distinguishes it are the Twilight Zone Tower of Terror and the Great Movie Ride.",
+      "Old Town",
+      "Old Town is one of the most important attractions in Orlando, an open-air park and shopping and entertainment centre in the Kissimmee area south of the city. You can relax and stroll along its beautiful tree-lined streets, shop in more than 70 stores and eat in restaurants at reasonable prices — the park is known for its inexpensive offerings — and enjoy rides and games that suit every generation.",
+      "Orlando Science Center",
+      "",
+      "For sixty years the Orlando Science Center has been, and remains, a place that stirs curiosity and exploration. It is one of the most important sights in Orlando and a must-see, especially for families, since it encourages learning in an enjoyable way — an ideal educational outing full of fun and knowledge. It has four floors of striking exhibits, giant-screen films, live scientific and technical experiments and other exciting activities.",
+      "The Orlando Eye",
+      "",
+      "The Orlando Eye is one of the most important sights in Orlando, a giant wheel 122 metres tall that carried its first passengers on 29 April 2015 and is known today as the Coca-Cola Orlando Eye. It is described as an observation wheel because it is made of capsules that turn in perfect balance, giving riders panoramic views of the Orlando skyline.",
+      "Lake Eola Park",
+      "",
+      "",
+      "Lake Eola Park lies in the heart of Orlando, and the walkway around the lake runs some 9 miles, so visitors can enjoy a stroll. You can also sail on the lake to see the live swans and other birds that make their home in the park, and enjoy feeding them. Many restaurants and cafés are spread around the lake with striking views of the city skyline — all of which makes the place one of the most important sights in Orlando.",
+      "SEA LIFE Aquarium",
+      "",
+      "The SEA LIFE Aquarium in Orlando stands inside the Orlando Eye complex and is one of the city's important attractions. The aquarium holds many kinds of marine life — sharks, seahorses, jellyfish and more — and children can meet Magnus the shark, who moves through the tanks and halls of the aquarium and brings a smile to their faces.",
+      "Ripley's Believe It or Not!",
+      "",
+      "",
+      "One of the sights of Orlando: Ripley's Believe It or Not! in Orlando looks as though it has risen out of the ground with its strange tilted building, and its contents are exhibits that Robert Ripley, Marco Polo and Indiana Jones spent more than 40 years travelling the world to collect — everything that is one of a kind, unbelievable and unexplained.",
+      "Madame Tussauds Orlando",
+      "",
+      "Madame Tussauds Orlando is one of the city's attractions, a walk along the red carpet to meet wax figures of the world's most beloved personalities, looking as though they were alive.",
+    ],
+  },
+};
