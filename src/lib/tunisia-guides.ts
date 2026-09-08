@@ -1,4 +1,5 @@
 import type { Guide } from "./france-guides";
+import { tunisiaRegionGuides, TUNIS_REGION_HEROES } from "./tunisia-regions";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
