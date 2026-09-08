@@ -24,6 +24,7 @@ import { ZIMBABWE_CITY_ARTICLES, ZIMBABWE_CITY_ARTICLES_EN } from "./zimbabwe-ci
 import { EGYPT_CITY_ARTICLES, EGYPT_CITY_ARTICLES_EN } from "./egypt-cities";
 import { ARGENTINA_CITY_ARTICLES, ARGENTINA_CITY_ARTICLES_EN } from "./argentina-cities";
 import { PORTUGAL_CITY_ARTICLES, PORTUGAL_CITY_ARTICLES_EN } from "./portugal-cities";
+import { GEORGIA_CITY_ARTICLES, GEORGIA_CITY_ARTICLES_EN } from "./georgia-cities";
 
 export type { ArticleLineKind, ArticleLine, CityArticle };
 
