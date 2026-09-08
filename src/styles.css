@@ -127,6 +127,13 @@
   --usnavy: oklch(0.28 0.09 265);
   --usred: oklch(0.5 0.19 27);
   --usparch: oklch(0.95 0.015 85);
+  /* Las Vegas 90s neon accents */
+  --vegasnight: oklch(0.16 0.05 285);
+  --vegasink: oklch(0.1 0.04 285);
+  --vegaspink: oklch(0.7 0.24 350);
+  --vegascyan: oklch(0.82 0.15 195);
+  --vegasgold: oklch(0.83 0.16 88);
+  --vegaspurple: oklch(0.45 0.19 300);
 
 
 
