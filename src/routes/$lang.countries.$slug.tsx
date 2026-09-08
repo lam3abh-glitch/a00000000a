@@ -669,13 +669,13 @@ function Country() {
 
       {/* USA — additional information */}
       {c.slug === "usa" && (
-        <section className="py-16 bg-usparch">
+        <section className="py-16 bg-vegasink">
           <div className="mx-auto max-w-4xl px-6">
             <div className={`mb-8 ${lang === "ar" ? "text-right" : "text-left"}`}>
-              <div className="text-[10px] uppercase tracking-[0.4em] text-usred font-mono mb-2">
+              <div className="text-[10px] uppercase tracking-[0.4em] font-mono mb-2 vegas-neon-cyan">
                 {lang === "ar" ? "معلومات إضافية" : "Additional information"}
               </div>
-              <h2 className="font-display text-3xl md:text-4xl text-usnavy">
+              <h2 className="font-display text-3xl md:text-4xl vegas-neon-gold">
                 {lang === "ar" ? "تعرّف أكثر على الولايات المتحدة" : "Learn more about the United States"}
               </h2>
             </div>
@@ -684,32 +684,33 @@ function Country() {
                 href="https://100region.com/?p=8943"
                 target="_blank"
                 rel="noreferrer"
-                className={`group bg-white border border-usnavy/10 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
+                className={`group rounded-xl bg-vegasnight/70 vegas-tube-pink hover:-translate-y-1 transition-transform px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
               >
-                <div className="text-[10px] uppercase tracking-[0.3em] text-usred font-mono mb-2">01</div>
-                <div className="font-display text-xl text-usnavy group-hover:text-usred transition-colors">
+                <div className="text-[10px] uppercase tracking-[0.3em] font-mono mb-2 vegas-neon-cyan">01</div>
+                <div className="font-display text-xl text-vegasgold group-hover:text-vegaspink transition-colors">
                   {lang === "ar" ? "أهمية علم الدولة" : "The importance of a nation's flag"}
                 </div>
-                <div className="mt-2 text-xs text-charcoal/60">
+                <div className="mt-2 text-xs text-cream/60">
                   {lang === "ar" ? "اقرأ المزيد ←" : "Read more →"}
                 </div>
               </a>
               <Link
                 to="/$lang/countries/$country/guides/$topic"
                 params={{ lang, country: "usa", topic: "statue-of-liberty" }}
-                className={`group bg-white border border-usnavy/10 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
+                className={`group rounded-xl bg-vegasnight/70 vegas-tube-cyan hover:-translate-y-1 transition-transform px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
               >
-                <div className="text-[10px] uppercase tracking-[0.3em] text-usred font-mono mb-2">02</div>
-                <div className="font-display text-xl text-usnavy group-hover:text-usred transition-colors">
+                <div className="text-[10px] uppercase tracking-[0.3em] font-mono mb-2 vegas-neon-cyan">02</div>
+                <div className="font-display text-xl text-vegasgold group-hover:text-vegaspink transition-colors">
                   {lang === "ar" ? "تعرف على تمثال الحرية وقصة وجوده" : "The Statue of Liberty and the story behind it"}
                 </div>
-                <div className="mt-2 text-xs text-charcoal/60">
+                <div className="mt-2 text-xs text-cream/60">
                   {lang === "ar" ? "اقرأ المزيد ←" : "Read more →"}
                 </div>
               </Link>
             </div>
           </div>
         </section>
+
       )}
 
       {/* GUIDE SECTIONS */}
