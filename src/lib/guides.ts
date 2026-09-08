@@ -30,6 +30,8 @@ import { czechGuidesExtraA } from "./czech-guides-extra-a";
 import { czechGuidesExtraB } from "./czech-guides-extra-b";
 import { czechGuidesExtraC } from "./czech-guides-extra-c";
 import { czechGuidesExtraD } from "./czech-guides-extra-d";
+import { usaLandmarkGuides } from "./usa-guides";
+
 
 const pragueLandmarkGuides = [...pragueGuidesA, ...pragueGuidesB, ...pragueGuidesC];
 const czechExtraGuides = [...czechGuidesExtraA, ...czechGuidesExtraB, ...czechGuidesExtraC, ...czechGuidesExtraD];
