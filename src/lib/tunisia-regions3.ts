@@ -1,0 +1,323 @@
+import type { Guide } from "./france-guides";
+
+const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
+
+export const TUNIS_REGION_HEROES_3 = {
+  douz: U("2022/10/img_4968.jpg"),
+  tozeur: U("2022/10/img_4970.jpg"),
+  "djerba-zarzis": U("2022/10/image-2-2.jpg"),
+  "sfax-kerkennah": U("2022/10/img_4974.jpg"),
+  hammamet: U("2022/10/img_4975.jpg"),
+};
+
+/**
+ * Five more Tunisian region pages linked from "الأماكن السياحية".
+ * Arabic text is kept exactly as published on the source pages.
+ */
+export const tunisiaRegionGuides3: Guide[] = [
+  {
+    slug: "douz",
+    title_ar: "دوز وما حولها",
+    title_en: "Douz and around",
+    kicker_ar: "منطقة",
+    kicker_en: "Region",
+    image: TUNIS_REGION_HEROES_3.douz,
+    blocks: [
+      { type: "H3", ar: "دوز .. متعة السياحة والترفية", en: "Douz — the pleasure of travel and leisure", noNumber: true },
+      {
+        type: "P",
+        ar: "تبدو دوز وكأنها مغطاة بمعطف أبيض رقيق يشبه الثلج ، فمنطقة دوز هي الوجه الناعم للصحراء ، سلسلة من الكثبان الرملية وباقات النخيل الرشيقة على طول الطرق المغمورة بالرمال ، رحابة الصحراء الشقراء اللامتناهية تبدو هنا في متناول اليد ، في حين توفر الواحات استراحة لذيذة بين النخيل ، وفي قلب المنطقة ، امتداد الملح الهائل ذي الانعكاسات اللماعة : انه شط الجريد",
+        en: "Douz looks as if it were covered by a thin white coat resembling snow: the region of Douz is the gentle face of the desert, a chain of sand dunes and slender clusters of palms along roads submerged in sand. The endless expanse of the blond desert seems within reach here, while the oases offer a delicious rest among the palm trees. And at the heart of the region lies the immense stretch of salt with its glinting reflections: Chott el Jerid.",
+      },
+      { type: "IMG", src: TUNIS_REGION_HEROES_3.douz, cap_ar: "دوز", cap_en: "Douz" },
+      { type: "H3", ar: "تعنى لتشاهد — الكثبان والواحات", en: "Not to be missed — dunes and oases", noNumber: true },
+      {
+        type: "P",
+        ar: "عند أبواب فنادق دوز تبدأ صحراء الرمال ، رحلة على الأقدام أو على ظهر الجمال لرؤية غروب الشمس وراء الكثبان الرملية تأخذك في دنيا حالمة ، على الجانب الآخر ، شط الجريد يمتد الى الأفق ، مع بلورات الملح المتلألئة على سطحه لتشكل سرابا غريبا : هذا البحر الداخلي القديم الجاف في جزء كبير منه ، تعبره طريق اسفلتية ، وبين الاتساعين – رمال الصحراء وصحراء الملح – توجد قرى مغمورة في الرمل كصبرية ، نويل ، الفوار ، وواحاتها الصغيرة ، جنوبا قصر غيلان ، الحد بين رمال الصحراء والصحراء الصخرية ، ملجأ مريح للمتجولين بواحتها ، وينابيعها الحرارية ومسالكها المضللة بأشجار الطرفاء المليئة بالطيور ، ثم مسلك واسع يؤدي الى المدينة النفطية البرمة بين الكثبان الوردية للعرق الشرقي الكبير",
+        en: "The sand desert begins at the doors of the hotels of Douz: a trip on foot or on camel-back to watch the sun set behind the dunes carries you into a dreamlike world. On the other side, Chott el Jerid stretches to the horizon, salt crystals glittering on its surface to form a strange mirage — this ancient inland sea, dry over much of its extent, is crossed by an asphalt road. Between the two expanses, the desert of sand and the desert of salt, lie villages half-buried in sand such as Sabria, Nouil and El Faouar with their small oases. To the south is Ksar Ghilane, the boundary between sand and stony desert, a comfortable refuge for travellers with its oasis, its hot springs and its paths shaded by tamarisk trees full of birds; then a broad track leads to the oil town of El Borma among the pink dunes of the Grand Erg Oriental.",
+      },
+      { type: "H3", ar: "لمزيد من المعرفة", en: "To know more", noNumber: true },
+      { type: "P", ar: "البدو والمهاري", en: "The Bedouin and the mehari camels." },
+      { type: "H3", ar: "أنشطة وبرامج عليك القيام بها — التجول والسيارات الرباعية", en: "Things to do — trekking and four-wheel drives", noNumber: true },
+      {
+        type: "P",
+        ar: "للشعور بتأثيرات الصحراء ، قم بجولة صغيرة على ظهر المهاري رفقة مرشدين محليين ، الغذاء في خيمة وقضاء ليلة في المخيم بين روعة الكثبان الرملية ، وسماء مرصعة بالنجوم المضيئة لتجربة مغامرة الصحراء الحقيقية ، انطلق في غارة صحراوية على متن دراجة نارية أوسيارة رباعية الدفع أو راجلا بين المشاهد الطبيعية الخلابة ، الفضاءات الصحراوية الشاسعة هي أيضا ميدان للرياضات القصوى لمتعاطي الدراجة والسيارة الرباعية ، أو الدراجة النارية ، الفضاءات الشاسعة مثل شط الجريد تسمح بممارسة رياضة اللوحات الشراعية والأشرعة السريعة ، التزلج على الكثبان الرملية يمنح أحاسيس مبهجة ، والطائرات الشراعية الخفيفة هي احدى أفضل الوسائل لتقدير جمال الصحراء التونسية ، هواة الحيوانات والنباتات لهم موعد في الحديقة الوطنية بجبيل لرؤية الغزلان والظباء ، أما هواة التاريخ ، سوف يبهرون ببقايا الحصن الروماني بالقرب من قصر غيلانو الخصوصيات المعمارية للقرى الصحراوية كتوزر و دوز ومطماطة",
+        en: "To feel the spell of the desert, take a short ride on a mehari camel with local guides, lunch in a tent and spend a night in camp amid the splendour of the dunes under a sky studded with bright stars for a true desert adventure. Set off on a desert raid by motorbike, four-wheel drive or on foot through the stunning landscapes. The vast desert spaces are also a field for extreme sports for quad, 4x4 and motorbike riders, while great flats such as Chott el Jerid allow sand-yachting and speed sails. Sand-boarding on the dunes gives exhilarating sensations, and microlight aircraft are one of the best ways to appreciate the beauty of the Tunisian desert. Lovers of wildlife have an appointment at the Jbil national park to see gazelles and antelopes, while history lovers will be dazzled by the remains of the Roman fort near Ksar Ghilane and by the architecture of desert villages such as Tozeur, Douz and Matmata.",
+      },
+      { type: "H3", ar: "جرب هذه الأكلات — الكسكسي وخبز الصحراء", en: "Food to try — couscous and desert bread", noNumber: true },
+      {
+        type: "P",
+        ar: "تذوق مأكولات الرعاة الرحل من مرفوسة التمر وحساء الشعير «التشيش» ، تابع اعداد خبز الصحراء الشهير ، المطهي في الرمال الساخنة تحت الرماد والجمر ، واستمتع برشفات الشاي الأحمر ، وفي المناسبات الخاصة ، الكسكسي مع لحم الضأن",
+        en: "Taste the food of the nomad herders: marfoussa of dates and the barley soup called tchich. Watch the famous desert bread being prepared, baked in the hot sand under ash and embers, and enjoy sips of red tea; on special occasions, couscous with mutton.",
+      },
+      { type: "H3", ar: "حاول السكن في — فندق أو معسكر", en: "Where to stay — a hotel or a camp", noNumber: true },
+      {
+        type: "P",
+        ar: "تقدم دوز مجموعة متنوعة من أماكن الاقامة الجميلة والفنادق المطلة على الكثبان الرملية ، والمخيمات الصحراوية كثيرة ، من البسيط الى الأكثر رفاهة : قصر غيلان ، زعفران ، بير سلطان ، مخيم فاخر يوجد في سفح جبل تمبايين معزولا في مشهد خارق بعمق الصحراء",
+        en: "Douz offers a variety of beautiful places to stay and hotels overlooking the dunes, and desert camps are many, from the simplest to the most luxurious: Ksar Ghilane, Zaafrane, Bir Soltane, and a luxury camp at the foot of Jebel Tembaine, isolated in an extraordinary setting deep in the desert.",
+      },
+      { type: "H3", ar: "الخلاصة — العرق الشرقي الكبير", en: "In short — the Grand Erg Oriental", noNumber: true },
+      {
+        type: "P",
+        ar: "الصحراء كما نحلم بها هي تجربة الكمال والصمت والسلاسة ، بتونس 40 ألف كيلومتر مربع من الرمال الصحراوية ، جزء من العرق الشرقي الكبير ، يمنح أروع المشاهد للكثبان التي تنحتها الرياح ، أحيانا متموجة بلين ، وأخرى منتصبة مثل موج هائج ، هي تكتسي فجرا لونا ورديا أو اصفر في مشهد نادر لمكافئة ليالي التخييم ، الطبيعة هنا تتجدد باستمرار لتمنح انظارنا أحيانا مفاجآت عدة : آبار مطمورة ، جبال تبرز بين الكثبان الرملية ، أحواض تأوي بعض الشجيرات والاعشاب ، أو بحيرة حيث يمرح البط والبلشون ، الأدلاء وسائقو الابل يضعون كل شغفهم وخبرتهم في خدمة الراغبين في رحلات الاثارة في الصحراء ، وسيطلعونك على حيل البدو للتأقلم مع هذا العالم ويرشدونك الى حقول ورد الرمال ، والجبال المغمورة بالرمال ، والقطعان المتجمعة حول نقاط المياه ، أو بحيرات المياه الحارة المتخلخلة بين الرمال",
+        en: "The desert as we dream of it is an experience of perfection, silence and smoothness. Tunisia has 40,000 square kilometres of desert sand, part of the Grand Erg Oriental, which offers the finest views of dunes carved by the wind — sometimes softly rippling, sometimes standing like a raging wave. At dawn they take on a pink or yellow hue, a rare spectacle that rewards nights under canvas. Nature here renews itself constantly and sometimes surprises the eye: buried wells, mountains emerging between the dunes, hollows sheltering shrubs and grasses, or a lake where ducks and herons play. The guides and camel drivers place all their passion and experience at the service of those seeking desert adventure; they will show you the Bedouin's tricks for adapting to this world and lead you to fields of desert roses, sand-covered mountains, herds gathered around water points and hot-water pools nestled among the sands.",
+      },
+      { type: "H3", ar: "التسوق .. متعة المسافر", en: "Shopping — a traveller's pleasure", noNumber: true },
+      {
+        type: "P",
+        ar: "شراء «دقلة نور» اللينة والشفافة من قبلي لشهرتها ، تذكار للجولات الصحراوية اقتني الصنادل الجلدية  الشاش وهو وشاح طويل من القطن لحماية الوجه",
+        en: "Buy the soft, translucent deglet nour dates from Kebili, famous everywhere; as a souvenir of your desert trips, take leather sandals and a chèche, the long cotton scarf that protects the face.",
+      },
+      { type: "H3", ar: "كيفية الوصول", en: "Getting there", noNumber: true },
+      {
+        type: "P",
+        ar: "يمكن الوصول الى دوزبرا ، وهي تبعد 125 كلم عن مطار توزر الدولي و260 كلم عن مطار جربة الدولي ، كذلك الى قصر غيلان التي تبعد 260 كلم عن مطار توزر الدولي و210 كلم عن مطار جربة الدولي ، رخصة الجولان ضرورية للغارات في أقصى الجنوب",
+        en: "Douz can be reached by road; it lies 125 km from Tozeur international airport and 260 km from Djerba international airport. Ksar Ghilane lies 260 km from Tozeur airport and 210 km from Djerba airport. A travel permit is required for raids in the far south.",
+      },
+    ],
+  },
+  {
+    slug: "tozeur",
+    title_ar: "توزر وما حولها",
+    title_en: "Tozeur and around",
+    kicker_ar: "منطقة",
+    kicker_en: "Region",
+    image: TUNIS_REGION_HEROES_3.tozeur,
+    blocks: [
+      { type: "H3", ar: "توزر .. متعة السياحة والترفية", en: "Tozeur — the pleasure of travel and leisure", noNumber: true },
+      {
+        type: "P",
+        ar: "توزر ونفطة من المدن التي نشأت في الصحراء ، مسنودة الى واحات نخيل هائلة ، تبهر وتفاجئ في مشاهد نادرة ، أضواء الصحراء تنسكب في أنهج المدينة القديمة ، بين جدران عالية من الطوب الأشقر ، في توزر الفنادق الفاخرة والمنتزهات والمتاحف برزت حول البلدة القديمة ، وبنفطة قباب عدة تشير الى مقابر لأولياء صالحين ، وتطل على واحة في حوض يدعى «السلة» ، كل ذلك على بعد بضع كيلومترات من الكثبان الرملية",
+        en: "Tozeur and Nefta are cities born in the desert, backed by immense palm oases, dazzling and surprising in rare views. The desert light pours into the lanes of the old town between high walls of blond brick. In Tozeur, luxury hotels, parks and museums have grown up around the old quarter, while in Nefta many domes mark the tombs of holy men and look out over an oasis in a basin called the Corbeille — all of it a few kilometres from the sand dunes.",
+      },
+      { type: "IMG", src: TUNIS_REGION_HEROES_3.tozeur, cap_ar: "توزر", cap_en: "Tozeur" },
+      { type: "H3", ar: "تعنى لتشاهد — الشطوط والواحات والأحياء القديمة", en: "Not to be missed — the salt flats, the oases and the old quarters", noNumber: true },
+      {
+        type: "P",
+        ar: "الأحياء القديمة في توزر ونفطة تقدم وجها متفردا ، فالأزقة والممرات المغطاة تعطي احساسا مذهلا بالانتعاش رغم شمس الصحراء ، استمتع بواجهات الطوب بلون الرمل وزينتها البارزة ثم زر الواحات العملاقة ، التي تعد غابات حقيقية ، في ظلها بساتين غناء وأنشطة زراعية ، على عربة أو سيرا على الأقدام ، تمتع بالاجواء الخاصة لواحات النخيل ، في الجوار سوف تفاجأ بتنوع المشاهد الطبيعية الصحراوية : جبال ، هضاب قاحلة ، كثبان عملاقة والبحيرات المالحة تتلألأ في الشمس ، أعبر شط الجريد الضخم ، البحر الداخلي القديم الذي جف جانب منه وصار مغطى بقشرة ملح ذات بياض ناصع ، أتبع طريق واحات الجبل – الشبيكة ، تمغزة وميداس – واكتشف الوديان والشلالات وواحات النخيل المنغرسة في الصخر ، نحو الشمال واحة قفصة ، المدينة المشتهرة بأحواضها الحجرية الرومانية وأغطيتها المنسوجة ذات الألوان الزاهية والمعروفة باسم «فراشية قفصي»",
+        en: "The old quarters of Tozeur and Nefta have a face all their own: the alleys and covered passages give an astonishing sense of freshness despite the desert sun. Admire the sand-coloured brick facades with their raised patterns, then visit the giant oases, true forests in whose shade lie lush gardens and farming activity. By cart or on foot, enjoy the special atmosphere of the palm groves. Nearby you will be surprised by the variety of desert landscapes: mountains, barren plateaus, giant dunes and salt lakes glittering in the sun. Cross the huge Chott el Jerid, the ancient inland sea partly dried and covered with a crust of brilliant white salt. Follow the road of the mountain oases — Chebika, Tamerza and Midès — and discover gorges, waterfalls and palm groves rooted in the rock. To the north lies the oasis of Gafsa, a town famous for its Roman stone pools and its brightly coloured woven covers known as the farachiya of Gafsa.",
+      },
+      { type: "H3", ar: "لمزيد من المعرفة", en: "To know more", noNumber: true },
+      { type: "P", ar: "الواحات الكبيرة", en: "The great oases." },
+      { type: "H3", ar: "أنشطة وبرامج عليك القيام بها — حرب النجوم والعربات الشراعية", en: "Things to do — Star Wars and sand yachts", noNumber: true },
+      {
+        type: "P",
+        ar: "الهواء النقي ، جمال الواحات والفضاءات الشاسعة ، المنطقة ملائمة للتأمل ، ولكن هناك طرق أخرى للاستمتاع بالصحراء ، اذا كنت رياضيا ، مارس رياضة الدراجة رباعية الدفع «كواد» في الكثبان الرملية بعنق الجمل ، أو العربة الشراعية على شط الجريد ، والتجوال في مسارات الأطلس ، والجولف في ديكور رائع من الصخور وأشجار النخيل ، مع العائلة أو الأصدقاء ، زيارة منتزه الشاق واق حيث تختلط الدينصورات وتاريخ الأديان ، تسلق الحبال في أشجار النخيل في حديقة صحراء لونج ، عش من جديد أجواء فلم حرب النجوم بزيارة موس اسبا الموقع الأصلي مكان ما تم اخراج هذا الانتاج الهوليوودي ، ويمكنك حضور جني التمور (في نوفمبر) ، ولا تتخلف عن زيارة “عدن بالم” الحديقة المخصصة لكل ما يهم النخيل ، كما لا يفوتك عبور الوديان الجبلية الرائعة قرب منطقة المتلوي على متن قطار عتيق “السحلية الحمراء” ، واستمتع برؤية الازياء والأشياء الثمينة المعروضة بفن في متحف دار شريط ، أو أدوات الحياة اليومية في متحف الفنون والتقاليد الشعبية",
+        en: "Pure air, the beauty of the oases and the vast open spaces make this region ideal for contemplation, but there are other ways to enjoy the desert. If you are sporty, ride a quad in the dunes of Onk Jemel, sail a land yacht on Chott el Jerid, trek the Atlas trails, or play golf in a marvellous setting of rock and palm trees. With family or friends, visit the Chak Wak park where dinosaurs and the history of religions mingle, or climb the ropes among the palms at the Desert Lounge garden. Relive the atmosphere of Star Wars at Mos Espa, the original site where the Hollywood production was filmed. You can attend the date harvest in November, and do not miss Eden Palm, the garden devoted to everything about the date palm. Nor should you miss crossing the splendid mountain gorges near Metlaoui aboard the vintage Red Lizard train, and enjoy the costumes and precious objects artfully displayed at the Dar Cherait museum, or the everyday utensils in the museum of arts and popular traditions.",
+      },
+      { type: "H3", ar: "جرب هذه الأكلات — الضأن والتمر", en: "Food to try — mutton and dates", noNumber: true },
+      {
+        type: "P",
+        ar: "توزر هي عاصمة التمور : اكتشف مختلف أنواع هذه الفاكهة ، رمز الجنوب التونسي ، من العليق الأحمر الحلو الى دقلة نور اللينة والشفافة ، تذوق كويرات التمر مع الزبدة المملحة “الرفيسة” ، واستمتع بشخشوخة الجريد ، لحم الضأن مع صلصة مصحوبا برقائق السميد التقليدي المسماة «المطبقة» ، تمتع بالبركوكش وهو نوع من الكسكسي الخشن مع اللحم والأسماك الصغيرة المجففة ، ولأكثر طرافة تذوق شريحة لحم الابل ، في توزر الشارع الذي يمتد على طول الواحة يوفر العديد من المطاعم التي تقدم خيارات متنوعة من المأكولات المحلية للجريد ، والمطبخ الايطالي والدولي ، يمكنك أيضا تناول الطعام في فنادق المنطقة ذات المطاعم الجيدة",
+        en: "Tozeur is the capital of dates: discover the different varieties of this fruit, the symbol of southern Tunisia, from the sweet red alig to the soft, translucent deglet nour. Taste date balls with salted butter, the rfissa, and enjoy chakhchoukha of the Jerid: mutton in sauce accompanied by traditional semolina sheets called mtabga. Try berkoukech, a kind of coarse couscous with meat and small dried fish, and for something more unusual taste a camel steak. In Tozeur the avenue running along the oasis has many restaurants offering local Jerid dishes as well as Italian and international cooking, and you can also eat in the region's hotels, which have good restaurants.",
+      },
+      { type: "H3", ar: "حاول السكن في — قصر صحراوي أو منزل عتيق أو لودج في واحة", en: "Where to stay — a desert palace, an old house or an oasis lodge", noNumber: true },
+      {
+        type: "P",
+        ar: "توزر عاصمة السياحة الصحراوية ، تضم العديد من الفنادق الممتازة الجميلة بالاضافة الى ما في نفطة ، المشهد على الواحة في ضل ديكور الطوب التقليدي والمسبح ، ومركز الرفاه وأحيانا تنشيط جدير بفنادق الاصطياف ، لقد تم تصميم هذا المناخ لتعيش اقامة مميزة في المدينتين الساحرتين ، خيارات أخرى من الاقامة متوفرة : استراحة ، دور ضيافة في المدينة العتيقة ، أو فيلا أحلام في قلب الواحة",
+        en: "Tozeur, the capital of desert tourism, has many excellent and beautiful hotels, as does Nefta: a view over the oasis in a setting of traditional brick, a swimming pool, a wellness centre and sometimes entertainment worthy of a holiday resort. All of it is designed for a memorable stay in these two enchanting towns. Other options are available: a rest house, guest rooms in the old town, or a dream villa in the heart of the oasis.",
+      },
+      { type: "H3", ar: "الخلاصة — هندسة توزر ونفطة", en: "In short — the architecture of Tozeur and Nefta", noNumber: true },
+      {
+        type: "P",
+        ar: "الأحياء القديمة في توزر ونفطة ، بين جدران عالية من الطوب الاشقر ، هي متاهة من الأزقة والممرات ، ممرات طويلة مسقوفة وذات قباب تأخذك الى ساحات صغيرة ، في هذه المدن الصحراوية الكبرى ، ديكورات المنازل ليست من الحجر المنقوش ، ولكن بآجر الطوب المرتب فنيا ، قطعة الى الامام وثانية الى الخلف ، زخارف هندسية بسيطة ترافق جولتك ، الطوب المصنوع من الطين المخلوط بالرمل يميز العمارة في الجريد ويعطي للمدن لون صفرة الصحراء ، النخلة سيدة الأشجار في المنطقة ، توفر الدعامات الخشبية والأرضيات ، اذا تمكنت من زيارة منزل توزري جميل ، فسوف تكتشف قصرا صحراويا حقيقيا : حول فناء داخلي كبير ، تجد سلسلة من الممرات ذات أقواس ، وغرف ذات سقوف عالية من سعف النخل ، وذات نوافذ ضيقة التي علقت بها عراجين التمر من محصول الموسم الماضي",
+        en: "The old quarters of Tozeur and Nefta, between high walls of blond brick, are a maze of alleys and passages — long roofed and vaulted corridors that lead you to small squares. In these great desert cities the decoration of the houses is not carved stone but brick artfully arranged, one piece forward and the next set back, so that simple geometric patterns accompany your walk. The brick, made of clay mixed with sand, marks the architecture of the Jerid and gives the towns the yellow colour of the desert. The palm is the queen of trees here, providing wooden beams and floors. If you manage to visit a fine Tozeur house you will discover a true desert palace: around a large inner courtyard, a series of arcaded passages and rooms with high ceilings of palm fronds and narrow windows, from which hang the date clusters of last season's harvest.",
+      },
+      { type: "H3", ar: "التسوق .. متعة المسافر", en: "Shopping — a traveller's pleasure", noNumber: true },
+      {
+        type: "P",
+        ar: "لا تغادر المنطقة دون حمل علبة من التمور الطازجة أو الخصائص المصنوعة منها : المربى ، الحلويات ، المشروبات ، كل أجزاء النخلة تستخدم في الحرف اليدوية والصناعات التقليدية : سلال منسوجة من سعف النخيل ، خزائن من خشب النخيل ، اقتناء سجاد الجهة الجميل ومنسوجات المنطقة ، المنمقة باشكال مختلفة",
+        en: "Do not leave the region without a box of fresh dates or the products made from them: jam, sweets and drinks. Every part of the palm is used in handicrafts: baskets woven from palm fronds, chests of palm wood. Buy the region's beautiful carpets and its textiles, decorated with many different patterns.",
+      },
+      { type: "H3", ar: "كيفية الوصول", en: "Getting there", noNumber: true },
+      {
+        type: "P",
+        ar: "مطار توزر ونفطة الدولي ،  يقع على بعد 5 دقائق من توزر ، ويمكن أيضا الوصول الى توزر بالقطار الليلي من تونس ، والطرق المعبدة ممتازة وجيدة ، تسمح لك باستكشاف المنطقة السياحية بالسيارة (شط الجريد ، واحة الجبل) ، لاستكشاف المدينة والواحة ، تنقل بسيارة أجرة أو استئجار عربة",
+        en: "Tozeur–Nefta international airport lies five minutes from Tozeur, and Tozeur can also be reached by the night train from Tunis. The paved roads are excellent, allowing you to explore the tourist region by car (Chott el Jerid, the mountain oases). To explore the town and the oasis, travel by taxi or hire a cart.",
+      },
+    ],
+  },
+  {
+    slug: "djerba-zarzis",
+    title_ar: "جربة وجرجيس وما حولهما",
+    title_en: "Djerba, Zarzis and around",
+    kicker_ar: "منطقة",
+    kicker_en: "Region",
+    image: TUNIS_REGION_HEROES_3["djerba-zarzis"],
+    blocks: [
+      { type: "H3", ar: "جربة وجرجيس .. متعة السياحة والترفية", en: "Djerba and Zarzis — the pleasure of travel and leisure", noNumber: true },
+      {
+        type: "P",
+        ar: "جزيرة الأحلام أو جزيرة الحياة العذبة ، صحت كل أوصاف جربة وان كثرت ، فهي متوسطية وصحراوية في آن ، ولا يختلف اثنان في وصف أجوائها بالفريدة ، أجواء تتقاسمها مع جرجيس جارتها في القارة ، ولكن جربة أيضا جزيرة المنتجعات والنوادي والأنشطة في الهواء الطلق ، واكتشاف التراث الفريد ، والرحلات الى المشاهد الطبيعية الرائعة للصحراء",
+        en: "Island of dreams, island of the sweet life — every description of Djerba is true, however many there are, for it is Mediterranean and Saharan at once, and no one disputes that its atmosphere is unique, an atmosphere it shares with its mainland neighbour Zarzis. Djerba is also the island of resorts, clubs and open-air activities, of discovering a singular heritage and of trips to the marvellous landscapes of the desert.",
+      },
+      { type: "IMG", src: TUNIS_REGION_HEROES_3["djerba-zarzis"], cap_ar: "جربة", cap_en: "Djerba" },
+      { type: "H3", ar: "تعنى لتشاهد — صانعو الفخار أو ستريت آرت", en: "Not to be missed — potters or street art", noNumber: true },
+      {
+        type: "P",
+        ar: "جربة تدعو للتنزه ، لما لها من وئام بين لطف المشاهد الطبيعية والعمارة التقليدية ذات البياض والاستدارة : آبار عتيقة ومساجد صغيرة مبثوثة في الحقول المفتوحة ودور ريفية شاسعة تدعى منازل ، بالذهاب الى منتزه «جربة اكسبلور» تطلع على الحياة الريفية بالجزيرة من خلال لوحات تم ثصميمها من وحي الواقع ، وفي نفس المنتزه توجد مزرعة التماسيح حيث يمكن متابعة تغذيتها والتعرف عليها ، في حومة السوق ، تجول في ميناء الصيد والسوق المسقوف حيث مزايدات بيع الأسماك ، لا تفوتك زيارة قرية الرياض ، حيث أحد أقدم المعابد اليهودية في العالم “الغريبة ” ، وفي الرياض كذلك المتحف الحي لفن الشارع ، “جربة هود” ، حيث استولى بشكل مذهل على الهندسة المعمارية التقليدية فنانو الكتابة على الجدران من جميع أنحاء العالم ومن هؤلاء الفنان التونسي الصيد المبدع في فن الخط العربي ، في قرية قلالة ، زيارة للفخارين الذين يصنعون جرار كبيرة كأنها من العصور الغابرة ، انزل معهم الى حقل الطين تحت الأرض واستمتع بمهارتهم وحرفيتهم",
+        en: "Djerba invites you to wander, for it holds a harmony between gentle landscapes and traditional white, rounded architecture: ancient wells, small mosques scattered through open fields and vast country houses called menzels. At the Djerba Explore park you can see the island's rural life through scenes designed from reality, and the same park has a crocodile farm where you can watch feeding time and learn about them. In Houmt Souk, stroll through the fishing port and the covered market with its fish auctions. Do not miss the village of Erriadh, home to one of the oldest synagogues in the world, El Ghriba, and also to the living museum of street art, Djerbahood, where graffiti artists from all over the world have taken over the traditional architecture in astonishing fashion — among them the Tunisian artist eL Seed, a creator in Arabic calligraphy. In the village of Guellala, visit the potters who make great jars as if from ancient times; go down with them into the underground clay field and enjoy their skill and craft.",
+      },
+      { type: "H3", ar: "لمزيد من المعرفة", en: "To know more", noNumber: true },
+      { type: "P", ar: "القرطاجيون القراصنة وصيادو الأسفنج", en: "Carthaginians, corsairs and sponge fishermen." },
+      { type: "H3", ar: "أنشطة وبرامج عليك القيام بها — المتاحف أو الكيتسورف", en: "Things to do — museums or kitesurfing", noNumber: true },
+      {
+        type: "P",
+        ar: "الفنادق والنوادي الجميلة والشواطئ الرملية : جربة هي وجهة العطل على شاطئ البحر ، ففيها الرياح مستقرة طوال العام والمناخ معتدل مما جعلها مكانا مثاليا لتعلم قيادة الألواح الشراعية “كيتيسورف” أو السياحة البحرية ، الترفيه متوفر : الغوص ، الارتقاء في الجو بالمضلات ، والرحلات البحرية ، وملعب الجولف والكازينو والملاهي الليلية ، وكذالك مراقبة التجمعات الكبيرة من الطيور المهاجرة في البحيرات ، تعرف على تراث جربة في حومة السوق حيث برج غازي مصطفى ، الذي رمم القلعة عند استرجاعها من الاسبان على يد درغوث القرصان التركي سنة 1560 ميلادي ، متحف التراث التقليدي بجربة يقدم شروحا عن المجوهرات والفخار والتقاليد ، في منتزه “استكشاف جربة” مجموعة رائعة من التحف من تونس والشرق الأوسط ، جربة هي أيضا خيار ممتاز للعلاج بمياه البحر ، حيث توجد العديد من المراكز لهذا الغرض ، وأخيرا جربة هي أفضل مكان للانطلاق نحو الجنوب لاكتشاف القرى البربرية القديمة ودور الكهوف ، والقصور والواحات الصحراوية",
+        en: "Fine hotels and clubs and sandy beaches: Djerba is a seaside holiday destination. Its winds are steady all year and its climate mild, which makes it an ideal place to learn kitesurfing or to sail. Leisure abounds: diving, parasailing, boat trips, a golf course, a casino and nightclubs, as well as watching the great gatherings of migratory birds on the lagoons. Discover Djerba's heritage in Houmt Souk at the Ghazi Mustapha fort, restored when it was recovered from the Spanish by the Turkish corsair Dragut in 1560. The museum of traditional heritage in Djerba explains jewellery, pottery and customs, and the Djerba Explore park holds a fine collection of antiquities from Tunisia and the Middle East. Djerba is also an excellent choice for seawater therapy, with many centres for the purpose; and finally it is the best place from which to set out southwards to discover the old Berber villages, the cave dwellings, the ksour and the desert oases.",
+      },
+      { type: "H3", ar: "جرب هذه الأكلات — الأرز الجربي أو الأخطبوط", en: "Food to try — Djerban rice or octopus", noNumber: true },
+      {
+        type: "P",
+        ar: "السمك والأخطبوط الطازج منة الأكلات في جربة ، الطريف في جربة هو وجود مطاعم حول سوق الحوت بحومة السوق مختصة في شواء الأسماك التي يأتي بها الزبائن بعد اقتناءها من السوق المجاورة ، ويسهل التعرف على هاته المطاعم عبر لافتة كتب عليها : “أجلب سمكك الخاص ، والشواء علينا” ، تذوق أيضا اختصاصا جربيا ، الأرز المطبوخ على البخار مع اللحم والكبد والبقدونس والسبانخ والأعشاب ، بالقرب من الفنادق ، عديدة هي المطاعم التي تقدم أطباقا تونسية ومتوسطية ودولية",
+        en: "Fish and fresh octopus are the dishes of Djerba. A charming feature of the island is the restaurants around the fish market in Houmt Souk that specialise in grilling the fish customers bring after buying it in the neighbouring market; they are easy to spot by their sign: \"bring your own fish, the grilling is on us\". Taste too a Djerban speciality, rice steamed with meat, liver, parsley, spinach and herbs. Near the hotels there are many restaurants serving Tunisian, Mediterranean and international dishes.",
+      },
+      { type: "H3", ar: "حاول السكن في — نزل الاصطياف أو دور الضيافة", en: "Where to stay — resort hotels or guest houses", noNumber: true },
+      {
+        type: "P",
+        ar: "جربة هي بلا منازع ، جزيرة نزل الاسطياف بجميع أنواعها التي تقدم مجموعة متنوعة من الأنشطة والخدمات ، جميع أنواع الاقامات تتعايش في جربة ، من الفندق الفخم الى دور الضيافة في عمق الريف ، بيوت تقليدية «المنازل» أعيدت صياغتها وخان قوافل قديم «فندق» تحول الى بيت ضيافة ساحر ، واقامات في شكل قرية ، وكل يختار الأجواء التي تناسبه",
+        en: "Djerba is without rival the island of resort hotels of every kind, offering a wide range of activities and services. Every type of accommodation lives side by side here, from the luxury hotel to guest houses deep in the countryside, traditional menzel houses reworked, an old caravan inn — a fondouk — turned into a charming guest house, and village-style residences: everyone can choose the atmosphere that suits them.",
+      },
+      { type: "H3", ar: "الخلاصة — الفنادق والمنازل", en: "In short — the fondouks and the menzels", noNumber: true },
+      {
+        type: "P",
+        ar: "ليس مستبعدا عند التجوال في الطرق الضيقة والمسالك الرملية في جربة ، أن يبرز لك منزلا قديما ، جدران عالية وأبراج مثلثة ، وأقواس وقباب ، هذه المنازل الريفية من خصائص الهندسة المعمارية للجزيرة ، هندسة تستمد جمالها من بساطتها ، حول كل منزل ، مزرعة توفر للعائلة حاجيتها الاساسية وبئر وزياتين فضلا عن الخضروات المروية بشكل جيد عن طريق شبكة من القنوات الصغيرة ، عديدة هي المنازل حول ميدون ، المدينة الثانية في جربة ، في حين تتميز البلدة الرئيسية ، حومة السوق ، بفنادقها وهي خانات قديمة كانت تتوقف فيها قوافل التجار ، ساحاتها الفسيحة التي تحوط بها أروقة بيضاء بالجير الكلسي جعلت منها اليوم ديكورا لنزل أو اقامة للشباب ، أو مطاعم ، أماكن فريدة للتوقف على ما كانت عليه الحياة في جربة",
+        en: "Wandering the narrow roads and sandy tracks of Djerba, it is not unlikely that an old menzel will appear before you: high walls and triangular towers, arches and domes. These country houses are characteristic of the island's architecture, an architecture that draws its beauty from its simplicity. Around each menzel a farm supplies the family's basic needs, with a well, olive trees and vegetables well watered by a network of small channels. There are many menzels around Midoun, the island's second town, while the main town, Houmt Souk, is distinguished by its fondouks — old inns where merchant caravans once halted. Their spacious courtyards, surrounded by whitewashed arcades, have today become the setting for a hotel, a youth hostel or restaurants: unique places in which to pause over what life in Djerba once was.",
+      },
+      { type: "H3", ar: "التسوق .. متعة المسافر", en: "Shopping — a traveller's pleasure", noNumber: true },
+      {
+        type: "P",
+        ar: "في جربة وجرجيس ستجد المرقوم (سجاد) ذا الألوان الزاهية المنسوج في المناطق الجنوبية ، كذلك الفساتين المطرزة ، والسلال والقبعات المنسوجة من سعف النخيل ، في حومة السوق ، زيارة الى سوق المجوهرات تبدو ضرورية ، حيث الحلي الجميلة من الفضة المطلية ، غير بعيد المحلات تقدم مجموعة من مفارش المائدة ، والأوشحة ، والستائر والبطانيات المخططة من انتاج ورشات جربية ، الجزيرة تضم مركزا حديثا للتسوق والعديد من محلات المبتكرين",
+        en: "In Djerba and Zarzis you will find the mergoum, the brightly coloured carpet woven in the southern regions, as well as embroidered dresses and baskets and hats woven from palm fronds. In Houmt Souk a visit to the jewellery souk seems essential, with its lovely pieces of plated silver, and not far off the shops offer a range of tablecloths, scarves, curtains and striped blankets made in Djerban workshops. The island also has a modern shopping centre and many designers' boutiques.",
+      },
+      { type: "H3", ar: "كيفية الوصول", en: "Getting there", noNumber: true },
+      {
+        type: "P",
+        ar: "لجربة مطار دولي (55 كلم عن جرجيس) ، في الجزيرة يوجد العديد من سيارات الأجرة لضمان كل التنقلات الخاصة بك",
+        en: "Djerba has an international airport, 55 km from Zarzis, and on the island there are plenty of taxis to cover all your journeys.",
+      },
+    ],
+  },
+  {
+    slug: "sfax-kerkennah",
+    title_ar: "صفاقس وقرقنة وما حولهما",
+    title_en: "Sfax, Kerkennah and around",
+    kicker_ar: "منطقة",
+    kicker_en: "Region",
+    image: TUNIS_REGION_HEROES_3["sfax-kerkennah"],
+    blocks: [
+      { type: "H3", ar: "صفاقس وقرقنة متعة السفر والترفية", en: "Sfax and Kerkennah — the pleasure of travel and leisure", noNumber: true },
+      {
+        type: "P",
+        ar: "مرفأ تجاري كبير ، مدينة عتيقة تحوطها أسوار بلون الرق ، دكاكين تتردد من خلالها انشطة صغار الحرفيين ، مأكولات بمذاق الزيتون والسمك وحلويات اللوز المعطر ، صفاقس تقدم الوجه الاصيل لتونس بعيدا عن المسالك السياحية المعتادة ، بمواجهتها جزر قرقنة بطبيعتها البكر وشواطئها الرملية الطويلة",
+        en: "A great commercial port, a medina ringed by parchment-coloured walls, shops echoing with the work of small craftsmen, food tasting of olives and fish and sweets of scented almond: Sfax offers the authentic face of Tunisia away from the usual tourist routes, and facing it lie the Kerkennah islands with their untouched nature and long sandy beaches.",
+      },
+      { type: "IMG", src: TUNIS_REGION_HEROES_3["sfax-kerkennah"], cap_ar: "صفاقس", cap_en: "Sfax" },
+      { type: "H3", ar: "تعنى وشاهد — المآذن والشواطىء", en: "Not to be missed — minarets and beaches", noNumber: true },
+      {
+        type: "P",
+        ar: "المدينة العتيقة بصفاقس أخاذة ومدهشة بحصونها المسننة وحركيتها الدائمة ، فبمجرد الدخول اليها من أحد أبوابها تلتهمك أفواج المتسوقين فيها عبر الدكاكين وورشات الحرفيين ، هنا نجار بصدد صنع خذروف خشبي وهناك مخبزة تفوح برائحة شهية ، ثم جولة صغيرة بسوق السمك الذي يتفنن في طبخه سكان المدينة ، وبعدها توقف أمام مئذنة سيدي عمر كمون الفريدة الشكل والراجعة الى العهد الحفصي ، ثم اتجه نحو المسجد الكبير ، المزين بالحجر المنحوت ، وعند مغادرة الأحياء القديمة ، اطلع على هندسة بنايات عهد الحماية الفرنسية المازجة بين الأسلوبين العربي الاسلامي والغربي حيث الأبراج تشبه المآذن والنوافذ مقوسة مؤطرة الشرائط بمربعات الخزف  من النمط الشرقي ، في قرقنة راقب القوارب التي تنزلق بصمت على الماء ، وتمعن في المشاهد الطبيعية الهادئة الملفوفة  بالرمال وأشجار النخيل المتمايلة وتوهج غروب الشمس على البحر",
+        en: "The medina of Sfax is captivating and astonishing with its crenellated walls and its constant movement: as soon as you enter through one of its gates, the crowds of shoppers swallow you up among the shops and craftsmen's workshops — here a carpenter making a wooden spinning top, there a bakery giving off an appetising smell — then a short tour of the fish market, whose catch the city's people cook with great art. Stop before the uniquely shaped minaret of Sidi Amor Kammoun, dating from the Hafsid period, then head for the Great Mosque with its carved stone decoration. As you leave the old quarters, look at the architecture of the French protectorate buildings, mixing Arab-Islamic and Western styles, where the towers resemble minarets and the arched windows are framed with bands of oriental ceramic squares. In Kerkennah, watch the boats gliding silently over the water and take in the calm landscapes wrapped in sand, the swaying palms and the glow of the sunset over the sea.",
+      },
+      { type: "H3", ar: "لمزيد من المعرفة", en: "To know more", noNumber: true },
+      { type: "P", ar: "صيادون مجهزون سفن وتجار", en: "Fishermen, shipowners and merchants." },
+      { type: "H3", ar: "أنشطة وبرامج عليك القيام بها — تثقف وراقب الطيور", en: "Things to do — learn and watch the birds", noNumber: true },
+      {
+        type: "P",
+        ar: "في مدينة صفاقس ، زيارة القصبة القديمة ، وهي المتحف المخصص للعمارة التاريخية ، وكذلك قصر دار جلولي من القرن السابع عشر ، بحجره المنحوت وألواح القرميد الأزرق ، دار جلولي هي أيضا متحف للفنون والتقاليد الشعبية ، ويعرض المواد الجميلة التي رافقت في السابق حياة العائلات الثرية : خزائن ، وأغطية الشعر النسائية ، ومستلزمات الزينة ، ورسومات من الزجاج ، انطلق في رحلة لزيارة مسرح الجم الروماني ومدينة المهدية ، في قرقنة تمتع بالشواطئ الرملية والمياه الصافية الضحلة المحيطة بالأرخبيل ، هنا يكفيك قناع غوص للتمتع بالطبيعة البحرية فترى المحار والنباتات المائية والأسماك التي تركزت في محيط المصائد الثابتة ، ويمكنك أيضا مراقبة تجمعات الطيور : المنطقة هي أحد المواقع الرئيسية في  البحر المتوسط التي تقضي فيها  الطيور المهاجرة فصل الشتاء",
+        en: "In the city of Sfax, visit the old kasbah, the museum devoted to historic architecture, and the seventeenth-century Dar Jellouli palace with its carved stone and blue tile panels. Dar Jellouli is also a museum of arts and popular traditions, displaying the beautiful objects that once accompanied the life of wealthy families: chests, women's hair coverings, toilet accessories and paintings on glass. Set out to visit the Roman amphitheatre of El Jem and the town of Mahdia. In Kerkennah, enjoy the sandy beaches and the clear shallow waters around the archipelago: here a diving mask is enough to enjoy the marine life, with shellfish, water plants and the fish that gather around the fixed fisheries. You can also watch the gatherings of birds, for the area is one of the main sites in the Mediterranean where migratory birds spend the winter.",
+      },
+      { type: "H3", ar: "جرب هذه الأكلات — كالاماري والحلويات", en: "Food to try — calamari and pastries", noNumber: true },
+      {
+        type: "P",
+        ar: "يستند المطبخ في صفاقس وقرقنة على المنتوجات البحرية ، يمكنك على سبيل المثال تذوق الحبار المحشو ،  أو الكسكسي مع الحبار أو السمك المطبوخ على طريقة أهل صفاقس (مع صلصة) ، طبق نموذجي من صفاقس هو السمك مع  “الشرمولة” وهي خليط من البصل والزبيب المعطر والقرفة يطبخ على نار خفيفة لساعات ، تذوق زيت الزيتون اللذيذ ، منطقة صفاقس تنتج وحدها 40٪ من زيت الزيتون التونسي ، اذا كان هناك اختصاص يميز جهة صفاقس وتونس بكاملها  فهو الحلويات ، فهي بالتأكيد أفضل مكان لتذوق التركيبة الدقيقة لكعك الورقاء أو الصمصة المورقة أو الملبس المعطر بمهارة مع ماء الورد وقشور البرتقال ، لا عجب في ذلك اذا علمنا أن المنطقة تنتج بوفرة اللوز ، احدى المكونات الرئيسية للحلويات  التونسية",
+        en: "The cooking of Sfax and Kerkennah rests on the produce of the sea: you can taste stuffed squid, couscous with squid, or fish cooked the Sfax way in sauce. A typical Sfax dish is fish with charmoula, a mixture of onion, scented raisins and cinnamon simmered gently for hours. Taste the delicious olive oil — the Sfax region alone produces 40 per cent of Tunisia's olive oil. If one speciality marks out Sfax, and indeed all Tunisia, it is pastry: this is certainly the best place to taste the delicate composition of kaak warka, flaky samsa, or malban skilfully scented with rose water and orange peel. No wonder, since the region produces almonds in abundance, one of the main ingredients of Tunisian sweets.",
+      },
+      { type: "H3", ar: "حاول السكن في — فندق جميل أو شقة راقية", en: "Where to stay — a fine hotel or a smart apartment", noNumber: true },
+      {
+        type: "P",
+        ar: "في قرقنة ، اختر لك شقة في فندق على الشاطىء ، في صفاقس لك الاختيار بين عدة نزل لرجال الأعمال ، في المدينة أو بالريف أو على الشاطئ ، يمكنك أيضا اختيار فندق صغير ، أو دار ضيافة ، أو اقامة للشباب",
+        en: "In Kerkennah, choose an apartment in a hotel by the beach; in Sfax you have the choice of several business hotels in the city, in the countryside or on the shore, and you can also opt for a small hotel, a guest house or a youth hostel.",
+      },
+      { type: "H3", ar: "الخلاصة — عالم المدينة العتيقة", en: "In short — the world of the medina", noNumber: true },
+      {
+        type: "P",
+        ar: "مدينة صفاقس العتيقة هي واحدة من أفضل المدن المتوسطية من حيث المحافظة على معالمها وترميمها ، فهي تقدم  العمارة  النموذجية للمدن العربية القديمة ، أسوارها المسننة ، المشيدة  في العصور الوسطى ، تخترقها بوابات ضخمة ، أقدمها كانت نظما دفاعية لصد الغزاة ، الجامع الكبير ، الذي بني في القرن 9 يحتل موقعا مركزيا ، قاعة صلاته ، واسعة غزتها الأروقة والأعمدة القديمة ، وتطل على ساحة ومئذنة مربعة ، الأسواق أنهجها مكرسة للأنشطة التجارية والحرفية المحيطة بالمسجد الكبير ، في الانهج الفرعية ، السكن المتواضع  يجانب المنزل الفخم الذي يتميز من الخارج بباب كبير مزخرف ، بالدخول الى أحد هذه القصور ، نكتشف حول فناء داخلي أقواس جميلة من الحجر المنحوت ، وأعمدة رخامية وجدران مكسوة بالخزف ، وهذا ما يؤكد القول أن الواجهات الحقيقية للمدن العتيقة هي الفناءات الداخلية",
+        en: "The medina of Sfax is one of the best preserved and best restored of Mediterranean old towns, presenting the typical architecture of the ancient Arab city. Its crenellated walls, built in the Middle Ages, are pierced by massive gates, the oldest of which were defensive systems against invaders. The Great Mosque, built in the ninth century, occupies a central position; its wide prayer hall is filled with arcades and ancient columns and looks onto a courtyard and a square minaret. The souks, whose lanes are given over to trade and craft, surround the Great Mosque. In the side lanes, the modest dwelling stands beside the grand house, distinguished from outside by a large decorated door; entering one of these palaces we discover, around an inner courtyard, beautiful arches of carved stone, marble columns and walls clad in ceramic — confirming the saying that the true facades of the old towns are their inner courtyards.",
+      },
+      { type: "H3", ar: "التسوق متعة المسافر", en: "Shopping — a traveller's pleasure", noNumber: true },
+      {
+        type: "P",
+        ar: "في صفاقس ، من المدينة العتيقة يمكن اقتناء مشغولات صغيرة من الخشب كانت ذات يوم جزء من الحياة اليومية : مثل القبقاب (أحذية للحمام) ، وأواني المطبخ أو الخذروف متعدد الألوان ، تزود بالمرطبات والحلويات المصنوعة من اللوز وماء الورد ، المتنوعة الأشكال والنكهات ، من قرقنة أجلب الاسفنج الطبيعي  أو شكل مصغر من المركب التقليدي (اللود) المصنع من قبل حرفيي الجزيرة",
+        en: "In Sfax, from the medina, you can buy small wooden objects that were once part of daily life: the qabqab (bathhouse clogs), kitchen utensils or the multicoloured spinning top. Stock up on sweets and pastries made with almond and rose water in all their shapes and flavours. From Kerkennah, bring back natural sponge or a miniature of the traditional loud boat made by the island's craftsmen.",
+      },
+      { type: "H3", ar: "كيفية الوصول", en: "Getting there", noNumber: true },
+      {
+        type: "P",
+        ar: "يمكن الوصول الى صفاقس عن طريق الجو (مطار صفاقس الدولي طينة) ، أو بالطريق السيارة (260) كلم من تونس أو بالقطار ، ثم الى جزر قرقنة عن طريق العبارة (ساعة مدة الرحلة)",
+        en: "Sfax can be reached by air (Sfax–Thyna international airport), by motorway 260 km from Tunis, or by train; then on to the Kerkennah islands by ferry, a crossing of one hour.",
+      },
+    ],
+  },
+  {
+    slug: "hammamet",
+    title_ar: "الحمامات وما حولها",
+    title_en: "Hammamet and around",
+    kicker_ar: "منطقة",
+    kicker_en: "Region",
+    image: TUNIS_REGION_HEROES_3.hammamet,
+    blocks: [
+      { type: "H3", ar: "الحمامات .. متعة السياحة والترفية", en: "Hammamet — the pleasure of travel and leisure", noNumber: true },
+      {
+        type: "P",
+        ar: "كما تقول أغنية تونسية شهيرة « حمامات يا جنة ، اللي يزورك يتهنى » ، فالحمامات جنة المصائف والأجواء الاحتفالية ، والحمامات أيضا مدينة صغيرة ذات طابع معماري مميز ، فهي تجمع بين بحر فيروزي ، وبيوت بيضاء وأزقة تفوح بعطر الياسمين ، وبالقرب منها المنتجع الجديد ياسمين الحمامات يقدم ديكورا أكثر معاصرة ، حيث النزل الفاخرة والمطاعم المختلفة ومارينا من الطراز العالمي ، وبالجوار غابات وبساتين الحمضيات لمن أراد جولة وسط الطبيعة",
+        en: "As a famous Tunisian song says, \"Hammamet, you are paradise; whoever visits you is content.\" Hammamet is the paradise of summer holidays and festive atmospheres, and it is also a small town with a distinctive architectural character, joining a turquoise sea with white houses and lanes scented with jasmine. Nearby, the new resort of Yasmine Hammamet offers a more contemporary setting, with luxury hotels, varied restaurants and a marina of international standard, while all around are forests and citrus orchards for those who want a walk in nature.",
+      },
+      { type: "IMG", src: TUNIS_REGION_HEROES_3.hammamet, cap_ar: "الحمامات", cap_en: "Hammamet" },
+      { type: "H3", ar: "تعنى لتشاهد — المدينة أو المارينا", en: "Not to be missed — the medina or the marina", noNumber: true },
+      {
+        type: "P",
+        ar: "نزهة في المدينة ذات السحر الخالد ، بأنهجها الضيقة والبيوت المكسوة بالجير الكلسي الأزرق ، عند زاوية الحصن ، القلعة الاسبانية التركية (القرن الــ 16) توفر اطلالة رائعة على الخليج ، خذ قسطا من الراحة في مقهى سيدي بوحديد الشهير : قبة هذا  الولي الصالح حامي البحارة تحرس الشاطئ ، سيرحب بكم بالشاي مع النعناع أو مشروب الليمون المنعش ، استمتع بحدائق الياسمين والفيلات الجميلة ودار سيباستيان ، بالمحطة الجديدة ياسمين الحمامات ، جنوب المدينة تنزه على طول الميناء  الترفيهي ، فسيح الشوارع ، وخذ شيئا من الراحة في أحد نوادي الشاطئ أو في “المدينة  المتوسطية” ، متنزه ذو حصن مسنن وأسواق مثل المدينة العربية القديمة ، الباحث عن الطبيعة والأصالة وجهته المناطق الداخلية لزيارة زغوان المدينة الأندلسية الصغيرة أو تكرونة ، القرية المشيدة على قمة تلة",
+        en: "Take a stroll in the medina of timeless charm, with its narrow lanes and houses washed in blue lime. At the corner of the fortress, the Spanish-Turkish citadel of the sixteenth century offers a splendid view over the gulf. Rest at the famous Sidi Bou Hdid café: the dome of this holy man, protector of sailors, watches over the beach, and you will be welcomed with mint tea or a refreshing lemon drink. Enjoy the jasmine gardens, the beautiful villas and Dar Sebastian. At the new resort of Yasmine Hammamet, south of the town, walk along the marina and its broad streets and take a rest at one of the beach clubs or in the Medina Mediterranea, a park with crenellated walls and souks like the old Arab city. Whoever seeks nature and authenticity should head inland to visit Zaghouan, the little Andalusian town, or Takrouna, the village built on a hilltop.",
+      },
+      { type: "H3", ar: "لمزيد من المعرفة", en: "To know more", noNumber: true },
+      { type: "P", ar: "الرومان والأتراك والأندلس", en: "The Romans, the Turks and Andalusia." },
+      { type: "H3", ar: "أنشطة وبرامج عليك القيام بها — الجولف أو النوادي", en: "Things to do — golf or the clubs", noNumber: true },
+      {
+        type: "P",
+        ar: "الحمامات هي سيدة الشواطئ والرياضات المائية وهي واحدة من الوجهات المفضلة لقضاء العطلات المميزة ، في الليل سهرات مختلفة : دي . جي في الأندية الشهيرة من المدينة ، أو التزلج على الجليد ، وفي الصيف لك موعد مع نجومك المفضلين في المهرجان الدولي للحمامات بمسرح الهواء الطلق ، أو تمتع بعشاء ساهر في كازينو ياسمين الحمامات ، تابع ضرباتك وسط تلال ملعبي الجولف “ ياسمين فاللي ” و “ سيتروس ” (18 و 45 حفرة ) ، توقف للتنعم بفوائد مركز صحي للعلاج بمياه البحر ، صحبة العائلة الموعد عند منتزه قرطاج لاند وحديقة الحيوانات ” فريقيا بارك ” (30 كلم ) ، كما يمكن استئجار زورق من المارينا للتجول عبر شواطئ الوطن القبلي ، محبي الطبيعة ، جبل زغوان بانتظاركم للتجول أو لمراقبة الطيور الجارحة ، واذا كنت من محبي التاريخ ، استكشف المواقع الرومانية الرائعة لتوبربو ماجوس و أوذنة",
+        en: "Hammamet is the queen of beaches and water sports and one of the favourite destinations for a memorable holiday. At night there are all kinds of evenings: DJs in the town's well-known clubs, or ice skating; and in summer you have an appointment with your favourite stars at the international festival of Hammamet in the open-air theatre, or a late dinner at the casino of Yasmine Hammamet. Follow your shots among the hills of the Yasmine Valley and Citrus golf courses (18 and 45 holes), and stop to enjoy the benefits of a seawater therapy centre. With the family, the appointment is at Carthage Land park and the Friguia Park zoo, 30 km away, and you can hire a boat from the marina to cruise along the shores of Cap Bon. Nature lovers: Jebel Zaghouan awaits you for walking or watching birds of prey; and if you love history, explore the splendid Roman sites of Thuburbo Majus and Oudhna.",
+      },
+      { type: "H3", ar: "جرب هذه الأكلات — عجة أو كارباتشيو", en: "Food to try — ojja or carpaccio", noNumber: true },
+      {
+        type: "P",
+        ar: "منتجعا عالميا للاصطياف ، تقدم الحمامات مجموعة كبيرة من المطاعم ، خصوصا حول المدينة العتيقة والمركز الثقافي الدولي ، حيث تقضي مع العائلة أو الأصدقاء لحظات لا تنسى في مطعم على أسطح المدينة العتيقة ، حول أكلات متوسطية لذيذة ، تقتسم طبقا من السمك الطازج في فناء مظلل ، خلال مساء صيفي منعش ، اذا تفضل اطارا أنيقا أو معاصرا فعليك بمارينا ياسمين الحمامات ، أو اختر مطعما ايطاليا أصيلا يسعدك بأكلة « ريزوتو » طيبة والمرطبات اللذيذة ، عديد الايطاليين يعيشون في الحمامات ، وصقلية لا تبعد سوى مائتي كيلومتر ، كما يمكنك ببساطة تذوق بعض الوجبات الخفيفة التونسية ، مثل البريك بالبيض : ورقة شفافة من العجين مع بيضة شبه مطبوخة ، وتن وبقدونس ، أو عجة من البيض المخلوط في صلصة التوابل ، معززة بالجمبري أو النقانق ، وللتمتع بالمحليات ، خذ كوبا من المثلجات التقليدية أو عصير من الفواكه المفعمة بأشعة الشمس",
+        en: "A resort of international standing, Hammamet offers a great range of restaurants, especially around the medina and the international cultural centre, where you can spend unforgettable moments with family or friends in a restaurant on the rooftops of the old town over delicious Mediterranean dishes, sharing a plate of fresh fish in a shaded courtyard on a fresh summer evening. If you prefer an elegant or contemporary setting, head for the marina of Yasmine Hammamet, or choose an authentic Italian restaurant that will delight you with a good risotto and fine desserts — many Italians live in Hammamet, and Sicily is only two hundred kilometres away. You can also simply taste some Tunisian snacks, such as brik with egg: a transparent sheet of pastry with a half-cooked egg, tuna and parsley; or an ojja of eggs stirred into a spiced sauce, enriched with prawns or sausage. For something sweet, take a cup of traditional ice cream or a juice of sun-filled fruit.",
+      },
+      { type: "H3", ar: "حاول السكن في — فنادق شاطئية كبيرة أو بيوت للضيافة الأصيلة", en: "Where to stay — large beach hotels or authentic guest houses", noNumber: true },
+      {
+        type: "P",
+        ar: "قصور فخمة ، نوادي اصطياف ، أو نزل تقليدية ، كل الخيارات متوفرة في الحمامات ، حول المدينة ، العديد من فنادق الاصطياف التونسية الهندسة والمطلة على البحر ، كلها توفر حدائق غناء واسعة ، وفضاءات مضللة ومسابح وأنشطة لكل الأعمار ، أكثر حداثة فنادق ياسمين الحمامات تتنافس في الطرافة ، بين أجواء ألف ليلة وليلة والعمارة الحديثة ، خيار آخر : دار ضيافة في المدينة العتيقة بالحمامات، أو إقامة ريفية مريحة في زغوان",
+        en: "Luxury palaces, holiday clubs or traditional inns — every option is available in Hammamet. Around the town are many holiday hotels of Tunisian architecture facing the sea, all offering wide lush gardens, shaded spaces, pools and activities for every age. More modern, the hotels of Yasmine Hammamet compete in originality, between the atmosphere of the Thousand and One Nights and contemporary architecture. Another option: a guest house in the medina of Hammamet, or a comfortable country stay in Zaghouan.",
+      },
+      { type: "H3", ar: "الخلاصة — الحمامات مدينة المشاهير", en: "In short — Hammamet, city of celebrities", noNumber: true },
+      {
+        type: "P",
+        ar: "بالحمامات ، عديدة هي منازل الصيادين سابقا التي باتت تأوي الفنانين ، من الرسامين والممثلين والمهندسين المعماريين وأصحاب أروقة العرض ، تونسيين وايطاليين وفرنسيين وأمريكيين ، بعضهم ينظم حفلات فاخرة ، فيما يستمتع البعض الآخر ببساطة أمسيات الصيف المنعشة على أسطح منازل المدينة العتيقة ، وهذا التقليد يعود الى بداية القرن العشرين ، ففي 1930 اختار مليونير روماني جورج سيباستيان ، العيش في الحمامات وتشييد فيلا فخمة بها ، في هندسة تمزج بين الطابع المحلي و « الآرديكو » ، كان ينظم بها حفلات الاستقبال الرائعة حيث يلتقي الفنانون والكتاب من العالم ، ونستون تشرشل أقام بها لكتابة مذكراته الشهيرة ، وهكذا أصبحت الحمامات مدينة رائجة ، حيث استقبلت جياكوميتي ، مان راي ، أندريه جيد ، لو كوربوزييه ، فيسكونتي ، جان كوكتو ، غي لاروش وغيرهم ، يمكن زيارة دار سيباستيان التي أصبحت اليوم المركز الثقافي الدولي بالحمامات",
+        en: "In Hammamet many former fishermen's houses now shelter artists — painters, actors, architects and gallery owners, Tunisian, Italian, French and American. Some hold lavish parties, while others simply enjoy fresh summer evenings on the rooftops of the medina. The tradition goes back to the beginning of the twentieth century: in 1930 the Romanian millionaire George Sebastian chose to live in Hammamet and built a splendid villa there, in an architecture blending local character with Art Deco, where he held magnificent receptions bringing together artists and writers from around the world. Winston Churchill stayed there to write his famous memoirs. Hammamet thus became a fashionable town, receiving Giacometti, Man Ray, André Gide, Le Corbusier, Visconti, Jean Cocteau, Guy Laroche and others. Dar Sebastian can be visited: it is today the international cultural centre of Hammamet.",
+      },
+      { type: "H3", ar: "التسوق .. متعة المسافر", en: "Shopping — a traveller's pleasure", noNumber: true },
+      {
+        type: "P",
+        ar: "العديد من محلات الصناعات التقليدية والهدايا التذكارية بالقرب من الفنادق ، وفي أسواق الحمامات يمكن شراء أدوات المائدة الخزفية المصنوعة بنابل ، والكليم والسجاد والفوطة (مناشف الحمام) ذات الألوان الزاهية أو تذكارات من النحاس المطروقو غيرها ، في وسط المدينة ، محلات الأزياء والموضة تعرض مجموعة واسعة من المنتجات بأسعار مغرية : الملابس الجاهزة والجلود والأحذية والمجوهرات الثمينة أوغيرها للزينة",
+        en: "There are many craft and souvenir shops near the hotels, and in the souks of Hammamet you can buy ceramic tableware made in Nabeul, kilims and carpets, brightly coloured fouta bath towels, souvenirs of beaten copper and much else. In the town centre, fashion shops display a wide range of goods at attractive prices: ready-to-wear clothing, leather, shoes and precious or costume jewellery.",
+      },
+      { type: "H3", ar: "كيفية الوصول", en: "Getting there", noNumber: true },
+      {
+        type: "P",
+        ar: "الحمامات موصولة عبر الطريق السيارة بمطار تونس قرطاج (70 كلم) والنفيضة الحمامات ، (50 كلم) ، تتوفر خدمة الحافلات السريعة والمريحة من محطة الحافلات في تونس ك للتنقل في المدينة وأحوازها ، يمكن استعمال سيارة أجرة",
+        en: "Hammamet is linked by motorway to Tunis-Carthage airport (70 km) and to Enfidha-Hammamet airport (50 km). Fast and comfortable coach services run from the bus station in Tunis, and to move around the town and its surroundings you can use a taxi.",
+      },
+    ],
+  },
+];
