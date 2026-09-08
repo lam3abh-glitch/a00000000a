@@ -115,6 +115,16 @@ function Country() {
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1962", value_en: "1962" },
                 ]
               : c.slug === "spain"
+              : c.slug === "georgia"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "تبليسي", value_en: "Tbilisi" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "لاري جورجي", value_en: "Georgian lari" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "3.7 مليون", value_en: "3.7 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "69.700 كم", value_en: "69,700 km" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1991", value_en: "1991" },
+                ]
+              : c.slug === "spain"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "مدريد", value_en: "Madrid" },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو (€)", value_en: "Euro (€)" },
