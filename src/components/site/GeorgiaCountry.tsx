@@ -162,7 +162,7 @@ export function GeorgiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         <AnthemPlayer
           src={ANTHEM}
           lang={lang}
-          title={rtl ? "علم جمهورية جورجيا والنشيد الوطني الجورجي" : "The flag of the Republic of Georgia and the Georgian national anthem"}
+          title={rtl ? "النشيد الوطني الجورجي" : "The Georgian national anthem"}
         />
       </div>
 
