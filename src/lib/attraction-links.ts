@@ -113,8 +113,13 @@ export const ATTRACTION_LINKS: Record<string, Record<string, { country: string; 
     "البيت الراقص": { country: "czech-republic", topic: "dancing-house" },
     "The Dancing House": { country: "czech-republic", topic: "dancing-house" },
   },
+  "new-york": {
+    "تمثال الحرية": { country: "usa", topic: "statue-of-liberty" },
+    "The Statue of Liberty": { country: "usa", topic: "statue-of-liberty" },
+  },
 
 };
+
 
 export function attractionLink(citySlug: string, title: string) {
   return ATTRACTION_LINKS[citySlug]?.[title.trim()];
