@@ -10,7 +10,7 @@ export const PORTUGAL_CITY_ARTICLES: Record<string, CityArticle> = {
     U("2022/05/img_7039.jpg"),
     String.raw`
 P|تعد لشبونة من مناطق الجذب السياحي ، حيث أنها نابضة بالحياة ومليئة بالمعالم التاريخية والمتاحف الثقافية والتراثية ، فضلا عن المُنتزهات والحدائق الجميلة ، وتشتهر المدينة بجوها الدافيء والمشمس الذي يزيد من شعبيتها بين السائحين
-IMG|${U("2022/09/9375b768-52c2-405a-ba3b-56eb04f9137c-1.jpg")}||من داخل قلعة سانت جورج بلشبونة
+IMG|${U("2022/09/9375b768-52c2-405a-ba3b-56eb04f9137c-1.jpg")}||كاتدرائية لشبونة
 H5|كاتدرائية لشبونة
 P|تم ترميم كاتدرائية لشبونة لتظهر مزيجا رائعا من الأساليب المعمارية الجميلة ، وأبرز سماتها هي أبراج الجرس المزدوجة ، التي تزين أفق وسط المدينة لا سيما في وقت الغروب ، تضم كاتدرائية لشبونة العديد من المعالم البارزة ، التي تجذب الزوار ، وأهمها النافذة الداخلية الوردية ، والخزانة التي تضم العديد من القطع الأثرية القيمة بالكاتدرائية ومن بينها : الأواني الفضية من الكؤوس ، الأثواب المطرزة بدقة وإحترافية ، التماثيل وعدد من المخطوطات المصورة النادرة
 H5|قلعة سانت جورج
@@ -64,7 +64,7 @@ export const PORTUGAL_CITY_ARTICLES_EN: Record<string, { title: string; values: 
     title: "Tourism in Portugal — Lisbon",
     values: [
       "Lisbon is a magnet for visitors: a city humming with life and full of historic landmarks, cultural and heritage museums, as well as beautiful parks and gardens. It is famous for its warm, sunny weather, which only adds to its popularity among travellers.",
-      "Inside the Castle of São Jorge in Lisbon",
+      "Lisbon Cathedral",
       "Lisbon Cathedral",
       "Lisbon Cathedral has been restored to reveal a wonderful blend of beautiful architectural styles. Its most striking feature is the twin bell towers that crown the skyline of the city centre, especially at sunset. The cathedral holds many notable treasures that draw visitors, above all the inner rose window and the treasury with its many valuable artefacts: silver vessels and chalices, finely embroidered vestments, statues and a number of rare illuminated manuscripts.",
       "The Castle of São Jorge",
