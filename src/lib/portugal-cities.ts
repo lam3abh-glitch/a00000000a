@@ -1,4 +1,5 @@
 import { article, type CityArticle } from "./article-format";
+import clerigosTowerAsset from "@/assets/clerigos-tower-porto.webp.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
@@ -48,9 +49,9 @@ IMG|${U("2022/05/img_7015-1.jpg")}||جسر دوم لويس في بورتو
 H5|ساحة ريبيرا
 P|على امتداد نهر ريو دورو تقع ساحة ريبيرا الرائعة المحاطة بالمنازل الريفية الملونة والعديد من المطاعم ومقاهي الرصيف حيث يمكنك الجلوس والاستمتاع بالمنظر الخلاب للنهر ، كما تعد ساحة ريبيرا واحدة من مواقع التراث العالمي المدرجة من قبل اليونسكو في البرتغال ، وان قررت زيارة هذه الساحة الرائعة حيث انها تقع في قلب المركز التاريخي لمدينة بورتو
 IMG|${U("2022/05/img_7025.jpg")}||ساحة ريبيرا ومنازلها الملونة
-IMG|${U("2022/05/img_7027.jpg")}||مقاهي ساحة ريبيرا على النهر
 H5|برج كليريجوس
 P|يبلغ ارتفاع برج كليريجوس 67 متر وهو برج شاهق يلوح في افق مدينة بورتو الجميلة وقد صمم البرج على الطراز الباروكي ، فقد صممه المصمم الايطالي نيكولاو ناسوني في منتصف القرن الثامن عشر ، وعند تسلقك لبرج كليريجوس ، يمكنك الحصول على اطلالة مذهلة للمدينة من أعلى ، كما يضم البرج معرضا صغيرا يسرد تاريخ البرج
+IMG|${clerigosTowerAsset.url}||برج كليريجوس في بورتو
 H5|حديقة الملك هنريك
 P|حديقة الملك هنريك هي حديقة وساحة تقع في المركز التاريخي لمدينة بورتو البرتغالية ، ويتوسط الحديقة تمثال للملك هنري الملاح البرتغالي المرموق و قد بني التمثال في الذكرى المئوية الخامسة لوفاته ، و الحديقة هي واحدة من الاماكن التي يمكنك الجلوس فيها للاستراحة و تناول القهوة
 IMG|${U("2022/05/img_7028.jpg")}||حديقة الملك هنريك في بورتو
@@ -100,9 +101,9 @@ export const PORTUGAL_CITY_ARTICLES_EN: Record<string, { title: string; values: 
       "Ribeira Square",
       "Along the river Douro lies the wonderful Ribeira Square, ringed by colourful old houses and many restaurants and pavement cafés where you can sit and enjoy the stunning view of the river. Ribeira Square is one of the UNESCO World Heritage sites of Portugal, and if you decide to visit this delightful square you will find it in the very heart of the historic centre of Porto.",
       "Ribeira Square and its colourful houses",
-      "The cafés of Ribeira Square by the river",
       "The Clérigos Tower",
       "The Clérigos Tower rises 67 metres and looms over the skyline of beautiful Porto. Built in the baroque style, it was designed by the Italian architect Nicolau Nasoni in the middle of the eighteenth century. Climbing the Clérigos Tower rewards you with a stunning view of the city from above, and the tower also holds a small gallery telling its history.",
+      "The Clérigos Tower in Porto",
       "The Garden of Prince Henry",
       "The Garden of Prince Henry is a garden and square in the historic centre of Porto. At its centre stands a statue of Henry the Navigator, the distinguished Portuguese prince, raised on the five-hundredth anniversary of his death. The garden is one of those places where you can sit down to rest and have a coffee.",
       "The Garden of Prince Henry in Porto",
