@@ -1,5 +1,6 @@
 import type { Guide } from "./france-guides";
 import { tunisiaRegionGuides, TUNIS_REGION_HEROES } from "./tunisia-regions";
+import { tunisiaRegionGuides2, TUNIS_REGION_HEROES_2 } from "./tunisia-regions2";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
@@ -40,6 +41,13 @@ export const tunisiaGuides: Guide[] = [
           { topic: "monastir", label_ar: "المنستير وما حولها", label_en: "Monastir and around", src: TUNIS_REGION_HEROES.monastir },
           { topic: "tabarka", label_ar: "طبرقة", label_en: "Tabarka", src: TUNIS_REGION_HEROES.tabarka },
           { topic: "sbeitla", label_ar: "سبيطلة", label_en: "Sbeitla", src: TUNIS_REGION_HEROES.sbeitla },
+          { topic: "kairouan", label_ar: "القيروان وما حولها", label_en: "Kairouan and around", src: TUNIS_REGION_HEROES_2.kairouan },
+          { topic: "mahdia", label_ar: "المهدية وما حولها", label_en: "Mahdia and around", src: TUNIS_REGION_HEROES_2.mahdia },
+          { topic: "nabeul", label_ar: "نابل الوطن القبلي", label_en: "Nabeul and Cap Bon", src: TUNIS_REGION_HEROES_2.nabeul },
+          { topic: "bizerte-dougga", label_ar: "من بنزرت إلى دقة", label_en: "From Bizerte to Dougga", src: TUNIS_REGION_HEROES_2["bizerte-dougga"] },
+          { topic: "kef", label_ar: "الكاف", label_en: "Le Kef", src: TUNIS_REGION_HEROES_2.kef },
+          { topic: "gabes-matmata", label_ar: "من قابس إلى مطماطة", label_en: "From Gabes to Matmata", src: TUNIS_REGION_HEROES_2["gabes-matmata"] },
+          { topic: "tataouine", label_ar: "تطاوين وما حولها", label_en: "Tataouine and around", src: TUNIS_REGION_HEROES_2.tataouine },
         ],
       },
     ],
@@ -90,4 +98,5 @@ export const tunisiaGuides: Guide[] = [
     blocks: soon(),
   },
   ...tunisiaRegionGuides,
+  ...tunisiaRegionGuides2,
 ];
