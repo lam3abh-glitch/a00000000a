@@ -79,6 +79,10 @@
   --color-geowine: var(--geowine);
   --color-gepine: var(--gepine);
   --color-gestone: var(--gestone);
+  --color-usnavy: var(--usnavy);
+  --color-usred: var(--usred);
+  --color-usparch: var(--usparch);
+
 
   --font-display: "Amiri", "Cormorant Garamond", serif;
   --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
