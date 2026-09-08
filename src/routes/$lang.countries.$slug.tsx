@@ -37,6 +37,7 @@ import { IrelandCountry } from "@/components/site/IrelandCountry";
 import { ScotlandCountry } from "@/components/site/ScotlandCountry";
 import { MoroccoCountry } from "@/components/site/MoroccoCountry";
 import { BritainCountry } from "@/components/site/BritainCountry";
+import { GeorgiaCountry } from "@/components/site/GeorgiaCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
@@ -112,6 +113,15 @@ function Country() {
                   { label_ar: "المساحة", label_en: "Area", value_ar: "236.040 كم²", value_en: "236,040 km²" },
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1962", value_en: "1962" },
+                ]
+              : c.slug === "georgia"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "تبليسي", value_en: "Tbilisi" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "لاري جورجي", value_en: "Georgian lari" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "3.7 مليون", value_en: "3.7 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "69.700 كم", value_en: "69,700 km" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1991", value_en: "1991" },
                 ]
               : c.slug === "spain"
               ? [
@@ -349,6 +359,8 @@ function Country() {
       {/* INTRO */}
       {c.slug === "uganda" ? (
         <UgandaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "georgia" ? (
+        <GeorgiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "spain" ? (
         <SpainCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "belgium" ? (
