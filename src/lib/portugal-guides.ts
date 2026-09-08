@@ -5,6 +5,8 @@ const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/
 const c = (src: string, cap_ar: string, cap_en: string) =>
   ({ type: "IMG", src, cap_ar, cap_en, size: "compact" }) as const;
 
+const n = (src: string) => ({ type: "IMG", src, cap_ar: "", cap_en: "", size: "compact" }) as const;
+
 const album: Guide = {
   slug: "portugal-album",
   title_ar: "السياحة في البرتغال – ألبوم الصور",
@@ -94,19 +96,19 @@ const domLuisBridge: Guide = {
     c(U("2022/09/img_2943.jpg"), "صورة توضح أعمال الانشاء لجسر دوم لويس ببورتو", "The construction works of the Dom Luís Bridge"),
     c(U("2022/09/img_2945.jpg"), "جسر دوم لويس كما يبدو ليلا", "The Dom Luís Bridge by night"),
     c(U("2022/09/img_2946.jpg"), "احد جوانب جسر دوم لويس ببورتو", "One side of the Dom Luís Bridge in Porto"),
-    { type: "H3", ar: "افضل الانشطة التي يمكن القيام بها في جسر دوم لويس ببورتو", en: "The best things to do at the Dom Luís Bridge" },
+    { type: "P", ar: "افضل الانشطة التي يمكن القيام بها في جسر دوم لويس ببورتو", en: "The best things to do at the Dom Luís Bridge in Porto" },
     c(U("2022/09/img_2947.jpg"), "صورة لجسر دوم لويس ببورتو من المركب السياحي", "The bridge seen from the tourist boat"),
-    c(U("2022/09/img_2948.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2949.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2950.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2951.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2953.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2960.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2959.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2958.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2957.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2956.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
-    c(U("2022/09/img_2955.jpg"), "جسر دوم لويس ببورتو", "The Dom Luís Bridge in Porto"),
+    n(U("2022/09/img_2948.jpg")),
+    n(U("2022/09/img_2949.jpg")),
+    n(U("2022/09/img_2950.jpg")),
+    n(U("2022/09/img_2951.jpg")),
+    n(U("2022/09/img_2953.jpg")),
+    n(U("2022/09/img_2960.jpg")),
+    n(U("2022/09/img_2959.jpg")),
+    n(U("2022/09/img_2958.jpg")),
+    n(U("2022/09/img_2957.jpg")),
+    n(U("2022/09/img_2956.jpg")),
+    n(U("2022/09/img_2955.jpg")),
   ],
 };
 
