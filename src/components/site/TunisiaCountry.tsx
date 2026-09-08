@@ -157,20 +157,14 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
           <div className="text-[10px] uppercase tracking-[0.4em] font-mono mb-4" style={{ color: RED }}>
             {rtl ? "01 · الشعار والخارطة" : "01 · Emblem & map"}
           </div>
-          <Link
-            to="/$lang/countries/$country/guides/$topic"
-            params={{ lang, country: "tunisia", topic: "general-info" }}
-            className="block"
-          >
-            <Keyhole>
-              <img
-                src={EMBLEM_MAP}
-                alt={rtl ? "شعار وخارطة جمهورية تونس" : "Emblem and map of the Republic of Tunisia"}
-                loading="lazy"
-                className="w-full h-64 object-contain bg-white"
-              />
-            </Keyhole>
-          </Link>
+          <Keyhole>
+            <img
+              src={EMBLEM_MAP}
+              alt={rtl ? "شعار وخارطة جمهورية تونس" : "Emblem and map of the Republic of Tunisia"}
+              loading="lazy"
+              className="w-full h-64 object-contain bg-white"
+            />
+          </Keyhole>
           <div className={`mt-4 font-display text-xl ${align}`} style={{ color: DEEP }}>
             {rtl ? "شعار وخارطة جمهورية تونس" : "Emblem and map of Tunisia · Capital Tunis"}
           </div>
