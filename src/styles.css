@@ -108,6 +108,11 @@
   --carmine: oklch(0.48 0.19 25);
   --azulejo: oklch(0.52 0.11 235);
   --olive: oklch(0.55 0.07 120);
+  /* Georgia / Caucasus accents */
+  --geored: oklch(0.56 0.2 30);
+  --geowine: oklch(0.32 0.08 20);
+  --gepine: oklch(0.45 0.05 150);
+  --gestone: oklch(0.93 0.02 85);
 
 
   --background: var(--cream);
