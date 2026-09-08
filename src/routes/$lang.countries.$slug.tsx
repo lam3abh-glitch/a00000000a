@@ -210,10 +210,11 @@ function Country() {
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "لشبونة", value_en: "Lisbon" },
                   { label_ar: "العملة", label_en: "Currency", value_ar: "اليورو", value_en: "Euro" },
-                  { label_ar: "السكان", label_en: "Population", value_ar: "10.3 مليون", value_en: "10.3 million" },
-                  { label_ar: "المساحة", label_en: "Area", value_ar: "92.212 كم²", value_en: "92,212 km²" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "10.2 مليون", value_en: "10.2 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "92.090 كم²", value_en: "92,090 km²" },
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
                   { label_ar: "اللغة", label_en: "Language", value_ar: "البرتغالية", value_en: "Portuguese" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1143", value_en: "1143" },
                 ]
               : c.slug === "argentina"
               ? [
