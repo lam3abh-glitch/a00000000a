@@ -744,25 +744,39 @@ function Country() {
                 { topic: "general-info", ar: "معلومات عامة", en: "General information" },
                 { topic: "crafts", ar: "الحرف اليدوية", en: "Handicrafts" },
                 { topic: "year-round", ar: "أفضل وقت للزيارة", en: "The best time to visit" },
-              ].map((item, i) => (
-                <Link
-                  key={item.topic}
-                  to="/$lang/countries/$country/guides/$topic"
-                  params={{ lang, country: "tunisia", topic: item.topic }}
-                  className={`group bg-white border shadow-md hover:shadow-xl hover:-translate-y-1 transition-all px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
-                  style={{ borderColor: "rgba(27,79,156,0.15)" }}
-                >
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-mono mb-2" style={{ color: "#E70013" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <div className="font-display text-xl group-hover:text-[#E70013] transition-colors" style={{ color: "#131C34" }}>
-                    {lang === "ar" ? item.ar : item.en}
-                  </div>
-                  <div className="mt-2 text-xs" style={{ color: "rgba(19,28,52,0.6)" }}>
-                    {lang === "ar" ? "اقرأ المزيد ←" : "Read more →"}
-                  </div>
-                </Link>
-              ))}
+              ].map((item, i) => {
+                const guideImage = guidesFor("tunisia").find((guide) => guide.slug === item.topic)?.image;
+
+                return (
+                  <Link
+                    key={item.topic}
+                    to="/$lang/countries/$country/guides/$topic"
+                    params={{ lang, country: "tunisia", topic: item.topic }}
+                    className={`group relative flex h-52 items-end overflow-hidden border border-midnight/10 bg-midnight shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${lang === "ar" ? "text-right" : "text-left"}`}
+                  >
+                    {guideImage && (
+                      <img
+                        src={guideImage}
+                        alt=""
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/45 to-transparent" />
+                    <div className="relative z-10 w-full px-6 py-5 text-cream">
+                      <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.3em] text-gold">
+                        {String(i + 1).padStart(2, "0")}
+                      </div>
+                      <div className="font-display text-xl text-cream">
+                        {lang === "ar" ? item.ar : item.en}
+                      </div>
+                      <div className="mt-2 text-xs text-cream/75">
+                        {lang === "ar" ? "اقرأ المزيد ←" : "Read more →"}
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
 
           </div>
