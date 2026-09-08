@@ -37,6 +37,7 @@ import { IrelandCountry } from "@/components/site/IrelandCountry";
 import { ScotlandCountry } from "@/components/site/ScotlandCountry";
 import { MoroccoCountry } from "@/components/site/MoroccoCountry";
 import { BritainCountry } from "@/components/site/BritainCountry";
+import { GeorgiaCountry } from "@/components/site/GeorgiaCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
