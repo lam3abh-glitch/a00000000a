@@ -75,6 +75,10 @@
   --color-carmine: var(--carmine);
   --color-azulejo: var(--azulejo);
   --color-olive: var(--olive);
+  --color-geored: var(--geored);
+  --color-geowine: var(--geowine);
+  --color-gepine: var(--gepine);
+  --color-gestone: var(--gestone);
 
   --font-display: "Amiri", "Cormorant Garamond", serif;
   --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
