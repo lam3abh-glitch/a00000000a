@@ -30,22 +30,13 @@ function Star({ className }: { className?: string }) {
   );
 }
 
-/** Chasing bulb strip — the marquee lights of a Strip casino sign. */
-function Bulbs({ count = 18, className = "" }: { count?: number; className?: string }) {
+/** Stripes block echoing the thirteen stripes of the flag. */
+function Stripes({ className }: { className?: string }) {
   return (
-    <div className={`flex items-center justify-center gap-2 ${className}`} aria-hidden>
-      {Array.from({ length: count }).map((_, i) => (
-        <span key={i} className="vegas-bulb" style={{ animationDelay: `${(i % 3) * 0.37}s` }} />
+    <svg viewBox="0 0 100 60" aria-hidden className={className}>
+      {Array.from({ length: 7 }).map((_, i) => (
+        <rect key={i} x="0" y={i * 8.6} width="100" height="4.3" fill="currentColor" />
       ))}
-    </div>
-  );
-}
-
-/** Diamond pip — playing-card suit used as a section marker. */
-function Diamond({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 100" aria-hidden className={className}>
-      <path fill="currentColor" d="M50 2l34 48-34 48L16 50z" />
     </svg>
   );
 }
@@ -55,77 +46,57 @@ export function UnitedStatesCountry({ lang, intro }: { lang: Lang; intro: string
   const align = rtl ? "text-right" : "text-left";
 
   return (
-    <section className="relative overflow-hidden bg-vegasnight py-20 sm:py-24">
-      {/* Desert-night sky: neon haze rising off the Strip */}
+    <section className="relative overflow-hidden bg-usparch py-20 sm:py-24">
+      {/* Stars & stripes wash */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(120% 60% at 50% 100%, color-mix(in oklab, var(--vegaspink) 26%, transparent) 0%, transparent 60%), radial-gradient(90% 50% at 15% 0%, color-mix(in oklab, var(--vegaspurple) 45%, transparent) 0%, transparent 65%), radial-gradient(80% 45% at 85% 10%, color-mix(in oklab, var(--vegascyan) 18%, transparent) 0%, transparent 60%)",
+            "linear-gradient(180deg, color-mix(in oklab, var(--usnavy) 12%, transparent) 0%, transparent 45%, color-mix(in oklab, var(--usred) 10%, transparent) 100%)",
         }}
       />
-      {/* Retro grid horizon */}
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-1/2 opacity-[0.18] pointer-events-none"
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(color-mix(in oklab, var(--vegascyan) 70%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklab, var(--vegascyan) 70%, transparent) 1px, transparent 1px)",
-          backgroundSize: "70px 40px, 70px 40px",
-          maskImage: "linear-gradient(to top, black, transparent)",
-          WebkitMaskImage: "linear-gradient(to top, black, transparent)",
+            "repeating-linear-gradient(0deg, var(--usred) 0 10px, transparent 10px 26px)",
         }}
       />
-      <Star className="absolute -top-6 left-4 md:left-12 w-24 md:w-32 text-vegasgold/20 vegas-flicker pointer-events-none" />
-      <Diamond className="absolute bottom-10 right-2 md:right-10 w-24 md:w-32 text-vegaspink/20 pointer-events-none" />
 
-      {/* MARQUEE SIGN — polaroid + intro */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <div className="mx-auto mb-12 max-w-2xl">
-          <div className="relative rounded-[999px] border border-vegasgold/40 bg-vegasink/70 px-8 py-5 text-center vegas-tube-gold backdrop-blur">
-            <Bulbs count={14} className="mb-3" />
-            <div className="font-mono text-[10px] uppercase tracking-[0.55em] text-vegasgold/80">
-              {rtl ? "أهلاً بك في" : "Welcome to fabulous"}
-            </div>
-            <div className="mt-2 font-display text-3xl md:text-5xl vegas-neon-pink vegas-flicker">
-              {rtl ? "الولايات المتحدة" : "The United States"}
-            </div>
-            <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.4em] vegas-neon-cyan">
-              {rtl ? "United States · Nevada style" : "الولايات المتحدة"}
+      <Star className="absolute -top-6 left-4 md:left-12 w-24 md:w-32 text-usnavy/15 pointer-events-none" />
+      <Stripes className="absolute bottom-8 right-0 md:right-10 w-36 md:w-52 text-usred/15 pointer-events-none" />
+
+      {/* INTRO — polaroid + text */}
+      <div className="relative z-10 mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="relative flex justify-center md:justify-start" dir="ltr">
+          <div className="relative rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
+            <div className="absolute -top-4 left-8 w-20 h-6 bg-usred/70 rotate-[-7deg] z-20 shadow-sm" />
+            <div className="absolute -top-4 right-6 w-14 h-5 bg-usnavy/60 rotate-[9deg] z-20 shadow-sm" />
+            <div className="bg-white p-4 pb-16 shadow-2xl max-w-xs md:max-w-sm">
+              <img
+                src={AHMAD_DODGERS}
+                alt={rtl ? "أحمد في لوس انجلوس" : "Ahmad in Los Angeles"}
+                loading="lazy"
+                className="block w-full h-auto object-cover"
+              />
+              <div className="mt-4 text-center font-display text-midnight text-lg" style={{ fontFamily: "cursive" }}>
+                United States · الولايات المتحدة
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="relative flex justify-center md:justify-start" dir="ltr">
-            <div className="relative rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
-              <div className="absolute -top-4 left-8 w-20 h-6 bg-vegaspink/70 rotate-[-7deg] z-20 shadow-sm" />
-              <div className="absolute -top-4 right-6 w-14 h-5 bg-vegascyan/60 rotate-[9deg] z-20 shadow-sm" />
-              <div className="bg-white p-4 pb-16 shadow-2xl max-w-xs md:max-w-sm vegas-tube-pink">
-                <img
-                  src={AHMAD_DODGERS}
-                  alt={rtl ? "أحمد في لوس انجلوس" : "Ahmad in Los Angeles"}
-                  loading="lazy"
-                  className="block w-full h-auto object-cover"
-                />
-                <div className="mt-4 text-center font-display text-midnight text-lg" style={{ fontFamily: "cursive" }}>
-                  United States · الولايات المتحدة
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={align}>
-            <span className="inline-block bg-vegaspurple text-vegasgold text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[-2deg] mb-6 vegas-tube-gold">
-              {rtl ? "★ مقدّمة" : "★ Introduction"}
-            </span>
-            <p className="font-display text-3xl md:text-4xl text-vegasgold leading-snug whitespace-pre-line">{intro}</p>
-            <div className="mt-6 flex items-center gap-1.5" aria-hidden>
-              {["bg-vegaspink", "bg-vegascyan", "bg-vegasgold", "bg-vegaspink"].map((c, i) => (
-                <span key={i} className={`h-1.5 w-10 ${c}`} />
-              ))}
-            </div>
+        <div className={align}>
+          <span className="inline-block bg-usnavy text-usparch text-[11px] uppercase tracking-[0.4em] px-4 py-2 rotate-[-2deg] mb-6">
+            {rtl ? "★ مقدّمة" : "★ Introduction"}
+          </span>
+          <p className="font-display text-3xl md:text-4xl text-usnavy leading-snug whitespace-pre-line">{intro}</p>
+          <div className="mt-6 flex items-center gap-1.5" aria-hidden>
+            {["bg-usred", "bg-usnavy", "bg-gold", "bg-usred"].map((c, i) => (
+              <span key={i} className={`h-1.5 w-10 ${c}`} />
+            ))}
           </div>
         </div>
       </div>
@@ -133,27 +104,27 @@ export function UnitedStatesCountry({ lang, intro }: { lang: Lang; intro: string
       {/* ABOUT */}
       <div className="relative z-10 mt-20 mx-auto max-w-5xl px-6">
         <div className={`flex items-center gap-3 mb-6 ${rtl ? "flex-row-reverse" : "flex-row"}`}>
-          <span className="text-[10px] uppercase tracking-[0.4em] font-mono vegas-neon-cyan">
+          <span className="text-[10px] uppercase tracking-[0.4em] text-usred font-mono">
             {rtl ? "00 · نبذة" : "00 · About"}
           </span>
-          <span className="h-px flex-1 bg-vegasgold/20" />
+          <span className="h-px flex-1 bg-usnavy/15" />
         </div>
 
         <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-start">
           <div className={`md:col-span-7 ${align}`}>
-            <h3 className="font-display text-3xl md:text-4xl mb-5 vegas-neon-gold">
+            <h3 className="font-display text-3xl md:text-4xl text-usnavy mb-5">
               {rtl ? "الولايات المتحدة الامريكية" : "The United States of America"}
             </h3>
-            <p className="font-body text-base md:text-lg text-cream/85 leading-[1.95]">{ABOUT[lang]}</p>
-            <p className="mt-5 font-body text-base md:text-lg text-cream/85 leading-[1.95]">{ABOUT_2[lang]}</p>
+            <p className="font-body text-base md:text-lg text-charcoal/85 leading-[1.95]">{ABOUT[lang]}</p>
+            <p className="mt-5 font-body text-base md:text-lg text-charcoal/85 leading-[1.95]">{ABOUT_2[lang]}</p>
           </div>
           <div className="md:col-span-5">
-            <figure className="overflow-hidden rounded-2xl bg-vegasink/60 p-2 vegas-tube-cyan">
+            <figure className="overflow-hidden rounded-2xl shadow-lg border border-usnavy/10">
               <img
                 src={AHMAD_LIBERTY}
                 alt={rtl ? "أحمد أمام تمثال الحرية في نيويورك" : "Ahmad in front of the Statue of Liberty in New York"}
                 loading="lazy"
-                className="h-64 md:h-80 w-full rounded-xl object-cover"
+                className="h-64 md:h-80 w-full object-cover"
               />
             </figure>
           </div>
@@ -167,39 +138,39 @@ export function UnitedStatesCountry({ lang, intro }: { lang: Lang; intro: string
           lang={lang}
           title={rtl ? "النشيد الوطني الأمريكي" : "The American national anthem"}
           theme={{
-            bg: "bg-vegasink",
-            border: "border-vegasgold/30",
-            buttonBg: "bg-vegaspink",
-            buttonText: "text-vegasink",
-            buttonHoverBg: "hover:bg-vegascyan",
-            buttonHoverText: "hover:text-vegasink",
-            accent: "text-vegascyan",
-            title: "text-vegasgold",
-            ping: "border-vegaspink",
+            bg: "bg-usnavy",
+            border: "border-usparch/20",
+            buttonBg: "bg-usred",
+            buttonText: "text-usparch",
+            buttonHoverBg: "hover:bg-usparch",
+            buttonHoverText: "hover:text-usnavy",
+            accent: "text-gold",
+            title: "text-usparch",
+            ping: "border-gold",
           }}
         />
       </div>
 
       {/* EMBLEM & MAP */}
       <div className="relative z-10 mt-20 mx-auto max-w-3xl px-6">
-        <div className="group relative overflow-hidden rounded-xl bg-vegasink/80 vegas-tube-gold">
-          <div className="absolute top-4 left-4 z-10 font-mono text-[10px] uppercase tracking-[0.4em] vegas-neon-cyan">
+        <div className="group relative bg-white border border-usnavy/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+          <div className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.4em] text-usred font-mono z-10">
             {rtl ? "01 · حقيقة" : "01 · Fact"}
           </div>
-          <Bulbs count={16} className="pt-4" />
-          <div className="pt-8 pb-8 px-6 flex items-center justify-center min-h-[280px] vegas-carpet">
+          <Star className="absolute -bottom-10 -right-10 w-40 text-usnavy/5 pointer-events-none" />
+          <div className="pt-16 pb-8 px-6 flex items-center justify-center bg-gradient-to-b from-usparch to-white min-h-[280px]">
             <img
               src={EMBLEM_MAP}
               alt={rtl ? "شعار وخارطة الولايات المتحدة الامريكية" : "Emblem and map of the United States of America"}
               loading="lazy"
-              className="max-h-60 w-auto object-contain drop-shadow-[0_0_18px_rgba(255,255,255,0.25)]"
+              className="max-h-60 w-auto object-contain drop-shadow-md"
             />
           </div>
-          <div className={`border-t border-vegasgold/20 px-6 py-4 ${align}`}>
-            <div className="text-[10px] uppercase tracking-[0.3em] text-cream/50 mb-1">
+          <div className={`border-t border-usnavy/10 px-6 py-4 ${align}`}>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-charcoal/50 mb-1">
               {rtl ? "الشعار والموقع" : "Emblem & Geography"}
             </div>
-            <div className="font-display text-xl text-vegasgold">
+            <div className="font-display text-xl text-usnavy">
               {rtl ? "شعار وخارطة الولايات المتحدة الامريكية" : "Emblem and map of the United States of America"}
             </div>
           </div>
@@ -209,10 +180,10 @@ export function UnitedStatesCountry({ lang, intro }: { lang: Lang; intro: string
       {/* FLAG — additional information */}
       <div className="relative z-10 mt-20 mx-auto max-w-4xl px-6">
         <div className={`mb-6 ${align}`}>
-          <div className="text-[10px] uppercase tracking-[0.4em] font-mono mb-2 vegas-neon-cyan">
+          <div className="text-[10px] uppercase tracking-[0.4em] text-usred font-mono mb-2">
             {rtl ? "معلومات إضافية" : "Additional information"}
           </div>
-          <h3 className="font-display text-2xl md:text-3xl vegas-neon-gold">
+          <h3 className="font-display text-2xl md:text-3xl text-usnavy">
             {rtl ? "علم الولايات المتحدة الأمريكية" : "The flag of the United States of America"}
           </h3>
         </div>
@@ -229,13 +200,13 @@ export function UnitedStatesCountry({ lang, intro }: { lang: Lang; intro: string
                   loading="lazy"
                   className="w-full h-56 object-cover"
                 />
-                <figcaption className={`border-t border-vegasgold/20 px-5 py-4 font-display text-lg text-vegasgold ${align}`}>
+                <figcaption className={`border-t border-usnavy/10 px-5 py-4 font-display text-lg text-usnavy ${align}`}>
                   {rtl ? item.ar : item.en}
                 </figcaption>
               </>
             );
             const cls =
-              "block overflow-hidden rounded-xl bg-vegasink/80 vegas-tube-pink";
+              "block bg-white border border-usnavy/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow";
             return item.ar === "أهمية علم الدولة" ? (
               <a
                 key={item.src}
