@@ -149,6 +149,7 @@ H5|استوديوهات ديزني هوليوود
 IMG|${U("2022/08/img_1139.jpg")}
 P|استوديوهات ديزني هوليوود تعتبر من اهم اماكن السياحة في اورلاندو وقد تم افتتاحها في البداية كمتنزه ترفيهي واستوديو للإنتاج السينمائي والتلفزيوني وفرع للرسوم المتحركة في مدينة اورلاندو ، واهم ما يميز هذه الاستديوهات هما برج الشفق المخيف، وجولة الفيلم العظيم
 H5|منتزة المدينة القديمة
+IMG|/__l5e/assets-v1/c75e83bd-4bc4-4b8b-b559-d7ff750b2cf6/old-town-park-coaster.png
 P|المدينة القديمة من اهم الاماكن السياحية في اورلاندو وهو متنزه ومركز تسوق ترفيهي مفتوح يقع في منطقة كيسيمي جنوب مدينة اورلاندو ، يمكنك الاسترخاء والتنزه في شوارعه الجميلة المزينة بالأشجار ، والتسوق بأكثر من 70 متجر ، وتناول الوجبات في المطاعم بأسعار معقولة ، فالمتنزه يتميز بعروضه الرخيصة ، كما يمكنك الاستمتاع بجولات وألعاب تناسب كل الأجيال
 H5|مركز اورلاندوا العلمي
 IMG|${U("2022/08/img_1141.jpg")}
@@ -395,6 +396,7 @@ export const USA_CITY_ARTICLES_EN: Record<string, { title: string; values: strin
       "",
       "Disney's Hollywood Studios is one of the most important places to visit in Orlando. It opened as a theme park, a film and television production studio and an animation branch in the city, and what most distinguishes it are the Twilight Zone Tower of Terror and the Great Movie Ride.",
       "Old Town",
+      "",
       "Old Town is one of the most important attractions in Orlando, an open-air park and shopping and entertainment centre in the Kissimmee area south of the city. You can relax and stroll along its beautiful tree-lined streets, shop in more than 70 stores and eat in restaurants at reasonable prices — the park is known for its inexpensive offerings — and enjoy rides and games that suit every generation.",
       "Orlando Science Center",
       "",
