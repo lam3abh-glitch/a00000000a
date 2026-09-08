@@ -1,4 +1,5 @@
 import { article, type CityArticle } from "./article-format";
+import clerigosTowerAsset from "@/assets/clerigos-tower-porto.webp.asset.json";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
