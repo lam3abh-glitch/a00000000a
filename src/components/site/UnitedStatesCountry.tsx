@@ -8,6 +8,8 @@ const AHMAD_DODGERS = IMG("img_4668.jpg", "2022/04");
 const AHMAD_LIBERTY = IMG("img_4669.jpg", "2022/04");
 const EMBLEM_MAP = IMG("img_3950.jpg", "2022/03");
 const ANTHEM = "https://videos.files.wordpress.com/VgXEpT2E/my-movie-5-13.mp4";
+const FLAG_IMPORTANCE = IMG("img_4686.jpg", "2022/10");
+const FLAG_USA = IMG("img_3579.jpg", "2022/03");
 
 const ABOUT = {
   ar: "هي جمهورية دستورية تضم خمسين ولاية ومنطقة العاصمة الاتحادية ، تقع معظم البلاد في وسط أمريكا الشمالية ، حيث تقع 48 ولاية وواشنطن العاصمة بين المحيط الهادي والمحيط الاطلسي ، وتحدها من الشمال كندا ، وتحدها من الجنوب المكسيك ، تقع ولاية ألاسكا في الشمال الغربي من القارة ، وتحدها كندا شرقاً ، وروسيا غربا عبر مضيق بيرينغ ، أما ولاية هاواي التي تعد أرخبيلا فتقع في منتصف المحيط الهادي ، كما تضم الولايات عددا من الأراضي والجزر في الكاريبي والمحيط الهادىء",
@@ -172,6 +174,39 @@ export function UnitedStatesCountry({ lang, intro }: { lang: Lang; intro: string
               {rtl ? "شعار وخارطة الولايات المتحدة الامريكية" : "Emblem and map of the United States of America"}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* FLAG — additional information */}
+      <div className="relative z-10 mt-20 mx-auto max-w-4xl px-6">
+        <div className={`mb-6 ${align}`}>
+          <div className="text-[10px] uppercase tracking-[0.4em] text-usred font-mono mb-2">
+            {rtl ? "معلومات إضافية" : "Additional information"}
+          </div>
+          <h3 className="font-display text-2xl md:text-3xl text-usnavy">
+            {rtl ? "علم الولايات المتحدة الأمريكية" : "The flag of the United States of America"}
+          </h3>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {[
+            { src: FLAG_IMPORTANCE, ar: "أهمية علم الدولة", en: "The importance of a nation's flag" },
+            { src: FLAG_USA, ar: "علم الولايات المتحدة الأمريكية", en: "The flag of the United States of America" },
+          ].map((item) => (
+            <figure
+              key={item.src}
+              className="bg-white border border-usnavy/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img
+                src={item.src}
+                alt={rtl ? item.ar : item.en}
+                loading="lazy"
+                className="w-full h-56 object-cover"
+              />
+              <figcaption className={`border-t border-usnavy/10 px-5 py-4 font-display text-lg text-usnavy ${align}`}>
+                {rtl ? item.ar : item.en}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>

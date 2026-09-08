@@ -172,6 +172,88 @@ IMG|${U("2022/08/img_1148.jpg")}
 P|متحف مدام توسو اورلاندو احد اماكن سياحية في اورلاندو ويعتبر رحلة فوق السجادة الحمراء لمقابلة تماثيل أهم شخصيات العالم الشمعية المفضلة ، والتي تبدو وكأنها نابضة بالحياة
 `,
   ),
+  "boston": article(
+    "https://100region.com/?p=10448",
+    "السياحة في امريكا – بوسطن",
+    U("2022/08/img_1163.jpg"),
+    String.raw`
+P|استوطن التطهيريون مدينة بوسطن منذ القرن السابع عشر الميلادي ، وقد لعب التاريخ دورا كبيرا في تشكيل الطابع الرئيسي للمدينة على مدى ما يقرب من 400 عام ، وقد شهدت مدينة بوسطن مولد روح الاستقلال الأمريكي ، وتعج المدينة بالكثير من المزارات السياحية التي تحيي ذكرى الدور الكبير الذي لعبه أعضاء جماعة أبناء الحرية أثناء حرب الاستقلال الأمريكية
+P|ويأتي السياح من جميع أنحاء العالم لزيارة هذه المزارات الرائعة ، وتضم المدينة الكثير من المزارات السياحية التي لا غنى عن زيارتها ، مثل ملعب البيسبول فينواي بارك وهاربور ووك ، بالإضافة إلى شواطئ الجزر الخلابة ، إن مدينة بوسطن هي وجهة سياحية خلابة لعشاق المتعة والاسترخاء ، وقد شهدت المدينة مشروع تطوير شامل حمل اسم بيغ ديغ واستمر لقرابة 15 عاما ، وقد ساهم في تسهيل الوصول إلى أهم المزارات السياحية في مدينة بوسطن بشكل كبير
+H5|درب الحرية
+IMG|${U("2022/08/img_1159.jpg")}
+P|شهد درب الحرية أول جولات سياحية سيرا على الأقدام في أمريكا ، وهو مسار يضم 16 من أهم مواقع حرب الاستقلال الأمريكية ، ويتميز درب الحرية بخط من الطلاء الأحمر ، وهو يمتد لمسافة 2.5 ميل (4 كم) ويبدأ من حديقة بوسطن كومون ، وهي أقدم حديقة في الولايات المتحدة الأمريكية ، وسوف يمر السياح أمام مجلس الولاية القديم الذي شهد مذبحة بوسطن ، حيث أطلقت القوات البريطانية النار على حشد من المواطنين المحتجين ، وهناك أيضا منزل بول ريفير وكنيسة أولد نورث التي تحتوي على مصابيح كانت تستخدم قديما للتحذير عند اقتراب البريطانيين عبر البحر. وفي نهاية الدرب ، يوجد هاربور ووك الذي يقود الزوار إلى السفينة يو إس إس كونستيتيوشن
+H5|سوق كوينسي
+IMG|${U("2022/08/img_1160.jpg")}
+P|تم تصميم سوق كوينسي على يد المهندس المعماري ألكسندر باريس ، وقد اكتمل بناءه في عام 1826م ، ويشتهر سوق كوينسي بطرازه المعماري الفريد من نوعه ، بالإضافة إلى تجارب الطعام الرائعة التي يقدمها من خلال 20 مطعما و40 كشكا لبيع الطعام ، وهذا السوق يحمل اسم عمدة بوسطن يوشيا كوينسي ، وهو عبارة عن مبنى مستطيل الشكل يتميز بطرازه المعماري المستوحى من عصر النهضة اليونانية ، وقد تم استخدام الجرانيت والمواد الثقيلة في بناء هذا السوق كنوع من التباين المذهل مع تصميمه البديع ، والسوق يضم جناحا كبيرا مزخرفا على شكل قبة ، ويعد هذا السوق وجهة عائلية تجذب السياح والسكان المحليين للاستمتاع بأشهى الوجبات بأسعار رخيصة
+H5|ملعب فينواي بارك
+IMG|${U("2022/08/img_1161.jpg")}
+P|يعد ملعب فينواي بارك من أشهر معالم مدينة بوسطن ، وهو موطن فريق البيسبول ريد سوكس منذ عام 1912م ، وهو أقدم ملعب في الدوري الأمريكي يتم استخدامه بشكل مستمر ، بالإضافة إلى كونه وجهة لا غنى عن زيارته لعشاق الرياضة ، وعلى الرغم من أن تذاكر المباريات غالبا ما تنفد سريعا ، إلا أن الزوار يستطيعون في كثير من الأوقات شراء التذاكر من شباك التذاكر الموجود في الملعب في نفس يوم المباراة ، كما تتوفر أيضا جولات للتعرف على ملعب البيسبول
+H5|سوق فانويل هول
+IMG|${U("2022/08/img_1162.jpg")}
+P|يقع فانويل هول في وسط مدينة بوسطن ، وقد لعب دورا كبيرا أثناء الثورة الأمريكية وعلى الرغم من بنائه كسوق في عام 1742م بأموال بيتر فانويل التي جناها من تجارة الرقيق ، فإن السوق شهد تجمُّعات الوطنيين الباحثين عن الحرية ، ومن بينهم المحامي جيمس أوتيس الذي أطلق على السوق اسم مهد الحرية ونادى بتقنين فرض الضرائب ، ولا يزال المكان يستخدم كسوق وكمنتدى للمناقشات السياسية ، وهو يعَد أيضا من أشهر الوجهات السياحية في مدينة بوسطن
+H5|حي باك باي
+IMG|${U("2022/08/img_1163.jpg")}
+P|جاءت تسمية هذا الحي بهذا الاسم لأنه كان في السابق عبارة عن برك من المياه الراكدة ، ويعود تاريخ هذا الحي الذي يحده نهر تشارلز إلى أواخر القرن التاسع عشر ، وقد أصبح حاليا منطقة راقية وعصرية تضم شوارع خلابة تصطف على جانبيها المنازل ذات الطابع الفيكتوري والمطاعم العصرية والمتاجر الأنيقة ، ويضم الحي أيضا حديقة بوسطن العامة ، وهي أقدم وأكبر حديقة نباتية في الولايات المتحدة الأمريكية ، وهناك أيضا كنيسة أولد نورث في كوبلي والتي تم بناؤها في عام 1874م على الطراز القوطي ، وقد تم تحديث تصميماتها الداخلية على يد لويس كومفورت تيفاني في عام 1905م
+`,
+  ),
+  "san-diego": article(
+    "https://100region.com/?p=10446",
+    "السياحة في امريكا – سان دييغو",
+    U("2022/08/img_1114.jpg"),
+    String.raw`
+P|تعتبر مدينة سان دييغو من أكثر مدن أمريكا شعبية للسياحة تقع هذه المدينة في الولايات المتحدة الامريكية في ولاية كاليفورنيا وتحتضن مجموعة متنوع ، من المواقع التي تجذب السياح من كافة أنحاء العالم ، تضم مدينة سان دييغو الامريكية العديد من مقومات الجذب السياحية والتي تجعل منها وجهة هامة للسياح القادمين إلى الولايات المتحدة الامريكية، وتعد حديقة بالبوا من اهم المعالم السياحية فيها حيث تعتبر من اكبر حدائق ولاية كاليفورنيا
+H5|حديقة بالبوا
+IMG|${U("2022/08/img_1114.jpg")}
+P|تعتبر حديقة بالبوا من اشهر معالم السياحة في سان دييغو الامريكية كما انها واحدة من اكبر الحدائق في ولاية كاليفورنيا ، تشتمل الحديقة على جمال طبيعي خلاب ومخزون كبير من القيم التعليمية ، تمتد الحديقة على مساحة واسعة تضم العديد من المتاحف والحدائق منها حديقة الصبار والحديقة اليابانية وحديقة الورود بالاضافة الى البرك المائية والمرافق الترفيهية وغير ذلك
+H5|عالم البحار
+IMG|${U("2022/08/img_1115.jpg")}
+P|عالم البحار من اكثر الاماكن السياحية في سان دييغو جذبا للسياح فهو يحوي مجموعة كبيرة من الحيوانات البحرية بعضها نادر ومن اهم تلك الحيوانات حوت شامو المعروف باسم الحوت القاتل الى جانب اسد البحر وغيرهم ، تشتمل عالم البحار على العدديد من النشاطات المختلفة كعروض السيرك وعروض الحيوانات الاليفة وركوب الخيل وغيرها الكثير الكثير
+H5|حديقة حيوانات سان دييغو
+IMG|${U("2022/08/img_1117.jpg")}
+P|تعتبر حديقة حيوانات سان دييغو من الوجهات الشعبية الهامة في المدينة فهي واقعة على مقربة من حديقة بالبوا وتعد من اكبر حدائق الحيوان في ولاية كاليفورنيا ، تحوي الحديقة عدد كبير من الحيوانات وتقدم العديد من البرامج التثقيفية للزوار عن الحيوانات المهددة بالانقراض ، مما جعلها من اهم الاماكن السياحية في سان دييغو امريكا
+H5|حديقة سان دييغو للحيوانات البرية
+IMG|${U("2022/08/img_1118.jpg")}
+P|حديقة الحيوانات البرية سان دييغو وتسمى أيضاً سفاري بارك تعتبر من اجمل الاماكن السياحية في سان دييغو ،تحوي الحديقة مجموعة من الحيوانات البرية النادرة والمهددة بالانقراض مثل وحيد القرن والاسود والفيلة والظباء والزرافات وغيرها الكثير. تتميز الحديقة بوجود ترام ينقل زوار الحديقة لمشاهدة الحيوانات والتجول في ارجاء الحديقة
+H5|المدينة القديمة
+IMG|${U("2022/08/img_1119.jpg")}
+IMG|${U("2022/08/img_1120.jpg")}
+IMG|${U("2022/08/img_1123.jpg")}
+P|تعتبر من الاماكن السياحية في سان دييغو التي يفضلها السياح القادمين الى المدينة حيث تتميز ببيوتها القديمة التي تعكس قدرا كبيرا من تاريخ سان دييغو ، تعتبر القرية الاسبانية من اهم معالم المدينة القديمة بالاضافة الى البيوت الموجودة في المدرسة القديمة ، تحوي المدينة القديمة العديد من المطاعم المكسيكية التي تقدم اشهى الاطباق بالاضافة الى المحلات التجارية الكبيرة
+H5|قرية الميناء
+IMG|${U("2022/08/img_1121.jpg")}
+IMG|${U("2022/08/img_1122.jpg")}
+P|قرية الميناء تعد من افضل مناطق السياحة في سان دييغو تقع بالقرب من الميناء وتحتوي على خيارات ومخازن تسوق كبيرة يفضلها السياح حيث يقصدونها بهدف الحصول على الهدايا التذكارية أو تناول اشهى الاطباق البحرية في احد مطاعمها الكثيرة
+H5|كورونادو
+IMG|${U("2022/08/img_1124.jpg")}
+P|كورونادو هي الوجبه الآخر لمدينة سان دييغو وهي عبارة عن شبه جزيرة تضم مجموعة مميزة من الفنادق الراقية لعل اشهرها فندق ديل كورونادو بالاضافة الى العديد من المطاعم والمتاجر ، تعتبر كورونادو وجهة مفضلة لسياح مدينة سان دييغو وهي مكان مثالي للاقامة
+H5|متحف مينجي
+IMG|${U("2022/08/img_1125.jpg")}
+P|يعرف أيضاً بمتحف الشعب وقد افتتح عام 1978م ويعرض عدد كبير من القطع الاثرية يصل عددها الى 17500 قطعة حيث تعكس الوجه التاريخي لمدينة سان دييغو ويعود تاريخ بعضها الى القرن الثالث ماقبل الميلاد ، يعرض المتحف الكثير من التحف كالفخاريات والمنحوتات الخشبية والمنسوجات والمجوهرات وغيرها الكثير
+`,
+  ),
+  "las-vegas": article(
+    "https://100region.com/?p=10444",
+    "السياحة في امريكا – لاس فيغاس",
+    U("2022/08/img_1167.jpg"),
+    String.raw`
+P|تُعرف مدينة لاس فيغاس بأنها المدينة التي لا تنام ، وهي من اهم وجهات السياحة في أمريكا والعالم خصوصاً للشباب حيث تتميز بمعالمها السياحية العصرية والتي ينعكس فيها التنوع الثقافي
+H5|أكواريوم لاس فيغاس
+IMG|${U("2022/08/img_1164.jpg")}
+P|اكواريوم شارك ريف يعتبر من اهم اماكن السياحة في لاس فيغاس حيث يعد من اشهر احواض السمك التي تضم عدد هائل من الاسماك المفترسة والتي تم جلبها من جميع أنحاء العالم ، يضم الاكواريوم حوالي 2000 كائن حي تتضمن اسماك القرش من فصائل متعددة الى جانب انواع اخرى مثل اسماك البيرانا المفترسة وغيرها
+H5|متحف التاريخ الطبيعي
+IMG|${U("2022/08/img_1165.jpg")}
+P|يعتبر متحف لاس فيجاس للتاريخ الطبيعي واحدا من أهم الاماكن السياحية في لاس فيغاس يقع في وسط المدينة ، ويحتوي على العديد من المعروضات التي تتضمن الحياة البرية والبحرية والديناصورات وغيرها ، وقد افتتح في عام 2010م ، وضمن المتحف معرض للتاريخ المصري يعرض حياة الملك توت عنخ آمون بشكل خاص من خلال نموذج لمقبرة كاملة تحوي عدة حجرات تتضمن غرفة الخزينة وغرفة الدفن وغيرها
+H5|وادي الصخور الحمراء
+IMG|${U("2022/08/img_1168.jpg")}
+P|وادي الصخور الحمراء Red Rock Canyon National Conservation Area يقع على بعد حوالي 24 كم غرب مدينة لاس فيغاس في ولاية نيفادا ، حيث يسهل رؤيته من قطاع لاس فيغاس ، يعتبر من اهم مناطق السياحة في لاس فيغاس ويزوره أكثر من مليوني شخص كل عام ، يضم الوادي مجموعة من تشكيلات الصخور الحمراء الضخمة التي قد يصل ارتفاع احداها الى اكثر من 900 متر مما يجعلها وجهة لعشاق تسلق المرتفاعات والصخور
+H5|أدفنتشوردوم
+IMG|${U("2022/08/img_1166.jpg")}
+P|قبة المغامرات او ادفنتشوردوم هو منتزه للالعاب الترفيهية في لاس فيغاس يضم مجموعة من الالعاب المثيرة بما فيها الافعوانية كانيون بلاستر وجدار التسلق وملعب الغولف المصغر والعديد من الالعاب الاخرى التي تناسب الكبار والصغار على حد سواء ، ما يميز المنتزه هو عدم تأثره بحالة الطقس لانه مغلق لذا فهو مفتوح على مدار السنة
+H5|الشارع الرئيسي بوسط لاس فيغاس
+IMG|${U("2022/08/img_1167.jpg")}
+P|هو قلب مدينة لاس فيغاس النابض بالحركة والنشاط طوال اليوم ، وهو الشارع الذي يعج بكافة الخدمات التي يحتاجها السواح من فنادق ومطاعم وملاهي ومراقص ومعارض ، وما يميز هذا الشارع أيضا تلك المعالم المصغرة من عدد من دول العالم كبرج ايڤل والاهرامات
+`,
+  ),
 };
 
 export const USA_CITY_ARTICLES_EN: Record<string, { title: string; values: string[] }> = {
@@ -334,6 +416,82 @@ export const USA_CITY_ARTICLES_EN: Record<string, { title: string; values: strin
       "Madame Tussauds Orlando",
       "",
       "Madame Tussauds Orlando is one of the city's attractions, a walk along the red carpet to meet wax figures of the world's most beloved personalities, looking as though they were alive.",
+    ],
+  },
+  boston: {
+    title: "Tourism in the United States \u2014 Boston",
+    values: [
+      "The Puritans settled the city of Boston in the seventeenth century, and history has played a great part in shaping the city's character over nearly 400 years. Boston saw the birth of the American spirit of independence, and it is crowded with sights that keep alive the memory of the great role played by the Sons of Liberty during the American War of Independence.",
+      "Travellers come from every part of the world to visit these remarkable places, and the city holds many sights no visitor should miss, such as Fenway Park baseball stadium and the HarborWalk, as well as the beautiful island beaches. Boston is a wonderful destination for lovers of pleasure and rest, and the city went through a comprehensive redevelopment known as the Big Dig, which lasted some 15 years and greatly improved access to Boston's most important attractions.",
+      "The Freedom Trail",
+      "",
+      "The Freedom Trail saw America's first walking tours: a route linking 16 of the most important sites of the American War of Independence, marked by a line of red paint. It runs 2.5 miles (4 km) and begins at Boston Common, the oldest park in the United States. Walkers pass the Old State House, which witnessed the Boston Massacre, where British troops fired on a crowd of protesting citizens, and there is also Paul Revere's house and the Old North Church, which holds the lanterns once used to warn that the British were coming by sea. At the end of the trail the HarborWalk leads visitors to the USS Constitution.",
+      "Quincy Market",
+      "",
+      "Quincy Market was designed by the architect Alexander Parris and completed in 1826. It is famous for its unique architecture as well as for the wonderful food it offers through 20 restaurants and 40 food stalls. The market carries the name of Boston's mayor Josiah Quincy and is a rectangular building in a Greek Revival style, built of granite and heavy materials in striking contrast to the delicacy of its design, with a large ornamented domed pavilion. It is a family destination that draws travellers and local residents alike to enjoy the finest meals at low prices.",
+      "Fenway Park",
+      "",
+      "Fenway Park is one of Boston's most famous landmarks, home of the Red Sox baseball team since 1912 and the oldest continuously used ballpark in the American League, as well as a place no sports lover should miss. Although match tickets often sell out quickly, visitors can frequently buy them at the stadium box office on the day of the game, and tours of the ballpark are also available.",
+      "Faneuil Hall",
+      "",
+      "Faneuil Hall stands in the centre of Boston and played a great part during the American Revolution. Although it was built as a market in 1742 with money Peter Faneuil made from the slave trade, the market saw the gatherings of patriots in search of freedom, among them the lawyer James Otis, who called it the Cradle of Liberty and demanded that taxation be made lawful. The place is still used as a market and as a forum for political debate, and it is one of Boston's most famous destinations.",
+      "Back Bay",
+      "",
+      "The district takes its name from the pools of stagnant water that once stood here. Bounded by the Charles river, its history goes back to the late nineteenth century, and it is now an elegant, fashionable quarter of beautiful streets lined with Victorian houses, modern restaurants and smart shops. The district also holds the Boston Public Garden, the oldest and largest botanical garden in the United States, along with Old South Church in Copley, built in 1874 in the Gothic style, its interiors renewed by Louis Comfort Tiffany in 1905.",
+    ],
+  },
+  "san-diego": {
+    title: "Tourism in the United States \u2014 San Diego",
+    values: [
+      "San Diego is one of the most popular cities in America for tourism. It lies in the state of California and holds a varied collection of places that draw travellers from all over the world. The city has many attractions that make it an important destination for visitors coming to the United States, and Balboa Park is among its most important sights, being one of the largest parks in the state of California.",
+      "Balboa Park",
+      "",
+      "Balboa Park is one of the most famous sights in San Diego and one of the largest parks in California. It holds enchanting natural beauty and a great store of educational value, spreading over a wide area that contains many museums and gardens, among them the cactus garden, the Japanese garden and the rose garden, as well as pools, recreational facilities and much more.",
+      "SeaWorld",
+      "",
+      "SeaWorld is one of the attractions in San Diego that draws the most visitors, holding a large collection of marine animals, some of them rare. The most famous is Shamu the killer whale, along with sea lions and others. SeaWorld offers many different activities such as circus shows, performances with tame animals, horse riding and a great deal more.",
+      "San Diego Zoo",
+      "",
+      "San Diego Zoo is one of the city's important popular destinations, close to Balboa Park and one of the largest zoos in California. It holds a great number of animals and offers visitors many educational programmes about endangered species, which makes it one of the most important places to visit in San Diego.",
+      "San Diego Zoo Safari Park",
+      "",
+      "The San Diego wild animal park, also called Safari Park, is one of the loveliest places to visit in San Diego. It holds a collection of rare and endangered wild animals such as rhinoceroses, lions, elephants, antelope, giraffes and many more, and it is distinguished by a tram that carries visitors to see the animals and travel around the park.",
+      "Old Town",
+      "",
+      "",
+      "",
+      "This is one of the attractions in San Diego that visitors to the city prefer, known for its old houses which reflect a great deal of San Diego's history. The Spanish village is one of Old Town's most important sights, along with the houses in the old schoolhouse. Old Town holds many Mexican restaurants serving the finest dishes, as well as large shops.",
+      "Seaport Village",
+      "",
+      "",
+      "Seaport Village is one of the best areas to visit in San Diego. It lies close to the harbour and holds large shopping choices and stores that travellers favour, coming to buy souvenirs or to eat the finest seafood dishes in one of its many restaurants.",
+      "Coronado",
+      "",
+      "Coronado is the other face of San Diego: a peninsula holding a distinguished set of elegant hotels, the most famous of them the Hotel del Coronado, along with many restaurants and shops. Coronado is a favourite destination for visitors to San Diego and an ideal place to stay.",
+      "The Mingei Museum",
+      "",
+      "Also known as the museum of the people, it opened in 1978 and displays a large number of artefacts, some 17,500 pieces reflecting the historic face of San Diego, some of them going back to the third century BC. The museum shows a great many objects such as pottery, wood carvings, textiles, jewellery and much more.",
+    ],
+  },
+  "las-vegas": {
+    title: "Tourism in the United States \u2014 Las Vegas",
+    values: [
+      "Las Vegas is known as the city that never sleeps, and it is one of the most important destinations in America and the world, especially for the young, distinguished by modern attractions in which its cultural variety is reflected.",
+      "The Las Vegas Aquarium",
+      "",
+      "The Shark Reef Aquarium is one of the most important places to visit in Las Vegas and one of the most famous aquariums anywhere, holding an enormous number of predatory fish brought from all over the world. The aquarium holds around 2,000 living creatures, among them sharks of several species along with other kinds such as the predatory piranha.",
+      "The Natural History Museum",
+      "",
+      "The Las Vegas Natural History Museum is one of the most important attractions in the city and stands in its centre. It holds many exhibits covering wildlife, marine life, dinosaurs and more, and it opened in 2010. The museum includes a gallery of Egyptian history displaying the life of King Tutankhamun in particular, through a model of a complete tomb with several chambers including the treasury and the burial chamber.",
+      "Red Rock Canyon",
+      "",
+      "Red Rock Canyon National Conservation Area lies about 24 km west of Las Vegas in the state of Nevada and is easily seen from the Las Vegas Strip. It is one of the most important areas to visit in Las Vegas and receives more than two million people a year. The canyon holds a set of enormous red rock formations, some of them rising more than 900 metres, which makes it a destination for lovers of climbing and rock scrambling.",
+      "Adventuredome",
+      "",
+      "The Adventuredome is an amusement park in Las Vegas holding a set of thrilling rides, among them the Canyon Blaster roller coaster, a climbing wall, a miniature golf course and many other games that suit adults and children alike. What distinguishes the park is that the weather does not affect it, since it is enclosed and therefore open all year round.",
+      "Downtown Las Vegas main street",
+      "",
+      "This is the beating heart of Las Vegas, alive with movement and activity all day long, a street crowded with every service travellers need: hotels, restaurants, amusements, dance halls and exhibitions. What also distinguishes this street are the miniature landmarks of a number of the world's countries, such as the Eiffel Tower and the pyramids.",
     ],
   },
 };
