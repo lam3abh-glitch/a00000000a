@@ -724,6 +724,38 @@ function Country() {
         </section>
       )}
 
+      {/* TUNISIA — additional information */}
+      {c.slug === "tunisia" && (
+        <section className="py-16" style={{ background: "#FBF7EF" }}>
+          <div className="mx-auto max-w-4xl px-6">
+            <div className={`mb-8 ${lang === "ar" ? "text-right" : "text-left"}`}>
+              <div className="text-[10px] uppercase tracking-[0.4em] font-mono mb-2" style={{ color: "#E70013" }}>
+                {lang === "ar" ? "معلومات إضافية" : "Additional information"}
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl" style={{ color: "#131C34" }}>
+                {lang === "ar" ? "تعرّف أكثر على تونس" : "Learn more about Tunisia"}
+              </h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              <Link
+                to="/$lang/countries/$country/guides/$topic"
+                params={{ lang, country: "tunisia", topic: "tourist-places" }}
+                className={`group bg-white border shadow-md hover:shadow-xl hover:-translate-y-1 transition-all px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
+                style={{ borderColor: "rgba(27,79,156,0.15)" }}
+              >
+                <div className="text-[10px] uppercase tracking-[0.3em] font-mono mb-2" style={{ color: "#E70013" }}>01</div>
+                <div className="font-display text-xl group-hover:text-[#E70013] transition-colors" style={{ color: "#131C34" }}>
+                  {lang === "ar" ? "الأماكن السياحية" : "Tourist places"}
+                </div>
+                <div className="mt-2 text-xs" style={{ color: "rgba(19,28,52,0.6)" }}>
+                  {lang === "ar" ? "اقرأ المزيد ←" : "Read more →"}
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* GUIDE SECTIONS */}
       {guidesFor(c.slug).length > 0 && c.slug !== "tunisia" && (
         <section className="py-20">
