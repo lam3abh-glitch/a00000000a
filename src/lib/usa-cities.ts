@@ -396,6 +396,7 @@ export const USA_CITY_ARTICLES_EN: Record<string, { title: string; values: strin
       "",
       "Disney's Hollywood Studios is one of the most important places to visit in Orlando. It opened as a theme park, a film and television production studio and an animation branch in the city, and what most distinguishes it are the Twilight Zone Tower of Terror and the Great Movie Ride.",
       "Old Town",
+      "",
       "Old Town is one of the most important attractions in Orlando, an open-air park and shopping and entertainment centre in the Kissimmee area south of the city. You can relax and stroll along its beautiful tree-lined streets, shop in more than 70 stores and eat in restaurants at reasonable prices — the park is known for its inexpensive offerings — and enjoy rides and games that suit every generation.",
       "Orlando Science Center",
       "",
