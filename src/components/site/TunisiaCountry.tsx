@@ -1,7 +1,5 @@
 import type { Lang } from "@/lib/i18n";
-import { Link } from "@tanstack/react-router";
 import ahmadTunisia from "@/assets/ahmad-tunisia.jpeg.asset.json";
-import { tunisiaGuides } from "@/lib/tunisia-guides";
 
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
