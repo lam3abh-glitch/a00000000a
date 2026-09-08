@@ -1,7 +1,5 @@
 import type { Lang } from "@/lib/i18n";
-import { Link } from "@tanstack/react-router";
 import ahmadTunisia from "@/assets/ahmad-tunisia.jpeg.asset.json";
-import { tunisiaGuides } from "@/lib/tunisia-guides";
 
 const IMG = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
@@ -139,12 +137,7 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         </div>
 
         <div className="mt-10" dir="ltr">
-          <Link
-            to="/$lang/countries/$country/guides/$topic"
-            params={{ lang, country: "tunisia", topic: "tourist-places" }}
-            className="block bg-white p-2 shadow-lg transition hover:-translate-y-1"
-            style={{ transform: "rotate(-1.2deg)" }}
-          >
+          <div className="block bg-white p-2 shadow-lg" style={{ transform: "rotate(-1.2deg)" }}>
             <img
               src={SIDI_BOU_SAID}
               alt={rtl ? "تونس الخضراء - سيدي بوسعيد" : "Green Tunisia — Sidi Bou Said"}
@@ -152,9 +145,9 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
               className="block w-full h-72 md:h-96 object-cover"
             />
             <span className={`block mt-3 mb-1 text-sm ${align}`} style={{ color: BLUE }}>
-              {rtl ? "تونس الخضراء — اضغط للمزيد ←" : "Green Tunisia — click for more →"}
+              {rtl ? "تونس الخضراء" : "Green Tunisia"}
             </span>
-          </Link>
+          </div>
         </div>
       </div>
 
@@ -164,20 +157,14 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
           <div className="text-[10px] uppercase tracking-[0.4em] font-mono mb-4" style={{ color: RED }}>
             {rtl ? "01 · الشعار والخارطة" : "01 · Emblem & map"}
           </div>
-          <Link
-            to="/$lang/countries/$country/guides/$topic"
-            params={{ lang, country: "tunisia", topic: "general-info" }}
-            className="block"
-          >
-            <Keyhole>
-              <img
-                src={EMBLEM_MAP}
-                alt={rtl ? "شعار وخارطة جمهورية تونس" : "Emblem and map of the Republic of Tunisia"}
-                loading="lazy"
-                className="w-full h-64 object-contain bg-white"
-              />
-            </Keyhole>
-          </Link>
+          <Keyhole>
+            <img
+              src={EMBLEM_MAP}
+              alt={rtl ? "شعار وخارطة جمهورية تونس" : "Emblem and map of the Republic of Tunisia"}
+              loading="lazy"
+              className="w-full h-64 object-contain bg-white"
+            />
+          </Keyhole>
           <div className={`mt-4 font-display text-xl ${align}`} style={{ color: DEEP }}>
             {rtl ? "شعار وخارطة جمهورية تونس" : "Emblem and map of Tunisia · Capital Tunis"}
           </div>
@@ -201,46 +188,6 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         </div>
       </div>
 
-      {/* SUB-PAGES */}
-      <div className="relative z-10 mt-16 mx-auto max-w-6xl px-6">
-        <div className={`flex items-center gap-3 mb-6 ${rtl ? "flex-row-reverse" : "flex-row"}`}>
-          <span className="text-[10px] uppercase tracking-[0.4em] font-mono" style={{ color: BLUE }}>
-            {rtl ? "03 · صفحات تونس" : "03 · Tunisia pages"}
-          </span>
-          <span className="h-px flex-1" style={{ background: `${DEEP}22` }} />
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {tunisiaGuides.map((g, i) => (
-            <Link
-              key={g.slug}
-              to="/$lang/countries/$country/guides/$topic"
-              params={{ lang, country: "tunisia", topic: g.slug }}
-              className="group block bg-white shadow-lg overflow-hidden transition hover:-translate-y-1"
-              style={{ borderTop: `4px solid ${i % 2 ? BLUE : RED}` }}
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={g.image}
-                  alt={rtl ? g.title_ar : g.title_en}
-                  loading="lazy"
-                  className="block w-full h-44 object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className={`p-5 ${align}`}>
-                <div className="text-[10px] uppercase tracking-[0.35em] font-mono mb-2" style={{ color: i % 2 ? BLUE : RED }}>
-                  {rtl ? g.kicker_ar : g.kicker_en}
-                </div>
-                <div className="font-display text-xl leading-snug" style={{ color: DEEP }}>
-                  {rtl ? g.title_ar : g.title_en}
-                </div>
-                <div className="mt-3 text-sm" style={{ color: `${DEEP}99` }}>
-                  {rtl ? "اقرأ المزيد ←" : "Read more →"}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

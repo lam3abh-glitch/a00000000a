@@ -725,7 +725,7 @@ function Country() {
       )}
 
       {/* GUIDE SECTIONS */}
-      {guidesFor(c.slug).length > 0 && (
+      {guidesFor(c.slug).length > 0 && c.slug !== "tunisia" && (
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12 text-center">
