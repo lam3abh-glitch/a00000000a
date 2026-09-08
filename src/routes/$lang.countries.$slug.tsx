@@ -737,21 +737,34 @@ function Country() {
               </h2>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
-              <Link
-                to="/$lang/countries/$country/guides/$topic"
-                params={{ lang, country: "tunisia", topic: "tourist-places" }}
-                className={`group bg-white border shadow-md hover:shadow-xl hover:-translate-y-1 transition-all px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
-                style={{ borderColor: "rgba(27,79,156,0.15)" }}
-              >
-                <div className="text-[10px] uppercase tracking-[0.3em] font-mono mb-2" style={{ color: "#E70013" }}>01</div>
-                <div className="font-display text-xl group-hover:text-[#E70013] transition-colors" style={{ color: "#131C34" }}>
-                  {lang === "ar" ? "الأماكن السياحية" : "Tourist places"}
-                </div>
-                <div className="mt-2 text-xs" style={{ color: "rgba(19,28,52,0.6)" }}>
-                  {lang === "ar" ? "اقرأ المزيد ←" : "Read more →"}
-                </div>
-              </Link>
+              {[
+                { topic: "tourist-places", ar: "الأماكن السياحية", en: "Tourist places" },
+                { topic: "tunisian-food", ar: "أكلات وأطباق تونسية", en: "Tunisian food and dishes" },
+                { topic: "places-to-visit", ar: "أماكن يفضل زيارتها", en: "Places worth visiting" },
+                { topic: "general-info", ar: "معلومات عامة", en: "General information" },
+                { topic: "crafts", ar: "الحرف اليدوية", en: "Handicrafts" },
+                { topic: "year-round", ar: "أفضل وقت للزيارة", en: "The best time to visit" },
+              ].map((item, i) => (
+                <Link
+                  key={item.topic}
+                  to="/$lang/countries/$country/guides/$topic"
+                  params={{ lang, country: "tunisia", topic: item.topic }}
+                  className={`group bg-white border shadow-md hover:shadow-xl hover:-translate-y-1 transition-all px-6 py-6 ${lang === "ar" ? "text-right" : "text-left"}`}
+                  style={{ borderColor: "rgba(27,79,156,0.15)" }}
+                >
+                  <div className="text-[10px] uppercase tracking-[0.3em] font-mono mb-2" style={{ color: "#E70013" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className="font-display text-xl group-hover:text-[#E70013] transition-colors" style={{ color: "#131C34" }}>
+                    {lang === "ar" ? item.ar : item.en}
+                  </div>
+                  <div className="mt-2 text-xs" style={{ color: "rgba(19,28,52,0.6)" }}>
+                    {lang === "ar" ? "اقرأ المزيد ←" : "Read more →"}
+                  </div>
+                </Link>
+              ))}
             </div>
+
           </div>
         </section>
       )}
