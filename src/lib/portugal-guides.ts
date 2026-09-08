@@ -5,7 +5,7 @@ const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/
 const c = (src: string, cap_ar: string, cap_en: string) =>
   ({ type: "IMG", src, cap_ar, cap_en, size: "compact" }) as const;
 
-const n = (src: string) => ({ type: "IMG", src, size: "compact" }) as const;
+const n = (src: string) => ({ type: "IMG", src, cap_ar: "", cap_en: "", size: "compact" }) as const;
 
 const album: Guide = {
   slug: "portugal-album",
