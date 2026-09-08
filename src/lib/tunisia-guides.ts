@@ -98,4 +98,5 @@ export const tunisiaGuides: Guide[] = [
     blocks: soon(),
   },
   ...tunisiaRegionGuides,
+  ...tunisiaRegionGuides2,
 ];
