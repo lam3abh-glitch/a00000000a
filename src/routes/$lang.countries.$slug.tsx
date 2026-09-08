@@ -114,7 +114,6 @@ function Country() {
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1962", value_en: "1962" },
                 ]
-              : c.slug === "spain"
               : c.slug === "georgia"
               ? [
                   { label_ar: "العاصمة", label_en: "Capital", value_ar: "تبليسي", value_en: "Tbilisi" },
