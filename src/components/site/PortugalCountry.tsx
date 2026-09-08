@@ -67,11 +67,10 @@ export function PortugalCountry({ lang, intro }: { lang: Lang; intro: string }) 
       {/* Azulejo tile wash */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none opacity-[0.09]"
+        className="absolute inset-0 pointer-events-none opacity-[0.10]"
         style={{
-          backgroundImage: `linear-gradient(45deg, ${AZUL} 25%, transparent 25%, transparent 75%, ${AZUL} 75%), linear-gradient(45deg, ${AZUL} 25%, transparent 25%, transparent 75%, ${AZUL} 75%)`,
-          backgroundSize: "34px 34px",
-          backgroundPosition: "0 0, 17px 17px",
+          backgroundImage: `repeating-linear-gradient(45deg, ${AZUL} 0 1.5px, transparent 1.5px 20px), repeating-linear-gradient(-45deg, ${AZUL} 0 1.5px, transparent 1.5px 20px)`,
+          backgroundSize: "40px 40px",
         }}
       />
       <div
