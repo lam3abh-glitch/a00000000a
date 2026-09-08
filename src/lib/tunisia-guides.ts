@@ -25,7 +25,24 @@ export const tunisiaGuides: Guide[] = [
     kicker_ar: "أماكن",
     kicker_en: "Places",
     image: SIDI,
-    blocks: soon(),
+    blocks: [
+      {
+        type: "P",
+        ar: "اختر المنطقة التي تريد التعرف عليها في تونس ، من العاصمة وقرطاج وسيدي بوسعيد الى سوسة والمنستير وطبرقة وسبيطلة",
+        en: "Choose the region of Tunisia you want to explore, from the capital, Carthage and Sidi Bou Said to Sousse, Monastir, Tabarka and Sbeitla.",
+      },
+      {
+        type: "CARDS",
+        items: [
+          { topic: "tunis-capital", label_ar: "تونس العاصمة وما حولها", label_en: "Tunis and its surroundings", src: TUNIS_REGION_HEROES["tunis-capital"] },
+          { topic: "carthage-sidi-bou-said", label_ar: "قرطاج وسيدي بو سعيد وما حولهما", label_en: "Carthage, Sidi Bou Said and around", src: TUNIS_REGION_HEROES["carthage-sidi-bou-said"] },
+          { topic: "sousse-kantaoui", label_ar: "سوسة والقنطاوي وما حولهما", label_en: "Sousse, Port El Kantaoui and around", src: TUNIS_REGION_HEROES["sousse-kantaoui"] },
+          { topic: "monastir", label_ar: "المنستير وما حولها", label_en: "Monastir and around", src: TUNIS_REGION_HEROES.monastir },
+          { topic: "tabarka", label_ar: "طبرقة", label_en: "Tabarka", src: TUNIS_REGION_HEROES.tabarka },
+          { topic: "sbeitla", label_ar: "سبيطلة", label_en: "Sbeitla", src: TUNIS_REGION_HEROES.sbeitla },
+        ],
+      },
+    ],
   },
   {
     slug: "tunisian-food",
