@@ -25,3 +25,6 @@
 
 # Morocco
 - [x] Country page (zellige theme), 10 cities, 10 extra pages (program, hammam, breeds, museums, water sports, produce, fashion, food, album, brief)
+
+# Argentina
+- [x] Match the Argentina attractions guide layout to the existing city attraction pages
