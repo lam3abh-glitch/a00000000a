@@ -82,6 +82,12 @@
   --color-usnavy: var(--usnavy);
   --color-usred: var(--usred);
   --color-usparch: var(--usparch);
+  --color-vegasnight: var(--vegasnight);
+  --color-vegasink: var(--vegasink);
+  --color-vegaspink: var(--vegaspink);
+  --color-vegascyan: var(--vegascyan);
+  --color-vegasgold: var(--vegasgold);
+  --color-vegaspurple: var(--vegaspurple);
 
 
   --font-display: "Amiri", "Cormorant Garamond", serif;
