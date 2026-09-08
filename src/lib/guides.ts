@@ -86,7 +86,9 @@ export const COUNTRY_LABEL: Record<string, { ar: string; en: string }> = {
   portugal: { ar: "البرتغال", en: "Portugal" },
   germany: { ar: "ألمانيا", en: "Germany" },
   "czech-republic": { ar: "التشيك", en: "Czechia" },
+  usa: { ar: "أمريكا", en: "USA" },
 };
+
 
 export function guidesFor(country: string): Guide[] {
   return GUIDES_BY_COUNTRY[country] ?? [];
