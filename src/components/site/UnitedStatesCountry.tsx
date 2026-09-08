@@ -191,22 +191,38 @@ export function UnitedStatesCountry({ lang, intro }: { lang: Lang; intro: string
           {[
             { src: FLAG_IMPORTANCE, ar: "أهمية علم الدولة", en: "The importance of a nation's flag" },
             { src: FLAG_USA, ar: "علم الولايات المتحدة الأمريكية", en: "The flag of the United States of America" },
-          ].map((item) => (
-            <figure
-              key={item.src}
-              className="bg-white border border-usnavy/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow"
-            >
-              <img
-                src={item.src}
-                alt={rtl ? item.ar : item.en}
-                loading="lazy"
-                className="w-full h-56 object-cover"
-              />
-              <figcaption className={`border-t border-usnavy/10 px-5 py-4 font-display text-lg text-usnavy ${align}`}>
-                {rtl ? item.ar : item.en}
-              </figcaption>
-            </figure>
-          ))}
+          ].map((item) => {
+            const inner = (
+              <>
+                <img
+                  src={item.src}
+                  alt={rtl ? item.ar : item.en}
+                  loading="lazy"
+                  className="w-full h-56 object-cover"
+                />
+                <figcaption className={`border-t border-usnavy/10 px-5 py-4 font-display text-lg text-usnavy ${align}`}>
+                  {rtl ? item.ar : item.en}
+                </figcaption>
+              </>
+            );
+            const cls =
+              "block bg-white border border-usnavy/10 overflow-hidden shadow-md hover:shadow-xl transition-shadow";
+            return item.ar === "أهمية علم الدولة" ? (
+              <a
+                key={item.src}
+                href="https://100region.com/?p=8943"
+                target="_blank"
+                rel="noreferrer"
+                className={`${cls} hover:-translate-y-1 transition-transform cursor-pointer`}
+              >
+                {inner}
+              </a>
+            ) : (
+              <figure key={item.src} className={cls}>
+                {inner}
+              </figure>
+            );
+          })}
         </div>
       </div>
     </section>
