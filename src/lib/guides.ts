@@ -118,7 +118,9 @@ const LOOKUP_BY_COUNTRY: Record<string, Guide[]> = {
   portugal: portugalGuidesAll,
   germany: germanyGuidesAll,
   "czech-republic": [...pragueLandmarkGuides, ...czechExtraGuides],
+  usa: usaLandmarkGuides,
 };
+
 
 export function getGuideFor(country: string, slug: string): Guide | undefined {
   return (LOOKUP_BY_COUNTRY[country] ?? guidesFor(country)).find((g) => g.slug === slug);
