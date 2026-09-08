@@ -38,6 +38,7 @@ import { ScotlandCountry } from "@/components/site/ScotlandCountry";
 import { MoroccoCountry } from "@/components/site/MoroccoCountry";
 import { BritainCountry } from "@/components/site/BritainCountry";
 import { GeorgiaCountry } from "@/components/site/GeorgiaCountry";
+import { UnitedStatesCountry } from "@/components/site/UnitedStatesCountry";
 
 
 const qo = (slug: string) => queryOptions({ queryKey: ["country", slug], queryFn: () => getCountry({ data: { slug } }) });
@@ -113,6 +114,15 @@ function Country() {
                   { label_ar: "المساحة", label_en: "Area", value_ar: "236.040 كم²", value_en: "236,040 km²" },
                   { label_ar: "الديانة", label_en: "Religion", value_ar: "الاسلام", value_en: "Islam" },
                   { label_ar: "التأسيس", label_en: "Founded", value_ar: "1962", value_en: "1962" },
+                ]
+              : c.slug === "usa"
+              ? [
+                  { label_ar: "العاصمة", label_en: "Capital", value_ar: "واشنطن", value_en: "Washington" },
+                  { label_ar: "العملة", label_en: "Currency", value_ar: "دولار أمريكي", value_en: "US dollar" },
+                  { label_ar: "الديانة", label_en: "Religion", value_ar: "المسيحية", value_en: "Christianity" },
+                  { label_ar: "السكان", label_en: "Population", value_ar: "332.6 مليون", value_en: "332.6 million" },
+                  { label_ar: "المساحة", label_en: "Area", value_ar: "9.826.675 كم", value_en: "9,826,675 km" },
+                  { label_ar: "التأسيس", label_en: "Founded", value_ar: "1776", value_en: "1776" },
                 ]
               : c.slug === "georgia"
               ? [
@@ -359,6 +369,8 @@ function Country() {
       {/* INTRO */}
       {c.slug === "uganda" ? (
         <UgandaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
+      ) : c.slug === "usa" ? (
+        <UnitedStatesCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "georgia" ? (
         <GeorgiaCountry lang={lang} intro={lang === "ar" ? c.intro_ar : c.intro_en} />
       ) : c.slug === "spain" ? (
