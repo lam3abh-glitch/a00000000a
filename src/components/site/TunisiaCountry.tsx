@@ -188,46 +188,6 @@ export function TunisiaCountry({ lang, intro }: { lang: Lang; intro: string }) {
         </div>
       </div>
 
-      {/* SUB-PAGES */}
-      <div className="relative z-10 mt-16 mx-auto max-w-6xl px-6">
-        <div className={`flex items-center gap-3 mb-6 ${rtl ? "flex-row-reverse" : "flex-row"}`}>
-          <span className="text-[10px] uppercase tracking-[0.4em] font-mono" style={{ color: BLUE }}>
-            {rtl ? "03 · صفحات تونس" : "03 · Tunisia pages"}
-          </span>
-          <span className="h-px flex-1" style={{ background: `${DEEP}22` }} />
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {tunisiaGuides.map((g, i) => (
-            <Link
-              key={g.slug}
-              to="/$lang/countries/$country/guides/$topic"
-              params={{ lang, country: "tunisia", topic: g.slug }}
-              className="group block bg-white shadow-lg overflow-hidden transition hover:-translate-y-1"
-              style={{ borderTop: `4px solid ${i % 2 ? BLUE : RED}` }}
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={g.image}
-                  alt={rtl ? g.title_ar : g.title_en}
-                  loading="lazy"
-                  className="block w-full h-44 object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className={`p-5 ${align}`}>
-                <div className="text-[10px] uppercase tracking-[0.35em] font-mono mb-2" style={{ color: i % 2 ? BLUE : RED }}>
-                  {rtl ? g.kicker_ar : g.kicker_en}
-                </div>
-                <div className="font-display text-xl leading-snug" style={{ color: DEEP }}>
-                  {rtl ? g.title_ar : g.title_en}
-                </div>
-                <div className="mt-3 text-sm" style={{ color: `${DEEP}99` }}>
-                  {rtl ? "اقرأ المزيد ←" : "Read more →"}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
