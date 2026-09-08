@@ -1,6 +1,7 @@
 import type { Guide } from "./france-guides";
 import { tunisiaRegionGuides, TUNIS_REGION_HEROES } from "./tunisia-regions";
 import { tunisiaRegionGuides2, TUNIS_REGION_HEROES_2 } from "./tunisia-regions2";
+import { tunisiaRegionGuides3, TUNIS_REGION_HEROES_3 } from "./tunisia-regions3";
 
 const U = (name: string) => `https://i0.wp.com/100region.com/wp-content/uploads/${name}?ssl=1`;
 
@@ -48,6 +49,11 @@ export const tunisiaGuides: Guide[] = [
           { topic: "kef", label_ar: "الكاف", label_en: "Le Kef", src: TUNIS_REGION_HEROES_2.kef },
           { topic: "gabes-matmata", label_ar: "من قابس إلى مطماطة", label_en: "From Gabes to Matmata", src: TUNIS_REGION_HEROES_2["gabes-matmata"] },
           { topic: "tataouine", label_ar: "تطاوين وما حولها", label_en: "Tataouine and around", src: TUNIS_REGION_HEROES_2.tataouine },
+          { topic: "hammamet", label_ar: "الحمامات وما حولها", label_en: "Hammamet and around", src: TUNIS_REGION_HEROES_3.hammamet },
+          { topic: "sfax-kerkennah", label_ar: "صفاقس وقرقنة وما حولهما", label_en: "Sfax, Kerkennah and around", src: TUNIS_REGION_HEROES_3["sfax-kerkennah"] },
+          { topic: "djerba-zarzis", label_ar: "جربة وجرجيس وما حولهما", label_en: "Djerba, Zarzis and around", src: TUNIS_REGION_HEROES_3["djerba-zarzis"] },
+          { topic: "tozeur", label_ar: "توزر وما حولها", label_en: "Tozeur and around", src: TUNIS_REGION_HEROES_3.tozeur },
+          { topic: "douz", label_ar: "دوز وما حولها", label_en: "Douz and around", src: TUNIS_REGION_HEROES_3.douz },
         ],
       },
     ],
@@ -99,4 +105,5 @@ export const tunisiaGuides: Guide[] = [
   },
   ...tunisiaRegionGuides,
   ...tunisiaRegionGuides2,
+  ...tunisiaRegionGuides3,
 ];
